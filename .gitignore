@@ -1,0 +1,25 @@
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editores e IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Claude Code ---
+.claude/
+
+# --- Node ---
+node_modules/
+
+# --- Generador de cursos ---
+05-Generador-Cursos/input/
+05-Generador-Cursos/previews/
+
+# --- Curso v1 archivado (no se publica en producción) ---
+02-Plataforma-Web/politica-adultos.html
+02-Plataforma-Web/politica-adultos/

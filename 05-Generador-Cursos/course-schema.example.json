@@ -1,0 +1,554 @@
+{
+  "courseId": "fundamentos-scout",
+  "title": "Fundamentos del Movimiento Scout",
+  "subtitle": "Formación para Rovers - Sinodales y Ayudantes",
+  "description": "Curso completo sobre los fundamentos esenciales del Movimiento Scout: historia, misión, método scout y su impacto global. Preparación integral para servir como sinodal o ayudante.",
+  "icon": "🏕️",
+  "duration": "6 horas",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenido/a",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>¡Siempre Listo/a para Servir!</strong><br>Estás a punto de embarcarte en un viaje educativo que te preparará para transmitir el legado scout a las nuevas generaciones."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Objetivos del Curso"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Conocer la misión y propósito</strong> del movimiento scout mundial",
+            "<strong>Comprender los orígenes históricos</strong> del movimiento scout",
+            "<strong>Dominar las características esenciales</strong> del escultismo",
+            "<strong>Entender los 8 elementos</strong> del método scout correctamente",
+            "<strong>Fortalecer conceptos educativos</strong> scouts aplicables a niños y niñas",
+            "<strong>Prepararte para ser sinodal/ayudante</strong> en manada y tropa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Misión y Propósito del Movimiento Scout",
+      "emoji": "🎯",
+      "navLabel": "Misión",
+      "sections": [
+        {
+          "type": "mission-box",
+          "text": "<h3>🌟 MISIÓN DEL MOVIMIENTO SCOUT</h3><blockquote style=\"font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;\">\"Contribuir a la educación de los jóvenes para que participen en la construcción de un mundo mejor, donde las personas se desarrollen plenamente y jueguen un papel constructivo en la sociedad.\"</blockquote>"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "¿Cómo logramos esta misión?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A través de un sistema de valores basado en la <strong>Promesa y la Ley Scout</strong>, que ayuda a los jóvenes a construir un proyecto de vida basado en el servicio a los demás."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Nuestro Propósito Fundamental"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>Desarrollo del carácter:</strong> Formar personas íntegras con valores sólidos",
+            "<strong>Entrenamiento para la ciudadanía:</strong> Preparar ciudadanos activos y responsables",
+            "<strong>Desarrollo físico y mental:</strong> Promover la salud integral",
+            "<strong>Servicio a los demás:</strong> Fomentar el compromiso social"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📜 La Promesa Scout"
+        },
+        {
+          "type": "info-box",
+          "text": "<em>\"Prometo por mi honor hacer todo cuanto de mí dependa para cumplir mis deberes para con Dios y la Patria, ayudar al prójimo en toda circunstancia y cumplir fielmente la Ley Scout.\"</em>"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "⚖️ La Ley Scout"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "El Scout cifra su honor en ser digno de confianza",
+            "El Scout es leal",
+            "El Scout es útil y ayuda a los demás",
+            "El Scout es amigo de todos y hermano de cualquier Scout",
+            "El Scout es cortés",
+            "El Scout ama la naturaleza y protege a los animales y plantas",
+            "El Scout obedece sin replicar y hace las cosas en orden y completas",
+            "El Scout sonríe y canta en sus dificultades",
+            "El Scout es económico, trabajador y cuidadoso del bien ajeno",
+            "El Scout es limpio y sano en pensamientos, palabras y obras"
+          ]
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cómo aplicarías estos valores al trabajar con niños y niñas en manada o tropa?"
+      },
+      "quiz": {
+        "title": "Evaluación - Misión y Propósito",
+        "questions": [
+          {
+            "text": "¿Cuál es el objetivo principal de la misión scout?",
+            "options": [
+              "Enseñar técnicas de campamento",
+              "Contribuir a la educación para construir un mundo mejor",
+              "Formar exploradores profesionales"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿En qué se basa el sistema de valores scout?",
+            "options": [
+              "En reglamentos militares",
+              "En la Promesa y la Ley Scout",
+              "En técnicas de supervivencia"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Mafeking ⛰️"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Mafeking - El Origen del Movimiento Scout",
+      "emoji": "⛰️",
+      "navLabel": "Mafeking",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📅 El Sitio de Mafeking (1899-1900)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante la Guerra de los Bóers en Sudáfrica, el coronel Robert Baden-Powell defendió la ciudad de Mafeking durante 217 días. Esta experiencia cambiaría la historia de la educación juvenil para siempre."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "🏰 El Desafío",
+              "description": "Baden-Powell tenía solo 1,000 hombres para defender la ciudad contra 8,000 atacantes. Necesitaba toda la ayuda posible."
+            },
+            {
+              "title": "👦 Los Jóvenes Cadetes",
+              "description": "Organizó a los jóvenes de la ciudad en el \"Cuerpo de Cadetes de Mafeking\". Les asignó tareas importantes: mensajeros, primeros auxilios, centinelas, cocineros."
+            },
+            {
+              "title": "💡 La Revelación",
+              "description": "Baden-Powell descubrió que los jóvenes, cuando se les da responsabilidad y confianza, son capaces de mucho más de lo que los adultos imaginan."
+            },
+            {
+              "title": "✨ La Semilla del Escultismo",
+              "description": "Esta experiencia le mostró que los jóvenes responden positivamente cuando:",
+              "subitems": [
+                "Se les confían responsabilidades reales",
+                "Trabajan en pequeños grupos",
+                "Tienen un propósito claro",
+                "El servicio a otros les genera satisfacción"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎖️ El Héroe Nacional"
+        },
+        {
+          "type": "paragraph",
+          "text": "Al regresar a Inglaterra, Baden-Powell era un héroe nacional. Su libro \"Aids to Scouting\" (Ayudas para el Escultismo), escrito para militares, estaba siendo usado por maestros y organizaciones juveniles."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💭 Dato Curioso:</strong> Los jóvenes de Mafeking usaban bicicletas para entregar mensajes, convirtiéndose en los primeros \"scouts\" no oficiales. Su lema era \"¡Siempre Listos!\" - que permanece hasta hoy."
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué lecciones de Mafeking aplicarías al trabajar con niños y jóvenes? ¿Cómo les darías responsabilidades apropiadas?"
+      },
+      "quiz": {
+        "title": "Evaluación - Mafeking",
+        "questions": [
+          {
+            "text": "¿Qué descubrió Baden-Powell sobre los jóvenes en Mafeking?",
+            "options": [
+              "Que necesitan supervisión constante",
+              "Que son capaces de mucho más cuando se les da responsabilidad",
+              "Que solo sirven para tareas simples"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuál fue el papel de los jóvenes en Mafeking?",
+            "options": [
+              "Mensajeros, primeros auxilios, centinelas y apoyo logístico",
+              "Solo observadores",
+              "Combatientes armados"
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Brownsea 🏝️"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Brownsea Island - El Primer Campamento Scout",
+      "emoji": "🏝️",
+      "navLabel": "Brownsea",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📅 1-9 de Agosto de 1907"
+        },
+        {
+          "type": "paragraph",
+          "text": "Años después de Mafeking, Baden-Powell decidió poner a prueba sus ideas educativas. Organizó el primer campamento scout en la Isla de Brownsea, en el Canal de la Mancha."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🏕️ El Campamento Experimental</strong><br>• 20 jóvenes de diferentes clases sociales<br>• 9 días de actividades<br>• 4 patrullas: Cuervos, Lobos, Toros y Chorlitos<br>• Cada patrulla con su propio líder juvenil"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 El Programa del Campamento"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "Día 1: Preliminares", "description": "Organización en patrullas, establecimiento del campamento, primeras instrucciones sobre vida al aire libre." },
+            { "title": "Día 2: Campaña", "description": "Técnicas de observación, seguimiento de pistas, deducciones al estilo Sherlock Holmes." },
+            { "title": "Día 3: Observación", "description": "Estudio de la naturaleza, reconocimiento de plantas y animales, juegos de Kim." },
+            { "title": "Día 4: Artes del Bosque", "description": "Pionerismo, nudos, construcción de refugios, cocina al aire libre." },
+            { "title": "Día 5: Caballerosidad", "description": "Código de honor, servicio a otros, primeros auxilios, salvamento." },
+            { "title": "Día 6: Salvamento", "description": "Técnicas de rescate, trabajo en equipo, simulacros de emergencia." },
+            { "title": "Día 7: Patriotismo", "description": "Historia, deberes ciudadanos, respeto a los símbolos patrios." },
+            { "title": "Día 8: Juegos", "description": "Competencias entre patrullas, fogata final, representaciones." }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Los Elementos Clave del Éxito"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Sistema de Patrullas:</strong> Pequeños grupos con liderazgo juvenil",
+            "<strong>Aprender Haciendo:</strong> Toda la teoría se aplicaba inmediatamente",
+            "<strong>Vida al Aire Libre:</strong> El entorno natural como aula",
+            "<strong>Código de Valores:</strong> Honor, lealtad, servicio",
+            "<strong>Uniforme e Insignias:</strong> Identidad y reconocimiento del progreso"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>✨ Resultado:</strong> El campamento fue un éxito rotundo. Los jóvenes regresaron entusiasmados, y la noticia se esparció rápidamente. En 1908, Baden-Powell publicó \"Scouting for Boys\" (Escultismo para Muchachos), que se convirtió en uno de los libros más vendidos de todos los tiempos."
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué elementos del campamento de Brownsea implementarías en tus actividades con manada o tropa? ¿Por qué crees que fue tan exitoso?"
+      },
+      "quiz": {
+        "title": "Evaluación - Brownsea Island",
+        "questions": [
+          {
+            "text": "¿Cuántos jóvenes participaron en el primer campamento scout?",
+            "options": ["20 jóvenes", "50 jóvenes", "100 jóvenes"],
+            "correctIndex": 0
+          },
+          {
+            "text": "¿Cuál fue una innovación clave del campamento?",
+            "options": [
+              "Disciplina militar estricta",
+              "Sistema de patrullas con liderazgo juvenil",
+              "Clases teóricas intensivas"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a la Expansión Mundial 🌍"
+      }
+    },
+    {
+      "id": 5,
+      "title": "La Expansión Mundial del Movimiento Scout",
+      "emoji": "🌍",
+      "navLabel": "Expansión",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🚀 El Crecimiento Explosivo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo que comenzó como un experimento en una pequeña isla británica se convirtió rápidamente en el movimiento juvenil más grande del mundo."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "1908: El Libro que Cambió Todo", "description": "\"Escultismo para Muchachos\" se publica por entregas. Miles de jóvenes forman patrullas espontáneamente sin esperar organización adulta." },
+            { "title": "1909: Las Niñas También Quieren", "description": "En el Rally de Crystal Palace aparecen niñas uniformadas que se autodenominan \"Scouts\". Baden-Powell crea las Guías Scouts con su hermana Agnes." },
+            { "title": "1910: Cruce del Atlántico", "description": "El escultismo llega a América, Asia y África. Chile es el primer país hispanohablante en adoptar el movimiento." },
+            { "title": "1920: Primer Jamboree Mundial", "description": "8,000 scouts de 34 países se reúnen en Londres. Baden-Powell es proclamado \"Jefe Scout Mundial\"." },
+            { "title": "1922: Más de 1 Millón de Scouts", "description": "El movimiento alcanza 32 países. Se crea la Conferencia Scout Mundial." }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🇨🇴 El Escultismo en Colombia"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>1913:</strong> Primeros grupos scout en Bogotá",
+            "<strong>1917:</strong> Fundación oficial de los Boy Scouts de Colombia",
+            "<strong>1936:</strong> Colombia es miembro fundador de la Oficina Scout Interamericana",
+            "<strong>Actualidad:</strong> Más de 15,000 scouts activos en todo el país"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🌎 El Movimiento Scout Hoy"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Datos Actuales:</strong><br>• Presente en 172 países y territorios<br>• Más de 50 millones de scouts en el mundo<br>• Más de 500 millones de personas han sido scouts<br>• Es el movimiento educativo juvenil más grande del planeta"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 ¿Por Qué se Expandió Tan Rápido?"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>Universalidad:</strong> Los valores scouts trascienden culturas y religiones",
+            "<strong>Adaptabilidad:</strong> Cada país adapta el programa a su realidad",
+            "<strong>Método Probado:</strong> El sistema educativo scout funciona en cualquier contexto",
+            "<strong>Necesidad Real:</strong> Responde a las necesidades de desarrollo de los jóvenes",
+            "<strong>Hermandad Mundial:</strong> Crea lazos entre jóvenes de todo el mundo"
+          ]
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cómo crees que el escultismo colombiano puede aportar a la hermandad scout mundial? ¿Qué elementos de nuestra cultura enriquecen el movimiento?"
+      },
+      "quiz": {
+        "title": "Evaluación - Expansión Mundial",
+        "questions": [
+          {
+            "text": "¿En cuántos países está presente el movimiento scout actualmente?",
+            "options": ["50 países", "100 países", "172 países y territorios"],
+            "correctIndex": 2
+          },
+          {
+            "text": "¿Cuándo se fundó oficialmente el escultismo en Colombia?",
+            "options": ["1907", "1917", "1936"],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar al Método Scout ⚙️"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Los 8 Elementos del Método Scout",
+      "emoji": "⚙️",
+      "navLabel": "Método",
+      "sections": [
+        {
+          "type": "paragraph",
+          "text": "El Método Scout es un sistema educativo único que funciona a través de la interacción de 8 elementos esenciales. Como sinodal/ayudante, es fundamental que comprendas cómo aplicar cada uno."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "1. 🤝 Adhesión a la Promesa y la Ley", "description": "Compromiso personal y voluntario con un código de valores positivos expresados en la Promesa y la Ley Scout.", "color": "#e8f5e9", "borderColor": "#4CAF50" },
+            { "title": "2. 🎯 Aprender Haciendo", "description": "Educación activa donde se aprende a través de la experiencia práctica, la observación y la experimentación.", "color": "#e3f2fd", "borderColor": "#2196F3" },
+            { "title": "3. 📈 Progresión Personal", "description": "Cada joven progresa a su propio ritmo, con objetivos personalizados y reconocimiento de logros individuales.", "color": "#f3e5f5", "borderColor": "#9C27B0" },
+            { "title": "4. 👥 Sistema de Equipos", "description": "Pequeños grupos (patrullas/seisenas) donde se desarrolla el liderazgo, la responsabilidad y las habilidades sociales.", "color": "#fce4ec", "borderColor": "#E91E63" },
+            { "title": "5. 🎭 Marco Simbólico", "description": "Uso de símbolos, ceremonias y tradiciones que dan identidad y refuerzan los valores del movimiento.", "color": "#fff3e0", "borderColor": "#FF9800" },
+            { "title": "6. 🌲 Vida en la Naturaleza", "description": "Contacto directo con el ambiente natural como espacio privilegiado de educación y desarrollo personal.", "color": "#e0f2f1", "borderColor": "#009688" },
+            { "title": "7. 🤗 Presencia Estimulante del Adulto", "description": "Acompañamiento de adultos preparados que facilitan y apoyan el proceso educativo sin imponer ni substituir.", "color": "#fff8e1", "borderColor": "#FFC107" },
+            { "title": "8. 🌍 Involucramiento Comunitario", "description": "Participación activa de los jóvenes en su comunidad, desarrollando conciencia social y compromiso ciudadano.", "color": "#ffebee", "borderColor": "#F44336" }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔗 La Integración es Clave"
+        },
+        {
+          "type": "paragraph",
+          "text": "Estos elementos <strong>NO funcionan por separado</strong>. Su poder educativo radica en cómo <strong>interactúan entre sí</strong> para crear un entorno educativo único y transformador."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Para el Sinodal/Ayudante:</strong><br>Al trabajar con manada o tropa, debes aplicar TODOS estos elementos de manera equilibrada. Por ejemplo:<br>• En manada: El marco simbólico del Libro de la Selva + sistema de seisenas + progresión por insignias<br>• En tropa: Mayor énfasis en el sistema de patrullas + vida al aire libre + servicio comunitario"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cuál de los 8 elementos consideras más desafiante para implementar? ¿Cómo los integrarías en una actividad específica?"
+      },
+      "quiz": {
+        "title": "Evaluación - Método Scout",
+        "questions": [
+          {
+            "text": "¿Cuántos elementos componen el Método Scout?",
+            "options": ["5 elementos", "8 elementos", "10 elementos"],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Qué característica es fundamental del Método Scout?",
+            "options": [
+              "Los elementos funcionan de manera integrada",
+              "Cada elemento funciona independientemente",
+              "Solo algunos elementos son importantes"
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar al Impacto Global 💫"
+      }
+    },
+    {
+      "id": 7,
+      "title": "El Impacto Global del Movimiento Scout",
+      "emoji": "💫",
+      "navLabel": "Impacto",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🌟 Más de 100 Años Transformando Vidas"
+        },
+        {
+          "type": "paragraph",
+          "text": "El escultismo ha demostrado ser mucho más que un movimiento juvenil. Es una fuerza global para el bien, que ha impactado positivamente a millones de personas y comunidades."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🏆 Scouts Notables en la Historia"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Neil Armstrong:</strong> Primer hombre en la luna - Scout Águila",
+            "<strong>Ban Ki-moon:</strong> Ex Secretario General de la ONU",
+            "<strong>Bill Gates:</strong> Fundador de Microsoft",
+            "<strong>Barack Obama:</strong> Ex Presidente de Estados Unidos",
+            "<strong>David Beckham:</strong> Futbolista inglés",
+            "<strong>Bear Grylls:</strong> Aventurero y Jefe Scout del Reino Unido"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🌍 Contribuciones del Escultismo al Mundo"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "🕊️ Construcción de Paz", "description": "Los Jamborees mundiales reúnen jóvenes de países en conflicto, promoviendo la comprensión intercultural. El escultismo tiene estatus consultivo en la ONU." },
+            { "title": "🌱 Conservación Ambiental", "description": "Millones de scouts participan en proyectos de reforestación, limpieza de playas y ríos, y educación ambiental." },
+            { "title": "❤️ Servicio Comunitario", "description": "Se estima que los scouts contribuyen con más de 2 mil millones de horas de servicio comunitario anualmente a nivel mundial." },
+            { "title": "🚨 Respuesta a Emergencias", "description": "Los scouts son frecuentemente los primeros en responder a desastres naturales, proporcionando ayuda humanitaria y apoyo logístico." }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📊 El Impacto en Números"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Datos Impresionantes:</strong><br>• 500+ millones de personas han sido scouts<br>• 50+ millones de scouts activos actualmente<br>• 172 países con presencia scout<br>• 28% de los Premios Nobel han sido scouts<br>• 70% de astronautas han sido scouts<br>• 85% de estudiantes scouts completan estudios superiores"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🇨🇴 El Impacto en Colombia"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Procesos de paz y reconciliación",
+            "Conservación de páramos y bosques",
+            "Apoyo en emergencias naturales",
+            "Programas de prevención de drogas",
+            "Inclusión de poblaciones vulnerables"
+          ]
+        }
+      ],
+      "reflection": {
+        "prompt": "Como futuro sinodal/ayudante, ¿cómo contribuirás al impacto positivo del escultismo? ¿Qué legado quieres dejar en los niños y niñas que acompañarás?"
+      },
+      "quiz": {
+        "title": "Evaluación Final - Impacto Global",
+        "questions": [
+          {
+            "text": "¿Aproximadamente cuántas personas han sido scouts en la historia?",
+            "options": ["100 millones", "500 millones", "50 millones"],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuál es una contribución importante del escultismo?",
+            "options": [
+              "Solo actividades recreativas",
+              "Construcción de paz y servicio comunitario",
+              "Únicamente campamentos"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    { "id": "achievement-1", "name": "Historiador Scout", "emoji": "📚", "unlockOnModule": 3 },
+    { "id": "achievement-2", "name": "Conocedor de la Misión", "emoji": "🎯", "unlockOnModule": 2 },
+    { "id": "achievement-3", "name": "Metodólogo Scout", "emoji": "⚙️", "unlockOnModule": 6 },
+    { "id": "achievement-4", "name": "Ciudadano Global", "emoji": "🌍", "unlockOnModule": 7 },
+    { "id": "achievement-5", "name": "Rover Certificado", "emoji": "🎓", "unlockOnModule": -1 }
+  ],
+  "certificate": {
+    "courseName": "FUNDAMENTOS DEL MOVIMIENTO SCOUT",
+    "description": "ha completado exitosamente el curso de Historia y Características Esenciales del Movimiento Scout, demostrando comprensión profunda de los fundamentos necesarios para servir como sinodal/ayudante en las ramas de manada y tropa."
+  }
+}

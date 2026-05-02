@@ -1,0 +1,410 @@
+/* ============================================================================
+   DARK THEME - Plataforma de Formacion Rover ASC
+   Aplicado via atributo html[data-theme="dark"] para evitar FOUC.
+   Los colores de acento (morado #622599, amarillo #ffe675) se mantienen
+   aclarados en modo oscuro para preservar la identidad vallescout.
+   ============================================================================ */
+
+/* --- Base --- */
+html[data-theme="dark"] body {
+    background: #161619;
+    color: #e8e8ec;
+}
+
+/* --- Top bar: ya es morado en claro; en oscuro usamos un morado mas oscuro --- */
+html[data-theme="dark"] .top-bar {
+    background: #3d1660;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+
+/* --- Hero --- */
+html[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #3d1660 0%, #1e0b33 100%);
+}
+
+/* --- Stats --- */
+html[data-theme="dark"] .stat-card {
+    background: #24242c;
+    border-top-color: #9148d4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
+}
+html[data-theme="dark"] .stat-card .stat-number {
+    color: #c59bff;
+}
+html[data-theme="dark"] .stat-card .stat-label {
+    color: #a0a0a8;
+}
+
+/* --- Section titles --- */
+html[data-theme="dark"] .section-title {
+    color: #c59bff;
+    border-bottom-color: #ffe675;
+}
+
+/* --- Course cards --- */
+html[data-theme="dark"] .course-card {
+    background: #24242c;
+    border-top-color: #9148d4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
+}
+html[data-theme="dark"] .course-card:hover {
+    box-shadow: 0 10px 30px rgba(145, 72, 212, 0.35);
+}
+html[data-theme="dark"] .course-title {
+    color: #c59bff;
+}
+html[data-theme="dark"] .course-description,
+html[data-theme="dark"] .course-info,
+html[data-theme="dark"] .course-info span {
+    color: #a0a0a8;
+}
+html[data-theme="dark"] .course-card.coming-soon {
+    opacity: 0.55;
+}
+
+/* --- Buttons --- */
+html[data-theme="dark"] .btn {
+    color: #e8e8ec;
+    border-color: #e8e8ec;
+    background: transparent;
+}
+html[data-theme="dark"] .btn:hover {
+    background: #9148d4;
+    border-color: #9148d4;
+    color: #ffffff;
+}
+html[data-theme="dark"] .btn.disabled {
+    border-color: #4a4a52;
+    color: #4a4a52;
+}
+html[data-theme="dark"] .btn.disabled:hover {
+    background: transparent;
+    color: #4a4a52;
+    border-color: #4a4a52;
+}
+
+/* --- Verificador de certificados: formularios y resultados --- */
+html[data-theme="dark"] .main {
+    background: transparent;
+}
+html[data-theme="dark"] .card {
+    background: #24242c;
+    color: #e8e8ec;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="number"],
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+    background: #1a1a21;
+    color: #e8e8ec;
+    border-color: #3a3a44;
+}
+html[data-theme="dark"] input[type="text"]::placeholder,
+html[data-theme="dark"] input[type="email"]::placeholder,
+html[data-theme="dark"] input[type="number"]::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+    color: #6a6a74;
+}
+html[data-theme="dark"] label {
+    color: #c0c0c8;
+}
+
+/* --- 404 page card --- */
+html[data-theme="dark"] .code {
+    color: #c59bff;
+}
+html[data-theme="dark"] .title {
+    color: #e8e8ec;
+}
+html[data-theme="dark"] .message {
+    color: #a0a0a8;
+}
+
+/* --- Footer --- */
+html[data-theme="dark"] .footer {
+    background: #0c0c0e;
+    border-top: 1px solid #2a2a30;
+}
+
+/* ============================================================================
+   CURSO: Header, Progress, Navigation
+   ============================================================================ */
+html[data-theme="dark"] .header {
+    background: #24242c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
+    border-top-color: #9148d4;
+}
+html[data-theme="dark"] .header h1 {
+    color: #c59bff;
+}
+html[data-theme="dark"] .header p {
+    color: #a0a0a8;
+}
+html[data-theme="dark"] .progress-container {
+    background: #3a3a44;
+}
+html[data-theme="dark"] .progress-text {
+    color: #e8e8ec;
+}
+html[data-theme="dark"] .nav-menu {
+    background: #24242c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
+}
+html[data-theme="dark"] .nav-btn {
+    background: #1a1a21;
+    border-color: #3a3a44;
+    color: #c0c0c8;
+}
+html[data-theme="dark"] .nav-btn:hover {
+    background: #2a2040;
+    border-color: #9148d4;
+}
+html[data-theme="dark"] .nav-btn.active {
+    background: #622599;
+    color: white;
+    border-color: #622599;
+}
+html[data-theme="dark"] .nav-btn.completed {
+    background: #6a2e9a;
+    color: white;
+    border-color: #6a2e9a;
+}
+html[data-theme="dark"] .mobile-nav {
+    background: #1a1a21;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+}
+html[data-theme="dark"] .mobile-nav select {
+    background: #24242c;
+    color: #e8e8ec;
+    border-color: #622599;
+}
+
+/* ============================================================================
+   CURSO: Content Area, Modules
+   ============================================================================ */
+html[data-theme="dark"] .content {
+    background: #24242c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
+}
+html[data-theme="dark"] .module h2 {
+    color: #c59bff;
+    border-bottom-color: #ffe675;
+}
+html[data-theme="dark"] .module h3 {
+    color: #c59bff;
+}
+html[data-theme="dark"] .module h4 {
+    color: #e0e0e8;
+}
+html[data-theme="dark"] .module p {
+    color: #b0b0b8;
+}
+html[data-theme="dark"] .module ul,
+html[data-theme="dark"] .module ol,
+html[data-theme="dark"] .module li {
+    color: #b0b0b8;
+}
+html[data-theme="dark"] .badge {
+    background: #ffe675;
+    color: #2c2927;
+}
+
+/* ============================================================================
+   CURSO: Content Blocks (info-box, data-privacy, mission, timeline, method)
+   ============================================================================ */
+html[data-theme="dark"] .info-box {
+    background: #2a2040;
+    border-left-color: #9148d4;
+}
+html[data-theme="dark"] .data-privacy {
+    background: #2a2820;
+    border-left-color: #ffe675;
+}
+html[data-theme="dark"] .data-privacy,
+html[data-theme="dark"] .data-privacy p,
+html[data-theme="dark"] .data-privacy li {
+    color: #c8c0a0;
+}
+html[data-theme="dark"] .mission-box {
+    background: linear-gradient(135deg, #2a2040, #1e1535);
+    border-color: #9148d4;
+}
+html[data-theme="dark"] .timeline-item {
+    background: #1a1a21;
+    border-left-color: #9148d4;
+}
+html[data-theme="dark"] .method-element {
+    border-color: #3a3a44;
+    background: #1a1a21;
+}
+html[data-theme="dark"] .method-element:hover {
+    box-shadow: 0 5px 15px rgba(145, 72, 212, 0.25);
+}
+
+/* ============================================================================
+   CURSO: Forms
+   ============================================================================ */
+html[data-theme="dark"] .form-group label {
+    color: #c0c0c8;
+}
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .form-group textarea {
+    background: #1a1a21;
+    color: #e8e8ec;
+    border-color: #3a3a44;
+}
+html[data-theme="dark"] .form-group input:focus,
+html[data-theme="dark"] .form-group select:focus,
+html[data-theme="dark"] .form-group textarea:focus {
+    border-color: #9148d4;
+}
+
+/* ============================================================================
+   CURSO: Buttons (override base .btn for course context)
+   ============================================================================ */
+html[data-theme="dark"] .btn {
+    background: #622599;
+    color: white;
+    border: none;
+}
+html[data-theme="dark"] .btn:hover {
+    background: #7b37b8;
+}
+html[data-theme="dark"] .btn:disabled {
+    background: #3a3a44;
+    color: #6a6a74;
+}
+
+/* ============================================================================
+   CURSO: Reflection Areas
+   ============================================================================ */
+html[data-theme="dark"] .reflection-area {
+    background: #2a2820;
+    border-left-color: #ffe675;
+}
+html[data-theme="dark"] .reflection-area textarea {
+    background: #1a1a21;
+    color: #e8e8ec;
+    border-color: #ffe675;
+}
+
+/* ============================================================================
+   CURSO: Quizzes
+   ============================================================================ */
+html[data-theme="dark"] .quiz-container {
+    background: #1a1a21;
+}
+html[data-theme="dark"] .question h4 {
+    color: #c59bff;
+}
+html[data-theme="dark"] .option {
+    background: #24242c;
+    border-color: #3a3a44;
+    color: #e8e8ec;
+}
+html[data-theme="dark"] .option:hover {
+    background: #2a2040;
+    border-color: #9148d4;
+}
+html[data-theme="dark"] .option.selected {
+    background: #2a2040;
+    border-color: #9148d4;
+}
+html[data-theme="dark"] .option.correct {
+    background: #1b3a1b;
+    border-color: #4CAF50;
+    color: #a5d6a7;
+}
+html[data-theme="dark"] .option.incorrect {
+    background: #3a1b1b;
+    border-color: #f44336;
+    color: #ef9a9a;
+}
+
+/* ============================================================================
+   CURSO: Stats, Achievements, Certificate
+   ============================================================================ */
+html[data-theme="dark"] .stats .stat-card {
+    background: #3d1660;
+}
+html[data-theme="dark"] .achievement {
+    background: #2a2040;
+    color: #c59bff;
+    border-color: #9148d4;
+}
+html[data-theme="dark"] .achievement.earned {
+    box-shadow: 0 3px 10px rgba(145, 72, 212, 0.4);
+}
+html[data-theme="dark"] .certificate {
+    background: linear-gradient(45deg, #24242c, #1e1e26);
+    border-color: #ffe675;
+}
+html[data-theme="dark"] .certificate h2 {
+    color: #c59bff;
+}
+html[data-theme="dark"] .certificate h3 {
+    color: #c59bff;
+}
+html[data-theme="dark"] .certificate p {
+    color: #b0b0b8;
+}
+html[data-theme="dark"] .certificate-code {
+    background: #1a1a21;
+    border-color: #9148d4;
+    color: #e8e8ec;
+}
+
+/* ============================================================================
+   CURSO: Modal
+   ============================================================================ */
+html[data-theme="dark"] .modal-content {
+    background: #24242c;
+    color: #e8e8ec;
+}
+html[data-theme="dark"] .modal-progress-bar {
+    background: #3a3a44;
+}
+
+/* ============================================================================
+   THEME TOGGLE BUTTON
+   Inyectado por theme-toggle.js dentro de .top-bar-inner
+   ============================================================================ */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.35);
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    padding: 0;
+    margin-left: 14px;
+    font-family: inherit;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.theme-toggle:hover {
+    background: rgba(255,255,255,0.18);
+    transform: scale(1.08);
+}
+.theme-toggle:focus-visible {
+    outline: 2px solid #ffe675;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .theme-toggle {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        margin-left: 8px;
+    }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "courseId": "bienvenida-adultos",
+    "title": "Bienvenida al Movimiento de Adultos",
+    "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 25 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
+    "icon": "🦸",
+    "duration": "25 minutos",
+    "modules": 7,
+    "status": "active",
+    "file": "bienvenida-adultos.html",
+    "folder": "bienvenida-adultos"
+  },
+  {
+    "courseId": "politica-marco",
+    "title": "La Política — Marco y Principios",
+    "description": "El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecciones cortas vas a entender qué dice la Política Nacional de Adultos, a quién aplica, cuáles son sus principios y qué herramientas trae para acompañarte. Sin tecnicismos: con ejemplos del día a día de un grupo scout.",
+    "icon": "📜",
+    "duration": "30 minutos",
+    "modules": 7,
+    "status": "active",
+    "file": "politica-marco.html",
+    "folder": "politica-marco"
+  },
+  {
+    "courseId": "ciclo-adulto",
+    "title": "El Ciclo del Adulto en el Movimiento",
+    "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
+    "icon": "🔄",
+    "duration": "30 minutos",
+    "modules": 7,
+    "status": "active",
+    "file": "ciclo-adulto.html",
+    "folder": "ciclo-adulto"
+  },
+  {
+    "courseId": "competencias-esenciales",
+    "title": "Las 7 Competencias Esenciales",
+    "description": "Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~35 min, 6 lecciones cortas.",
+    "icon": "🧠",
+    "duration": "35 minutos",
+    "modules": 7,
+    "status": "active",
+    "file": "competencias-esenciales.html",
+    "folder": "competencias-esenciales"
+  },
+  {
+    "courseId": "plan-personal",
+    "title": "Tu Plan Personal de Desarrollo",
+    "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor. Es el cierre de la ruta de fundamentación.",
+    "icon": "🗺️",
+    "duration": "30 minutos",
+    "modules": 7,
+    "status": "active",
+    "file": "plan-personal.html",
+    "folder": "plan-personal"
+  },
+  {
+    "courseId": "politica-adultos-v1",
+    "title": "La Política de Adultos (versión inicial — archivado)",
+    "description": "Versión inicial del curso, monolítico de 90 min. Reemplazado por la ruta de 5 cursos cortos. Conservado como respaldo.",
+    "icon": "📦",
+    "duration": "1 hora 30 minutos",
+    "modules": 6,
+    "status": "coming-soon",
+    "file": "politica-adultos.html",
+    "folder": "politica-adultos"
+  }
+]

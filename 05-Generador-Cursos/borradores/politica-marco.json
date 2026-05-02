@@ -1,0 +1,580 @@
+{
+  "courseId": "politica-marco",
+  "title": "La Política — Marco y Principios",
+  "subtitle": "Curso 2 de la Ruta de Formación de Adultos en el Movimiento",
+  "description": "El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecciones cortas vas a entender qué dice la Política Nacional de Adultos, a quién aplica, cuáles son sus principios y qué herramientas trae para acompañarte. Sin tecnicismos: con ejemplos del día a día de un grupo scout.",
+  "icon": "📜",
+  "duration": "30 minutos",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a.</strong><br>Llegaste al curso 2 de la ruta de formación de adultos. Si llegaste directo, no hay problema — este curso se entiende solo. Toma 30 minutos en total, repartidos en 6 lecciones cortas. Puedes hacer una hoy, dos mañana, todas seguidas: el sistema guarda tu avance."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo más probable es que entraste al grupo scout porque <strong>tu hijo o hija está ahí</strong>, o porque alguien del grupo te invitó. Y un día, sin darte cuenta, te pidieron asumir un cargo: vocal, tesorero, secretario, asesor, jefe. Y ahora descubres que existe algo llamado <em>'Política Nacional de Adultos en el Movimiento'</em> y te preguntas: <strong>¿en qué me metí?</strong>"
+        },
+        {
+          "type": "paragraph",
+          "text": "Buenas noticias: esa política existe precisamente para que <strong>no estés solo en esto</strong>. En este curso vamos a desarmarla en piezas pequeñas y entendibles."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a poder…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Explicarle</strong> a otro adulto del grupo qué es la política, en una frase",
+            "<strong>Reconocer</strong> los principios que ya están vivos en tu grupo y los que faltan",
+            "<strong>Saber qué es</strong> una 'competencia' y por qué se evalúan adultos por ellas",
+            "<strong>Identificar</strong> las herramientas oficiales disponibles para apoyarte"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "Lección 1 — ¿Qué es esta política y de dónde vino?", "description": "5 min. La historia corta." },
+            { "title": "Lección 2 — ¿A quién le aplica?", "description": "4 min. Spoiler: a más gente de la que crees." },
+            { "title": "Lección 3 — Los 5 principios que más impactan tu día a día", "description": "7 min. Lo más práctico de la política." },
+            { "title": "Lección 4 — Los otros 8 principios", "description": "5 min. Lectura ágil." },
+            { "title": "Lección 5 — Gestión por competencias — qué significa para ti", "description": "6 min. La idea central." },
+            { "title": "Lección 6 — Tu mochila de herramientas", "description": "5 min. Las 12 herramientas oficiales." }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📝 Cómo avanzar:</strong> al final de cada lección hay una reflexión personal y un mini-quiz de 1-2 preguntas. Necesitas el 70% para pasar a la siguiente. Si te equivocas, lo intentas otra vez."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — ¿Qué es esta política y de dónde vino?",
+      "emoji": "📜",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>La Política Nacional de Adultos en el Movimiento existe para que ningún adulto del grupo quede sin acompañamiento, sin claridad sobre su rol, ni sin un camino para crecer."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📖 La historia, sin rodeos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hasta hace unos años, cuando un papá o una mamá llegaban a apoyar el grupo, la cosa funcionaba más o menos así: <em>'gracias por venir, este es tu cargo, suerte'</em>. No había proceso de inducción, no había acompañamiento estructurado, no había una forma clara de evaluar si el adulto se estaba sintiendo bien o si necesitaba ayuda."
+        },
+        {
+          "type": "paragraph",
+          "text": "El movimiento scout — primero a nivel mundial, después interamericano, y por último en Colombia — entendió que <strong>así se queman los voluntarios</strong>. La gente entra con muchas ganas y se va frustrada. Para resolverlo, se construyó esta política."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🇨🇴 ¿Cuándo llegó a Colombia?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La Asociación Scouts de Colombia adoptó oficialmente la política <strong>en abril de 2017</strong>. No es nueva ni reciente: ya cumplió varios años. Lo que sí es relativamente nuevo es que cada grupo realmente la conozca y la aplique."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Política Nacional de Adultos en el Movimiento, aprobada por el Consejo Scout Nacional mediante el Acuerdo CSN N° 176 del 22 de abril de 2017, ratificada por la Resolución CSN N° 021-17 del 5 de junio de 2017. Origen: Política Interamericana 'Los adultos que necesitamos', aprobada en la 25ª Conferencia Scout Interamericana en septiembre de 2013.",
+          "source": "Política Nacional de Adultos en el Movimiento, Introducción, p. 1",
+          "label": "📋 Ver fechas y referencias oficiales"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Conoce el marco general en voz de quien lo aplica"
+        },
+        {
+          "type": "video",
+          "src": "politica-marco/videos/01_marco_general.mp4",
+          "caption": "Marco general — Andrea Fajardo (Grupo Conde 123, Cali) · 4:17"
+        }
+      ],
+      "reflection": {
+        "prompt": "Cuando entraste al grupo scout, ¿alguien te explicó qué se esperaba de ti, te acompañó los primeros meses, te ayudó a entender los procesos? ¿Qué hubieras necesitado?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "¿Para qué nació la Política Nacional de Adultos en el Movimiento?",
+            "options": [
+              "Para crear más cargos en los grupos scouts",
+              "Para que ningún adulto quede sin acompañamiento, sin claridad sobre su rol ni sin un camino para crecer",
+              "Para reemplazar la formación tradicional con cursos online"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuándo se adoptó oficialmente esta política en Colombia?",
+            "options": [
+              "En 2010",
+              "En abril de 2017",
+              "En 2022"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — ¿A quién le aplica?",
+      "emoji": "👥",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 4 minutos · 1 idea central:</strong><br>Si tienes un cargo o función dentro del grupo o en cualquier nivel de la asociación, te aplica. Sin importar si eres voluntario o profesional, joven o no, jefe o no."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🤔 Hagamos un ejercicio mental"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mira tu grupo y haz una lista mental de <strong>todas las personas adultas</strong> que cumplen una función. No solo dirigentes. Por ejemplo:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "El <strong>vocal</strong> que asiste a las reuniones del consejo y opina pero no tiene cargo ejecutivo",
+            "La <strong>mamá</strong> que se encarga de las inscripciones de la kermesse",
+            "El <strong>tesorero</strong>, su asistente, el contador externo",
+            "El <strong>asesor</strong> espiritual, si lo hay",
+            "El <strong>rover</strong> de 19 años que está apoyando manada como ayudante",
+            "Los <strong>jefes</strong> de cada rama y el jefe de grupo",
+            "El <strong>presidente</strong> y el <strong>vicepresidente</strong> del consejo"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>A todos ellos les aplica la política.</strong> No solo a los dirigentes operativos. Esto cambia muchas cosas: significa que el rover ayudante de manada tiene derecho a un plan de desarrollo. Significa que la mamá de la kermesse merece una inducción y un acompañamiento. Significa que el contador externo, aunque sea profesional pago, también está bajo el sistema de gestión."
+        },
+        {
+          "type": "policy-quote",
+          "text": "La presente política cubre a todos los adultos y jóvenes adultos, voluntarios o profesionales, que desempeñan cargos o funciones en la Asociación Scouts de Colombia, en cualquiera de sus niveles.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 2 'Los Sujetos de la Política', p. 3",
+          "label": "📋 Ver definición oficial de 'sujetos de la política'"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Implicación práctica:</strong><br>Si hay alguien en tu grupo que cumple un rol pero <em>'no lo ven como adulto del movimiento'</em> (por ejemplo, una mamá de comité o un asesor externo), tienes ahora un argumento oficial para integrarlo: la política dice que también es sujeto de los mismos derechos y procesos."
+        }
+      ],
+      "reflection": {
+        "prompt": "En tu grupo, ¿hay alguna persona que cumple una función importante pero a la que NO se trata como 'adulto del movimiento' (no recibe inducción, no tiene asesor, nadie se preocupa por su desarrollo)? ¿Quién?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "¿A quién le aplica la Política Nacional de Adultos en el Movimiento?",
+            "options": [
+              "Solo a los jefes de grupo y los dirigentes de rama",
+              "A todos los adultos y jóvenes adultos, voluntarios o profesionales, que tienen cargos o funciones en la ASC",
+              "Solo a los miembros del consejo de grupo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un rover de 19 años que apoya como ayudante en manada, ¿es 'adulto del movimiento' para efectos de esta política?",
+            "options": [
+              "No, los rovers son sujetos del programa de jóvenes",
+              "Sí, porque desempeña una función dentro de la asociación",
+              "Solo si pasa los 21 años"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Los 5 principios que más impactan tu día a día",
+      "emoji": "⭐",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La política tiene 13 principios. En esta lección vamos a ver los 5 que <em>más se notan</em> en la vida cotidiana de un grupo. Los otros 8 vienen en la siguiente lección."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "1. Personalización"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>No eres una pieza intercambiable.</strong> Cada adulto trae competencias diferentes, intereses diferentes, momentos de vida diferentes. La política dice que tu plan de desarrollo y tu rol deben ajustarse a TI, no a la inversa."
+        },
+        {
+          "type": "blockquote",
+          "text": "Ejemplo real: dos personas asumen el cargo de tesorero. Una es contadora pública, la otra es una mamá que nunca ha llevado libros pero quiere aprender. La política dice que sus planes de formación deben verse distintos."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "2. Aprendizaje significativo"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Lo que aprendes tiene que servirte para resolver problemas reales del grupo.</strong> No teoría por teoría. Si un curso no te ayuda a hacer mejor lo que haces el sábado en la sede, sobra."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "3. Horizontalidad"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Aquí nadie es jefe del otro como en la oficina.</strong> Somos pares. El jefe de grupo no le 'manda' al consejero — articulan. El asesor personal no es tu superior — es tu acompañante. La autoridad existe pero el clima es de diálogo, no de jerarquía."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "4. Inserción juvenil"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Los jóvenes adultos pueden y deben ocupar cargos.</strong> Si tienes 19 años y quieres ser presidente del consejo, no hay nada en la política que te lo impida. Al contrario: dice expresamente que se debe <em>preferir</em> a los jóvenes que cumplen el perfil."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5. Equidad de género"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Hombres y mujeres con las mismas oportunidades en cualquier cargo, en cualquier nivel.</strong> Suena obvio, pero está escrito porque históricamente no se cumplía."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Personalización: Al asumir un cargo, cada adulto puede evaluar qué competencias ya tiene desarrolladas y cuáles le hacen falta desarrollar. Esto lo hace con la asesoría personal de uno o varios adultos. En conjunto, formulan el plan personal de desarrollo. — Aprendizaje significativo: Vincula los conocimientos, habilidades y actitudes que sean necesarios para que los puedan aplicar a situaciones o problemas a los que se enfrentan en sus actividades cotidianas. — Horizontalidad: Promueve una relación horizontal entre el adulto sujeto del proceso y todos los agentes que participan en él, mediante un diálogo constructivo en un clima de confianza. — Inserción juvenil: Elimina barreras que impidan el acceso de los adultos jóvenes a los diferentes cargos y establece directrices para que en los procesos de selección se incorporen de manera preferencial a los adultos jóvenes que cuentan con el perfil. — Equidad de género: Garantiza que tanto hombres como mujeres tengan las mismas oportunidades para acceder a los diferentes cargos, en igualdad de condiciones, en todos los niveles.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 3 'Principios', p. 4-5",
+          "label": "📋 Ver redacción oficial completa de los 5 principios"
+        }
+      ],
+      "reflection": {
+        "prompt": "De estos 5 principios, ¿cuál crees que tu grupo vive bien hoy y cuál es el que más le falta? Da un ejemplo concreto."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Si una persona de 20 años quiere ser presidente del consejo de grupo, ¿qué dice la política?",
+            "options": [
+              "Que no puede hasta los 25 años",
+              "Que se le debe preferir cuando cumple el perfil, por el principio de inserción juvenil",
+              "Que solo puede serlo si lleva más de 5 años en el grupo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El principio de horizontalidad implica que…",
+            "options": [
+              "Todos los adultos del grupo cobran lo mismo",
+              "La relación entre adultos en el proceso de gestión es de diálogo y pares, no de jerarquía rígida",
+              "No existe la figura del jefe de grupo"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Los otros 8 principios",
+      "emoji": "📋",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · Lectura ágil:</strong><br>Estos 8 principios completan los 13 de la política. Son igual de importantes, pero los repasamos rápido."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Enfoque por competencias", "description": "El adulto se desarrolla, evalúa y certifica por competencias (saber, hacer, ser), no por años en el grupo.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Coherencia", "description": "Lo que dice la política nacional debe alinearse con la mundial e interamericana. No inventamos en cada grupo.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Organización que aprende", "description": "El grupo, la regional y la nación reconocen y aprenden de las experiencias de sus adultos. Se sistematiza, no se pierde.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
+            { "title": "Subsidiariedad y descentralización", "description": "Los temas se resuelven en el nivel más cercano al adulto. Solo escalas a la regional o a Bogotá si el grupo no puede.", "color": "#e8f5e9", "borderColor": "#4caf50" },
+            { "title": "Accesibilidad y flexibilidad", "description": "La formación llega de muchas formas: cursos, módulos online, experiencias externas reconocidas. No tienes que ir presencial obligado.", "color": "#fff8e1", "borderColor": "#ffc107" },
+            { "title": "Transparencia", "description": "Las decisiones de selección, evaluación, certificación y retiro siguen procesos claros y conocidos. No 'a dedo'.", "color": "#fce4ec", "borderColor": "#e91e63" },
+            { "title": "Participación", "description": "Tú participas activamente en la definición de tu plan, en tu evaluación, en las decisiones sobre tu futuro en el grupo.", "color": "#e0f7fa", "borderColor": "#00bcd4" },
+            { "title": "Calidad", "description": "El sistema busca mejora continua. No es una vez y ya — se revisa, se ajusta, se actualiza.", "color": "#efebe9", "borderColor": "#795548" }
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Enfoque por competencias: Busca el desarrollo de todos los aspectos de un adulto en términos de conocimientos, habilidades, actitudes y valores requeridos para desempeñar adecuadamente sus funciones en un cargo. — Coherencia: Vincula los conceptos, prácticas y lineamientos propuestos en las políticas Mundial y Regional. — Organización que aprende: Reconoce la posibilidad de la valoración y certificación de las competencias desarrolladas por los adultos en la cotidiana interacción. — Subsidiariedad y descentralización: Cualquier asunto debe ser resuelto por la autoridad más próxima al adulto; excepcionalmente se escala a niveles superiores cuando un nivel inferior no tiene la capacidad para resolverlo. — Accesibilidad y flexibilidad: Facilita el acceso al sistema de gestión mediante múltiples cursos, módulos y otras experiencias educativas. — Transparencia: Garantiza el apego a las normas y procedimientos de la Asociación, en todas las decisiones y procesos relativos a selección, nombramiento, formación, certificación, evaluación y reconocimiento. — Participación: Garantiza la participación activa en todas las decisiones y procesos relacionados con tu cargo, plan de desarrollo, formación y evaluación. — Calidad: Propende por la mejora continua de la organización para asegurar procesos consistentes y sistemáticos.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 3 'Principios', p. 4-5",
+          "label": "📋 Ver redacción oficial completa de los 8 principios"
+        }
+      ],
+      "reflection": {
+        "prompt": "De estos 8, ¿cuál crees que tu grupo más necesita trabajar hoy? ¿Hay alguno que ni siquiera sabías que existía como principio?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Si un consejero tiene un conflicto en su grupo, ¿qué dice el principio de subsidiariedad?",
+            "options": [
+              "Que se debe resolver en el grupo, y solo escalar si el grupo no puede",
+              "Que debe escalarse inmediatamente a la dirección nacional",
+              "Que se resuelve por votación regional"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "El principio de 'organización que aprende' implica que…",
+            "options": [
+              "Solo la dirección nacional aprende; los grupos solo aplican",
+              "Las experiencias y competencias desarrolladas por los adultos en su práctica cotidiana se reconocen y sistematizan",
+              "Cada grupo debe diseñar sus propios principios"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Gestión por competencias — qué significa para ti",
+      "emoji": "🧠",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>'Competencia' no es lo mismo que 'tener conocimiento'. Es lo que sabes, lo que sabes hacer Y quién eres como persona, todo junto, aplicado a un contexto real."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🍳 La metáfora de la cocina"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tener la <strong>receta</strong> escrita en un papel es <em>saber</em>. Saber cocinarla en tu casa es <em>saber hacer</em>. Cocinarla bien para 80 personas en una kermesse, sin perder los nervios, ajustando cuando se acaba un ingrediente, y dejando la cocina limpia, eso ya es <strong>competencia</strong>."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo mismo pasa con un cargo en el grupo. <strong>Saber sumar números no te hace tesorero</strong>. Hacer una contabilidad real con 80 chicos, presentar al consejo cuentas claras, y mantenerte transparente cuando hay tentación, eso es ser tesorero competente."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Las 3 partes de una competencia"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Saber", "description": "Conocimientos. Lo que has leído, estudiado, te han enseñado.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Hacer", "description": "Habilidad práctica. Saber aplicar el conocimiento en una situación.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Ser", "description": "Principios y valores. Cómo actúas: con honestidad, empatía, compromiso.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "La competencia es definida como una característica subyacente en el adulto, que está causalmente relacionada con un estándar de efectividad y/o un desempeño superior en su cargo o función. — Característica subyacente: parte profunda de la personalidad, que predice el comportamiento. — Causalmente relacionada: la competencia origina o anticipa el desempeño. — Estándar de efectividad: predice quién hace algo bien o pobremente.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 4 'Gestión por Competencias', p. 7 (cita a Spencer y Spencer)",
+          "label": "📋 Ver definición oficial de competencia (Spencer y Spencer)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🪜 ¿Y los grados de dominio?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada competencia se mide en <strong>4 grados</strong>, desde el más básico hasta el de excelencia. Esto te permite saber dónde estás y qué te falta para subir. Los grados están definidos en el <em>Diccionario de Competencias</em> oficial."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔮 Adelanto:</strong><br>En el <strong>Curso 3</strong> verás el <em>Ciclo del Adulto</em> — cómo todas estas piezas (competencias, plan, asesor, evaluación) se viven en el tiempo. En el <strong>Curso 4</strong> profundizarás <em>las 7 competencias esenciales</em> con su autodiagnóstico, y en el <strong>Curso 5</strong> construirás tu Plan Personal."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 ¿Qué dicen los formadores?"
+        },
+        {
+          "type": "video",
+          "src": "politica-marco/videos/02_competencias.mp4",
+          "caption": "El concepto de competencia explicado por Andrea Fajardo · 3:15"
+        }
+      ],
+      "reflection": {
+        "prompt": "Identifica una competencia que tienes en tu vida profesional o personal pero que NO estás aplicando en tu rol del grupo. ¿Por qué no la aplicas?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Una competencia integra tres elementos. ¿Cuáles?",
+            "options": [
+              "Conocimiento, experiencia y antigüedad",
+              "Saber, hacer y ser (conocimientos, habilidades y valores aplicados al contexto)",
+              "Estudio, práctica y certificación"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Tener un curso de contabilidad en tu hoja de vida, ¿te hace automáticamente competente como tesorero del grupo?",
+            "options": [
+              "Sí, el conocimiento es lo único que importa",
+              "No, hay que demostrar que sabes aplicarlo en el contexto real del grupo y con los valores adecuados",
+              "Solo si el curso es certificado por la ASC"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Tu mochila de herramientas",
+      "emoji": "🎒",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>La política te entrega 12 herramientas concretas. Hoy vas a saber cuáles son y para qué sirven. No tienes que dominarlas hoy — solo saber que existen y dónde encontrarlas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧰 Las 12 herramientas oficiales"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>Cartilla Metodológica</strong> — el cómo se hace operativo todo el sistema",
+            "<strong>Diccionario de Competencias</strong> — las 7 esenciales y 29 específicas, con grados y conductas",
+            "<strong>Manual de Cargos, Funciones y Perfiles</strong> — qué se espera de cada cargo",
+            "<strong>Atracción y Vinculación</strong> — cómo buscar y vincular nuevos adultos",
+            "<strong>Módulo de Inducción</strong> — para integrar a quien acaba de llegar",
+            "<strong>Plataforma Talento 360°</strong> — donde vive tu hoja de vida y plan personal",
+            "<strong>Módulo de Diversidad e Inclusión</strong> — para que el grupo sea para todos",
+            "<strong>Módulo Safe from Harm (A Salvo del Peligro)</strong> — protección de niños y adolescentes",
+            "<strong>Acompañamiento, Seguimiento y Evaluación</strong> — cómo te acompañan y evalúan",
+            "<strong>Formación Básica + Perfeccionamiento Continuo</strong> — los dos momentos formativos",
+            "<strong>Gestión para la Motivación</strong> — cómo no quemarte y mantener el ánimo",
+            "<strong>Decisiones para el Futuro</strong> — qué pasa al final del nombramiento (renovación, reubicación, retiro)"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔮 Lo que viene en la ruta:</strong><br>🔄 <strong>Curso 3</strong> — vas a recorrer el <em>Ciclo del Adulto</em> completo (atracción, desempeño, decisiones)<br>🧠 <strong>Curso 4</strong> — vas a profundizar en el <em>Diccionario de Competencias</em> con autodiagnóstico personal<br>🗺️ <strong>Curso 5</strong> — vas a construir tu <em>Plan Personal de Desarrollo</em> y cerrar la ruta"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 La caja de herramientas, en voz del taller"
+        },
+        {
+          "type": "video",
+          "src": "politica-marco/videos/03_herramientas.mp4",
+          "caption": "La 'maleta' de herramientas — Andrea Fajardo · 2:35"
+        },
+        {
+          "type": "policy-quote",
+          "text": "El modelo de gestión opera a través de 12 elementos articulados: Cartilla Metodológica, Manual de Cargos Funciones y Perfiles por Competencias, Atracción y Vinculación, Módulo de Inducción, Diccionario de Competencias, Módulo Safe from Harm, Módulo Diversidad e Inclusión, Plataforma Talento 360, Formación, Acompañamiento Seguimiento y Evaluación, Gestión para la Motivación, Decisiones para el Futuro.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 5.2.3 (diagrama del modelo), p. 17",
+          "label": "📋 Ver el modelo oficial completo"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🏁 Cierre del Curso 2"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ya tienes el marco. Ya sabes <strong>qué es la política, a quién aplica, cuáles son sus principios y qué herramientas trae</strong>. Es como recibir el mapa antes del viaje."
+        },
+        {
+          "type": "paragraph",
+          "text": "El siguiente paso natural es entender, una por una, las <strong>7 competencias esenciales</strong> que la política espera de ti. Eso lo verás en el Curso 3 de la ruta."
+        }
+      ],
+      "reflection": {
+        "prompt": "De las 12 herramientas, ¿cuál te llama más la atención y por qué? ¿Cuál crees que tu grupo más necesita conocer ya?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del curso",
+        "questions": [
+          {
+            "text": "El Diccionario de Competencias y el Manual de Cargos son…",
+            "options": [
+              "Documentos opcionales que cada grupo decide si usar",
+              "Dos de las herramientas oficiales del modelo de gestión que aplican a toda la asociación",
+              "Documentos solo para directores nacionales"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Para qué sirve la plataforma Talento 360°?",
+            "options": [
+              "Para registrar la asistencia de los chicos a las reuniones",
+              "Para gestionar la hoja de vida del adulto, su plan personal de desarrollo y sus evaluaciones",
+              "Para emitir certificados al grupo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Si quieres conocer en detalle qué se espera de un Tesorero o de un Secretario, ¿qué herramienta consultas?",
+            "options": [
+              "La Cartilla Metodológica",
+              "El Manual de Cargos, Funciones y Perfiles",
+              "El Módulo Safe from Harm"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    { "id": "achievement-1", "name": "Conocedor del Marco", "emoji": "📜", "unlockOnModule": 2 },
+    { "id": "achievement-2", "name": "Identifica a los Sujetos", "emoji": "👥", "unlockOnModule": 3 },
+    { "id": "achievement-3", "name": "Maestro de los Principios", "emoji": "⭐", "unlockOnModule": 5 },
+    { "id": "achievement-4", "name": "Comprende las Competencias", "emoji": "🧠", "unlockOnModule": 6 },
+    { "id": "achievement-5", "name": "Curso Completado", "emoji": "🏆", "unlockOnModule": -1 }
+  ],
+  "certificate": {
+    "courseName": "LA POLÍTICA — MARCO Y PRINCIPIOS",
+    "description": "ha completado el Curso 2 de la Ruta de Formación de Adultos en el Movimiento, comprendiendo el marco, los sujetos, los 13 principios y las 12 herramientas oficiales de la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  }
+}

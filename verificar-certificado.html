@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificacion de Certificados - Plataforma de Formacion de Adultos ASC</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Verifica la autenticidad de certificados emitidos por la Plataforma de Formacion de Adultos de la Asociacion Scouts de Colombia. Ingresa el codigo ASC-YYYY-XXXXX del certificado.">
+    <meta name="keywords" content="verificar certificado scout, certificado adultos asc, certificado consejero, certificado dirigente, ASC certificado, autenticidad certificado scout">
+    <meta name="author" content="Asociacion Scouts de Colombia">
+    <link rel="canonical" href="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/verificar-certificado.html">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/verificar-certificado.html">
+    <meta property="og:title" content="Verificacion de Certificados - Adultos ASC">
+    <meta property="og:description" content="Comprueba la autenticidad de un certificado emitido por la Plataforma de Formacion de Adultos ASC usando su codigo unico.">
+    <meta property="og:image" content="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/assets/logo-asc.png">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Plataforma de Formacion de Adultos ASC">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Verificacion de Certificados Adultos ASC">
+    <meta name="twitter:description" content="Comprueba la autenticidad de certificados emitidos por la plataforma.">
+    <meta name="twitter:image" content="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/assets/logo-asc.png">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/logo-asc.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/dark-theme.css">
+    <!-- Early theme init para evitar FOUC en modo oscuro -->
+    <script>(function(){try{var t=localStorage.getItem('rover-theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f2f5f7;
+            min-height: 100vh;
+            color: #2c2927;
+            line-height: 1.6;
+        }
+
+        /* --- Top Bar --- */
+        .top-bar {
+            background: #622599;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .top-bar-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-bar .logos {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .top-bar .logos img {
+            height: 45px;
+        }
+
+        .top-bar .logos .separator {
+            width: 1px;
+            height: 35px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .top-bar-title {
+            color: #ffffff;
+            font-size: 0.95em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            background: linear-gradient(135deg, #622599 0%, #3d1660 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.15em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Verification Form --- */
+        .verify-section {
+            max-width: 700px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .verify-card {
+            background: #ffffff;
+            border-top: 4px solid #ffe675;
+            padding: 40px 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            display: flex;
+            gap: 0;
+            width: 100%;
+        }
+
+        .form-group input {
+            flex: 1;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 16px 20px;
+            border: 2px solid #e0e0e0;
+            border-right: none;
+            border-radius: 0;
+            outline: none;
+            color: #2c2927;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input::placeholder {
+            text-transform: none;
+            font-weight: 400;
+            color: #aaa;
+            letter-spacing: 0;
+        }
+
+        .form-group input:focus {
+            border-color: #622599;
+        }
+
+        .form-group button {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            padding: 16px 32px;
+            background: #622599;
+            color: #ffffff;
+            border: 2px solid #622599;
+            border-radius: 0;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s, opacity 0.3s;
+            white-space: nowrap;
+        }
+
+        .form-group button:hover:not(:disabled) {
+            background: #4a1b75;
+            border-color: #4a1b75;
+        }
+
+        .form-group button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-hint {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* --- Result Area --- */
+        .result-area {
+            max-width: 700px;
+            margin: 30px auto 0;
+            padding: 0 20px;
+        }
+
+        .result-area:empty {
+            display: none;
+        }
+
+        /* Loading */
+        .loading-state {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #622599;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-state p {
+            margin-top: 16px;
+            font-size: 0.95em;
+            color: #636363;
+            font-weight: 600;
+        }
+
+        /* Valid Certificate */
+        .result-valid {
+            background: #ffffff;
+            border-top: 4px solid #28a745;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 30px 35px 20px;
+        }
+
+        .icon-check {
+            width: 56px;
+            height: 56px;
+            background: #28a745;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-check::after {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 30px;
+            border-bottom: 4px solid #ffffff;
+            border-right: 4px solid #ffffff;
+            transform: rotate(45deg) translate(-2px, -2px);
+        }
+
+        .icon-x {
+            width: 56px;
+            height: 56px;
+            background: #dc3545;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .icon-x::before,
+        .icon-x::after {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 4px;
+            background: #ffffff;
+        }
+
+        .icon-x::before {
+            transform: rotate(45deg);
+        }
+
+        .icon-x::after {
+            transform: rotate(-45deg);
+        }
+
+        .result-header h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #28a745;
+        }
+
+        .result-header h2.invalid {
+            color: #dc3545;
+        }
+
+        .result-header .result-subtitle {
+            font-size: 0.85em;
+            color: #636363;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        /* Certificate Card */
+        .cert-card {
+            margin: 0 35px;
+            border: 2px solid #622599;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .cert-card-header {
+            background: #622599;
+            color: #ffffff;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cert-card-header h3 {
+            font-size: 0.85em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .cert-card-header .cert-code {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #ffe675;
+            letter-spacing: 1px;
+        }
+
+        .cert-card-body {
+            padding: 24px;
+        }
+
+        .cert-field {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cert-field:last-child {
+            border-bottom: none;
+        }
+
+        .cert-field-label {
+            font-size: 0.78em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #636363;
+            flex-shrink: 0;
+            padding-right: 16px;
+        }
+
+        .cert-field-value {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #2c2927;
+            text-align: right;
+        }
+
+        .cert-field-value.highlight {
+            color: #622599;
+            font-size: 1.1em;
+        }
+
+        .cert-accent-bar {
+            height: 4px;
+            background: #ffe675;
+        }
+
+        /* Print Button */
+        .print-btn-container {
+            text-align: center;
+            padding: 0 35px 30px;
+        }
+
+        .print-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            padding: 10px 28px;
+            background: transparent;
+            color: #622599;
+            border: 2px solid #622599;
+            border-radius: 0;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .print-btn:hover {
+            background: #622599;
+            color: #ffffff;
+        }
+
+        /* Invalid Certificate */
+        .result-invalid {
+            background: #ffffff;
+            border-top: 4px solid #dc3545;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px 35px;
+        }
+
+        .invalid-message {
+            font-size: 0.95em;
+            color: #636363;
+            line-height: 1.7;
+            margin-top: 20px;
+            padding: 20px;
+            background: #fef2f2;
+            border-left: 3px solid #dc3545;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            margin-top: 60px;
+            background: #2c2927;
+            color: rgba(255,255,255,0.7);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer a {
+            color: #ffe675;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+
+        .footer-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            padding: 10px 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: border-color 0.3s;
+        }
+
+        .footer-back:hover {
+            border-color: #ffe675;
+        }
+
+        .footer-divider {
+            width: 40px;
+            height: 2px;
+            background: #622599;
+            margin: 20px auto;
+        }
+
+        .footer-contact {
+            font-size: 0.82em;
+            line-height: 1.8;
+        }
+
+        .footer-contact strong {
+            color: #ffffff;
+        }
+
+        .footer-copy {
+            margin-top: 20px;
+            font-size: 0.75em;
+            opacity: 0.5;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            .top-bar-title {
+                font-size: 0.75em;
+                letter-spacing: 0.5px;
+            }
+
+            .top-bar .logos img {
+                height: 35px;
+            }
+
+            .hero {
+                padding: 40px 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.6em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .verify-card {
+                padding: 28px 20px;
+            }
+
+            .form-group {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .form-group input {
+                border-right: 2px solid #e0e0e0;
+                border-bottom: none;
+                font-size: 1em;
+                text-align: center;
+            }
+
+            .form-group input:focus {
+                border-color: #622599;
+            }
+
+            .form-group button {
+                border-top: none;
+                padding: 14px 20px;
+            }
+
+            .result-header {
+                padding: 24px 20px 16px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cert-card {
+                margin: 0 20px 24px;
+            }
+
+            .cert-card-header {
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+            }
+
+            .cert-field {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .cert-field-value {
+                text-align: left;
+            }
+
+            .print-btn-container {
+                padding: 0 20px 24px;
+            }
+
+            .result-invalid {
+                padding: 24px 20px;
+            }
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            body {
+                background: #ffffff;
+            }
+
+            .top-bar,
+            .hero,
+            .verify-section,
+            .footer,
+            .print-btn-container,
+            .result-invalid {
+                display: none !important;
+            }
+
+            .result-area {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .result-valid {
+                box-shadow: none;
+                border: none;
+                border-top: 4px solid #28a745;
+            }
+
+            .result-header {
+                padding: 20px 0;
+            }
+
+            .cert-card {
+                margin: 0;
+                page-break-inside: avoid;
+            }
+
+            .print-header {
+                display: block !important;
+                text-align: center;
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #622599;
+            }
+
+            .print-header h2 {
+                font-size: 1.3em;
+                color: #622599;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .print-header p {
+                font-size: 0.85em;
+                color: #636363;
+                margin-top: 4px;
+            }
+        }
+
+        .print-header {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="logos">
+                <img src="assets/logo-asc.png" alt="ASC">
+            </div>
+            <span class="top-bar-title">Verificacion de Certificados</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Verificacion de Certificados</h1>
+        <p>Ingresa el codigo del certificado para validar su autenticidad</p>
+    </div>
+
+    <!-- Verification Form -->
+    <div class="verify-section">
+        <div class="verify-card">
+            <div class="form-group">
+                <input
+                    type="text"
+                    id="cert-code"
+                    placeholder="Ej: ASC-2025-AB12C"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button id="verify-btn" onclick="verificarCertificado()">Verificar</button>
+            </div>
+            <p class="form-hint">Ingresa el codigo tal como aparece en tu certificado</p>
+        </div>
+    </div>
+
+    <!-- Result Area -->
+    <div class="result-area" id="result-area"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-inner">
+            <a href="index.html" class="footer-back">Volver a la Plataforma</a>
+            <div class="footer-divider"></div>
+            <div class="footer-contact">
+                <strong>Asociacion Scouts de Colombia</strong><br>
+                Plataforma de Formacion de Adultos
+            </div>
+            <p class="footer-copy">Plataforma de Formacion de Adultos ASC. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // CONFIGURACION: Cambia esta URL por la de tu Google Apps Script
+        // ============================================================
+        var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHd4KB4MafCKKPp8kEf9V-vLnlsCKUhmqR6eMFB-Qvz2f03xy9bYSx86eGUuS5RkfX2g/exec';
+
+        // DOM references
+        var input = document.getElementById('cert-code');
+        var btn = document.getElementById('verify-btn');
+        var resultArea = document.getElementById('result-area');
+
+        // Enter key submits
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                verificarCertificado();
+            }
+        });
+
+        // Auto-trim on paste
+        input.addEventListener('paste', function() {
+            setTimeout(function() {
+                input.value = input.value.trim();
+            }, 0);
+        });
+
+        function verificarCertificado() {
+            var code = input.value.trim().toUpperCase();
+
+            if (!code) {
+                input.focus();
+                return;
+            }
+
+            input.value = code;
+
+            // Disable button to prevent double-clicks
+            btn.disabled = true;
+            btn.textContent = 'Verificando...';
+
+            // Show loading state
+            resultArea.innerHTML = renderLoading();
+
+            // Make the GET request
+            var url = SCRIPT_URL + '?action=verify&code=' + encodeURIComponent(code);
+
+            fetch(url)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    if (data.success) {
+                        resultArea.innerHTML = renderValid(data, code);
+                    } else {
+                        resultArea.innerHTML = renderInvalid();
+                    }
+                })
+                .catch(function(error) {
+                    console.error('Error al verificar:', error);
+                    resultArea.innerHTML = renderError();
+                })
+                .finally(function() {
+                    btn.disabled = false;
+                    btn.textContent = 'Verificar';
+                });
+        }
+
+        function renderLoading() {
+            return '<div class="loading-state">' +
+                '<div class="spinner"></div>' +
+                '<p>Consultando certificado...</p>' +
+            '</div>';
+        }
+
+        function renderValid(data, code) {
+            var fields = [
+                { label: 'Nombre del participante', value: data.nombre || '---', highlight: true },
+                { label: 'Curso completado', value: data.curso || '---', highlight: false },
+                { label: 'Fecha de emision', value: data.fecha || '---', highlight: false },
+                { label: 'Puntuacion', value: data.puntuacion || '---', highlight: false },
+                { label: 'Grupo Scout', value: data.grupo || '---', highlight: false },
+                { label: 'Region', value: data.region || '---', highlight: false }
+            ];
+
+            var fieldsHTML = '';
+            for (var i = 0; i < fields.length; i++) {
+                var f = fields[i];
+                fieldsHTML += '<div class="cert-field">' +
+                    '<span class="cert-field-label">' + escapeHtml(f.label) + '</span>' +
+                    '<span class="cert-field-value' + (f.highlight ? ' highlight' : '') + '">' + escapeHtml(f.value) + '</span>' +
+                '</div>';
+            }
+
+            return '<div class="print-header">' +
+                '<h2>Plataforma de Formacion de Adultos ASC</h2>' +
+                '<p>Verificacion de Certificado</p>' +
+            '</div>' +
+            '<div class="result-valid">' +
+                '<div class="result-header">' +
+                    '<div class="icon-check"></div>' +
+                    '<div>' +
+                        '<h2>Certificado Valido</h2>' +
+                        '<p class="result-subtitle">Este certificado fue emitido por la Plataforma de Formacion de Adultos ASC</p>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="cert-card">' +
+                    '<div class="cert-card-header">' +
+                        '<h3>Certificado de Formacion</h3>' +
+                        '<span class="cert-code">' + escapeHtml(code) + '</span>' +
+                    '</div>' +
+                    '<div class="cert-card-body">' +
+                        fieldsHTML +
+                    '</div>' +
+                    '<div class="cert-accent-bar"></div>' +
+                '</div>' +
+                '<div class="print-btn-container">' +
+                    '<button class="print-btn" onclick="window.print()">Imprimir Verificacion</button>' +
+                '</div>' +
+            '</div>';
+        }
+
+        function renderInvalid() {
+            return '<div class="result-invalid">' +
+                '<div class="result-header" style="padding:0 0 0 0;">' +
+                    '<div class="icon-x"></div>' +
+                    '<div>' +
+                        '<h2 class="invalid">Certificado No Encontrado</h2>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="invalid-message">' +
+                    'El codigo ingresado no corresponde a ningun certificado emitido. Verifica que el codigo sea correcto.' +
+                '</div>' +
+            '</div>';
+        }
+
+        function renderError() {
+            return '<div class="result-invalid">' +
+                '<div class="result-header" style="padding:0 0 0 0;">' +
+                    '<div class="icon-x"></div>' +
+                    '<div>' +
+                        '<h2 class="invalid">Error de Conexion</h2>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="invalid-message">' +
+                    'No fue posible conectar con el servidor de verificacion. Por favor intenta nuevamente en unos minutos.' +
+                '</div>' +
+            '</div>';
+        }
+
+        function escapeHtml(text) {
+            var div = document.createElement('div');
+            div.appendChild(document.createTextNode(text));
+            return div.innerHTML;
+        }
+    </script>
+
+    <script src="assets/theme-toggle.js"></script>
+</body>
+</html>

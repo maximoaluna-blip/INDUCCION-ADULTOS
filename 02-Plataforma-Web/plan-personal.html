@@ -1,0 +1,3041 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Plan Personal de Desarrollo - Plataforma de Formación de Adultos ASC</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/png" href="../assets/logo-asc.png">
+    <link rel="stylesheet" href="../assets/dark-theme.css">
+    <!-- Early theme init para evitar FOUC en modo oscuro -->
+    <script>(function(){try{var t=localStorage.getItem('rover-theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+    <style>
+/* ============================================
+   PLATAFORMA DE FORMACION DE ADULTOS - ASC
+   Montserrat | #622599 | #ffe675 | #00afef
+   ============================================ */
+
+/* --- Policy quote (collapsed by default) --- */
+.policy-quote {
+    margin: 18px 0;
+    border-left: 4px solid #622599;
+    background: #f8f5fc;
+    padding: 12px 18px;
+    border-radius: 4px;
+    transition: background .2s;
+}
+.policy-quote summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #622599;
+    outline: none;
+    list-style: none;
+    user-select: none;
+    font-size: 0.92em;
+}
+.policy-quote summary::-webkit-details-marker { display: none; }
+.policy-quote summary::before {
+    content: '▸ ';
+    display: inline-block;
+    transition: transform .2s;
+    margin-right: 4px;
+}
+.policy-quote[open] summary::before { transform: rotate(90deg); }
+.policy-quote[open] { background: #f3edfa; }
+.policy-quote-text {
+    font-style: italic;
+    color: #333;
+    margin: 12px 0 0 0 !important;
+    font-size: 0.95em;
+    line-height: 1.65;
+    border: none !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+.policy-quote-source {
+    font-size: 0.8em;
+    color: #888;
+    margin: 8px 0 0 0;
+    text-align: right;
+}
+[data-theme="dark"] .policy-quote { background: #2a1f3a; border-left-color: #b78fee; }
+[data-theme="dark"] .policy-quote summary { color: #d4b8ff; }
+[data-theme="dark"] .policy-quote[open] { background: #321f48; }
+[data-theme="dark"] .policy-quote-text { color: #ddd; }
+[data-theme="dark"] .policy-quote-source { color: #aaa; }
+
+/* --- Photo upload --- */
+.photo-upload {
+    margin: 20px 0;
+    background: #f8f5fc;
+    border: 2px dashed #622599;
+    border-radius: 8px;
+    padding: 22px;
+    text-align: center;
+}
+.photo-upload-title {
+    color: #622599;
+    margin: 0 0 6px 0;
+    font-size: 1em;
+}
+.photo-upload-hint {
+    color: #666;
+    font-size: 0.88em;
+    margin: 0 0 16px 0;
+}
+.photo-upload-input { display: none; }
+.photo-upload-btn {
+    display: inline-block;
+    background: #622599;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background .2s;
+}
+.photo-upload-btn:hover { background: #4a1c75; }
+.photo-preview { margin: 16px 0 0 0; }
+.photo-preview img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.photo-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.photo-actions .btn-secondary {
+    background: #fff;
+    color: #622599;
+    border: 2px solid #622599;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.photo-actions .btn-secondary:hover { background: #f3edfa; }
+.photo-actions .btn-tertiary {
+    background: transparent;
+    color: #888;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.photo-actions .btn-tertiary:hover { color: #d33; border-color: #d33; }
+.photo-upload-share {
+    margin: 16px 0 0 0;
+    font-size: 0.82em;
+    color: #555;
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-align: left;
+}
+.hidden { display: none !important; }
+[data-theme="dark"] .photo-upload { background: #2a1f3a; border-color: #b78fee; }
+[data-theme="dark"] .photo-upload-title { color: #d4b8ff; }
+[data-theme="dark"] .photo-upload-hint { color: #bbb; }
+[data-theme="dark"] .photo-upload-share { background: #1a1325; color: #ccc; }
+[data-theme="dark"] .photo-actions .btn-secondary { background: #1a1325; color: #d4b8ff; border-color: #b78fee; }
+
+/* --- Self-assessment --- */
+.self-assessment {
+    margin: 20px 0;
+    background: #f8f5fc;
+    border: 2px solid #622599;
+    border-radius: 10px;
+    padding: 22px;
+}
+.self-assessment-intro {
+    font-size: 0.95em;
+    color: #444;
+    margin: 0 0 18px 0;
+}
+.competence-block {
+    margin: 0 0 18px 0;
+    padding: 14px 16px;
+    background: #fff;
+    border-radius: 8px;
+    border-left: 4px solid #622599;
+}
+.competence-name {
+    color: #622599;
+    margin: 0 0 4px 0;
+    font-size: 1em;
+}
+.competence-def {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    margin: 0 0 12px 0;
+}
+.grade-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.grade-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #f8f5fc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+    border: 2px solid transparent;
+    font-size: 0.9em;
+    line-height: 1.45;
+}
+.grade-option:hover { background: #efe5fa; }
+.grade-option input { margin-top: 3px; }
+.grade-option:has(input:checked) {
+    background: #efe5fa;
+    border-color: #622599;
+}
+.grade-level {
+    color: #622599;
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 70px;
+}
+.grade-text { flex: 1; color: #333; }
+.self-assessment-actions {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.self-assessment-actions .btn-primary {
+    background: #622599;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background .2s;
+}
+.self-assessment-actions .btn-primary:hover { background: #4a1c75; }
+.self-assessment-actions .btn-primary:disabled { background: #b8a3d4; cursor: not-allowed; }
+.self-assessment-result {
+    margin: 24px 0 0 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    border: 2px solid #ffc107;
+}
+.self-assessment-result h3 {
+    color: #622599;
+    margin: 0 0 14px 0;
+    text-align: center;
+}
+.profile-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+}
+.profile-strengths, .profile-opportunities {
+    padding: 14px;
+    border-radius: 6px;
+}
+.profile-strengths { background: #e8f5e9; border-left: 4px solid #4caf50; }
+.profile-opportunities { background: #fff3e0; border-left: 4px solid #ff9800; }
+.profile-strengths h4 { color: #2e7d32; margin: 0 0 8px 0; }
+.profile-opportunities h4 { color: #e65100; margin: 0 0 8px 0; }
+.profile-strengths ul, .profile-opportunities ul { margin: 0; padding-left: 20px; font-size: 0.9em; }
+.profile-recommendation {
+    margin-top: 16px;
+    padding: 14px;
+    background: #f3e5f5;
+    border-radius: 6px;
+    border-left: 4px solid #9c27b0;
+    font-size: 0.92em;
+    color: #4a148c;
+    line-height: 1.55;
+}
+@media (max-width: 600px) { .profile-summary { grid-template-columns: 1fr; } }
+[data-theme="dark"] .self-assessment { background: #2a1f3a; border-color: #b78fee; }
+[data-theme="dark"] .competence-block { background: #1a1325; border-left-color: #b78fee; }
+[data-theme="dark"] .competence-name { color: #d4b8ff; }
+[data-theme="dark"] .competence-def { color: #bbb; }
+[data-theme="dark"] .grade-option { background: #2a1f3a; color: #ddd; }
+[data-theme="dark"] .grade-option:hover { background: #3a2b50; }
+[data-theme="dark"] .grade-option:has(input:checked) { background: #3a2b50; }
+[data-theme="dark"] .grade-level { color: #d4b8ff; }
+[data-theme="dark"] .grade-text { color: #ddd; }
+[data-theme="dark"] .self-assessment-result { background: #1a1325; border-color: #b78fee; }
+
+/* --- Plan Builder --- */
+.plan-builder {
+    margin: 20px 0;
+    background: #f8f5fc;
+    border: 2px solid #622599;
+    border-radius: 10px;
+    padding: 22px;
+}
+.pb-profile-banner {
+    margin: 0 0 16px 0;
+    padding: 14px;
+    background: #fff8e1;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    font-size: 0.92em;
+    line-height: 1.5;
+}
+.pb-profile-banner.no-profile {
+    background: #f5f5f5;
+    border-left-color: #999;
+    color: #666;
+}
+.pb-intro {
+    font-size: 0.92em;
+    color: #444;
+    margin: 0 0 16px 0;
+}
+.pb-competence {
+    background: #fff;
+    border-radius: 8px;
+    margin: 0 0 12px 0;
+    overflow: hidden;
+    border-left: 4px solid #ddd;
+    transition: border-color .15s;
+}
+.pb-competence:has(.pb-comp-check:checked) { border-left-color: #622599; background: #faf6ff; }
+.pb-comp-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+.pb-comp-check { transform: scale(1.2); cursor: pointer; }
+.pb-comp-name { flex: 1; font-weight: 600; color: #333; }
+.pb-comp-grade { font-size: 0.85em; color: #888; padding: 2px 8px; background: #f0f0f0; border-radius: 4px; }
+.pb-comp-grade.priority { background: #ffe0b2; color: #e65100; font-weight: 600; }
+.pb-comp-fields {
+    padding: 8px 16px 16px 50px;
+    border-top: 1px solid #eee;
+}
+.pb-field-label {
+    display: block;
+    font-size: 0.85em;
+    color: #622599;
+    font-weight: 600;
+    margin: 12px 0 6px 0;
+}
+.pb-field-meta, .pb-field-recursos {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9em;
+    resize: vertical;
+}
+.pb-field-plazo {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9em;
+}
+.pb-field-meta:focus, .pb-field-recursos:focus, .pb-field-plazo:focus {
+    outline: none; border-color: #622599;
+}
+.pb-commitment-block {
+    margin: 18px 0 0 0;
+    padding: 14px 16px;
+    background: #f3e5f5;
+    border-radius: 8px;
+    border-left: 4px solid #9c27b0;
+}
+.pb-commitment-label { color: #4a148c; }
+.pb-commitment {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #ce93d8;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.92em;
+    resize: vertical;
+    background: #fff;
+}
+.pb-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pb-actions .btn-primary {
+    background: #622599;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.92em;
+}
+.pb-actions .btn-primary:hover { background: #4a1c75; }
+.pb-actions .btn-secondary {
+    background: #fff;
+    color: #622599;
+    border: 2px solid #622599;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.pb-output {
+    margin-top: 22px;
+    padding: 28px;
+    background: #fff;
+    border: 2px solid #622599;
+    border-radius: 8px;
+}
+.pb-output h2 { color: #622599; text-align: center; margin: 0 0 8px 0; }
+.pb-output .pb-output-meta { text-align: center; color: #666; font-size: 0.9em; margin: 0 0 24px 0; }
+.pb-output .pb-priority { margin: 18px 0; padding: 14px 18px; background: #faf6ff; border-left: 4px solid #622599; border-radius: 6px; }
+.pb-output .pb-priority h3 { color: #622599; margin: 0 0 10px 0; font-size: 1em; }
+.pb-output .pb-priority dt { font-weight: 600; color: #333; margin-top: 8px; }
+.pb-output .pb-priority dd { margin: 4px 0 0 0; padding-left: 0; color: #444; white-space: pre-wrap; }
+.pb-output .pb-final-commitment { margin-top: 24px; padding: 16px; background: #f3e5f5; border-radius: 6px; border-left: 4px solid #9c27b0; }
+.pb-output .pb-final-commitment h3 { color: #4a148c; margin: 0 0 8px 0; }
+.pb-output .pb-print-btn {
+    display: block; margin: 24px auto 0; padding: 12px 28px;
+    background: #4caf50; color: #fff; border: none; border-radius: 6px;
+    font-weight: 700; cursor: pointer; font-size: 0.95em;
+}
+.pb-output .pb-print-btn:hover { background: #388e3c; }
+@media print {
+    body.printing-plan * { visibility: hidden; }
+    body.printing-plan .pb-output, body.printing-plan .pb-output * { visibility: visible; }
+    body.printing-plan .pb-output { position: absolute; left: 0; top: 0; width: 100%; padding: 20px; border: none; }
+    body.printing-plan .pb-print-btn { display: none !important; }
+}
+[data-theme="dark"] .plan-builder { background: #2a1f3a; border-color: #b78fee; }
+[data-theme="dark"] .pb-competence { background: #1a1325; border-left-color: #444; }
+[data-theme="dark"] .pb-competence:has(.pb-comp-check:checked) { background: #321f48; border-left-color: #b78fee; }
+[data-theme="dark"] .pb-comp-name { color: #ddd; }
+[data-theme="dark"] .pb-field-label { color: #d4b8ff; }
+[data-theme="dark"] .pb-field-meta, [data-theme="dark"] .pb-field-recursos, [data-theme="dark"] .pb-field-plazo { background: #2a1f3a; color: #ddd; border-color: #555; }
+[data-theme="dark"] .pb-commitment-block { background: #2a1f3a; border-left-color: #ce93d8; }
+[data-theme="dark"] .pb-commitment { background: #1a1325; color: #ddd; border-color: #555; }
+[data-theme="dark"] .pb-output { background: #1a1325; border-color: #b78fee; }
+
+/* --- Prefill banner (autollenado de registro) --- */
+.prefill-banner {
+    margin: 14px 0 18px 0;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    border-left: 4px solid #2196f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(33, 150, 243, 0.1);
+}
+.prefill-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.prefill-banner-icon {
+    font-size: 1.8em;
+    flex-shrink: 0;
+}
+.prefill-banner-content > div {
+    flex: 1;
+    color: #0d47a1;
+    font-size: 0.92em;
+    line-height: 1.5;
+}
+.prefill-banner-hint {
+    color: #555;
+    font-size: 0.88em;
+}
+.prefill-banner-clear {
+    flex-shrink: 0;
+    background: #fff;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.82em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s;
+}
+.prefill-banner-clear:hover { background: #2196f3; color: #fff; }
+@media (max-width: 600px) {
+    .prefill-banner-content { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .prefill-banner-clear { align-self: flex-end; }
+}
+[data-theme="dark"] .prefill-banner { background: linear-gradient(135deg, #1a2a3a 0%, #2a1f3a 100%); border-left-color: #64b5f6; }
+[data-theme="dark"] .prefill-banner-content > div { color: #bbdefb; }
+[data-theme="dark"] .prefill-banner-hint { color: #aaa; }
+[data-theme="dark"] .prefill-banner-clear { background: #1a1325; color: #64b5f6; border-color: #64b5f6; }
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: #f2f5f7;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    color: #2c2927;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background: #622599; padding: 12px 0; position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+.top-bar-inner {
+    max-width: 940px; margin: 0 auto; padding: 0 20px;
+    display: flex; align-items: center; justify-content: space-between;
+}
+.top-bar .logos { display: flex; align-items: center; gap: 15px; }
+.top-bar .logos img { height: 40px; }
+.top-bar .logos .separator { width: 1px; height: 30px; background: rgba(255,255,255,0.3); }
+.top-bar a.back-link {
+    color: #ffe675; text-decoration: none; font-size: 0.85em; font-weight: 600;
+}
+.top-bar a.back-link:hover { text-decoration: underline; }
+
+.container { max-width: 940px; margin: 0 auto; padding: 20px; }
+
+/* --- Header & Progress --- */
+.header {
+    background: white; padding: 25px; margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;
+    border-top: 4px solid #622599;
+}
+.header h1 { color: #622599; margin-bottom: 10px; font-size: 1.8em; font-weight: 700; }
+.header p { color: #636363; font-size: 1em; }
+
+.progress-container {
+    background: #e0e0e0; height: 30px;
+    margin: 20px 0; overflow: hidden; position: relative;
+}
+.progress-bar {
+    background: linear-gradient(90deg, #622599, #8e44ad); height: 100%; width: 0%;
+    transition: width 0.5s ease; display: flex; align-items: center;
+    justify-content: center; color: white; font-weight: 700;
+}
+.progress-text {
+    position: absolute; width: 100%; text-align: center;
+    line-height: 30px; color: #2c2927; font-weight: 700;
+}
+
+/* --- Navigation --- */
+.nav-menu {
+    display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+    background: white; padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.nav-btn {
+    flex: 1; min-width: 90px; padding: 10px 8px; background: #f2f5f7;
+    border: 2px solid #ddd; cursor: pointer;
+    transition: all 0.3s; font-size: 13px; text-align: center;
+    font-family: 'Montserrat', sans-serif; font-weight: 600;
+}
+.nav-btn:hover { background: #f3e8ff; border-color: #622599; transform: translateY(-2px); }
+.nav-btn.active { background: #622599; color: white; border-color: #622599; }
+.nav-btn.completed { background: #8e44ad; color: white; border-color: #8e44ad; }
+.nav-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.mobile-nav {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0;
+    background: white; box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    z-index: 1000; padding: 10px;
+}
+.mobile-nav select {
+    width: 100%; padding: 15px; font-size: 16px;
+    border: 2px solid #622599; background: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Content Area --- */
+.content {
+    background: white; padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* --- Modules --- */
+.module { display: none; animation: fadeIn 0.5s; }
+.module.active { display: block; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.module h2 { color: #622599; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #ffe675; font-weight: 700; }
+.module h3 { color: #622599; margin: 25px 0 15px; font-weight: 700; }
+.module h4 { color: #2c2927; margin: 20px 0 10px; font-weight: 600; }
+.module p { color: #636363; margin-bottom: 15px; text-align: justify; }
+.module ul, .module ol { margin: 15px 0 15px 30px; color: #636363; }
+.module li { margin-bottom: 10px; }
+
+.badge {
+    display: inline-block; background: #ffe675; color: #2c2927;
+    padding: 5px 15px; font-size: 0.85em; margin-bottom: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+
+/* --- Content Blocks --- */
+.info-box {
+    background: #f3e8ff; border-left: 4px solid #622599;
+    padding: 15px; margin: 20px 0;
+}
+.data-privacy {
+    background: #fff8e1; border-left: 4px solid #ffe675;
+    padding: 15px; margin: 20px 0;
+}
+.mission-box {
+    background: linear-gradient(135deg, #f3e8ff, #e8d5f5);
+    border: 2px solid #622599; padding: 20px; margin: 20px 0;
+}
+
+/* --- Timeline --- */
+.timeline { position: relative; padding: 20px 0; }
+.timeline-item {
+    background: #f2f5f7; border-left: 4px solid #622599;
+    padding: 15px; margin-bottom: 20px;
+}
+
+/* --- Method Grid --- */
+.method-elements {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; margin: 20px 0;
+}
+.method-element {
+    padding: 20px; border: 2px solid #ddd; transition: transform 0.3s;
+}
+.method-element:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(98,37,153,0.1); }
+
+/* --- Forms --- */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: #2c2927; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px; border: 2px solid #ddd;
+    font-size: 15px; transition: border-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #622599; outline: none;
+}
+
+/* --- Registration Toggle --- */
+.toggle-buttons { display: flex; gap: 0; margin-bottom: 25px; }
+.toggle-btn {
+    flex: 1; padding: 12px; border: 2px solid #622599; background: #f2f5f7;
+    color: #622599; cursor: pointer; font-family: 'Montserrat', sans-serif;
+    font-weight: 600; font-size: 14px; transition: all 0.3s; text-align: center;
+}
+.toggle-btn.active { background: #622599; color: white; }
+.toggle-btn:hover:not(.active) { background: #f3e8ff; }
+.recovery-section { margin-bottom: 20px; }
+
+/* --- Buttons --- */
+.btn {
+    background: #622599; color: white; border: none; padding: 12px 25px;
+    cursor: pointer; font-size: 15px; margin: 10px 5px;
+    transition: all 0.3s; display: inline-block;
+    font-family: 'Montserrat', sans-serif; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+.btn:hover { background: #4a1b75; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(98, 37, 153, 0.3); }
+.btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+/* --- Reflections --- */
+.reflection-area {
+    background: #fff8e1; border-left: 4px solid #ffe675;
+    padding: 20px; margin: 20px 0;
+}
+.reflection-area textarea {
+    width: 100%; min-height: 100px; padding: 10px;
+    border: 2px solid #ffe675; font-family: 'Montserrat', sans-serif; resize: vertical;
+}
+
+/* --- Quizzes --- */
+.quiz-container { background: #f2f5f7; padding: 20px; margin: 20px 0; }
+.question { margin-bottom: 25px; }
+.question h4 { color: #622599; margin-bottom: 15px; font-weight: 700; }
+.option {
+    display: block; padding: 12px; margin: 8px 0; background: white;
+    border: 2px solid #ddd; cursor: pointer; transition: all 0.3s;
+}
+.option:hover { background: #f3e8ff; border-color: #622599; }
+.option.selected { background: #e8d5f5; border-color: #622599; }
+.option.correct { background: #c8e6c9; border-color: #4CAF50; }
+.option.incorrect { background: #ffcdd2; border-color: #f44336; }
+
+/* --- Stats --- */
+.stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; margin: 20px 0;
+}
+.stat-card {
+    background: #622599;
+    color: white; padding: 20px; text-align: center;
+}
+.stat-card h4 { font-size: 2em; margin-bottom: 5px; color: white; }
+
+/* --- Achievements --- */
+.achievements { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.achievement {
+    background: #f3e8ff; color: #622599; padding: 10px 15px;
+    border: 2px solid #622599; font-size: 0.9em;
+    opacity: 0.4; transition: all 0.3s; font-weight: 600;
+}
+.achievement.earned { opacity: 1; transform: scale(1.05); box-shadow: 0 3px 10px rgba(98, 37, 153, 0.3); }
+
+/* --- Certificate --- */
+.certificate {
+    background: linear-gradient(45deg, #ffffff, #f8f9fa);
+    border: 3px solid #ffe675; padding: 40px;
+    text-align: center; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+.certificate h2 { color: #622599; margin-bottom: 20px; }
+.certificate h3 { color: #622599; font-size: 1.8em; margin: 20px 0; }
+.certificate-code {
+    background: #f2f5f7; padding: 15px;
+    font-family: 'Courier New', monospace; font-size: 1.2em;
+    margin: 25px auto; max-width: 400px; border: 2px dashed #622599;
+}
+
+/* --- Modal Overlay --- */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); z-index: 5000;
+    justify-content: center; align-items: center;
+}
+.modal-overlay.show { display: flex; }
+.modal-content {
+    background: white; padding: 40px; max-width: 450px; width: 90%;
+    text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.modal-content h3 { color: #622599; margin-bottom: 15px; }
+
+/* --- Indicators --- */
+.sync-indicator {
+    position: fixed; top: 70px; right: 10px; background: #622599;
+    color: white; padding: 5px 10px; font-size: 0.8em;
+    display: none; z-index: 3000; animation: pulse 2s infinite;
+}
+.sync-indicator.show { display: block; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.save-indicator {
+    position: fixed; bottom: 20px; right: 20px; background: #622599;
+    color: white; padding: 10px 20px; font-size: 0.9em;
+    display: none; z-index: 1000;
+}
+.save-indicator.show { display: block; animation: pulse 1s infinite; }
+
+.notification {
+    position: fixed; top: 80px; right: 20px; background: #622599;
+    color: white; padding: 15px 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); animation: slideIn 0.3s;
+    z-index: 2000; max-width: 400px;
+}
+@keyframes slideIn { from { transform: translateX(400px); } to { transform: translateX(0); } }
+@keyframes slideOut { from { transform: translateX(0); } to { transform: translateX(400px); } }
+
+.hidden { display: none !important; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .container { padding: 10px; }
+    .header h1 { font-size: 1.3em; }
+    .nav-menu { display: none; }
+    .mobile-nav { display: block; }
+    .content { padding: 15px; }
+    .method-elements { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; }
+    .certificate { padding: 20px; }
+    .top-bar .logos img { height: 35px; }
+    .toggle-buttons { flex-direction: column; }
+}
+
+/* --- Print --- */
+@media print {
+    body { background: white; }
+    .top-bar, .nav-menu, .mobile-nav, .btn, .save-indicator, .sync-indicator, .modal-overlay { display: none !important; }
+    .certificate { page-break-inside: avoid; }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="logos">
+                <img src="../assets/logo-asc.png" alt="Asociacion Scouts de Colombia">
+            </div>
+            <a href="../index.html" class="back-link">&#8592; Volver a Cursos</a>
+        </div>
+    </div>
+
+    <div class="sync-indicator" id="syncIndicator">☁️ Sincronizado con Google Sheets</div>
+
+    <div class="container">
+        <div class="header">
+            <h1>🗺️ Tu Plan Personal de Desarrollo</h1>
+            <p>Curso 5 de la Ruta de Formación de Adultos en el Movimiento</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                ⏱️ Tiempo en el curso: <span id="elapsedTime">0 min</span>
+            </p>
+        </div>
+
+        <div class="nav-menu">
+            <button class="nav-btn active" onclick="showModule(0)">📝 Registro</button>
+            <button class="nav-btn" onclick="showModule(1)">🏠 Inicio</button>
+            <button class="nav-btn" onclick="showModule(2)">📋 L1</button>
+            <button class="nav-btn" onclick="showModule(3)">🤝 L2</button>
+            <button class="nav-btn" onclick="showModule(4)">✍️ L3</button>
+            <button class="nav-btn" onclick="showModule(5)">💻 L4</button>
+            <button class="nav-btn" onclick="showModule(6)">🛠️ L5</button>
+            <button class="nav-btn" onclick="showModule(7)">🎯 L6</button>
+            <button class="nav-btn" onclick="showModule(8)">🏆 Certificado</button>
+        </div>
+
+        <div class="mobile-nav">
+            <select onchange="showModule(this.value)">
+                <option value="0">📝 Registro</option>
+                <option value="1">🏠 Inicio</option>
+                <option value="2">📋 L1</option>
+                <option value="3">🤝 L2</option>
+                <option value="4">✍️ L3</option>
+                <option value="5">💻 L4</option>
+                <option value="6">🛠️ L5</option>
+                <option value="7">🎯 L6</option>
+                <option value="8">🏆 Certificado</option>
+            </select>
+        </div>
+
+        <div class="content">
+
+            <!-- MÓDULO 0: REGISTRO -->
+            <div class="module active" id="module-0">
+                <h2>📝 Registro al Curso</h2>
+
+                <div class="info-box">
+                    <strong>🎯 Objetivo del Curso:</strong><br>
+                    El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.
+                </div>
+
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" id="toggleNewReg" onclick="toggleRegistrationMode('new')">🆕 Nuevo Registro</button>
+                    <button class="toggle-btn" id="toggleRecover" onclick="toggleRegistrationMode('recover')">🔄 Recuperar mi Avance</button>
+                </div>
+
+                <div class="recovery-section hidden" id="recoverySection">
+                    <h3>🔄 Recuperar tu avance anterior</h3>
+                    <p style="color: #636363; margin-bottom: 15px;">Ingresa el correo electronico con el que te registraste para recuperar tu progreso.</p>
+                    <div class="form-group">
+                        <label for="recoveryEmail">Correo Electronico</label>
+                        <input type="email" id="recoveryEmail" placeholder="Ej: juan.perez@email.com" required>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="btn" onclick="recoverProgress()">🔍 Recuperar</button>
+                    </div>
+                    <div id="recoveryMessage" style="margin-top: 15px; text-align: center; display: none;"></div>
+                </div>
+
+                <form id="registrationForm" onsubmit="handleRegistration(event)">
+                    <div class="form-group">
+                        <label for="fullName">Nombre Completo *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Ej: Juan Carlos Pérez Gómez">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Edad</label>
+                        <input type="number" id="age" name="age" min="18" max="22" placeholder="Ej: 19">
+                    </div>
+                    <div class="form-group">
+                        <label for="group">Grupo Scout</label>
+                        <input type="text" id="group" name="group" placeholder="Ej: Grupo Scout 25">
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Región/Departamento</label>
+                        <select id="region" name="region">
+                            <option value="">Seleccionar...</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Antioquia">Antioquia</option>
+                            <option value="Arauca">Arauca</option>
+                            <option value="Atlántico">Atlántico</option>
+                            <option value="Bogotá D.C.">Bogotá D.C.</option>
+                            <option value="Bolívar">Bolívar</option>
+                            <option value="Boyacá">Boyacá</option>
+                            <option value="Caldas">Caldas</option>
+                            <option value="Caquetá">Caquetá</option>
+                            <option value="Casanare">Casanare</option>
+                            <option value="Cauca">Cauca</option>
+                            <option value="Cesar">Cesar</option>
+                            <option value="Chocó">Chocó</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Cundinamarca">Cundinamarca</option>
+                            <option value="Guainía">Guainía</option>
+                            <option value="Guaviare">Guaviare</option>
+                            <option value="Huila">Huila</option>
+                            <option value="La Guajira">La Guajira</option>
+                            <option value="Magdalena">Magdalena</option>
+                            <option value="Meta">Meta</option>
+                            <option value="Nariño">Nariño</option>
+                            <option value="Norte de Santander">Norte de Santander</option>
+                            <option value="Putumayo">Putumayo</option>
+                            <option value="Quindío">Quindío</option>
+                            <option value="Risaralda">Risaralda</option>
+                            <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                            <option value="Santander">Santander</option>
+                            <option value="Sucre">Sucre</option>
+                            <option value="Tolima">Tolima</option>
+                            <option value="Valle del Cauca">Valle del Cauca</option>
+                            <option value="Vaupés">Vaupés</option>
+                            <option value="Vichada">Vichada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ej: juan.perez@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="motivation">¿Cuál es tu motivación para participar en el movimiento como adulto voluntario?</label>
+                        <textarea id="motivation" name="motivation" rows="4" placeholder="Describe brevemente tu motivación..."></textarea>
+                    </div>
+                    <div style="text-align: center; margin-top: 30px;">
+                        <button type="submit" class="btn" style="font-size: 1.1rem; padding: 15px 30px;">🚀 Comenzar Curso</button>
+                    </div>
+                </form>
+
+                <div class="data-privacy">
+                    <h4>📊 Información sobre tus datos</h4>
+                    <p>Este curso guarda tu progreso de dos formas:</p>
+                    <ul>
+                        <li>📱 <strong>Localmente:</strong> En tu navegador para que puedas continuar sin internet</li>
+                        <li>☁️ <strong>Google Sheets:</strong> Para que los dirigentes puedan verificar certificados y hacer seguimiento</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Tus datos solo se usan para fines educativos de la Asociación Scout de Colombia.</p>
+                </div>
+            </div>
+
+            <!-- MÓDULO 1: BIENVENIDA -->
+            <div class="module" id="module-1">
+                <h2>🏠 Bienvenida <span id="welcomeName"></span></h2>
+
+                <div class="info-box"><strong>Bienvenido/a al Curso 5 — el último de la ruta.</strong><br>Este es el curso más práctico. Si vienes del Curso 4, ya tienes tu autodiagnóstico. Aquí lo conviertes en un <em>Plan Personal de Desarrollo</em> real, con asesor, plazo y herramienta oficial. Al final del curso vas a tener un PDF imprimible para llevar a tu primer encuentro con tu asesor — y los 5 certificados de la ruta completa.</div>
+
+                <p><strong>Si NO has hecho el Curso 4</strong> (autodiagnóstico de competencias), te recomendamos hacerlo primero — pero tampoco bloquea: en este curso puedes elegir tus prioridades manualmente.</p>
+
+                <h3>🎯 Al terminar este curso vas a…</h3>
+
+                <ul>
+                    <li><strong>Entender</strong> qué es un Plan Personal de Desarrollo y por qué la política lo exige</li>
+                    <li><strong>Saber</strong> cómo encontrar a tu Asesor Personal y trabajar con él/ella</li>
+                    <li><strong>Conocer</strong> los 6 elementos oficiales del Acuerdo Mutuo</li>
+                    <li><strong>Saber</strong> cómo registrarte y postularte en Talento 360</li>
+                    <li><strong>Construir</strong> tu propio Plan Personal en la herramienta interactiva</li>
+                    <li><strong>Salir</strong> con un PDF imprimible listo para firmar con tu asesor</li>
+                </ul>
+
+                <h3>📚 Las 6 lecciones</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Lección 1 — ¿Qué es un Plan Personal de Desarrollo?</h4>
+                        <p>5 min. La diferencia entre 'plan de capacitación' y 'plan personal'.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Lección 2 — Tu Asesor Personal</h4>
+                        <p>6 min. Cómo encontrarlo, qué hace y cómo trabajar con él/ella.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Lección 3 — El Acuerdo Mutuo</h4>
+                        <p>5 min. Los 6 elementos oficiales + el formato descargable.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Lección 4 — Talento 360</h4>
+                        <p>5 min. La plataforma oficial donde vive tu plan.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Lección 5 — Construye tu Plan</h4>
+                        <p>8 min. Herramienta interactiva. Genera PDF para firmar.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Lección 6 — Tu hoja de ruta + cierre</h4>
+                        <p>3 min. Próximos pasos concretos.</p>
+                    </div>
+                </div>
+
+                <h3>🏆 Logros por Desbloquear</h3>
+                <div class="achievements">
+                    <div class="achievement" id="achievement-1">📋 Conoce el PPD</div>
+                    <div class="achievement" id="achievement-2">🤝 Identifica a su Asesor</div>
+                    <div class="achievement" id="achievement-3">✍️ Domina el Acuerdo</div>
+                    <div class="achievement" id="achievement-4">🛠️ Construye su Plan</div>
+                    <div class="achievement" id="achievement-5">🏆 Ruta Completa</div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card"><h4 id="modulesCompleted">0</h4><p>Módulos Completados</p></div>
+                    <div class="stat-card"><h4 id="quizzesCompleted">0</h4><p>Evaluaciones Aprobadas</p></div>
+                    <div class="stat-card"><h4 id="studyTime">0</h4><p>Minutos de Estudio</p></div>
+                </div>
+
+                <button class="btn" onclick="showModule(2)">🚀 Comenzar el Curso</button>
+            </div>
+
+            <!-- MÓDULO 2: LECCIÓN 1 — ¿QUÉ ES UN PLAN PERSONAL DE DESARROLLO? -->
+            <div class="module" id="module-2">
+                <h2>📋 Lección 1 — ¿Qué es un Plan Personal de Desarrollo?</h2>
+                <div class="badge">Módulo 1/6</div>
+
+                <div class="info-box"><strong>⏱️ 5 minutos · 1 idea central:</strong><br>Un Plan Personal de Desarrollo (PPD) NO es un plan de capacitación. Es un acuerdo entre TÚ y la asociación sobre qué vas a desarrollar, cómo, en cuánto tiempo, y con qué apoyo.</div>
+
+                <h3>🆚 La diferencia clave</h3>
+
+                <div class="method-elements">
+                    <div class="method-element" style="background: linear-gradient(135deg, #ffebee, #ffebeedd); border-color: #f44336;">
+                        <h4>❌ Plan de capacitación tradicional</h4>
+                        <p>La asociación define los cursos. Todos hacen lo mismo. Mides tu progreso por asistencia. Termina cuando termina la jornada.</p>
+                    </div>
+                    <div class="method-element" style="background: linear-gradient(135deg, #e8f5e9, #e8f5e9dd); border-color: #4caf50;">
+                        <h4>✅ Plan Personal de Desarrollo</h4>
+                        <p>TÚ defines qué necesitas. Tu plan es único. Mides tu progreso por las conductas observables que demuestras. Es continuo a lo largo de todo tu nombramiento.</p>
+                    </div>
+                </div>
+
+                <h3>🎯 Para qué sirve realmente</h3>
+
+                <ul>
+                    <li><strong>Te da claridad</strong> sobre qué se espera de ti en tu cargo concreto</li>
+                    <li><strong>Te orienta</strong> sobre qué desarrollar primero (no todo a la vez)</li>
+                    <li><strong>Te conecta</strong> con un asesor que te acompaña, no te evalúa de afuera</li>
+                    <li><strong>Te certifica</strong> al final del ciclo, no por participar sino por demostrar</li>
+                </ul>
+
+                <h3>🧱 Los 5 elementos del PPD</h3>
+
+                <ol>
+                    <li><strong>Diagnóstico:</strong> dónde estás hoy (resultado del autodiagnóstico del Curso 4 + análisis con tu asesor)</li>
+                    <li><strong>Metas:</strong> qué quieres lograr en cada competencia priorizada</li>
+                    <li><strong>Plazos:</strong> cuándo lo vas a lograr (típicamente ciclos de 6-12 meses)</li>
+                    <li><strong>Recursos:</strong> qué cursos, módulos, lecturas, prácticas vas a usar</li>
+                    <li><strong>Acuerdo Mutuo:</strong> firmado entre tú, tu asesor y la asociación</li>
+                </ol>
+
+                <details class="policy-quote">
+                    <summary>📋 Ver definición oficial del PPD en la política</summary>
+                    <blockquote class="policy-quote-text">La formación básica se inicia con la formulación de un plan personal de desarrollo, acordado entre el adulto y su Asesor Personal, estableciendo: las competencias que se consideran ya desarrolladas en el adulto, y los módulos, cursos, prácticas supervisadas y demás experiencias de aprendizaje para desarrollar las competencias pendientes.</blockquote>
+                    <p class="policy-quote-source">— Política Nacional de Adultos en el Movimiento, Cap. 5.2.1, p. 14</p>
+                </details>
+
+                <div class="reflection-area">
+                    <h4>🤔 Reflexión Personal</h4>
+                    <p>Si te dijeran 'haz tu Plan Personal hoy mismo', ¿cuál sería tu primera dificultad? ¿Saber qué priorizar? ¿Encontrar un asesor? ¿Tener tiempo? ¿Otra cosa?</p>
+                    <textarea id="reflection-2" placeholder="Escribe tu reflexión aquí..." onchange="saveReflection(2, this.value)"></textarea>
+                </div>
+                <div class="quiz-container">
+                    <h3>🧪 Mini-quiz Lección 1</h3>
+
+                    <div class="question">
+                        <h4>1. La principal diferencia entre un plan de capacitación y un Plan Personal de Desarrollo es:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q10">
+                            Que el plan personal es más caro
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q10">
+                            Que el plan personal lo defines tú según TUS necesidades, no la asociación según las suyas
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q10">
+                            Que el plan de capacitación dura más
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. ¿Cuántos elementos tiene un PPD según esta lección?</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q11">
+                            3
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q11">
+                            5
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q11">
+                            8
+                        </label>
+                    </div>
+
+                    <button class="btn" onclick="checkQuiz(2)" id="checkBtn-2">Verificar Respuestas</button>
+                    <button class="btn hidden" onclick="completeModule(2)" id="nextBtn-2">Continuar a Lección 2 →</button>
+                </div>
+            </div>
+
+            <!-- MÓDULO 3: LECCIÓN 2 — TU ASESOR PERSONAL -->
+            <div class="module" id="module-3">
+                <h2>🤝 Lección 2 — Tu Asesor Personal</h2>
+                <div class="badge">Módulo 2/6</div>
+
+                <div class="info-box"><strong>⏱️ 6 minutos · 1 idea central:</strong><br>Tu Asesor Personal NO es tu jefe. NO es tu profesor. Es un par con más experiencia que te acompaña — escucha, sugiere, orienta, te ayuda a ver tus puntos ciegos. Y firma contigo el Acuerdo Mutuo.</div>
+
+                <h3>🤔 ¿Qué hace y qué NO hace un Asesor Personal?</h3>
+
+                <div class="method-elements">
+                    <div class="method-element" style="background: linear-gradient(135deg, #e8f5e9, #e8f5e9dd); border-color: #4caf50;">
+                        <h4>✅ SÍ hace</h4>
+                        <p>Te escucha. Te ayuda a definir prioridades. Sugiere recursos. Te da retroalimentación honesta. Firma tu Acuerdo Mutuo. Acompaña tu evaluación.</p>
+                    </div>
+                    <div class="method-element" style="background: linear-gradient(135deg, #ffebee, #ffebeedd); border-color: #f44336;">
+                        <h4>❌ NO hace</h4>
+                        <p>No es tu jefe. No te evalúa para 'aprobarte o reprobarte'. No te dice qué hacer. No te impone un plan. No es responsable de tu progreso si tú no avanzas.</p>
+                    </div>
+                </div>
+
+                <h3>🔍 Cómo encontrar a tu asesor</h3>
+
+                <ol>
+                    <li><strong>Mira en tu propio grupo:</strong> el jefe de grupo o un consejero con experiencia (mínimo 3 años en el cargo) suele ser una buena opción</li>
+                    <li><strong>Si tu grupo es muy nuevo o pequeño:</strong> pídele al equipo regional que te conecten con un asesor de otro grupo de la región</li>
+                    <li><strong>Busca afinidad:</strong> alguien con quien te sientas cómodo/a hablando con honestidad</li>
+                    <li><strong>Verifica disponibilidad:</strong> se compromete a 1 reunión cada 1-2 meses como mínimo</li>
+                    <li><strong>Aval del cargo:</strong> tu asesor debe ser oficialmente avalado (formato Doc 26 oficial)</li>
+                </ol>
+
+                <div class="info-box"><strong>💡 Tip clave del documento oficial:</strong> elige a alguien con quien puedas ser <em>honesto/a sobre tus debilidades</em>. Si te sientes evaluado/a, no funciona. Tiene que ser un espacio seguro.</div>
+
+                <h3>📅 Cómo trabajar con tu asesor</h3>
+
+                <ul>
+                    <li><strong>Reuniones cortas, regulares:</strong> 30-45 min cada 4-6 semanas</li>
+                    <li><strong>Tú llevas la agenda:</strong> tú dices qué necesitas, qué dudas tienes, qué viste avanzar</li>
+                    <li><strong>Honestidad ante todo:</strong> si no avanzaste, dilo. Si te equivocaste, dilo. Sin juicio</li>
+                    <li><strong>Documenta brevemente:</strong> lleva una bitácora corta (la Bitácora de Acompañamiento es un formato oficial — Doc 15)</li>
+                </ul>
+
+                <details class="policy-quote">
+                    <summary>📋 Ver lo que la política dice del Asesor Personal</summary>
+                    <blockquote class="policy-quote-text">Cada adulto puede evaluar qué competencias ya tiene desarrolladas y cuáles le hacen falta desarrollar. Esto lo hace con la asesoría personal de uno o varios adultos dentro de su equipo de trabajo o por quienes están en estrecho contacto con él y su cargo. En conjunto, formulan el plan personal de desarrollo identificando así las mejores formas para lograr una mayor efectividad en el desempeño.</blockquote>
+                    <p class="policy-quote-source">— Política Nacional de Adultos en el Movimiento, Cap. 3 'Principios — Personalización', p. 5</p>
+                </details>
+
+                <div class="reflection-area">
+                    <h4>🤔 Reflexión Personal</h4>
+                    <p>Pensando en tu grupo: ¿quién podría ser tu asesor personal? Escribe 1-2 nombres concretos y por qué los elegirías. Si no se te ocurre nadie, ¿qué necesitas para conseguir uno?</p>
+                    <textarea id="reflection-3" placeholder="Escribe tu reflexión aquí..." onchange="saveReflection(3, this.value)"></textarea>
+                </div>
+                <div class="quiz-container">
+                    <h3>🧪 Mini-quiz Lección 2</h3>
+
+                    <div class="question">
+                        <h4>1. ¿Cuál de estas afirmaciones describe mejor a un Asesor Personal?</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q20">
+                            Es el jefe que evalúa al adulto y decide si aprueba
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q20">
+                            Es un par con más experiencia que escucha, orienta y firma el Acuerdo Mutuo, sin imponer un plan
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q20">
+                            Es un profesor externo que dicta cursos
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. El criterio más importante para elegir asesor según el documento oficial es:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q21">
+                            Que sea la persona con más años en el movimiento
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q21">
+                            Que puedas ser honesto/a con él/ella sobre tus debilidades, sin sentirte evaluado/a
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q21">
+                            Que esté en tu mismo grupo obligatoriamente
+                        </label>
+                    </div>
+
+                    <button class="btn" onclick="checkQuiz(3)" id="checkBtn-3">Verificar Respuestas</button>
+                    <button class="btn hidden" onclick="completeModule(3)" id="nextBtn-3">Continuar a Lección 3 →</button>
+                </div>
+            </div>
+
+            <!-- MÓDULO 4: LECCIÓN 3 — EL ACUERDO MUTUO -->
+            <div class="module" id="module-4">
+                <h2>✍️ Lección 3 — El Acuerdo Mutuo</h2>
+                <div class="badge">Módulo 3/6</div>
+
+                <div class="info-box"><strong>⏱️ 5 minutos · 1 idea central:</strong><br>El Acuerdo Mutuo es el documento que firmas tú, tu asesor y la asociación cuando aceptas un cargo. Define las reglas del juego: qué te comprometes a hacer, qué te van a apoyar, y cómo se va a evaluar todo.</div>
+
+                <h3>📝 Los 6 elementos oficiales del Acuerdo</h3>
+
+                <p>La política define <strong>6 elementos obligatorios</strong> que todo Acuerdo Mutuo debe tener:</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1. Vigencia del nombramiento</h4>
+                        <p>Cuánto tiempo dura tu compromiso (típicamente 1-3 años).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2. Inducción y período de prueba</h4>
+                        <p>Cómo se hará tu inducción y cuánto dura el período inicial de adaptación.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>3. Compromisos del adulto</h4>
+                        <p>Qué te comprometes tú a hacer (asistencia, plan personal, formación, etc.).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>4. Apoyos y beneficios al adulto</h4>
+                        <p>Qué te ofrece la asociación (formación, asesor, materiales, reconocimiento).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>5. Voluntad de desarrollar competencias</h4>
+                        <p>Tu compromiso explícito con tu plan personal y tu crecimiento.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>6. Procedimiento de evaluación</h4>
+                        <p>Cómo y cuándo se va a evaluar tu desempeño (autoevaluación + asesor + 360°).</p>
+                    </div>
+                </div>
+
+                <div class="info-box"><strong>📎 Formato oficial descargable:</strong><br>La asociación tiene un formato oficial llamado <em>'Compromiso de Acuerdo Mutuo V2.0'</em> (formato DOCX). Lo descargas, lo llenas con tu asesor, lo firman los dos + el jefe de grupo, y queda en tu carpeta personal y en Talento 360.</div>
+
+                <h3>🔑 ¿Por qué importa firmar?</h3>
+
+                <p>Firmar es <strong>simbólico y práctico</strong>. Simbólico: marcas un antes y un después. Práctico: si en 6 meses tu asesor te dice <em>'no estás cumpliendo lo que firmaste'</em>, hay un papel concreto al que volver.</p>
+
+                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Lo que no se firma, se olvida. Lo que se firma, se cumple.</blockquote>
+
+                <details class="policy-quote">
+                    <summary>📋 Ver los 6 elementos oficiales del Acuerdo Mutuo</summary>
+                    <blockquote class="policy-quote-text">El proceso de selección para cualquier cargo o función culmina con el establecimiento de un compromiso y acuerdo mutuo entre la ASC y el adulto seleccionado. Este será refrendado mediante un nombramiento oficial. Este instrumento establece los siguientes elementos: el término durante el cual este nombramiento será vigente, el término y la forma de efectuar la inducción y el período de prueba del adulto, los compromisos que asume el adulto con la ASC, los apoyos y beneficios que le serán brindados al adulto, la voluntad del adulto para desarrollar y perfeccionar las competencias del cargo o función, el procedimiento y los momentos de la evaluación del desempeño y del cumplimiento de los compromisos acordados.</blockquote>
+                    <p class="policy-quote-source">— Política Nacional de Adultos en el Movimiento, Cap. 5.1.5, p. 13</p>
+                </details>
+
+                <div class="reflection-area">
+                    <h4>🤔 Reflexión Personal</h4>
+                    <p>De los 6 elementos del Acuerdo Mutuo, ¿cuál crees que es el que más se 'olvida' en la práctica de los grupos? ¿Por qué?</p>
+                    <textarea id="reflection-4" placeholder="Escribe tu reflexión aquí..." onchange="saveReflection(4, this.value)"></textarea>
+                </div>
+                <div class="quiz-container">
+                    <h3>🧪 Mini-quiz Lección 3</h3>
+
+                    <div class="question">
+                        <h4>1. ¿Cuántos elementos define la política como obligatorios en un Acuerdo Mutuo?</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q30">
+                            3
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q30">
+                            6
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q30">
+                            10
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. El elemento 'Apoyos y beneficios al adulto' del Acuerdo Mutuo significa:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q31">
+                            Lo que tú te comprometes a aportar al grupo
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q31">
+                            Lo que la asociación se compromete a darte (formación, asesor, materiales, reconocimiento)
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q31">
+                            El sueldo que vas a recibir
+                        </label>
+                    </div>
+
+                    <button class="btn" onclick="checkQuiz(4)" id="checkBtn-4">Verificar Respuestas</button>
+                    <button class="btn hidden" onclick="completeModule(4)" id="nextBtn-4">Continuar a Lección 4 →</button>
+                </div>
+            </div>
+
+            <!-- MÓDULO 5: LECCIÓN 4 — TALENTO 360 -->
+            <div class="module" id="module-5">
+                <h2>💻 Lección 4 — Talento 360</h2>
+                <div class="badge">Módulo 4/6</div>
+
+                <div class="info-box"><strong>⏱️ 5 minutos · 1 idea central:</strong><br>Talento 360 es la plataforma oficial donde vive tu hoja de vida como adulto del movimiento, tu Plan Personal, tus evaluaciones y tus certificaciones. Es como tu LinkedIn scout.</div>
+
+                <h3>📦 ¿Qué guarda Talento 360?</h3>
+
+                <ul>
+                    <li>Tu <strong>hoja de vida</strong> como adulto (datos, formación previa, experiencia)</li>
+                    <li>Tu <strong>Plan Personal de Desarrollo</strong> firmado</li>
+                    <li>El <strong>Acuerdo Mutuo</strong> de cada cargo que ejerces</li>
+                    <li>Tus <strong>autoevaluaciones, coevaluaciones y heteroevaluaciones</strong> (la 360°)</li>
+                    <li>Las <strong>certificaciones</strong> que vas obteniendo (Insignia de Madera, etc.)</li>
+                    <li>Los <strong>cargos a los que postulas</strong> dentro de la asociación</li>
+                </ul>
+
+                <h3>🚀 Los 2 procesos clave en Talento 360</h3>
+
+                <div class="method-elements">
+                    <div class="method-element" style="background: linear-gradient(135deg, #fff3e0, #fff3e0dd); border-color: #ff9800;">
+                        <h4>1. Registro y validación</h4>
+                        <p>La primera vez creas tu cuenta, llenas tus datos básicos, subes tu hoja de vida, y la asociación valida que estás efectivamente nombrado en un cargo. Una vez al inicio.</p>
+                    </div>
+                    <div class="method-element" style="background: linear-gradient(135deg, #e3f2fd, #e3f2fddd); border-color: #2196f3;">
+                        <h4>2. Postulación a cargos</h4>
+                        <p>Cuando un cargo queda vacante en tu grupo, regional o nivel nacional, puedes postularte directamente desde la plataforma. Tu hoja de vida ya está ahí.</p>
+                    </div>
+                </div>
+
+                <div class="info-box"><strong>📚 Tutoriales oficiales:</strong><br>La asociación publica 2 PDFs paso a paso para usar Talento 360:<br>• <em>Registro y Validación de Datos en Talento 360</em><br>• <em>Postulación a Cargos dentro de Talento 360</em><br>Búscalos en el portal oficial cuando vayas a usar la plataforma por primera vez.</div>
+
+                <h3>🔐 ¿Cuándo subir tu información?</h3>
+
+                <ol>
+                    <li><strong>Apenas te nombren</strong> en cualquier cargo dentro del grupo (vocal, tesorero, asesor, etc.)</li>
+                    <li><strong>Cuando firmes</strong> tu Acuerdo Mutuo (subes el PDF firmado)</li>
+                    <li><strong>Cuando construyas</strong> tu Plan Personal (Lección 5 — la próxima)</li>
+                    <li><strong>Cada vez que termines una formación</strong> que mejore tus competencias</li>
+                </ol>
+
+                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Si no está en Talento 360, para la asociación no existió. Suena exagerado, pero es así.</blockquote>
+
+                <div class="reflection-area">
+                    <h4>🤔 Reflexión Personal</h4>
+                    <p>¿Conocías Talento 360? Si ya estás registrado/a, ¿qué tan actualizada está tu información? Si no, ¿qué te falta para registrarte esta semana?</p>
+                    <textarea id="reflection-5" placeholder="Escribe tu reflexión aquí..." onchange="saveReflection(5, this.value)"></textarea>
+                </div>
+                <div class="quiz-container">
+                    <h3>🧪 Mini-quiz Lección 4</h3>
+
+                    <div class="question">
+                        <h4>1. Talento 360 NO sirve para:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q40">
+                            Registrar tu hoja de vida como adulto del movimiento
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q40">
+                            Postularte a cargos vacantes
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q40">
+                            Inscribir a tus hijos en la rama de scouts
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. ¿Cuándo deberías subir tu información a Talento 360?</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q41">
+                            Solo si vas a postularte a un cargo nacional
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q41">
+                            Apenas te nombren en cualquier cargo (incluso de comité o vocal)
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q41">
+                            Solo cuando tengas la Insignia de Madera
+                        </label>
+                    </div>
+
+                    <button class="btn" onclick="checkQuiz(5)" id="checkBtn-5">Verificar Respuestas</button>
+                    <button class="btn hidden" onclick="completeModule(5)" id="nextBtn-5">Continuar a construir tu Plan →</button>
+                </div>
+            </div>
+
+            <!-- MÓDULO 6: LECCIÓN 5 — CONSTRUYE TU PLAN -->
+            <div class="module" id="module-6">
+                <h2>🛠️ Lección 5 — Construye tu Plan</h2>
+                <div class="badge">Módulo 5/6</div>
+
+                <div class="info-box"><strong>⏱️ 8 minutos · 1 idea central:</strong><br>Es tu turno. Vas a construir tu Plan Personal de Desarrollo aquí mismo. Si hiciste el Curso 4, tu perfil ya está cargado y tus prioridades ya están sugeridas. Si no, las eliges manualmente.</div>
+
+                <h3>📝 Cómo usar la herramienta</h3>
+
+                <ol>
+                    <li><strong>Click en 'Cargar mi perfil del Curso 4'</strong> si lo hiciste — pre-llena las áreas de oportunidad</li>
+                    <li><strong>Selecciona 2-3 competencias</strong> en las que quieras enfocarte este ciclo (no más)</li>
+                    <li>Para cada una, escribe: <strong>meta concreta</strong>, <strong>plazo</strong>, <strong>recursos</strong></li>
+                    <li>Escribe tu <strong>compromiso personal</strong> al final</li>
+                    <li>Click en <strong>'Generar mi Plan Personal'</strong> — produce vista imprimible</li>
+                    <li><strong>Imprime o guarda como PDF</strong> y llévalo a tu primer encuentro con tu asesor</li>
+                </ol>
+
+                <div class="info-box"><strong>💡 Tips para llenarlo bien:</strong><br>📌 <strong>Meta:</strong> sé concreto. No 'mejorar trabajo en equipo' sino 'pasar de grado 2 a 3, evidenciado en mediar al menos 2 conflictos del consejo'.<br>📌 <strong>Plazo:</strong> realista. 6-12 meses suele funcionar.<br>📌 <strong>Recursos:</strong> tan específicos como puedas. 'Leer la cartilla X', 'asistir al taller Y de la regional', 'pedir mentoría a Z'.</div>
+
+                <div class="plan-builder" id="pb-plan-personal">
+                    <div class="pb-profile-banner" id="pb-profile-plan-personal"></div>
+                    <p class="pb-intro">Selecciona <strong>2 a 3 competencias</strong> en las que quieras trabajar este ciclo. Si tomaste el Curso 3, las áreas de oportunidad ya están sugeridas. Puedes cambiarlas si quieres.</p>
+                    <div class="pb-competences"><div class="pb-competence" data-competence="adaptabilidad">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="adaptabilidad" data-name="Adaptabilidad al cambio" onchange="togglePlanCompetence('plan-personal', 'adaptabilidad')">
+                        <span class="pb-comp-name">Adaptabilidad al cambio</span>
+                        <span class="pb-comp-grade" id="pb-grade-adaptabilidad"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-adaptabilidad">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="adaptabilidad" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'adaptabilidad', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="adaptabilidad" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'adaptabilidad', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="adaptabilidad" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'adaptabilidad', 'recursos', this.value)"></textarea>
+                    </div>
+                </div><div class="pb-competence" data-competence="aprendizaje">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="aprendizaje" data-name="Aprendizaje y desarrollo personal" onchange="togglePlanCompetence('plan-personal', 'aprendizaje')">
+                        <span class="pb-comp-name">Aprendizaje y desarrollo personal</span>
+                        <span class="pb-comp-grade" id="pb-grade-aprendizaje"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-aprendizaje">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="aprendizaje" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'aprendizaje', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="aprendizaje" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'aprendizaje', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="aprendizaje" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'aprendizaje', 'recursos', this.value)"></textarea>
+                    </div>
+                </div><div class="pb-competence" data-competence="compromiso">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="compromiso" data-name="Compromiso" onchange="togglePlanCompetence('plan-personal', 'compromiso')">
+                        <span class="pb-comp-name">Compromiso</span>
+                        <span class="pb-comp-grade" id="pb-grade-compromiso"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-compromiso">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="compromiso" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'compromiso', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="compromiso" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'compromiso', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="compromiso" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'compromiso', 'recursos', this.value)"></textarea>
+                    </div>
+                </div><div class="pb-competence" data-competence="conciencia-organizacional">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="conciencia-organizacional" data-name="Conciencia organizacional" onchange="togglePlanCompetence('plan-personal', 'conciencia-organizacional')">
+                        <span class="pb-comp-name">Conciencia organizacional</span>
+                        <span class="pb-comp-grade" id="pb-grade-conciencia-organizacional"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-conciencia-organizacional">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="conciencia-organizacional" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="conciencia-organizacional" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="conciencia-organizacional" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'recursos', this.value)"></textarea>
+                    </div>
+                </div><div class="pb-competence" data-competence="planeamiento">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="planeamiento" data-name="Planeamiento estratégico" onchange="togglePlanCompetence('plan-personal', 'planeamiento')">
+                        <span class="pb-comp-name">Planeamiento estratégico</span>
+                        <span class="pb-comp-grade" id="pb-grade-planeamiento"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-planeamiento">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="planeamiento" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'planeamiento', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="planeamiento" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'planeamiento', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="planeamiento" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'planeamiento', 'recursos', this.value)"></textarea>
+                    </div>
+                </div><div class="pb-competence" data-competence="relaciones">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="relaciones" data-name="Relaciones interpersonales" onchange="togglePlanCompetence('plan-personal', 'relaciones')">
+                        <span class="pb-comp-name">Relaciones interpersonales</span>
+                        <span class="pb-comp-grade" id="pb-grade-relaciones"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-relaciones">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="relaciones" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'relaciones', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="relaciones" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'relaciones', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="relaciones" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'relaciones', 'recursos', this.value)"></textarea>
+                    </div>
+                </div><div class="pb-competence" data-competence="trabajo-equipo">
+                    <label class="pb-comp-header">
+                        <input type="checkbox" class="pb-comp-check" data-competence="trabajo-equipo" data-name="Trabajo en equipo" onchange="togglePlanCompetence('plan-personal', 'trabajo-equipo')">
+                        <span class="pb-comp-name">Trabajo en equipo</span>
+                        <span class="pb-comp-grade" id="pb-grade-trabajo-equipo"></span>
+                    </label>
+                    <div class="pb-comp-fields hidden" id="pb-fields-trabajo-equipo">
+                        <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
+                        <textarea class="pb-field-meta" data-competence="trabajo-equipo" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'trabajo-equipo', 'meta', this.value)"></textarea>
+                        <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
+                        <input type="text" class="pb-field-plazo" data-competence="trabajo-equipo" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'trabajo-equipo', 'plazo', this.value)">
+                        <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
+                        <textarea class="pb-field-recursos" data-competence="trabajo-equipo" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'trabajo-equipo', 'recursos', this.value)"></textarea>
+                    </div>
+                </div></div>
+                    <div class="pb-commitment-block">
+                        <label class="pb-field-label pb-commitment-label">💚 Mi compromiso personal con este plan</label>
+                        <textarea id="pb-commitment-plan-personal" class="pb-commitment" placeholder="Ej: Me comprometo a trabajar en mi plan con disciplina, a buscar a mi asesor cada mes, y a no rendirme cuando me cueste..." onchange="savePlanCommitment('plan-personal', this.value)"></textarea>
+                    </div>
+                    <div class="pb-actions">
+                        <button type="button" class="btn-primary" onclick="generatePlan('plan-personal')">📄 Generar mi Plan Personal</button>
+                        <button type="button" class="btn-secondary" onclick="loadProfileIntoPlan('plan-personal')">🔄 Cargar mi perfil del Curso 4</button>
+                    </div>
+                    <div id="pb-output-plan-personal" class="pb-output hidden"></div>
+                </div>
+
+                <div class="reflection-area">
+                    <h4>🤔 Reflexión Personal</h4>
+                    <p>Después de construir tu plan: ¿qué meta es la que más miedo te da no cumplir? ¿Por qué? Esa suele ser la más importante.</p>
+                    <textarea id="reflection-6" placeholder="Escribe tu reflexión aquí..." onchange="saveReflection(6, this.value)"></textarea>
+                </div>
+                <div class="quiz-container">
+                    <h3>🧪 Mini-quiz Lección 5</h3>
+
+                    <div class="question">
+                        <h4>1. ¿Cuántas competencias se recomienda elegir para un ciclo de Plan Personal?</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q50">
+                            Las 7, todas a la vez
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q50">
+                            Idealmente 2-3 — concentras esfuerzo y los resultados son sostenibles
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q50">
+                            Solo 1 obligatoriamente
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. Una buena meta de plan personal debe ser:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q51">
+                            Aspiracional pero vaga: 'ser mejor adulto del movimiento'
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q51">
+                            Concreta y observable: 'pasar de grado 2 a 3 en X, evidenciado en Y conducta'
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q51">
+                            Solo emocional: 'comprometerme más'
+                        </label>
+                    </div>
+
+                    <button class="btn" onclick="checkQuiz(6)" id="checkBtn-6">Verificar Respuestas</button>
+                    <button class="btn hidden" onclick="completeModule(6)" id="nextBtn-6">Continuar al cierre →</button>
+                </div>
+            </div>
+
+            <!-- MÓDULO 7: LECCIÓN 6 — TU HOJA DE RUTA + CIERRE -->
+            <div class="module" id="module-7">
+                <h2>🎯 Lección 6 — Tu hoja de ruta + cierre</h2>
+                <div class="badge">Módulo 6/6</div>
+
+                <div class="info-box"><strong>⏱️ 3 minutos · 1 idea central:</strong><br>Tienes tu plan. Ahora hay 4 pasos prácticos para que no quede en el papel. Te los listo concretos.</div>
+
+                <h3>✅ Tu hoja de ruta — los 4 próximos pasos</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1. Imprime tu Plan o guárdalo en PDF</h4>
+                        <p>Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2. Identifica a tu asesor y agenda una reunión</h4>
+                        <p>Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>3. Firma con tu asesor + jefe de grupo</h4>
+                        <p>Diligencien juntos el formato oficial 'Compromiso de Acuerdo Mutuo V2.0' (lo descargas del portal oficial).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>4. Sube todo a Talento 360</h4>
+                        <p>Tu hoja de vida + el Acuerdo firmado + tu Plan Personal. Que quede registrado oficialmente.</p>
+                    </div>
+                </div>
+
+                <div class="info-box"><strong>⏰ Tiempo estimado para los 4 pasos:</strong><br>~3 horas distribuidas en 2-3 semanas. No es mucho. Pero los grupos donde nadie hace estos pasos viven con adultos quemados, sin claridad y sin acompañamiento. Tu plan vale solo si lo aterrizas.</div>
+
+                <h3>🎉 Has terminado la Ruta de Formación</h3>
+
+                <p>Hoy pasaste de la teoría a la acción. Tienes un plan real, propio, con prioridades reales y un compromiso real. <strong>Eso es ya hacer la política de adultos</strong> — no solo conocerla. Y al obtener el certificado de este curso, completas <strong>los 5 certificados de la ruta</strong>.</p>
+
+                <h3>📚 La ruta completa que terminaste</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>🦸 Curso 1 — Bienvenida al Movimiento de Adultos</h4>
+                        <p>Por qué estás aquí, qué se espera de ti, primer compromiso.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>📜 Curso 2 — La Política — Marco y Principios</h4>
+                        <p>El marco oficial, los 13 principios, las 12 herramientas.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>🔄 Curso 3 — El Ciclo del Adulto</h4>
+                        <p>El panorama del sistema completo: atracción, desempeño, decisiones para el futuro.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>🧠 Curso 4 — Las 7 Competencias Esenciales</h4>
+                        <p>Tu autodiagnóstico personal con perfil consolidado.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>🗺️ Curso 5 — Tu Plan Personal de Desarrollo (estás aquí)</h4>
+                        <p>Tu plan real, listo para firmar con tu asesor.</p>
+                    </div>
+                </div>
+
+                <h3>🎯 Lo que tienes ahora que no tenías antes</h3>
+
+                <ul>
+                    <li><strong>Marco doctrinal:</strong> sabes qué dice la política, sus principios y herramientas</li>
+                    <li><strong>Visión sistémica:</strong> entiendes cómo encaja tu rol en el ciclo completo del adulto</li>
+                    <li><strong>Autoconocimiento:</strong> tienes tu perfil de competencias con fortalezas y áreas de oportunidad</li>
+                    <li><strong>Plan personal aterrizado:</strong> sabes qué priorizar, en cuánto tiempo, con qué recursos — y lo tienes en PDF</li>
+                    <li><strong>Lenguaje común:</strong> puedes conversar de igual a igual con tu asesor, jefe y región</li>
+                </ul>
+
+                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Hace 5 cursos llegaste con preguntas. Hoy te vas con un mapa, un plan y un sistema de soporte. El movimiento te necesitaba como llegaste. Ahora te aprovechará mejor con cada paso que des.</blockquote>
+
+                <h3>🚀 Tus próximos 4 pasos prácticos</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1. Imprime tu Plan o guárdalo en PDF</h4>
+                        <p>Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2. Identifica a tu asesor y agenda una reunión</h4>
+                        <p>Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>3. Firma con tu asesor + jefe de grupo</h4>
+                        <p>Diligencien juntos el formato oficial 'Compromiso de Acuerdo Mutuo V2.0' (lo descargas del portal oficial).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>4. Sube todo a Talento 360</h4>
+                        <p>Tu hoja de vida + el Acuerdo firmado + tu Plan Personal + los 5 certificados de la ruta. Que quede registrado oficialmente.</p>
+                    </div>
+                </div>
+
+                <div class="info-box"><strong>🌟 Servicio adicional al movimiento</strong><br>Si terminaste los 5 cursos, ya tienes la base para ser <strong>asesor personal</strong> de otros adultos que están empezando. Hablalo con tu jefe de grupo. La red crece cuando los que ya recorrieron el camino acompañan a los que vienen detrás.</div>
+
+                <div class="info-box"><strong>🔮 Próximas etapas de la plataforma</strong><br>Una vez la ruta de fundamentación esté validada con usuarios reales, vendrán cursos de profundización: <em>Cómo vincular nuevos adultos, Asesoría personal en profundidad, Cierre digno de nombramientos, Talento 360 práctico</em> y cursos por cargo específico (Tesorero, Secretario, etc.).</div>
+
+                <div class="reflection-area">
+                    <h4>🤔 Reflexión Personal</h4>
+                    <p>Mirando atrás: ¿qué cambió entre la persona que empezó el Curso 1 y la que cierra hoy el Curso 5? Sé honesto/a contigo. Esa es la métrica que importa.</p>
+                    <textarea id="reflection-7" placeholder="Escribe tu reflexión aquí..." onchange="saveReflection(7, this.value)"></textarea>
+                </div>
+                <div class="quiz-container">
+                    <h3>🧪 Mini-quiz Lección 6 — Cierre de la ruta</h3>
+
+                    <div class="question">
+                        <h4>1. El primer paso después de construir tu plan es:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q60">
+                            Esperar a que el grupo te diga qué hacer
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q60">
+                            Imprimirlo o guardarlo en PDF — sin papel, solo es una idea
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q60">
+                            Subirlo a Talento 360 inmediatamente sin firmar
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. Habiendo completado los 5 cursos de la ruta, una opción de servicio adicional al movimiento es:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q61">
+                            Ser asesor personal de otros adultos que están empezando
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q61">
+                            Limitarte a tu cargo actual
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q61">
+                            Olvidarte del proceso porque ya tienes los certificados
+                        </label>
+                    </div>
+
+                    <div class="question">
+                        <h4>3. El Acuerdo Mutuo se firma:</h4>
+                        <label class="option" onclick="selectOption(this, 0)">
+                            <input type="radio" name="q62">
+                            Solo entre tú y la asociación
+                        </label>
+                        <label class="option" onclick="selectOption(this, 1)">
+                            <input type="radio" name="q62">
+                            Entre tú, tu asesor y el jefe de grupo
+                        </label>
+                        <label class="option" onclick="selectOption(this, 2)">
+                            <input type="radio" name="q62">
+                            Solo con tu asesor
+                        </label>
+                    </div>
+
+                    <button class="btn" onclick="checkQuiz(7)" id="checkBtn-7">Verificar Respuestas</button>
+                    <button class="btn hidden" onclick="completeModule(7)" id="nextBtn-7">Obtener Certificado 🏆</button>
+                </div>
+            </div>
+
+            <!-- MÓDULO 8: CERTIFICADO -->
+            <div class="module" id="module-8">
+                <div class="certificate" style="max-width: 700px; margin: 0 auto; background: white; border: 3px solid #622599; border-radius: 0; padding: 30px 35px; position: relative; overflow: hidden;">
+                    <!-- Decorative corners -->
+                    <div style="position: absolute; top: 0; left: 0; width: 60px; height: 60px; border-top: 4px solid #ffe675; border-left: 4px solid #ffe675;"></div>
+                    <div style="position: absolute; top: 0; right: 0; width: 60px; height: 60px; border-top: 4px solid #ffe675; border-right: 4px solid #ffe675;"></div>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 60px; height: 60px; border-bottom: 4px solid #ffe675; border-left: 4px solid #ffe675;"></div>
+                    <div style="position: absolute; bottom: 0; right: 0; width: 60px; height: 60px; border-bottom: 4px solid #ffe675; border-right: 4px solid #ffe675;"></div>
+
+                    <!-- Header -->
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;">
+                            <img src="../assets/logo-asc.png" alt="ASC" style="height: 45px;">
+                        </div>
+                        <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociacion Scouts de Colombia</p>
+                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 2px 0;">Formación de Adultos en el Movimiento</p>
+                    </div>
+
+                    <hr style="border: none; border-top: 2px solid #622599; margin: 10px 30px;">
+
+                    <!-- Title -->
+                    <div style="text-align: center; margin: 15px 0 10px;">
+                        <h2 style="color: #622599; font-size: 1.3em; letter-spacing: 2px; margin: 0;">CERTIFICADO DE APROBACION</h2>
+                    </div>
+
+                    <!-- Course name -->
+                    <div style="text-align: center; background: linear-gradient(135deg, #622599 0%, #3d1660 100%); color: white; padding: 10px 20px; margin: 10px 0;">
+                        <h3 style="font-size: 1.1em; letter-spacing: 1px; margin: 0; color: white;">TU PLAN PERSONAL DE DESARROLLO</h3>
+                    </div>
+
+                    <!-- Body -->
+                    <div style="text-align: center; margin: 15px 0;">
+                        <p style="font-size: 0.9em; color: #636363; margin-bottom: 8px;">Se otorga el presente certificado a</p>
+                        <h3 style="color: #622599; font-size: 1.5em; margin: 8px 0; border-bottom: 2px solid #ffe675; display: inline-block; padding-bottom: 5px;" id="studentName"></h3>
+                        <p style="font-size: 0.85em; color: #636363; margin-top: 10px; line-height: 1.5;">ha completado el Curso 5 — y con él toda la Ruta de Formación de Adultos en el Movimiento — comprendiendo el Plan Personal de Desarrollo, el rol del Asesor Personal, los 6 elementos del Acuerdo Mutuo, la plataforma Talento 360, y construyendo su propio plan personal listo para ser refrendado con su asesor, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia</p>
+                    </div>
+
+                    <!-- Details grid -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; margin: 15px 0; padding: 12px 15px; background: #f9f7fc; border-left: 3px solid #622599; font-size: 0.82em;">
+                        <p style="margin: 0;"><strong>Fecha:</strong> <span id="certDate"></span></p>
+                        <p style="margin: 0;"><strong>Puntuacion:</strong> <span id="finalScore"></span>%</p>
+                        <p style="margin: 0;"><strong>Grupo Scout:</strong> <span id="certGroup"></span></p>
+                        <p style="margin: 0;"><strong>Region:</strong> <span id="certRegion"></span></p>
+                        <p style="margin: 0;"><strong>Tiempo de estudio:</strong> <span id="totalTime"></span> min</p>
+                        <p style="margin: 0;"><strong>Estado:</strong> <span style="color: #2e7d32; font-weight: 700;">APROBADO ✅</span></p>
+                    </div>
+
+                    <!-- Verification code -->
+                    <div style="text-align: center; margin: 12px 0; padding: 8px; border: 1px dashed #622599; background: #faf8fd;">
+                        <p style="font-size: 0.75em; color: #888; margin: 0 0 3px;">Codigo de Verificacion</p>
+                        <strong style="font-size: 1em; color: #622599; letter-spacing: 2px;" id="certCode">ASC-2024-XXXXX</strong>
+                    </div>
+
+                    <!-- Footer -->
+                    <div style="text-align: center; margin-top: 12px;">
+                        <p style="font-size: 0.7em; color: #999;">Plataforma de Formacion de Adultos ASC</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px;">🎯 Logros Desbloqueados</h3>
+                <div class="achievements">
+                    <div class="achievement earned">📋 Conoce el PPD</div>
+                    <div class="achievement earned">🤝 Identifica a su Asesor</div>
+                    <div class="achievement earned">✍️ Domina el Acuerdo</div>
+                    <div class="achievement earned">🛠️ Construye su Plan</div>
+                    <div class="achievement earned">🏆 Ruta Completa</div>
+                </div>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <button class="btn" onclick="downloadCertificatePDF()">📥 Descargar PDF</button>
+                    <button class="btn" onclick="window.print()">🖨️ Imprimir Certificado</button>
+                    <button class="btn" onclick="shareResults()">📤 Compartir Logros</button>
+                    <button class="btn" onclick="restartCourse()">🔄 Reiniciar Curso</button>
+                </div>
+
+                <div class="reflection-area">
+                    <h4>🎯 Compromiso Personal</h4>
+                    <p>Escribe tu compromiso como adulto certificado para servir a tu grupo scout y al movimiento:</p>
+                    <textarea id="commitment" placeholder="Mi compromiso como adulto del movimiento es..." onchange="saveCommitment(this.value)"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="save-indicator" id="saveIndicator">💾 Guardando...</div>
+
+    <!-- jsPDF para generar el certificado en una sola página A4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+    // --- Configuracion del curso (generada automaticamente) ---
+    var COURSE_CONFIG = {
+        courseId: "plan-personal",
+        title: "Tu Plan Personal de Desarrollo",
+        totalModules: 9,
+        contentModules: 6,
+        googleScriptUrl: "https://script.google.com/macros/s/AKfycbzHd4KB4MafCKKPp8kEf9V-vLnlsCKUhmqR6eMFB-Qvz2f03xy9bYSx86eGUuS5RkfX2g/exec",
+        achievements: [{"id":"achievement-1","name":"Conoce el PPD","emoji":"📋","unlockOnModule":2},{"id":"achievement-2","name":"Identifica a su Asesor","emoji":"🤝","unlockOnModule":3},{"id":"achievement-3","name":"Domina el Acuerdo","emoji":"✍️","unlockOnModule":4},{"id":"achievement-4","name":"Construye su Plan","emoji":"🛠️","unlockOnModule":6},{"id":"achievement-5","name":"Ruta Completa","emoji":"🏆","unlockOnModule":-1}]
+    };
+
+    // --- Respuestas correctas (indice base 0) ---
+    var QUIZ_ANSWERS = {"2":[1,1],"3":[1,1],"4":[1,1],"5":[2,1],"6":[1,1],"7":[1,0,1]};
+
+// ============================================
+// MOTOR DE CURSOS - PLATAFORMA DE FORMACION DE ADULTOS ASC
+// Este archivo es generado automaticamente por build-course.js
+// Las variables COURSE_CONFIG y QUIZ_ANSWERS son inyectadas por el builder
+// ============================================
+
+// --- Variables globales ---
+let currentModule = 0;
+let moduleProgress = [];
+let quizScores = [];
+let startTime = new Date();
+let studyTime = 0;
+let sessionStartTime = null;
+let reflections = {};
+let photos = {};
+let selfAssessments = {};
+let personalPlans = {};
+let userProfile = {};
+
+// --- Inicializacion ---
+window.addEventListener('DOMContentLoaded', function () {
+    moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
+    sessionStartTime = new Date();
+    loadProgress();
+    prefillFromGlobalProfile();
+    updateElapsedTime();
+});
+
+window.addEventListener('beforeunload', function () {
+    saveProgress();
+});
+
+// --- Registro ---
+function handleRegistration(event) {
+    event.preventDefault();
+    var formData = new FormData(event.target);
+    userProfile = {
+        fullName: formData.get('fullName'),
+        age: formData.get('age'),
+        group: formData.get('group'),
+        region: formData.get('region'),
+        email: formData.get('email'),
+        motivation: formData.get('motivation'),
+        registrationDate: new Date().toISOString()
+    };
+    if (!userProfile.fullName || userProfile.fullName.trim() === '') {
+        showNotification('⚠️ El nombre es requerido', 'warning');
+        return;
+    }
+    saveProgress();
+    saveGlobalUserProfile(userProfile);
+    sendToGoogleSheets({ action: 'register', ...userProfile });
+    showModule(1);
+    var firstName = userProfile.fullName.split(' ')[0];
+    var welcomeEl = document.getElementById('welcomeName');
+    if (welcomeEl) welcomeEl.textContent = firstName;
+    showNotification('¡Bienvenido/a ' + firstName + '! 🎉');
+}
+
+// --- Perfil global cross-course (autollenado) ---
+function saveGlobalUserProfile(profile) {
+    try {
+        // Persist only the reusable fields (no per-course state)
+        var reusable = {
+            fullName: profile.fullName, age: profile.age, group: profile.group,
+            region: profile.region, email: profile.email, motivation: profile.motivation,
+            updatedAt: new Date().toISOString()
+        };
+        localStorage.setItem('globalUserProfile', JSON.stringify(reusable));
+    } catch (e) { /* ignore */ }
+}
+
+function prefillFromGlobalProfile() {
+    // Skip if user already registered for this specific course
+    if (userProfile && userProfile.fullName) return;
+    var raw;
+    try { raw = localStorage.getItem('globalUserProfile'); } catch (e) { return; }
+    if (!raw) return;
+    var profile;
+    try { profile = JSON.parse(raw); } catch (e) { return; }
+    if (!profile || !profile.fullName) return;
+    var fields = ['fullName', 'age', 'group', 'region', 'email', 'motivation'];
+    var filled = 0;
+    fields.forEach(function (id) {
+        var input = document.getElementById(id);
+        if (input && profile[id]) {
+            input.value = profile[id];
+            filled++;
+        }
+    });
+    if (filled === 0) return;
+    // Insert banner above the form
+    var form = document.querySelector('#module-0 form');
+    if (form && !document.getElementById('prefill-banner')) {
+        var firstName = (profile.fullName || '').split(' ')[0] || 'Adulto';
+        var banner = document.createElement('div');
+        banner.id = 'prefill-banner';
+        banner.className = 'prefill-banner';
+        banner.innerHTML =
+            '<div class="prefill-banner-content">' +
+                '<span class="prefill-banner-icon">✨</span>' +
+                '<div>' +
+                    '<strong>Hola ' + escapePrefillHtml(firstName) + '. Tus datos están pre-cargados</strong> de un curso anterior.<br>' +
+                    '<span class="prefill-banner-hint">Edita lo que haya cambiado o continúa directo.</span>' +
+                '</div>' +
+                '<button type="button" class="prefill-banner-clear" onclick="clearPrefill()" title="Limpiar y empezar de cero">Limpiar</button>' +
+            '</div>';
+        form.parentNode.insertBefore(banner, form);
+    }
+}
+
+function clearPrefill() {
+    var fields = ['fullName', 'age', 'group', 'region', 'email', 'motivation'];
+    fields.forEach(function (id) {
+        var input = document.getElementById(id);
+        if (input) input.value = '';
+    });
+    var banner = document.getElementById('prefill-banner');
+    if (banner) banner.remove();
+    var fn = document.getElementById('fullName');
+    if (fn) fn.focus();
+}
+
+function escapePrefillHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+}
+
+// --- Navegacion de modulos ---
+function showModule(moduleIndex) {
+    moduleIndex = parseInt(moduleIndex);
+    if (moduleIndex > 0 && (!userProfile || !userProfile.fullName)) {
+        showNotification('⚠️ Debes completar el registro primero', 'warning');
+        return;
+    }
+    // Pause and unload videos in the previously active module to free memory
+    document.querySelectorAll('.module.active video[data-src]').forEach(function (v) {
+        try { v.pause(); } catch (e) {}
+        if (v.src) { v.removeAttribute('src'); v.load(); }
+    });
+    document.querySelectorAll('.module').forEach(function (m) { m.classList.remove('active'); });
+    var target = document.getElementById('module-' + moduleIndex);
+    if (target) {
+        target.classList.add('active');
+        // Lazy-load videos in the now-active module: copy data-src to src
+        target.querySelectorAll('video[data-src]').forEach(function (v) {
+            if (!v.src) { v.src = v.getAttribute('data-src'); }
+        });
+    }
+
+    document.querySelectorAll('.nav-btn').forEach(function (btn, index) {
+        btn.classList.remove('active');
+        if (index === moduleIndex) btn.classList.add('active');
+    });
+
+    var mobileSelect = document.querySelector('.mobile-nav select');
+    if (mobileSelect) mobileSelect.value = moduleIndex;
+
+    currentModule = moduleIndex;
+
+    if (moduleIndex === COURSE_CONFIG.totalModules - 1) {
+        generateCertificate();
+    }
+    updateProgress();
+    saveProgress();
+    window.scrollTo(0, 0);
+}
+
+// --- Sistema de evaluaciones ---
+function selectOption(element, questionIndex) {
+    var question = element.closest('.question');
+    question.querySelectorAll('.option').forEach(function (opt) { opt.classList.remove('selected'); });
+    element.classList.add('selected');
+    element.setAttribute('data-selected-index', questionIndex);
+}
+
+function checkQuiz(moduleNum) {
+    var quizData = QUIZ_ANSWERS[moduleNum];
+    if (!quizData) return;
+
+    var questions = document.querySelectorAll('#module-' + moduleNum + ' .question');
+    var correctAnswers = 0;
+    var totalQuestions = quizData.length;
+
+    questions.forEach(function (question, qIndex) {
+        var selectedOption = question.querySelector('.option.selected');
+        if (selectedOption) {
+            var selectedIdx = parseInt(selectedOption.getAttribute('data-selected-index'));
+            if (selectedIdx === quizData[qIndex]) {
+                selectedOption.classList.add('correct');
+                correctAnswers++;
+            } else {
+                selectedOption.classList.add('incorrect');
+                // Mostrar la correcta
+                var options = question.querySelectorAll('.option');
+                if (options[quizData[qIndex]]) options[quizData[qIndex]].classList.add('correct');
+            }
+        }
+    });
+
+    var score = Math.round((correctAnswers / totalQuestions) * 100);
+    quizScores[moduleNum] = score;
+
+    var checkBtn = document.getElementById('checkBtn-' + moduleNum);
+    if (checkBtn) checkBtn.style.display = 'none';
+
+    if (score >= 70) {
+        var nextBtn = document.getElementById('nextBtn-' + moduleNum);
+        if (nextBtn) nextBtn.classList.remove('hidden');
+
+        // Desbloquear logros
+        COURSE_CONFIG.achievements.forEach(function (ach) {
+            if (ach.unlockOnModule === moduleNum) unlockAchievement(ach.id);
+        });
+
+        showNotification('¡Excelente! Obtuviste ' + score + '% ✅');
+        sendToGoogleSheets({
+            action: 'quiz', name: userProfile.fullName, email: userProfile.email,
+            module: moduleNum, score: score, course: COURSE_CONFIG.courseId
+        });
+    } else {
+        showNotification('Puntuación: ' + score + '%. Necesitas 70% para continuar. Revisa el contenido.', 'warning');
+        // Permitir reintentar sin recargar
+        setTimeout(function () {
+            questions.forEach(function (q) {
+                q.querySelectorAll('.option').forEach(function (opt) {
+                    opt.classList.remove('selected', 'correct', 'incorrect');
+                });
+            });
+            if (checkBtn) checkBtn.style.display = '';
+        }, 3000);
+    }
+    saveProgress();
+}
+
+function completeModule(moduleNum) {
+    moduleProgress[moduleNum] = true;
+    sendToGoogleSheets({
+        action: 'progress', name: userProfile.fullName, email: userProfile.email,
+        moduleCompleted: moduleNum, course: COURSE_CONFIG.courseId
+    });
+    var navBtns = document.querySelectorAll('.nav-btn');
+    if (navBtns[moduleNum]) navBtns[moduleNum].classList.add('completed');
+    showModule(moduleNum + 1);
+    saveProgress();
+    updateProgress();
+    updateStats();
+}
+
+// --- Progreso ---
+function updateProgress() {
+    var completed = moduleProgress.filter(Boolean).length;
+    var total = COURSE_CONFIG.contentModules;
+    var pct = Math.round((completed / total) * 100);
+    var bar = document.getElementById('progressBar');
+    var text = document.getElementById('progressText');
+    if (bar) bar.style.width = pct + '%';
+    if (text) text.textContent = pct + '%';
+
+    updateElapsedTime();
+}
+
+function updateElapsedTime() {
+    var timeEl = document.getElementById('elapsedTime');
+    if (!timeEl || !sessionStartTime) return;
+    var totalMinutes = studyTime;
+    if (totalMinutes < 60) {
+        timeEl.textContent = totalMinutes + ' min';
+    } else {
+        var hours = Math.floor(totalMinutes / 60);
+        var mins = totalMinutes % 60;
+        timeEl.textContent = hours + 'h ' + (mins < 10 ? '0' : '') + mins + 'min';
+    }
+}
+
+function updateStats() {
+    var completed = moduleProgress.filter(Boolean).length;
+    var quizzes = quizScores.filter(function (s) { return s >= 70; }).length;
+    var el1 = document.getElementById('modulesCompleted');
+    var el2 = document.getElementById('quizzesCompleted');
+    var el3 = document.getElementById('studyTime');
+    if (el1) el1.textContent = completed;
+    if (el2) el2.textContent = quizzes;
+    if (el3) el3.textContent = studyTime;
+}
+
+// --- Persistencia ---
+function saveProgress() {
+    var key = 'courseProgress_' + COURSE_CONFIG.courseId;
+    var progress = {
+        userProfile: userProfile, moduleProgress: moduleProgress,
+        quizScores: quizScores, studyTime: studyTime, reflections: reflections, photos: photos, selfAssessments: selfAssessments, personalPlans: personalPlans,
+        currentModule: currentModule, startTime: startTime.toISOString(),
+        lastSaved: new Date().toISOString(), version: '3.0'
+    };
+    localStorage.setItem(key, JSON.stringify(progress));
+    var indicator = document.getElementById('saveIndicator');
+    if (indicator) { indicator.classList.add('show'); setTimeout(function () { indicator.classList.remove('show'); }, 2000); }
+}
+
+function loadProgress() {
+    var key = 'courseProgress_' + COURSE_CONFIG.courseId;
+    var saved = localStorage.getItem(key);
+    if (saved) {
+        var p = JSON.parse(saved);
+        userProfile = p.userProfile || {};
+        moduleProgress = p.moduleProgress || new Array(COURSE_CONFIG.totalModules).fill(false);
+        quizScores = p.quizScores || [];
+        studyTime = p.studyTime || 0;
+        reflections = p.reflections || {};
+        photos = p.photos || {};
+        selfAssessments = p.selfAssessments || {};
+        personalPlans = p.personalPlans || {};
+        currentModule = p.currentModule || 0;
+        startTime = new Date(p.startTime || new Date());
+        if (userProfile.fullName) {
+            showModule(currentModule);
+            var welcomeEl = document.getElementById('welcomeName');
+            if (welcomeEl) welcomeEl.textContent = userProfile.fullName.split(' ')[0];
+            showNotification('¡Bienvenido de vuelta, ' + userProfile.fullName.split(' ')[0] + '! 👋');
+        }
+        Object.keys(reflections).forEach(function (k) {
+            var ta = document.getElementById('reflection-' + k);
+            if (ta) ta.value = reflections[k];
+        });
+        Object.keys(photos).forEach(function (k) {
+            var preview = document.getElementById('photo-preview-' + k);
+            var actions = document.getElementById('photo-actions-' + k);
+            if (preview && photos[k] && photos[k].dataUrl) {
+                preview.innerHTML = '<img src="' + photos[k].dataUrl + '" alt="Imagen guardada">';
+                if (actions) actions.classList.remove('hidden');
+            }
+        });
+        if (typeof restoreAssessmentSelections === 'function') restoreAssessmentSelections();
+        if (typeof restorePlanState === 'function') restorePlanState();
+        updateStats();
+        updateProgress();
+    }
+}
+
+// --- Logros ---
+function unlockAchievement(achievementId) {
+    var el = document.getElementById(achievementId);
+    if (el && !el.classList.contains('earned')) {
+        el.classList.add('earned');
+        showNotification('¡Logro desbloqueado: ' + el.textContent + '! 🏆');
+    }
+}
+
+// --- Notificaciones ---
+function showNotification(message, type) {
+    var n = document.createElement('div');
+    n.className = 'notification';
+    if (type === 'warning') n.style.background = '#FF9800';
+    n.textContent = message;
+    document.body.appendChild(n);
+    setTimeout(function () {
+        n.style.animation = 'slideOut 0.3s';
+        setTimeout(function () { n.remove(); }, 300);
+    }, 3000);
+}
+
+// --- Reflexiones ---
+function saveReflection(moduleNum, text) {
+    reflections[moduleNum] = text;
+    saveProgress();
+}
+
+function saveCommitment(text) {
+    localStorage.setItem('commitment_' + COURSE_CONFIG.courseId, text);
+}
+
+// --- Foto-upload (resize + persist + descargar) ---
+function handlePhotoUpload(input, photoId) {
+    var file = input.files && input.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+        showNotification('⚠️ Solo se aceptan imágenes (JPG, PNG, etc.)', 'warning');
+        return;
+    }
+    if (file.size > 10 * 1024 * 1024) {
+        showNotification('⚠️ La imagen pesa más de 10 MB. Intenta con una más pequeña.', 'warning');
+        return;
+    }
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        var img = new Image();
+        img.onload = function () {
+            var MAX = 1200;
+            var ratio = Math.min(1, MAX / Math.max(img.width, img.height));
+            var w = Math.round(img.width * ratio);
+            var h = Math.round(img.height * ratio);
+            var canvas = document.createElement('canvas');
+            canvas.width = w; canvas.height = h;
+            canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+            var dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+            var preview = document.getElementById('photo-preview-' + photoId);
+            var actions = document.getElementById('photo-actions-' + photoId);
+            if (preview) preview.innerHTML = '<img src="' + dataUrl + '" alt="Tu imagen">';
+            if (actions) actions.classList.remove('hidden');
+            photos[photoId] = {
+                dataUrl: dataUrl,
+                fileName: (file.name || 'imagen') + '.jpg',
+                savedAt: new Date().toISOString()
+            };
+            try {
+                saveProgress();
+                showNotification('✅ Imagen guardada en tu progreso');
+            } catch (err) {
+                showNotification('⚠️ La imagen es muy pesada para guardar localmente. Descárgala para no perderla.', 'warning');
+            }
+        };
+        img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
+function downloadPhoto(photoId) {
+    var photo = photos[photoId];
+    if (!photo || !photo.dataUrl) {
+        showNotification('⚠️ No hay imagen guardada para descargar', 'warning');
+        return;
+    }
+    var a = document.createElement('a');
+    a.href = photo.dataUrl;
+    a.download = photo.fileName || 'imagen.jpg';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function clearPhoto(photoId) {
+    if (!confirm('¿Seguro que quieres quitar esta imagen? Se borrará de tu progreso guardado.')) return;
+    delete photos[photoId];
+    saveProgress();
+    var preview = document.getElementById('photo-preview-' + photoId);
+    var actions = document.getElementById('photo-actions-' + photoId);
+    var input = document.getElementById('photo-input-' + photoId);
+    if (preview) preview.innerHTML = '';
+    if (actions) actions.classList.add('hidden');
+    if (input) input.value = '';
+    showNotification('Imagen quitada');
+}
+
+// --- Autodiagnóstico de competencias (self-assessment) ---
+function recordAssessmentGrade(assessmentId, competenceId, level) {
+    if (!selfAssessments[assessmentId]) selfAssessments[assessmentId] = { grades: {} };
+    selfAssessments[assessmentId].grades[competenceId] = level;
+    selfAssessments[assessmentId].updatedAt = new Date().toISOString();
+}
+
+function calculateAssessment(assessmentId) {
+    var data = selfAssessments[assessmentId];
+    var container = document.getElementById('sa-' + assessmentId);
+    if (!container) return;
+    var blocks = container.querySelectorAll('.competence-block');
+    if (!data || !data.grades || Object.keys(data.grades).length < blocks.length) {
+        showNotification('⚠️ Te falta marcar el grado en alguna competencia. Revisa que las hayas calificado todas.', 'warning');
+        return;
+    }
+    // Build entries with name + grade for ranking
+    var entries = [];
+    blocks.forEach(function (b) {
+        var compId = b.getAttribute('data-competence');
+        var compName = b.querySelector('.competence-name')?.textContent.trim() || compId;
+        var grade = data.grades[compId];
+        entries.push({ id: compId, name: compName, grade: grade });
+    });
+    entries.sort(function (a, b) { return b.grade - a.grade; });
+    var topN = Math.min(3, entries.length);
+    var bottomN = Math.min(3, entries.length);
+    var strengths = entries.slice(0, topN);
+    var opportunities = entries.slice(-bottomN).reverse();
+    // Save final result
+    data.strengths = strengths.map(function (e) { return e.id; });
+    data.opportunities = opportunities.map(function (e) { return e.id; });
+    data.completedAt = new Date().toISOString();
+    saveProgress();
+    // Save to global key for cross-course consumption
+    try {
+        localStorage.setItem('competencyProfile', JSON.stringify({
+            grades: data.grades,
+            strengths: data.strengths,
+            opportunities: data.opportunities,
+            completedAt: data.completedAt,
+            sourceCourse: COURSE_CONFIG.courseId
+        }));
+    } catch (e) { /* ignore */ }
+    // Render result
+    var avgGrade = (entries.reduce(function (s, e) { return s + e.grade; }, 0) / entries.length).toFixed(1);
+    var resultEl = document.getElementById('sa-result-' + assessmentId);
+    if (resultEl) {
+        resultEl.innerHTML =
+            '<h3>📊 Tu perfil de competencias</h3>' +
+            '<p style="text-align:center;color:#555;margin-bottom:8px;">Grado promedio: <strong style="color:#622599;font-size:1.2em;">' + avgGrade + ' / 4</strong></p>' +
+            '<div class="profile-summary">' +
+                '<div class="profile-strengths"><h4>💪 Tus fortalezas</h4><ul>' +
+                    strengths.map(function (e) { return '<li><strong>' + e.name + '</strong> — Grado ' + e.grade + '</li>'; }).join('') +
+                '</ul></div>' +
+                '<div class="profile-opportunities"><h4>🌱 Tus áreas de oportunidad</h4><ul>' +
+                    opportunities.map(function (e) { return '<li><strong>' + e.name + '</strong> — Grado ' + e.grade + '</li>'; }).join('') +
+                '</ul></div>' +
+            '</div>' +
+            '<div class="profile-recommendation">' +
+                '<strong>💡 Recomendación:</strong> tus áreas de oportunidad son las que conviene priorizar en tu <em>Plan Personal de Desarrollo</em>. Cuando tomes el <strong>Curso 4 — Tu Plan Personal</strong>, este perfil quedará pre-cargado para sugerirte por dónde empezar.' +
+            '</div>';
+        resultEl.classList.remove('hidden');
+        resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    showNotification('✅ Perfil calculado y guardado');
+}
+
+// Restore selection state if user has saved assessment grades
+function restoreAssessmentSelections() {
+    Object.keys(selfAssessments).forEach(function (aid) {
+        var grades = (selfAssessments[aid] && selfAssessments[aid].grades) || {};
+        Object.keys(grades).forEach(function (compId) {
+            var radio = document.querySelector('input[name="sa-' + aid + '-' + compId + '"][value="' + grades[compId] + '"]');
+            if (radio) radio.checked = true;
+        });
+    });
+}
+
+// --- Plan Personal Builder ---
+function getCompetencyProfile() {
+    try {
+        var raw = localStorage.getItem('competencyProfile');
+        return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+}
+
+function loadProfileIntoPlan(builderId) {
+    var profile = getCompetencyProfile();
+    var banner = document.getElementById('pb-profile-' + builderId);
+    if (!profile || !profile.opportunities) {
+        if (banner) {
+            banner.classList.add('no-profile');
+            banner.innerHTML = '<strong>ℹ️ No encontramos tu perfil del Curso 4.</strong><br>Si todavía no has hecho el autodiagnóstico, te recomendamos hacerlo primero — pero puedes construir tu plan igual marcando manualmente las competencias que quieres trabajar.';
+        }
+        return;
+    }
+    if (banner) {
+        banner.classList.remove('no-profile');
+        banner.innerHTML = '<strong>✅ Tu perfil del Curso 4 está cargado.</strong><br>Tus 3 áreas de oportunidad ya vienen pre-seleccionadas. Puedes cambiarlas si quieres.';
+    }
+    // Pre-check the 3 opportunities and show their grade
+    var grades = profile.grades || {};
+    profile.opportunities.forEach(function (compId) {
+        var checkbox = document.querySelector('.pb-comp-check[data-competence="' + compId + '"]');
+        if (checkbox) {
+            checkbox.checked = true;
+            togglePlanCompetence(builderId, compId);
+        }
+    });
+    Object.keys(grades).forEach(function (compId) {
+        var gradeEl = document.getElementById('pb-grade-' + compId);
+        if (gradeEl) {
+            gradeEl.textContent = 'Grado ' + grades[compId];
+            if (profile.opportunities.indexOf(compId) >= 0) gradeEl.classList.add('priority');
+        }
+    });
+    showNotification('✅ Perfil del Curso 3 cargado');
+}
+
+function togglePlanCompetence(builderId, compId) {
+    var fields = document.getElementById('pb-fields-' + compId);
+    var checkbox = document.querySelector('.pb-comp-check[data-competence="' + compId + '"]');
+    if (!fields) return;
+    if (checkbox && checkbox.checked) {
+        fields.classList.remove('hidden');
+        if (!personalPlans[builderId]) personalPlans[builderId] = { competences: {}, commitment: '' };
+        if (!personalPlans[builderId].competences[compId]) {
+            personalPlans[builderId].competences[compId] = { meta: '', plazo: '', recursos: '' };
+        }
+    } else {
+        fields.classList.add('hidden');
+        if (personalPlans[builderId] && personalPlans[builderId].competences) {
+            delete personalPlans[builderId].competences[compId];
+        }
+    }
+    saveProgress();
+}
+
+function savePlanField(builderId, compId, field, value) {
+    if (!personalPlans[builderId]) personalPlans[builderId] = { competences: {}, commitment: '' };
+    if (!personalPlans[builderId].competences[compId]) personalPlans[builderId].competences[compId] = {};
+    personalPlans[builderId].competences[compId][field] = value;
+    saveProgress();
+}
+
+function savePlanCommitment(builderId, value) {
+    if (!personalPlans[builderId]) personalPlans[builderId] = { competences: {}, commitment: '' };
+    personalPlans[builderId].commitment = value;
+    saveProgress();
+}
+
+function restorePlanState() {
+    Object.keys(personalPlans).forEach(function (bid) {
+        var plan = personalPlans[bid];
+        if (!plan) return;
+        // Commitment
+        var ta = document.getElementById('pb-commitment-' + bid);
+        if (ta && plan.commitment) ta.value = plan.commitment;
+        // Competences
+        Object.keys(plan.competences || {}).forEach(function (compId) {
+            var checkbox = document.querySelector('.pb-comp-check[data-competence="' + compId + '"]');
+            if (checkbox) {
+                checkbox.checked = true;
+                togglePlanCompetence(bid, compId);
+                var data = plan.competences[compId];
+                ['meta', 'plazo', 'recursos'].forEach(function (f) {
+                    var input = document.querySelector('.pb-field-' + f + '[data-competence="' + compId + '"]');
+                    if (input && data[f]) input.value = data[f];
+                });
+            }
+        });
+    });
+}
+
+function generatePlan(builderId) {
+    var plan = personalPlans[builderId];
+    if (!plan || !plan.competences || Object.keys(plan.competences).length === 0) {
+        showNotification('⚠️ Selecciona al menos 1 competencia y completa sus campos antes de generar el plan.', 'warning');
+        return;
+    }
+    // Validate fields
+    var entries = Object.keys(plan.competences);
+    var incomplete = entries.filter(function (compId) {
+        var d = plan.competences[compId];
+        return !d.meta || !d.meta.trim() || !d.plazo || !d.plazo.trim() || !d.recursos || !d.recursos.trim();
+    });
+    if (incomplete.length > 0) {
+        showNotification('⚠️ Hay campos vacíos. Completa meta, plazo y recursos en todas las competencias seleccionadas.', 'warning');
+        return;
+    }
+    // Get competence names from checkboxes
+    var nameByCompId = {};
+    document.querySelectorAll('.pb-comp-check').forEach(function (cb) {
+        nameByCompId[cb.getAttribute('data-competence')] = cb.getAttribute('data-name');
+    });
+    var profile = getCompetencyProfile();
+    var grades = (profile && profile.grades) || {};
+    var fullName = (userProfile && userProfile.fullName) || 'Adulto del Movimiento';
+    var groupName = (userProfile && userProfile.group) || '—';
+    var dateStr = new Date().toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });
+    var prioritiesHtml = entries.map(function (compId, idx) {
+        var d = plan.competences[compId];
+        var name = nameByCompId[compId] || compId;
+        var grade = grades[compId] ? ' (Grado actual: ' + grades[compId] + ')' : '';
+        return '<div class="pb-priority"><h3>' + (idx + 1) + '. ' + name + grade + '</h3>' +
+            '<dt>🎯 Meta concreta</dt><dd>' + escapeHtml(d.meta) + '</dd>' +
+            '<dt>⏰ Plazo</dt><dd>' + escapeHtml(d.plazo) + '</dd>' +
+            '<dt>📚 Recursos</dt><dd>' + escapeHtml(d.recursos) + '</dd></div>';
+    }).join('');
+    var commitmentHtml = (plan.commitment || '').trim() ?
+        '<div class="pb-final-commitment"><h3>💚 Mi compromiso</h3><p style="margin:0;white-space:pre-wrap;">' + escapeHtml(plan.commitment) + '</p></div>' : '';
+    var output = document.getElementById('pb-output-' + builderId);
+    if (output) {
+        output.innerHTML =
+            '<h2>📋 Plan Personal de Desarrollo</h2>' +
+            '<p class="pb-output-meta"><strong>' + escapeHtml(fullName) + '</strong> · Grupo ' + escapeHtml(groupName) + ' · ' + dateStr + '</p>' +
+            '<h3 style="margin-top:24px;color:#622599;">Mis prioridades de desarrollo</h3>' +
+            prioritiesHtml +
+            commitmentHtml +
+            '<button class="pb-print-btn" onclick="printPlan()">🖨️ Imprimir / Guardar como PDF</button>' +
+            '<p style="text-align:center;color:#666;font-size:0.85em;margin:14px 0 0 0;font-style:italic;">Imprime este plan, fírmalo con tu Asesor Personal y súbelo a Talento 360.</p>';
+        output.classList.remove('hidden');
+        output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    showNotification('✅ Plan generado. Puedes imprimirlo.');
+}
+
+function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+}
+
+function printPlan() {
+    document.body.classList.add('printing-plan');
+    var afterPrint = function () {
+        document.body.classList.remove('printing-plan');
+        window.removeEventListener('afterprint', afterPrint);
+    };
+    window.addEventListener('afterprint', afterPrint);
+    setTimeout(function () { window.print(); }, 50);
+    // Safety: remove class after 30s in case afterprint doesn't fire
+    setTimeout(function () { document.body.classList.remove('printing-plan'); }, 30000);
+}
+
+// --- Certificado ---
+function generateCertificate() {
+    var date = new Date();
+    var code = 'ASC-' + date.getFullYear() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase();
+
+    var el = function (id) { return document.getElementById(id); };
+    if (el('studentName')) el('studentName').textContent = userProfile.fullName || 'Adulto Scout';
+    if (el('certDate')) el('certDate').textContent = date.toLocaleDateString('es-CO');
+    if (el('totalTime')) el('totalTime').textContent = studyTime;
+    if (el('certGroup')) el('certGroup').textContent = userProfile.group || 'N/A';
+    if (el('certRegion')) el('certRegion').textContent = userProfile.region || 'Colombia';
+    if (el('certCode')) el('certCode').textContent = code;
+
+    var avg = quizScores.length > 0 ? Math.round(quizScores.reduce(function (a, b) { return a + b; }, 0) / quizScores.length) : 100;
+    if (el('finalScore')) el('finalScore').textContent = avg;
+
+    sendToGoogleSheets({
+        action: 'certificate', name: userProfile.fullName, email: userProfile.email,
+        group: userProfile.group, region: userProfile.region, certificateCode: code,
+        completionDate: date.toISOString(), score: avg, studyTime: studyTime,
+        course: COURSE_CONFIG.courseId
+    });
+
+    unlockAchievement('achievement-5');
+    var bar = document.getElementById('progressBar');
+    var text = document.getElementById('progressText');
+    if (bar) bar.style.width = '100%';
+    if (text) text.textContent = '100%';
+
+    localStorage.setItem('certificate_' + code, JSON.stringify({
+        name: userProfile.fullName, code: code, date: date.toISOString(),
+        score: avg, course: COURSE_CONFIG.courseId
+    }));
+}
+
+// --- Descargar certificado como PDF ---
+function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        || (window.innerWidth <= 768);
+}
+
+// --- Utilidades internas para el PDF ---
+function _txt(id, fallback) {
+    var el = document.getElementById(id);
+    return el ? (el.textContent || '').trim() : (fallback || '');
+}
+
+function _imgToDataURL(imgEl) {
+    return new Promise(function(resolve) {
+        if (!imgEl) { resolve(null); return; }
+        try {
+            var canvas = document.createElement('canvas');
+            var w = imgEl.naturalWidth || imgEl.width || 200;
+            var h = imgEl.naturalHeight || imgEl.height || 200;
+            canvas.width = w; canvas.height = h;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(imgEl, 0, 0, w, h);
+            resolve({ data: canvas.toDataURL('image/png'), w: w, h: h });
+        } catch (e) { resolve(null); }
+    });
+}
+
+function _wrapText(pdf, text, maxWidth) {
+    return pdf.splitTextToSize(text || '', maxWidth);
+}
+
+function downloadCertificatePDF() {
+    var certModule = document.getElementById('module-' + (COURSE_CONFIG.totalModules - 1));
+    var cert = certModule ? certModule.querySelector('.certificate') : null;
+    if (!cert) {
+        showNotification('El certificado aún no está disponible.');
+        return;
+    }
+
+    // Localizar jsPDF (viene incluido en el bundle de html2pdf)
+    var JsPDF = (window.jspdf && window.jspdf.jsPDF) || (typeof jsPDF !== 'undefined' ? jsPDF : null);
+    if (!JsPDF) {
+        showNotification('La librería de PDF no cargó. Verifica tu conexión.');
+        if (confirm('¿Deseas usar la opción de Imprimir en su lugar?')) { window.print(); }
+        return;
+    }
+
+    var code = _txt('certCode', 'certificado');
+    var filename = 'Certificado-' + code + '.pdf';
+    var mobile = isMobileDevice();
+    showNotification('Generando PDF...');
+
+    // Datos del certificado
+    var student = _txt('studentName', 'Estudiante');
+    var date = _txt('certDate', '');
+    var score = _txt('finalScore', '');
+    var group = _txt('certGroup', '');
+    var region = _txt('certRegion', '');
+    var totalTime = _txt('totalTime', '');
+    var courseName = (COURSE_CONFIG.certificateCourseName || COURSE_CONFIG.title || '').toUpperCase();
+    var courseDescription = COURSE_CONFIG.certificateDescription ||
+        'ha completado exitosamente el curso de formación de la Plataforma de Formación de Adultos ASC';
+
+    // Cargar logo ASC
+    var ascImg = cert.querySelector('img[src*="logo-asc"]');
+
+    Promise.all([_imgToDataURL(ascImg)]).then(function(logos) {
+        var logoASC = logos[0], logoValle = null;
+
+        // A4 portrait: 210 x 297 mm
+        var pdf = new JsPDF('p', 'mm', 'a4');
+        var pageW = 210, pageH = 297;
+
+        // --- Marco morado exterior ---
+        pdf.setDrawColor(98, 37, 153);
+        pdf.setLineWidth(1.2);
+        pdf.rect(8, 8, pageW - 16, pageH - 16);
+
+        // --- Esquinas decorativas amarillas ---
+        pdf.setDrawColor(255, 230, 117);
+        pdf.setLineWidth(2);
+        var cs = 20; // corner size
+        // Top-left
+        pdf.line(8, 8, 8 + cs, 8);
+        pdf.line(8, 8, 8, 8 + cs);
+        // Top-right
+        pdf.line(pageW - 8, 8, pageW - 8 - cs, 8);
+        pdf.line(pageW - 8, 8, pageW - 8, 8 + cs);
+        // Bottom-left
+        pdf.line(8, pageH - 8, 8 + cs, pageH - 8);
+        pdf.line(8, pageH - 8, 8, pageH - 8 - cs);
+        // Bottom-right
+        pdf.line(pageW - 8, pageH - 8, pageW - 8 - cs, pageH - 8);
+        pdf.line(pageW - 8, pageH - 8, pageW - 8, pageH - 8 - cs);
+
+        var y = 30; // cursor vertical
+
+        // --- Logos ---
+        var logoH = 18;
+        var logoGap = 8;
+        var logoASCw = logoASC ? logoH * (logoASC.w / logoASC.h) : 0;
+        var logoValleW = logoValle ? logoH * (logoValle.w / logoValle.h) : 0;
+        var totalLogosW = logoASCw + logoGap + logoValleW;
+        var logosX = (pageW - totalLogosW) / 2;
+        if (logoASC) pdf.addImage(logoASC.data, 'PNG', logosX, y, logoASCw, logoH);
+        if (logoValle) pdf.addImage(logoValle.data, 'PNG', logosX + logoASCw + logoGap, y, logoValleW, logoH);
+        y += logoH + 6;
+
+        // --- Encabezado institucional ---
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(10);
+        pdf.setTextColor(98, 37, 153);
+        pdf.text('ASOCIACIÓN SCOUTS DE COLOMBIA', pageW / 2, y, { align: 'center' });
+        y += 5;
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(8);
+        pdf.setTextColor(120, 120, 120);
+        pdf.text('Formación de Adultos en el Movimiento', pageW / 2, y, { align: 'center' });
+        y += 5;
+
+        // --- Línea divisoria morada ---
+        pdf.setDrawColor(98, 37, 153);
+        pdf.setLineWidth(0.6);
+        pdf.line(40, y, pageW - 40, y);
+        y += 10;
+
+        // --- Título "CERTIFICADO DE APROBACIÓN" ---
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(22);
+        pdf.setTextColor(98, 37, 153);
+        pdf.text('CERTIFICADO DE APROBACIÓN', pageW / 2, y, { align: 'center' });
+        y += 12;
+
+        // --- Banner morado con nombre del curso ---
+        pdf.setFillColor(98, 37, 153);
+        pdf.rect(20, y, pageW - 40, 14, 'F');
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(13);
+        pdf.setTextColor(255, 255, 255);
+        var courseLines = _wrapText(pdf, courseName, pageW - 50);
+        if (courseLines.length > 1) {
+            pdf.setFontSize(11);
+        }
+        pdf.text(courseLines[0], pageW / 2, y + 9, { align: 'center' });
+        y += 20;
+
+        // --- "Se otorga a" ---
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(11);
+        pdf.setTextColor(99, 99, 99);
+        pdf.text('Se otorga el presente certificado a', pageW / 2, y, { align: 'center' });
+        y += 10;
+
+        // --- Nombre del estudiante ---
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(20);
+        pdf.setTextColor(98, 37, 153);
+        pdf.text(student, pageW / 2, y, { align: 'center' });
+        // Subrayado amarillo bajo el nombre
+        var nameW = pdf.getTextWidth(student);
+        pdf.setDrawColor(255, 230, 117);
+        pdf.setLineWidth(1.5);
+        pdf.line((pageW - nameW) / 2 - 5, y + 2, (pageW + nameW) / 2 + 5, y + 2);
+        y += 12;
+
+        // --- Descripción ---
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(10);
+        pdf.setTextColor(99, 99, 99);
+        var descLines = _wrapText(pdf, courseDescription, pageW - 60);
+        for (var i = 0; i < descLines.length && i < 3; i++) {
+            pdf.text(descLines[i], pageW / 2, y, { align: 'center' });
+            y += 5;
+        }
+        y += 5;
+
+        // --- Tarjeta de detalles ---
+        var detX = 25, detW = pageW - 50, detH = 38;
+        pdf.setFillColor(249, 247, 252);
+        pdf.rect(detX, y, detW, detH, 'F');
+        pdf.setFillColor(98, 37, 153);
+        pdf.rect(detX, y, 2, detH, 'F'); // borde izquierdo morado
+
+        var colX1 = detX + 8;
+        var colX2 = detX + detW / 2 + 5;
+        var rowY = y + 8;
+        var rowGap = 7;
+
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(9);
+        pdf.setTextColor(60, 60, 60);
+
+        function _detail(label, value, x, yy) {
+            pdf.setFont('helvetica', 'bold');
+            pdf.setTextColor(98, 37, 153);
+            pdf.text(label, x, yy);
+            pdf.setFont('helvetica', 'normal');
+            pdf.setTextColor(60, 60, 60);
+            pdf.text(String(value || '-'), x + pdf.getTextWidth(label) + 2, yy);
+        }
+
+        _detail('Fecha: ', date, colX1, rowY);
+        _detail('Puntuación: ', score + '%', colX2, rowY);
+        _detail('Grupo Scout: ', group, colX1, rowY + rowGap);
+        _detail('Región: ', region, colX2, rowY + rowGap);
+        _detail('Tiempo: ', totalTime + ' min', colX1, rowY + rowGap * 2);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setTextColor(98, 37, 153);
+        pdf.text('Estado: ', colX2, rowY + rowGap * 2);
+        pdf.setTextColor(46, 125, 50);
+        pdf.text('APROBADO', colX2 + pdf.getTextWidth('Estado: ') + 2, rowY + rowGap * 2);
+
+        y += detH + 8;
+
+        // --- Código de verificación ---
+        var codeBoxH = 14;
+        pdf.setDrawColor(98, 37, 153);
+        pdf.setLineWidth(0.4);
+        pdf.setLineDashPattern([1.5, 1.5], 0);
+        pdf.setFillColor(250, 248, 253);
+        pdf.rect(50, y, pageW - 100, codeBoxH, 'FD');
+        pdf.setLineDashPattern([], 0);
+
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(7);
+        pdf.setTextColor(140, 140, 140);
+        pdf.text('CÓDIGO DE VERIFICACIÓN', pageW / 2, y + 5, { align: 'center' });
+        pdf.setFont('courier', 'bold');
+        pdf.setFontSize(11);
+        pdf.setTextColor(98, 37, 153);
+        pdf.text(code, pageW / 2, y + 11, { align: 'center' });
+        y += codeBoxH + 6;
+
+        // --- Footer ---
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(7);
+        pdf.setTextColor(150, 150, 150);
+        pdf.text('Plataforma de Formación de Adultos ASC', pageW / 2, pageH - 16, { align: 'center' });
+        pdf.setFontSize(6);
+        pdf.text('Verifica este certificado ingresando el código en la plataforma web', pageW / 2, pageH - 12, { align: 'center' });
+
+        // --- Guardar ---
+        if (mobile) {
+            var blob = pdf.output('blob');
+            var url = URL.createObjectURL(blob);
+            var link = document.createElement('a');
+            link.href = url; link.download = filename; link.target = '_blank';
+            document.body.appendChild(link); link.click();
+            setTimeout(function() { document.body.removeChild(link); URL.revokeObjectURL(url); }, 5000);
+        } else {
+            pdf.save(filename);
+        }
+        showNotification('PDF descargado: ' + filename + ' 📥');
+    }).catch(function(err) {
+        if (typeof console !== 'undefined') console.error('Error PDF:', err);
+        showNotification('Error al generar PDF. Intenta con Imprimir.', 'warning');
+        if (confirm('¿Deseas usar la opción de Imprimir?')) { window.print(); }
+    });
+}
+
+// --- Compartir ---
+function shareResults() {
+    var text = '¡He completado el curso ' + COURSE_CONFIG.title + '! 🏕️\n\n' +
+        'Certificado: ' + document.getElementById('certCode').textContent + '\n' +
+        'Puntuación: ' + document.getElementById('finalScore').textContent + '%\n\n' +
+        '#ScoutsSiempreListos #AdultosEnElMovimiento #ASC';
+    if (navigator.share) {
+        navigator.share({ title: COURSE_CONFIG.title + ' Completado', text: text });
+    } else {
+        navigator.clipboard.writeText(text);
+        showNotification('¡Texto copiado al portapapeles! 📋');
+    }
+}
+
+function restartCourse() {
+    if (confirm('¿Estás seguro de que quieres reiniciar el curso? Se perderá todo el progreso.')) {
+        localStorage.removeItem('courseProgress_' + COURSE_CONFIG.courseId);
+        localStorage.removeItem('commitment_' + COURSE_CONFIG.courseId);
+        location.reload();
+    }
+}
+
+// --- Registration mode toggle ---
+function toggleRegistrationMode(mode) {
+    var newRegBtn = document.getElementById('toggleNewReg');
+    var recoverBtn = document.getElementById('toggleRecover');
+    var recoverySection = document.getElementById('recoverySection');
+    var registrationForm = document.getElementById('registrationForm');
+
+    if (mode === 'recover') {
+        newRegBtn.classList.remove('active');
+        recoverBtn.classList.add('active');
+        recoverySection.classList.remove('hidden');
+        registrationForm.style.display = 'none';
+    } else {
+        newRegBtn.classList.add('active');
+        recoverBtn.classList.remove('active');
+        recoverySection.classList.add('hidden');
+        registrationForm.style.display = '';
+    }
+}
+
+// --- Recovery from server ---
+function recoverProgress() {
+    var emailInput = document.getElementById('recoveryEmail');
+    var email = emailInput.value.trim();
+    var msgDiv = document.getElementById('recoveryMessage');
+
+    if (!email) {
+        showNotification('⚠️ Ingresa tu correo electronico', 'warning');
+        return;
+    }
+
+    msgDiv.style.display = 'block';
+    msgDiv.innerHTML = '<p style="color: #622599; font-weight: 600;">🔄 Buscando tu avance...</p>';
+
+    var url = COURSE_CONFIG.googleScriptUrl +
+        '?action=recover&email=' + encodeURIComponent(email) +
+        '&course=' + encodeURIComponent(COURSE_CONFIG.courseId) +
+        '&token=ROVER_ASC_2025';
+
+    fetch(url, { redirect: 'follow' })
+        .then(function(response) {
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            return response.json();
+        })
+        .then(function(data) {
+
+            // El Apps Script devuelve: { success: true, data: { registration, modules, quizzes, certificates } }
+            var isFound = (data && data.found) || (data && data.success && data.data);
+
+            if (isFound) {
+                var serverData = data.data || data;
+                var reg = serverData.registration || data.userProfile || {};
+                var mods = serverData.modules || [];
+                var quizzes = serverData.quizzes || [];
+
+                // Reconstruir userProfile desde registration
+                if (reg.fullName || reg.name) {
+                    userProfile = {
+                        fullName: reg.fullName || reg.name || '',
+                        age: reg.age || '',
+                        group: reg.group || '',
+                        region: reg.region || '',
+                        email: reg.email || email,
+                        motivation: reg.motivation || '',
+                        registrationDate: reg.registrationDate || reg.timestamp || ''
+                    };
+                } else if (data.userProfile) {
+                    userProfile = data.userProfile;
+                }
+
+                // Reconstruir moduleProgress desde modules array
+                if (mods.length > 0) {
+                    moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
+                    mods.forEach(function(m) {
+                        var modNum = m.moduleCompleted || m.module;
+                        if (modNum !== undefined && modNum < moduleProgress.length) {
+                            moduleProgress[modNum] = true;
+                        }
+                    });
+                } else if (data.moduleProgress) {
+                    moduleProgress = data.moduleProgress;
+                }
+
+                // Reconstruir quizScores desde quizzes array
+                if (quizzes.length > 0) {
+                    quizScores = [];
+                    quizzes.forEach(function(q) {
+                        var modNum = q.module;
+                        var score = q.score;
+                        if (modNum !== undefined && score !== undefined) {
+                            quizScores[modNum] = parseInt(score);
+                        }
+                    });
+                } else if (data.quizScores) {
+                    quizScores = data.quizScores;
+                }
+
+                // StudyTime y reflections (si vienen directamente)
+                if (data.studyTime) studyTime = data.studyTime;
+                if (data.reflections) {
+                    reflections = data.reflections;
+                    Object.keys(reflections).forEach(function(k) {
+                        var ta = document.getElementById('reflection-' + k);
+                        if (ta) ta.value = reflections[k];
+                    });
+                }
+
+                saveProgress();
+                updateStats();
+                updateProgress();
+
+                // Determinar último módulo completado
+                var lastModule = data.currentModule || 0;
+                if (!lastModule && moduleProgress.length > 0) {
+                    for (var i = moduleProgress.length - 1; i >= 0; i--) {
+                        if (moduleProgress[i]) { lastModule = i + 1; break; }
+                    }
+                }
+
+                var firstName = userProfile.fullName ? userProfile.fullName.split(' ')[0] : 'Scout';
+                var welcomeEl = document.getElementById('welcomeName');
+                if (welcomeEl) welcomeEl.textContent = firstName;
+
+                var completedCount = moduleProgress.filter(Boolean).length;
+                showNotification('¡Avance recuperado, ' + firstName + '! ' + completedCount + ' módulos completados 🎉');
+                showModule(lastModule > 0 ? lastModule : 1);
+            } else {
+                var reason = (data && data.message) ? data.message : 'No se encontro avance asociado a este correo.';
+                msgDiv.innerHTML = '<p style="color: #FF9800; font-weight: 600;">⚠️ ' + reason + '</p>' +
+                    '<p style="color: #636363; margin-top: 10px;">Puedes registrarte como nuevo usuario.</p>' +
+                    '<button class="btn" style="margin-top: 10px;" onclick="toggleRegistrationMode(\'new\')">🆕 Registrarme</button>';
+            }
+        })
+        .catch(function(err) {
+            if (typeof console !== 'undefined') console.error('[Recovery] Error:', err);
+            msgDiv.innerHTML = '<p style="color: #f44336; font-weight: 600;">❌ Error al conectar con el servidor.</p>' +
+                '<p style="color: #636363; margin-top: 10px;">Error: ' + err.message + '</p>' +
+                '<p style="color: #636363; margin-top: 5px;">Verifica tu conexion a internet e intenta de nuevo.</p>';
+        });
+}
+
+// --- Google Sheets ---
+function sendToGoogleSheets(data) {
+    if (!COURSE_CONFIG.googleScriptUrl) return;
+    try {
+        var indicator = document.getElementById('syncIndicator');
+        if (indicator) indicator.classList.add('show');
+        var payload = Object.assign({}, data, {
+            token: 'ROVER_ASC_2025',
+            timestamp: new Date().toISOString(),
+            url: window.location.href
+        });
+
+        // Try CORS first, fall back to no-cors
+        fetch(COURSE_CONFIG.googleScriptUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function (response) {
+            if (indicator) {
+                indicator.textContent = '☁️ Guardado en la nube';
+                indicator.classList.add('show');
+                setTimeout(function () { indicator.classList.remove('show'); }, 2000);
+            }
+            return response.json().catch(function() { return {}; });
+        }).catch(function () {
+            // Fallback to no-cors mode for older Apps Script deployments
+            fetch(COURSE_CONFIG.googleScriptUrl, {
+                method: 'POST', mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(function () {
+                if (indicator) {
+                    indicator.textContent = '☁️ Sincronizado con Google Sheets';
+                    indicator.classList.add('show');
+                    setTimeout(function () { indicator.classList.remove('show'); }, 2000);
+                }
+            }).catch(function () {
+                if (indicator) {
+                    indicator.textContent = '💾 Guardado localmente';
+                    indicator.classList.add('show');
+                    setTimeout(function () { indicator.classList.remove('show'); }, 2000);
+                }
+                // Datos guardados localmente (fallback silencioso)
+            });
+        });
+    } catch (e) {
+        // Google Sheets no disponible, progreso guardado localmente
+        var indicator = document.getElementById('syncIndicator');
+        if (indicator) {
+            indicator.textContent = '💾 Guardado localmente';
+            indicator.classList.add('show');
+            setTimeout(function () { indicator.classList.remove('show'); }, 2000);
+        }
+    }
+}
+
+// --- Timers ---
+// Incrementar studyTime cada minuto y guardar progreso (solo si esta en un modulo de contenido)
+setInterval(function () {
+    if (currentModule > 0) {
+        studyTime += 1;
+        updateStats();
+        updateElapsedTime();
+    }
+    saveProgress();
+}, 60000);
+
+    </script>
+    <script src="../assets/theme-toggle.js"></script>
+</body>
+</html>

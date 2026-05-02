@@ -1,0 +1,732 @@
+{
+  "courseId": "competencias-esenciales",
+  "title": "Las 7 Competencias Esenciales",
+  "subtitle": "Curso 4 de la Ruta de Formación de Adultos en el Movimiento",
+  "description": "Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~35 min, 6 lecciones cortas.",
+  "icon": "🧠",
+  "duration": "35 minutos",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 4.</strong><br>Aquí vas a conocer en detalle las 7 competencias esenciales que la política espera de todo adulto del movimiento. Al final vas a hacer tu propio <em>autodiagnóstico</em> y salir con 2-3 prioridades concretas para tu Plan Personal — que construirás en el Curso 5."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si vienes del Curso 2 ya tienes el marco. Aquí lo aterrizamos: <strong>qué se espera de ti, en qué grados, y dónde estás tú hoy</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Entender</strong> qué es un 'grado de dominio' y cómo se mide una competencia",
+            "<strong>Reconocer</strong> los dos tipos de competencias (esenciales vs. específicas) y cuándo aplica cada uno",
+            "<strong>Conocer</strong> las 7 competencias esenciales con sus 4 grados oficiales",
+            "<strong>Hacer</strong> tu autodiagnóstico personal en cada competencia",
+            "<strong>Salir</strong> con tu perfil personal listo, que se conectará automáticamente con el Curso 5 (Plan Personal)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "Lección 1 — Cómo se mide una competencia", "description": "7 min. Grados de dominio + dos tipos de competencias (esenciales vs específicas)." },
+            { "title": "Lección 2 — Hacia TI mismo (3 competencias)", "description": "8 min. Adaptabilidad, Aprendizaje y desarrollo, Compromiso." },
+            { "title": "Lección 3 — Hacia el MOVIMIENTO (2 competencias)", "description": "6 min. Conciencia organizacional, Planeamiento estratégico." },
+            { "title": "Lección 4 — Hacia el EQUIPO (2 competencias)", "description": "6 min. Relaciones interpersonales, Trabajo en equipo." },
+            { "title": "Lección 5 — Tu autodiagnóstico", "description": "7 min. Calificas cada competencia. El sistema te da tu perfil." },
+            { "title": "Lección 6 — Tus prioridades + cierre", "description": "3 min. Lectura de tu perfil + hook al Curso 5." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Cómo se mide una competencia",
+      "emoji": "📏",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Una competencia no se 'tiene o no se tiene'. Se tiene <strong>en algún grado</strong>. La política mide cada competencia en una escala de <strong>1 a 4</strong>, donde cada grado tiene conductas observables específicas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🪜 Los 4 grados de dominio"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para cada competencia, la política define 4 grados, del más básico al de excelencia:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Grado 1 — Inicial", "description": "La conoces, la entiendes, la aplicas en lo básico de tu cargo.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Grado 2 — Desarrollado", "description": "La aplicas con autonomía y constancia. Aportas valor con ella.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Grado 3 — Consolidado", "description": "La analizas, la mejoras, la enseñas a otros.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
+            { "title": "Grado 4 — Estratégico", "description": "La proyectas, la innovas, la usas para transformar el contexto.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Importante:</strong> los grados <strong>NO son juicios morales</strong>. Estar en grado 1 no es 'malo'. Es donde estás hoy. La pregunta útil no es 'qué grado soy', sino: <em>'¿en cuáles necesito subir, y por dónde empiezo?'</em>"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "👀 Conductas observables"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada grado tiene <strong>5-7 conductas observables</strong> — comportamientos concretos que se pueden ver. No es teoría: es lo que haces o no haces en una reunión de consejo, en una jornada con los chicos, en un campamento."
+        },
+        {
+          "type": "blockquote",
+          "text": "Ejemplo: para 'Adaptabilidad al cambio' grado 1 una conducta observable es 'Acepta otras formas de hacer las cosas'. Grado 4 es 'Crea nuevos modelos y métodos en respuesta a contextos nuevos'."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧩 Dos tipos de competencias"
+        },
+        {
+          "type": "paragraph",
+          "text": "La política distingue dos familias de competencias:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Esenciales (7):</strong> aplican a <em>todos</em> los adultos del movimiento, sin importar el cargo. Son el foco de este curso.",
+            "<strong>Específicas (29):</strong> aplican según el cargo concreto. Una persona que ejerce dos cargos acumula dos sets diferentes de específicas."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 4,
+          "text": "Ejemplos de específicas y cuándo aplican"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Tesorero", "description": "Vigilancia y control financiero · Administración de recursos", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Secretario", "description": "Elaboración y gestión de documentos", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Asesor personal", "description": "Asesoría personal (sí, es competencia específica oficial)", "color": "#f3e5f5", "borderColor": "#9c27b0" },
+            { "title": "Jefe de grupo", "description": "Administración y gestión del grupo · Garante del debido proceso", "color": "#e8f5e9", "borderColor": "#4caf50" },
+            { "title": "Consejero / Vocal", "description": "Habilidades y conocimientos Scouts · Garante del debido proceso", "color": "#fce4ec", "borderColor": "#e91e63" },
+            { "title": "Intendente", "description": "Administración de bienes", "color": "#fff8e1", "borderColor": "#ffc107" }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📌 ¿Cuándo aplican las específicas?</strong><br>Cada vez que asumes un cargo formal. La política te pide identificar las específicas de ese cargo, evaluar tu nivel actual, y ponerlas en tu plan personal. Las profundizamos en cursos posteriores cuando veamos cada cargo del consejo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Cada una de las competencias esenciales cuenta con cuatro grados de dominio y estos a su vez, con las conductas observables que son propias a cada grado. En su conjunto, desarrollan el liderazgo del adulto requerido en nuestro Movimiento. — Las competencias específicas se definen como aquellas capacidades que se relacionan directamente con los aspectos técnicos y propician un desempeño superior del Adulto en su cargo o función.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 4.1 y 4.2, p. 8-9",
+          "label": "📋 Ver definición oficial de los dos tipos de competencias"
+        }
+      ],
+      "reflection": {
+        "prompt": "Pensando en una habilidad que ya manejes bien (en tu trabajo, en tu casa, donde sea), ¿cómo se 've' la diferencia entre alguien que recién la aprende (grado 1) y alguien que la enseña a otros (grado 3-4)? Pon un ejemplo concreto."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "¿Cuántos grados de dominio define la política para cada competencia?",
+            "options": ["3", "4", "5"],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuál de estas afirmaciones es correcta sobre los dos tipos de competencias?",
+            "options": [
+              "Las esenciales aplican solo a los jefes de grupo; las específicas a los demás cargos",
+              "Las esenciales aplican a todos los adultos del movimiento; las específicas se asocian a un cargo concreto",
+              "Las específicas son más importantes que las esenciales"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Una persona que ejerce DOS cargos en el grupo (por ejemplo, vocal del consejo y asesor personal):",
+            "options": [
+              "Solo aplica el set de específicas del cargo principal",
+              "Acumula los dos sets de competencias específicas, uno por cada cargo",
+              "Solo necesita aplicar las 7 esenciales"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Hacia TI mismo (3 competencias)",
+      "emoji": "🪞",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 8 minutos · 1 idea central:</strong><br>Tres de las 7 competencias dependen de cómo TÚ te plantas frente al rol: cómo respondes a los cambios, qué tan dispuesto/a estás a aprender, y qué tan asumido tienes el compromiso con el movimiento."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "1. 🌊 Adaptabilidad al cambio"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para modificar puntos de vista, prácticas y actitudes en respuesta a cambios en contextos, condiciones y situaciones."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa en un grupo scout:</strong> los grupos cambian todo el tiempo. Llegan chicos nuevos, salen otros, se reforma el consejo, hay crisis de presupuesto, cambia la plataforma de inscripciones. Si te quedas pegado/a a 'como siempre se ha hecho', el grupo se estanca."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Aceptas otras formas de hacer las cosas. Investigas el cambio para entenderlo.",
+            "<strong>Grado 2:</strong> Aplicas normas con flexibilidad cuando las circunstancias lo exigen. Eres creativo/a.",
+            "<strong>Grado 3:</strong> Anticipas cambios y ajustas actividades. Modificas procedimientos cuando el entorno lo demanda.",
+            "<strong>Grado 4:</strong> Creas nuevos modelos en respuesta a contextos nuevos. Promueves la experimentación."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "2. 📚 Aprendizaje y desarrollo personal"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para adquirir, perfeccionar o modificar sus competencias, de manera voluntaria y permanente, como respuesta a necesidades individuales y organizacionales."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa:</strong> el adulto del movimiento es alguien que <em>nunca termina de formarse</em>. No por exigencia, por convicción. Esta competencia es la que te trajo a este curso."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Lees la información que se te entrega. Asistes a los cursos inherentes a tu cargo. Aprendes de los demás.",
+            "<strong>Grado 2:</strong> Buscas activamente nuevos conocimientos. Formulas tu Plan Personal. Asistes por iniciativa propia a actualizaciones.",
+            "<strong>Grado 3:</strong> Compartes tus aprendizajes (escribes, das talleres, orientas a otros). Aplicas lo nuevo al trabajo.",
+            "<strong>Grado 4:</strong> Sistematizas conocimiento de varias fuentes. Creas ambientes que nutren la experimentación y el cuestionamiento."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "3. 💚 Compromiso"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para hacer propios el propósito, los principios y valores del movimiento; y asumir voluntariamente responsabilidades y apoyar las decisiones para lograr los objetivos."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa:</strong> el compromiso no es 'asistir a las reuniones'. Es haber interiorizado para qué existe el movimiento, y dejar que esa convicción guíe lo que haces todos los días — incluso cuando nadie te ve."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Conoces las metas del movimiento y entiendes cómo tu cargo aporta a la misión.",
+            "<strong>Grado 2:</strong> Asumes como propios los valores y la misión. Cumples y exiges cumplimiento.",
+            "<strong>Grado 3:</strong> Aplicas todos tus recursos al cumplimiento de los objetivos. Dedicas tiempo más allá de lo requerido.",
+            "<strong>Grado 4:</strong> Implementas acciones para promover el compromiso de otros. Reconoces el esfuerzo y motivas al equipo."
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Adaptabilidad al cambio: capacidad para modificar puntos de vista, prácticas y actitudes en respuesta a cambios. — Aprendizaje y desarrollo personal: capacidad para adquirir, perfeccionar o modificar sus competencias, de manera voluntaria y permanente. — Compromiso: capacidad para hacer propios el propósito, los principios y valores expresados en la Misión del Movimiento Scout; y adicionalmente, asumir voluntariamente responsabilidades.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 4.1 'Competencias esenciales', p. 8 — Diccionario de Competencias 1.1 a 1.3",
+          "label": "📋 Ver definiciones oficiales de las 3 competencias"
+        }
+      ],
+      "reflection": {
+        "prompt": "De estas 3 competencias (Adaptabilidad, Aprendizaje, Compromiso), ¿cuál identificas como tu fortaleza hoy y cuál te queda más por desarrollar? Da un ejemplo concreto de un momento reciente."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "El compromiso, según la política, NO se mide por…",
+            "options": [
+              "Haber interiorizado los valores y la misión",
+              "Asumir voluntariamente responsabilidades",
+              "El número de horas semanales que dedicas al grupo"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "La competencia 'Aprendizaje y desarrollo personal' se evidencia mejor en alguien que…",
+            "options": [
+              "Tiene muchos años en el movimiento",
+              "Busca activamente nuevos conocimientos y formula su plan personal de desarrollo",
+              "Participa en todos los campamentos"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Hacia el MOVIMIENTO (2 competencias)",
+      "emoji": "🧭",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Dos competencias te conectan con el movimiento como sistema: entender cómo funciona la organización por dentro, y poder pensarla a futuro."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "4. 🏛️ Conciencia organizacional"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para comprender el funcionamiento, estructura y cultura de la organización, e interpretar y prever la forma en que el entorno, los individuos y los acontecimientos, la pueden afectar."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa:</strong> el grupo scout no funciona en el vacío. Está dentro de una región, una asociación nacional, una región interamericana, un movimiento mundial. Entender cómo se conecta todo eso te permite no chocar con la institucionalidad y aprovecharla a favor del grupo."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Eres responsable de tus acciones. Aplicas los estándares del cargo. Usas los canales de comunicación correctos.",
+            "<strong>Grado 2:</strong> Conoces cómo opera la organización en todos sus niveles. Conoces las políticas y reglamentos.",
+            "<strong>Grado 3:</strong> Comprendes y promueves los aspectos institucionales. Entiendes el impacto del entorno externo.",
+            "<strong>Grado 4:</strong> Promueves la unidad y propósito común dentro de la asociación. Fortaleces la dimensión internacional."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5. 🗺️ Planeamiento estratégico"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para establecer objetivos y planes estratégicos, con una visión a largo plazo, como resultado del análisis de escenarios futuros, tendencias generales, y la integración de conocimientos y experiencias."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa:</strong> sin planeamiento, el grupo vive de campamento en campamento sin hilo conductor. Esta competencia es la que separa un grupo que reacciona del que avanza. Y aplica a todo: planear el año, planear una kermesse, planear cómo crecer en un barrio."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Conoces tus responsabilidades. Resuelves lo cotidiano. Administras tus recursos.",
+            "<strong>Grado 2:</strong> Identificas objetivos y estableces planes de acción y seguimiento. Generas datos para medir cumplimiento.",
+            "<strong>Grado 3:</strong> Te involucras en el seguimiento estratégico. Verificas alineación con los ejes de la organización.",
+            "<strong>Grado 4:</strong> Diagnosticas resultados y tomas medidas. Propones mejoras al plan estratégico del nivel."
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Conciencia organizacional: capacidad para comprender el funcionamiento, estructura y cultura de la organización, e interpretar y prever la forma en que el entorno, los individuos y los acontecimientos, la pueden afectar. — Planeamiento estratégico: capacidad para establecer objetivos y planes estratégicos, con una visión a largo plazo, como resultado del análisis de escenarios futuros, tendencias generales y la integración de conocimientos y experiencias.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 4.1 — Diccionario de Competencias 1.4 y 1.5",
+          "label": "📋 Ver definiciones oficiales"
+        }
+      ],
+      "reflection": {
+        "prompt": "Para tu grupo: ¿cómo se vería un consejo con grado 1 vs. grado 4 de Planeamiento estratégico? ¿En cuál estás tú hoy y qué te falta para subir un grado?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "La 'Conciencia organizacional' implica principalmente…",
+            "options": [
+              "Conocer a todos los miembros del consejo de grupo personalmente",
+              "Comprender la estructura, cultura y políticas de la asociación, y saber actuar en consecuencia",
+              "Tener muchos años en el movimiento"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un consejero que dice 'no entiendo por qué hay políticas nacionales si cada grupo es diferente'…",
+            "options": [
+              "Está mostrando alta conciencia organizacional",
+              "Está mostrando un nivel bajo de conciencia organizacional — no comprende la coherencia entre niveles",
+              "Tiene razón: cada grupo debe operar autónomamente sin políticas"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Hacia el EQUIPO (2 competencias)",
+      "emoji": "🤝",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Las dos competencias que se viven cada reunión del consejo, cada actividad con los chicos, cada decisión grupal. Si fallas aquí, todo lo demás se cae."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "6. 🤲 Relaciones interpersonales"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para ser empático, solidario y sensible hacia los demás; respetar ideas, creencias o prácticas y convivir e interactuar armoniosamente por medio del diálogo."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa:</strong> el escultismo es relación. Si no sabes escuchar, dialogar, respetar, mediar — el grupo se rompe sin importar cuán buen tesorero o secretario seas."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Tratas a los demás con respeto. Escuchas con empatía. Te expresas con cortesía.",
+            "<strong>Grado 2:</strong> Eres ejemplo de cortesía. Mantienes la confidencialidad. Admites errores propios.",
+            "<strong>Grado 3:</strong> Tienes conciencia de tu impacto en otros. Mediar en malentendidos. Modificas tu perspectiva si lo amerita.",
+            "<strong>Grado 4:</strong> Evalúas tus relaciones y las fortaleces. Buscas retroalimentación sincera. Desafías prejuicios sin atacar a las personas."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "7. 👥 Trabajo en equipo"
+        },
+        {
+          "type": "blockquote",
+          "text": "Capacidad para trabajar de manera efectiva con los demás, dentro y fuera de las líneas formales de autoridad, para lograr los objetivos organizacionales."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Por qué importa:</strong> nadie sostiene un grupo solo. Y como dijimos en el Curso 1, somos superhéroes con poderes complementarios. Trabajo en equipo es la competencia que hace que esos poderes se sumen en vez de chocar."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Grado 1:</strong> Cumples tus tareas. Apoyas al equipo. Compartes información relevante.",
+            "<strong>Grado 2:</strong> Promueves el desarrollo del equipo. Asumes liderazgo cuando se requiere. Integras a nuevos miembros.",
+            "<strong>Grado 3:</strong> Desarrollas un equipo efectivo. Construyes visión compartida. Anticipas conflictos.",
+            "<strong>Grado 4:</strong> Evalúas resultados del equipo y los mejoras. Permites la construcción colectiva. Mides tu propia contribución objetivamente."
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Relaciones interpersonales: capacidad para ser empático, solidario y sensible hacia los demás; respetar ideas, creencias o prácticas y convivir e interactuar armoniosamente por medio del diálogo. — Trabajo en equipo: capacidad para trabajar de manera efectiva con los demás, dentro y fuera de las líneas formales de autoridad, para lograr los objetivos organizacionales.",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 4.1 — Diccionario de Competencias 1.6 y 1.7",
+          "label": "📋 Ver definiciones oficiales"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en una situación reciente de conflicto en tu consejo o equipo. ¿Cómo se manejó? ¿Qué grado de las dos competencias (Relaciones interpersonales / Trabajo en equipo) estaba presente? ¿Qué hubieras hecho distinto?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "La diferencia entre 'Relaciones interpersonales' y 'Trabajo en equipo' es que…",
+            "options": [
+              "La primera se enfoca en cómo te relacionas con cada persona; la segunda en cómo se articula el grupo para lograr objetivos",
+              "Son sinónimos en la política",
+              "La primera aplica solo a consejeros y la segunda solo a dirigentes"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Un grado 4 en Trabajo en equipo se evidencia cuando alguien…",
+            "options": [
+              "Cumple con todas sus tareas individuales",
+              "Evalúa los resultados del equipo y propone mejoras, permitiendo que otros construyan la visión",
+              "Asume todos los liderazgos posibles"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar al autodiagnóstico →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Tu autodiagnóstico",
+      "emoji": "🔍",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Es tu turno. Vas a calificarte honestamente en cada una de las 7 competencias, leyendo las conductas de cada grado y eligiendo la que más se parece a ti hoy."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📝 Cómo hacerlo"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Para cada competencia, lee las 4 opciones de grado",
+            "Elige la que mejor describa <strong>cómo eres tú hoy</strong> en tu rol actual del grupo (no cómo te gustaría ser)",
+            "No hay 'respuesta correcta'. La honestidad da resultados útiles; mentirte te deja igual",
+            "Cuando termines las 7, dale al botón <em>'📊 Calcular mi perfil'</em>"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔒 Tu autodiagnóstico es privado.</strong> Se guarda en tu navegador. Nadie más lo ve, ni tu jefe de grupo ni tu asesor — a menos que tú decidas compartirlo. Es solo para tu desarrollo personal."
+        },
+        {
+          "type": "self-assessment",
+          "assessmentId": "competencias-esenciales",
+          "intro": "Lee con calma cada competencia y sus 4 grados. Marca el grado que mejor describe tu nivel actual hoy.",
+          "competences": [
+            {
+              "id": "adaptabilidad",
+              "name": "Adaptabilidad al cambio",
+              "definition": "Capacidad para modificar puntos de vista, prácticas y actitudes en respuesta a cambios.",
+              "grades": [
+                { "level": 1, "criterion": "Acepto otras formas de hacer las cosas e investigo los cambios para entenderlos." },
+                { "level": 2, "criterion": "Aplico normas con flexibilidad cuando las circunstancias lo exigen y soy creativo/a en mis funciones." },
+                { "level": 3, "criterion": "Anticipo cambios y ajusto mis actividades. Modifico procedimientos cuando el entorno lo demanda." },
+                { "level": 4, "criterion": "Creo nuevos modelos en respuesta a contextos nuevos. Promuevo la experimentación e innovación." }
+              ]
+            },
+            {
+              "id": "aprendizaje",
+              "name": "Aprendizaje y desarrollo personal",
+              "definition": "Capacidad para adquirir, perfeccionar o modificar competencias de manera voluntaria y permanente.",
+              "grades": [
+                { "level": 1, "criterion": "Leo lo que me entregan, asisto a los cursos del cargo, aprendo de los demás." },
+                { "level": 2, "criterion": "Busco activamente nuevos conocimientos. Tengo formulado mi Plan Personal de Desarrollo." },
+                { "level": 3, "criterion": "Comparto mis aprendizajes con otros (escribo, doy talleres, oriento). Aplico lo nuevo a mi trabajo." },
+                { "level": 4, "criterion": "Sistematizo conocimiento de varias fuentes y creo ambientes que nutren la experimentación y el cuestionamiento." }
+              ]
+            },
+            {
+              "id": "compromiso",
+              "name": "Compromiso",
+              "definition": "Capacidad para hacer propios el propósito, los principios y valores del movimiento; y asumir voluntariamente responsabilidades.",
+              "grades": [
+                { "level": 1, "criterion": "Conozco las metas del movimiento y entiendo cómo mi cargo aporta a la misión." },
+                { "level": 2, "criterion": "Asumo como propios los valores y la misión. Cumplo y exijo cumplimiento de procesos y normas." },
+                { "level": 3, "criterion": "Aplico todos mis recursos al cumplimiento de los objetivos. Dedico tiempo más allá de lo estrictamente requerido." },
+                { "level": 4, "criterion": "Implemento acciones para promover el compromiso de otros. Reconozco esfuerzos y motivo al equipo." }
+              ]
+            },
+            {
+              "id": "conciencia-organizacional",
+              "name": "Conciencia organizacional",
+              "definition": "Capacidad para comprender el funcionamiento, estructura y cultura de la organización.",
+              "grades": [
+                { "level": 1, "criterion": "Soy responsable de mis acciones. Aplico estándares del cargo. Uso los canales de comunicación correctos." },
+                { "level": 2, "criterion": "Conozco cómo opera la organización en todos sus niveles. Conozco las políticas y reglamentos relevantes." },
+                { "level": 3, "criterion": "Comprendo y promuevo los aspectos institucionales. Entiendo el impacto del entorno externo." },
+                { "level": 4, "criterion": "Promuevo la unidad y propósito común dentro de la asociación. Fortalezco la dimensión internacional del movimiento." }
+              ]
+            },
+            {
+              "id": "planeamiento",
+              "name": "Planeamiento estratégico",
+              "definition": "Capacidad para establecer objetivos y planes estratégicos con visión a largo plazo.",
+              "grades": [
+                { "level": 1, "criterion": "Conozco mis responsabilidades. Resuelvo lo cotidiano. Administro mis recursos." },
+                { "level": 2, "criterion": "Identifico objetivos y establezco planes de acción y seguimiento. Genero datos para medir cumplimiento." },
+                { "level": 3, "criterion": "Me involucro en el seguimiento estratégico. Verifico alineación con los ejes de la organización." },
+                { "level": 4, "criterion": "Diagnostico resultados y tomo medidas. Propongo mejoras al plan estratégico del nivel." }
+              ]
+            },
+            {
+              "id": "relaciones",
+              "name": "Relaciones interpersonales",
+              "definition": "Capacidad para ser empático, solidario y sensible; respetar y convivir armoniosamente por medio del diálogo.",
+              "grades": [
+                { "level": 1, "criterion": "Trato a los demás con respeto. Escucho con empatía. Me expreso con cortesía." },
+                { "level": 2, "criterion": "Soy ejemplo de cortesía y confianza. Mantengo confidencialidad. Admito errores propios." },
+                { "level": 3, "criterion": "Tengo conciencia de mi impacto en otros. Medio en malentendidos. Modifico mi perspectiva si lo amerita." },
+                { "level": 4, "criterion": "Evalúo mis relaciones y las fortalezco. Busco retroalimentación sincera. Desafío prejuicios sin atacar a las personas." }
+              ]
+            },
+            {
+              "id": "trabajo-equipo",
+              "name": "Trabajo en equipo",
+              "definition": "Capacidad para trabajar de manera efectiva con los demás, dentro y fuera de las líneas formales de autoridad.",
+              "grades": [
+                { "level": 1, "criterion": "Cumplo mis tareas. Apoyo al equipo. Comparto información relevante con los demás." },
+                { "level": 2, "criterion": "Promuevo el desarrollo del equipo. Asumo liderazgo cuando se requiere. Integro a nuevos miembros." },
+                { "level": 3, "criterion": "Desarrollo un equipo efectivo. Construyo visión compartida. Anticipo conflictos para prevenirlos." },
+                { "level": 4, "criterion": "Evalúo resultados del equipo y los mejoro. Permito construcción colectiva. Mido mi propia contribución objetivamente." }
+              ]
+            }
+          ]
+        }
+      ],
+      "reflection": {
+        "prompt": "Después de calificarte: ¿qué resultado te sorprendió? ¿Hay alguna competencia donde te calificaste más alto o más bajo de lo que esperabas?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "El autodiagnóstico tiene valor real solo si…",
+            "options": [
+              "Te calificas alto en todas las competencias",
+              "Eres honesto/a contigo mismo/a, sin tratar de quedar bien ni mal",
+              "Te calificas bajo para verte humilde"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Tu autodiagnóstico…",
+            "options": [
+              "Se publica automáticamente al jefe de grupo",
+              "Se guarda solo en tu navegador y queda disponible para conectar con tu Plan Personal en el Curso 5",
+              "Es público en la plataforma para todos los adultos"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a tus prioridades →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Tus prioridades + cierre",
+      "emoji": "🎯",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 3 minutos · 1 idea central:</strong><br>Tu perfil ya está calculado. Tus áreas de oportunidad son tus prioridades naturales para tu Plan Personal — el siguiente curso."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Cómo leer tu perfil"
+        },
+        {
+          "type": "paragraph",
+          "text": "En la lección anterior viste tu resultado, con tus <strong>3 fortalezas</strong> y tus <strong>3 áreas de oportunidad</strong>. Te las explico con más detalle:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "💪 Fortalezas (grados altos)", "description": "Las competencias en las que estás en tu mejor versión. No las descuides — manténlas y úsalas para apoyar al equipo.", "color": "#e8f5e9", "borderColor": "#4caf50" },
+            { "title": "🌱 Áreas de oportunidad (grados bajos)", "description": "Donde tienes más por crecer. Aquí es donde tu Plan Personal va a poner el foco.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "🎯 Tu prioridad real", "description": "Las áreas de oportunidad — pero no todas a la vez. Idealmente trabaja 2-3 en un ciclo de 6-12 meses.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Importante:</strong> 'área de oportunidad' no significa 'estoy mal'. Significa <em>'aquí hay espacio para crecer'</em>. Estar en grado 1 o 2 en algo no es fracaso — es un punto de partida claro."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔮 Lo que viene en el Curso 5"
+        },
+        {
+          "type": "paragraph",
+          "text": "En el <strong>Curso 5 — Tu Plan Personal de Desarrollo</strong> — el último de la ruta — vas a:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Ver tu perfil <strong>pre-cargado</strong> (no tendrás que volver a calificarte)",
+            "Aprender a redactar un <strong>Acuerdo Mutuo</strong> oficial",
+            "Conocer cómo <strong>encontrar y trabajar con tu Asesor Personal</strong>",
+            "Subir tu plan a <strong>Talento 360</strong>, la plataforma oficial"
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "Hoy supiste qué se espera de ti, hiciste tu autodiagnóstico, y ya tienes claras tus prioridades. Eso es enorme. Continuar es lo natural."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🏁 Cierre del Curso 4"
+        },
+        {
+          "type": "paragraph",
+          "text": "Has terminado los 4 cursos conceptuales de la ruta (Bienvenida, Política, Ciclo y Competencias). Lo que sigue es <strong>aterrizaje práctico puro</strong>: el Curso 5 te lleva a construir tu Plan Personal real, listo para firmar con tu asesor."
+        }
+      ],
+      "reflection": {
+        "prompt": "Mirando tus 3 áreas de oportunidad: ¿cuál atacarías primero y por qué? Pista: no siempre es la más débil — a veces conviene la que más impacto tiene en tu cargo actual."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del curso",
+        "questions": [
+          {
+            "text": "Tus 'áreas de oportunidad' en el autodiagnóstico son…",
+            "options": [
+              "Las competencias en las que fallaste",
+              "Las competencias con grado más bajo, donde tienes más espacio para crecer",
+              "Las competencias que debes ignorar"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "En el Curso 5 (Plan Personal), ¿qué pasa con tu autodiagnóstico de hoy?",
+            "options": [
+              "Tienes que rehacerlo desde cero",
+              "Queda pre-cargado, así arrancas con tus prioridades ya identificadas",
+              "Solo lo verá tu jefe de grupo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuántas áreas de oportunidad conviene trabajar en un ciclo de 6-12 meses?",
+            "options": [
+              "Las 7 a la vez para avanzar rápido",
+              "Idealmente 2-3 — concentras esfuerzo y los resultados son sostenibles",
+              "Solo 1, sin importar cuántas tengas"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    { "id": "achievement-1", "name": "Maestro de los Grados", "emoji": "📏", "unlockOnModule": 2 },
+    { "id": "achievement-2", "name": "Reconoce el YO", "emoji": "🪞", "unlockOnModule": 3 },
+    { "id": "achievement-3", "name": "Comprende el SISTEMA", "emoji": "🧭", "unlockOnModule": 4 },
+    { "id": "achievement-4", "name": "Domina el EQUIPO", "emoji": "🤝", "unlockOnModule": 5 },
+    { "id": "achievement-5", "name": "Curso 4 Completado", "emoji": "🏆", "unlockOnModule": -1 }
+  ],
+  "certificate": {
+    "courseName": "LAS 7 COMPETENCIAS ESENCIALES",
+    "description": "ha completado el Curso 4 de la Ruta de Formación de Adultos en el Movimiento, comprendiendo las 7 competencias esenciales y los 4 grados de dominio definidos por la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia, y realizando su autodiagnóstico personal"
+  }
+}

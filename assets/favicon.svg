@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo: morado institucional plataforma rover -->
+  <rect width="64" height="64" rx="14" fill="#622599"/>
+
+  <!-- Flor de lis (simbolo scout - Asociacion Scouts de Colombia) -->
+  <g fill="#ffffff" transform="translate(32, 26)">
+    <!-- Petalo central (vertical) -->
+    <path d="M0,-20 C5,-14 5,-6 0,6 C-5,-6 -5,-14 0,-20Z"/>
+    <!-- Petalo izquierdo -->
+    <path d="M-2,2 C-10,-10 -20,-12 -18,-2 C-16,4 -8,6 -2,4Z"/>
+    <!-- Petalo derecho -->
+    <path d="M2,2 C10,-10 20,-12 18,-2 C16,4 8,6 2,4Z"/>
+    <!-- Barra horizontal -->
+    <rect x="-10" y="7" width="20" height="3" rx="1.5"/>
+    <!-- Base -->
+    <rect x="-13" y="12" width="26" height="3" rx="1.5"/>
+  </g>
+
+  <!-- Franja verde y dorada: identidad Scouts del Valle -->
+  <rect x="6" y="50" width="24" height="6" rx="3" fill="#2E7D32"/>
+  <rect x="34" y="50" width="24" height="6" rx="3" fill="#FFC107"/>
+</svg>

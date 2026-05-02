@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Plataforma de Formacion de Adultos ASC</title>
+
+    <!-- Dashboard privado: no indexar en buscadores ni exponer en redes sociales -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="Panel privado de administracion de la Plataforma de Formacion de Adultos ASC.">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/logo-asc.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+/* ============================================
+   DASHBOARD ADMIN - PLATAFORMA DE FORMACION DE ADULTOS ASC
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f2f5f7;
+    min-height: 100vh;
+    color: #2c2927;
+    line-height: 1.6;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background: #622599;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.top-bar-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar .logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar .logos img {
+    height: 45px;
+}
+
+.top-bar .logos .separator {
+    width: 1px;
+    height: 35px;
+    background: rgba(255,255,255,0.3);
+}
+
+.top-bar-title {
+    color: #ffffff;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.top-bar-actions .btn-disconnect {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #ffe675;
+    padding: 6px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+.top-bar-actions .btn-disconnect:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #ffe675;
+}
+
+.connection-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #666;
+    display: inline-block;
+}
+
+.connection-indicator.connected { background: #4caf50; }
+.connection-indicator.error { background: #f44336; }
+.connection-indicator.loading { background: #ffe675; animation: pulse 1s infinite; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* --- Container --- */
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Setup Screen --- */
+.setup-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.setup-card {
+    background: #fff;
+    padding: 50px 40px;
+    max-width: 560px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-top: 4px solid #622599;
+    text-align: center;
+}
+
+.setup-card h2 {
+    color: #622599;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.setup-card p {
+    color: #636363;
+    font-size: 0.95em;
+    margin-bottom: 30px;
+}
+
+.setup-card .icon-lock {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #622599;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #2c2927;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #622599;
+}
+
+.btn-primary {
+    background: #622599;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+.btn-primary:hover { background: #4e1d7a; }
+.btn-primary:disabled { background: #aaa; cursor: not-allowed; }
+
+.setup-error {
+    color: #d32f2f;
+    font-size: 0.85em;
+    margin-top: 12px;
+    display: none;
+}
+
+/* --- Dashboard --- */
+.dashboard { display: none; }
+.dashboard.active { display: block; }
+
+/* --- Dashboard Header --- */
+.dash-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.dash-header h1 {
+    color: #622599;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.dash-header .meta {
+    font-size: 0.85em;
+    color: #888;
+}
+
+.dash-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #622599;
+    border: 2px solid #622599;
+    padding: 8px 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #622599;
+    color: #fff;
+}
+
+.btn-accent {
+    background: #ffe675;
+    color: #2c2927;
+    border: none;
+    padding: 10px 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+.btn-accent:hover { background: #ffd93d; }
+
+/* --- Filters Bar --- */
+.filters-bar {
+    background: #fff;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.filter-group label {
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-group select,
+.filter-group input[type="date"] {
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-group select:focus,
+.filter-group input[type="date"]:focus {
+    outline: none;
+    border-color: #622599;
+}
+
+.btn-filter-clear {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #888;
+    padding: 8px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    align-self: flex-end;
+    transition: all 0.2s;
+}
+
+.btn-filter-clear:hover {
+    border-color: #622599;
+    color: #622599;
+}
+
+/* --- Summary Cards --- */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background: #fff;
+    padding: 24px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-top: 4px solid #622599;
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card:nth-child(2) { border-top-color: #00afef; }
+.summary-card:nth-child(3) { border-top-color: #ffe675; }
+.summary-card:nth-child(4) { border-top-color: #4caf50; }
+
+.summary-card .card-icon {
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+.summary-card .card-value {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #2c2927;
+    line-height: 1.1;
+}
+
+.summary-card .card-label {
+    font-size: 0.85em;
+    color: #888;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.summary-card .card-bg {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 5em;
+    opacity: 0.06;
+}
+
+/* --- Section --- */
+.section {
+    background: #fff;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 2px solid #f2f5f7;
+}
+
+.section-header h2 {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #622599;
+}
+
+.section-body {
+    padding: 20px;
+}
+
+/* --- Bar Chart (CSS) --- */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.chart-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chart-label {
+    width: 200px;
+    font-size: 0.82em;
+    font-weight: 600;
+    color: #2c2927;
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chart-bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f2f5f7;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #622599, #8e44ad);
+    transition: width 0.8s ease;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    min-width: 0;
+}
+
+.chart-bar-fill span {
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.chart-bar-value {
+    width: 50px;
+    font-size: 0.85em;
+    font-weight: 700;
+    color: #622599;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+/* --- Data Table --- */
+.table-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    padding: 8px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    min-width: 240px;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #622599;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85em;
+}
+
+table thead {
+    background: #622599;
+    color: #fff;
+}
+
+table thead th {
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+}
+
+table thead th:hover {
+    background: #4e1d7a;
+}
+
+table thead th .sort-arrow {
+    margin-left: 6px;
+    font-size: 0.9em;
+    opacity: 0.5;
+}
+
+table thead th .sort-arrow.active {
+    opacity: 1;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s;
+}
+
+table tbody tr:hover {
+    background: #f9f7fc;
+}
+
+table tbody td {
+    padding: 10px 14px;
+    color: #2c2927;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.badge-completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-progress {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #aaa;
+    font-size: 0.95em;
+}
+
+.no-data .no-data-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* --- Loading Overlay --- */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.85);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #e0e0e0;
+    border-top-color: #622599;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-weight: 600;
+    color: #622599;
+    font-size: 0.95em;
+}
+
+/* --- Toast Notification --- */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #2c2927;
+    color: #fff;
+    padding: 14px 22px;
+    font-size: 0.9em;
+    font-weight: 500;
+    z-index: 300;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast.error { border-left: 4px solid #f44336; }
+.toast.success { border-left: 4px solid #4caf50; }
+.toast.info { border-left: 4px solid #00afef; }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-inner {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .top-bar-title { display: none; }
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    .chart-label {
+        width: 100px;
+        font-size: 0.75em;
+    }
+    .filters-bar {
+        flex-direction: column;
+    }
+    .filter-group {
+        min-width: 100%;
+    }
+    .dash-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .table-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-input {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 12px; }
+    .summary-card { padding: 18px 14px; }
+    .summary-card .card-value { font-size: 1.8em; }
+    .section-body { padding: 14px; }
+}
+
+/* --- Print Styles --- */
+@media print {
+    .top-bar {
+        position: static;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .top-bar-actions,
+    .filters-bar,
+    .dash-actions,
+    .btn-disconnect,
+    .table-controls .btn-accent,
+    .setup-screen {
+        display: none !important;
+    }
+    .section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-bottom: 16px;
+    }
+    .summary-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .summary-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    table thead {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .chart-bar-fill {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .loading-overlay, .toast { display: none !important; }
+    body { background: #fff; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="logos">
+            <img src="assets/logo-asc.png" alt="ASC">
+        </div>
+        <span class="top-bar-title">Panel de Administracion</span>
+        <div class="top-bar-actions" id="topBarActions" style="display:none;">
+            <span class="connection-indicator" id="connIndicator"></span>
+            <button class="btn-disconnect" onclick="disconnect()">Desconectar</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ LOADING OVERLAY ============ -->
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <div class="loading-text">Cargando datos...</div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<!-- ============ SETUP SCREEN ============ -->
+<div class="setup-screen" id="setupScreen">
+    <div class="setup-card">
+        <div class="icon-lock">&#128274;</div>
+        <h2>Conectar al Panel</h2>
+        <p>Ingresa la URL de tu Google Apps Script para acceder al panel de administracion.</p>
+        <div class="input-group">
+            <label for="gasUrl">URL de Google Apps Script</label>
+            <input type="url" id="gasUrl" placeholder="https://script.google.com/macros/s/.../exec" autocomplete="off">
+        </div>
+        <button class="btn-primary" id="btnConnect" onclick="connect()">Conectar</button>
+        <div class="setup-error" id="setupError"></div>
+    </div>
+</div>
+
+<!-- ============ DASHBOARD ============ -->
+<div class="dashboard" id="dashboard">
+    <div class="container">
+
+        <!-- Dashboard Header -->
+        <div class="dash-header">
+            <div>
+                <h1>Panel de Administracion</h1>
+                <div class="meta">Ultima actualizacion: <span id="lastUpdate">--</span> | Proxima en: <span id="nextRefresh">5:00</span></div>
+            </div>
+            <div class="dash-actions">
+                <button class="btn-secondary" onclick="fetchData()">&#8635; Actualizar</button>
+                <button class="btn-accent" onclick="exportCSV()">&#11123; Exportar CSV</button>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-bar">
+            <div class="filter-group">
+                <label>Region</label>
+                <select id="filterRegion" onchange="applyFilters()">
+                    <option value="">Todas las regiones</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Curso</label>
+                <select id="filterCourse" onchange="applyFilters()">
+                    <option value="">Todos los cursos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Fecha desde</label>
+                <input type="date" id="filterDateFrom" onchange="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Fecha hasta</label>
+                <input type="date" id="filterDateTo" onchange="applyFilters()">
+            </div>
+            <button class="btn-filter-clear" onclick="clearFilters()">Limpiar filtros</button>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="card-icon">&#128100;</div>
+                <div class="card-value" id="totalRovers">0</div>
+                <div class="card-label">Total de Adultos Registrados</div>
+                <div class="card-bg">&#128100;</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">&#127891;</div>
+                <div class="card-value" id="totalCerts">0</div>
+                <div class="card-label">Cursos Completados</div>
+                <div class="card-bg">&#127891;</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">&#128200;</div>
+                <div class="card-value" id="completionRate">0%</div>
+                <div class="card-label">Tasa de Completacion</div>
+                <div class="card-bg">&#128200;</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">&#11088;</div>
+                <div class="card-value" id="avgScore">0</div>
+                <div class="card-label">Promedio de Puntuacion</div>
+                <div class="card-bg">&#11088;</div>
+            </div>
+        </div>
+
+        <!-- Chart: Completacion por Modulo -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Completacion por Modulo</h2>
+            </div>
+            <div class="section-body">
+                <div class="chart-container" id="moduleChart">
+                    <div class="no-data">
+                        <div class="no-data-icon">&#128202;</div>
+                        <div>No hay datos para mostrar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table: Ultimos Registros -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Ultimos Registros</h2>
+                <span class="meta" id="registrosCount">0 registros</span>
+            </div>
+            <div class="section-body">
+                <div class="table-wrapper">
+                    <table id="registrosTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('registros','fecha')">Fecha <span class="sort-arrow" data-col="fecha">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('registros','nombre')">Nombre <span class="sort-arrow" data-col="nombre">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('registros','grupo')">Grupo <span class="sort-arrow" data-col="grupo">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('registros','region')">Region <span class="sort-arrow" data-col="region">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('registros','curso')">Curso <span class="sort-arrow" data-col="curso">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('registros','estado')">Estado <span class="sort-arrow" data-col="estado">&#9650;&#9660;</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrosBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="no-data" id="registrosEmpty">
+                    <div class="no-data-icon">&#128196;</div>
+                    <div>No hay registros disponibles</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table: Certificados Emitidos -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Certificados Emitidos</h2>
+                <span class="meta" id="certsCount">0 certificados</span>
+            </div>
+            <div class="section-body">
+                <div class="table-controls">
+                    <input type="text" class="search-input" id="certSearch" placeholder="Buscar por nombre..." oninput="filterCerts()">
+                    <button class="btn-accent" onclick="exportCertsCSV()">&#11123; Exportar Certificados</button>
+                </div>
+                <div class="table-wrapper">
+                    <table id="certsTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('certs','fecha')">Fecha <span class="sort-arrow" data-col="fecha">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('certs','nombre')">Nombre <span class="sort-arrow" data-col="nombre">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('certs','curso')">Curso <span class="sort-arrow" data-col="curso">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('certs','codigo')">Codigo <span class="sort-arrow" data-col="codigo">&#9650;&#9660;</span></th>
+                                <th onclick="sortTable('certs','puntuacion')">Puntuacion <span class="sort-arrow" data-col="puntuacion">&#9650;&#9660;</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="certsBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="no-data" id="certsEmpty">
+                    <div class="no-data-icon">&#127891;</div>
+                    <div>No hay certificados emitidos</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+/* ============================================
+   DASHBOARD ADMIN - LOGIC
+   ============================================ */
+
+// --- State ---
+let state = {
+    url: localStorage.getItem('dashboard_gas_url') || '',
+    data: null,
+    filteredRegistros: [],
+    filteredCerts: [],
+    sortConfig: { registros: { col: 'fecha', asc: false }, certs: { col: 'fecha', asc: false } },
+    refreshInterval: null,
+    countdownInterval: null,
+    countdown: 300
+};
+
+// --- Init ---
+document.addEventListener('DOMContentLoaded', function() {
+    if (state.url) {
+        showDashboard();
+        fetchData();
+    } else {
+        showSetup();
+    }
+});
+
+// --- Navigation ---
+function showSetup() {
+    document.getElementById('setupScreen').style.display = 'flex';
+    document.getElementById('dashboard').classList.remove('active');
+    document.getElementById('topBarActions').style.display = 'none';
+    stopAutoRefresh();
+}
+
+function showDashboard() {
+    document.getElementById('setupScreen').style.display = 'none';
+    document.getElementById('dashboard').classList.add('active');
+    document.getElementById('topBarActions').style.display = 'flex';
+    startAutoRefresh();
+}
+
+// --- Connection ---
+function connect() {
+    var urlInput = document.getElementById('gasUrl');
+    var url = urlInput.value.trim();
+    var errorEl = document.getElementById('setupError');
+
+    if (!url) {
+        errorEl.textContent = 'Por favor ingresa una URL valida.';
+        errorEl.style.display = 'block';
+        return;
+    }
+
+    if (!url.startsWith('https://script.google.com/')) {
+        errorEl.textContent = 'La URL debe ser de Google Apps Script (https://script.google.com/...).';
+        errorEl.style.display = 'block';
+        return;
+    }
+
+    errorEl.style.display = 'none';
+    state.url = url;
+    localStorage.setItem('dashboard_gas_url', url);
+    showDashboard();
+    fetchData();
+}
+
+function disconnect() {
+    if (!confirm('Deseas desconectar? Se eliminara la URL guardada.')) return;
+    state.url = '';
+    state.data = null;
+    localStorage.removeItem('dashboard_gas_url');
+    document.getElementById('gasUrl').value = '';
+    showSetup();
+}
+
+// --- Fetch Data ---
+function fetchData() {
+    if (!state.url) return;
+
+    setConnectionStatus('loading');
+    showLoading(true);
+
+    var fetchUrl = state.url + (state.url.includes('?') ? '&' : '?') + 'action=stats&t=' + Date.now();
+
+    fetch(fetchUrl)
+        .then(function(response) {
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            return response.json();
+        })
+        .then(function(data) {
+            state.data = data;
+            setConnectionStatus('connected');
+            populateFilters();
+            applyFilters();
+            updateLastRefresh();
+            resetCountdown();
+            showToast('Datos actualizados correctamente', 'success');
+        })
+        .catch(function(err) {
+            setConnectionStatus('error');
+            showToast('Error al cargar datos: ' + err.message, 'error');
+            console.error('Fetch error:', err);
+        })
+        .finally(function() {
+            showLoading(false);
+        });
+}
+
+// --- Connection Indicator ---
+function setConnectionStatus(status) {
+    var el = document.getElementById('connIndicator');
+    el.className = 'connection-indicator ' + status;
+}
+
+// --- Loading ---
+function showLoading(show) {
+    document.getElementById('loadingOverlay').classList.toggle('active', show);
+}
+
+// --- Toast ---
+function showToast(msg, type) {
+    var toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.className = 'toast ' + (type || 'info') + ' show';
+    clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(function() {
+        toast.classList.remove('show');
+    }, 3500);
+}
+
+// --- Populate Filters ---
+function populateFilters() {
+    if (!state.data) return;
+
+    var regions = new Set();
+    var courses = new Set();
+
+    (state.data.registros || []).forEach(function(r) {
+        if (r.region) regions.add(r.region);
+        if (r.curso) courses.add(r.curso);
+    });
+    (state.data.certificados || []).forEach(function(c) {
+        if (c.curso) courses.add(c.curso);
+    });
+
+    var regionSelect = document.getElementById('filterRegion');
+    var currentRegion = regionSelect.value;
+    regionSelect.innerHTML = '<option value="">Todas las regiones</option>';
+    Array.from(regions).sort().forEach(function(r) {
+        var opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        regionSelect.appendChild(opt);
+    });
+    regionSelect.value = currentRegion;
+
+    var courseSelect = document.getElementById('filterCourse');
+    var currentCourse = courseSelect.value;
+    courseSelect.innerHTML = '<option value="">Todos los cursos</option>';
+    Array.from(courses).sort().forEach(function(c) {
+        var opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        courseSelect.appendChild(opt);
+    });
+    courseSelect.value = currentCourse;
+}
+
+// --- Apply Filters ---
+function applyFilters() {
+    if (!state.data) return;
+
+    var region = document.getElementById('filterRegion').value;
+    var course = document.getElementById('filterCourse').value;
+    var dateFrom = document.getElementById('filterDateFrom').value;
+    var dateTo = document.getElementById('filterDateTo').value;
+
+    // Filter registros
+    state.filteredRegistros = (state.data.registros || []).filter(function(r) {
+        if (region && r.region !== region) return false;
+        if (course && r.curso !== course) return false;
+        if (dateFrom && r.fecha < dateFrom) return false;
+        if (dateTo && r.fecha > dateTo) return false;
+        return true;
+    });
+
+    // Filter certs
+    state.filteredCerts = (state.data.certificados || []).filter(function(c) {
+        if (region && c.region && c.region !== region) return false;
+        if (course && c.curso !== course) return false;
+        if (dateFrom && c.fecha < dateFrom) return false;
+        if (dateTo && c.fecha > dateTo) return false;
+        return true;
+    });
+
+    renderSummary();
+    renderChart();
+    renderRegistros();
+    filterCerts(); // applies search + renders
+}
+
+function clearFilters() {
+    document.getElementById('filterRegion').value = '';
+    document.getElementById('filterCourse').value = '';
+    document.getElementById('filterDateFrom').value = '';
+    document.getElementById('filterDateTo').value = '';
+    document.getElementById('certSearch').value = '';
+    applyFilters();
+}
+
+// --- Render Summary ---
+function renderSummary() {
+    var data = state.data;
+    if (!data) return;
+
+    var totalRovers = state.filteredRegistros.length;
+    var totalCerts = state.filteredCerts.length;
+    var rate = totalRovers > 0 ? Math.round((totalCerts / totalRovers) * 100) : 0;
+
+    var scores = state.filteredCerts.map(function(c) { return parseFloat(c.puntuacion) || 0; });
+    var avg = scores.length > 0 ? (scores.reduce(function(a, b) { return a + b; }, 0) / scores.length).toFixed(1) : '0';
+
+    // Use server totals if no filters are active
+    var filtersActive = document.getElementById('filterRegion').value ||
+                        document.getElementById('filterCourse').value ||
+                        document.getElementById('filterDateFrom').value ||
+                        document.getElementById('filterDateTo').value;
+
+    if (!filtersActive && data.resumen) {
+        totalRovers = data.resumen.totalRovers || totalRovers;
+        totalCerts = data.resumen.totalCertificados || totalCerts;
+        rate = data.resumen.tasaCompletacion || rate;
+        avg = data.resumen.promedioPuntuacion || avg;
+    }
+
+    animateValue('totalRovers', totalRovers);
+    animateValue('totalCerts', totalCerts);
+    document.getElementById('completionRate').textContent = rate + '%';
+    document.getElementById('avgScore').textContent = avg;
+}
+
+function animateValue(id, target) {
+    var el = document.getElementById(id);
+    var current = parseInt(el.textContent) || 0;
+    if (current === target) { el.textContent = target; return; }
+
+    var duration = 600;
+    var step = Math.ceil(Math.abs(target - current) / 30);
+    var dir = target > current ? 1 : -1;
+
+    var timer = setInterval(function() {
+        current += step * dir;
+        if ((dir > 0 && current >= target) || (dir < 0 && current <= target)) {
+            current = target;
+            clearInterval(timer);
+        }
+        el.textContent = current;
+    }, duration / 30);
+}
+
+// --- Render Chart ---
+function renderChart() {
+    var container = document.getElementById('moduleChart');
+    var modules = state.data ? (state.data.modulos || []) : [];
+
+    if (modules.length === 0) {
+        container.innerHTML = '<div class="no-data"><div class="no-data-icon">&#128202;</div><div>No hay datos para mostrar</div></div>';
+        return;
+    }
+
+    var max = Math.max.apply(null, modules.map(function(m) { return m.completados || 0; }));
+    if (max === 0) max = 1;
+
+    var html = '';
+    modules.forEach(function(m) {
+        var pct = Math.round(((m.completados || 0) / max) * 100);
+        html += '<div class="chart-row">' +
+            '<div class="chart-label" title="' + escapeHtml(m.nombre) + '">' + escapeHtml(m.nombre) + '</div>' +
+            '<div class="chart-bar-track"><div class="chart-bar-fill" style="width:' + pct + '%"><span>' + (pct >= 15 ? m.completados : '') + '</span></div></div>' +
+            '<div class="chart-bar-value">' + m.completados + '</div>' +
+            '</div>';
+    });
+
+    container.innerHTML = html;
+}
+
+// --- Render Registros ---
+function renderRegistros() {
+    var tbody = document.getElementById('registrosBody');
+    var emptyEl = document.getElementById('registrosEmpty');
+    var countEl = document.getElementById('registrosCount');
+    var table = document.getElementById('registrosTable');
+
+    // Sort
+    var cfg = state.sortConfig.registros;
+    var sorted = state.filteredRegistros.slice().sort(function(a, b) {
+        var va = (a[cfg.col] || '').toString().toLowerCase();
+        var vb = (b[cfg.col] || '').toString().toLowerCase();
+        if (va < vb) return cfg.asc ? -1 : 1;
+        if (va > vb) return cfg.asc ? 1 : -1;
+        return 0;
+    });
+
+    // Show last 20
+    var display = sorted.slice(0, 20);
+
+    if (display.length === 0) {
+        tbody.innerHTML = '';
+        table.style.display = 'none';
+        emptyEl.style.display = 'block';
+        countEl.textContent = '0 registros';
+        return;
+    }
+
+    table.style.display = '';
+    emptyEl.style.display = 'none';
+    countEl.textContent = sorted.length + ' registros (mostrando ' + display.length + ')';
+
+    var html = '';
+    display.forEach(function(r) {
+        var estado = r.estado || (r.certificado ? 'Completado' : 'En progreso');
+        var badgeClass = estado === 'Completado' ? 'badge-completed' : 'badge-progress';
+        html += '<tr>' +
+            '<td>' + escapeHtml(formatDate(r.fecha)) + '</td>' +
+            '<td>' + escapeHtml(r.nombre || '') + '</td>' +
+            '<td>' + escapeHtml(r.grupo || '') + '</td>' +
+            '<td>' + escapeHtml(r.region || '') + '</td>' +
+            '<td>' + escapeHtml(r.curso || '') + '</td>' +
+            '<td><span class="badge ' + badgeClass + '">' + escapeHtml(estado) + '</span></td>' +
+            '</tr>';
+    });
+
+    tbody.innerHTML = html;
+}
+
+// --- Render / Filter Certs ---
+function filterCerts() {
+    var searchTerm = document.getElementById('certSearch').value.toLowerCase().trim();
+    var tbody = document.getElementById('certsBody');
+    var emptyEl = document.getElementById('certsEmpty');
+    var countEl = document.getElementById('certsCount');
+    var table = document.getElementById('certsTable');
+
+    var filtered = state.filteredCerts;
+    if (searchTerm) {
+        filtered = filtered.filter(function(c) {
+            return (c.nombre || '').toLowerCase().indexOf(searchTerm) !== -1;
+        });
+    }
+
+    // Sort
+    var cfg = state.sortConfig.certs;
+    filtered = filtered.slice().sort(function(a, b) {
+        var va, vb;
+        if (cfg.col === 'puntuacion') {
+            va = parseFloat(a[cfg.col]) || 0;
+            vb = parseFloat(b[cfg.col]) || 0;
+        } else {
+            va = (a[cfg.col] || '').toString().toLowerCase();
+            vb = (b[cfg.col] || '').toString().toLowerCase();
+        }
+        if (va < vb) return cfg.asc ? -1 : 1;
+        if (va > vb) return cfg.asc ? 1 : -1;
+        return 0;
+    });
+
+    if (filtered.length === 0) {
+        tbody.innerHTML = '';
+        table.style.display = 'none';
+        emptyEl.style.display = 'block';
+        countEl.textContent = '0 certificados';
+        return;
+    }
+
+    table.style.display = '';
+    emptyEl.style.display = 'none';
+    countEl.textContent = filtered.length + ' certificados';
+
+    var html = '';
+    filtered.forEach(function(c) {
+        html += '<tr>' +
+            '<td>' + escapeHtml(formatDate(c.fecha)) + '</td>' +
+            '<td>' + escapeHtml(c.nombre || '') + '</td>' +
+            '<td>' + escapeHtml(c.curso || '') + '</td>' +
+            '<td><code>' + escapeHtml(c.codigo || '') + '</code></td>' +
+            '<td><strong>' + escapeHtml(String(c.puntuacion || 0)) + '</strong></td>' +
+            '</tr>';
+    });
+
+    tbody.innerHTML = html;
+}
+
+// --- Sorting ---
+function sortTable(tableId, col) {
+    var cfg = state.sortConfig[tableId];
+    if (cfg.col === col) {
+        cfg.asc = !cfg.asc;
+    } else {
+        cfg.col = col;
+        cfg.asc = true;
+    }
+
+    if (tableId === 'registros') {
+        renderRegistros();
+    } else {
+        filterCerts();
+    }
+}
+
+// --- Export CSV ---
+function exportCSV() {
+    if (!state.filteredRegistros.length && !state.filteredCerts.length) {
+        showToast('No hay datos para exportar', 'info');
+        return;
+    }
+
+    var rows = [['Fecha', 'Nombre', 'Grupo', 'Region', 'Curso', 'Estado']];
+    state.filteredRegistros.forEach(function(r) {
+        rows.push([
+            r.fecha || '',
+            r.nombre || '',
+            r.grupo || '',
+            r.region || '',
+            r.curso || '',
+            r.estado || (r.certificado ? 'Completado' : 'En progreso')
+        ]);
+    });
+
+    downloadCSV(rows, 'registros_rover_' + todayStr() + '.csv');
+    showToast('CSV de registros exportado', 'success');
+}
+
+function exportCertsCSV() {
+    var searchTerm = document.getElementById('certSearch').value.toLowerCase().trim();
+    var data = state.filteredCerts;
+    if (searchTerm) {
+        data = data.filter(function(c) {
+            return (c.nombre || '').toLowerCase().indexOf(searchTerm) !== -1;
+        });
+    }
+
+    if (!data.length) {
+        showToast('No hay certificados para exportar', 'info');
+        return;
+    }
+
+    var rows = [['Fecha', 'Nombre', 'Curso', 'Codigo', 'Puntuacion']];
+    data.forEach(function(c) {
+        rows.push([
+            c.fecha || '',
+            c.nombre || '',
+            c.curso || '',
+            c.codigo || '',
+            c.puntuacion || ''
+        ]);
+    });
+
+    downloadCSV(rows, 'certificados_rover_' + todayStr() + '.csv');
+    showToast('CSV de certificados exportado', 'success');
+}
+
+function downloadCSV(rows, filename) {
+    var csv = rows.map(function(row) {
+        return row.map(function(cell) {
+            var val = String(cell).replace(/"/g, '""');
+            return '"' + val + '"';
+        }).join(',');
+    }).join('\r\n');
+
+    var BOM = '\uFEFF';
+    var blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// --- Auto Refresh ---
+function startAutoRefresh() {
+    stopAutoRefresh();
+    resetCountdown();
+    state.refreshInterval = setInterval(function() {
+        fetchData();
+    }, 300000); // 5 minutes
+
+    state.countdownInterval = setInterval(function() {
+        state.countdown--;
+        if (state.countdown < 0) state.countdown = 300;
+        var min = Math.floor(state.countdown / 60);
+        var sec = state.countdown % 60;
+        document.getElementById('nextRefresh').textContent = min + ':' + (sec < 10 ? '0' : '') + sec;
+    }, 1000);
+}
+
+function stopAutoRefresh() {
+    if (state.refreshInterval) { clearInterval(state.refreshInterval); state.refreshInterval = null; }
+    if (state.countdownInterval) { clearInterval(state.countdownInterval); state.countdownInterval = null; }
+}
+
+function resetCountdown() {
+    state.countdown = 300;
+}
+
+function updateLastRefresh() {
+    var now = new Date();
+    var h = now.getHours();
+    var m = now.getMinutes();
+    document.getElementById('lastUpdate').textContent =
+        now.toLocaleDateString('es-CO') + ' ' +
+        (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m;
+}
+
+// --- Helpers ---
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
+function formatDate(dateStr) {
+    if (!dateStr) return '';
+    try {
+        var d = new Date(dateStr);
+        if (isNaN(d.getTime())) return dateStr;
+        return d.toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric' });
+    } catch(e) {
+        return dateStr;
+    }
+}
+
+function todayStr() {
+    var d = new Date();
+    return d.getFullYear() + '-' + (d.getMonth()+1 < 10 ? '0' : '') + (d.getMonth()+1) + '-' + (d.getDate() < 10 ? '0' : '') + d.getDate();
+}
+
+// --- Keyboard shortcut: Enter to connect ---
+document.getElementById('gasUrl').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') connect();
+});
+</script>
+
+</body>
+</html>

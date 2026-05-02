@@ -1,0 +1,595 @@
+{
+  "courseId": "politica-adultos",
+  "title": "La Política de Adultos en el Movimiento",
+  "subtitle": "Formación de Adultos Voluntarios — Asociación Scouts de Colombia",
+  "description": "Curso introductorio sobre la Política Nacional de Adultos en el Movimiento Scout: el adulto que necesitamos, el enfoque por competencias y el ciclo de gestión del adulto. Dirigido a consejeros, dirigentes y voluntarios que asumen roles en sus grupos scouts.",
+  "icon": "🦸",
+  "duration": "1 hora 30 minutos",
+  "totalContentModules": 5,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida al Curso",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a a este espacio de formación.</strong><br>Este curso te ayudará a comprender la Política Nacional de Adultos en el Movimiento, el enfoque por competencias y cómo aplicarlo en tu grupo scout."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este curso está construido a partir del <strong>Taller Flor de Lis 2 — Sesión 1</strong>, dictado por consejeros y dirigentes activos de la Regional Valle del Cauca. Cada unidad es corta (entre 5 y 15 minutos) y combina video, lectura y reflexión personal."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Objetivos del Curso"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Reconocer</strong> el rol del adulto voluntario en el movimiento scout",
+            "<strong>Comprender</strong> la Política Nacional de Adultos en el Movimiento y sus principios",
+            "<strong>Identificar</strong> qué es una competencia y cuáles son las 7 competencias esenciales del adulto",
+            "<strong>Conocer</strong> el ciclo de gestión del adulto (atracción, vinculación, desarrollo, evaluación)",
+            "<strong>Definir</strong> tu compromiso personal con el grupo scout"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Estructura del Curso"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "Unidad 1 — ¿Por qué somos superhéroes?", "description": "Una mirada simbólica al rol del adulto en el movimiento. Hook emocional con video Avengers." },
+            { "title": "Unidad 2 — Marco de la Política", "description": "Origen, propósito y herramientas que ofrece la política." },
+            { "title": "Unidad 3 — ¿Qué es una competencia?", "description": "Definición saber + hacer + ser, y las 7 competencias esenciales." },
+            { "title": "Unidad 4 — El ciclo de gestión del adulto", "description": "Atracción, vinculación, plan personal, asesoría y evaluación." },
+            { "title": "Unidad 5 — Tu compromiso", "description": "Síntesis y construcción de tu compromiso personal." }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📝 Cómo avanzar:</strong> al final de cada unidad encontrarás una reflexión personal y un quiz corto. Necesitas aprobar el quiz (mínimo 70%) para avanzar a la siguiente unidad."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "¿Por qué somos superhéroes?",
+      "emoji": "🦸",
+      "navLabel": "Superhéroes",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Mira el video introductorio"
+        },
+        {
+          "type": "paragraph",
+          "text": "Como adultos voluntarios enfrentamos retos que parecen sobrehumanos: cuidar de los chicos, sostener el grupo, articularnos como equipo. Este video pone esa misión en perspectiva."
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/01_video_avengers.mp4",
+          "caption": "Video introductorio — Los héroes más poderosos (4:10)"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/02_reflexion_y_actividad_dibujo.mp4",
+          "caption": "Reflexión y actividad — El consejero ideal (5:02)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✏️ Actividad — Dibuja tu consejero ideal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes de avanzar, toma una hoja y un lápiz. Dibújate a ti mismo/a como un superhéroe del movimiento. Responde: <strong>¿qué cualidades debe tener un consejero o consejera ideal?</strong> Tómate 3 minutos."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Idea clave:</strong> los adultos del movimiento no llegamos perfectos. Llegamos con superpoderes diferentes — competencias adquiridas en la vida — que se complementan en el equipo. La fuerza está en la unión, no en el individuo."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎙️ Voces de la comunidad (opcional)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Estos videos recogen testimonios de consejeros y consejeras activas compartiendo cómo entienden el rol. No son obligatorios para el quiz, pero enriquecen la perspectiva."
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/03_voces_dibujos_parte1.mp4",
+          "caption": "Voces parte 1 — Eliana, Marta y Lina"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/04_voces_dibujos_parte2.mp4",
+          "caption": "Voces parte 2 — Stefanie, Blanca y Amparo"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué superpoder reconoces en ti que aporta valor a tu grupo scout? ¿Qué superpoder te falta desarrollar?"
+      },
+      "quiz": {
+        "title": "Evaluación — El adulto que necesitamos",
+        "questions": [
+          {
+            "text": "Según la idea presentada en el video, ¿de dónde proviene la fuerza de los adultos en un grupo scout?",
+            "options": [
+              "De que cada uno resuelva sus problemas en solitario",
+              "De la complementariedad de sus competencias trabajando como equipo",
+              "De que el jefe de grupo tenga todas las habilidades necesarias"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuál de estas afirmaciones se acerca más al concepto de adulto que propone el movimiento?",
+            "options": [
+              "Un adulto perfecto que domina todas las áreas desde su llegada",
+              "Una persona en formación continua que aporta sus competencias y desarrolla otras nuevas",
+              "Un experto técnico que enseña a los chicos sin involucrarse emocionalmente"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "La actividad del 'consejero ideal' busca principalmente:",
+            "options": [
+              "Evaluar tus habilidades de dibujo",
+              "Que articules con tus propias palabras qué cualidades valoras en un consejero, antes de conocer la política",
+              "Comparar tu visión con la de otros participantes"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Marco de la Política 📜"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Marco de la Política de Adultos",
+      "emoji": "📜",
+      "navLabel": "Marco",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Origen y propósito de la política"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/05_politica_marco_general.mp4",
+          "caption": "Marco general de la Política Nacional de Adultos (4:17)"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📅 ¿De dónde viene esta política?</strong><br>Se origina en la Conferencia Scout Interamericana y se lanza en Colombia hacia <strong>2017</strong>. Es el marco filosófico, conceptual, pedagógico, estructural y administrativo del Sistema de Gestión de Adultos."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔑 Cambio fundamental en el lenguaje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ya no hablamos de <em>jefes</em> y <em>consejeros</em> como categorías separadas. Hablamos de <strong>adultos del movimiento</strong>, lo que incluye también a los rovers que ejercen roles. Todos somos adultos voluntarios con el mismo nivel de responsabilidad y de derechos para nuestro desarrollo personal."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Concepto de competencias y principios"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/06_competencias_y_principios.mp4",
+          "caption": "Concepto de competencias y principios de la política (4:10)"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Enfoque por competencias", "description": "Reconoce que cada adulto trae conocimientos y habilidades; el grupo se nutre de su complementariedad.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Coherencia", "description": "Lo que decimos como adultos debe alinearse con lo que hacemos: somos ejemplo para los chicos.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Organización", "description": "Existen procesos claros (vinculación, evaluación, desarrollo) que evitan decisiones arbitrarias.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
+            { "title": "Flexibilidad", "description": "La política se adapta al contexto y necesidades de cada grupo. No es rígida.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Las herramientas de la política — La 'maleta'"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/07_herramientas_la_maleta.mp4",
+          "caption": "Herramientas que ofrece la política (2:35)"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Cartilla metodológica</strong> y diccionario de competencias",
+            "<strong>Manual de cargos, funciones y perfiles</strong> por competencias",
+            "<strong>Módulos</strong> de inducción, atracción y vinculación",
+            "<strong>Plataforma Talento 360</strong> para gestionar hoja de vida y plan de desarrollo",
+            "<strong>Módulos</strong> de diversidad e inclusión, desempeño, formación, motivación y decisiones para el futuro"
+          ]
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué herramienta de la 'maleta' conocías y cuál te interesaría explorar primero? ¿Por qué?"
+      },
+      "quiz": {
+        "title": "Evaluación — Marco de la Política",
+        "questions": [
+          {
+            "text": "¿En qué año se lanza oficialmente esta política en Colombia?",
+            "options": ["2010", "2017", "2022"],
+            "correctIndex": 1
+          },
+          {
+            "text": "El cambio en el lenguaje que introduce la política implica que:",
+            "options": [
+              "Solo se llaman jefes a quienes están en la jefatura",
+              "Hablamos de 'adultos del movimiento' incluyendo también a rovers que ejercen roles",
+              "Se eliminaron los cargos de consejeros"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "La política es flexible. Esto significa que:",
+            "options": [
+              "Cada grupo decide si la aplica o no",
+              "Tiene herramientas precisas pero adaptables al contexto y necesidades de cada grupo",
+              "Cambia cada año según la dirigencia regional"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Competencias 🧠"
+      }
+    },
+    {
+      "id": 4,
+      "title": "¿Qué es una competencia?",
+      "emoji": "🧠",
+      "navLabel": "Competencias",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Definición — Saber, Hacer, Ser"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/08_definicion_competencia.mp4",
+          "caption": "Definición de competencia (3:15)"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Competencia = Saber + Hacer + Ser</strong><br>Una característica subyacente del adulto, causalmente relacionada con un desempeño efectivo en un contexto real."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Saber", "description": "Conocimientos: la información, los conceptos, la teoría que tienes sobre un tema.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Hacer", "description": "Habilidad de aplicar el conocimiento: ejecutar, resolver, llevar a la práctica.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Ser", "description": "Principios y valores que enmarcan el saber y el hacer: cómo te comportas, qué priorizas.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "Tener la receta no es lo mismo que saber cocinar. La competencia integra los tres: el saber, el saber-hacer y el ser."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Las 7 competencias esenciales del adulto"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/09_siete_competencias_esenciales.mp4",
+          "caption": "Las 7 competencias esenciales (2:40)"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>Adaptabilidad al cambio</strong> — capacidad de responder a contextos nuevos",
+            "<strong>Aprendizaje y desarrollo personal</strong> — actitud permanente de formación",
+            "<strong>Compromiso</strong> — adhesión a los principios y valores del movimiento",
+            "<strong>Conciencia organizacional</strong> — entender cómo funciona el movimiento",
+            "<strong>Planeamiento estratégico</strong> — establecer objetivos y planes de mejora",
+            "<strong>Relaciones interpersonales</strong> — convivir y comunicarse de forma armónica",
+            "<strong>Trabajo en equipo</strong> — articular esfuerzos con otros adultos"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Dos tipos de competencias:</strong><br>📌 <strong>Esenciales</strong> — las 7 anteriores, comunes a todo adulto del movimiento (consejeros y dirigentes).<br>📌 <strong>Específicas</strong> — propias de cada cargo (tesorero, secretario, presidente, etc.). Las verás en el siguiente módulo."
+        }
+      ],
+      "reflection": {
+        "prompt": "De las 7 competencias esenciales, ¿cuál identificas como tu fortaleza y cuál como tu mayor área de oportunidad? ¿Cómo podrías desarrollar la segunda?"
+      },
+      "quiz": {
+        "title": "Evaluación — Competencias",
+        "questions": [
+          {
+            "text": "Una competencia integra tres componentes. ¿Cuáles son?",
+            "options": [
+              "Conocimiento, experiencia y antigüedad",
+              "Saber, hacer y ser",
+              "Teoría, práctica y reconocimiento"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuántas competencias esenciales define la política para los adultos del movimiento?",
+            "options": ["5", "7", "10"],
+            "correctIndex": 1
+          },
+          {
+            "text": "Las competencias específicas se diferencian de las esenciales en que:",
+            "options": [
+              "Son más importantes que las esenciales",
+              "Están asociadas a cada cargo concreto (tesorero, secretario, etc.)",
+              "Solo aplican para los jefes de grupo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El compromiso aparece como competencia esencial porque:",
+            "options": [
+              "Mide cuántas horas dedicas semanalmente al grupo",
+              "Refleja la adhesión a los principios y valores del movimiento",
+              "Es un requisito legal de la asociación"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar al Ciclo de Gestión 🔄"
+      }
+    },
+    {
+      "id": 5,
+      "title": "El ciclo de gestión del adulto",
+      "emoji": "🔄",
+      "navLabel": "Ciclo",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Atracción y vinculación"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/10_atraccion_y_vinculacion.mp4",
+          "caption": "Atracción y vinculación del adulto (4:10)"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "1. Necesidad", "description": "El grupo identifica qué adultos necesita y qué competencias requiere." },
+            { "title": "2. Atracción", "description": "Se busca, contacta y motiva a posibles adultos voluntarios." },
+            { "title": "3. Selección", "description": "Se evalúan las competencias del candidato y su afinidad con el cargo." },
+            { "title": "4. Integración", "description": "Acuerdo mutuo y nombramiento. El adulto se compromete con tiempo y rol específico." }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Plan personal de desarrollo y Talento 360"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/11_plan_personal_y_talento_360.mp4",
+          "caption": "Plan personal de desarrollo y plataforma Talento 360 (4:14)"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Idea central:</strong> el adulto evalúa sus competencias frente al cargo, identifica brechas y arma un plan personal de desarrollo. Cuenta con un asesor (jefe de grupo u otro adulto experimentado) que lo acompaña."
+        },
+        {
+          "type": "paragraph",
+          "text": "La <strong>plataforma Talento 360</strong> centraliza la hoja de vida del adulto, su plan personal de desarrollo y las evaluaciones que va completando. Permite al asesor revisar y dar retroalimentación de forma transparente."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Evaluación, asesoría y compromiso"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/12_evaluacion_asesoria_compromiso.mp4",
+          "caption": "Evaluación, asesoría y actividad de compromiso (4:47)"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "Auto-evaluación", "description": "Te miras a ti mismo: qué competencias tienes, dónde necesitas crecer.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "Co-evaluación", "description": "Tus pares y tu asesor te dan retroalimentación.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "Hetero-evaluación", "description": "Los chicos también pueden evaluar a los adultos. Es un insumo valioso.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📌 Diferencia clave con políticas anteriores:</strong> antes la formación era rígida y todos pasaban por lo mismo. Ahora la formación se adapta al plan personal del adulto y al contexto del grupo."
+        }
+      ],
+      "reflection": {
+        "prompt": "Imagina que asumes hoy un nuevo cargo en tu grupo. ¿Quién podría ser tu asesor? ¿Qué dos brechas de competencia priorizarías en tu plan personal?"
+      },
+      "quiz": {
+        "title": "Evaluación — Ciclo de Gestión",
+        "questions": [
+          {
+            "text": "¿Cuál es el primer paso del ciclo de gestión del adulto?",
+            "options": [
+              "La firma del acuerdo mutuo",
+              "Identificar la necesidad del grupo y el perfil que requiere",
+              "Subir la hoja de vida a Talento 360"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El plan personal de desarrollo lo define:",
+            "options": [
+              "El jefe de grupo de forma unilateral",
+              "El propio adulto, identificando sus competencias y brechas, con apoyo de un asesor",
+              "La regional según las necesidades nacionales"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "La hetero-evaluación es:",
+            "options": [
+              "La que hacen los pares del adulto",
+              "La que el adulto hace de sí mismo",
+              "La que pueden hacer los chicos sobre el desempeño de los adultos"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "La diferencia central frente a políticas anteriores es:",
+            "options": [
+              "Antes no se evaluaba a los adultos, ahora sí",
+              "Antes la formación era rígida e igual para todos, ahora se adapta al plan personal de cada adulto",
+              "Antes el cargo era vitalicio, ahora dura un año"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Tu Compromiso 💚"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Tu compromiso",
+      "emoji": "💚",
+      "navLabel": "Compromiso",
+      "sections": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 ¿Cómo ser ese adulto que el movimiento necesita?"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/13_conclusion_superheroe_ideal.mp4",
+          "caption": "Conclusión — cómo ser ese superhéroe ideal (2:59)"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🎯 Síntesis del módulo:</strong> ser el adulto que el movimiento necesita no es ser perfecto. Es ser <strong>idóneo</strong>, <strong>motivado</strong>, capaz de mejorar continuamente, con claridad sobre su rol y comprometido con la educación de los jóvenes."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✏️ Actividad — Escribe tu compromiso"
+        },
+        {
+          "type": "paragraph",
+          "text": "Toma 3 minutos. En la reflexión personal de abajo, escribe <strong>cuál es tu compromiso</strong> con tu grupo scout a partir de hoy. Recuerda que la primera competencia esencial es justamente el <em>compromiso</em>."
+        },
+        {
+          "type": "blockquote",
+          "text": "El compromiso no se cumple en palabras o actos ceremoniales: se construye escuchando para construir, dejando los egos a un lado, y dando ejemplo en la convivencia diaria."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎙️ Voces de la comunidad — Compromisos reales (opcional)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otros adultos compartieron en vivo cuáles son sus compromisos. Inspírate."
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/14_voces_compromisos_parte1.mp4",
+          "caption": "Voces — Compromisos parte 1 (Claudia, Eliana, Donavarro)"
+        },
+        {
+          "type": "video",
+          "src": "politica-adultos/videos/15_voces_compromisos_parte2.mp4",
+          "caption": "Voces — Compromisos parte 2 (Diego, Caterine, Hugo)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🚀 Siguiente paso — Aplica lo aprendido"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Identifica un <strong>asesor</strong> en tu grupo (puede ser tu jefe de grupo u otro adulto con experiencia)",
+            "Sube tu <strong>hoja de vida</strong> a la plataforma Talento 360",
+            "Construye con tu asesor tu <strong>plan personal de desarrollo</strong>",
+            "Revisa el <strong>manual de cargos</strong> para entender el perfil del rol que ejerces"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📌 Recordatorio:</strong> los pasos anteriores son recomendados pero no obligatorios para certificar este módulo. Lo importante es que ya tienes el marco para empezar."
+        }
+      ],
+      "reflection": {
+        "prompt": "Escribe tu compromiso personal con tu grupo scout: ¿en qué te vas a comprometer a partir de hoy y por cuánto tiempo?"
+      },
+      "quiz": {
+        "title": "Evaluación — Cierre del módulo",
+        "questions": [
+          {
+            "text": "Según la síntesis del módulo, el adulto que el movimiento necesita es:",
+            "options": [
+              "Una persona perfecta y experimentada",
+              "Una persona idónea, motivada, en formación continua y comprometida",
+              "Un experto técnico con muchos años en el escultismo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El compromiso, como competencia esencial, se evidencia en:",
+            "options": [
+              "Asistir a todas las reuniones",
+              "La adhesión real a los principios del movimiento, demostrada en el día a día",
+              "Tener muchos años en el grupo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El siguiente paso natural después de este módulo es:",
+            "options": [
+              "Esperar a que el grupo te asigne un cargo nuevo",
+              "Identificar un asesor y construir tu plan personal de desarrollo en Talento 360",
+              "Inscribirse a un nuevo curso inmediatamente"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    { "id": "achievement-1", "name": "Superhéroe del Movimiento", "emoji": "🦸", "unlockOnModule": 2 },
+    { "id": "achievement-2", "name": "Conocedor de la Política", "emoji": "📜", "unlockOnModule": 3 },
+    { "id": "achievement-3", "name": "Maestro de Competencias", "emoji": "🧠", "unlockOnModule": 4 },
+    { "id": "achievement-4", "name": "Estratega del Adulto", "emoji": "🔄", "unlockOnModule": 5 },
+    { "id": "achievement-5", "name": "Adulto Comprometido", "emoji": "🏆", "unlockOnModule": -1 }
+  ],
+  "certificate": {
+    "courseName": "LA POLÍTICA DE ADULTOS EN EL MOVIMIENTO",
+    "description": "ha completado exitosamente el curso introductorio sobre la Política Nacional de Adultos en el Movimiento Scout, comprendiendo el enfoque por competencias y el ciclo de gestión del adulto"
+  }
+}

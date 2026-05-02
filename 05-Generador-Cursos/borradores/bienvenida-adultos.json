@@ -1,0 +1,620 @@
+{
+  "courseId": "bienvenida-adultos",
+  "title": "Bienvenida al Movimiento de Adultos",
+  "subtitle": "Curso 1 de la Ruta de Formación de Adultos en el Movimiento",
+  "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 25 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
+  "icon": "🦸",
+  "duration": "25 minutos",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Hola. Bienvenido/a.</strong><br>Estás dando el primer paso de una ruta que te va a ayudar a entender qué significa ser <em>adulto del movimiento scout</em> en Colombia. No te asustes con el nombre — vamos a desarmarlo en piezas pequeñas y prácticas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Probablemente entraste al grupo scout porque <strong>tu hijo o hija está ahí</strong>. O porque alguien te invitó a ayudar. Y un día te encontraste asumiendo un cargo, una función, una responsabilidad. Ahora estás aquí, frente a este curso, preguntándote: <em>¿en qué me metí?</em>"
+        },
+        {
+          "type": "paragraph",
+          "text": "Buena noticia: <strong>no estás solo</strong>, y existen herramientas para acompañarte. Este curso es la primera de ellas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Entender</strong> por qué tu rol importa, sin importar qué cargo tengas",
+            "<strong>Reconocer</strong> los mitos comunes que te frenan ('soy solo un papá', 'no tengo tiempo')",
+            "<strong>Identificar</strong> qué cualidades hacen un buen adulto en el movimiento",
+            "<strong>Escribir</strong> tu primer compromiso personal con el grupo",
+            "<strong>Saber</strong> qué cursos siguen en la ruta y para qué te sirven"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones cortas"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "Lección 1 — ¿Por qué llegaste aquí?", "description": "4 min. Una pregunta honesta para empezar." },
+            { "title": "Lección 2 — Eres un superhéroe (en serio)", "description": "5 min. La metáfora que cambia tu mirada." },
+            { "title": "Lección 3 — Tres mitos que te frenan", "description": "5 min. Lo que NO es ser adulto del movimiento." },
+            { "title": "Lección 4 — Dibuja a tu consejero ideal", "description": "5 min. Una actividad de 3 minutos con papel y lápiz." },
+            { "title": "Lección 5 — Tu primer compromiso", "description": "4 min. Una frase corta. Tu punto de partida." },
+            { "title": "Lección 6 — La ruta completa", "description": "3 min. Lo que viene después de este curso." }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📝 Cómo avanzar:</strong> cada lección es independiente. Puedes hacer una hoy y la otra mañana. El sistema guarda tu avance. Al final de cada lección hay una reflexión personal y 1-2 preguntas cortas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🗺️ La ruta de 5 cursos"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "🦸 Curso 1 — Bienvenida (estás aquí)", "description": "El por qué de todo. Tu primer paso.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "📜 Curso 2 — La Política — Marco y Principios", "description": "El marco que respalda tu rol. Los 13 principios y las 12 herramientas.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
+            { "title": "🔄 Curso 3 — El Ciclo del Adulto", "description": "Cómo se vive un nombramiento: atracción, desempeño y decisiones para el futuro.", "color": "#fce4ec", "borderColor": "#e91e63" },
+            { "title": "🧠 Curso 4 — Las 7 Competencias", "description": "Lo que se espera que sepas, hagas y seas. Con autodiagnóstico personal.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "🗺️ Curso 5 — Tu Plan Personal", "description": "Tu plan real, listo para firmar con tu asesor. Cierre de la ruta.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — ¿Por qué llegaste aquí?",
+      "emoji": "🚪",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 4 minutos · 1 idea central:</strong><br>La mayoría de los adultos del movimiento llegamos sin pedirlo. Y eso está bien — pero ahora que estás aquí, vale la pena hacerlo en serio."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🤔 Una pregunta honesta"
+        },
+        {
+          "type": "paragraph",
+          "text": "Toma 30 segundos y piensa: <strong>¿cómo terminaste involucrado/a con el grupo scout?</strong> Probablemente la respuesta sea una de estas:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<em>'Mi hijo/hija entró y me pidieron acompañar.'</em>",
+            "<em>'Yo era scout cuando chico/a, y volví adulto.'</em>",
+            "<em>'Una amiga me dijo que necesitaban gente.'</em>",
+            "<em>'Llegué a una reunión y no me fui más.'</em>",
+            "<em>'Me eligieron y no supe decir que no.'</em>"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cualquiera de esas razones es <strong>perfectamente válida</strong>. Lo curioso es que casi nadie llega al movimiento de adultos diciendo <em>'siempre soñé con ser tesorero de un grupo scout'</em>. Llegamos por la vida — y descubrimos algo más grande de lo que esperábamos."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "💡 La pregunta que sí importa"
+        },
+        {
+          "type": "paragraph",
+          "text": "No importa <em>cómo</em> llegaste. Importa: <strong>¿qué vas a hacer ahora que estás aquí?</strong> Y específicamente:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "¿Quieres saber qué se espera de ti realmente?",
+            "¿Quieres acompañamiento y herramientas para hacerlo bien?",
+            "¿Quieres que esto te aporte a ti — no solo dar y dar?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si la respuesta a esas tres es <strong>sí</strong>, este curso (y los que siguen) son para ti. La idea no es cargarte de obligaciones — es darte claridad y respaldo."
+        },
+        {
+          "type": "blockquote",
+          "text": "El movimiento scout no necesita personas perfectas. Necesita personas presentes que sepan dónde están parados."
+        }
+      ],
+      "reflection": {
+        "prompt": "Recuerda el momento exacto en que aceptaste tu rol actual en el grupo. ¿Qué te llevó a decir 'sí'? ¿Sigue siendo válida esa razón hoy?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "¿Cuál de estas afirmaciones se acerca más al espíritu de esta lección?",
+            "options": [
+              "Solo deben ser adultos del movimiento quienes hayan sido scouts cuando jóvenes",
+              "Cómo llegaste al rol importa menos que qué decides hacer ahora que estás aquí",
+              "Si llegaste sin pedirlo, no estás realmente comprometido"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El curso plantea que el movimiento necesita…",
+            "options": [
+              "Personas perfectas, con muchos años de experiencia",
+              "Personas presentes que sepan dónde están paradas",
+              "Solo personas con tiempo libre ilimitado"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Eres un superhéroe (en serio)",
+      "emoji": "🦸",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Cada adulto en el grupo trae un superpoder distinto. La fuerza no está en uno solo — está en lo que pasa cuando se juntan."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Mira este video corto (4 min)"
+        },
+        {
+          "type": "video",
+          "src": "bienvenida-adultos/videos/01_avengers.mp4",
+          "caption": "Los héroes más poderosos · 4:10"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "💭 ¿Y eso qué tiene que ver conmigo?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los adultos del movimiento no usamos capa, pero <strong>cada uno trae un superpoder real</strong>: experiencia profesional, una red de contactos, paciencia infinita con los chicos, talento para resolver conflictos, conocimiento de campismo, vocación por el detalle, manejo de redes sociales, finanzas, lo que sea."
+        },
+        {
+          "type": "paragraph",
+          "text": "El error común es pensar <em>\"yo no tengo nada especial que aportar\"</em>. Casi siempre es falso. Lo que pasa es que <strong>tu superpoder es tan natural para ti que lo das por sentado</strong>. La política de adultos te invita a identificarlo y ponerlo al servicio del grupo."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            { "title": "🛡️ Tu superpoder", "description": "Una habilidad, conocimiento o forma de ser que te resulta natural pero que en el grupo es valiosa.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "🦸‍♀️ Tu equipo", "description": "Otros adultos con superpoderes diferentes que se complementan con el tuyo.", "color": "#e3f2fd", "borderColor": "#2196f3" },
+            { "title": "🎯 Su misión", "description": "Hacer del mundo un lugar mejor educando a los chicos. No es metáfora.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "Solo no eres tan poderoso. Junto a otros, eres imparable."
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cuál es tu superpoder? Algo que te sale bien casi sin pensarlo, y que el grupo aprovecharía si lo pones al servicio. Si te cuesta verlo, pregúntale a alguien que te conozca bien."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Según la idea central de esta lección, ¿de dónde viene la fuerza de los adultos en un grupo scout?",
+            "options": [
+              "De que cada uno tenga todas las habilidades",
+              "De la complementariedad de sus superpoderes trabajando juntos",
+              "De la antigüedad de cada uno en el movimiento"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Si una persona piensa 'yo no tengo nada especial que aportar', el curso plantea que…",
+            "options": [
+              "Probablemente es cierto si lleva poco tiempo en el grupo",
+              "Casi siempre es falso: lo que pasa es que su superpoder le resulta tan natural que lo da por sentado",
+              "Debe esperar a tener más experiencia antes de aportar"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Tres mitos que te frenan",
+      "emoji": "❌",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Hay tres ideas comunes que te alejan del rol. Vamos a desarmarlas una por una."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "❌ Mito 1: \"Solo soy un papá / una mamá. No soy scout de verdad.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "Falso. La política de adultos del movimiento te define como <strong>'adulto en el movimiento'</strong> en el momento que aceptas un cargo o función. No importa si nunca fuiste lobato, scout o caminante de joven. <strong>El compromiso no se mide en años, se mide en presencia.</strong>"
+        },
+        {
+          "type": "blockquote",
+          "text": "Caso real: Marta, mamá del grupo 47 de Bogotá. Se vinculó hace 1 año al consejo. Hoy lidera el comité de finanzas. \"Yo no era scout. Pero estoy.\""
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "❌ Mito 2: \"No tengo tiempo para esto.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta es delicada porque es <em>parcialmente cierta</em>. Casi nadie tiene tiempo. Pero la política reconoce esa realidad y por eso te ofrece opciones flexibles:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Puedes asumir un cargo de <strong>baja intensidad</strong> (por ejemplo, vocal del consejo: 1-2 reuniones al mes)",
+            "Puedes definir <strong>cuánto tiempo</strong> te comprometes — y por <strong>cuánto tiempo</strong>",
+            "La formación es <strong>asíncrona y flexible</strong> (cursos como este, módulos cortos, no más jornadas obligatorias de 8 horas)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El truco no es <em>tener mucho tiempo</em>. Es <strong>usar bien el poco que tienes</strong> en algo que aporta. Eso lo verás aterrizado en el Curso 4 (Plan Personal)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "❌ Mito 3: \"Esto es para los dirigentes, no para mí.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "Falso, y esto fue un cambio importante en la política de 2017. <strong>Antes</strong> se hablaba de \"jefes\" y \"consejeros\" como roles separados con jerarquías. <strong>Ahora</strong> hablamos de <em>adultos del movimiento</em>: dirigentes, consejeros, asesores, vocales, contadores externos, todos, con el mismo nivel de responsabilidad y los mismos derechos para crecer."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Implicación práctica:</strong><br>Si alguien en tu grupo te dice <em>\"tú no necesitas hacer ese curso, eso es para los jefes\"</em>, está hablando con un manual viejo. La política actual dice que la formación es para <strong>todos los adultos</strong>, sin importar el cargo."
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cuál de los 3 mitos te resuena más? ¿Hay alguno que tú o alguien cercano repite, sin darse cuenta? ¿Cómo lo desarmarías ahora?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Una mamá del consejo dice: 'yo no soy scout de verdad, solo soy mamá'. ¿Qué le dirías según esta lección?",
+            "options": [
+              "Que tiene razón, hasta que su hijo termine en el grupo",
+              "Que cuando aceptó el cargo en el consejo se volvió 'adulta del movimiento' y la política la cubre igual que a cualquier dirigente",
+              "Que debe primero hacer la promesa scout para serlo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El cambio que introdujo la política en 2017 sobre 'jefes vs. consejeros' fue:",
+            "options": [
+              "Eliminar los cargos de consejero",
+              "Hablar de 'adultos del movimiento' como categoría común, con misma responsabilidad y derechos para todos",
+              "Subir a los consejeros al nivel de jefes regionales"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Dibuja a tu consejero ideal",
+      "emoji": "✏️",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Antes de que alguien te diga cómo es el adulto que el movimiento espera, tú lo vas a dibujar. Lo que dibujes vale: es lo que ya intuyes."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✏️ Actividad — 3 minutos con papel y lápiz"
+        },
+        {
+          "type": "paragraph",
+          "text": "Toma una hoja y un lápiz. <strong>No tiene que ser bonito.</strong> Vas a dibujar al <em>consejero o consejera ideal</em> — la persona que cualquier grupo scout quisiera tener en su consejo."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Puede ser un dibujo, un símbolo, una figura sencilla — lo que quieras",
+            "Al lado del dibujo, escribe <strong>3 cualidades</strong> que esa persona tiene",
+            "Date 3 minutos exactos. No más"
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "🎨 Toma 3 minutos. Vuelve cuando termines. No avances todavía."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎬 Y ahora mira lo que dibujaron otras personas"
+        },
+        {
+          "type": "video",
+          "src": "bienvenida-adultos/videos/02_reflexion_dibujo.mp4",
+          "caption": "Reflexión y actividad guiada · 5:02"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎙️ Voces de la comunidad"
+        },
+        {
+          "type": "paragraph",
+          "text": "En un taller real con consejeros y consejeras de varias regiones, hicieron este mismo ejercicio. Mira lo que respondieron:"
+        },
+        {
+          "type": "video",
+          "src": "bienvenida-adultos/videos/03_voces_consejero_ideal_1.mp4",
+          "caption": "Voces parte 1 — Eliana, Marta, Lina"
+        },
+        {
+          "type": "video",
+          "src": "bienvenida-adultos/videos/04_voces_consejero_ideal_2.mp4",
+          "caption": "Voces parte 2 — Stefanie, Blanca, Amparo"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Lo que probablemente notaste:</strong><br>Casi todas las cualidades que mencionaron — y que tú probablemente también — tienen que ver con <em>cómo se relaciona con el grupo</em>, no con conocimientos técnicos. Escuchar, acompañar, comprometerse, trabajar en equipo, tener corazón. Ese es el adulto del movimiento."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📷 Comparte tu dibujo (opcional)"
+        },
+        {
+          "type": "photo-upload",
+          "photoId": "consejero-ideal",
+          "prompt": "Sube una foto de tu dibujo",
+          "hint": "Toma una foto a tu hoja desde el celular o sube una imagen desde tu computador. Se guarda en tu progreso del curso para que la puedas ver cuando vuelvas.",
+          "buttonLabel": "📷 Sube tu dibujo"
+        }
+      ],
+      "reflection": {
+        "prompt": "Mira tu dibujo y las 3 cualidades que escribiste. ¿Cuál de esas cualidades reconoces en ti hoy? ¿Cuál te gustaría desarrollar?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Esta actividad busca principalmente que…",
+            "options": [
+              "Evalúes tus habilidades de dibujo",
+              "Articules con tus propias palabras qué cualidades valoras en un consejero, antes de conocer la teoría",
+              "Compares tu dibujo con un modelo oficial para ver si coincide"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Cuando varias personas hicieron el ejercicio, las cualidades que más se repitieron fueron…",
+            "options": [
+              "Conocimientos técnicos especializados (finanzas, derecho, etc.)",
+              "Cualidades sobre cómo se relaciona con el grupo: escuchar, acompañar, comprometerse, trabajar en equipo",
+              "Años de experiencia en el escultismo"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Tu primer compromiso",
+      "emoji": "💚",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 4 minutos · 1 idea central:</strong><br>No es el plan formal — eso lo armarás más adelante. Es solo tu punto de partida: una frase concreta que te recuerde por qué estás aquí."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📝 Tu compromiso, en una frase"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vas a escribir <strong>una sola frase</strong>. La regla: tiene que ser <em>concreta</em> y <em>tuya</em>. No 'voy a ser mejor consejero' (vago). Mejor algo como:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<em>'Voy a llegar a las reuniones del consejo con la lectura previa hecha, todo el segundo semestre.'</em>",
+            "<em>'Voy a aprender a usar Talento 360 antes de fin de año.'</em>",
+            "<em>'Voy a presentarle al jefe de grupo dos ideas para mejorar la comunicación con padres.'</em>",
+            "<em>'Voy a terminar los 5 cursos de esta ruta antes de marzo.'</em>"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Tres cosas que toda buena frase de compromiso debe tener:</strong><br>1. Una <strong>acción</strong> concreta (algo que se hace o se logra)<br>2. Un <strong>plazo</strong> (cuándo)<br>3. Algo que <em>tú</em> puedas controlar (no depende de otros)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✍️ Tu turno"
+        },
+        {
+          "type": "paragraph",
+          "text": "Escribe tu frase de compromiso en el cuadro de reflexión más abajo. <strong>Solo una.</strong> Si te salen varias, escoge la más importante."
+        },
+        {
+          "type": "blockquote",
+          "text": "Esto no es un examen. Es para ti. Pero escribirlo te lo hace real."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔮 ¿Y después qué pasa?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tu compromiso de hoy es el primer paso. En el <strong>Curso 4 — Tu Plan Personal</strong>, vas a convertir esta semilla en algo más estructurado: un plan personal de desarrollo con tu asesor, registrado en la plataforma Talento 360. Pero no te apures. Hoy con esta frase basta."
+        }
+      ],
+      "reflection": {
+        "prompt": "Escribe AQUÍ tu frase de compromiso (una sola, concreta, con plazo, sobre algo que tú puedas controlar)."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Una buena frase de compromiso debe tener tres elementos. ¿Cuáles?",
+            "options": [
+              "Aspiración elevada, motivación emocional, y firma del jefe de grupo",
+              "Acción concreta, plazo, y algo que tú puedas controlar",
+              "Tres metas paralelas, dependencias claras y fecha límite negociada"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "¿Cuál de estas frases está mejor formulada como compromiso?",
+            "options": [
+              "Voy a ser mejor consejero",
+              "Voy a aprender a usar Talento 360 antes de fin de año",
+              "Voy a esperar a que el grupo me asigne nuevas tareas"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — La ruta completa",
+      "emoji": "🗺️",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 3 minutos · 1 idea central:</strong><br>Acabas de terminar el primero de 5 cursos. Aquí va el mapa de lo que sigue, para que decidas a tu ritmo."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🏁 Lo que ya tienes"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Sabes <strong>por qué</strong> tu rol importa, sin importar cómo llegaste",
+            "Identificaste <strong>tu superpoder</strong> y entendiste que se complementa con los demás",
+            "Desarmamos juntos los <strong>3 mitos</strong> más comunes",
+            "Articulaste con tus propias palabras al <strong>consejero ideal</strong>",
+            "Escribiste tu <strong>primer compromiso</strong> personal"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🗺️ Lo que sigue en la ruta"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            { "title": "📜 Curso 2 — La Política — Marco y Principios (30 min)", "description": "El marco oficial que respalda tu rol. Los 13 principios. Las 12 herramientas que tienes a tu disposición. Recomendado siguiente." },
+            { "title": "🔄 Curso 3 — El Ciclo del Adulto en el Movimiento (30 min)", "description": "Cómo se vive un nombramiento de principio a fin: atracción y vinculación, desempeño, decisiones para el futuro. Te da el panorama antes del detalle." },
+            { "title": "🧠 Curso 4 — Las 7 Competencias Esenciales (35 min)", "description": "Una por una: qué se espera de ti como adulto del movimiento. Con autodiagnóstico interactivo para ver dónde estás." },
+            { "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo (30 min)", "description": "Acuerdo Mutuo, Asesor Personal, plataforma Talento 360. Aquí pasas del compromiso al plan formal. Cierra la ruta." }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Sugerencia:</strong> haz los cursos en orden si puedes. Cada uno construye sobre el anterior. Pero si solo tienes tiempo para uno más, ve directo al Curso 2 — es el que te da el marco completo."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎉 Cierre"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ya diste el primer paso. <strong>Eso ya te diferencia</strong> del 90% de los adultos que pasan por un grupo scout sin saber muy bien qué hacen. Te van a entregar tu certificado del Curso 1, y desde ahora tienes claridad."
+        },
+        {
+          "type": "blockquote",
+          "text": "El movimiento te necesitaba como llegaste. Pero te va a aprovechar mejor con cada curso que termines. Sigue."
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cuándo planeas hacer el Curso 2? Pon una fecha concreta — esta semana, este mes, el sábado en la mañana. Lo que te funcione."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del curso",
+        "questions": [
+          {
+            "text": "Si solo puedes hacer un curso adicional, ¿cuál te recomienda esta lección?",
+            "options": [
+              "Curso 3 — El Ciclo del Adulto",
+              "Curso 2 — La Política — Marco y Principios",
+              "Curso 5 — Tu Plan Personal de Desarrollo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El Curso 5 (Tu Plan Personal de Desarrollo) construye sobre…",
+            "options": [
+              "El compromiso simple de una frase que escribiste en este Curso 1, y se enriquece con el autodiagnóstico de competencias del Curso 4",
+              "Un examen previo de conocimientos generales",
+              "Un certificado de Talento 360 obtenido por separado"
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    { "id": "achievement-1", "name": "Diste el Primer Paso", "emoji": "🚪", "unlockOnModule": 2 },
+    { "id": "achievement-2", "name": "Reconoces tu Superpoder", "emoji": "🦸", "unlockOnModule": 3 },
+    { "id": "achievement-3", "name": "Desarmas los Mitos", "emoji": "❌", "unlockOnModule": 4 },
+    { "id": "achievement-4", "name": "Adulto Comprometido", "emoji": "💚", "unlockOnModule": 6 },
+    { "id": "achievement-5", "name": "Curso 1 Completado", "emoji": "🏆", "unlockOnModule": -1 }
+  ],
+  "certificate": {
+    "courseName": "BIENVENIDA AL MOVIMIENTO DE ADULTOS",
+    "description": "ha completado el Curso 1 de la Ruta de Formación de Adultos en el Movimiento, dando el primer paso para reconocer su rol, identificar sus superpuderes y comprometerse con su crecimiento dentro de la Asociación Scouts de Colombia"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema de Curso - Plataforma Educativa Rover ASC",
+  "description": "Define la estructura completa de un curso para la plataforma de formacion Rover. Cada curso se compone de modulos con contenido, reflexiones y evaluaciones.",
+  "type": "object",
+  "required": ["courseId", "title", "description", "icon", "duration", "totalContentModules", "modules", "achievements", "certificate"],
+  "properties": {
+    "courseId": {
+      "type": "string",
+      "description": "Identificador unico del curso en formato kebab-case. Se usa como nombre de carpeta.",
+      "pattern": "^[a-z0-9-]+$",
+      "examples": ["fundamentos-scout", "metodo-scout", "pedagogia-scout"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Titulo completo del curso que se muestra en la cabecera y el catalogo.",
+      "examples": ["Fundamentos del Movimiento Scout"]
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Subtitulo opcional que aparece debajo del titulo.",
+      "default": "Formacion para Rovers - Sinodales y Ayudantes"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripcion corta para la tarjeta del catalogo de cursos (2-3 oraciones)."
+    },
+    "icon": {
+      "type": "string",
+      "description": "Emoji que representa el curso en el catalogo.",
+      "examples": ["🏕️", "⚙️", "📚", "🧭"]
+    },
+    "duration": {
+      "type": "string",
+      "description": "Duracion estimada del curso en horas.",
+      "examples": ["6 horas", "8 horas", "4 horas"]
+    },
+    "totalContentModules": {
+      "type": "integer",
+      "description": "Numero de modulos de CONTENIDO (sin contar registro, inicio y certificado). Se usa para calcular el progreso.",
+      "minimum": 3,
+      "maximum": 12
+    },
+    "googleScriptUrl": {
+      "type": "string",
+      "description": "URL del Google Apps Script para sincronizacion. Si se omite, usa la URL por defecto de la plataforma.",
+      "format": "uri"
+    },
+    "modules": {
+      "type": "array",
+      "description": "Lista de modulos del curso. El orden define la secuencia. NO incluir modulo de registro ni certificado — se generan automaticamente.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "emoji", "sections"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Numero del modulo (empieza en 1). El modulo 0 (registro) y el ultimo (certificado) se generan automaticamente."
+          },
+          "title": {
+            "type": "string",
+            "description": "Titulo del modulo que aparece en la navegacion y cabecera."
+          },
+          "emoji": {
+            "type": "string",
+            "description": "Emoji para la navegacion del modulo."
+          },
+          "navLabel": {
+            "type": "string",
+            "description": "Etiqueta corta para el boton de navegacion. Si se omite, se usa el titulo truncado."
+          },
+          "isIntro": {
+            "type": "boolean",
+            "description": "Si es true, este modulo es la pagina de bienvenida/inicio (no cuenta como modulo de contenido, no tiene quiz).",
+            "default": false
+          },
+          "sections": {
+            "type": "array",
+            "description": "Contenido del modulo, en orden de aparicion.",
+            "items": {
+              "type": "object",
+              "required": ["type"],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["paragraph", "heading", "info-box", "mission-box", "list", "timeline", "method-grid", "blockquote", "course-objectives", "video", "policy-quote", "photo-upload", "self-assessment", "plan-builder"],
+                  "description": "Tipo de seccion de contenido."
+                },
+                "text": {
+                  "type": "string",
+                  "description": "Texto principal de la seccion. Soporta HTML basico (<strong>, <em>, <br>)."
+                },
+                "level": {
+                  "type": "integer",
+                  "enum": [3, 4],
+                  "description": "Nivel de heading (solo para type=heading). Usar 3 para secciones principales, 4 para subsecciones."
+                },
+                "ordered": {
+                  "type": "boolean",
+                  "description": "Si la lista es ordenada (numeros) o desordenada (puntos). Solo para type=list.",
+                  "default": false
+                },
+                "items": {
+                  "type": "array",
+                  "description": "Elementos de la lista, timeline o method-grid.",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "Item de lista simple (soporta HTML basico)."
+                      },
+                      {
+                        "type": "object",
+                        "description": "Item de timeline o method-grid.",
+                        "properties": {
+                          "title": { "type": "string" },
+                          "description": { "type": "string" },
+                          "color": {
+                            "type": "string",
+                            "description": "Color de fondo para method-grid items (formato hex)."
+                          },
+                          "borderColor": {
+                            "type": "string",
+                            "description": "Color del borde para method-grid items."
+                          },
+                          "subitems": {
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "Sub-lista dentro de un timeline item."
+                          }
+                        },
+                        "required": ["title", "description"]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "reflection": {
+            "type": "object",
+            "description": "Pregunta de reflexion personal al final del modulo.",
+            "properties": {
+              "prompt": {
+                "type": "string",
+                "description": "Pregunta de reflexion para el estudiante."
+              }
+            },
+            "required": ["prompt"]
+          },
+          "quiz": {
+            "type": "object",
+            "description": "Evaluacion del modulo. Minimo 2 preguntas. El estudiante necesita 70% para avanzar.",
+            "required": ["title", "questions"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Titulo de la evaluacion.",
+                "examples": ["Evaluacion - Mision Scout"]
+              },
+              "questions": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "object",
+                  "required": ["text", "options", "correctIndex"],
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "description": "Texto de la pregunta."
+                    },
+                    "options": {
+                      "type": "array",
+                      "minItems": 3,
+                      "maxItems": 4,
+                      "items": { "type": "string" },
+                      "description": "Opciones de respuesta (3 o 4)."
+                    },
+                    "correctIndex": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "Indice (base 0) de la opcion correcta."
+                    }
+                  }
+                }
+              },
+              "nextLabel": {
+                "type": "string",
+                "description": "Texto del boton para continuar al siguiente modulo.",
+                "examples": ["Continuar a Mafeking ⛰️"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "description": "Logros desbloqueables durante el curso (4-6 recomendado).",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "emoji", "unlockOnModule"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID unico del logro.",
+            "examples": ["achievement-1"]
+          },
+          "name": {
+            "type": "string",
+            "description": "Nombre del logro.",
+            "examples": ["Historiador Scout"]
+          },
+          "emoji": {
+            "type": "string",
+            "examples": ["📚"]
+          },
+          "unlockOnModule": {
+            "type": "integer",
+            "description": "Numero de modulo que desbloquea este logro al aprobar el quiz."
+          }
+        }
+      }
+    },
+    "certificate": {
+      "type": "object",
+      "description": "Configuracion del certificado de completacion.",
+      "required": ["courseName", "description"],
+      "properties": {
+        "courseName": {
+          "type": "string",
+          "description": "Nombre del curso en MAYUSCULAS para el certificado.",
+          "examples": ["FUNDAMENTOS DEL MOVIMIENTO SCOUT"]
+        },
+        "description": {
+          "type": "string",
+          "description": "Texto descriptivo del certificado.",
+          "examples": ["ha completado exitosamente el curso de Historia y Caracteristicas Esenciales del Movimiento Scout"]
+        }
+      }
+    }
+  }
+}
