@@ -146,6 +146,8 @@ function buildCoverPage(course) {
         <div class="cover-content">
             <div class="cover-logos">
                 <div class="cover-logo-placeholder">ASC</div>
+                <div class="cover-separator"></div>
+                <div class="cover-logo-placeholder">VALLE</div>
             </div>
             <div class="cover-icon">${course.icon}</div>
             <h1 class="cover-title">${course.title}</h1>
@@ -244,7 +246,7 @@ function buildRegistrationScreen(course) {
         <div class="screen-frame">
             <div class="screen-header">
                 <div class="screen-topbar">
-                    <span class="screen-topbar-logos">🏕️ ASC</span>
+                    <span class="screen-topbar-logos">🏕️ ASC | VALLE</span>
                     <span class="screen-topbar-link">← Volver al catálogo</span>
                 </div>
                 <div class="header">
@@ -345,7 +347,7 @@ function buildModuleScreen(mod, course, contentIndex, totalContent, screenNumber
         <div class="screen-frame">
             <div class="screen-header">
                 <div class="screen-topbar">
-                    <span class="screen-topbar-logos">🏕️ ASC</span>
+                    <span class="screen-topbar-logos">🏕️ ASC | VALLE</span>
                     <span class="screen-topbar-link">← Volver al catálogo</span>
                 </div>
                 <div class="header">
@@ -378,7 +380,7 @@ function buildCertificateScreen(course, screenNumber) {
         <div class="screen-frame">
             <div class="screen-header">
                 <div class="screen-topbar">
-                    <span class="screen-topbar-logos">🏕️ ASC</span>
+                    <span class="screen-topbar-logos">🏕️ ASC | VALLE</span>
                     <span class="screen-topbar-link">← Volver al catálogo</span>
                 </div>
                 <div class="header">

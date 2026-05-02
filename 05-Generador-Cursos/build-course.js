@@ -406,6 +406,8 @@ function buildCertificateModule(course, certModuleId) {
                     <div style="text-align: center; margin-bottom: 15px;">
                         <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;">
                             <img src="../assets/logo-asc.png" alt="ASC" style="height: 45px;">
+                            <div style="width: 1px; height: 35px; background: #ddd;"></div>
+                            <img src="../assets/logo-vallescout.png" alt="Valle Scout" style="height: 45px;">
                         </div>
                         <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociacion Scouts de Colombia</p>
                         <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 2px 0;">Formación de Adultos en el Movimiento</p>
@@ -551,6 +553,8 @@ ${cssContent}
         <div class="top-bar-inner">
             <div class="logos">
                 <img src="${assetPrefix}/logo-asc.png" alt="Asociacion Scouts de Colombia">
+                <div class="separator"></div>
+                <img src="${assetPrefix}/logo-vallescout.png" alt="Scouts del Valle">
             </div>
             <a href="../index.html" class="back-link">&#8592; Volver a Cursos</a>
         </div>

@@ -787,11 +787,12 @@ function downloadCertificatePDF() {
     var courseDescription = COURSE_CONFIG.certificateDescription ||
         'ha completado exitosamente el curso de formación de la Plataforma de Formación de Adultos ASC';
 
-    // Cargar logo ASC
+    // Cargar logos
     var ascImg = cert.querySelector('img[src*="logo-asc"]');
+    var valleImg = cert.querySelector('img[src*="logo-vallescout"]');
 
-    Promise.all([_imgToDataURL(ascImg)]).then(function(logos) {
-        var logoASC = logos[0], logoValle = null;
+    Promise.all([_imgToDataURL(ascImg), _imgToDataURL(valleImg)]).then(function(logos) {
+        var logoASC = logos[0], logoValle = logos[1];
 
         // A4 portrait: 210 x 297 mm
         var pdf = new JsPDF('p', 'mm', 'a4');
