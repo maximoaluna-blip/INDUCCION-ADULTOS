@@ -512,9 +512,9 @@ function buildHTML(course) {
     const nav = buildNavigation(course, certModuleId);
     const quizAnswers = buildQuizAnswers(course.modules);
 
-    // Default vacio para evitar que cursos de adultos golpeen el backend de Rover por accidente.
-    // Cuando se despliegue el Apps Script de adultos, sustituir aqui o pasar via course.googleScriptUrl.
-    const googleUrl = course.googleScriptUrl || '';
+    // URL del Web App de Google Apps Script para la plataforma de adultos.
+    // Despliegue inicial: 2026-05-02 (token ADULTOS_ASC_2026).
+    const googleUrl = course.googleScriptUrl || 'https://script.google.com/macros/s/AKfycbzs1IveYZc5i2hrH4P6NYtmMAasmVJ3gpIwRKb4SKEvWT6kFmuOsRcglZzNCkFdaTlE/exec';
 
     // Build modules HTML
     const registrationHtml = buildRegistrationModule(course);
