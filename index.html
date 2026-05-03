@@ -381,13 +381,13 @@
 
     <script>
     (function() {
-        // Config para landing raiz (GitHub Pages): cursos.json esta en 02-Plataforma-Web/,
-        // y los cursos activos viven en carpetas tipo fundamentos/index.html
+        // Config para landing raiz (GitHub Pages): cursos.json y los cursos viven en 02-Plataforma-Web/.
         var CATALOG_URL = '02-Plataforma-Web/cursos.json';
+        var COURSES_BASE = '02-Plataforma-Web/';
 
         function buildHref(course) {
-            if (course.folder) return course.folder + '/index.html';
-            if (course.file) return course.file;
+            if (course.file) return COURSES_BASE + course.file;
+            if (course.folder) return COURSES_BASE + course.folder + '/index.html';
             return '#';
         }
 
