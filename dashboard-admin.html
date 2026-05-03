@@ -1017,7 +1017,23 @@ function fetchData() {
             return response.json();
         })
         .then(function(data) {
-            state.data = data;
+            // Apps Script envuelve en {success, data, error}. Desempaquetar.
+            var inner = (data && data.success && data.data) ? data.data : data;
+            // Normalizar al formato que espera el dashboard:
+            // arrays detallados (vacios si el endpoint solo trae agregados) +
+            // resumen agregado.
+            state.data = {
+                registros: inner.registros || [],
+                certificados: inner.certificados || [],
+                modulos: inner.modulos || [],
+                resumen: inner.resumen || {
+                    totalRovers: inner.totalUsers || 0,
+                    totalCertificados: inner.totalCertificates || 0,
+                    tasaCompletacion: (inner.totalUsers > 0 ? Math.round((inner.totalCertificates / inner.totalUsers) * 100) : 0),
+                    promedioPuntuacion: inner.averageScore || 0
+                },
+                _rawAggregates: inner  // por si luego queremos usar courseStats, etc.
+            };
             setConnectionStatus('connected');
             populateFilters();
             applyFilters();
