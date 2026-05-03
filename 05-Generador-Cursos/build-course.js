@@ -512,7 +512,9 @@ function buildHTML(course) {
     const nav = buildNavigation(course, certModuleId);
     const quizAnswers = buildQuizAnswers(course.modules);
 
-    const googleUrl = course.googleScriptUrl || 'https://script.google.com/macros/s/AKfycbzHd4KB4MafCKKPp8kEf9V-vLnlsCKUhmqR6eMFB-Qvz2f03xy9bYSx86eGUuS5RkfX2g/exec';
+    // Default vacio para evitar que cursos de adultos golpeen el backend de Rover por accidente.
+    // Cuando se despliegue el Apps Script de adultos, sustituir aqui o pasar via course.googleScriptUrl.
+    const googleUrl = course.googleScriptUrl || '';
 
     // Build modules HTML
     const registrationHtml = buildRegistrationModule(course);

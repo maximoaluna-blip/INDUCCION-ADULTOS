@@ -1,6 +1,6 @@
 # Instrucciones: Backend con Google Apps Script
 
-## Plataforma Educativa Rover ASC - Asociacion Scouts de Colombia
+## Plataforma de Formacion de Adultos ASC - Asociacion Scouts de Colombia
 
 Este documento explica paso a paso como configurar el backend en Google Apps Script
 para que los cursos HTML (alojados en GitHub Pages) puedan guardar datos en Google Sheets.
@@ -19,7 +19,7 @@ para que los cursos HTML (alojados en GitHub Pages) puedan guardar datos en Goog
 
 1. Ve a [Google Sheets](https://sheets.google.com) e inicia sesion.
 2. Crea una nueva hoja de calculo en blanco.
-3. Renombrala como: **"Plataforma Educativa Rover ASC - Base de Datos"** (o el nombre que prefieras).
+3. Renombrala como: **"Plataforma de Formacion de Adultos ASC - Base de Datos"** (o el nombre que prefieras).
 4. Copia la URL de la hoja; la necesitaras mas adelante.
 5. **No necesitas crear las pestanias manualmente.** El script las creara automaticamente la primera vez que se ejecute.
 
@@ -48,7 +48,7 @@ para que los cursos HTML (alojados en GitHub Pages) puedan guardar datos en Goog
 4. Copia todo el contenido (Ctrl+A, luego Ctrl+C).
 5. Pegalo en el editor de Apps Script (Ctrl+V).
 6. Renombra el proyecto haciendo clic en "Proyecto sin titulo" en la parte superior.
-   Sugerencia: **"Backend Plataforma Rover ASC"**.
+   Sugerencia: **"Backend Plataforma de Adultos ASC"**.
 7. Guarda con Ctrl+S.
 
 ---
@@ -96,7 +96,7 @@ Si ya creaste el proyecto en script.google.com (Paso 2), necesitas vincularlo ma
 3. La primera vez te pedira permisos:
    - Haz clic en **"Revisar permisos"**.
    - Selecciona tu cuenta de Google.
-   - Aparecera una advertencia: "Esta app no esta verificada". Haz clic en **"Avanzada"** y luego en **"Ir a Backend Plataforma Rover ASC (no seguro)"**.
+   - Aparecera una advertencia: "Esta app no esta verificada". Haz clic en **"Avanzada"** y luego en **"Ir a Backend Plataforma de Adultos ASC (no seguro)"**.
    - Haz clic en **"Permitir"**.
 4. Verifica en el **registro de ejecucion** (Ver > Registros) que aparezcan mensajes de exito.
 5. Ve a tu hoja de calculo y verifica que se crearon las 5 pestanias con sus encabezados.
@@ -108,7 +108,7 @@ Si ya creaste el proyecto en script.google.com (Paso 2), necesitas vincularlo ma
 1. En el editor de Apps Script, ve a **Implementar > Nueva implementacion**.
 2. Haz clic en el icono de engranaje y selecciona **"Aplicacion web"**.
 3. Configura:
-   - **Descripcion:** "Backend Plataforma Educativa Rover ASC v1.0" (o la version que corresponda).
+   - **Descripcion:** "Backend Plataforma de Formacion de Adultos ASC v1.0" (o la version que corresponda).
    - **Ejecutar como:** "Yo" (tu cuenta de correo).
    - **Quien tiene acceso:** "Cualquier persona".
 4. Haz clic en **"Implementar"**.
@@ -210,7 +210,7 @@ El backend requiere un campo `token` en cada solicitud POST. Actualiza la funcio
 var payload = Object.assign({}, data, {
     timestamp: new Date().toISOString(),
     url: window.location.href,
-    token: 'ROVER_ASC_2025'  // Token de autenticacion
+    token: 'ADULTOS_ASC_2026'  // Token de autenticacion
 });
 ```
 
@@ -271,7 +271,7 @@ Retorna: total de usuarios, certificados, evaluaciones, promedios y completacion
 ### Los datos no llegan a la hoja
 - Verifica que la URL en el HTML sea correcta y termine en `/exec`.
 - Revisa la consola del navegador (F12) para ver errores de red.
-- Verifica que el token `ROVER_ASC_2025` este incluido en las solicitudes.
+- Verifica que el token `ADULTOS_ASC_2026` este incluido en las solicitudes.
 
 ### Error "SpreadsheetApp.getActiveSpreadsheet() is null"
 - Esto ocurre si creaste el script desde script.google.com en lugar de desde la hoja.
@@ -304,11 +304,11 @@ Si necesitas cambiar el token (por ejemplo, por seguridad):
 
 ## Backup automatico del Google Sheet
 
-El sistema incluye un modulo de backup automatico que crea una copia diaria del Google Sheet en tu Google Drive. Es **critico** activarlo: si el sheet se borra accidentalmente, los datos de los Rovers se perderian.
+El sistema incluye un modulo de backup automatico que crea una copia diaria del Google Sheet en tu Google Drive. Es **critico** activarlo: si el sheet se borra accidentalmente, los datos de los adultos voluntarios se perderian.
 
 ### Que hace
-- Cada noche a las **2:00 AM** copia el sheet completo a una carpeta `Backups_Plataforma_Rover_ASC` en tu Drive.
-- Nombra cada copia con la fecha: `rover-backup-2026-04-25`.
+- Cada noche a las **2:00 AM** copia el sheet completo a una carpeta `Backups_Plataforma_Adultos_ASC` en tu Drive.
+- Nombra cada copia con la fecha: `adultos-backup-2026-04-25`.
 - Conserva los **ultimos 30 backups** y elimina automaticamente los mas antiguos.
 - Si falla, te envia un correo de alerta a la cuenta propietaria del script.
 
@@ -330,7 +330,7 @@ El sistema incluye un modulo de backup automatico que crea una copia diaria del 
 
 1. En el editor, selecciona la funcion **`backupAutomatico`** y pulsa **Ejecutar**.
 2. Revisa el log: vera el URL del backup recien creado.
-3. Abre tu Drive y busca la carpeta `Backups_Plataforma_Rover_ASC` para confirmar.
+3. Abre tu Drive y busca la carpeta `Backups_Plataforma_Adultos_ASC` para confirmar.
 
 ### Listar backups existentes
 
@@ -339,7 +339,7 @@ Ejecuta la funcion **`listarBackups`** desde el editor. El log mostrara todos lo
 ### Restaurar desde un backup
 
 Si necesitas restaurar (caso de borrado accidental):
-1. Abre la carpeta `Backups_Plataforma_Rover_ASC` en Drive.
+1. Abre la carpeta `Backups_Plataforma_Adultos_ASC` en Drive.
 2. Click derecho sobre el backup deseado > **Hacer una copia** o **Mover** al lugar del sheet original.
 3. Asegurate de que el sheet restaurado tenga el mismo `Id` o actualiza la implementacion del Web App si cambio.
 
@@ -353,10 +353,10 @@ En la parte superior del bloque de backup en `google-apps-script.js` puedes ajus
 
 | Variable | Valor por defecto | Descripcion |
 |----------|-------------------|-------------|
-| `BACKUP_FOLDER_NAME` | `Backups_Plataforma_Rover_ASC` | Nombre de la carpeta en Drive |
+| `BACKUP_FOLDER_NAME` | `Backups_Plataforma_Adultos_ASC` | Nombre de la carpeta en Drive |
 | `BACKUP_RETENTION_DAYS` | `30` | Cuantos dias conservar backups |
 | `BACKUP_HOUR` | `2` | Hora del dia en que se ejecuta (0-23) |
-| `BACKUP_FILENAME_PREFIX` | `rover-backup-` | Prefijo del nombre de cada copia |
+| `BACKUP_FILENAME_PREFIX` | `adultos-backup-` | Prefijo del nombre de cada copia |
 
 ---
 

@@ -1044,7 +1044,7 @@ function recoverProgress() {
     var url = COURSE_CONFIG.googleScriptUrl +
         '?action=recover&email=' + encodeURIComponent(email) +
         '&course=' + encodeURIComponent(COURSE_CONFIG.courseId) +
-        '&token=ROVER_ASC_2025';
+        '&token=ADULTOS_ASC_2026';
 
     fetch(url, { redirect: 'follow' })
         .then(function(response) {
@@ -1155,7 +1155,7 @@ function sendToGoogleSheets(data) {
         var indicator = document.getElementById('syncIndicator');
         if (indicator) indicator.classList.add('show');
         var payload = Object.assign({}, data, {
-            token: 'ROVER_ASC_2025',
+            token: 'ADULTOS_ASC_2026',
             timestamp: new Date().toISOString(),
             url: window.location.href
         });

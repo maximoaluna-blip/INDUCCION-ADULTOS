@@ -1,5 +1,5 @@
 // ============================================================================
-// BACKEND - PLATAFORMA EDUCATIVA ROVER ASC
+// BACKEND - PLATAFORMA DE FORMACION DE ADULTOS ASC
 // Google Apps Script (se ejecuta en los servidores de Google, NO en Node.js)
 //
 // Este archivo sirve como backend para los cursos HTML estaticos alojados
@@ -7,15 +7,15 @@
 // notificaciones por correo.
 //
 // Desplegado como Web App en: https://script.google.com
-// Autor: Plataforma Educativa Rover ASC - Asociacion Scouts de Colombia
+// Autor: Plataforma de Formacion de Adultos ASC - Asociacion Scouts de Colombia
 // ============================================================================
 
 // --- Configuracion global ---
-var AUTH_TOKEN = 'ROVER_ASC_2025';
+var AUTH_TOKEN = 'ADULTOS_ASC_2026';
 var RATE_LIMIT_MAX = 30;         // maximo de solicitudes por email por minuto
 var RATE_LIMIT_WINDOW = 60;      // ventana en segundos
 var BRAND_COLOR = '#622599';     // morado institucional scout
-var PLATFORM_NAME = 'Plataforma Educativa Rover ASC';
+var PLATFORM_NAME = 'Plataforma de Formacion de Adultos ASC';
 
 // ============================================================================
 // FUNCIONES AUXILIARES (HELPERS)
@@ -236,12 +236,12 @@ function getReminderEmailHtml(name, course, daysInactive) {
     '    <div style="background:#f8f0ff;border-left:4px solid ' + BRAND_COLOR + ';padding:15px 20px;margin:15px 0;border-radius:0 8px 8px 0;">' +
     '      <strong style="color:' + BRAND_COLOR + ';font-size:18px;">' + sanitize(course, 200) + '</strong>' +
     '    </div>' +
-    '    <p style="color:#333;line-height:1.6;">Sabemos que la vida rover es activa y llena de compromisos, pero completar tu formacion te prepara para servir mejor a tu grupo scout. !Solo necesitas unos minutos al dia para retomar tu avance!</p>' +
+    '    <p style="color:#333;line-height:1.6;">Sabemos que ser adulto del movimiento es activo y lleno de compromisos, pero completar tu formacion te prepara para servir mejor a tu grupo scout. !Solo necesitas unos minutos al dia para retomar tu avance!</p>' +
     '    <div style="background:#fffbe6;border-left:4px solid #ffe675;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0;">' +
     '      <p style="color:#7a6a00;margin:0;font-size:14px;line-height:1.5;"><strong>&#128161; Consejo:</strong> Tu progreso esta guardado. Al entrar de nuevo con tu email podras continuar justo donde lo dejaste.</p>' +
     '    </div>' +
     '    <div style="text-align:center;margin:25px 0;">' +
-    '      <a href="https://maximoaluna-blip.github.io/INDUCCION-ROVER/" style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:14px 32px;border-radius:25px;font-weight:bold;font-size:16px;text-decoration:none;">Retomar mi curso</a>' +
+    '      <a href="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/" style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:14px 32px;border-radius:25px;font-weight:bold;font-size:16px;text-decoration:none;">Retomar mi curso</a>' +
     '    </div>' +
     '    <p style="color:#888;line-height:1.6;font-size:13px;text-align:center;font-style:italic;">"Siempre Listo para Servir"</p>' +
     '  </td></tr>' +
@@ -687,9 +687,13 @@ function handleRegister(body, timestamp) {
     return jsonResponse(false, null, 'El formato del email es invalido.');
   }
 
-  var age = parseInt(body.age, 10);
-  if (isNaN(age) || age < 18 || age > 22) {
-    return jsonResponse(false, null, 'La edad debe estar entre 18 y 22 anios (rango oficial de rovers ASC).');
+  // Edad: opcional. Si se provee, debe ser numero >= 18 (los adultos del movimiento son 18+)
+  var age = null;
+  if (body.age !== undefined && body.age !== null && body.age !== '') {
+    age = parseInt(body.age, 10);
+    if (isNaN(age) || age < 18) {
+      return jsonResponse(false, null, 'La edad debe ser un numero igual o mayor a 18 anios.');
+    }
   }
 
   var group = sanitize(body.group, 200);
@@ -1210,7 +1214,7 @@ function configurarTriggerRecordatorios() {
  * Configuracion del backup automatico.
  */
 var BACKUP_CONFIG = {
-  folderName: 'Backups Plataforma Rover ASC',  // Carpeta en Google Drive raiz
+  folderName: 'Backups Plataforma Adultos ASC',  // Carpeta en Google Drive raiz
   retentionCount: 12                            // Conservar ultimos N backups (resto se borra)
 };
 
@@ -1244,7 +1248,7 @@ function backupSheets() {
     // Timestamp formateado sin caracteres invalidos para nombres de archivo
     var tz = ss.getSpreadsheetTimeZone() || 'America/Bogota';
     var stamp = Utilities.formatDate(startTime, tz, 'yyyy-MM-dd-HHmm');
-    var backupName = 'Backup Rover ASC - ' + stamp;
+    var backupName = 'Backup Adultos ASC - ' + stamp;
 
     var copy = sourceFile.makeCopy(backupName, folder);
     Logger.log('Backup creado: ' + backupName + ' (id=' + copy.getId() + ')');
@@ -1339,7 +1343,7 @@ function configurarTriggerBackup() {
  * Crea todas las hojas necesarias si no existen.
  */
 function inicializarHojas() {
-  Logger.log('=== Inicializando hojas de la Plataforma Educativa Rover ASC ===');
+  Logger.log('=== Inicializando hojas de la Plataforma de Formacion de Adultos ASC ===');
 
   for (var key in SHEET_CONFIG) {
     var config = SHEET_CONFIG[key];
@@ -1374,15 +1378,15 @@ function testCertificateCode() {
   }
 }
 // ============================================================================
-// BACKUP AUTOMATICO - Plataforma Educativa Rover ASC
+// BACKUP AUTOMATICO - Plataforma de Formacion de Adultos ASC
 // ============================================================================
 //
 // Este modulo se agrega al final de google-apps-script.js y crea una copia
 // completa del Google Sheet cada noche a las 2:00 AM (zona horaria del script).
 //
 // CARACTERISTICAS:
-//  - Crea una carpeta "Backups_Plataforma_Rover_ASC" en tu Google Drive
-//  - Genera una copia del sheet con timestamp: rover-backup-YYYY-MM-DD.xlsx
+//  - Crea una carpeta "Backups_Plataforma_Adultos_ASC" en tu Google Drive
+//  - Genera una copia del sheet con timestamp: adultos-backup-YYYY-MM-DD.xlsx
 //  - Conserva los ultimos 30 backups y borra los mas antiguos automaticamente
 //  - Envia correo al propietario del script si la copia falla
 //
@@ -1400,10 +1404,10 @@ function testCertificateCode() {
 // ============================================================================
 
 // --- Configuracion ---
-var BACKUP_FOLDER_NAME = 'Backups_Plataforma_Rover_ASC';
+var BACKUP_FOLDER_NAME = 'Backups_Plataforma_Adultos_ASC';
 var BACKUP_RETENTION_DAYS = 30;     // numero de backups a conservar
 var BACKUP_HOUR = 2;                // hora del dia para el backup (0-23)
-var BACKUP_FILENAME_PREFIX = 'rover-backup-';
+var BACKUP_FILENAME_PREFIX = 'adultos-backup-';
 
 /**
  * Obtiene (o crea) la carpeta de backups en Drive.
@@ -1435,7 +1439,7 @@ function backupAutomatico() {
       throw new Error('No hay un Google Sheet activo asociado a este script.');
     }
 
-    // Construir nombre del backup con fecha (formato: rover-backup-2026-04-25)
+    // Construir nombre del backup con fecha (formato: adultos-backup-2026-04-25)
     var fecha = Utilities.formatDate(inicio, Session.getScriptTimeZone(), 'yyyy-MM-dd');
     var nombreBackup = BACKUP_FILENAME_PREFIX + fecha;
 
@@ -1485,7 +1489,7 @@ function backupAutomatico() {
       if (emailPropietario) {
         MailApp.sendEmail({
           to: emailPropietario,
-          subject: '⚠️ Falla en backup - Plataforma Rover ASC',
+          subject: '⚠️ Falla en backup - Plataforma Adultos ASC',
           body: 'El backup automatico del Google Sheet fallo a las ' + inicio.toISOString() + '.\n\n' +
                 'Error: ' + err.message + '\n\n' +
                 'Stack: ' + (err.stack || '(no disponible)') + '\n\n' +

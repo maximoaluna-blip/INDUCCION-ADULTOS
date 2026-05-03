@@ -1840,7 +1840,7 @@ body {
         title: "Las 7 Competencias Esenciales",
         totalModules: 9,
         contentModules: 6,
-        googleScriptUrl: "https://script.google.com/macros/s/AKfycbzHd4KB4MafCKKPp8kEf9V-vLnlsCKUhmqR6eMFB-Qvz2f03xy9bYSx86eGUuS5RkfX2g/exec",
+        googleScriptUrl: "",
         achievements: [{"id":"achievement-1","name":"Maestro de los Grados","emoji":"📏","unlockOnModule":2},{"id":"achievement-2","name":"Reconoce el YO","emoji":"🪞","unlockOnModule":3},{"id":"achievement-3","name":"Comprende el SISTEMA","emoji":"🧭","unlockOnModule":4},{"id":"achievement-4","name":"Domina el EQUIPO","emoji":"🤝","unlockOnModule":5},{"id":"achievement-5","name":"Curso 4 Completado","emoji":"🏆","unlockOnModule":-1}]
     };
 
@@ -2893,7 +2893,7 @@ function recoverProgress() {
     var url = COURSE_CONFIG.googleScriptUrl +
         '?action=recover&email=' + encodeURIComponent(email) +
         '&course=' + encodeURIComponent(COURSE_CONFIG.courseId) +
-        '&token=ROVER_ASC_2025';
+        '&token=ADULTOS_ASC_2026';
 
     fetch(url, { redirect: 'follow' })
         .then(function(response) {
@@ -3004,7 +3004,7 @@ function sendToGoogleSheets(data) {
         var indicator = document.getElementById('syncIndicator');
         if (indicator) indicator.classList.add('show');
         var payload = Object.assign({}, data, {
-            token: 'ROVER_ASC_2025',
+            token: 'ADULTOS_ASC_2026',
             timestamp: new Date().toISOString(),
             url: window.location.href
         });
