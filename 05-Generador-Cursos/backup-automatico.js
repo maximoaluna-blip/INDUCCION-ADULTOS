@@ -1,13 +1,13 @@
 // ============================================================================
-// BACKUP AUTOMATICO - Plataforma Educativa Rover ASC
+// BACKUP AUTOMATICO - Plataforma de Formacion de Adultos ASC
 // ============================================================================
 //
 // Este modulo se agrega al final de google-apps-script.js y crea una copia
 // completa del Google Sheet cada noche a las 2:00 AM (zona horaria del script).
 //
 // CARACTERISTICAS:
-//  - Crea una carpeta "Backups_Plataforma_Rover_ASC" en tu Google Drive
-//  - Genera una copia del sheet con timestamp: rover-backup-YYYY-MM-DD.xlsx
+//  - Crea una carpeta "Backups_Plataforma_Adultos_ASC" en tu Google Drive
+//  - Genera una copia del sheet con timestamp: adultos-backup-YYYY-MM-DD.xlsx
 //  - Conserva los ultimos 30 backups y borra los mas antiguos automaticamente
 //  - Envia correo al propietario del script si la copia falla
 //
@@ -25,10 +25,10 @@
 // ============================================================================
 
 // --- Configuracion ---
-var BACKUP_FOLDER_NAME = 'Backups_Plataforma_Rover_ASC';
+var BACKUP_FOLDER_NAME = 'Backups_Plataforma_Adultos_ASC';
 var BACKUP_RETENTION_DAYS = 30;     // numero de backups a conservar
 var BACKUP_HOUR = 2;                // hora del dia para el backup (0-23)
-var BACKUP_FILENAME_PREFIX = 'rover-backup-';
+var BACKUP_FILENAME_PREFIX = 'adultos-backup-';
 
 /**
  * Obtiene (o crea) la carpeta de backups en Drive.
@@ -60,7 +60,7 @@ function backupAutomatico() {
       throw new Error('No hay un Google Sheet activo asociado a este script.');
     }
 
-    // Construir nombre del backup con fecha (formato: rover-backup-2026-04-25)
+    // Construir nombre del backup con fecha (formato: adultos-backup-2026-04-25)
     var fecha = Utilities.formatDate(inicio, Session.getScriptTimeZone(), 'yyyy-MM-dd');
     var nombreBackup = BACKUP_FILENAME_PREFIX + fecha;
 

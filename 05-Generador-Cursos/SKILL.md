@@ -104,8 +104,17 @@ Al terminar, muestra:
 | `timeline` | Línea de tiempo | `items` (array de `{title, description, subitems?}`) |
 | `method-grid` | Grilla de tarjetas | `items` (array de `{title, description, color, borderColor}`) |
 | `blockquote` | Cita destacada | `text` |
-| `video` | Video MP4 con lazy-load | `src` (ruta relativa al HTML), `caption` (opcional) |
+| `video` | Video MP4 con lazy-load (solo carga cuando el módulo está activo) | `src` (ruta relativa al HTML), `caption` (opcional) |
 | `policy-quote` | Cita oficial plegable (collapsed por defecto) | `text` (cita textual), `source` (fuente — ej. "Política Nacional de Adultos en el Movimiento, Cap. 1, p. 1"), `label` (opcional, default "📋 Ver lo que dice la política textualmente") |
+| `photo-upload` | Zona de subida de imagen (compresión cliente a 1200px JPEG, persiste en localStorage). Útil para "sube tu dibujo / foto del documento firmado" | `photoId` (clave única de la foto en localStorage), `prompt` (título del cuadro), `hint` (texto de ayuda), `buttonLabel` (opcional, label del botón) |
+| `self-assessment` | Autodiagnóstico interactivo: el estudiante elige un grado por competencia. Calcula fortalezas/oportunidades y guarda perfil global cross-course en clave `competencyProfile` de localStorage | `assessmentId` (clave única), `intro` (texto introductorio), `competences` (array de `{id, name, definition, grades: [{level, criterion}]}`) |
+| `plan-builder` | Constructor interactivo de Plan Personal de Desarrollo. Lee perfil de `competencyProfile` (del Curso 4) y produce un PDF imprimible con prioridades + acuerdo mutuo | `builderId` (clave única), `intro` (opcional), `competencesSource` (string, normalmente `'self-assessment'`) |
+
+### Notas sobre tipos interactivos
+
+- **`photo-upload`**: la imagen se persiste localmente. Para compartirla externamente el estudiante usa el botón "📥 Descargar para compartir" y la envía por su canal preferido (WhatsApp/email).
+- **`self-assessment`**: cuando el estudiante hace click en "Calcular mi perfil" se guarda en localStorage tanto en la clave del curso como en una clave global `competencyProfile` para que cursos posteriores la lean.
+- **`plan-builder`**: si el estudiante no tiene `competencyProfile` (no hizo el Curso 4), el builder permite seleccionar prioridades manualmente.
 
 ## Reglas Importantes
 

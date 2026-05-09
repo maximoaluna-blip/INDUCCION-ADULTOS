@@ -2984,7 +2984,7 @@ function recoverProgress() {
                 showModule(lastModule > 0 ? lastModule : 1);
             } else {
                 var reason = (data && data.message) ? data.message : 'No se encontro avance asociado a este correo.';
-                msgDiv.innerHTML = '<p style="color: #FF9800; font-weight: 600;">⚠️ ' + reason + '</p>' +
+                msgDiv.innerHTML = '<p style="color: #FF9800; font-weight: 600;">⚠️ ' + escapeHtml(reason) + '</p>' +
                     '<p style="color: #636363; margin-top: 10px;">Puedes registrarte como nuevo usuario.</p>' +
                     '<button class="btn" style="margin-top: 10px;" onclick="toggleRegistrationMode(\'new\')">🆕 Registrarme</button>';
             }
@@ -2992,7 +2992,7 @@ function recoverProgress() {
         .catch(function(err) {
             if (typeof console !== 'undefined') console.error('[Recovery] Error:', err);
             msgDiv.innerHTML = '<p style="color: #f44336; font-weight: 600;">❌ Error al conectar con el servidor.</p>' +
-                '<p style="color: #636363; margin-top: 10px;">Error: ' + err.message + '</p>' +
+                '<p style="color: #636363; margin-top: 10px;">Error: ' + escapeHtml(err && err.message ? err.message : String(err)) + '</p>' +
                 '<p style="color: #636363; margin-top: 5px;">Verifica tu conexion a internet e intenta de nuevo.</p>';
         });
 }
