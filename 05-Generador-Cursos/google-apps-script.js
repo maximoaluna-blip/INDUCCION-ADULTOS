@@ -687,13 +687,13 @@ function handleRegister(body, timestamp) {
     return jsonResponse(false, null, 'El formato del email es invalido.');
   }
 
-  // Edad: opcional. Si se provee, debe ser numero >= 18 (los adultos del movimiento son 18+)
-  var age = null;
+  // Edad: campo opcional sin validacion. Se acepta cualquier valor (incluido vacio)
+  // y se guarda como esta. Esta es una plataforma para adultos voluntarios y la
+  // verificacion de "ser adulto" se gestiona fuera de la inscripcion.
+  var age = '';
   if (body.age !== undefined && body.age !== null && body.age !== '') {
-    age = parseInt(body.age, 10);
-    if (isNaN(age) || age < 18) {
-      return jsonResponse(false, null, 'La edad debe ser un numero igual o mayor a 18 anios.');
-    }
+    var parsed = parseInt(body.age, 10);
+    age = isNaN(parsed) ? '' : parsed;
   }
 
   var group = sanitize(body.group, 200);
