@@ -514,7 +514,7 @@ function buildHTML(course) {
 
     // URL del Web App de Google Apps Script para la plataforma de adultos.
     // Despliegue inicial: 2026-05-02 (token ADULTOS_ASC_2026).
-    const googleUrl = course.googleScriptUrl || 'https://script.google.com/macros/s/AKfycbzs1IveYZc5i2hrH4P6NYtmMAasmVJ3gpIwRKb4SKEvWT6kFmuOsRcglZzNCkFdaTlE/exec';
+    const googleUrl = course.googleScriptUrl || 'https://script.google.com/macros/s/AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw/exec';
 
     // Build modules HTML
     const registrationHtml = buildRegistrationModule(course);

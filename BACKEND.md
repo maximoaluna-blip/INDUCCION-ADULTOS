@@ -9,10 +9,10 @@
 
 | Campo | Valor |
 |---|---|
-| **PROD_SCRIPT_ID** | `1x151jipDy7V2zed9uz9GMIYgmnB8LBhiKdX61Pmj3amWzY83n0Bbji4i` |
-| **PROD_DEPLOYMENT_URL** | `https://script.google.com/macros/s/AKfycbzs1IveYZc5i2hrH4P6NYtmMAasmVJ3gpIwRKb4SKEvWT6kFmuOsRcglZzNCkFdaTlE/exec` |
+| **PROD_SCRIPT_ID** | `1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe` |
+| **PROD_DEPLOYMENT_URL** | `https://script.google.com/macros/s/AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw/exec` |
 | **AUTH_TOKEN** | `ADULTOS_ASC_2026` |
-| **Editor del script** | https://script.google.com/u/0/home/projects/1x151jipDy7V2zed9uz9GMIYgmnB8LBhiKdX61Pmj3amWzY83n0Bbji4i/edit |
+| **Editor del script** | https://script.google.com/u/0/home/projects/1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe/edit |
 | **Sheet asociado** | _(Lo abres desde el menú **Recursos / Proyecto vinculado** del editor del script. Anotar URL aquí cuando lo confirmes.)_ |
 | **Cuenta Google que es owner** | _(anotar la cuenta — ej. `maximoaluna@gmail.com`)_ |
 
@@ -48,7 +48,7 @@ Esto actualiza el **HEAD** del script (la "Última versión"). Los deployments e
 ### Paso 3 — Actualizar el deployment de producción
 
 **Opción A — Desde la UI web (más confiable):**
-1. Abre el [editor del script](https://script.google.com/u/0/home/projects/1x151jipDy7V2zed9uz9GMIYgmnB8LBhiKdX61Pmj3amWzY83n0Bbji4i/edit)
+1. Abre el [editor del script](https://script.google.com/u/0/home/projects/1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe/edit)
 2. Click **"Implementar" → "Administrar implementaciones"**
 3. Busca el deployment con URL terminando en `KFdAtlE/exec` (el de PROD_DEPLOYMENT_URL arriba)
 4. Click en el lápiz ✏️
@@ -111,6 +111,7 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 | Fecha | Incidente | Lección aprendida |
 |---|---|---|
 | 2026-05-17 | Dashboard mostraba solo agregados, no detalle. `handleStats()` no devolvía arrays. | Crear `verificar-backend.js` + este documento BACKEND.md. Documentar diferencia entre Web App URL y Deployment ID. |
+| 2026-05-17 (cont.) | El Script ID que se creía como producción era de otro proyecto de pruebas. El clasp local apuntaba al script equivocado. | Verificar el script de producción es el que está vinculado al Google Sheet vivo (Extensiones → Apps Script desde el sheet). El Script ID real es `1TTJ2VjN...gCrqe`, no `1x151jip...`. Reconfigurado `.clasp.json` y aplicado el parche de `handleStats()` al script correcto. |
 
 ---
 
