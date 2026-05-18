@@ -21,6 +21,7 @@ let userProfile = {};
 window.addEventListener('DOMContentLoaded', function () {
     moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
     sessionStartTime = new Date();
+    shuffleQuizOptions();
     loadProgress();
     prefillFromGlobalProfile();
     updateElapsedTime();
@@ -168,11 +169,36 @@ function showModule(moduleIndex) {
 }
 
 // --- Sistema de evaluaciones ---
-function selectOption(element, questionIndex) {
+function selectOption(element, optionIndex) {
     var question = element.closest('.question');
-    question.querySelectorAll('.option').forEach(function (opt) { opt.classList.remove('selected'); });
+    // Limpiar marcas previas (selected, correct, incorrect) de TODAS las opciones de la pregunta:
+    // permite reintentar sin que queden colores fantasma de un intento anterior.
+    question.querySelectorAll('.option').forEach(function (opt) {
+        opt.classList.remove('selected', 'correct', 'incorrect');
+    });
     element.classList.add('selected');
-    element.setAttribute('data-selected-index', questionIndex);
+    element.setAttribute('data-selected-index', optionIndex);
+    // Si el boton "Verificar" estaba oculto tras un fallo, lo restauramos en cuanto el usuario cambia de opcion.
+    var quizContainer = element.closest('.quiz-container');
+    if (quizContainer) {
+        var checkBtn = quizContainer.querySelector('[id^="checkBtn-"]');
+        if (checkBtn) checkBtn.style.display = '';
+    }
+}
+
+// Baraja las opciones de cada pregunta una vez por sesion (Fisher-Yates).
+// Como cada <label class="option"> conserva su onclick="selectOption(this, oi)" con su indice original,
+// QUIZ_ANSWERS sigue siendo valido sin tocar build-course.js.
+function shuffleQuizOptions() {
+    document.querySelectorAll('.quiz-container .question').forEach(function (question) {
+        var options = Array.prototype.slice.call(question.querySelectorAll('.option'));
+        if (options.length < 2) return;
+        for (var i = options.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = options[i]; options[i] = options[j]; options[j] = tmp;
+        }
+        options.forEach(function (opt) { question.appendChild(opt); });
+    });
 }
 
 function checkQuiz(moduleNum) {
@@ -220,16 +246,10 @@ function checkQuiz(moduleNum) {
             module: moduleNum, score: score, course: COURSE_CONFIG.courseId
         });
     } else {
-        showNotification('Puntuación: ' + score + '%. Necesitas 70% para continuar. Revisa el contenido.', 'warning');
-        // Permitir reintentar sin recargar
-        setTimeout(function () {
-            questions.forEach(function (q) {
-                q.querySelectorAll('.option').forEach(function (opt) {
-                    opt.classList.remove('selected', 'correct', 'incorrect');
-                });
-            });
-            if (checkBtn) checkBtn.style.display = '';
-        }, 3000);
+        showNotification('Puntuación: ' + score + '%. Necesitas 70% para continuar. Revisa el contenido y vuelve a intentarlo.', 'warning');
+        // No auto-reset: en cuanto el usuario hace clic en una opcion, selectOption() limpia las marcas
+        // de esa pregunta y vuelve a mostrar el boton "Verificar". Esto evita que un reset por tiempo
+        // borrara la nueva seleccion del usuario antes de que pulsara verificar.
     }
     saveProgress();
 }

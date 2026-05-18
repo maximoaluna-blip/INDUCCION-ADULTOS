@@ -159,9 +159,9 @@ function getWelcomeEmailHtml(name, course) {
     '      <li>Al finalizar todos los modulos, recibiras tu <strong>certificado digital</strong>.</li>' +
     '      <li>Tu progreso se guarda automaticamente. Puedes cerrar y volver cuando quieras.</li>' +
     '    </ol>' +
-    '    <p style="color:#333;line-height:1.6;">Recuerda el lema: <strong>"Servir"</strong>. Este curso fortalecera tu capacidad como sinodal o ayudante.</p>' +
+    '    <p style="color:#333;line-height:1.6;">Recuerda el lema: <strong>"Siempre Listos para Servir"</strong>. Este curso fortalecera tu capacidad como sinodal o ayudante.</p>' +
     '    <div style="text-align:center;margin:25px 0;">' +
-    '      <span style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:16px;">!Siempre Listo!</span>' +
+    '      <span style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:16px;">!Siempre Listos para Servir!</span>' +
     '    </div>' +
     '  </td></tr>' +
     '  <tr><td style="background:#f8f0ff;padding:15px 40px;text-align:center;border-top:1px solid #e0c8f0;">' +
@@ -203,7 +203,7 @@ function getCertificateEmailHtml(name, course, code, score) {
     '    <p style="color:#333;line-height:1.6;">Guarda este codigo. Puedes usarlo para verificar tu certificado en cualquier momento.</p>' +
     '    <p style="color:#333;line-height:1.6;">!Ahora estas mejor preparado/a para servir como sinodal o ayudante en tu grupo scout!</p>' +
     '    <div style="text-align:center;margin:25px 0;">' +
-    '      <span style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:16px;">&#9884;&#65039; Siempre Listo para Servir</span>' +
+    '      <span style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:16px;">&#9884;&#65039; Siempre Listos para Servir</span>' +
     '    </div>' +
     '  </td></tr>' +
     '  <tr><td style="background:#f8f0ff;padding:15px 40px;text-align:center;border-top:1px solid #e0c8f0;">' +
@@ -243,7 +243,7 @@ function getReminderEmailHtml(name, course, daysInactive) {
     '    <div style="text-align:center;margin:25px 0;">' +
     '      <a href="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/" style="display:inline-block;background:' + BRAND_COLOR + ';color:#fff;padding:14px 32px;border-radius:25px;font-weight:bold;font-size:16px;text-decoration:none;">Retomar mi curso</a>' +
     '    </div>' +
-    '    <p style="color:#888;line-height:1.6;font-size:13px;text-align:center;font-style:italic;">"Siempre Listo para Servir"</p>' +
+    '    <p style="color:#888;line-height:1.6;font-size:13px;text-align:center;font-style:italic;">"Siempre Listos para Servir"</p>' +
     '  </td></tr>' +
     '  <tr><td style="background:#f8f0ff;padding:15px 40px;text-align:center;border-top:1px solid #e0c8f0;">' +
     '    <p style="color:#888;font-size:12px;margin:0;">' + PLATFORM_NAME + ' | vallescout.org.co</p>' +

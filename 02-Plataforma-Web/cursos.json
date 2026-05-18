@@ -64,5 +64,16 @@
     "status": "coming-soon",
     "file": "politica-adultos.html",
     "folder": "politica-adultos"
+  },
+  {
+    "courseId": "politica-adultos",
+    "title": "La Política de Adultos en el Movimiento",
+    "description": "Curso introductorio sobre la Política Nacional de Adultos en el Movimiento Scout: el adulto que necesitamos, el enfoque por competencias y el ciclo de gestión del adulto. Dirigido a consejeros, dirigentes y voluntarios que asumen roles en sus grupos scouts.",
+    "icon": "🦸",
+    "duration": "1 hora 30 minutos",
+    "modules": 6,
+    "status": "active",
+    "file": "politica-adultos.html",
+    "folder": "politica-adultos"
   }
 ]
