@@ -499,26 +499,45 @@ function handleStats() {
       completionsByModule: {},
       courseStats: {},
       averageScore: 0,
+      // Arrays detallados para alimentar las tablas y graficos del dashboard
+      registros: [],
+      certificados: [],
+      modulos: [],
+      resumen: null,
       generatedAt: new Date().toISOString()
     };
 
-    // Contar registros
+    // Set de emails con certificado emitido (para marcar estado del registro)
+    var emailsConCertificado = {};
+
+    // Contar registros + construir array detallado
     try {
       var regSheet = getOrCreateSheet(SHEET_CONFIG.registros.name, SHEET_CONFIG.registros.headers);
       var regData = regSheet.getDataRange().getValues();
       stats.totalUsers = Math.max(0, regData.length - 1); // Descontar encabezado
 
-      // Estadisticas por curso
+      // Estadisticas por curso + detalle
       for (var i = 1; i < regData.length; i++) {
         var course = String(regData[i][7] || 'sin-curso');
         if (!stats.courseStats[course]) {
           stats.courseStats[course] = { registrations: 0, certificates: 0, avgScore: 0, scores: [] };
         }
         stats.courseStats[course].registrations++;
+
+        // Detalle para la tabla
+        stats.registros.push({
+          fecha: regData[i][0],
+          nombre: regData[i][1] || '',
+          grupo: regData[i][3] || '',
+          region: regData[i][4] || '',
+          email: String(regData[i][5] || '').toLowerCase(),
+          curso: course,
+          estado: 'En progreso' // se actualiza despues si hay certificado
+        });
       }
     } catch (err) { /* Sin datos aun */ }
 
-    // Contar certificados
+    // Contar certificados + construir array detallado
     try {
       var certSheet = getOrCreateSheet(SHEET_CONFIG.certificados.name, SHEET_CONFIG.certificados.headers);
       var certData = certSheet.getDataRange().getValues();
@@ -530,17 +549,58 @@ function handleStats() {
           stats.courseStats[cCourse] = { registrations: 0, certificates: 0, avgScore: 0, scores: [] };
         }
         stats.courseStats[cCourse].certificates++;
+
+        // Detalle para la tabla
+        var cEmail = String(certData[j][1] || '').toLowerCase();
+        stats.certificados.push({
+          fecha: certData[j][0],
+          nombre: certData[j][2] || '',
+          curso: cCourse,
+          grupo: certData[j][4] || '',
+          region: certData[j][5] || '',
+          codigo: certData[j][6] || '',
+          puntuacion: certData[j][8] || 0,
+          email: cEmail
+        });
+        // Marcar al usuario como completado
+        if (cEmail) emailsConCertificado[cEmail + '|' + cCourse] = true;
       }
     } catch (err) { /* Sin datos aun */ }
 
-    // Completaciones por modulo
+    // Actualizar estado de registros con certificado emitido
+    for (var ri = 0; ri < stats.registros.length; ri++) {
+      var key = stats.registros[ri].email + '|' + stats.registros[ri].curso;
+      if (emailsConCertificado[key]) {
+        stats.registros[ri].estado = 'Completado';
+      }
+    }
+
+    // Completaciones por modulo (agregado + array para grafico)
     try {
       var progSheet = getOrCreateSheet(SHEET_CONFIG.progreso.name, SHEET_CONFIG.progreso.headers);
       var progData = progSheet.getDataRange().getValues();
+      var moduloAgg = {};
       for (var k = 1; k < progData.length; k++) {
-        var modKey = String(progData[k][3] || 'curso') + '_modulo_' + String(progData[k][4] || '?');
+        var mCurso = String(progData[k][3] || 'curso');
+        var mNum = String(progData[k][4] || '?');
+        var mNom = String(progData[k][5] || ('Modulo ' + mNum));
+        var modKey = mCurso + '_modulo_' + mNum;
         stats.completionsByModule[modKey] = (stats.completionsByModule[modKey] || 0) + 1;
+        if (!moduloAgg[modKey]) {
+          moduloAgg[modKey] = { curso: mCurso, modulo: mNum, nombre: mNom, completados: 0 };
+        }
+        moduloAgg[modKey].completados++;
       }
+      // Convertir a array y ordenar por curso+numero
+      for (var mk in moduloAgg) {
+        stats.modulos.push(moduloAgg[mk]);
+      }
+      stats.modulos.sort(function(a, b) {
+        if (a.curso !== b.curso) return a.curso < b.curso ? -1 : 1;
+        var an = parseInt(a.modulo, 10) || 0;
+        var bn = parseInt(b.modulo, 10) || 0;
+        return an - bn;
+      });
     } catch (err) { /* Sin datos aun */ }
 
     // Estadisticas de evaluaciones
@@ -581,6 +641,16 @@ function handleStats() {
       var comData = comSheet.getDataRange().getValues();
       stats.totalCommitments = Math.max(0, comData.length - 1);
     } catch (err) { /* Sin datos aun */ }
+
+    // Resumen agregado que el dashboard usa para los KPI principales
+    stats.resumen = {
+      totalRovers: stats.totalUsers,
+      totalCertificados: stats.totalCertificates,
+      tasaCompletacion: (stats.totalUsers > 0
+        ? Math.round((stats.totalCertificates / stats.totalUsers) * 100)
+        : 0),
+      promedioPuntuacion: stats.averageScore || 0
+    };
 
     return jsonResponse(true, stats);
 
