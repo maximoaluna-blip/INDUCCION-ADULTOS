@@ -7,7 +7,9 @@
 **URL Producción:** https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/
 **Repositorio:** https://github.com/maximoaluna-blip/INDUCCION-ADULTOS
 
-**Plataforma hermana:** [INDUCCION-ROVER](../INDUCCION-ROVER/) — formación para rovers 18-22 años.
+**Línea hermana:** [INDUCCION-DESARROLLO-INSTITUCIONAL](https://github.com/maximoaluna-blip/INDUCCION-DESARROLLO-INSTITUCIONAL) — Línea Desarrollo Institucional (PNDI 2017).
+**Portal madre:** [PORTAL-ADULTOS-ASC](https://maximoaluna-blip.github.io/PORTAL-ADULTOS-ASC/) — landing pública de las 4 líneas.
+**Panel administrativo:** [PORTAL-ADMIN-ASC](https://maximoaluna-blip.github.io/PORTAL-ADMIN-ASC/) — dashboard unificado.
 
 ---
 
@@ -143,9 +145,18 @@ Documentación detallada de cada uno en `05-Generador-Cursos/SKILL.md`.
 
 ### Cambio de backend (Apps Script)
 
-1. Editar `05-Generador-Cursos/google-apps-script.js`.
-2. Copiar el archivo a `.clasp-workspace/Código.js`.
-3. `cd .clasp-workspace && clasp push --force` → actualiza el Apps Script en producción (URL del web app no cambia).
+**Importante:** el backend es compartido con la Línea Desarrollo Institucional. Cualquier cambio afecta a ambas líneas.
+
+1. **Antes:** `node 05-Generador-Cursos/verificar-backend.js` → debe estar 4/4 OK.
+2. Editar `05-Generador-Cursos/google-apps-script.js`.
+3. Copiar el archivo a `.clasp-workspace/Código.js`.
+4. `cd .clasp-workspace && clasp push --force` → actualiza el HEAD del script.
+5. **Para que el deployment público use el código nuevo**, hay dos opciones:
+   - **Opción A (sin cambiar URLs):** Si el deployment activo se puede editar desde la UI web, abrirlo, seleccionar "Nueva versión" y desplegar.
+   - **Opción B (URL nueva):** Crear deployment nuevo desde la UI ("Implementar → Implementación nueva" con permisos "Cualquier usuario"), copiar la nueva URL, actualizar `BACKEND.md` + `build-course.js` + recompilar HTMLs de ambas líneas. (Es el flujo que se usó la última vez por deployments zombie.)
+6. **Después:** `node 05-Generador-Cursos/verificar-backend.js` → 4/4 OK.
+
+Detalles operativos en [`BACKEND.md`](BACKEND.md).
 
 ---
 
@@ -153,9 +164,12 @@ Documentación detallada de cada uno en `05-Generador-Cursos/SKILL.md`.
 
 - **GitHub:** `maximoaluna-blip` — autenticado vía `gh` CLI.
 - **Google (Apps Script + Sheets + Drive):** `maximoaluna@gmail.com` — autenticado vía `clasp`.
-- **Token de auth backend:** `ADULTOS_ASC_2026` (hardcodeado en `google-apps-script.js` y `engine.js`, validado server-side).
-- **URL del web app:** `https://script.google.com/macros/s/AKfycbzs1IveYZc5i2hrH4P6NYtmMAasmVJ3gpIwRKb4SKEvWT6kFmuOsRcglZzNCkFdaTlE/exec`
-- **Script ID:** `1x151jipDy7V2zed9uz9GMIYgmnB8LBhiKdX61Pmj3amWzY83n0Bbji4i`
+- **Token de auth backend:** `ADULTOS_ASC_2026` (compartido durante el piloto con la Línea Desarrollo Institucional, validado server-side).
+- **PROD_DEPLOYMENT_URL:** `https://script.google.com/macros/s/AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw/exec`
+- **PROD_SCRIPT_ID:** `1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe`
+
+> Para detalles completos del backend (cómo actualizar, cómo crear deployments, etc.) ver [`BACKEND.md`](BACKEND.md).
+> Para validar la sincronización del backend antes de cualquier deploy: `node 05-Generador-Cursos/verificar-backend.js`.
 
 ---
 
