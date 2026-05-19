@@ -281,6 +281,10 @@ var SHEET_CONFIG = {
   recordatorios: {
     name: 'Recordatorios',
     headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'Dias Inactivo', 'Tipo']
+  },
+  catalogos: {
+    name: 'Catalogos DI',
+    headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'CatalogoId', 'AmbitoId', 'Estado', 'Descripcion', 'Atributos']
   }
 };
 
@@ -345,7 +349,8 @@ function handleRecover(params) {
     modules: [],
     quizzes: [],
     certificates: [],
-    commitments: []
+    commitments: [],
+    catalogs: {}
   };
 
   // Buscar en Registros
@@ -432,6 +437,29 @@ function handleRecover(params) {
           course: comData[n][3],
           commitment: comData[n][4]
         });
+      }
+    }
+  } catch (err) { /* Hoja puede no existir aun */ }
+
+  // Buscar en Catalogos DI (Curso 5 — Buenas Practicas)
+  try {
+    var catSheet = getOrCreateSheet(SHEET_CONFIG.catalogos.name, SHEET_CONFIG.catalogos.headers);
+    var catData = catSheet.getDataRange().getValues();
+    for (var p = 1; p < catData.length; p++) {
+      if (String(catData[p][1]).toLowerCase().trim() === email) {
+        var cid = String(catData[p][4]).trim();
+        if (!cid) continue;
+        if (!result.catalogs[cid]) result.catalogs[cid] = {};
+        var ambitoId = String(catData[p][5]).trim();
+        if (!ambitoId) continue;
+        var attrStr = String(catData[p][8] || '');
+        var attrArr = attrStr ? attrStr.split(',').map(function(a) { return a.trim(); }).filter(function(a) { return !!a; }) : [];
+        result.catalogs[cid][ambitoId] = {
+          state: String(catData[p][6] || ''),
+          description: String(catData[p][7] || ''),
+          attributes: attrArr,
+          timestamp: catData[p][0]
+        };
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
@@ -724,6 +752,9 @@ function doPost(e) {
 
       case 'commitment':
         return handleCommitment(body, timestamp);
+
+      case 'catalog':
+        return handleCatalog(body, timestamp);
 
       default:
         return jsonResponse(false, null, 'Accion POST no reconocida: ' + action);
@@ -1044,6 +1075,93 @@ function handleCommitment(body, timestamp) {
 
   } catch (error) {
     return jsonResponse(false, null, 'Error al guardar compromiso: ' + error.message);
+  }
+}
+
+/**
+ * Guarda el catalogo de buenas practicas (Curso 5 Linea DI).
+ *
+ * Cuerpo esperado:
+ *   { action: 'catalog', email, name, course, catalogId, items: [{ambitoId, state, description, attributes[]}] }
+ *
+ * Comportamiento:
+ *   - Borra todas las filas previas con la misma combinacion (email, catalogId)
+ *     para que el catalogo refleje siempre el ultimo guardado del usuario.
+ *   - Inserta una fila por cada item del array.
+ */
+function handleCatalog(body, timestamp) {
+  var email = sanitize(body.email, 200);
+  if (!validateEmail(email)) {
+    return jsonResponse(false, null, 'Email invalido.');
+  }
+  email = email.toLowerCase();
+
+  var name = sanitize(body.name, 200);
+  if (!name) {
+    return jsonResponse(false, null, 'El nombre es requerido.');
+  }
+
+  var course = sanitize(body.course, 200);
+  if (!course) {
+    return jsonResponse(false, null, 'El curso es requerido.');
+  }
+
+  var catalogId = sanitize(body.catalogId, 100);
+  if (!catalogId) {
+    return jsonResponse(false, null, 'catalogId es requerido.');
+  }
+
+  if (!Array.isArray(body.items)) {
+    return jsonResponse(false, null, 'items debe ser un array.');
+  }
+
+  try {
+    var sheet = getOrCreateSheet(SHEET_CONFIG.catalogos.name, SHEET_CONFIG.catalogos.headers);
+
+    // Borrar filas previas con misma (email, catalogId) para reemplazar limpiamente.
+    var allData = sheet.getDataRange().getValues();
+    var rowsToDelete = [];
+    for (var r = 1; r < allData.length; r++) {
+      if (String(allData[r][1]).toLowerCase().trim() === email &&
+          String(allData[r][4]).trim() === catalogId) {
+        rowsToDelete.push(r + 1); // 1-indexed
+      }
+    }
+    // Borrar de abajo hacia arriba para no descuadrar indices.
+    for (var d = rowsToDelete.length - 1; d >= 0; d--) {
+      sheet.deleteRow(rowsToDelete[d]);
+    }
+
+    // Insertar filas nuevas (una por item).
+    var inserted = 0;
+    for (var i = 0; i < body.items.length; i++) {
+      var item = body.items[i] || {};
+      var ambitoId = sanitize(item.ambitoId, 100);
+      if (!ambitoId) continue;
+      var state = sanitize(item.state, 20);
+      var description = sanitize(item.description, 400);
+      var attributes = '';
+      if (Array.isArray(item.attributes)) {
+        attributes = item.attributes
+          .map(function (a) { return sanitize(a, 50); })
+          .filter(function (a) { return !!a; })
+          .join(',');
+      }
+      sheet.appendRow([
+        timestamp, email, name, course, catalogId, ambitoId, state, description, attributes
+      ]);
+      inserted++;
+    }
+
+    return jsonResponse(true, {
+      message: 'Catalogo guardado.',
+      catalogId: catalogId,
+      itemsInserted: inserted,
+      itemsReplaced: rowsToDelete.length
+    });
+
+  } catch (error) {
+    return jsonResponse(false, null, 'Error al guardar catalogo: ' + error.message);
   }
 }
 
