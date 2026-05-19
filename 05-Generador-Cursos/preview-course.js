@@ -397,7 +397,7 @@ function buildCertificateScreen(course, screenNumber) {
                     <h3 style="color: #ffc107; font-size: 1.8rem; margin: 15px 0;">[Nombre del Estudiante]</h3>
                     <p style="margin: 20px 0;">${course.certificate.description}</p>
                     <div class="certificate-code">
-                        Código de Verificación: <strong>ASC-2025-XXXXX</strong>
+                        Código de Verificación: <strong>ASC-2026-XXXXX</strong>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-top: 30px; font-size: 0.9rem;">
                         <div style="text-align: left;">
