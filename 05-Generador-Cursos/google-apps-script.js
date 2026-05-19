@@ -285,6 +285,18 @@ var SHEET_CONFIG = {
   catalogos: {
     name: 'Catalogos DI',
     headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'CatalogoId', 'AmbitoId', 'Estado', 'Descripcion', 'Atributos']
+  },
+  reflexiones: {
+    name: 'Reflexiones',
+    headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'ModuloId', 'Texto']
+  },
+  autodiagnosticos: {
+    name: 'Autodiagnosticos',
+    headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'AssessmentId', 'CompetenciaId', 'Grado']
+  },
+  planes: {
+    name: 'Planes',
+    headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'PlanId', 'PlanType', 'Contenido']
   }
 };
 
@@ -350,7 +362,10 @@ function handleRecover(params) {
     quizzes: [],
     certificates: [],
     commitments: [],
-    catalogs: {}
+    catalogs: {},
+    reflectionsByCourse: {},
+    assessments: {},
+    plans: {}
   };
 
   // Buscar en Registros
@@ -460,6 +475,55 @@ function handleRecover(params) {
           attributes: attrArr,
           timestamp: catData[p][0]
         };
+      }
+    }
+  } catch (err) { /* Hoja puede no existir aun */ }
+
+  // Reflexiones por curso (Curso -> {moduloId: texto})
+  try {
+    var refSheet = getOrCreateSheet(SHEET_CONFIG.reflexiones.name, SHEET_CONFIG.reflexiones.headers);
+    var refData = refSheet.getDataRange().getValues();
+    for (var q = 1; q < refData.length; q++) {
+      if (String(refData[q][1]).toLowerCase().trim() === email) {
+        var refCourse = String(refData[q][3]).trim();
+        var refModId = String(refData[q][4]).trim();
+        var refTxt = String(refData[q][5] || '');
+        if (!refCourse || !refModId) continue;
+        if (!result.reflectionsByCourse[refCourse]) result.reflectionsByCourse[refCourse] = {};
+        result.reflectionsByCourse[refCourse][refModId] = refTxt;
+      }
+    }
+  } catch (err) { /* Hoja puede no existir aun */ }
+
+  // Autodiagnosticos (assessmentId -> {competenciaId: grado})
+  try {
+    var asSheet = getOrCreateSheet(SHEET_CONFIG.autodiagnosticos.name, SHEET_CONFIG.autodiagnosticos.headers);
+    var asData = asSheet.getDataRange().getValues();
+    for (var s = 1; s < asData.length; s++) {
+      if (String(asData[s][1]).toLowerCase().trim() === email) {
+        var aid = String(asData[s][4]).trim();
+        var cmpId = String(asData[s][5]).trim();
+        var grade = parseInt(asData[s][6], 10);
+        if (!aid || !cmpId || isNaN(grade)) continue;
+        if (!result.assessments[aid]) result.assessments[aid] = { grades: {} };
+        result.assessments[aid].grades[cmpId] = grade;
+      }
+    }
+  } catch (err) { /* Hoja puede no existir aun */ }
+
+  // Planes (planId -> {planType, contenido})
+  try {
+    var plSheet = getOrCreateSheet(SHEET_CONFIG.planes.name, SHEET_CONFIG.planes.headers);
+    var plData = plSheet.getDataRange().getValues();
+    for (var t = 1; t < plData.length; t++) {
+      if (String(plData[t][1]).toLowerCase().trim() === email) {
+        var plId = String(plData[t][4]).trim();
+        if (!plId) continue;
+        var plType = String(plData[t][5] || '');
+        var contStr = String(plData[t][6] || '');
+        var cont = null;
+        try { cont = JSON.parse(contStr); } catch (e) { cont = contStr; }
+        result.plans[plId] = { planType: plType, contenido: cont, timestamp: plData[t][0] };
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
@@ -755,6 +819,15 @@ function doPost(e) {
 
       case 'catalog':
         return handleCatalog(body, timestamp);
+
+      case 'reflection':
+        return handleReflection(body, timestamp);
+
+      case 'assessment':
+        return handleAssessment(body, timestamp);
+
+      case 'plan':
+        return handlePlan(body, timestamp);
 
       default:
         return jsonResponse(false, null, 'Accion POST no reconocida: ' + action);
@@ -1162,6 +1235,167 @@ function handleCatalog(body, timestamp) {
 
   } catch (error) {
     return jsonResponse(false, null, 'Error al guardar catalogo: ' + error.message);
+  }
+}
+
+/**
+ * Persistencia de una reflexion personal de un modulo del curso.
+ * Body: { action:'reflection', email, name, course, moduleId, texto }
+ * Comportamiento: reemplaza (delete+insert) cualquier reflexion previa para
+ * la misma combinacion (email, course, moduleId). Si el texto viene vacio,
+ * se borra el registro existente (caso "limpiar reflexion").
+ */
+function handleReflection(body, timestamp) {
+  var email = sanitize(body.email, 200);
+  if (!validateEmail(email)) return jsonResponse(false, null, 'Email invalido.');
+  email = email.toLowerCase();
+
+  var name = sanitize(body.name, 200);
+  if (!name) return jsonResponse(false, null, 'El nombre es requerido.');
+
+  var course = sanitize(body.course, 200);
+  if (!course) return jsonResponse(false, null, 'El curso es requerido.');
+
+  var moduleId = sanitize(String(body.moduleId || ''), 50);
+  if (!moduleId) return jsonResponse(false, null, 'moduleId es requerido.');
+
+  var texto = sanitize(body.texto, 5000);
+
+  try {
+    var sheet = getOrCreateSheet(SHEET_CONFIG.reflexiones.name, SHEET_CONFIG.reflexiones.headers);
+
+    var allData = sheet.getDataRange().getValues();
+    var toDelete = [];
+    for (var r = 1; r < allData.length; r++) {
+      if (String(allData[r][1]).toLowerCase().trim() === email &&
+          String(allData[r][3]).trim() === course &&
+          String(allData[r][4]).trim() === moduleId) {
+        toDelete.push(r + 1);
+      }
+    }
+    for (var d = toDelete.length - 1; d >= 0; d--) {
+      sheet.deleteRow(toDelete[d]);
+    }
+
+    if (texto) {
+      sheet.appendRow([timestamp, email, name, course, moduleId, texto]);
+    }
+
+    return jsonResponse(true, { message: 'Reflexion guardada.', moduleId: moduleId, cleared: !texto });
+  } catch (error) {
+    return jsonResponse(false, null, 'Error al guardar reflexion: ' + error.message);
+  }
+}
+
+/**
+ * Persistencia de un autodiagnostico (self-assessment).
+ * Body: { action:'assessment', email, name, course, assessmentId, grades:{competenciaId: grade, ...} }
+ * Comportamiento: reemplaza cualquier autodiagnostico previo del mismo
+ * (email, assessmentId). Inserta una fila por cada calificacion.
+ */
+function handleAssessment(body, timestamp) {
+  var email = sanitize(body.email, 200);
+  if (!validateEmail(email)) return jsonResponse(false, null, 'Email invalido.');
+  email = email.toLowerCase();
+
+  var name = sanitize(body.name, 200);
+  if (!name) return jsonResponse(false, null, 'El nombre es requerido.');
+
+  var course = sanitize(body.course, 200);
+  if (!course) return jsonResponse(false, null, 'El curso es requerido.');
+
+  var assessmentId = sanitize(body.assessmentId, 100);
+  if (!assessmentId) return jsonResponse(false, null, 'assessmentId es requerido.');
+
+  if (typeof body.grades !== 'object' || body.grades === null) {
+    return jsonResponse(false, null, 'grades debe ser un objeto {competenciaId: grado}.');
+  }
+
+  try {
+    var sheet = getOrCreateSheet(SHEET_CONFIG.autodiagnosticos.name, SHEET_CONFIG.autodiagnosticos.headers);
+
+    var allData = sheet.getDataRange().getValues();
+    var toDelete = [];
+    for (var r = 1; r < allData.length; r++) {
+      if (String(allData[r][1]).toLowerCase().trim() === email &&
+          String(allData[r][4]).trim() === assessmentId) {
+        toDelete.push(r + 1);
+      }
+    }
+    for (var d = toDelete.length - 1; d >= 0; d--) {
+      sheet.deleteRow(toDelete[d]);
+    }
+
+    var inserted = 0;
+    Object.keys(body.grades).forEach(function (compId) {
+      var grade = parseInt(body.grades[compId], 10);
+      var cid = sanitize(String(compId), 100);
+      if (!isNaN(grade) && cid) {
+        sheet.appendRow([timestamp, email, name, course, assessmentId, cid, grade]);
+        inserted++;
+      }
+    });
+
+    return jsonResponse(true, { message: 'Autodiagnostico guardado.', assessmentId: assessmentId, gradesInserted: inserted });
+  } catch (error) {
+    return jsonResponse(false, null, 'Error al guardar autodiagnostico: ' + error.message);
+  }
+}
+
+/**
+ * Persistencia de un plan personal (plan-builder, goal-planner, etc.).
+ * Body: { action:'plan', email, name, course, planId, planType, contenido }
+ *   - planType: identificador del tipo ('plan-builder-v1', 'goal-planner-di', etc.)
+ *   - contenido: objeto JSON (lo serializamos como string para una sola celda)
+ *
+ * Comportamiento: reemplaza el plan previo del mismo (email, planId).
+ */
+function handlePlan(body, timestamp) {
+  var email = sanitize(body.email, 200);
+  if (!validateEmail(email)) return jsonResponse(false, null, 'Email invalido.');
+  email = email.toLowerCase();
+
+  var name = sanitize(body.name, 200);
+  if (!name) return jsonResponse(false, null, 'El nombre es requerido.');
+
+  var course = sanitize(body.course, 200);
+  if (!course) return jsonResponse(false, null, 'El curso es requerido.');
+
+  var planId = sanitize(body.planId, 100);
+  if (!planId) return jsonResponse(false, null, 'planId es requerido.');
+
+  var planType = sanitize(body.planType, 50);
+
+  var contenido = '';
+  try {
+    contenido = JSON.stringify(body.contenido || {});
+  } catch (e) {
+    return jsonResponse(false, null, 'contenido invalido: ' + e.message);
+  }
+  if (contenido.length > 40000) {
+    return jsonResponse(false, null, 'Contenido del plan excede 40000 caracteres.');
+  }
+
+  try {
+    var sheet = getOrCreateSheet(SHEET_CONFIG.planes.name, SHEET_CONFIG.planes.headers);
+
+    var allData = sheet.getDataRange().getValues();
+    var toDelete = [];
+    for (var r = 1; r < allData.length; r++) {
+      if (String(allData[r][1]).toLowerCase().trim() === email &&
+          String(allData[r][4]).trim() === planId) {
+        toDelete.push(r + 1);
+      }
+    }
+    for (var d = toDelete.length - 1; d >= 0; d--) {
+      sheet.deleteRow(toDelete[d]);
+    }
+
+    sheet.appendRow([timestamp, email, name, course, planId, planType, contenido]);
+
+    return jsonResponse(true, { message: 'Plan guardado.', planId: planId, planType: planType });
+  } catch (error) {
+    return jsonResponse(false, null, 'Error al guardar plan: ' + error.message);
   }
 }
 

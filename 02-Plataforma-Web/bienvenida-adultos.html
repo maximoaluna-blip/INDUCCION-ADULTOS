@@ -2045,6 +2045,17 @@ function showNotification(message, type) {
 function saveReflection(moduleNum, text) {
     reflections[moduleNum] = text;
     saveProgress();
+    // Sincronizacion en segundo plano al backend (fire-and-forget)
+    if (userProfile && userProfile.email && typeof sendToGoogleSheets === 'function') {
+        sendToGoogleSheets({
+            action: 'reflection',
+            email: userProfile.email,
+            name: userProfile.fullName,
+            course: COURSE_CONFIG.courseId,
+            moduleId: String(moduleNum),
+            texto: text || ''
+        });
+    }
 }
 
 function saveCommitment(text) {
@@ -2167,6 +2178,17 @@ function calculateAssessment(assessmentId) {
             sourceCourse: COURSE_CONFIG.courseId
         }));
     } catch (e) { /* ignore */ }
+    // Sincronizacion en segundo plano al backend (persistencia hibrida)
+    if (userProfile && userProfile.email && typeof sendToGoogleSheets === 'function') {
+        sendToGoogleSheets({
+            action: 'assessment',
+            email: userProfile.email,
+            name: userProfile.fullName,
+            course: COURSE_CONFIG.courseId,
+            assessmentId: assessmentId,
+            grades: data.grades
+        });
+    }
     // Render result
     var avgGrade = (entries.reduce(function (s, e) { return s + e.grade; }, 0) / entries.length).toFixed(1);
     var resultEl = document.getElementById('sa-result-' + assessmentId);
@@ -2349,6 +2371,18 @@ function generatePlan(builderId) {
         output.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     showNotification('✅ Plan generado. Puedes imprimirlo.');
+    // Sincronizacion en segundo plano al backend (persistencia hibrida)
+    if (userProfile && userProfile.email && typeof sendToGoogleSheets === 'function') {
+        sendToGoogleSheets({
+            action: 'plan',
+            email: userProfile.email,
+            name: userProfile.fullName,
+            course: COURSE_CONFIG.courseId,
+            planId: builderId,
+            planType: 'plan-builder-v1',
+            contenido: plan
+        });
+    }
 }
 
 function escapeHtml(s) {
@@ -2792,6 +2826,51 @@ function recoverProgress() {
                         var ta = document.getElementById('reflection-' + k);
                         if (ta) ta.value = reflections[k];
                     });
+                }
+
+                // Reflexiones por curso (persistencia hibrida): hidratar cada curso en localStorage
+                if (serverData.reflectionsByCourse && typeof serverData.reflectionsByCourse === 'object') {
+                    Object.keys(serverData.reflectionsByCourse).forEach(function (cid) {
+                        var courseReflections = serverData.reflectionsByCourse[cid] || {};
+                        if (cid === COURSE_CONFIG.courseId) {
+                            reflections = courseReflections;
+                            Object.keys(reflections).forEach(function (k) {
+                                var ta = document.getElementById('reflection-' + k);
+                                if (ta) ta.value = reflections[k];
+                            });
+                        } else {
+                            try {
+                                var key = 'courseProgress_' + cid;
+                                var raw = localStorage.getItem(key);
+                                var existing = raw ? JSON.parse(raw) : {};
+                                existing.reflections = courseReflections;
+                                existing.lastSaved = new Date().toISOString();
+                                localStorage.setItem(key, JSON.stringify(existing));
+                            } catch (e) { /* ignore */ }
+                        }
+                    });
+                }
+
+                // Autodiagnósticos: restaurar grados desde el backend
+                if (serverData.assessments && typeof serverData.assessments === 'object') {
+                    Object.keys(serverData.assessments).forEach(function (aid) {
+                        var saved = serverData.assessments[aid] || {};
+                        if (!selfAssessments[aid]) selfAssessments[aid] = { grades: {} };
+                        if (saved.grades) selfAssessments[aid].grades = saved.grades;
+                    });
+                    if (typeof restoreAssessmentSelections === 'function') restoreAssessmentSelections();
+                }
+
+                // Planes personales: restaurar plan-builder
+                if (serverData.plans && typeof serverData.plans === 'object') {
+                    Object.keys(serverData.plans).forEach(function (pid) {
+                        var savedPlan = serverData.plans[pid] || {};
+                        var contenido = savedPlan.contenido;
+                        if (contenido && typeof contenido === 'object') {
+                            personalPlans[pid] = contenido;
+                        }
+                    });
+                    if (typeof restorePlanState === 'function') restorePlanState();
                 }
 
                 saveProgress();
