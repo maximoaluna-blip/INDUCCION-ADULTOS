@@ -2400,25 +2400,30 @@ function printPlan() {
 // --- Certificado ---
 function generateCertificate() {
     var date = new Date();
-    var code = 'ASC-' + date.getFullYear() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase();
-
     var el = function (id) { return document.getElementById(id); };
+
+    // Idempotencia: el certificado se emite UNA sola vez por curso. Si ya existe, se reusa
+    // (no se genera codigo nuevo ni se reenvia al backend -> evita filas duplicadas en el Sheet).
+    var courseKey = 'certificate_issued_' + COURSE_CONFIG.courseId;
+    var issued = null;
+    try { issued = JSON.parse(localStorage.getItem(courseKey) || 'null'); } catch (e) { issued = null; }
+
+    var esNuevo = !(issued && issued.code);
+    var code = esNuevo
+        ? 'ASC-' + date.getFullYear() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase()
+        : issued.code;
+    var avg = esNuevo
+        ? (quizScores.length > 0 ? Math.round(quizScores.reduce(function (a, b) { return a + b; }, 0) / quizScores.length) : 100)
+        : issued.score;
+    var fechaISO = esNuevo ? date.toISOString() : (issued.date || date.toISOString());
+
     if (el('studentName')) el('studentName').textContent = userProfile.fullName || 'Adulto Scout';
-    if (el('certDate')) el('certDate').textContent = date.toLocaleDateString('es-CO');
+    if (el('certDate')) el('certDate').textContent = new Date(fechaISO).toLocaleDateString('es-CO');
     if (el('totalTime')) el('totalTime').textContent = studyTime;
     if (el('certGroup')) el('certGroup').textContent = userProfile.group || 'N/A';
     if (el('certRegion')) el('certRegion').textContent = userProfile.region || 'Colombia';
     if (el('certCode')) el('certCode').textContent = code;
-
-    var avg = quizScores.length > 0 ? Math.round(quizScores.reduce(function (a, b) { return a + b; }, 0) / quizScores.length) : 100;
     if (el('finalScore')) el('finalScore').textContent = avg;
-
-    sendToGoogleSheets({
-        action: 'certificate', name: userProfile.fullName, email: userProfile.email,
-        group: userProfile.group, region: userProfile.region, certificateCode: code,
-        completionDate: date.toISOString(), score: avg, studyTime: studyTime,
-        course: COURSE_CONFIG.courseId
-    });
 
     unlockAchievement('achievement-5');
     var bar = document.getElementById('progressBar');
@@ -2426,10 +2431,21 @@ function generateCertificate() {
     if (bar) bar.style.width = '100%';
     if (text) text.textContent = '100%';
 
-    localStorage.setItem('certificate_' + code, JSON.stringify({
-        name: userProfile.fullName, code: code, date: date.toISOString(),
-        score: avg, course: COURSE_CONFIG.courseId
-    }));
+    // Solo la primera emision escribe en localStorage y sincroniza al backend.
+    if (esNuevo) {
+        sendToGoogleSheets({
+            action: 'certificate', name: userProfile.fullName, email: userProfile.email,
+            group: userProfile.group, region: userProfile.region, certificateCode: code,
+            completionDate: fechaISO, score: avg, studyTime: studyTime,
+            course: COURSE_CONFIG.courseId
+        });
+        var registro = JSON.stringify({
+            name: userProfile.fullName, code: code, date: fechaISO,
+            score: avg, course: COURSE_CONFIG.courseId
+        });
+        localStorage.setItem('certificate_' + code, registro); // lookup por codigo (verify)
+        localStorage.setItem(courseKey, registro);              // puntero estable por curso
+    }
 }
 
 // --- Descargar certificado como PDF ---
