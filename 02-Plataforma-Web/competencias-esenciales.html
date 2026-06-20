@@ -54,7 +54,7 @@
 }
 .policy-quote-source {
     font-size: 0.8em;
-    color: #888;
+    color: #636363;
     margin: 8px 0 0 0;
     text-align: right;
 }
@@ -123,7 +123,7 @@
 .photo-actions .btn-secondary:hover { background: #f3edfa; }
 .photo-actions .btn-tertiary {
     background: transparent;
-    color: #888;
+    color: #636363;
     border: 1px solid #ccc;
     padding: 8px 16px;
     border-radius: 6px;
@@ -321,7 +321,7 @@
 }
 .pb-comp-check { transform: scale(1.2); cursor: pointer; }
 .pb-comp-name { flex: 1; font-weight: 600; color: #333; }
-.pb-comp-grade { font-size: 0.85em; color: #888; padding: 2px 8px; background: #f0f0f0; border-radius: 4px; }
+.pb-comp-grade { font-size: 0.85em; color: #636363; padding: 2px 8px; background: #f0f0f0; border-radius: 4px; }
 .pb-comp-grade.priority { background: #ffe0b2; color: #e65100; font-weight: 600; }
 .pb-comp-fields {
     padding: 8px 16px 16px 50px;
@@ -534,6 +534,9 @@ body {
 }
 .header h1 { color: #622599; margin-bottom: 10px; font-size: 1.8em; font-weight: 700; }
 .header p { color: #636363; font-size: 1em; }
+/* Etiqueta "(opcional)" en formularios. Color accesible (AA) sobre fondo claro;
+   override de modo oscuro en assets/dark-theme.css. */
+.opcional-label { color: #636363; font-weight: 400; font-size: 0.85em; }
 
 .progress-container {
     background: #e0e0e0; height: 30px;
@@ -813,7 +816,7 @@ body {
                 <div class="progress-bar" id="progressBar"></div>
                 <div class="progress-text" id="progressText">0%</div>
             </div>
-            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+            <p style="margin-top: 10px; font-size: 0.9em;">
                 ⏱️ Tiempo en el curso: <span id="elapsedTime">0 min</span>
             </p>
         </div>
@@ -879,7 +882,7 @@ body {
                         <input type="text" id="fullName" name="fullName" required placeholder="Ej: Juan Carlos Pérez Gómez">
                     </div>
                     <div class="form-group">
-                        <label for="age">Edad <span style="color:#888;font-weight:400;font-size:0.85em;">(opcional)</span></label>
+                        <label for="age">Edad <span class="opcional-label">(opcional)</span></label>
                         <input type="number" id="age" name="age" min="0" placeholder="Ej: 35">
                     </div>
                     <div class="form-group">
@@ -1759,7 +1762,7 @@ body {
                             <img src="../assets/logo-vallescout.png" alt="Valle Scout" style="height: 45px;">
                         </div>
                         <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociacion Scouts de Colombia</p>
-                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 2px 0;">Formación de Adultos en el Movimiento</p>
+                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #636363; margin: 2px 0;">Formación de Adultos en el Movimiento</p>
                     </div>
 
                     <hr style="border: none; border-top: 2px solid #622599; margin: 10px 30px;">
@@ -1793,7 +1796,7 @@ body {
 
                     <!-- Verification code -->
                     <div style="text-align: center; margin: 12px 0; padding: 8px; border: 1px dashed #622599; background: #faf8fd;">
-                        <p style="font-size: 0.75em; color: #888; margin: 0 0 3px;">Codigo de Verificacion</p>
+                        <p style="font-size: 0.75em; color: #636363; margin: 0 0 3px;">Codigo de Verificacion</p>
                         <strong style="font-size: 1em; color: #622599; letter-spacing: 2px;" id="certCode">ASC-2026-XXXXX</strong>
                     </div>
 

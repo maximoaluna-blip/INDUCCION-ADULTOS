@@ -142,6 +142,10 @@ html[data-theme="dark"] .header h1 {
 html[data-theme="dark"] .header p {
     color: #a0a0a8;
 }
+/* Etiqueta "(opcional)": en modo oscuro vive sobre tarjeta #24242c -> aclarar para AA. */
+html[data-theme="dark"] .opcional-label {
+    color: #a0a0a8;
+}
 html[data-theme="dark"] .progress-container {
     background: #3a3a44;
 }
