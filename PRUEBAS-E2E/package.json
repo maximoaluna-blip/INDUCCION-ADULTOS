@@ -1,0 +1,20 @@
+{
+  "name": "pruebas-e2e-asc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pruebas E2E con Playwright para el portal de formacion ASC (Fase 0: sin backend).",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "smoke": "playwright test smoke",
+    "links": "playwright test links",
+    "a11y": "playwright test a11y",
+    "responsive": "playwright test responsive",
+    "persistence": "playwright test persistence",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.50.0"
+  }
+}
