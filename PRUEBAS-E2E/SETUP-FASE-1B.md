@@ -43,17 +43,26 @@ cd <carpeta-clon> && clasp push -f && clasp deploy -d "backend pruebas E2E"
 
 ## Tras tener la URL de pruebas
 
-1. En `tests/_backend.js`, cambiar el modo: en vez de `route.fulfill()` con respuesta
-   simulada, hacer `route.continue({ url: TEST_SCRIPT_URL })` para los POST (reenviar al
-   endpoint de pruebas) o reconstruir el `fetch` hacia `TEST_SCRIPT_URL`.
-2. Añadir `tests/e2e-integracion.spec.js`:
-   - Correr el flujo de `e2e-flujo` apuntando al backend de pruebas.
-   - Luego `GET ?action=recover&email=...&token=...` y verificar que devuelve el registro.
-   - `GET ?action=verify&code=<certificado>` y verificar que el certificado existe.
-   - **Idempotencia:** revisitar el módulo de certificado no debe crear una 2.ª fila
-     (hallazgo de Fase 1a).
-3. Limpieza: usar correos/cursos de prueba reconocibles (p. ej. `*@example.com`) para poder
-   borrar filas de prueba de la hoja fácilmente.
+El test de integración **ya está escrito** (`tests/e2e-integracion.spec.js`). Solo falta
+darle la URL. Se auto-omite si la variable no está definida (CI sigue verde).
+
+```bash
+cd INDUCCION-ADULTOS/PRUEBAS-E2E
+TEST_SCRIPT_URL="https://script.google.com/macros/s/XXX/exec" npm test
+```
+
+El test hace `register → recover` (el registro debe aparecer) y `certificate → verify`
+(el certificado debe ser válido), escribiendo de verdad en el Sheet de pruebas.
+Usa correos `e2e-<timestamp>@example.com`, fáciles de filtrar y borrar.
+
+Si corres la suite **sin** la variable, ese test aparece como **skipped** (es lo esperado).
+
+### Opcional — activarlo también en CI
+
+Añade la URL como **secret** del repo (`Settings → Secrets → Actions`, nombre
+`TEST_SCRIPT_URL`) y en `.github/workflows/pruebas-e2e.yml`, en el paso de tests:
+`env: TEST_SCRIPT_URL: ${{ secrets.TEST_SCRIPT_URL }}`.
 
 > Mientras no exista el endpoint de pruebas, la Fase 1a ya valida todo el flujo del alumno
-> y el contrato POST sin escribir en ningún lado.
+> y el contrato POST sin escribir en ningún lado; este test solo añade la verificación de
+> persistencia real.
