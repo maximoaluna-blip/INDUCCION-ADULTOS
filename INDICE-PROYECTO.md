@@ -79,6 +79,10 @@ INDUCCION-ADULTOS/
 │       ├── plan-personal.json
 │       └── politica-adultos.json      ← v1 archivada (gitignored, sólo respaldo local)
 │
+├── .github/workflows/
+│   └── pruebas-e2e.yml               ← GitHub Actions: corre la suite en cada push/PR a main
+├── PRUEBAS-E2E/                      ← Suite Playwright + axe (smoke, a11y, enlaces, responsive, E2E del alumno) + integración Fase 1b
+│
 └── .clasp-workspace/                  ← (gitignored) workspace para clasp push del Apps Script
 ```
 
@@ -158,6 +162,14 @@ Documentación detallada de cada uno en `05-Generador-Cursos/SKILL.md`.
 
 Detalles operativos en [`BACKEND.md`](BACKEND.md).
 
+### Pruebas automatizadas y CI
+
+La suite `PRUEBAS-E2E/` (Playwright + `@axe-core/playwright`) valida el portal:
+- **Fase 0/1a** (sin backend): smoke, enlaces, accesibilidad WCAG AA (claro+oscuro), responsive (móvil+escritorio), persistencia y el **flujo E2E del alumno** (registro → quiz ≥70% → certificado) con el backend **interceptado** (no escribe en Sheets).
+- **Fase 1b** (integración real): `register→recover` y `certificate→verify` contra un Apps Script de pruebas; se activa con `TEST_SCRIPT_URL` y se auto-omite sin ella. Setup en `PRUEBAS-E2E/SETUP-FASE-1B.md`.
+
+Correr local: `cd PRUEBAS-E2E && npm test`. En **GitHub Actions** corre sola en cada push/PR a `main` (`.github/workflows/pruebas-e2e.yml`). Ver `DECISIONES.md` ADR-012.
+
 ---
 
 ## Cuentas y credenciales
@@ -167,6 +179,7 @@ Detalles operativos en [`BACKEND.md`](BACKEND.md).
 - **Token de auth backend:** `ADULTOS_ASC_2026` (compartido durante el piloto con la Línea Desarrollo Institucional, validado server-side).
 - **PROD_DEPLOYMENT_URL:** `https://script.google.com/macros/s/AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw/exec`
 - **PROD_SCRIPT_ID:** `1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe`
+- **PROD_SHEET_ID (datos vivos):** `1pbp63sqHayUM1MbpvH4smATeeSsaRIX6MOX0f2rMfIo` — "Datos Plataforma Adultos ASC - PROD" (renombrado el 20-jun-2026; ese día el backend se **restauró de la papelera** de Drive — ver `BACKEND.md`).
 
 > Para detalles completos del backend (cómo actualizar, cómo crear deployments, etc.) ver [`BACKEND.md`](BACKEND.md).
 > Para validar la sincronización del backend antes de cualquier deploy: `node 05-Generador-Cursos/verificar-backend.js`.
