@@ -14,7 +14,8 @@
 | **AUTH_TOKEN** | `ADULTOS_ASC_2026` |
 | **Editor del script** | https://script.google.com/u/0/home/projects/1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe/edit |
 | **Sheet asociado** | _(Lo abres desde el menú **Recursos / Proyecto vinculado** del editor del script. Anotar URL aquí cuando lo confirmes.)_ |
-| **Cuenta Google que es owner** | _(anotar la cuenta — ej. `maximoaluna@gmail.com`)_ |
+| **Cuenta Google que es owner** | `maximoaluna@gmail.com` |
+| **Despliegue activo** | "feat: persistencia…" → **Versión 6** (20-jun-2026), incluye fix de código de certificado. |
 
 ---
 
@@ -112,6 +113,7 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 |---|---|---|
 | 2026-05-17 | Dashboard mostraba solo agregados, no detalle. `handleStats()` no devolvía arrays. | Crear `verificar-backend.js` + este documento BACKEND.md. Documentar diferencia entre Web App URL y Deployment ID. |
 | 2026-05-17 (cont.) | El Script ID que se creía como producción era de otro proyecto de pruebas. El clasp local apuntaba al script equivocado. | Verificar el script de producción es el que está vinculado al Google Sheet vivo (Extensiones → Apps Script desde el sheet). El Script ID real es `1TTJ2VjN...gCrqe`, no `1x151jip...`. Reconfigurado `.clasp.json` y aplicado el parche de `handleStats()` al script correcto. |
+| 2026-06-20 | El script de prod `1TTJ2VjN…` **y su Sheet contenedor estaban en la papelera de Drive**. La web app seguía sirviendo, pero Drive purga la papelera a los 30 días → habría tumbado el backend y borrado los datos. Causa probable: borrado accidental (el frontend nunca cambió de URL). Además, prod tenía una validación `edad >= 18` en `handleRegister` que **no estaba en el repo** (drift por edición directa). | **Restaurado** desde la papelera (Apps Script → "Recuperar de la papelera"; al ser script vinculado, restaura también el Sheet contenedor). Redeploy **Versión 6** con el fix de código de certificado (el backend ahora honra el `certificateCode` del frontend). Repo `google-apps-script.js` **sincronizado con prod** (se incorporó la validación edad>=18). Pendiente: anotar arriba el ID/URL del Sheet vivo. |
 
 ---
 
