@@ -13,7 +13,7 @@
 | **PROD_DEPLOYMENT_URL** | `https://script.google.com/macros/s/AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw/exec` |
 | **AUTH_TOKEN** | `ADULTOS_ASC_2026` |
 | **Editor del script** | https://script.google.com/u/0/home/projects/1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe/edit |
-| **Sheet asociado** | _(Lo abres desde el menú **Recursos / Proyecto vinculado** del editor del script. Anotar URL aquí cuando lo confirmes.)_ |
+| **Sheet asociado** | El contenedor del script `1TTJ2VjN…`. En Drive aparece con el nombre **`adultos-backup-2026-05-17`** (nombre confuso: parece un backup pero es el Sheet VIVO de prod — recibió escrituras el 20-jun). **Recomendado: renombrarlo** a algo claro (p. ej. "Datos Plataforma Adultos ASC - PROD") y anotar su ID/URL aquí. |
 | **Cuenta Google que es owner** | `maximoaluna@gmail.com` |
 | **Despliegue activo** | "feat: persistencia…" → **Versión 6** (20-jun-2026), incluye fix de código de certificado. |
 
