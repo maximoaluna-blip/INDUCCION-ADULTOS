@@ -43,8 +43,8 @@ test.describe('@solo-escritorio Fase 1b — backend de pruebas (integración rea
     expect(recJson.success, 'recover success').toBe(true);
     expect(recJson.data && recJson.data.registration, 'registro recuperado').toBeTruthy();
 
-    // 3. Emitir certificado. OJO: el backend IGNORA el certificateCode del payload y
-    //    genera el suyo propio (server-side). Tomamos el que devuelve la respuesta.
+    // 3. Emitir certificado enviando un código del frontend. El backend debe HONRARLO
+    //    (no generar uno propio), para que el código del usuario coincida con el verificable.
     const cert = await request.post(TEST_URL, {
       headers: { 'Content-Type': 'application/json' },
       data: {
@@ -55,14 +55,13 @@ test.describe('@solo-escritorio Fase 1b — backend de pruebas (integración rea
     });
     const certJson = await cert.json();
     expect(certJson.success, 'certificate success').toBe(true);
-    const codigoServidor = certJson.data && certJson.data.certificateCode;
-    expect(codigoServidor, 'el backend devuelve un código de certificado').toMatch(/^ASC-\d{4}-[A-Z0-9]{5}$/);
+    expect(certJson.data && certJson.data.certificateCode, 'el backend honra el código del frontend').toBe(code);
 
-    // 4. Verify: el certificado emitido (código del SERVIDOR) debe ser válido.
-    const ver = await request.get(`${TEST_URL}?action=verify&code=${codigoServidor}&token=${TOKEN}`);
+    // 4. Verify: ese mismo código (el del frontend) debe ser válido.
+    const ver = await request.get(`${TEST_URL}?action=verify&code=${code}&token=${TOKEN}`);
     const verJson = await ver.json();
     expect(verJson.success, 'verify success').toBe(true);
     expect(verJson.data && verJson.data.valid, 'certificado válido').toBe(true);
-    expect(verJson.data.certificateCode).toBe(codigoServidor);
+    expect(verJson.data.certificateCode).toBe(code);
   });
 });

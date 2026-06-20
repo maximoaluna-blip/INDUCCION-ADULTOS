@@ -1055,13 +1055,19 @@ function handleCertificate(body, timestamp) {
       }
     }
 
-    // Generar codigo unico verificando que no exista
-    var certificateCode;
+    // Usar el codigo que envia el frontend si tiene formato valido (ASC-YYYY-XXXXX),
+    // para que el codigo que ve el usuario coincida con el almacenado y verificable.
+    // Si no es valido o ya existe (colision), se genera uno en el servidor.
+    var codeRegex = /^ASC-\d{4}-[A-Z0-9]{5}$/;
+    var certificateCode = sanitize(body.certificateCode, 20);
+    certificateCode = certificateCode ? certificateCode.toUpperCase().trim() : '';
+    if (!codeRegex.test(certificateCode)) {
+      certificateCode = generateCertificateCode();
+    }
     var codeExists = true;
     var maxAttempts = 10;
     var attempt = 0;
     while (codeExists && attempt < maxAttempts) {
-      certificateCode = generateCertificateCode();
       codeExists = false;
       for (var j = 1; j < existingData.length; j++) {
         if (String(existingData[j][6]).toUpperCase() === certificateCode) {
@@ -1069,7 +1075,10 @@ function handleCertificate(body, timestamp) {
           break;
         }
       }
-      attempt++;
+      if (codeExists) {
+        certificateCode = generateCertificateCode(); // colision: generar uno nuevo
+        attempt++;
+      }
     }
 
     if (codeExists) {
