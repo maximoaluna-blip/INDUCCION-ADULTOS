@@ -1,0 +1,96 @@
+name: Revision plataforma (Playwright · todas las lineas)
+
+# Revisa la plataforma EN PRODUCCION (GitHub Pages) de punta a punta:
+# corre la suite generica (smoke, enlaces, accesibilidad axe, responsive,
+# persistencia) contra las 3 lineas activas y un smoke del portal central.
+# La suite es agnostica de linea: lee el cursos.json de cada ASC_BASE_URL.
+# No escribe en ningun backend de Apps Script.
+#
+# Disparo: a mano desde la pestaña Actions (workflow_dispatch).
+# Para convertirlo en rutina periodica, descomentar el bloque "schedule".
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '0 11 * * 1'   # lunes 11:00 UTC (~6:00 a.m. Colombia)
+
+jobs:
+  lineas:
+    name: ${{ matrix.linea }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - linea: adultos
+            base: https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/02-Plataforma-Web/
+          - linea: programa-jovenes
+            base: https://maximoaluna-blip.github.io/INDUCCION-PROGRAMA-JOVENES/02-Plataforma-Web/
+          - linea: desarrollo-institucional
+            base: https://maximoaluna-blip.github.io/INDUCCION-DESARROLLO-INSTITUCIONAL/02-Plataforma-Web/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: PRUEBAS-E2E/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: PRUEBAS-E2E
+        run: npm ci
+
+      - name: Instalar navegador Playwright
+        working-directory: PRUEBAS-E2E
+        run: npx playwright install --with-deps chromium
+
+      - name: Suite generica contra ${{ matrix.linea }} (produccion)
+        working-directory: PRUEBAS-E2E
+        env:
+          ASC_BASE_URL: ${{ matrix.base }}
+        run: npx playwright test smoke links a11y responsive persistence --reporter=list
+
+      - name: Subir reporte (si falla)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-${{ matrix.linea }}
+          path: PRUEBAS-E2E/playwright-report
+          retention-days: 14
+
+  portal:
+    name: portal
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: PRUEBAS-E2E/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: PRUEBAS-E2E
+        run: npm ci
+
+      - name: Instalar navegador Playwright
+        working-directory: PRUEBAS-E2E
+        run: npx playwright install --with-deps chromium
+
+      - name: Smoke del portal central (produccion)
+        working-directory: PRUEBAS-E2E
+        env:
+          ASC_PORTAL_URL: https://maximoaluna-blip.github.io/PORTAL-ADULTOS-ASC/
+        run: npx playwright test portal --reporter=list
+
+      - name: Subir reporte (si falla)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-portal
+          path: PRUEBAS-E2E/playwright-report
+          retention-days: 14

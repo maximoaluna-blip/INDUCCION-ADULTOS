@@ -12,6 +12,8 @@ const BASE_URL =
 
 module.exports = defineConfig({
   testDir: './tests',
+  // Carga el catalogo de cursos del ASC_BASE_URL antes de las specs (suite agnostica de linea).
+  globalSetup: require.resolve('./tests/_setup-cursos.js'),
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,

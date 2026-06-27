@@ -12,8 +12,10 @@ for (const curso of CURSOS) {
     expect(resp, 'sin respuesta HTTP').toBeTruthy();
     expect(resp.status(), 'status HTTP').toBeLessThan(400);
 
-    // El <title> menciona el curso.
-    await expect(page).toHaveTitle(new RegExp(curso.tituloIncluye, 'i'));
+    // El <title> menciona el curso (si hay palabra clave); si no, basta que exista.
+    await expect(page).toHaveTitle(
+      curso.tituloIncluye ? new RegExp(curso.tituloIncluye, 'i') : /.+/
+    );
 
     // Hay contenido visible (al menos un h1/h2 con texto).
     const encabezado = page.locator('h1, h2').first();
