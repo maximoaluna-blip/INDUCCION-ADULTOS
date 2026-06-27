@@ -329,6 +329,35 @@
                 height: 40px;
             }
         }
+
+        /* --- Boton volver al portal --- */
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .back-portal {
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 4px;
+            padding: 6px 14px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .back-portal:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .top-bar-right { gap: 10px; }
+            .back-portal { padding: 5px 10px; font-size: 0.75em; }
+        }
     </style>
 </head>
 <body>
@@ -340,7 +369,10 @@
                 <div class="separator"></div>
                 <img src="assets/logo-vallescout.png" alt="Scouts del Valle">
             </div>
-            <span class="top-bar-title">Plataforma de Formacion de Adultos</span>
+            <div class="top-bar-right">
+                <span class="top-bar-title">Plataforma de Formacion de Adultos</span>
+                <a class="back-portal" href="https://maximoaluna-blip.github.io/PORTAL-ADULTOS-ASC/">← Plataforma ASC</a>
+            </div>
         </div>
     </div>
 
