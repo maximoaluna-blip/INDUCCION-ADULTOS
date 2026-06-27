@@ -100,6 +100,16 @@ Es el corazón técnico de la plataforma. Cada archivo tiene un rol específico 
 
 **Tiempo total para un curso simple: ~30–60 min de trabajo activo + tu revisión.**
 
+> ⚠️ **Construir el curso ≠ publicar la línea.** GitHub Pages sirve desde la **raíz** del repo: si la raíz no tiene `index.html`, la URL pública de la línea da 404 (aunque el curso exista en `02-Plataforma-Web/`).
+
+### Publicación de la LÍNEA (raíz + portal) — al estrenar la línea o cambiar el nº de cursos activos
+
+Procedimiento universal en `../MANUAL-CREACION-CURSOS.md` §A.3-bis y `../CLAUDE.md` §7-bis. Datos propios de **Política de Adultos**:
+
+1. **Raíz del repo:** verificar que `index.html` (con botón `.back-portal`) + `404.html` siguen presentes.
+2. **Portal** `../PORTAL-ADULTOS-ASC/lineas.json` → entrada `"id": "politica-adultos"`: mantener `status: "active"`, `url: "https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/"`, `color: "#622599"`, y **actualizar `coursesActive`** al nº de cursos con `status: "active"` (`coursesPlanned: 12`). Sincronizar la tabla del `README.md` del portal.
+3. Push del repo del portal + **verificar en producción** (landing 200, curso 200, tarjeta clickeable en el portal).
+
 ### Diagrama del flujo
 
 ```
