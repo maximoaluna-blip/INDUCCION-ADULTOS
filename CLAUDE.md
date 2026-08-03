@@ -19,7 +19,7 @@ Una de las 3 líneas activas de formación digital para adultos voluntarios de l
 
 | Documento | Para qué |
 |---|---|
-| `CREAR-CURSO.md` | Manual operativo de creación de cursos de esta línea |
+| `CREAR-CURSO.md` | Manual operativo de creación de cursos de esta línea (incluye las 3 auditorías como compuerta antes de publicar) |
 | `Recomendaciones-Cowork-Diseno-Cursos.md` | Guía de diseño pedagógico dirigida a Cowork |
 | `INDICE-PROYECTO.md` | Estado, URLs, dependencias técnicas |
 | `BACKEND.md` | Backend Apps Script propio de esta línea |

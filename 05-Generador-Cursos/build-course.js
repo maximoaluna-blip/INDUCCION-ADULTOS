@@ -183,7 +183,7 @@ function renderSection(section) {
             ).join('');
             return `<div class="plan-builder" id="pb-${pbId}">
                     <div class="pb-profile-banner" id="pb-profile-${pbId}"></div>
-                    <p class="pb-intro">Selecciona <strong>2 a 3 competencias</strong> en las que quieras trabajar este ciclo. Si tomaste el Curso 3, las áreas de oportunidad ya están sugeridas. Puedes cambiarlas si quieres.</p>
+                    <p class="pb-intro">Selecciona <strong>2 a 3 competencias</strong> en las que quieras trabajar este ciclo. Si tomaste el Curso 4, las áreas de oportunidad ya están sugeridas. Puedes cambiarlas si quieres.</p>
                     <div class="pb-competences">${pbCompetences}</div>
                     <div class="pb-commitment-block">
                         <label class="pb-field-label pb-commitment-label">💚 Mi compromiso personal con este plan</label>

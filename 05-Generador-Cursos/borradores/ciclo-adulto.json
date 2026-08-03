@@ -16,6 +16,10 @@
       "sections": [
         {
           "type": "info-box",
+          "text": "<strong>Una pregunta antes de empezar.</strong><br>¿Cuándo termina tu nombramiento actual? ¿Quién te acompaña? ¿Qué pasa el día que decidas parar?<br>Si no supiste responder alguna, no es culpa tuya: en muchos grupos <strong>los adultos entran sin claridad, sirven sin acompañamiento y se van sin reconocimiento</strong>. Este curso es el mapa que arregla eso — cómo se vive un nombramiento de principio a fin."
+        },
+        {
+          "type": "info-box",
           "text": "<strong>Bienvenido/a al Curso 3.</strong><br>Si vienes del Curso 2 ya tienes el marco. Antes de entrar al detalle de competencias (Curso 4) y plan personal (Curso 5), aquí vas a ver el <strong>panorama completo</strong>: cómo se vive un nombramiento de principio a fin. Es el mapa que pone todas las piezas en su lugar."
         },
         {
@@ -35,12 +39,12 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "<strong>Entender</strong> el ciclo de vida del adulto (3 fases) y por qué importa",
-            "<strong>Conocer</strong> las 5 sub-fases del proceso de Atracción y Vinculación",
-            "<strong>Distinguir</strong> entre Formación Básica y Perfeccionamiento Continuo",
-            "<strong>Saber</strong> cómo funciona la Evaluación 360° y el acompañamiento",
-            "<strong>Conocer</strong> las 3 opciones al final del nombramiento (renovación, reubicación, retiro)",
-            "<strong>Salir</strong> con visión de conjunto de toda la política, no solo de las piezas"
+            "<strong>Ubicar</strong> cualquier situación de tu grupo (o la tuya) en una de las 3 fases del ciclo",
+            "<strong>Detectar</strong> cuáles de las 5 sub-fases de vinculación se saltaron cuando tú entraste a tu cargo",
+            "<strong>Distinguir</strong> Formación Básica de Perfeccionamiento Continuo — y saber en cuál estás hoy",
+            "<strong>Identificar</strong> qué modalidad de la evaluación 360° le está faltando a tu grupo",
+            "<strong>Anticipar</strong> las 3 opciones al cierre de tu nombramiento y decidir cuál persigues",
+            "<strong>Explicarle</strong> a otro adulto por qué el ciclo es el antídoto al desgaste"
           ]
         },
         {
@@ -81,7 +85,7 @@
           "items": [
             { "title": "1. Atracción y Vinculación", "description": "Cómo el grupo identifica que necesita un adulto, lo busca, lo selecciona, lo integra y firma el acuerdo mutuo. Aterrizamos esto en la Lección 2.", "color": "#fff3e0", "borderColor": "#ff9800" },
             { "title": "2. Desempeño", "description": "Lo que pasa durante todo tu nombramiento: formación básica, perfeccionamiento continuo, acompañamiento, evaluación. Lecciones 3 y 4.", "color": "#e3f2fd", "borderColor": "#2196f3" },
-            { "title": "3. Decisiones para el Futuro", "description": "Al cerrar el nombramiento (típicamente 1-3 años), ¿qué sigue? Renovación, reubicación o retiro. Siempre con reconocimiento. Lección 5.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+            { "title": "3. Decisiones para el Futuro", "description": "Al cerrar el nombramiento — el Acuerdo Mutuo dura <strong>máximo 2 años</strong> y se puede prorrogar; en el Grupo, la mayoría de los cargos se renuevan <strong>cada año</strong> —, ¿qué sigue? Renovación, reubicación o retiro. Siempre con reconocimiento. Lección 5.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
           ]
         },
         {
@@ -95,8 +99,8 @@
           "items": [
             "<strong>NO es lineal una sola vez.</strong> Un adulto puede tener varios ciclos paralelos (ej. ser tesorero del grupo + asesor personal de otra persona = dos ciclos)",
             "<strong>NO se trata de tiempo en el movimiento.</strong> Alguien con 20 años en escultismo puede estar arrancando un nuevo ciclo si asume un cargo nuevo",
-            "<strong>SÍ tiene un cierre definido.</strong> Los nombramientos tienen vigencia (1-3 años). No 'eres tesorero para siempre'",
-            "<strong>SÍ es flexible.</strong> Si no estás funcionando en un cargo, la política contempla cambiarte a otro — no es despedirte"
+            "<strong>SÍ tiene un cierre definido.</strong> Tu nombramiento tiene fecha de vencimiento: la que diga tu Acuerdo Mutuo (nunca más de 2 años, y en el Grupo casi siempre 1). No 'eres tesorero para siempre'",
+            "<strong>SÍ es flexible.</strong> Si un cargo no te está funcionando, la política contempla moverte a otro que se ajuste mejor — no todo termina en salida. Eso sí: si el desempeño no mejora después de un plan de mejora, la política también contempla cerrar el nombramiento. Lo importante es que sea una conversación, no un silencio."
           ]
         },
         {
@@ -115,7 +119,7 @@
         {
           "type": "policy-quote",
           "text": "El sistema de gestión de los adultos en el Movimiento Scout comprende la sucesión cíclica de los procesos de atracción, desempeño, y decisiones para el futuro, para cada uno de los cargos y funciones. Esto se denomina ciclo de vida del adulto y busca atraer, trabajar con y motivar a los adultos, durante períodos de tiempo establecidos fija y previamente. Este concepto no se refiere necesariamente al tiempo de permanencia de un adulto dentro del Movimiento ni se relaciona de manera exclusiva a un solo cargo o una función específica.",
-          "source": "Política Nacional de Adultos en el Movimiento, Cap. 5 'Ciclo de Vida del Adulto', p. 10",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. N° 176 de 2017), Cap. 5, p. 10",
           "label": "📋 Ver definición oficial del ciclo de vida del adulto"
         }
       ],
@@ -126,16 +130,20 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "¿Cuántas fases principales tiene el ciclo de vida del adulto?",
-            "options": ["2", "3", "5"],
+            "text": "Marcela lleva tres meses de tesorera. Ya firmó su Acuerdo Mutuo, está armando su plan con su asesora, y todavía no le han hecho ninguna evaluación. ¿En qué fase del ciclo está?",
+            "options": [
+              "En Atracción y Vinculación: apenas lleva tres meses en el cargo.",
+              "En Desempeño: ya está nombrada, y ahí van formación, acompañamiento y evaluación.",
+              "En Decisiones para el Futuro: todavía nadie la ha evaluado."
+            ],
             "correctIndex": 1
           },
           {
-            "text": "¿Cuál de estas afirmaciones es correcta sobre el ciclo?",
+            "text": "Don Álvaro lleva 22 años en el grupo y este año lo nombraron intendente. Además es asesor personal de una dirigente nueva. ¿Cómo está su situación frente al ciclo?",
             "options": [
-              "Un adulto solo puede tener un ciclo activo a la vez",
-              "Un adulto puede tener varios ciclos paralelos si ejerce varios cargos al tiempo",
-              "El ciclo dura toda la vida del adulto en el movimiento, sin cerrarse"
+              "Tiene un solo ciclo: el de sus 22 años en el movimiento.",
+              "Tiene dos ciclos abiertos en paralelo, uno por cada cargo, y ambos arrancan de cero.",
+              "No aplica el ciclo: con esa trayectoria ya no necesita acuerdo ni plan."
             ],
             "correctIndex": 1
           }
@@ -161,11 +169,11 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "1. Determinación de Necesidades", "description": "El consejo identifica qué cargos están vacantes, qué se necesita cubrir y por qué. NO es 'el primero que pase y diga sí'." },
+            { "title": "1. Determinación de Necesidades", "description": "Cada estamento (en el Grupo, el consejo) revisa qué cargos existen, cuáles están vacantes y qué se necesita cubrir. NO es 'el primero que pase y diga sí'." },
             { "title": "2. Identificación de Competencias", "description": "Se definen las competencias específicas requeridas para ese cargo. Tesorero ≠ Secretario ≠ Asesor. Cada uno requiere algo distinto." },
             { "title": "3. Búsqueda y Selección", "description": "Se busca a la persona adecuada (no necesariamente solo papás del grupo). Se evalúa su afinidad. Se considera la inserción juvenil y equidad de género." },
-            { "title": "4. Integración", "description": "Período inicial donde el adulto conoce el contexto, el equipo, las dinámicas. NO se le exige desempeño inmediato — se le da espacio para aprender el rol." },
-            { "title": "5. Compromiso, Acuerdo Mutuo y Nombramiento", "description": "Se firma el Acuerdo Mutuo (los 6 elementos del Curso 4) + se hace el nombramiento oficial. Aquí formalmente entra al ciclo." }
+            { "title": "4. Integración", "description": "Período inicial donde el adulto conoce el contexto, el equipo, las dinámicas. NO se le exige desempeño inmediato — se le da espacio para aprender el rol. En paralelo se ponen al día los trámites (abajo te los listamos)." },
+            { "title": "5. Compromiso, Acuerdo Mutuo y Nombramiento", "description": "Se firma el Acuerdo Mutuo (los 6 elementos del Curso 5) + se hace el nombramiento oficial. Aquí formalmente entra al ciclo." }
           ]
         },
         {
@@ -182,7 +190,11 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>💡 ¿Qué cambia para ti como adulto en un cargo actual?</strong><br>Si tu vinculación NO siguió este proceso, no es tarde. Puedes pedirle a tu jefe de grupo retroactivamente: una conversación clara sobre lo que se espera + un Acuerdo Mutuo firmado. La política contempla este 'ajuste retroactivo'."
+          "text": "<strong>📋 Los 4 trámites de la Integración</strong> (los mismos para todos, sea cual sea tu cargo):<br>1. Tu hoja de vida en <strong>Talento 360°</strong><br>2. Tu registro en <strong>SiScout</strong><br>3. El curso de inducción general<br>4. Los <strong>4 módulos de A Salvo del Peligro</strong> — estos no son negociables<br><br>¿Cuáles de los 4 tienes al día? Si te falta alguno, ese es el que resuelves esta semana."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 ¿Qué cambia para ti como adulto en un cargo actual?</strong><br>Si tu vinculación NO siguió este proceso, no es tarde. Puedes pedirle a tu jefe inmediato una conversación clara sobre lo que se espera de ti y firmar el Acuerdo Mutuo ahora. <strong>La política no pone fecha límite para ponerse al día con esto</strong> — y firmarlo hoy te da el mismo respaldo que si lo hubieras firmado el primer día."
         },
         {
           "type": "policy-quote",
@@ -198,11 +210,11 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "La sub-fase 'Integración' del proceso de Atracción y Vinculación es:",
+            "text": "Llega Patricia al consejo como nueva secretaria. En su segunda reunión el jefe de grupo le pide que presente el informe anual completo. Según el proceso de vinculación, ¿qué está fallando?",
             "options": [
-              "El examen final que decide si la persona se queda",
-              "El período inicial donde el adulto conoce el contexto y el equipo, sin exigirle desempeño inmediato",
-              "La asignación arbitraria de tareas adicionales"
+              "Nada: si aceptó el cargo, debe responder desde el primer día.",
+              "Se está saltando la Integración: primero conoce el contexto y el equipo, después se le exige desempeño.",
+              "Falta la Identificación de Competencias: nadie definió el perfil de secretaria."
             ],
             "correctIndex": 1
           },
@@ -211,7 +223,7 @@
             "options": [
               "Una felicitación verbal del jefe de grupo",
               "El Acuerdo Mutuo firmado y el nombramiento oficial",
-              "El primer campamento del nuevo adulto"
+              "Su registro en SiScout y la hoja de vida en Talento 360°"
             ],
             "correctIndex": 1
           }
@@ -237,7 +249,7 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "🎯 Formación Básica", "description": "Te prepara para el cargo concreto. Se basa en tu Plan Personal (del Curso 4). Termina con la <strong>Insignia de Madera</strong> (símbolo oficial de certificación) cuando demuestras las competencias requeridas.", "color": "#fff3e0", "borderColor": "#ff9800" },
+            { "title": "🎯 Formación Básica", "description": "Te prepara para el cargo concreto. Se basa en tu Plan Personal (del Curso 5). Termina con la <strong>Insignia de Madera</strong> (símbolo oficial de certificación) cuando demuestras las competencias requeridas.", "color": "#fff3e0", "borderColor": "#ff9800" },
             { "title": "🔄 Perfeccionamiento Continuo", "description": "Una vez certificado, el aprendizaje no para. Cursos de actualización, módulos, experiencias formativas que te mantienen vigente. Se renueva año a año.", "color": "#e3f2fd", "borderColor": "#2196f3" }
           ]
         },
@@ -260,6 +272,10 @@
           "text": "📋 ¿Cómo se compone la formación básica?"
         },
         {
+          "type": "paragraph",
+          "text": "En el Curso 2 viste que la política gestiona por competencias, no por cargos. Aquí es donde eso se vuelve calendario: la formación básica es el camino para demostrarlas."
+        },
+        {
           "type": "list",
           "ordered": true,
           "items": [
@@ -270,11 +286,15 @@
         },
         {
           "type": "info-box",
+          "text": "<strong>💡 Ojo con el nombre:</strong> la insignia cambia de nombre según el nivel donde sirves. En el Grupo es la <strong>Insignia de Madera</strong>; si tu cargo es regional se llama <strong>Gestor Regional</strong>, y si es nacional, <strong>Gestor Nacional</strong>. Mismo proceso, distinto nombre. Si tu cargo es de grupo, quédate con 'Insignia de Madera' y sigue tranquilo/a."
+        },
+        {
+          "type": "info-box",
           "text": "<strong>💡 Algo clave:</strong> la formación se reconoce por <em>evidencias</em>, no por horas. Si llegaste con un máster en gestión financiera y eres tesorero del grupo, no necesitas tomar cursos básicos de finanzas — pero sí debes evidenciar las competencias en el contexto scout (transparencia, rendición de cuentas, etc.)."
         },
         {
           "type": "policy-quote",
-          "text": "La ASC establecerá un sistema de formación que provea, para cada cargo o función, los siguientes procesos complementados y reforzados con la evaluación y certificación: Una Formación Básica — Un Perfeccionamiento Continuo. La formación básica se inicia con la formulación de un plan personal de desarrollo, acordado entre el adulto y su Asesor Personal. Como símbolos de unidad, la ASC utilizará para el reconocimiento de la formación básica, la Insignia de Madera, en los términos establecidos en el correspondiente marco de referencia a nivel mundial.",
+          "text": "La ASC establecerá un sistema de formación que provea, para cada cargo o función, los siguientes procesos complementados y reforzados con la evaluación y certificación: Una Formación Básica — Un Perfeccionamiento Continuo. […] La formación básica se inicia con la formulación de un plan personal de desarrollo, acordado entre el adulto y su Asesor Personal. […] Como símbolos de unidad, la ASC utilizará para el reconocimiento de la formación básica, la Insignia de Madera, en los términos establecidos en el correspondiente marco de referencia a nivel mundial.",
           "source": "Política Nacional de Adultos en el Movimiento, Cap. 5.2.1 y 5.2.2, p. 14-16",
           "label": "📋 Ver definición oficial de los 2 momentos formativos"
         }
@@ -335,7 +355,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>💡 Importante:</strong> el acompañamiento NO es vigilancia. Es soporte técnico, moral y personal. La política dice expresamente que debe 'reforzar tu motivación y permitir que aportes el máximo de tu potencial'."
+          "text": "<strong>💡 Importante:</strong> el acompañamiento NO es vigilancia. Es soporte técnico, moral y personal. La política lo dice así: el acompañamiento busca 'reforzar su motivación para aportar al Movimiento Scout el máximo de su potencial'. Traducido: está para que puedas dar lo mejor de ti, no para vigilarte."
         },
         {
           "type": "heading",
@@ -348,7 +368,7 @@
             { "title": "1. Autoevaluación", "description": "Tú te evalúas a ti mismo/a. Es la base — y la profundizarás con el autodiagnóstico del Curso 4.", "color": "#fff3e0", "borderColor": "#ff9800" },
             { "title": "2. Coevaluación", "description": "Tus pares te evalúan: otros consejeros, otros dirigentes con cargos similares.", "color": "#e3f2fd", "borderColor": "#2196f3" },
             { "title": "3. Heteroevaluación", "description": "Quienes reciben tu trabajo te evalúan: chicos, padres, lobatos, scouts, caminantes, rovers — según corresponda al cargo.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
-            { "title": "4. Evaluación", "description": "Quien tiene la responsabilidad formal de certificar tus competencias (típicamente tu asesor + jefe de grupo) emite la evaluación final.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+            { "title": "4. Evaluación", "description": "Quien tiene la responsabilidad formal de certificar tus competencias (típicamente tu asesor + tu jefe inmediato) emite la evaluación final.", "color": "#e8f5e9", "borderColor": "#4caf50" }
           ]
         },
         {
@@ -357,21 +377,29 @@
           "text": "📋 Las herramientas oficiales"
         },
         {
+          "type": "paragraph",
+          "text": "No tienes que memorizar estos números. Piénsalo como un índice: cuando llegue el momento de evaluar, pides el documento por su nombre y ya. Varios de estos ya los viste en la mochila de 12 herramientas del Curso 2 — aquí es donde se usan."
+        },
+        {
           "type": "list",
           "ordered": false,
           "items": [
+            "<strong>Bitácora de Acompañamiento al adulto</strong> (Doc 15) — para documentar reuniones con el asesor",
             "<strong>Encuesta de percepción de padres o acudientes al dirigente</strong> (Doc 16)",
             "<strong>Encuesta de percepción del scout, caminante o rover al dirigente</strong> (Doc 17)",
             "<strong>Encuesta de percepción del lobato al dirigente</strong> (Doc 18)",
-            "<strong>Bitácora de Acompañamiento al adulto</strong> (Doc 15) — para documentar reuniones con el asesor",
             "<strong>Recomendaciones para aplicar las encuestas</strong> (Doc 20)"
           ]
         },
         {
           "type": "policy-quote",
           "text": "Cada adulto recibirá, desde el momento de su nombramiento y hasta su culminación, el acompañamiento y seguimiento permanente y adecuado, provistos, principalmente, por la persona a la que reporta, el equipo al que pertenece, su asesor personal, los integrantes de los procesos de formación en los que participa y otros agentes que influyen directamente en el desempeño de sus funciones, el cual debe proveer todo el apoyo técnico, moral y personal que sea necesario para su desempeño y su desarrollo personal. — En la formación básica, la certificación del desarrollo de las competencias requeridas, las realizará el Asesor Personal, mediante la evaluación de 360° (Autoevaluación, Coevaluación, Heteroevaluación y Evaluación) y la valoración de las evidencias que sustentan su evolución.",
-          "source": "Política Nacional de Adultos en el Movimiento, Cap. 5.2.4 y 5.2.2, p. 16-17",
+          "source": "Política Nacional de Adultos en el Movimiento, Cap. 5.2.4 y 5.2.2, p. 15-16",
           "label": "📋 Ver lo que dice la política sobre acompañamiento y 360°"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 En simple:</strong> el 360° no es que te califiquen cuatro veces. Es que cuatro miradas distintas —la tuya, la de tus pares, la de los chicos y los padres, y la de quien certifica— arman una foto que ninguna sola podría dar. Si en tu grupo solo evalúa 'el de arriba', eso no es 360°: es 90°."
         }
       ],
       "reflection": {
@@ -381,8 +409,12 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "¿Cuántas modalidades tiene la evaluación 360° según la política?",
-            "options": ["3", "4", "6"],
+            "text": "En el grupo de Andrés evaluaron a los dirigentes así: cada uno llenó su propia ficha, los dirigentes se evaluaron entre ellos, y el jefe de grupo firmó el resultado. ¿Qué le falta para ser una evaluación de 360°?",
+            "options": [
+              "Nada le falta: con esas tres modalidades ya es de 360°.",
+              "Falta la heteroevaluación: nadie les preguntó a los chicos ni a los padres.",
+              "Falta la autoevaluación: nadie se calificó a sí mismo."
+            ],
             "correctIndex": 1
           },
           {
@@ -415,7 +447,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>El nombramiento tiene fecha de vencimiento. Al finalizar, hay tres caminos posibles. La política te garantiza que <em>cualquiera</em> que tomes lleva un reconocimiento formal — incluso retirarte."
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>El nombramiento tiene fecha de vencimiento. Al finalizar, hay tres caminos posibles. La política pide que en <em>cualquiera</em> de los tres siempre se considere un reconocimiento formal — incluso si te retiras."
         },
         {
           "type": "heading",
@@ -449,6 +481,10 @@
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Un detalle: en el caso en que la organización decide cerrar el nombramiento por falta de cumplimiento, la política permite hacerlo <strong>incluso antes de que venza el término</strong> — siempre después de una evaluación y con proceso transparente. No es sorpresa: primero hay evaluación, plan de mejora y conversación."
+        },
+        {
           "type": "info-box",
           "text": "<strong>💡 Algo importante:</strong> en el escenario donde la organización decide cerrar el nombramiento, no es 'salir por la puerta de atrás'. La política exige proceso transparente, evaluación, y reconocimiento de lo aportado. La diferencia entre un cierre digno y un 'desaparecer' es enorme."
         },
@@ -459,7 +495,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Cualquiera de las tres decisiones lleva un <strong>reconocimiento formal y agradecimiento</strong> a tu servicio. La política lo dice explícitamente: ningún adulto debe salir sin que se reconozca su aporte."
+          "text": "La política pide que, sea cual sea la decisión, <strong>siempre se considere</strong> el reconocimiento y el agradecimiento formal a tu servicio. No es un trámite opcional que se olvida: es parte del cierre."
         },
         {
           "type": "blockquote",
@@ -467,32 +503,32 @@
         },
         {
           "type": "policy-quote",
-          "text": "El ciclo de vida del adulto en un cargo o función culmina con una evaluación final, al término de su nombramiento, que permitirá tomar la decisión más acertada para el futuro, y que puede ser: La renovación del nombramiento del adulto en el mismo cargo o función — La reubicación del adulto en otro cargo o función, como resultado de la movilidad dentro de un sistema flexible — El retiro del adulto del cargo. En todo caso, cualquiera que sea la decisión que se adopte sobre el adulto, siempre debe considerarse el reconocimiento y agradecimiento formal de su desempeño.",
+          "text": "El ciclo de vida del adulto en un cargo o función culmina con una evaluación final, al término de su nombramiento, que permitirá tomar la decisión más acertada para el futuro, y que puede ser: La renovación del nombramiento del adulto en el mismo cargo o función — La reubicación del adulto en otro cargo o función, como resultado de la movilidad dentro de un sistema flexible — El retiro del adulto del cargo […]. En todo caso, cualquiera que sea la decisión que se adopte sobre el adulto, siempre debe considerarse el reconocimiento y agradecimiento formal de su desempeño, si correspondiera; para ello la ASC determinará e implementará los procedimientos adecuados…",
           "source": "Política Nacional de Adultos en el Movimiento, Cap. 5.3 'Decisiones para el Futuro', p. 18",
           "label": "📋 Ver las 3 opciones oficiales al cierre del nombramiento"
         }
       ],
       "reflection": {
-        "prompt": "Pensando a futuro: cuando termine tu nombramiento actual, ¿cuál de las 3 opciones te gustaría? ¿Renovar, moverte a otro cargo, o cerrar tu ciclo? ¿Por qué?"
+        "prompt": "¿Qué día termina tu nombramiento actual? Escribe la fecha. Si no la sabes —le pasa a la mayoría—, escribe a quién se la vas a preguntar y cuándo. Y después: de las 3 opciones, ¿cuál querrías que pasara ese día, y qué tendrías que empezar a hacer desde hoy para que pase?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Las 3 opciones al final del nombramiento son:",
+            "text": "A Juliana no le está funcionando ser secretaria del consejo: no tiene el tiempo que el cargo pide, pero quiere seguir en el grupo. Según la política, ¿cuál es el camino?",
             "options": [
-              "Renovación, reubicación o retiro",
-              "Promoción, democión o despido",
-              "Continuación o terminación"
+              "Retiro: si no puede con el cargo, sale del grupo.",
+              "Reubicación: se le busca otro cargo que se ajuste mejor, y arranca un ciclo nuevo.",
+              "Renovación: se le firma otro año igual y se espera que mejore."
             ],
-            "correctIndex": 0
+            "correctIndex": 1
           },
           {
-            "text": "Sobre el reconocimiento al cierre del nombramiento:",
+            "text": "En el grupo de Nicolás, el consejo decidió no renovarle el nombramiento a un dirigente por bajo desempeño. Alguien propone agradecerle en la ceremonia de cierre y otro responde: 'no, ese reconocimiento es para los que se van bien'. Según la política, ¿quién tiene razón?",
             "options": [
-              "Solo se reconoce a quienes renuevan",
-              "La política exige reconocimiento formal sin importar cuál de las 3 decisiones se tome",
-              "Solo se reconoce a quienes son ascendidos a regional o nacional"
+              "El segundo: el reconocimiento se reserva para quien renueva o asciende.",
+              "El primero: la política pide considerar el reconocimiento sea cual sea la decisión.",
+              "Ninguno: el reconocimiento formal es opcional y cada grupo decide si lo hace."
             ],
             "correctIndex": 1
           },
@@ -555,6 +591,14 @@
         {
           "type": "info-box",
           "text": "<strong>🚀 Recomendación:</strong> aprovecha el momentum y continúa al Curso 4. Te tomará ~35 minutos y, al terminar, tendrás tu propio perfil de competencias con fortalezas y áreas de oportunidad — listo para conectarse con tu Plan Personal en el Curso 5."
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión de esta semana — elige UNA y ponle día:</strong><br><br>• Averigua en qué fecha vence tu nombramiento actual. Pregúntale a tu jefe de grupo.<br>• Si nunca firmaste tu Acuerdo Mutuo, pide la conversación. Nunca es tarde: firmarlo hoy te da el mismo respaldo.<br>• Averigua quién es tu asesor personal. Si no tienes, ese es tu primer paso.<br><br>Una sola, con día concreto. No las tres."
+        },
+        {
+          "type": "blockquote",
+          "text": "Ahora sabes cómo entras, quién te acompaña y qué pasa al final. Nadie debería entrar sin claridad, servir sin acompañamiento ni irse sin reconocimiento — y menos tú."
         }
       ],
       "reflection": {
@@ -564,20 +608,20 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 3",
         "questions": [
           {
-            "text": "Habiendo terminado este curso, lo más recomendable es:",
+            "text": "Un dirigente de tu grupo dice: 'Yo ya hice mi Insignia de Madera hace seis años, así que mi ciclo ya lo cerré.' ¿Qué le responderías con lo que viste en este curso?",
             "options": [
-              "Esperar varios meses antes de continuar",
-              "Aprovechar el momentum y continuar al Curso 4 (Competencias) para profundizar en lo que se evalúa durante el Desempeño",
-              "Pasar directo al Curso 5 sin ver el Curso 4"
+              "Tiene razón: con la Insignia de Madera un adulto ya completó su ciclo en el movimiento.",
+              "No: la insignia cierra la formación básica, no el ciclo — siguen el perfeccionamiento continuo y la decisión al final del nombramiento.",
+              "Depende: el ciclo solo se reabre si lo nombran en un cargo distinto al que tiene hoy."
             ],
             "correctIndex": 1
           },
           {
-            "text": "Si en el futuro asumes un cargo nuevo (ej. cambias de tesorero a presidente del consejo), ¿qué pasa con el ciclo?",
+            "text": "Si en el futuro asumes un cargo nuevo (ej. pasas de tesorero a presidente del consejo), ¿qué es lo primero que cambia?",
             "options": [
-              "Continúa el mismo ciclo de antes",
-              "Arranca un nuevo ciclo paralelo, con su propio Acuerdo Mutuo, plan y evaluación",
-              "No hace falta hacer nada nuevo"
+              "Nada formal: ya estás vinculado al grupo, sigues con lo que tienes.",
+              "Se abre un ciclo nuevo: toca acordar y firmar un Acuerdo Mutuo para ese cargo, con su propio plan.",
+              "Solo se actualiza tu registro en SiScout y sigues con el mismo plan."
             ],
             "correctIndex": 1
           }
@@ -591,7 +635,8 @@
     { "id": "achievement-2", "name": "Domina la Vinculación", "emoji": "🚪", "unlockOnModule": 3 },
     { "id": "achievement-3", "name": "Conoce el Desempeño", "emoji": "🎓", "unlockOnModule": 4 },
     { "id": "achievement-4", "name": "Maestro de la Evaluación 360°", "emoji": "🧭", "unlockOnModule": 5 },
-    { "id": "achievement-5", "name": "Curso 3 Completado", "emoji": "🏆", "unlockOnModule": -1 }
+    { "id": "achievement-5", "name": "Cierra con Dignidad", "emoji": "🏆", "unlockOnModule": 6 },
+    { "id": "achievement-6", "name": "Curso 3 Completado", "emoji": "🏆", "unlockOnModule": -1 }
   ],
   "certificate": {
     "courseName": "EL CICLO DEL ADULTO EN EL MOVIMIENTO",

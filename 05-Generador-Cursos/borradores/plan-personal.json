@@ -2,7 +2,7 @@
   "courseId": "plan-personal",
   "title": "Tu Plan Personal de Desarrollo",
   "subtitle": "Curso 5 de la Ruta de Formación de Adultos en el Movimiento",
-  "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.",
+  "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.",
   "icon": "🗺️",
   "duration": "30 minutos",
   "totalContentModules": 6,
@@ -20,7 +20,15 @@
         },
         {
           "type": "paragraph",
+          "text": "Los grupos donde nadie hace su plan personal se reconocen rápido: adultos quemados, que no saben qué se espera de ellos y a los que nadie acompaña. No es falta de ganas — es falta de plan. En los próximos 30 minutos vas a construir el tuyo: dos o tres prioridades, con plazo, con recursos y con el nombre propio de quien te va a acompañar. En PDF, listo para llevar."
+        },
+        {
+          "type": "paragraph",
           "text": "<strong>Si NO has hecho el Curso 4</strong> (autodiagnóstico de competencias), te recomendamos hacerlo primero — pero tampoco bloquea: en este curso puedes elegir tus prioridades manualmente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si hiciste el Curso 4 antes de agosto de 2026, te vamos a pedir repetir el autodiagnóstico: corregimos los peldaños de varias competencias. Son 10 minutos y tu plan queda bien calibrado."
         },
         {
           "type": "heading",
@@ -31,12 +39,12 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "<strong>Entender</strong> qué es un Plan Personal de Desarrollo y por qué la política lo exige",
-            "<strong>Saber</strong> cómo encontrar a tu Asesor Personal y trabajar con él/ella",
-            "<strong>Conocer</strong> los 6 elementos oficiales del Acuerdo Mutuo",
-            "<strong>Saber</strong> cómo registrarte y postularte en Talento 360",
-            "<strong>Construir</strong> tu propio Plan Personal en la herramienta interactiva",
-            "<strong>Salir</strong> con un PDF imprimible listo para firmar con tu asesor"
+            "<strong>Distinguir</strong> un plan de capacitación de un Plan Personal",
+            "<strong>Elegir</strong> a tu Asesor Personal con criterios y nombrar 1-2 candidatos reales",
+            "<strong>Reconocer</strong> los 6 elementos del Acuerdo Mutuo en un caso",
+            "<strong>Registrar</strong> tu información en Talento 360° y decir cuándo actualizarla",
+            "<strong>Redactar</strong> metas concretas y observables",
+            "<strong>Producir</strong> tu Plan Personal en PDF"
           ]
         },
         {
@@ -50,7 +58,7 @@
             { "title": "Lección 1 — ¿Qué es un Plan Personal de Desarrollo?", "description": "5 min. La diferencia entre 'plan de capacitación' y 'plan personal'." },
             { "title": "Lección 2 — Tu Asesor Personal", "description": "6 min. Cómo encontrarlo, qué hace y cómo trabajar con él/ella." },
             { "title": "Lección 3 — El Acuerdo Mutuo", "description": "5 min. Los 6 elementos oficiales + el formato descargable." },
-            { "title": "Lección 4 — Talento 360", "description": "5 min. La plataforma oficial donde vive tu plan." },
+            { "title": "Lección 4 — Talento 360°", "description": "5 min. La plataforma oficial donde vive tu plan." },
             { "title": "Lección 5 — Construye tu Plan", "description": "8 min. Herramienta interactiva. Genera PDF para firmar." },
             { "title": "Lección 6 — Tu hoja de ruta + cierre", "description": "3 min. Próximos pasos concretos." }
           ]
@@ -90,24 +98,31 @@
           "items": [
             "<strong>Te da claridad</strong> sobre qué se espera de ti en tu cargo concreto",
             "<strong>Te orienta</strong> sobre qué desarrollar primero (no todo a la vez)",
-            "<strong>Te conecta</strong> con un asesor que te acompaña, no te evalúa de afuera",
+            "<strong>Te conecta</strong> con un asesor que te acompaña durante todo el ciclo — y que al final certifica lo que te vio hacer",
             "<strong>Te certifica</strong> al final del ciclo, no por participar sino por demostrar"
           ]
         },
         {
           "type": "heading",
           "level": 3,
-          "text": "🧱 Los 5 elementos del PPD"
+          "text": "🧱 Qué lleva tu plan, en la práctica"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Acuerdo Mutuo:</strong> el compromiso que firmaste con tu Grupo al aceptar el cargo — es el marco donde vive tu plan."
+        },
+        {
+          "type": "paragraph",
+          "text": "La política no da un formato rígido; en la práctica un buen plan tiene cuatro cosas:"
         },
         {
           "type": "list",
           "ordered": true,
           "items": [
-            "<strong>Diagnóstico:</strong> dónde estás hoy (resultado del autodiagnóstico del Curso 4 + análisis con tu asesor)",
+            "<strong>Diagnóstico:</strong> dónde estás hoy. La política lo llama <em>valoración inicial por competencias</em>: te evalúas tú (el autodiagnóstico del Curso 4 es exactamente eso) y después lo revisas con tu asesor.",
             "<strong>Metas:</strong> qué quieres lograr en cada competencia priorizada",
             "<strong>Plazos:</strong> cuándo lo vas a lograr (típicamente ciclos de 6-12 meses)",
-            "<strong>Recursos:</strong> qué cursos, módulos, lecturas, prácticas vas a usar",
-            "<strong>Acuerdo Mutuo:</strong> firmado entre tú, tu asesor y la asociación"
+            "<strong>Recursos:</strong> qué cursos, módulos, lecturas, prácticas vas a usar"
           ]
         },
         {
@@ -124,17 +139,21 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "La principal diferencia entre un plan de capacitación y un Plan Personal de Desarrollo es:",
+            "text": "En el consejo, el jefe de grupo anuncia: 'Este año el plan personal de todos es el mismo — el curso básico y el de primeros auxilios.' ¿Qué le respondes?",
             "options": [
-              "Que el plan personal es más caro",
-              "Que el plan personal lo defines tú según TUS necesidades, no la asociación según las suyas",
-              "Que el plan de capacitación dura más"
+              "Que así se ahorra tiempo: si todos hacen los mismos cursos, el grupo avanza parejo",
+              "Que el plan personal no lo define el grupo sino la región, según su calendario de cursos",
+              "Que eso es un plan de capacitación, no un plan personal: el personal sale de lo que a cada uno le falta y lo acuerda cada quien con su asesor"
             ],
-            "correctIndex": 1
+            "correctIndex": 2
           },
           {
-            "text": "¿Cuántos elementos tiene un PPD según esta lección?",
-            "options": ["3", "5", "8"],
+            "text": "¿De dónde salen las competencias que priorizas en tu PPD?",
+            "options": [
+              "De una lista fija, igual para todos los adultos",
+              "De tu valoración inicial por competencias, analizada con tu asesor",
+              "De los cursos que estén disponibles ese mes"
+            ],
             "correctIndex": 1
           }
         ],
@@ -149,7 +168,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Tu Asesor Personal NO es tu jefe. NO es tu profesor. Es un par con más experiencia que te acompaña — escucha, sugiere, orienta, te ayuda a ver tus puntos ciegos. Y firma contigo el Acuerdo Mutuo."
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Tu Asesor Personal no te manda: te acompaña. De hecho, la política recomienda que <strong>muchas veces sea tu propio jefe inmediato</strong> (tu jefe de grupo, tu jefe de rama), porque es quien te ve en acción. Lo que cambia no es la persona: cambia el sombrero. Cuando se sienta contigo como asesor, escucha y orienta — no da órdenes."
         },
         {
           "type": "heading",
@@ -159,8 +178,8 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "✅ SÍ hace", "description": "Te escucha. Te ayuda a definir prioridades. Sugiere recursos. Te da retroalimentación honesta. Firma tu Acuerdo Mutuo. Acompaña tu evaluación.", "color": "#e8f5e9", "borderColor": "#4caf50" },
-            { "title": "❌ NO hace", "description": "No es tu jefe. No te evalúa para 'aprobarte o reprobarte'. No te dice qué hacer. No te impone un plan. No es responsable de tu progreso si tú no avanzas.", "color": "#ffebee", "borderColor": "#f44336" }
+            { "title": "✅ SÍ hace", "description": "Te escucha. Te ayuda a definir prioridades. Sugiere recursos. Te da retroalimentación honesta. Firma su Carta de Aceptación de la Asesoría Personal. Te acompaña <strong>y, al final del ciclo, es quien certifica</strong> que ya demostraste las competencias del cargo — con la evaluación 360° y tus evidencias. No es un examen sorpresa: es alguien que confirma lo que te vio hacer durante meses.", "color": "#e8f5e9", "borderColor": "#4caf50" },
+            { "title": "❌ NO hace", "description": "No te da órdenes en este espacio. No te 'raja' ni te pone nota. No te dice qué hacer. No te impone un plan. No es responsable de tu progreso si tú no avanzas.", "color": "#ffebee", "borderColor": "#f44336" }
           ]
         },
         {
@@ -172,16 +191,16 @@
           "type": "list",
           "ordered": true,
           "items": [
-            "<strong>Mira en tu propio grupo:</strong> el jefe de grupo o un consejero con experiencia (mínimo 3 años en el cargo) suele ser una buena opción",
-            "<strong>Si tu grupo es muy nuevo o pequeño:</strong> pídele al equipo regional que te conecten con un asesor de otro grupo de la región",
+            "<strong>Mira en tu propio grupo</strong> — la política dice literalmente 'no vayas muy lejos'. Sirve alguien que: te dé <strong>confianza</strong>, ya haya <strong>hecho bien tu mismo tipo de cargo</strong>, esté <strong>llevando su propio Plan Personal</strong>, y <strong>tenga tiempo</strong> para ti",
+            "<strong>Si tu grupo es muy nuevo o pequeño:</strong> pídele a la Comisión Regional de Adultos en el Movimiento Scout (o al Comisionado Regional de Adultos) que te conecten con un asesor de otro grupo de la región",
             "<strong>Busca afinidad:</strong> alguien con quien te sientas cómodo/a hablando con honestidad",
-            "<strong>Verifica disponibilidad:</strong> se compromete a 1 reunión cada 1-2 meses como mínimo",
-            "<strong>Aval del cargo:</strong> tu asesor debe ser oficialmente avalado (formato Doc 26 oficial)"
+            "<strong>Verifica disponibilidad:</strong> la política pide <strong>tres encuentros formales al año</strong> — al empezar, a los 6 meses y al cierre (el año scout va de marzo a marzo). En medio, charlas cortas cuando las necesites, anotadas en tu bitácora",
+            "<strong>Que acepte por escrito:</strong> tu asesor firma una carta corta de aceptación (formato oficial <strong>26 — Aval del asesor personal</strong>) y tú se la entregas a tu jefe inmediato. Luego lo registras como tu asesor en tu hoja de vida de Talento 360°"
           ]
         },
         {
           "type": "info-box",
-          "text": "<strong>💡 Tip clave del documento oficial:</strong> elige a alguien con quien puedas ser <em>honesto/a sobre tus debilidades</em>. Si te sientes evaluado/a, no funciona. Tiene que ser un espacio seguro."
+          "text": "<strong>💡 Tip clave del documento oficial:</strong> elige a alguien con quien puedas hablar sin miedo de lo que te cuesta. Va a valorar tu proceso — por eso la confianza importa tanto. Tiene que ser un espacio seguro."
         },
         {
           "type": "heading",
@@ -192,7 +211,7 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "<strong>Reuniones cortas, regulares:</strong> 30-45 min cada 4-6 semanas",
+            "<strong>Reuniones cortas, regulares:</strong> los tres encuentros formales del año (al empezar, a los 6 meses y al cierre) más charlas breves cuando las necesites",
             "<strong>Tú llevas la agenda:</strong> tú dices qué necesitas, qué dudas tienes, qué viste avanzar",
             "<strong>Honestidad ante todo:</strong> si no avanzaste, dilo. Si te equivocaste, dilo. Sin juicio",
             "<strong>Documenta brevemente:</strong> lleva una bitácora corta (la Bitácora de Acompañamiento es un formato oficial — Doc 15)"
@@ -200,7 +219,7 @@
         },
         {
           "type": "policy-quote",
-          "text": "Cada adulto puede evaluar qué competencias ya tiene desarrolladas y cuáles le hacen falta desarrollar. Esto lo hace con la asesoría personal de uno o varios adultos dentro de su equipo de trabajo o por quienes están en estrecho contacto con él y su cargo. En conjunto, formulan el plan personal de desarrollo identificando así las mejores formas para lograr una mayor efectividad en el desempeño.",
+          "text": "Al asumir un cargo, cada adulto puede evaluar qué competencias ya tiene desarrolladas y cuáles le hacen falta desarrollar. Esto lo hace con la asesoría personal de uno o varios adultos dentro de su equipo de trabajo o por quienes estén en estrecho contacto con él y su cargo. En conjunto, formulan el plan personal de desarrollo identificando así las mejores formas para lograr una mayor efectividad en el desempeño.",
           "source": "Política Nacional de Adultos en el Movimiento, Cap. 3 'Principios — Personalización', p. 5",
           "label": "📋 Ver lo que la política dice del Asesor Personal"
         }
@@ -212,19 +231,19 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "¿Cuál de estas afirmaciones describe mejor a un Asesor Personal?",
+            "text": "Sandra le pide a Camilo, su jefe de rama, que sea su asesor personal. Camilo duda: 'pero si yo soy tu jefe, ¿no es raro que además sea quien te certifique?' ¿Qué le responde Sandra con lo que vio en esta lección?",
             "options": [
-              "Es el jefe que evalúa al adulto y decide si aprueba",
-              "Es un par con más experiencia que escucha, orienta y firma el Acuerdo Mutuo, sin imponer un plan",
-              "Es un profesor externo que dicta cursos"
+              "Que la política justamente recomienda que muchas veces sea el jefe inmediato, porque es quien la ve en acción; lo que cambia es el sombrero: cuando la acompaña escucha y orienta, y al final solo confirma lo que le vio hacer durante meses",
+              "Que tiene razón: mejor busca a alguien de otro grupo, que no tenga nada que ver con ella",
+              "Que no importa quién sea, porque el asesor no evalúa nada"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           },
           {
             "text": "El criterio más importante para elegir asesor según el documento oficial es:",
             "options": [
               "Que sea la persona con más años en el movimiento",
-              "Que puedas ser honesto/a con él/ella sobre tus debilidades, sin sentirte evaluado/a",
+              "Que puedas hablar con él/ella sin miedo de lo que te cuesta — la confianza es el primer criterio",
               "Que esté en tu mismo grupo obligatoriamente"
             ],
             "correctIndex": 1
@@ -241,7 +260,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>El Acuerdo Mutuo es el documento que firmas tú, tu asesor y la asociación cuando aceptas un cargo. Define las reglas del juego: qué te comprometes a hacer, qué te van a apoyar, y cómo se va a evaluar todo."
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>El Acuerdo Mutuo es el documento que firman <strong>dos partes: tú y el estamento donde sirves</strong> (tu Grupo, tu Región o la Nación, a través de su representante legal). Define las reglas del juego: qué te comprometes a hacer, qué te van a apoyar, y cómo se va a evaluar todo."
         },
         {
           "type": "heading",
@@ -255,7 +274,7 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "1. Vigencia del nombramiento", "description": "Cuánto tiempo dura tu compromiso (típicamente 1-3 años)." },
+            { "title": "1. Vigencia del nombramiento", "description": "Cuánto dura tu compromiso: hasta 2 años, y se puede prorrogar de común acuerdo si la evaluación salió bien." },
             { "title": "2. Inducción y período de prueba", "description": "Cómo se hará tu inducción y cuánto dura el período inicial de adaptación." },
             { "title": "3. Compromisos del adulto", "description": "Qué te comprometes tú a hacer (asistencia, plan personal, formación, etc.)." },
             { "title": "4. Apoyos y beneficios al adulto", "description": "Qué te ofrece la asociación (formación, asesor, materiales, reconocimiento)." },
@@ -265,7 +284,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>📎 Formato oficial descargable:</strong><br>La asociación tiene un formato oficial llamado <em>'Compromiso de Acuerdo Mutuo V2.0'</em> (formato DOCX). Lo descargas, lo llenas con tu asesor, lo firman los dos + el jefe de grupo, y queda en tu carpeta personal y en Talento 360."
+          "text": "<strong>📎 Formato oficial descargable:</strong><br>La asociación tiene el formato oficial <em>'Compromiso de Acuerdo Mutuo'</em> de la Dirección Nacional de Adultos (documento 7 del set oficial). Descarga siempre la versión más reciente del portal: <a href=\"https://scout.org.co/biblioteca\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca</a>. Lo llenas, lo firman las dos partes —tú y el representante legal del estamento donde sirves— y queda en tu carpeta personal y en Talento 360°."
         },
         {
           "type": "heading",
@@ -282,21 +301,25 @@
         },
         {
           "type": "policy-quote",
-          "text": "El proceso de selección para cualquier cargo o función culmina con el establecimiento de un compromiso y acuerdo mutuo entre la ASC y el adulto seleccionado. Este será refrendado mediante un nombramiento oficial. Este instrumento establece los siguientes elementos: el término durante el cual este nombramiento será vigente, el término y la forma de efectuar la inducción y el período de prueba del adulto, los compromisos que asume el adulto con la ASC, los apoyos y beneficios que le serán brindados al adulto, la voluntad del adulto para desarrollar y perfeccionar las competencias del cargo o función, el procedimiento y los momentos de la evaluación del desempeño y del cumplimiento de los compromisos acordados.",
+          "text": "El proceso de selección para cualquier cargo o función culmina con el establecimiento de un compromiso y acuerdo mutuo entre la ASC y el adulto seleccionado. Este será refrendado mediante un nombramiento oficial, emitido solamente por personas autorizadas para este fin, dentro de la organización. Este instrumento establece los siguientes elementos: el término durante el cual este nombramiento será vigente, el término y la forma de efectuar la inducción y el período de prueba del adulto, los compromisos que asume el adulto con la ASC, los apoyos y beneficios que le serán brindados al adulto, la voluntad del adulto para desarrollar y perfeccionar las competencias del cargo o función, el procedimiento y los momentos de la evaluación del desempeño y del cumplimiento de los compromisos acordados.",
           "source": "Política Nacional de Adultos en el Movimiento, Cap. 5.1.5, p. 13",
           "label": "📋 Ver los 6 elementos oficiales del Acuerdo Mutuo"
         }
       ],
       "reflection": {
-        "prompt": "De los 6 elementos del Acuerdo Mutuo, ¿cuál crees que es el que más se 'olvida' en la práctica de los grupos? ¿Por qué?"
+        "prompt": "Cuando TE nombraron a ti en tu cargo actual: ¿cuáles de los 6 elementos se cumplieron de verdad y cuáles no? Escríbelo con el nombre de tu cargo y el año. Si nunca firmaste nada, anótalo también — eso es exactamente lo que vas a proponer arreglar."
       },
       "quiz": {
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "¿Cuántos elementos define la política como obligatorios en un Acuerdo Mutuo?",
-            "options": ["3", "6", "10"],
-            "correctIndex": 1
+            "text": "A Luisa la nombraron secretaria del grupo. Firmó un papel que dice qué se compromete a hacer, qué le va a dar el grupo, hasta cuándo dura el nombramiento y cómo la van a evaluar. Falta parte de los 6 elementos oficiales. ¿Qué falta?",
+            "options": [
+              "Nada: con esos cuatro el acuerdo ya está completo",
+              "El monto de la cuota anual que debe pagarle al grupo",
+              "Cómo será su inducción y su período de prueba, y su voluntad explícita de desarrollar las competencias del cargo"
+            ],
+            "correctIndex": 2
           },
           {
             "text": "El elemento 'Apoyos y beneficios al adulto' del Acuerdo Mutuo significa:",
@@ -313,18 +336,18 @@
     },
     {
       "id": 5,
-      "title": "Lección 4 — Talento 360",
+      "title": "Lección 4 — Talento 360°",
       "emoji": "💻",
       "navLabel": "L4",
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Talento 360 es la plataforma oficial donde vive tu hoja de vida como adulto del movimiento, tu Plan Personal, tus evaluaciones y tus certificaciones. Es como tu LinkedIn scout."
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Talento 360° es la plataforma oficial donde vive tu hoja de vida como adulto del movimiento, tu Plan Personal, tus evaluaciones y tus certificaciones. Es como tu LinkedIn scout."
         },
         {
           "type": "heading",
           "level": 3,
-          "text": "📦 ¿Qué guarda Talento 360?"
+          "text": "📦 ¿Qué guarda Talento 360°?"
         },
         {
           "type": "list",
@@ -341,7 +364,7 @@
         {
           "type": "heading",
           "level": 3,
-          "text": "🚀 Los 2 procesos clave en Talento 360"
+          "text": "🚀 Los 2 procesos clave en Talento 360°"
         },
         {
           "type": "method-grid",
@@ -352,7 +375,11 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>📚 Tutoriales oficiales:</strong><br>La asociación publica 2 PDFs paso a paso para usar Talento 360:<br>• <em>Registro y Validación de Datos en Talento 360</em><br>• <em>Postulación a Cargos dentro de Talento 360</em><br>Búscalos en el portal oficial cuando vayas a usar la plataforma por primera vez."
+          "text": "<strong>📚 Tutoriales oficiales:</strong><br>La asociación publica 2 PDFs paso a paso para usar Talento 360°:<br>• <em>Registro y Validación de Datos en Talento 360°</em><br>• <em>Postulación a Cargos dentro de Talento 360°</em><br>Búscalos en la biblioteca oficial (<a href=\"https://scout.org.co/biblioteca\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca</a>) cuando vayas a usar la plataforma por primera vez."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔗 Los enlaces que vas a necesitar:</strong><br>• Hoja de vida, plan personal y evaluación 360°: <a href=\"https://scouts.talento360.com.co/hrm/inicio.aspx\" target=\"_blank\" rel=\"noopener\">scouts.talento360.com.co/hrm/inicio.aspx</a><br>• Postulación a cargos vacantes: <a href=\"https://scouts.talento360.com.co/TrabajeConNosotros/inicio\" target=\"_blank\" rel=\"noopener\">scouts.talento360.com.co/TrabajeConNosotros/inicio</a><br>• Biblioteca oficial (formatos y documentos): <a href=\"https://scout.org.co/biblioteca\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca</a>"
         },
         {
           "type": "heading",
@@ -363,7 +390,7 @@
           "type": "list",
           "ordered": true,
           "items": [
-            "<strong>Apenas te nombren</strong> en cualquier cargo dentro del grupo (vocal, tesorero, asesor, etc.)",
+            "<strong>Apenas te nombren</strong> en cualquier cargo dentro del grupo (vocal del consejo, tesorero, secretario, dirigente de rama, etc.)",
             "<strong>Cuando firmes</strong> tu Acuerdo Mutuo (subes el PDF firmado)",
             "<strong>Cuando construyas</strong> tu Plan Personal (Lección 5 — la próxima)",
             "<strong>Cada vez que termines una formación</strong> que mejore tus competencias"
@@ -371,32 +398,32 @@
         },
         {
           "type": "blockquote",
-          "text": "Si no está en Talento 360, para la asociación no existió. Suena exagerado, pero es así."
+          "text": "Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.)"
         }
       ],
       "reflection": {
-        "prompt": "¿Conocías Talento 360? Si ya estás registrado/a, ¿qué tan actualizada está tu información? Si no, ¿qué te falta para registrarte esta semana?"
+        "prompt": "¿Conocías Talento 360°? Si ya estás registrado/a, ¿qué tan actualizada está tu información? Si no, ¿qué te falta para registrarte esta semana?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Talento 360 NO sirve para:",
+            "text": "Tu jefe de grupo te pide dos cosas: 'renueva tu afiliación de este año y sube tu Acuerdo Mutuo firmado'. ¿Dónde haces cada una?",
             "options": [
-              "Registrar tu hoja de vida como adulto del movimiento",
-              "Postularte a cargos vacantes",
-              "Inscribir a tus hijos en la rama de scouts"
+              "La afiliación en SiScout (registro de membresía) y el Acuerdo Mutuo en Talento 360° (tu hoja de vida y tu desarrollo)",
+              "Las dos en Talento 360°, que es donde vive todo lo del adulto",
+              "Las dos en SiScout, que es la plataforma principal de la asociación"
             ],
-            "correctIndex": 2
+            "correctIndex": 0
           },
           {
-            "text": "¿Cuándo deberías subir tu información a Talento 360?",
+            "text": "Te acaban de nombrar vocal del consejo de grupo — un cargo pequeño, de un año. Un compañero te dice: 'no vale la pena que subas eso a Talento 360°'. ¿Quién tiene razón?",
             "options": [
-              "Solo si vas a postularte a un cargo nacional",
-              "Apenas te nombren en cualquier cargo (incluso de comité o vocal)",
-              "Solo cuando tengas la Insignia de Madera"
+              "Tu compañero: Talento 360° es solo si vas a postularte a un cargo nacional",
+              "Tu compañero, pero por otra razón: primero necesitas tener la Insignia de Madera",
+              "Tú: se sube apenas te nombren en cualquier cargo, incluso de comité o vocal — ahí empieza tu hoja de vida"
             ],
-            "correctIndex": 1
+            "correctIndex": 2
           }
         ],
         "nextLabel": "Continuar a construir tu Plan →"
@@ -454,22 +481,22 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "¿Cuántas competencias se recomienda elegir para un ciclo de Plan Personal?",
+            "text": "Llenaste tu plan con 3 competencias, pero en una dejaste el plazo en blanco 'porque todavía no sé'. Le das a Generar. ¿Qué pasa?",
             "options": [
-              "Las 7, todas a la vez",
-              "Idealmente 2-3 — concentras esfuerzo y los resultados son sostenibles",
-              "Solo 1 obligatoriamente"
+              "El plan se genera igual y el plazo lo escribes a mano en el papel",
+              "No se genera hasta que meta, plazo y recursos estén completos en las tres — y está bien así: un plazo que no te atreves a escribir es una meta que no vas a perseguir",
+              "Se genera solo con las dos competencias completas y descarta la tercera"
             ],
             "correctIndex": 1
           },
           {
-            "text": "Una buena meta de plan personal debe ser:",
+            "text": "Estas tres metas las escribieron adultos reales en su plan. ¿Cuál le sirve a tu asesor para decir en 6 meses si se cumplió o no?",
             "options": [
-              "Aspiracional pero vaga: 'ser mejor adulto del movimiento'",
-              "Concreta y observable: 'pasar de grado 2 a 3 en X, evidenciado en Y conducta'",
-              "Solo emocional: 'comprometerme más'"
+              "«Pasar de grado 2 a 3 en Relaciones interpersonales: mediar al menos 2 desacuerdos del consejo antes de diciembre y anotarlos en mi bitácora.»",
+              "«Comprometerme más con mi rama y con el grupo.»",
+              "«Mejorar mi trabajo en equipo durante este año.»"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         ],
         "nextLabel": "Continuar al cierre →"
@@ -495,8 +522,8 @@
           "items": [
             { "title": "1. Imprime tu Plan o guárdalo en PDF", "description": "Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo." },
             { "title": "2. Identifica a tu asesor y agenda una reunión", "description": "Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa." },
-            { "title": "3. Firma con tu asesor + jefe de grupo", "description": "Diligencien juntos el formato oficial 'Compromiso de Acuerdo Mutuo V2.0' (lo descargas del portal oficial)." },
-            { "title": "4. Sube todo a Talento 360", "description": "Tu hoja de vida + el Acuerdo firmado + tu Plan Personal. Que quede registrado oficialmente." }
+            { "title": "3. Firma tu Acuerdo Mutuo con tu Grupo", "description": "Diligencia el formato oficial 'Compromiso de Acuerdo Mutuo' de la DNAM (lo descargas del portal oficial) y pídele a tu asesor que firme su Carta de Aceptación de la Asesoría Personal (formato oficial 26) — son dos papeles distintos, ambos cortos." },
+            { "title": "4. Registra todo en Talento 360°", "description": "Tu hoja de vida + el Acuerdo firmado + los 5 certificados de la ruta. Ojo: tu plan definitivo se escribe dentro de Talento 360° con ayuda de tu asesor; este PDF es tu borrador para la conversación." }
           ]
         },
         {
@@ -544,30 +571,20 @@
           ]
         },
         {
+          "type": "info-box",
+          "text": "<strong>📈 Un ascenso que te llevas hoy:</strong> ¿te acuerdas del grado 2 de <em>Aprendizaje y desarrollo personal</em>? Dice 'tengo formulado mi Plan Personal de Desarrollo'. Acabas de formularlo. Si en el Curso 4 te calificaste grado 1 ahí, ya no estás en grado 1. Así se sube: una conducta a la vez."
+        },
+        {
           "type": "blockquote",
           "text": "Hace 5 cursos llegaste con preguntas. Hoy te vas con un mapa, un plan y un sistema de soporte. El movimiento te necesitaba como llegaste. Ahora te aprovechará mejor con cada paso que des."
         },
         {
-          "type": "heading",
-          "level": 3,
-          "text": "🚀 Tus próximos 4 pasos prácticos"
-        },
-        {
-          "type": "timeline",
-          "items": [
-            { "title": "1. Imprime tu Plan o guárdalo en PDF", "description": "Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo." },
-            { "title": "2. Identifica a tu asesor y agenda una reunión", "description": "Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa." },
-            { "title": "3. Firma con tu asesor + jefe de grupo", "description": "Diligencien juntos el formato oficial 'Compromiso de Acuerdo Mutuo V2.0' (lo descargas del portal oficial)." },
-            { "title": "4. Sube todo a Talento 360", "description": "Tu hoja de vida + el Acuerdo firmado + tu Plan Personal + los 5 certificados de la ruta. Que quede registrado oficialmente." }
-          ]
+          "type": "info-box",
+          "text": "<strong>🌟 Servicio adicional al movimiento</strong><br>Con estos 5 cursos ya conoces la política, la caja de herramientas y Talento 360° — que es buena parte de lo que la ASC pide para asesorar a otro. Te faltan dos cosas concretas: tener el <strong>certificado del Módulo de Inducción General de la ASC</strong> y estar llevando <strong>tu propio Plan Personal</strong>. Cuando las tengas, habla con tu jefe de grupo."
         },
         {
           "type": "info-box",
-          "text": "<strong>🌟 Servicio adicional al movimiento</strong><br>Si terminaste los 5 cursos, ya tienes la base para ser <strong>asesor personal</strong> de otros adultos que están empezando. Hablalo con tu jefe de grupo. La red crece cuando los que ya recorrieron el camino acompañan a los que vienen detrás."
-        },
-        {
-          "type": "info-box",
-          "text": "<strong>🔮 Próximas etapas de la plataforma</strong><br>Una vez la ruta de fundamentación esté validada con usuarios reales, vendrán cursos de profundización: <em>Cómo vincular nuevos adultos, Asesoría personal en profundidad, Cierre digno de nombramientos, Talento 360 práctico</em> y cursos por cargo específico (Tesorero, Secretario, etc.)."
+          "text": "<strong>🔮 Próximas etapas de la plataforma</strong><br>Una vez la ruta de fundamentación esté validada con usuarios reales, vendrán cursos de profundización: <em>Cómo vincular nuevos adultos, Asesoría personal en profundidad, Cierre digno de nombramientos, Talento 360° práctico</em> y cursos por cargo específico (Tesorero, Secretario, etc.)."
         }
       ],
       "reflection": {
@@ -580,28 +597,28 @@
             "text": "El primer paso después de construir tu plan es:",
             "options": [
               "Esperar a que el grupo te diga qué hacer",
-              "Imprimirlo o guardarlo en PDF — sin papel, solo es una idea",
-              "Subirlo a Talento 360 inmediatamente sin firmar"
+              "Subirlo a Talento 360° inmediatamente sin firmar",
+              "Imprimirlo o guardarlo en PDF — sin papel, solo es una idea"
             ],
-            "correctIndex": 1
+            "correctIndex": 2
           },
           {
-            "text": "Habiendo completado los 5 cursos de la ruta, una opción de servicio adicional al movimiento es:",
+            "text": "Pasaron 6 meses. Vas a tu segundo encuentro con tu asesor y una de tus tres metas no la cumpliste. ¿Qué haces?",
             "options": [
-              "Ser asesor personal de otros adultos que están empezando",
-              "Limitarte a tu cargo actual",
-              "Olvidarte del proceso porque ya tienes los certificados"
+              "Lo dices de frente y revisan juntos si la meta estaba mal calibrada o si te faltaron recursos — para eso existe el espacio",
+              "No la mencionas: mejor hablar de las dos que sí avanzaron",
+              "Cambias esa meta por otra que ya tengas cumplida antes de la reunión"
             ],
             "correctIndex": 0
           },
           {
             "text": "El Acuerdo Mutuo se firma:",
             "options": [
-              "Solo entre tú y la asociación",
+              "Entre tú y el estamento (Grupo, Región o Nación) que te nombra",
               "Entre tú, tu asesor y el jefe de grupo",
               "Solo con tu asesor"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"
@@ -617,6 +634,6 @@
   ],
   "certificate": {
     "courseName": "TU PLAN PERSONAL DE DESARROLLO",
-    "description": "ha completado el Curso 5 — y con él toda la Ruta de Formación de Adultos en el Movimiento — comprendiendo el Plan Personal de Desarrollo, el rol del Asesor Personal, los 6 elementos del Acuerdo Mutuo, la plataforma Talento 360, y construyendo su propio plan personal listo para ser refrendado con su asesor, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+    "description": "ha completado el Curso 5 — y con él toda la Ruta de Formación de Adultos en el Movimiento — comprendiendo el Plan Personal de Desarrollo, el rol del Asesor Personal, los 6 elementos del Acuerdo Mutuo, la plataforma Talento 360°, y construyendo su propio plan personal listo para ser refrendado con su asesor, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
   }
 }

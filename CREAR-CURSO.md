@@ -94,9 +94,14 @@ Es el corazón técnico de la plataforma. Cada archivo tiene un rol específico 
 | 7 | **Entregar PDF** para revisión | — | — | Política registrada: siempre preview antes de publicar |
 | 8 | **Aplicar ajustes** según observaciones | Yo | varía | Editar JSON → rebuild → regenerar PDF |
 | 9 | **Verificar catálogo** | Yo | 10 seg | `02-Plataforma-Web/cursos.json` se actualiza solo, pero verificar orden |
-| 10 | **Commit + push** | Yo | 1 min | Mensaje descriptivo |
-| 11 | **Verificar deploy** | Yo (con `Monitor`) | 1–2 min | GitHub Pages redespliega y URL responde HTTP 200 |
-| 12 | **Anunciar** a piloto / usuarios | Tú | — | Compartir URL del curso |
+| 10 | **Auditoría doctrinal** | Yo | 10–20 min | `/auditar-curso <courseId>` — audita contra los documentos oficiales, corrige lo respaldado por fuente y re-audita. Se detiene en compuerta humana |
+| 11 | **Auditoría pedagógica** | Yo | 10–20 min | `/auditar-pedagogia <courseId>` — calidad de quizzes (aplicación vs. memoria), hook, reflexiones, carga cognitiva, andamiaje |
+| 12 | **Auditoría funcional (`PRUEBAS-E2E`)** | Yo | 2–5 min | Sumar el `courseId` nuevo al bucle de cursos de `.github/workflows/pruebas-e2e.yml` y correr la suite en verde: `cd PRUEBAS-E2E && ASC_BASE_URL="http://localhost:8099/02-Plataforma-Web/" npx playwright test --reporter=list` (ver `PRUEBAS-E2E/README.md`). Al hacer push el mismo workflow corre en GitHub Actions — no publicar si queda en rojo |
+| 13 | **Commit + push** | Yo | 1 min | Mensaje descriptivo |
+| 14 | **Verificar deploy** | Yo (con `Monitor`) | 1–2 min | GitHub Pages redespliega y URL responde HTTP 200 |
+| 15 | **Anunciar** a piloto / usuarios | Tú | — | Compartir URL del curso |
+
+> **Las 3 auditorías (10–12) son la compuerta de calidad** antes de publicar — doctrinal, pedagógica y funcional (ADR-019, `DECISIONES.md` raíz: reemplazan al piloto humano como requisito bloqueante). No son opcionales ni intercambiables: la doctrinal verifica que lo que dice es **cierto**, la pedagógica que **enseña bien**, y la funcional que **funciona**.
 
 **Tiempo total para un curso simple: ~30–60 min de trabajo activo + tu revisión.**
 
@@ -146,7 +151,8 @@ Mismo proceso que Caso A pero con planificación previa de coherencia entre curs
 | **Z1** | **Cross-references entre cursos** | Cada curso del nivel debe mencionar correctamente a los otros (ej. "En el siguiente curso vas a ver…") |
 | **Z2** | **Hooks pedagógicos** | Si Curso N produce un dato (perfil, plan, foto) que Curso N+1 lee, garantizar la integración técnica |
 | **Z3** | **Actualizar documentación** | `INDICE-PROYECTO.md` y `Plan-de-Formacion-Linea-Politica-de-Adultos.docx` con el nuevo nivel desplegado |
-| **Z4** | **Auditoría completa** | Trigger _"revisa completo el codigo"_ después de tener el nivel completo (proceso documentado en `AUDITORIA.md`) |
+| **Z4** | **Las 3 auditorías sobre el nivel completo** | `/auditar-curso all-pa` (doctrinal) + `/auditar-pedagogia all-pa` (pedagógica) + suite `PRUEBAS-E2E` en verde (funcional). Son la compuerta de calidad del nivel — ver pasos 10–12 del Caso A |
+| **Z5** | **Auditoría de código** (opcional) | Trigger _"revisa completo el codigo"_ — revisión técnica del motor y la plataforma, distinta de las 3 auditorías de contenido (proceso en `AUDITORIA.md`) |
 
 ---
 
@@ -213,12 +219,15 @@ Independiente del caso:
 - [ ] Si hubo endpoint nuevo → `clasp push` realizado y verificado
 - [ ] Cross-references entre cursos consistentes (Curso N apunta a Curso N+1 correcto)
 - [ ] `cursos.json` con orden correcto y status `active`
+- [ ] **Auditoría doctrinal** (`/auditar-curso <courseId>`) pasada — sin críticos ni mayores pendientes
+- [ ] **Auditoría pedagógica** (`/auditar-pedagogia <courseId>`) pasada
+- [ ] **Auditoría funcional**: `courseId` nuevo sumado al bucle de `.github/workflows/pruebas-e2e.yml` y suite `PRUEBAS-E2E` en verde (local o CI)
 - [ ] Commit con mensaje descriptivo
 - [ ] Push a GitHub
 - [ ] GitHub Pages redespliega (verificar HTTP 200 en URL pública)
 - [ ] `INDICE-PROYECTO.md` actualizado si cambia el alcance del proyecto
 - [ ] `Plan-de-Formacion-Linea-Politica-de-Adultos.docx` actualizado si cambia la roadmap
-- [ ] Auditoría (trigger _"revisa completo el codigo"_) si fueron cambios sustanciales
+- [ ] Auditoría de código (trigger _"revisa completo el codigo"_) si fueron cambios sustanciales al motor
 
 ---
 
@@ -251,7 +260,10 @@ Los HTMLs en `02-Plataforma-Web/` son **artefactos generados** — si los editas
 | Cambiar **catálogo** de cursos | `02-Plataforma-Web/cursos.json` (auto-actualizado al hacer build, pero verificar orden manualmente) |
 | Generar **plan de formación** Word | `node generar-plan-formacion.js` |
 | Generar **manual de creación de curso** Word | `node generar-manual-crear-curso.js` |
-| **Auditoría** completa del código | Trigger _"revisa completo el codigo"_ → ejecutar `AUDITORIA.md` |
+| **Auditoría doctrinal** de un curso | `/auditar-curso <courseId>` (o `all-pa` para toda la línea) |
+| **Auditoría pedagógica** de un curso | `/auditar-pedagogia <courseId>` (o `all-pa`) |
+| **Auditoría funcional** (E2E) | `cd PRUEBAS-E2E && npx playwright test --reporter=list` (ver `PRUEBAS-E2E/README.md`; sumar el `courseId` nuevo al bucle de `.github/workflows/pruebas-e2e.yml`) |
+| **Auditoría de código** del motor | Trigger _"revisa completo el codigo"_ → ejecutar `AUDITORIA.md` |
 
 ---
 
@@ -262,3 +274,7 @@ Los HTMLs en `02-Plataforma-Web/` son **artefactos generados** — si los editas
 - [`Plan-de-Formacion-Linea-Politica-de-Adultos.docx`](Plan-de-Formacion-Linea-Politica-de-Adultos.docx) — Plan completo de los 4 niveles y 17 cursos
 - [`05-Generador-Cursos/SKILL.md`](05-Generador-Cursos/SKILL.md) — Manual del generador de cursos para la IA
 - [`05-Generador-Cursos/INSTRUCCIONES-GOOGLE-APPS-SCRIPT.md`](05-Generador-Cursos/INSTRUCCIONES-GOOGLE-APPS-SCRIPT.md) — Setup del backend
+- [`PRUEBAS-E2E/README.md`](PRUEBAS-E2E/README.md) — Auditoría funcional (Playwright + axe); corre en cada push/PR
+
+---
+_Actualizado 02-ago-2026 (Fase 2 del plan de cierre de brechas, `DECISIONES.md` raíz ADR-023): incorporadas las **3 auditorías** —doctrinal, pedagógica y funcional— como compuerta de calidad antes de publicar (pasos 10–12 del Caso A, Z4 del Caso B, checklist y tabla de comandos). La antigua "auditoría completa del código" pasa a ser Z5/opcional: es revisión técnica del motor, no de contenido._

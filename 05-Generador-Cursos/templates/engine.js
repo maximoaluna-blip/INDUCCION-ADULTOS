@@ -17,6 +17,13 @@ let selfAssessments = {};
 let personalPlans = {};
 let userProfile = {};
 
+// Version de la escala de grados de dominio del autodiagnostico de competencias.
+// Subir este numero cuando cambien los criterios de los grados: invalida los perfiles
+// ya guardados, que quedarian describiendo peldanos distintos a los que el adulto eligio.
+// v2 (02-ago-2026): correccion doctrinal de los grados en 4 de las 7 competencias
+// (DECISIONES.md raiz ADR-023, Fase 2). Ver ESTADO-AUDITORIA.md.
+const COMPETENCY_SCALE_VERSION = 2;
+
 // --- Inicializacion ---
 window.addEventListener('DOMContentLoaded', function () {
     moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
@@ -354,6 +361,7 @@ function loadProgress() {
         });
         if (typeof restoreAssessmentSelections === 'function') restoreAssessmentSelections();
         if (typeof restorePlanState === 'function') restorePlanState();
+        if (typeof initPlanBuilders === 'function') initPlanBuilders();
         updateStats();
         updateProgress();
     }
@@ -479,6 +487,7 @@ function recordAssessmentGrade(assessmentId, competenceId, level) {
     if (!selfAssessments[assessmentId]) selfAssessments[assessmentId] = { grades: {} };
     selfAssessments[assessmentId].grades[competenceId] = level;
     selfAssessments[assessmentId].updatedAt = new Date().toISOString();
+    selfAssessments[assessmentId].scaleVersion = COMPETENCY_SCALE_VERSION;
 }
 
 function calculateAssessment(assessmentId) {
@@ -515,7 +524,8 @@ function calculateAssessment(assessmentId) {
             strengths: data.strengths,
             opportunities: data.opportunities,
             completedAt: data.completedAt,
-            sourceCourse: COURSE_CONFIG.courseId
+            sourceCourse: COURSE_CONFIG.courseId,
+            scaleVersion: COMPETENCY_SCALE_VERSION
         }));
     } catch (e) { /* ignore */ }
     // Sincronizacion en segundo plano al backend (persistencia hibrida)
@@ -545,7 +555,7 @@ function calculateAssessment(assessmentId) {
                 '</ul></div>' +
             '</div>' +
             '<div class="profile-recommendation">' +
-                '<strong>💡 Recomendación:</strong> tus áreas de oportunidad son las que conviene priorizar en tu <em>Plan Personal de Desarrollo</em>. Cuando tomes el <strong>Curso 4 — Tu Plan Personal</strong>, este perfil quedará pre-cargado para sugerirte por dónde empezar.' +
+                '<strong>💡 Recomendación:</strong> tus áreas de oportunidad son las que conviene priorizar en tu <em>Plan Personal de Desarrollo</em>. Cuando tomes el <strong>Curso 5 — Tu Plan Personal</strong>, este perfil quedará pre-cargado para sugerirte por dónde empezar.' +
             '</div>';
         resultEl.classList.remove('hidden');
         resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -556,7 +566,23 @@ function calculateAssessment(assessmentId) {
 // Restore selection state if user has saved assessment grades
 function restoreAssessmentSelections() {
     Object.keys(selfAssessments).forEach(function (aid) {
-        var grades = (selfAssessments[aid] && selfAssessments[aid].grades) || {};
+        var saved = selfAssessments[aid] || {};
+        // Selecciones hechas con una escala anterior: los grados ya no describen los
+        // mismos peldanos, asi que se descartan en vez de restaurarse en silencio.
+        if (saved.grades && Object.keys(saved.grades).length &&
+            saved.scaleVersion !== COMPETENCY_SCALE_VERSION) {
+            selfAssessments[aid] = { grades: {} };
+            var container = document.getElementById('sa-' + aid);
+            if (container && !container.querySelector('.sa-scale-notice')) {
+                var notice = document.createElement('div');
+                notice.className = 'info-box sa-scale-notice';
+                notice.innerHTML = '<strong>🔄 Actualizamos este autodiagnóstico.</strong><br>Corregimos los grados de varias competencias para que coincidan con el Diccionario de Competencias oficial. Como los peldaños cambiaron, tus respuestas anteriores se borraron: <strong>vuelve a calificarte</strong> con los criterios nuevos.';
+                container.insertBefore(notice, container.firstChild);
+            }
+            saveProgress();
+            return;
+        }
+        var grades = saved.grades || {};
         Object.keys(grades).forEach(function (compId) {
             var radio = document.querySelector('input[name="sa-' + aid + '-' + compId + '"][value="' + grades[compId] + '"]');
             if (radio) radio.checked = true;
@@ -572,6 +598,13 @@ function getCompetencyProfile() {
     } catch (e) { return null; }
 }
 
+// Un perfil guardado con una escala anterior describe peldanos distintos a los que el
+// adulto eligio: sus grados ya no significan lo mismo. No se puede reinterpretar, hay
+// que rehacer el autodiagnostico.
+function isProfileStale(profile) {
+    return !!profile && profile.scaleVersion !== COMPETENCY_SCALE_VERSION;
+}
+
 function loadProfileIntoPlan(builderId) {
     var profile = getCompetencyProfile();
     var banner = document.getElementById('pb-profile-' + builderId);
@@ -579,6 +612,13 @@ function loadProfileIntoPlan(builderId) {
         if (banner) {
             banner.classList.add('no-profile');
             banner.innerHTML = '<strong>ℹ️ No encontramos tu perfil del Curso 4.</strong><br>Si todavía no has hecho el autodiagnóstico, te recomendamos hacerlo primero — pero puedes construir tu plan igual marcando manualmente las competencias que quieres trabajar.';
+        }
+        return;
+    }
+    if (isProfileStale(profile)) {
+        if (banner) {
+            banner.classList.add('no-profile');
+            banner.innerHTML = '<strong>🔄 Actualizamos el autodiagnóstico del Curso 4.</strong><br>Corregimos los grados de varias competencias para que coincidan con el Diccionario de Competencias oficial, así que tu perfil anterior ya no describe los mismos peldaños. <strong>Vuelve al Curso 4 y repite el autodiagnóstico</strong> — son pocos minutos y tu plan quedará bien calibrado. Mientras tanto puedes marcar las competencias a mano.';
         }
         return;
     }
@@ -602,7 +642,7 @@ function loadProfileIntoPlan(builderId) {
             if (profile.opportunities.indexOf(compId) >= 0) gradeEl.classList.add('priority');
         }
     });
-    showNotification('✅ Perfil del Curso 3 cargado');
+    showNotification('✅ Perfil del Curso 4 cargado');
 }
 
 function togglePlanCompetence(builderId, compId) {
@@ -635,6 +675,29 @@ function savePlanCommitment(builderId, value) {
     if (!personalPlans[builderId]) personalPlans[builderId] = { competences: {}, commitment: '' };
     personalPlans[builderId].commitment = value;
     saveProgress();
+}
+
+// El perfil del Curso 4 debe aparecer solo, sin depender de que el adulto pulse el boton
+// "Cargar mi perfil": si no lo pulsa, ve el constructor vacio y pierde la precarga que el
+// Curso 4 le prometio (y tampoco se entera de que su perfil quedo con una escala vieja).
+// Si ya empezo a llenar su plan, no se pisa lo que escribio: solo se evalua el aviso.
+function initPlanBuilders() {
+    var banners = document.querySelectorAll('[id^="pb-profile-"]');
+    [].forEach.call(banners, function (banner) {
+        var builderId = banner.id.replace('pb-profile-', '');
+        var plan = personalPlans[builderId];
+        var yaEmpezo = !!(plan && plan.competences && Object.keys(plan.competences).length);
+        if (!yaEmpezo) {
+            loadProfileIntoPlan(builderId);
+            return;
+        }
+        // Plan en curso: respetar lo escrito, pero avisar si el perfil quedo obsoleto.
+        var profile = getCompetencyProfile();
+        if (isProfileStale(profile)) {
+            banner.classList.add('no-profile');
+            banner.innerHTML = '<strong>🔄 Actualizamos el autodiagnóstico del Curso 4.</strong><br>Corregimos los grados de varias competencias, así que el perfil con el que empezaste este plan ya no describe los mismos peldaños. Tu plan sigue intacto — pero conviene <strong>repetir el autodiagnóstico</strong> del Curso 4 y revisar si tus prioridades siguen siendo esas.';
+        }
+    });
 }
 
 function restorePlanState() {
@@ -706,7 +769,7 @@ function generatePlan(builderId) {
             prioritiesHtml +
             commitmentHtml +
             '<button class="pb-print-btn" onclick="printPlan()">🖨️ Imprimir / Guardar como PDF</button>' +
-            '<p style="text-align:center;color:#666;font-size:0.85em;margin:14px 0 0 0;font-style:italic;">Imprime este plan, fírmalo con tu Asesor Personal y súbelo a Talento 360.</p>';
+            '<p style="text-align:center;color:#666;font-size:0.85em;margin:14px 0 0 0;font-style:italic;">Imprime este plan y llévalo a tu conversación con tu Asesor Personal. Tu plan definitivo se escribe dentro de Talento 360°.</p>';
         output.classList.remove('hidden');
         output.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
