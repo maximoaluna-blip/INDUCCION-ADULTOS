@@ -46,7 +46,13 @@ function handleRegistration(event) {
     }
     saveProgress();
     saveGlobalUserProfile(userProfile);
-    sendToGoogleSheets({ action: 'register', ...userProfile });
+    // El curso va explicito: `userProfile` no lo lleva, y sin el la fila queda con la
+    // columna Curso vacia y el panel administrativo la cuenta como "sin-curso". Era la
+    // unica accion del motor que no lo enviaba — quiz, progress y certificate si lo
+    // hacian, por eso los certificados salian bien y los registros no. Detectado el
+    // 03-ago-2026: 18 de 20 registros estaban sin curso y el panel de Programa de
+    // Jovenes mostraba 0 adultos registrados pese a tener alumnos con cursos completos.
+    sendToGoogleSheets({ action: 'register', ...userProfile, course: COURSE_CONFIG.courseId });
     showModule(1);
     var firstName = userProfile.fullName.split(' ')[0];
     var welcomeEl = document.getElementById('welcomeName');
