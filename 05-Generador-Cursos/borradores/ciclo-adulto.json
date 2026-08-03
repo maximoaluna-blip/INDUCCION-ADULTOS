@@ -212,9 +212,9 @@
           {
             "text": "Llega Patricia al consejo como nueva secretaria. En su segunda reunión el jefe de grupo le pide que presente el informe anual completo. Según el proceso de vinculación, ¿qué está fallando?",
             "options": [
-              "Nada: si aceptó el cargo, debe responder desde el primer día.",
-              "Se está saltando la Integración: primero conoce el contexto y el equipo, después se le exige desempeño.",
-              "Falta la Identificación de Competencias: nadie definió el perfil de secretaria."
+              "Nada: si aceptó el cargo, debe responder por sus funciones desde el primer día.",
+              "Se está saltando la Integración: primero el contexto y el equipo, después el desempeño.",
+              "Falta la Identificación de Competencias: nadie definió antes el perfil que debía cumplir la secretaria."
             ],
             "correctIndex": 1
           },
@@ -308,18 +308,18 @@
           {
             "text": "La diferencia entre Formación Básica y Perfeccionamiento Continuo es:",
             "options": [
-              "La básica es obligatoria, la continua es opcional",
-              "La básica te prepara para el cargo (con la Insignia de Madera al final); la continua te mantiene vigente después",
-              "Son lo mismo, solo cambia el nombre"
+              "La básica es obligatoria para todos y la continua es opcional, según lo que cada adulto quiera profundizar por su cuenta",
+              "La básica te prepara para el cargo y cierra con la Insignia de Madera; la continua te mantiene vigente",
+              "Son lo mismo: solo cambia el nombre según el momento en que se dicte el curso"
             ],
             "correctIndex": 1
           },
           {
             "text": "La Insignia de Madera se gana por:",
             "options": [
-              "Asistir a un número mínimo de horas de cursos",
-              "Demostrar las competencias en la práctica, con evidencia y evaluación de tu asesor",
-              "Llevar más de 5 años en el movimiento"
+              "Asistir al número mínimo de horas de cursos que exige la ruta de formación básica",
+              "Demostrar las competencias en la práctica, con evidencia y evaluación",
+              "Llevar más de 5 años en el movimiento ejerciendo cargos de manera continua"
             ],
             "correctIndex": 1
           }
@@ -411,7 +411,7 @@
           {
             "text": "En el grupo de Andrés evaluaron a los dirigentes así: cada uno llenó su propia ficha, los dirigentes se evaluaron entre ellos, y el jefe de grupo firmó el resultado. ¿Qué le falta para ser una evaluación de 360°?",
             "options": [
-              "Nada le falta: con esas tres modalidades ya es de 360°.",
+              "Nada le falta: con las tres modalidades que ya aplicaron la evaluación se considera de 360°.",
               "Falta la heteroevaluación: nadie les preguntó a los chicos ni a los padres.",
               "Falta la autoevaluación: nadie se calificó a sí mismo."
             ],
@@ -420,8 +420,8 @@
           {
             "text": "La 'Heteroevaluación' implica que…",
             "options": [
-              "Te evalúas a ti mismo/a",
-              "Te evalúan tus pares (otros adultos del mismo nivel)",
+              "Te evalúas a ti mismo/a con la ficha que entrega la asociación",
+              "Te evalúan tus pares, es decir los otros adultos que ejercen cargos del mismo nivel que el tuyo",
               "Te evalúan los destinatarios de tu trabajo: chicos, padres, lobatos, etc."
             ],
             "correctIndex": 2
@@ -429,9 +429,9 @@
           {
             "text": "¿El acompañamiento al adulto lo provee solamente su asesor personal?",
             "options": [
-              "Sí, es el único responsable",
-              "No: lo proveen el asesor, el jefe a quien reportas, tu equipo, tus formadores y otros agentes",
-              "Solo el jefe de grupo"
+              "Sí: el asesor personal es el único responsable de acompañar al adulto durante su nombramiento",
+              "No: lo proveen el asesor, tu jefe, tu equipo y tus formadores",
+              "Solo el jefe de grupo, que es quien responde por los adultos del grupo ante la asociación"
             ],
             "correctIndex": 1
           }
@@ -535,9 +535,9 @@
           {
             "text": "El retiro de un adulto puede deberse a:",
             "options": [
-              "Solo a falta de competencia",
-              "Decisión voluntaria del adulto, fin del cargo, o decisión de la organización tras evaluación",
-              "Solo a decisión de la asociación"
+              "Solo a una falta de competencia comprobada en la evaluación de desempeño del adulto",
+              "Decisión voluntaria, fin del cargo o decisión de la organización",
+              "Solo a una decisión de la asociación; el adulto no puede retirarse por su cuenta"
             ],
             "correctIndex": 1
           }
@@ -610,18 +610,18 @@
           {
             "text": "Un dirigente de tu grupo dice: 'Yo ya hice mi Insignia de Madera hace seis años, así que mi ciclo ya lo cerré.' ¿Qué le responderías con lo que viste en este curso?",
             "options": [
-              "Tiene razón: con la Insignia de Madera un adulto ya completó su ciclo en el movimiento.",
-              "No: la insignia cierra la formación básica, no el ciclo — siguen el perfeccionamiento continuo y la decisión al final del nombramiento.",
-              "Depende: el ciclo solo se reabre si lo nombran en un cargo distinto al que tiene hoy."
+              "Tiene razón: con la Insignia de Madera un adulto ya completó su ciclo y no se le vuelve a evaluar.",
+              "No: la insignia cierra la formación básica, no el ciclo — después sigue el perfeccionamiento continuo.",
+              "Depende: el ciclo solo vuelve a abrirse si más adelante lo nombran en un cargo distinto, con funciones diferentes a las de hoy."
             ],
             "correctIndex": 1
           },
           {
             "text": "Si en el futuro asumes un cargo nuevo (ej. pasas de tesorero a presidente del consejo), ¿qué es lo primero que cambia?",
             "options": [
-              "Nada formal: ya estás vinculado al grupo, sigues con lo que tienes.",
-              "Se abre un ciclo nuevo: toca acordar y firmar un Acuerdo Mutuo para ese cargo, con su propio plan.",
-              "Solo se actualiza tu registro en SiScout y sigues con el mismo plan."
+              "Nada formal: como ya estás vinculado al grupo, sigues con el acuerdo y el plan que ya tienes.",
+              "Se abre un ciclo nuevo: hay que acordar y firmar un Acuerdo Mutuo para ese cargo.",
+              "Solo se actualiza tu registro en SiScout con el nuevo cargo y sigues con el mismo plan de siempre."
             ],
             "correctIndex": 1
           }

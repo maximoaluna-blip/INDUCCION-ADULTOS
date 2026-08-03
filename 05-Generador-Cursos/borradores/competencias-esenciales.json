@@ -234,8 +234,8 @@
           {
             "text": "En una reunión de consejo alguien dice: 'Yo la competencia de Trabajo en equipo no la tengo, punto.' Con lo que acabas de ver, ¿qué le respondes?",
             "options": [
-              "Que tiene razón: una competencia se tiene o no se tiene",
-              "Que no funciona así: todos estamos en algún grado del 1 al 4, y la pregunta útil es en cuál está él hoy",
+              "Que tiene razón: una competencia se tiene o no se tiene, no hay puntos medios",
+              "Que no funciona así: todos estamos en algún grado del 1 al 4",
               "Que eso solo aplica a los adultos que tienen un cargo formal en el consejo"
             ],
             "correctIndex": 1
@@ -366,18 +366,18 @@
           {
             "text": "La competencia 'Aprendizaje y desarrollo personal' se evidencia mejor en alguien que…",
             "options": [
-              "Tiene muchos años en el movimiento",
-              "Busca activamente nuevos conocimientos y formula su plan personal de desarrollo",
-              "Participa en todos los campamentos"
+              "Tiene muchos años en el movimiento y ya pasó por varias ramas y cargos distintos",
+              "Busca nuevos conocimientos y formula su plan personal de desarrollo",
+              "Participa en todos los campamentos y actividades que programa el grupo"
             ],
             "correctIndex": 1
           },
           {
             "text": "Marcela es tesorera del grupo. Cuando el consejo cambió el sistema de cuotas ella no estuvo de acuerdo, pero se sentó a entender por qué se hacía y terminó apoyándolo. Todavía no propone ajustes ni ayuda a los demás a acomodarse. ¿En qué grado de Adaptabilidad al cambio la ubicarías hoy?",
             "options": [
-              "Grado 1 — acepta otras formas de hacer las cosas e investiga el cambio para entenderlo",
-              "Grado 3 — se anticipa y ajusta las actividades por su cuenta",
-              "Grado 4 — crea nuevos modelos y métodos para el grupo"
+              "Grado 1 — acepta otras formas de hacer las cosas e investiga el cambio",
+              "Grado 3 — se anticipa a los cambios y ajusta por su cuenta las actividades del grupo",
+              "Grado 4 — crea nuevos modelos y métodos de trabajo para todo el grupo"
             ],
             "correctIndex": 0
           }
@@ -457,18 +457,18 @@
           {
             "text": "La 'Conciencia organizacional' implica principalmente…",
             "options": [
-              "Conocer a todos los miembros del consejo de grupo personalmente",
-              "Comprender la estructura, cultura y políticas de la asociación, y saber actuar en consecuencia",
-              "Tener muchos años en el movimiento"
+              "Conocer personalmente a todos los miembros del consejo de grupo y también a los del equipo de la regional",
+              "Comprender la estructura, cultura y políticas de la asociación, y actuar en consecuencia",
+              "Tener muchos años en el movimiento y haber conocido varias juntas directivas"
             ],
             "correctIndex": 1
           },
           {
             "text": "Un consejero que dice 'no entiendo por qué hay políticas nacionales si cada grupo es diferente'…",
             "options": [
-              "Está mostrando alta conciencia organizacional",
-              "Está mostrando un nivel bajo de conciencia organizacional — no comprende la coherencia entre niveles",
-              "Tiene razón: cada grupo debe operar autónomamente sin políticas"
+              "Está mostrando alta conciencia organizacional, porque reconoce lo particular de cada grupo",
+              "Está mostrando un nivel bajo de conciencia organizacional",
+              "Tiene razón: cada grupo debería poder operar de forma autónoma, sin políticas nacionales"
             ],
             "correctIndex": 1
           },
@@ -557,9 +557,9 @@
           {
             "text": "La diferencia entre 'Relaciones interpersonales' y 'Trabajo en equipo' es que…",
             "options": [
-              "La primera se enfoca en cómo te relacionas con cada persona; la segunda en cómo se articula el grupo para lograr objetivos",
-              "Son sinónimos en la política",
-              "La primera aplica solo a consejeros y la segunda solo a dirigentes"
+              "La primera se enfoca en cómo te relacionas con cada persona; la segunda en cómo se articula el grupo",
+              "Son sinónimos en la política: ambas describen la misma capacidad de relacionarse con otros",
+              "La primera aplica solo a los consejeros de grupo y la segunda solo a los dirigentes que trabajan directamente con las ramas"
             ],
             "correctIndex": 0
           },
@@ -794,18 +794,18 @@
           {
             "text": "Tu autodiagnóstico…",
             "options": [
-              "Se publica automáticamente al jefe de grupo",
-              "Se guarda solo en tu navegador y queda disponible para conectar con tu Plan Personal en el Curso 5",
-              "Es público en la plataforma para todos los adultos"
+              "Se le publica automáticamente a tu jefe de grupo para que lo revise antes del consejo",
+              "Se guarda solo en tu navegador y se conecta con tu Plan Personal en el Curso 5",
+              "Es público en la plataforma para todos los adultos del movimiento"
             ],
             "correctIndex": 1
           },
           {
             "text": "Te estás calificando en Relaciones interpersonales. Te reconoces en 'medio en malentendidos' del grado 3, pero no en 'modifico mi perspectiva si lo amerita' ni en 'construyo relaciones de trabajo cooperativo'. ¿Qué grado marcas?",
             "options": [
-              "Grado 3 — con reconocerte en una de las conductas basta",
-              "Grado 2 — si no te reconoces en la mayoría de las conductas de un grado, todavía estás en el anterior",
-              "Grado 4 — porque mediar es lo más difícil de la lista"
+              "Grado 3 — con reconocerte en una sola de las conductas descritas ya te puedes ubicar en ese grado",
+              "Grado 2 — si no te reconoces en la mayoría de las conductas, sigues en el anterior",
+              "Grado 4 — porque mediar en malentendidos es la conducta más difícil de toda la lista"
             ],
             "correctIndex": 1
           }
@@ -914,7 +914,7 @@
           {
             "text": "En el Curso 5 (Plan Personal), ¿qué pasa con tu autodiagnóstico de hoy?",
             "options": [
-              "Tienes que rehacerlo desde cero",
+              "Tienes que rehacerlo desde cero, porque cada curso arranca con su propio diagnóstico",
               "Queda pre-cargado, así arrancas con tus prioridades ya identificadas",
               "Solo lo verá tu jefe de grupo"
             ],
@@ -923,9 +923,9 @@
           {
             "text": "¿Cuántas áreas de oportunidad conviene trabajar en un ciclo de 6-12 meses?",
             "options": [
-              "Las 7 a la vez para avanzar rápido",
+              "Las 7 a la vez, para avanzar rápido y cerrar todas las brechas en un solo ciclo",
               "Idealmente 2-3 — concentras esfuerzo y los resultados son sostenibles",
-              "Solo 1, sin importar cuántas tengas"
+              "Solo 1 por ciclo, sin importar cuántas áreas de oportunidad tengas"
             ],
             "correctIndex": 1
           }

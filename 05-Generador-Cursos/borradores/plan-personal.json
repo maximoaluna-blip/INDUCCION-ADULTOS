@@ -142,8 +142,8 @@
             "text": "En el consejo, el jefe de grupo anuncia: 'Este año el plan personal de todos es el mismo — el curso básico y el de primeros auxilios.' ¿Qué le respondes?",
             "options": [
               "Que así se ahorra tiempo: si todos hacen los mismos cursos, el grupo avanza parejo",
-              "Que el plan personal no lo define el grupo sino la región, según su calendario de cursos",
-              "Que eso es un plan de capacitación, no un plan personal: el personal sale de lo que a cada uno le falta y lo acuerda cada quien con su asesor"
+              "Que el plan personal no lo define el grupo sino la región, de acuerdo con su calendario anual de cursos",
+              "Que eso es un plan de capacitación: el plan personal sale de lo que a cada uno le falta"
             ],
             "correctIndex": 2
           },
@@ -233,18 +233,18 @@
           {
             "text": "Sandra le pide a Camilo, su jefe de rama, que sea su asesor personal. Camilo duda: 'pero si yo soy tu jefe, ¿no es raro que además sea quien te certifique?' ¿Qué le responde Sandra con lo que vio en esta lección?",
             "options": [
-              "Que la política justamente recomienda que muchas veces sea el jefe inmediato, porque es quien la ve en acción; lo que cambia es el sombrero: cuando la acompaña escucha y orienta, y al final solo confirma lo que le vio hacer durante meses",
-              "Que tiene razón: mejor busca a alguien de otro grupo, que no tenga nada que ver con ella",
-              "Que no importa quién sea, porque el asesor no evalúa nada"
+              "Que la política recomienda que muchas veces sea el jefe inmediato, porque es quien la ve en acción",
+              "Que tiene razón: mejor buscar a alguien de otro grupo, sin relación de jefatura, para que la asesoría sea imparcial",
+              "Que no importa quién sea, porque el asesor solo acompaña y no interviene en la evaluación"
             ],
             "correctIndex": 0
           },
           {
             "text": "El criterio más importante para elegir asesor según el documento oficial es:",
             "options": [
-              "Que sea la persona con más años en el movimiento",
-              "Que puedas hablar con él/ella sin miedo de lo que te cuesta — la confianza es el primer criterio",
-              "Que esté en tu mismo grupo obligatoriamente"
+              "Que sea la persona con más años de experiencia y trayectoria dentro del movimiento",
+              "Que puedas hablar con él/ella sin miedo: la confianza es el primer criterio",
+              "Que esté obligatoriamente en tu mismo grupo y en tu misma rama"
             ],
             "correctIndex": 1
           }
@@ -315,18 +315,18 @@
           {
             "text": "A Luisa la nombraron secretaria del grupo. Firmó un papel que dice qué se compromete a hacer, qué le va a dar el grupo, hasta cuándo dura el nombramiento y cómo la van a evaluar. Falta parte de los 6 elementos oficiales. ¿Qué falta?",
             "options": [
-              "Nada: con esos cuatro el acuerdo ya está completo",
-              "El monto de la cuota anual que debe pagarle al grupo",
-              "Cómo será su inducción y su período de prueba, y su voluntad explícita de desarrollar las competencias del cargo"
+              "Nada: con esos cuatro elementos el acuerdo mutuo ya queda completo y se puede firmar en el consejo",
+              "El monto de la cuota anual que debe pagarle al grupo por su afiliación",
+              "Cómo será su inducción y su período de prueba, y su voluntad de desarrollar las competencias"
             ],
             "correctIndex": 2
           },
           {
             "text": "El elemento 'Apoyos y beneficios al adulto' del Acuerdo Mutuo significa:",
             "options": [
-              "Lo que tú te comprometes a aportar al grupo",
+              "Lo que tú te comprometes a aportarle al grupo durante todo el tiempo que dure tu nombramiento en el cargo",
               "Lo que la asociación se compromete a darte (formación, asesor, materiales, reconocimiento)",
-              "El sueldo que vas a recibir"
+              "El sueldo o los viáticos que vas a recibir por ejercer el cargo"
             ],
             "correctIndex": 1
           }
@@ -410,8 +410,8 @@
           {
             "text": "Tu jefe de grupo te pide dos cosas: 'renueva tu afiliación de este año y sube tu Acuerdo Mutuo firmado'. ¿Dónde haces cada una?",
             "options": [
-              "La afiliación en SiScout (registro de membresía) y el Acuerdo Mutuo en Talento 360° (tu hoja de vida y tu desarrollo)",
-              "Las dos en Talento 360°, que es donde vive todo lo del adulto",
+              "La afiliación en SiScout y el Acuerdo Mutuo en Talento 360°",
+              "Las dos en Talento 360°, que es donde vive todo lo relacionado con el adulto",
               "Las dos en SiScout, que es la plataforma principal de la asociación"
             ],
             "correctIndex": 0
@@ -483,18 +483,18 @@
           {
             "text": "Llenaste tu plan con 3 competencias, pero en una dejaste el plazo en blanco 'porque todavía no sé'. Le das a Generar. ¿Qué pasa?",
             "options": [
-              "El plan se genera igual y el plazo lo escribes a mano en el papel",
-              "No se genera hasta que meta, plazo y recursos estén completos en las tres — y está bien así: un plazo que no te atreves a escribir es una meta que no vas a perseguir",
-              "Se genera solo con las dos competencias completas y descarta la tercera"
+              "El plan se genera igual y el plazo lo escribes a mano cuando lo tengas claro",
+              "No se genera hasta que meta, plazo y recursos estén completos en las tres",
+              "Se genera solo con las dos competencias completas y descarta del documento la que quedó incompleta"
             ],
             "correctIndex": 1
           },
           {
             "text": "Estas tres metas las escribieron adultos reales en su plan. ¿Cuál le sirve a tu asesor para decir en 6 meses si se cumplió o no?",
             "options": [
-              "«Pasar de grado 2 a 3 en Relaciones interpersonales: mediar al menos 2 desacuerdos del consejo antes de diciembre y anotarlos en mi bitácora.»",
-              "«Comprometerme más con mi rama y con el grupo.»",
-              "«Mejorar mi trabajo en equipo durante este año.»"
+              "«Pasar de grado 2 a 3 en Relaciones interpersonales: mediar 2 desacuerdos del consejo antes de diciembre.»",
+              "«Comprometerme mucho más con mi rama y con el grupo, poniéndole todas las ganas y el tiempo que este año va a necesitar de mí.»",
+              "«Mejorar de forma notable mi trabajo en equipo durante este año, para que la relación con los demás dirigentes fluya mucho mejor.»"
             ],
             "correctIndex": 0
           }
@@ -605,9 +605,9 @@
           {
             "text": "Pasaron 6 meses. Vas a tu segundo encuentro con tu asesor y una de tus tres metas no la cumpliste. ¿Qué haces?",
             "options": [
-              "Lo dices de frente y revisan juntos si la meta estaba mal calibrada o si te faltaron recursos — para eso existe el espacio",
-              "No la mencionas: mejor hablar de las dos que sí avanzaron",
-              "Cambias esa meta por otra que ya tengas cumplida antes de la reunión"
+              "Lo dices de frente y revisan juntos si la meta estaba mal calibrada o te faltaron recursos",
+              "No la mencionas: mejor aprovechar el tiempo hablando de las dos que sí avanzaron",
+              "Cambias esa meta por otra que ya tengas cumplida, para llegar a la reunión con los tres logros"
             ],
             "correctIndex": 0
           },

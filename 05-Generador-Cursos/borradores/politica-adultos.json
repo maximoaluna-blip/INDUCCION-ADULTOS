@@ -144,9 +144,9 @@
           {
             "text": "La actividad del 'consejero ideal' busca principalmente:",
             "options": [
-              "Evaluar tus habilidades de dibujo",
-              "Que articules con tus propias palabras qué cualidades valoras en un consejero, antes de conocer la política",
-              "Comparar tu visión con la de otros participantes"
+              "Evaluar tus habilidades de dibujo y tu capacidad de resumir ideas en imágenes",
+              "Que articules con tus propias palabras qué valoras en un consejero",
+              "Comparar tu visión con la de los otros participantes del curso"
             ],
             "correctIndex": 1
           }
@@ -238,18 +238,18 @@
           {
             "text": "El cambio en el lenguaje que introduce la política implica que:",
             "options": [
-              "Solo se llaman jefes a quienes están en la jefatura",
+              "Solo se pueden llamar jefes quienes están formalmente nombrados en un cargo de jefatura",
               "Hablamos de 'adultos del movimiento' incluyendo también a rovers que ejercen roles",
-              "Se eliminaron los cargos de consejeros"
+              "Se eliminaron los cargos de consejeros de la estructura del grupo"
             ],
             "correctIndex": 1
           },
           {
             "text": "La política es flexible. Esto significa que:",
             "options": [
-              "Cada grupo decide si la aplica o no",
-              "Tiene herramientas precisas pero adaptables al contexto y necesidades de cada grupo",
-              "Cambia cada año según la dirigencia regional"
+              "Cada grupo decide libremente si la aplica o si prefiere seguir trabajando como venía",
+              "Tiene herramientas precisas pero adaptables al contexto de cada grupo",
+              "Cambia cada año según lo que decida la dirigencia regional de turno"
             ],
             "correctIndex": 1
           }
@@ -340,9 +340,9 @@
           {
             "text": "Las competencias específicas se diferencian de las esenciales en que:",
             "options": [
-              "Son más importantes que las esenciales",
+              "Son más importantes que las esenciales a la hora de ejercer bien un cargo",
               "Están asociadas a cada cargo concreto (tesorero, secretario, etc.)",
-              "Solo aplican para los jefes de grupo"
+              "Solo aplican para los jefes de grupo y los miembros del consejo"
             ],
             "correctIndex": 1
           },
@@ -443,17 +443,17 @@
           {
             "text": "El plan personal de desarrollo lo define:",
             "options": [
-              "El jefe de grupo de forma unilateral",
-              "El propio adulto, identificando sus competencias y brechas, con apoyo de un asesor",
-              "La regional según las necesidades nacionales"
+              "El jefe de grupo de forma unilateral, según lo que vea que le falta a cada adulto",
+              "El propio adulto, identificando sus brechas, con apoyo de un asesor",
+              "La regional, según las necesidades formativas que se definan a nivel nacional"
             ],
             "correctIndex": 1
           },
           {
             "text": "La hetero-evaluación es:",
             "options": [
-              "La que hacen los pares del adulto",
-              "La que el adulto hace de sí mismo",
+              "La que hacen los pares, es decir otros adultos del mismo nivel",
+              "La que el adulto hace de sí mismo sobre su propio desempeño en el cargo",
               "La que pueden hacer los chicos sobre el desempeño de los adultos"
             ],
             "correctIndex": 2
@@ -461,9 +461,9 @@
           {
             "text": "La diferencia central frente a políticas anteriores es:",
             "options": [
-              "Antes no se evaluaba a los adultos, ahora sí",
-              "Antes la formación era rígida e igual para todos, ahora se adapta al plan personal de cada adulto",
-              "Antes el cargo era vitalicio, ahora dura un año"
+              "Antes no se evaluaba a los adultos y ahora la evaluación es obligatoria todos los años",
+              "Antes la formación era rígida e igual para todos, ahora se adapta a cada adulto",
+              "Antes el cargo era prácticamente vitalicio y ahora dura solamente un año"
             ],
             "correctIndex": 1
           }
@@ -561,18 +561,18 @@
           {
             "text": "El compromiso, como competencia esencial, se evidencia en:",
             "options": [
-              "Asistir a todas las reuniones",
-              "La adhesión real a los principios del movimiento, demostrada en el día a día",
-              "Tener muchos años en el grupo"
+              "Asistir puntualmente a todas las reuniones y actividades que convoque el grupo",
+              "La adhesión real a los principios del movimiento, vista en el día a día",
+              "Tener muchos años de permanencia continua en el grupo"
             ],
             "correctIndex": 1
           },
           {
             "text": "El siguiente paso natural después de este módulo es:",
             "options": [
-              "Esperar a que el grupo te asigne un cargo nuevo",
+              "Esperar a que el grupo te asigne un cargo nuevo antes de ponerte a planear tu formación",
               "Identificar un asesor y construir tu plan personal de desarrollo en Talento 360",
-              "Inscribirse a un nuevo curso inmediatamente"
+              "Inscribirse de inmediato al siguiente curso que ofrezca la regional"
             ],
             "correctIndex": 1
           }

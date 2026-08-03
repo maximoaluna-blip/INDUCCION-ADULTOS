@@ -372,9 +372,9 @@
           {
             "text": "Una mamá del consejo dice: 'yo no soy scout de verdad, solo soy mamá'. ¿Qué le dirías según esta lección?",
             "options": [
-              "Que tiene razón, hasta que su hijo termine en el grupo",
-              "Que cuando aceptó el cargo en el consejo se volvió 'adulta del movimiento' y la política la cubre igual que a cualquier dirigente",
-              "Que debe primero hacer la promesa scout para serlo"
+              "Que tiene razón: mientras su hijo esté en el grupo sigue siendo una mamá colaboradora, no una scout",
+              "Que al aceptar el cargo en el consejo se volvió 'adulta del movimiento'",
+              "Que primero tendría que hacer la promesa scout para contar como adulta del movimiento"
             ],
             "correctIndex": 1
           },
@@ -708,9 +708,9 @@
           {
             "text": "El Curso 5 (Tu Plan Personal de Desarrollo) construye sobre…",
             "options": [
-              "El compromiso simple de una frase que escribiste en este Curso 1, y se enriquece con el autodiagnóstico de competencias del Curso 4",
-              "Un plan que ya te llega armado desde la regional",
-              "Un certificado de Talento 360 obtenido por separado"
+              "El compromiso de una frase que escribiste en el Curso 1 y el autodiagnóstico del Curso 4",
+              "Un plan que ya te llega armado desde la regional, de acuerdo con su calendario anual de formación",
+              "Un certificado de Talento 360 que se obtiene por separado antes de empezar"
             ],
             "correctIndex": 0
           }

@@ -61,6 +61,10 @@ function validate(course) {
             mod.quiz.questions.forEach((q, qi) => {
                 if (q.correctIndex === undefined) errors.push(`Modulo ${mod.id}, pregunta ${qi}: falta correctIndex`);
                 if (!q.options || q.options.length < 3) errors.push(`Modulo ${mod.id}, pregunta ${qi}: necesita al menos 3 opciones`);
+                (q.options || []).forEach((opt, oi) => {
+                    if (/<(strong|em)\b/i.test(opt))
+                        errors.push(`Modulo ${mod.id}, pregunta ${qi}, opcion ${oi}: las opciones de quiz no pueden llevar <strong> ni <em> (delatan la respuesta)`);
+                });
             });
         }
     });
@@ -68,11 +72,43 @@ function validate(course) {
     return errors;
 }
 
+// --- Sesgo de longitud en los quizzes ---
+// La opcion correcta no deberia ser la mas larga en mas de la mitad de las preguntas:
+// si lo es, se puede aprobar el curso eligiendo siempre la opcion mas larga, sin leer nada.
+// Solo cuenta cuando es UNICA mas larga; un empate no es explotable.
+function checkSesgoLongitud(course) {
+    const stripHtml = (s) => String(s).replace(/<[^>]*>/g, '');
+    const culpables = [];
+    let total = 0;
+    (course.modules || []).forEach(mod => {
+        if (!mod.quiz || !mod.quiz.questions) return;
+        mod.quiz.questions.forEach((q, qi) => {
+            if (!q.options || q.correctIndex === undefined) return;
+            total++;
+            const lens = q.options.map(o => stripHtml(o).length);
+            const otras = lens.filter((_, i) => i !== q.correctIndex);
+            const margen = lens[q.correctIndex] - Math.max(...otras);
+            if (margen > 0) culpables.push({ mod: mod.id, qi, margen });
+        });
+    });
+    return { total, culpables };
+}
+
 const errors = validate(course);
 if (errors.length > 0) {
     console.error('❌ Errores de validacion:');
     errors.forEach(e => console.error('   - ' + e));
     process.exit(1);
+}
+
+const sesgo = checkSesgoLongitud(course);
+if (sesgo.culpables.length * 2 > sesgo.total) {
+    console.warn(`⚠️  Sesgo de longitud: la opcion correcta es la mas larga en ${sesgo.culpables.length}/${sesgo.total} preguntas (mas de la mitad).`);
+    console.warn('   Se puede aprobar eligiendo siempre la opcion mas larga, sin leer las lecciones.');
+    console.warn('   Acorta la correcta (suele traer el "por que" pegado) o dale a cada distractor su propia razon plausible.');
+    sesgo.culpables.slice().sort((a, b) => b.margen - a.margen).slice(0, 5)
+        .forEach(c => console.warn(`   - Modulo ${c.mod}, pregunta ${c.qi + 1}: +${c.margen} caracteres sobre la siguiente`));
+    if (sesgo.culpables.length > 5) console.warn(`   ... y ${sesgo.culpables.length - 5} mas`);
 }
 
 // --- Departamentos colombianos ---
