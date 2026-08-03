@@ -706,13 +706,20 @@ body {
     color: white; padding: 20px; text-align: center;
 }
 .stat-card h4 { font-size: 2em; margin-bottom: 5px; color: white; }
+/* `.module p` (color gris para fondo blanco) le ganaba en especificidad al `color: white`
+   de .stat-card, dejando texto #636363 sobre fondo morado: contraste 1.55:1, ilegible.
+   Detectado al ampliar la auditoria a11y a los modulos ocultos (03-ago-2026). */
+.stat-card p, .module .stat-card p { color: #ffffff; }
 
 /* --- Achievements --- */
 .achievements { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
 .achievement {
     background: #f3e8ff; color: #622599; padding: 10px 15px;
     border: 2px solid #622599; font-size: 0.9em;
-    opacity: 0.4; transition: all 0.3s; font-weight: 600;
+    /* opacity 0.4 aplastaba el contraste a 2:1 sobre un diseno que de suyo cumple 7.93:1.
+       Calculado: 0.75 da 4.39:1 (no pasa), 0.85 da 5.57:1. Se conserva la senal visual
+       de "aun no lo tienes" y se cumple WCAG AA. */
+    opacity: 0.85; transition: all 0.3s; font-weight: 600;
 }
 .achievement.earned { opacity: 1; transform: scale(1.05); box-shadow: 0 3px 10px rgba(98, 37, 153, 0.3); }
 
@@ -790,6 +797,35 @@ body {
     .top-bar, .nav-menu, .mobile-nav, .btn, .save-indicator, .sync-indicator, .modal-overlay { display: none !important; }
     .certificate { page-break-inside: avoid; }
 }
+
+/* --- Cita destacada (blockquote de contenido) ---
+   El color iba inline en build-course.js, de modo que el tema oscuro no podia
+   sobrescribirlo y quedaba en 1.65:1 sobre fondo oscuro: practicamente invisible.
+   Detectado el 03-ago-2026 al ampliar la auditoria a11y a los modulos ocultos. */
+.cita-destacada {
+    font-size: 1.1rem; font-style: italic; text-align: center;
+    margin: 20px 0; color: #1a4b6b;
+}
+html[data-theme="dark"] .cita-destacada { color: #9ec8e8; }
+
+/* El certificado conserva fondo claro para poder imprimirse, asi que su texto no debe
+   heredar los colores claros del tema oscuro (daba 2.02:1). */
+html[data-theme="dark"] .certificate,
+html[data-theme="dark"] .certificate p,
+html[data-theme="dark"] .certificate strong,
+html[data-theme="dark"] .certificate div { color: #2b2b33; }
+
+/* Pie de video: el color iba inline (#555) y el tema oscuro no podia sobrescribirlo
+   (2.06:1 sobre fondo oscuro). Mismo patron que la cita destacada. */
+.video-caption { text-align: center; font-style: italic; color: #555; margin-top: 8px; }
+html[data-theme="dark"] .video-caption { color: #b9b9c4; }
+
+/* Enlaces dentro del contenido: sin estilo propio caian al azul por defecto del
+   navegador (#0000ee), que sobre fondo oscuro da 1.62:1. */
+.module a { color: #0b5ed7; text-decoration: underline; }
+.module a:hover { color: #093d8f; }
+html[data-theme="dark"] .module a { color: #8ab4f8; }
+html[data-theme="dark"] .module a:hover { color: #adc8fb; }
 
     </style>
 </head>
@@ -1060,7 +1096,7 @@ body {
 
                 <p>La pregunta lógica es: <em>¿no podemos simplemente improvisar?</em> Respuesta: sí, y por eso muchos grupos viven con adultos quemados, sin claridad, sin acompañamiento, y sin proceso para decir 'gracias por tu servicio, ahora descansas'. El ciclo formal es <strong>el antídoto al desgaste invisible</strong>.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Sin ciclo, los adultos entran sin claridad, sirven sin acompañamiento, y se van sin reconocimiento. Con ciclo, hay propósito en cada momento.</blockquote>
+                <blockquote class="cita-destacada">Sin ciclo, los adultos entran sin claridad, sirven sin acompañamiento, y se van sin reconocimiento. Con ciclo, hay propósito en cada momento.</blockquote>
 
                 <details class="policy-quote">
                     <summary>📋 Ver definición oficial del ciclo de vida del adulto</summary>
@@ -1237,7 +1273,7 @@ body {
 
                 <p>La <strong>Insignia de Madera</strong> es el símbolo oficial mundial que se entrega al adulto que ha completado su formación básica. NO es por asistir a cursos — es por <strong>demostrar las competencias en la práctica</strong> a través de evaluación 360° y certificación de tu asesor.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">La Insignia de Madera no se gana con horas de aula. Se gana con conductas observables sostenidas en el tiempo.</blockquote>
+                <blockquote class="cita-destacada">La Insignia de Madera no se gana con horas de aula. Se gana con conductas observables sostenidas en el tiempo.</blockquote>
 
                 <h3>📋 ¿Cómo se compone la formación básica?</h3>
 
@@ -1467,7 +1503,7 @@ body {
 
                 <p>La política pide que, sea cual sea la decisión, <strong>siempre se considere</strong> el reconocimiento y el agradecimiento formal a tu servicio. No es un trámite opcional que se olvida: es parte del cierre.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Un grupo que sabe agradecer es un grupo al que la gente vuelve. Aunque sea en otro rol, en otro tiempo.</blockquote>
+                <blockquote class="cita-destacada">Un grupo que sabe agradecer es un grupo al que la gente vuelve. Aunque sea en otro rol, en otro tiempo.</blockquote>
 
                 <details class="policy-quote">
                     <summary>📋 Ver las 3 opciones oficiales al cierre del nombramiento</summary>
@@ -1576,13 +1612,13 @@ body {
                     <li>Si en el futuro asumes <strong>otro cargo</strong>, sabrás que arranca un nuevo ciclo paralelo con su propio Acuerdo Mutuo, plan y evaluación</li>
                 </ul>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Sin el panorama, las piezas son objetos sueltos. Con el panorama, son partes de un sistema que tiene sentido.</blockquote>
+                <blockquote class="cita-destacada">Sin el panorama, las piezas son objetos sueltos. Con el panorama, son partes de un sistema que tiene sentido.</blockquote>
 
                 <div class="info-box"><strong>🚀 Recomendación:</strong> aprovecha el momentum y continúa al Curso 4. Te tomará ~35 minutos y, al terminar, tendrás tu propio perfil de competencias con fortalezas y áreas de oportunidad — listo para conectarse con tu Plan Personal en el Curso 5.</div>
 
                 <div class="mission-box"><strong>🎯 Tu misión de esta semana — elige UNA y ponle día:</strong><br><br>• Averigua en qué fecha vence tu nombramiento actual. Pregúntale a tu jefe de grupo.<br>• Si nunca firmaste tu Acuerdo Mutuo, pide la conversación. Nunca es tarde: firmarlo hoy te da el mismo respaldo.<br>• Averigua quién es tu asesor personal. Si no tienes, ese es tu primer paso.<br><br>Una sola, con día concreto. No las tres.</div>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Ahora sabes cómo entras, quién te acompaña y qué pasa al final. Nadie debería entrar sin claridad, servir sin acompañamiento ni irse sin reconocimiento — y menos tú.</blockquote>
+                <blockquote class="cita-destacada">Ahora sabes cómo entras, quién te acompaña y qué pasa al final. Nadie debería entrar sin claridad, servir sin acompañamiento ni irse sin reconocimiento — y menos tú.</blockquote>
 
                 <div class="reflection-area">
                     <h4>🤔 Reflexión Personal</h4>
@@ -1686,7 +1722,7 @@ body {
 
                     <!-- Footer -->
                     <div style="text-align: center; margin-top: 12px;">
-                        <p style="font-size: 0.7em; color: #999;">Plataforma de Formacion de Adultos ASC</p>
+                        <p style="font-size: 0.7em; color: #767676;">Plataforma de Formacion de Adultos ASC</p>
                     </div>
                 </div>
 
@@ -1761,6 +1797,27 @@ let userProfile = {};
 // (DECISIONES.md raiz ADR-023, Fase 2). Ver ESTADO-AUDITORIA.md.
 const COMPETENCY_SCALE_VERSION = 2;
 
+// --- Escritura segura en localStorage ---
+// saveProgress() no manejaba el fallo en absoluto y mostraba el indicador de "guardado"
+// sin comprobar que la escritura hubiera funcionado. Si localStorage falla (cuota llena,
+// modo privado de Safari, almacenamiento bloqueado por politica del navegador), el
+// estudiante veia el visto verde y perdia su trabajo sin enterarse. Ahora se entera.
+var _avisoAlmacenamiento = false;
+function guardarLocal(clave, valor) {
+    try {
+        localStorage.setItem(clave, valor);
+        return true;
+    } catch (e) {
+        if (!_avisoAlmacenamiento) {
+            _avisoAlmacenamiento = true;
+            if (typeof showNotification === 'function') {
+                showNotification('⚠️ No pudimos guardar tu avance en este navegador. Puede ser falta de espacio o el modo privado. Anota lo que escribiste antes de cerrar.', 'warning');
+            }
+        }
+        return false;
+    }
+}
+
 // --- Inicializacion ---
 window.addEventListener('DOMContentLoaded', function () {
     moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
@@ -1811,8 +1868,8 @@ function saveGlobalUserProfile(profile) {
             region: profile.region, email: profile.email, motivation: profile.motivation,
             updatedAt: new Date().toISOString()
         };
-        localStorage.setItem('globalUserProfile', JSON.stringify(reusable));
-    } catch (e) { /* ignore */ }
+        guardarLocal('globalUserProfile', JSON.stringify(reusable));
+    } catch (e) { /* el aviso lo da guardarLocal */ }
 }
 
 function prefillFromGlobalProfile() {
@@ -2058,7 +2115,8 @@ function saveProgress() {
         currentModule: currentModule, startTime: startTime.toISOString(),
         lastSaved: new Date().toISOString(), version: '3.0'
     };
-    localStorage.setItem(key, JSON.stringify(progress));
+    // Solo confirmar visualmente si la escritura funciono de verdad.
+    if (!guardarLocal(key, JSON.stringify(progress))) return;
     var indicator = document.getElementById('saveIndicator');
     if (indicator) { indicator.classList.add('show'); setTimeout(function () { indicator.classList.remove('show'); }, 2000); }
 }
@@ -3001,8 +3059,8 @@ function recoverProgress() {
                                 var existing = raw ? JSON.parse(raw) : {};
                                 existing.reflections = courseReflections;
                                 existing.lastSaved = new Date().toISOString();
-                                localStorage.setItem(key, JSON.stringify(existing));
-                            } catch (e) { /* ignore */ }
+                                guardarLocal(key, JSON.stringify(existing));
+                            } catch (e) { /* el aviso lo da guardarLocal */ }
                         }
                     });
                 }

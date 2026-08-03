@@ -202,7 +202,8 @@ function renderSection(section) {
         case 'mission-box':
             return `<div class="mission-box">${section.text}</div>`;
         case 'blockquote':
-            return `<blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">${section.text}</blockquote>`;
+            // Sin color inline: el tema oscuro debe poder sobrescribirlo (ver styles.css).
+            return `<blockquote class="cita-destacada">${section.text}</blockquote>`;
         case 'list':
             const tag = section.ordered ? 'ol' : 'ul';
             const items = section.items.map(item => `<li>${item}</li>`).join('\n                    ');
@@ -234,7 +235,7 @@ function renderSection(section) {
         case 'course-objectives':
             return `<h3>🎯 Objetivos del Curso</h3>\n` + renderSection({ type: 'list', ordered: false, items: section.items });
         case 'video':
-            const caption = section.caption ? `<p class="video-caption" style="text-align:center;font-style:italic;color:#555;margin-top:8px;">${section.caption}</p>` : '';
+            const caption = section.caption ? `<p class="video-caption">${section.caption}</p>` : '';
             const poster = section.poster ? ` poster="${section.poster}"` : '';
             return `<div class="video-container" style="margin:20px 0;">
                     <video controls preload="none" data-src="${section.src}" style="width:100%;max-width:800px;display:block;margin:0 auto;border-radius:8px;background:#000;"${poster}>
@@ -277,11 +278,11 @@ function renderSection(section) {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-${c.id}">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="${c.id}" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('${pbId}', '${c.id}', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="${c.id}" aria-label="Meta concreta para ${c.name}" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('${pbId}', '${c.id}', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="${c.id}" placeholder="Ej: 6 meses" onchange="savePlanField('${pbId}', '${c.id}', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="${c.id}" aria-label="Plazo para ${c.name}" placeholder="Ej: 6 meses" onchange="savePlanField('${pbId}', '${c.id}', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="${c.id}" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('${pbId}', '${c.id}', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="${c.id}" aria-label="Recursos para ${c.name}" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('${pbId}', '${c.id}', 'recursos', this.value)"></textarea>
                     </div>
                 </div>`
             ).join('');
@@ -291,7 +292,7 @@ function renderSection(section) {
                     <div class="pb-competences">${pbCompetences}</div>
                     <div class="pb-commitment-block">
                         <label class="pb-field-label pb-commitment-label">💚 Mi compromiso personal con este plan</label>
-                        <textarea id="pb-commitment-${pbId}" class="pb-commitment" placeholder="Ej: Me comprometo a trabajar en mi plan con disciplina, a buscar a mi asesor cada mes, y a no rendirme cuando me cueste..." onchange="savePlanCommitment('${pbId}', this.value)"></textarea>
+                        <textarea id="pb-commitment-${pbId}" class="pb-commitment" aria-label="Mi compromiso personal con este plan" placeholder="Ej: Me comprometo a trabajar en mi plan con disciplina, a buscar a mi asesor cada mes, y a no rendirme cuando me cueste..." onchange="savePlanCommitment('${pbId}', this.value)"></textarea>
                     </div>
                     <div class="pb-actions">
                         <button type="button" class="btn-primary" onclick="generatePlan('${pbId}')">📄 Generar mi Plan Personal</button>
@@ -554,7 +555,7 @@ function buildCertificateModule(course, certModuleId) {
 
                     <!-- Footer -->
                     <div style="text-align: center; margin-top: 12px;">
-                        <p style="font-size: 0.7em; color: #999;">Plataforma de Formacion de Adultos ASC</p>
+                        <p style="font-size: 0.7em; color: #767676;">Plataforma de Formacion de Adultos ASC</p>
                     </div>
                 </div>
 

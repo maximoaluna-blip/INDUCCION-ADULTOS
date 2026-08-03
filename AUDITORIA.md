@@ -39,18 +39,31 @@ Recorrer el código aplicando estos checks:
 #### D. Accesibilidad (a11y)
 - Imágenes `<img>` sin atributo `alt`.
 - Botones sin etiqueta accesible.
-- Inputs sin `<label>`.
-- Contraste de colores manifiestamente bajo (spot check).
+- Inputs y `<select>` sin `<label>` asociado. ⚠️ Un `<label>` **sin `for=`** y que no envuelve al campo **no cuenta**; el `placeholder` **tampoco**. Usar `aria-label`.
+- Contraste de colores. **Correr la suite `PRUEBAS-E2E` (axe), no revisar a ojo.**
 - Atributos ARIA mal aplicados.
+
+> **Dos trampas al auditar contraste, aprendidas el 03-ago-2026:**
+> 1. **axe solo ve lo visible.** Los cursos cargan con todos los módulos en el DOM pero solo `module-0` (registro) activo. Auditar la página tal cual equivale a auditar el formulario de registro: ~10 % de la interfaz. `a11y.spec.js` ya recorre los módulos activándolos uno a uno.
+> 2. **Desactivar las animaciones antes de medir.** `.module` trae `animation: fadeIn 0.5s`, que arranca en `opacity: 0`. Auditar sin esperar produce **falsos positivos masivos** de `color-contrast` (178 en la primera corrida). El spec inyecta `animation:none` y espera a que el módulo esté opaco.
+>
+> **Regla de estilo derivada:** no poner `color:` en estilos **inline** desde `build-course.js`. El tema oscuro no puede sobrescribirlo y el elemento queda ilegible en dark. Los colores van en `styles.css` con su variante `html[data-theme="dark"]`. Así se colaron el `blockquote` (1.65:1) y el pie de video (2.06:1).
 
 #### E. Consistencia
 - Nombres y branding: ¿quedan referencias a "Rover" en archivos donde no debería?
 - Token: ¿quedan referencias al token viejo `ROVER_ASC_2025`?
 - URL del backend: ¿hay URLs hardcodeadas inconsistentes entre archivos?
 - Estilo de código: indentación, comillas, naming, etc.
+- **Divergencia del motor entre líneas** — `python ../verificar-motor.py`.
+  `engine.js`, `build-course.js` y `styles.css` están **copiados** en las 3 líneas y se separan solos: una corrección se aplica en una y se olvida en dos. Ya pasó con el `status` del catálogo (arreglado en DI, roto en PA y PJ durante semanas). **Correr siempre después de tocar el motor.**
+
+#### E-bis. Escritura de datos del estudiante
+- Toda escritura en `localStorage` pasa por `guardarLocal()`, que avisa si falla.
+  **No usar `localStorage.setItem` directo ni envolverlo en `catch {}` vacío:** si la cuota se llena o el navegador bloquea el almacenamiento, el estudiante pierde su trabajo sin enterarse. `saveProgress()` llegó a mostrar el visto de "guardado" sin comprobar que la escritura hubiera funcionado.
+- Si un curso produce datos que otro consume (perfil de autodiagnóstico, plan), la escala debe estar **versionada** (`COMPETENCY_SCALE_VERSION`): al cambiar los criterios, los datos viejos se invalidan con aviso en vez de arrastrarse.
 
 #### F. Integridad esquema/contrato
-- Cada JSON de curso (`borradores/*.json`) cumple `course-schema.json`.
+- Cada JSON de curso (`borradores/*.json`) cumple `course-schema.json` — ⚙️ ya lo verifica `build-course.js` antes de compilar; si no cumple, no genera nada.
 - Todos los tipos de sección usados en los JSONs están soportados por el renderer en `build-course.js`.
 - `cursos.json` (catálogo) tiene entries cuyos `file` y `folder` existen en el filesystem.
 - Las rutas `src` de los videos en cada curso apuntan a archivos que existen.
@@ -122,3 +135,16 @@ La auditoría **no modifica el texto pedagógico** de los cursos sin permiso exp
 - Inconsistencias de numeración entre cursos cruzados
 
 Cualquier sugerencia de re-redacción se reporta como 🟢 (opcional) y no se aplica sin permiso.
+
+---
+
+## Herramientas de apoyo
+
+| Comando | Qué revisa |
+|---|---|
+| `cd PRUEBAS-E2E && npx playwright test` | Flujo del alumno, enlaces, responsive, y **accesibilidad de todos los módulos** |
+| `python ../verificar-motor.py` | Divergencia de `engine.js`/`build-course.js`/`styles.css` entre líneas |
+| `python ../verificar-consistencia.py` | Catálogo ↔ portal ↔ panel admin ↔ `ESTADO-AUDITORIA.md` |
+| `node 05-Generador-Cursos/build-course.js <curso>` | Esquema del JSON, reglas de quiz y sesgo de longitud |
+
+_Última revisión del proceso: 03-ago-2026 (auditoría de código completa; ver `DECISIONES.md` ADR-025)._

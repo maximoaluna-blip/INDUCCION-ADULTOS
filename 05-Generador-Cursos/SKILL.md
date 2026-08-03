@@ -103,8 +103,9 @@ Al terminar, muestra:
 | `list` | Lista con viñetas o números | `items` (array de strings), `ordered` (bool) |
 | `timeline` | Línea de tiempo | `items` (array de `{title, description, subitems?}`) |
 | `method-grid` | Grilla de tarjetas | `items` (array de `{title, description, color, borderColor}`) |
-| `blockquote` | Cita destacada | `text` |
-| `video` | Video MP4 con lazy-load (solo carga cuando el módulo está activo) | `src` (ruta relativa al HTML), `caption` (opcional) |
+| `blockquote` | Cita destacada (clase `.cita-destacada`; el color lo pone el CSS para que el tema oscuro pueda ajustarlo) | `text` |
+| `course-objectives` | Listado formateado de los objetivos de aprendizaje del curso | `items` (array de strings) |
+| `video` | Video MP4 con lazy-load (solo carga cuando el módulo está activo) | `src` (ruta relativa al HTML), `caption` (**incluir siempre la duración**, ej. `"Voces parte 1 · 5:38"` — el tiempo de video cuenta dentro de la duración declarada de la lección) |
 | `policy-quote` | Cita oficial plegable (collapsed por defecto) | `text` (cita textual), `source` (fuente — ej. "Política Nacional de Adultos en el Movimiento, Cap. 1, p. 1"), `label` (opcional, default "📋 Ver lo que dice la política textualmente") |
 | `photo-upload` | Zona de subida de imagen (compresión cliente a 1200px JPEG, persiste en localStorage). Útil para "sube tu dibujo / foto del documento firmado" | `photoId` (clave única de la foto en localStorage), `prompt` (título del cuadro), `hint` (texto de ayuda), `buttonLabel` (opcional, label del botón) |
 | `self-assessment` | Autodiagnóstico interactivo: el estudiante elige un grado por competencia. Calcula fortalezas/oportunidades y guarda perfil global cross-course en clave `competencyProfile` de localStorage | `assessmentId` (clave única), `intro` (texto introductorio), `competences` (array de `{id, name, definition, grades: [{level, criterion}]}`) |

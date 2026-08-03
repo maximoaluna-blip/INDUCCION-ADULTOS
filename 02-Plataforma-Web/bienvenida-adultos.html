@@ -706,13 +706,20 @@ body {
     color: white; padding: 20px; text-align: center;
 }
 .stat-card h4 { font-size: 2em; margin-bottom: 5px; color: white; }
+/* `.module p` (color gris para fondo blanco) le ganaba en especificidad al `color: white`
+   de .stat-card, dejando texto #636363 sobre fondo morado: contraste 1.55:1, ilegible.
+   Detectado al ampliar la auditoria a11y a los modulos ocultos (03-ago-2026). */
+.stat-card p, .module .stat-card p { color: #ffffff; }
 
 /* --- Achievements --- */
 .achievements { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
 .achievement {
     background: #f3e8ff; color: #622599; padding: 10px 15px;
     border: 2px solid #622599; font-size: 0.9em;
-    opacity: 0.4; transition: all 0.3s; font-weight: 600;
+    /* opacity 0.4 aplastaba el contraste a 2:1 sobre un diseno que de suyo cumple 7.93:1.
+       Calculado: 0.75 da 4.39:1 (no pasa), 0.85 da 5.57:1. Se conserva la senal visual
+       de "aun no lo tienes" y se cumple WCAG AA. */
+    opacity: 0.85; transition: all 0.3s; font-weight: 600;
 }
 .achievement.earned { opacity: 1; transform: scale(1.05); box-shadow: 0 3px 10px rgba(98, 37, 153, 0.3); }
 
@@ -790,6 +797,35 @@ body {
     .top-bar, .nav-menu, .mobile-nav, .btn, .save-indicator, .sync-indicator, .modal-overlay { display: none !important; }
     .certificate { page-break-inside: avoid; }
 }
+
+/* --- Cita destacada (blockquote de contenido) ---
+   El color iba inline en build-course.js, de modo que el tema oscuro no podia
+   sobrescribirlo y quedaba en 1.65:1 sobre fondo oscuro: practicamente invisible.
+   Detectado el 03-ago-2026 al ampliar la auditoria a11y a los modulos ocultos. */
+.cita-destacada {
+    font-size: 1.1rem; font-style: italic; text-align: center;
+    margin: 20px 0; color: #1a4b6b;
+}
+html[data-theme="dark"] .cita-destacada { color: #9ec8e8; }
+
+/* El certificado conserva fondo claro para poder imprimirse, asi que su texto no debe
+   heredar los colores claros del tema oscuro (daba 2.02:1). */
+html[data-theme="dark"] .certificate,
+html[data-theme="dark"] .certificate p,
+html[data-theme="dark"] .certificate strong,
+html[data-theme="dark"] .certificate div { color: #2b2b33; }
+
+/* Pie de video: el color iba inline (#555) y el tema oscuro no podia sobrescribirlo
+   (2.06:1 sobre fondo oscuro). Mismo patron que la cita destacada. */
+.video-caption { text-align: center; font-style: italic; color: #555; margin-top: 8px; }
+html[data-theme="dark"] .video-caption { color: #b9b9c4; }
+
+/* Enlaces dentro del contenido: sin estilo propio caian al azul por defecto del
+   navegador (#0000ee), que sobre fondo oscuro da 1.62:1. */
+.module a { color: #0b5ed7; text-decoration: underline; }
+.module a:hover { color: #093d8f; }
+html[data-theme="dark"] .module a { color: #8ab4f8; }
+html[data-theme="dark"] .module a:hover { color: #adc8fb; }
 
     </style>
 </head>
@@ -1086,7 +1122,7 @@ body {
 
                 <p>Si la respuesta a esas tres es <strong>sí</strong>, este curso (y los que siguen) son para ti. La idea no es cargarte de obligaciones — es darte claridad y respaldo.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">El movimiento scout no necesita personas perfectas. Necesita personas presentes que sepan dónde están parados.</blockquote>
+                <blockquote class="cita-destacada">El movimiento scout no necesita personas perfectas. Necesita personas presentes que sepan dónde están parados.</blockquote>
 
                 <div class="reflection-area">
                     <h4>🤔 Reflexión Personal</h4>
@@ -1145,7 +1181,7 @@ body {
                 <div class="video-container" style="margin:20px 0;">
                     <video controls preload="none" data-src="bienvenida-adultos/videos/01_avengers.mp4" style="width:100%;max-width:800px;display:block;margin:0 auto;border-radius:8px;background:#000;">
                         Tu navegador no soporta video HTML5.
-                    </video><p class="video-caption" style="text-align:center;font-style:italic;color:#555;margin-top:8px;">Los héroes más poderosos · 4:10</p>
+                    </video><p class="video-caption">Los héroes más poderosos · 4:10</p>
                 </div>
 
                 <h3>💭 ¿Y eso qué tiene que ver conmigo?</h3>
@@ -1169,7 +1205,7 @@ body {
                     </div>
                 </div>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Solo no eres tan poderoso. Junto a otros, eres imparable.</blockquote>
+                <blockquote class="cita-destacada">Solo no eres tan poderoso. Junto a otros, eres imparable.</blockquote>
 
                 <div class="reflection-area">
                     <h4>🤔 Reflexión Personal</h4>
@@ -1227,7 +1263,7 @@ body {
 
                 <p>Falso. La política de adultos del movimiento te define como <strong>'adulto en el movimiento'</strong> en el momento que aceptas un cargo o función. No importa si nunca fuiste lobato, scout o caminante de joven. <strong>El compromiso no se mide en años, se mide en presencia.</strong></p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Caso real: Marta, mamá del grupo 47 de Bogotá. Se vinculó hace 1 año al consejo. Hoy lidera el comité de finanzas. "Yo no era scout. Pero estoy."</blockquote>
+                <blockquote class="cita-destacada">Caso real: Marta, mamá del grupo 47 de Bogotá. Se vinculó hace 1 año al consejo. Hoy lidera el comité de finanzas. "Yo no era scout. Pero estoy."</blockquote>
 
                 <h3>❌ Mito 2: "No tengo tiempo para esto."</h3>
 
@@ -1309,14 +1345,14 @@ body {
                     <li>Date 3 minutos exactos. No más</li>
                 </ol>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">🎨 Toma 3 minutos. Vuelve cuando termines. No avances todavía.</blockquote>
+                <blockquote class="cita-destacada">🎨 Toma 3 minutos. Vuelve cuando termines. No avances todavía.</blockquote>
 
                 <h3>🎬 Y ahora mira lo que dibujaron otras personas</h3>
 
                 <div class="video-container" style="margin:20px 0;">
                     <video controls preload="none" data-src="bienvenida-adultos/videos/02_reflexion_dibujo.mp4" style="width:100%;max-width:800px;display:block;margin:0 auto;border-radius:8px;background:#000;">
                         Tu navegador no soporta video HTML5.
-                    </video><p class="video-caption" style="text-align:center;font-style:italic;color:#555;margin-top:8px;">Reflexión y actividad guiada · 5:02</p>
+                    </video><p class="video-caption">Reflexión y actividad guiada · 5:02</p>
                 </div>
 
                 <h3>📷 Comparte tu dibujo (opcional)</h3>
@@ -1393,13 +1429,13 @@ body {
                 <div class="video-container" style="margin:20px 0;">
                     <video controls preload="none" data-src="bienvenida-adultos/videos/03_voces_consejero_ideal_1.mp4" style="width:100%;max-width:800px;display:block;margin:0 auto;border-radius:8px;background:#000;">
                         Tu navegador no soporta video HTML5.
-                    </video><p class="video-caption" style="text-align:center;font-style:italic;color:#555;margin-top:8px;">Voces parte 1 — Eliana, Marta, Lina · 5:38</p>
+                    </video><p class="video-caption">Voces parte 1 — Eliana, Marta, Lina · 5:38</p>
                 </div>
 
                 <div class="video-container" style="margin:20px 0;">
                     <video controls preload="none" data-src="bienvenida-adultos/videos/04_voces_consejero_ideal_2.mp4" style="width:100%;max-width:800px;display:block;margin:0 auto;border-radius:8px;background:#000;">
                         Tu navegador no soporta video HTML5.
-                    </video><p class="video-caption" style="text-align:center;font-style:italic;color:#555;margin-top:8px;">Voces parte 2 — Stefanie, Blanca, Amparo · 4:25</p>
+                    </video><p class="video-caption">Voces parte 2 — Stefanie, Blanca, Amparo · 4:25</p>
                 </div>
 
                 <div class="info-box"><strong>💡 Lo que probablemente notaste:</strong><br>Casi todas las cualidades que mencionaron — y que tú probablemente también — tienen que ver con <em>cómo se relaciona con el grupo</em>, no con conocimientos técnicos. Escuchar, acompañar, comprometerse, trabajar en equipo, tener corazón. Ese es el adulto del movimiento.</div>
@@ -1473,7 +1509,7 @@ body {
 
                 <p>Escribe tu frase de compromiso en el cuadro de reflexión más abajo. <strong>Solo una.</strong> Si te salen varias, escoge la más importante.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Esto no es un examen. Es para ti. Pero escribirlo te lo hace real.</blockquote>
+                <blockquote class="cita-destacada">Esto no es un examen. Es para ti. Pero escribirlo te lo hace real.</blockquote>
 
                 <h3>🔮 ¿Y después qué pasa?</h3>
 
@@ -1568,7 +1604,7 @@ body {
 
                 <p>Ya diste el primer paso. <strong>Eso ya te diferencia</strong> del 90% de los adultos que pasan por un grupo scout sin saber muy bien qué hacen. Te van a entregar tu certificado del Curso 1, y desde ahora tienes claridad.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">El movimiento te necesitaba como llegaste. Pero te va a aprovechar mejor con cada curso que termines. Sigue.</blockquote>
+                <blockquote class="cita-destacada">El movimiento te necesitaba como llegaste. Pero te va a aprovechar mejor con cada curso que termines. Sigue.</blockquote>
 
                 <div class="reflection-area">
                     <h4>🤔 Reflexión Personal</h4>
@@ -1672,7 +1708,7 @@ body {
 
                     <!-- Footer -->
                     <div style="text-align: center; margin-top: 12px;">
-                        <p style="font-size: 0.7em; color: #999;">Plataforma de Formacion de Adultos ASC</p>
+                        <p style="font-size: 0.7em; color: #767676;">Plataforma de Formacion de Adultos ASC</p>
                     </div>
                 </div>
 
@@ -1747,6 +1783,27 @@ let userProfile = {};
 // (DECISIONES.md raiz ADR-023, Fase 2). Ver ESTADO-AUDITORIA.md.
 const COMPETENCY_SCALE_VERSION = 2;
 
+// --- Escritura segura en localStorage ---
+// saveProgress() no manejaba el fallo en absoluto y mostraba el indicador de "guardado"
+// sin comprobar que la escritura hubiera funcionado. Si localStorage falla (cuota llena,
+// modo privado de Safari, almacenamiento bloqueado por politica del navegador), el
+// estudiante veia el visto verde y perdia su trabajo sin enterarse. Ahora se entera.
+var _avisoAlmacenamiento = false;
+function guardarLocal(clave, valor) {
+    try {
+        localStorage.setItem(clave, valor);
+        return true;
+    } catch (e) {
+        if (!_avisoAlmacenamiento) {
+            _avisoAlmacenamiento = true;
+            if (typeof showNotification === 'function') {
+                showNotification('⚠️ No pudimos guardar tu avance en este navegador. Puede ser falta de espacio o el modo privado. Anota lo que escribiste antes de cerrar.', 'warning');
+            }
+        }
+        return false;
+    }
+}
+
 // --- Inicializacion ---
 window.addEventListener('DOMContentLoaded', function () {
     moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
@@ -1797,8 +1854,8 @@ function saveGlobalUserProfile(profile) {
             region: profile.region, email: profile.email, motivation: profile.motivation,
             updatedAt: new Date().toISOString()
         };
-        localStorage.setItem('globalUserProfile', JSON.stringify(reusable));
-    } catch (e) { /* ignore */ }
+        guardarLocal('globalUserProfile', JSON.stringify(reusable));
+    } catch (e) { /* el aviso lo da guardarLocal */ }
 }
 
 function prefillFromGlobalProfile() {
@@ -2044,7 +2101,8 @@ function saveProgress() {
         currentModule: currentModule, startTime: startTime.toISOString(),
         lastSaved: new Date().toISOString(), version: '3.0'
     };
-    localStorage.setItem(key, JSON.stringify(progress));
+    // Solo confirmar visualmente si la escritura funciono de verdad.
+    if (!guardarLocal(key, JSON.stringify(progress))) return;
     var indicator = document.getElementById('saveIndicator');
     if (indicator) { indicator.classList.add('show'); setTimeout(function () { indicator.classList.remove('show'); }, 2000); }
 }
@@ -2987,8 +3045,8 @@ function recoverProgress() {
                                 var existing = raw ? JSON.parse(raw) : {};
                                 existing.reflections = courseReflections;
                                 existing.lastSaved = new Date().toISOString();
-                                localStorage.setItem(key, JSON.stringify(existing));
-                            } catch (e) { /* ignore */ }
+                                guardarLocal(key, JSON.stringify(existing));
+                            } catch (e) { /* el aviso lo da guardarLocal */ }
                         }
                     });
                 }

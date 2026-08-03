@@ -706,13 +706,20 @@ body {
     color: white; padding: 20px; text-align: center;
 }
 .stat-card h4 { font-size: 2em; margin-bottom: 5px; color: white; }
+/* `.module p` (color gris para fondo blanco) le ganaba en especificidad al `color: white`
+   de .stat-card, dejando texto #636363 sobre fondo morado: contraste 1.55:1, ilegible.
+   Detectado al ampliar la auditoria a11y a los modulos ocultos (03-ago-2026). */
+.stat-card p, .module .stat-card p { color: #ffffff; }
 
 /* --- Achievements --- */
 .achievements { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
 .achievement {
     background: #f3e8ff; color: #622599; padding: 10px 15px;
     border: 2px solid #622599; font-size: 0.9em;
-    opacity: 0.4; transition: all 0.3s; font-weight: 600;
+    /* opacity 0.4 aplastaba el contraste a 2:1 sobre un diseno que de suyo cumple 7.93:1.
+       Calculado: 0.75 da 4.39:1 (no pasa), 0.85 da 5.57:1. Se conserva la senal visual
+       de "aun no lo tienes" y se cumple WCAG AA. */
+    opacity: 0.85; transition: all 0.3s; font-weight: 600;
 }
 .achievement.earned { opacity: 1; transform: scale(1.05); box-shadow: 0 3px 10px rgba(98, 37, 153, 0.3); }
 
@@ -790,6 +797,35 @@ body {
     .top-bar, .nav-menu, .mobile-nav, .btn, .save-indicator, .sync-indicator, .modal-overlay { display: none !important; }
     .certificate { page-break-inside: avoid; }
 }
+
+/* --- Cita destacada (blockquote de contenido) ---
+   El color iba inline en build-course.js, de modo que el tema oscuro no podia
+   sobrescribirlo y quedaba en 1.65:1 sobre fondo oscuro: practicamente invisible.
+   Detectado el 03-ago-2026 al ampliar la auditoria a11y a los modulos ocultos. */
+.cita-destacada {
+    font-size: 1.1rem; font-style: italic; text-align: center;
+    margin: 20px 0; color: #1a4b6b;
+}
+html[data-theme="dark"] .cita-destacada { color: #9ec8e8; }
+
+/* El certificado conserva fondo claro para poder imprimirse, asi que su texto no debe
+   heredar los colores claros del tema oscuro (daba 2.02:1). */
+html[data-theme="dark"] .certificate,
+html[data-theme="dark"] .certificate p,
+html[data-theme="dark"] .certificate strong,
+html[data-theme="dark"] .certificate div { color: #2b2b33; }
+
+/* Pie de video: el color iba inline (#555) y el tema oscuro no podia sobrescribirlo
+   (2.06:1 sobre fondo oscuro). Mismo patron que la cita destacada. */
+.video-caption { text-align: center; font-style: italic; color: #555; margin-top: 8px; }
+html[data-theme="dark"] .video-caption { color: #b9b9c4; }
+
+/* Enlaces dentro del contenido: sin estilo propio caian al azul por defecto del
+   navegador (#0000ee), que sobre fondo oscuro da 1.62:1. */
+.module a { color: #0b5ed7; text-decoration: underline; }
+.module a:hover { color: #093d8f; }
+html[data-theme="dark"] .module a { color: #8ab4f8; }
+html[data-theme="dark"] .module a:hover { color: #adc8fb; }
 
     </style>
 </head>
@@ -1251,7 +1287,7 @@ body {
 
                 <p>Firmar es <strong>simbólico y práctico</strong>. Simbólico: marcas un antes y un después. Práctico: si en 6 meses tu asesor te dice <em>'no estás cumpliendo lo que firmaste'</em>, hay un papel concreto al que volver.</p>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Lo que no se firma, se olvida. Lo que se firma, se cumple.</blockquote>
+                <blockquote class="cita-destacada">Lo que no se firma, se olvida. Lo que se firma, se cumple.</blockquote>
 
                 <details class="policy-quote">
                     <summary>📋 Ver los 6 elementos oficiales del Acuerdo Mutuo</summary>
@@ -1348,7 +1384,7 @@ body {
                     <li><strong>Cada vez que termines una formación</strong> que mejore tus competencias</li>
                 </ol>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.)</blockquote>
+                <blockquote class="cita-destacada">Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.)</blockquote>
 
                 <div class="reflection-area">
                     <h4>🤔 Reflexión Personal</h4>
@@ -1426,11 +1462,11 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-adaptabilidad">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="adaptabilidad" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'adaptabilidad', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="adaptabilidad" aria-label="Meta concreta para Adaptabilidad al cambio" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'adaptabilidad', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="adaptabilidad" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'adaptabilidad', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="adaptabilidad" aria-label="Plazo para Adaptabilidad al cambio" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'adaptabilidad', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="adaptabilidad" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'adaptabilidad', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="adaptabilidad" aria-label="Recursos para Adaptabilidad al cambio" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'adaptabilidad', 'recursos', this.value)"></textarea>
                     </div>
                 </div><div class="pb-competence" data-competence="aprendizaje">
                     <label class="pb-comp-header">
@@ -1440,11 +1476,11 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-aprendizaje">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="aprendizaje" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'aprendizaje', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="aprendizaje" aria-label="Meta concreta para Aprendizaje y desarrollo personal" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'aprendizaje', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="aprendizaje" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'aprendizaje', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="aprendizaje" aria-label="Plazo para Aprendizaje y desarrollo personal" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'aprendizaje', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="aprendizaje" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'aprendizaje', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="aprendizaje" aria-label="Recursos para Aprendizaje y desarrollo personal" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'aprendizaje', 'recursos', this.value)"></textarea>
                     </div>
                 </div><div class="pb-competence" data-competence="compromiso">
                     <label class="pb-comp-header">
@@ -1454,11 +1490,11 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-compromiso">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="compromiso" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'compromiso', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="compromiso" aria-label="Meta concreta para Compromiso" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'compromiso', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="compromiso" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'compromiso', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="compromiso" aria-label="Plazo para Compromiso" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'compromiso', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="compromiso" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'compromiso', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="compromiso" aria-label="Recursos para Compromiso" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'compromiso', 'recursos', this.value)"></textarea>
                     </div>
                 </div><div class="pb-competence" data-competence="conciencia-organizacional">
                     <label class="pb-comp-header">
@@ -1468,11 +1504,11 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-conciencia-organizacional">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="conciencia-organizacional" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="conciencia-organizacional" aria-label="Meta concreta para Conciencia organizacional" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="conciencia-organizacional" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="conciencia-organizacional" aria-label="Plazo para Conciencia organizacional" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="conciencia-organizacional" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="conciencia-organizacional" aria-label="Recursos para Conciencia organizacional" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'conciencia-organizacional', 'recursos', this.value)"></textarea>
                     </div>
                 </div><div class="pb-competence" data-competence="planeamiento">
                     <label class="pb-comp-header">
@@ -1482,11 +1518,11 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-planeamiento">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="planeamiento" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'planeamiento', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="planeamiento" aria-label="Meta concreta para Planeamiento estratégico" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'planeamiento', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="planeamiento" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'planeamiento', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="planeamiento" aria-label="Plazo para Planeamiento estratégico" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'planeamiento', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="planeamiento" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'planeamiento', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="planeamiento" aria-label="Recursos para Planeamiento estratégico" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'planeamiento', 'recursos', this.value)"></textarea>
                     </div>
                 </div><div class="pb-competence" data-competence="relaciones">
                     <label class="pb-comp-header">
@@ -1496,11 +1532,11 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-relaciones">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="relaciones" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'relaciones', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="relaciones" aria-label="Meta concreta para Relaciones interpersonales" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'relaciones', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="relaciones" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'relaciones', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="relaciones" aria-label="Plazo para Relaciones interpersonales" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'relaciones', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="relaciones" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'relaciones', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="relaciones" aria-label="Recursos para Relaciones interpersonales" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'relaciones', 'recursos', this.value)"></textarea>
                     </div>
                 </div><div class="pb-competence" data-competence="trabajo-equipo">
                     <label class="pb-comp-header">
@@ -1510,16 +1546,16 @@ body {
                     </label>
                     <div class="pb-comp-fields hidden" id="pb-fields-trabajo-equipo">
                         <label class="pb-field-label">🎯 Meta concreta (qué quieres lograr)</label>
-                        <textarea class="pb-field-meta" data-competence="trabajo-equipo" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'trabajo-equipo', 'meta', this.value)"></textarea>
+                        <textarea class="pb-field-meta" data-competence="trabajo-equipo" aria-label="Meta concreta para Trabajo en equipo" placeholder="Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en..." onchange="savePlanField('plan-personal', 'trabajo-equipo', 'meta', this.value)"></textarea>
                         <label class="pb-field-label">⏰ Plazo (en cuánto tiempo)</label>
-                        <input type="text" class="pb-field-plazo" data-competence="trabajo-equipo" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'trabajo-equipo', 'plazo', this.value)">
+                        <input type="text" class="pb-field-plazo" data-competence="trabajo-equipo" aria-label="Plazo para Trabajo en equipo" placeholder="Ej: 6 meses" onchange="savePlanField('plan-personal', 'trabajo-equipo', 'plazo', this.value)">
                         <label class="pb-field-label">📚 Recursos (cómo lo vas a desarrollar)</label>
-                        <textarea class="pb-field-recursos" data-competence="trabajo-equipo" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'trabajo-equipo', 'recursos', this.value)"></textarea>
+                        <textarea class="pb-field-recursos" data-competence="trabajo-equipo" aria-label="Recursos para Trabajo en equipo" placeholder="Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a..." onchange="savePlanField('plan-personal', 'trabajo-equipo', 'recursos', this.value)"></textarea>
                     </div>
                 </div></div>
                     <div class="pb-commitment-block">
                         <label class="pb-field-label pb-commitment-label">💚 Mi compromiso personal con este plan</label>
-                        <textarea id="pb-commitment-plan-personal" class="pb-commitment" placeholder="Ej: Me comprometo a trabajar en mi plan con disciplina, a buscar a mi asesor cada mes, y a no rendirme cuando me cueste..." onchange="savePlanCommitment('plan-personal', this.value)"></textarea>
+                        <textarea id="pb-commitment-plan-personal" class="pb-commitment" aria-label="Mi compromiso personal con este plan" placeholder="Ej: Me comprometo a trabajar en mi plan con disciplina, a buscar a mi asesor cada mes, y a no rendirme cuando me cueste..." onchange="savePlanCommitment('plan-personal', this.value)"></textarea>
                     </div>
                     <div class="pb-actions">
                         <button type="button" class="btn-primary" onclick="generatePlan('plan-personal')">📄 Generar mi Plan Personal</button>
@@ -1644,7 +1680,7 @@ body {
 
                 <div class="info-box"><strong>📈 Un ascenso que te llevas hoy:</strong> ¿te acuerdas del grado 2 de <em>Aprendizaje y desarrollo personal</em>? Dice 'tengo formulado mi Plan Personal de Desarrollo'. Acabas de formularlo. Si en el Curso 4 te calificaste grado 1 ahí, ya no estás en grado 1. Así se sube: una conducta a la vez.</div>
 
-                <blockquote style="font-size: 1.1rem; font-style: italic; text-align: center; margin: 20px 0; color: #1a4b6b;">Hace 5 cursos llegaste con preguntas. Hoy te vas con un mapa, un plan y un sistema de soporte. El movimiento te necesitaba como llegaste. Ahora te aprovechará mejor con cada paso que des.</blockquote>
+                <blockquote class="cita-destacada">Hace 5 cursos llegaste con preguntas. Hoy te vas con un mapa, un plan y un sistema de soporte. El movimiento te necesitaba como llegaste. Ahora te aprovechará mejor con cada paso que des.</blockquote>
 
                 <div class="info-box"><strong>🌟 Servicio adicional al movimiento</strong><br>Con estos 5 cursos ya conoces la política, la caja de herramientas y Talento 360° — que es buena parte de lo que la ASC pide para asesorar a otro. Te faltan dos cosas concretas: tener el <strong>certificado del Módulo de Inducción General de la ASC</strong> y estar llevando <strong>tu propio Plan Personal</strong>. Cuando las tengas, habla con tu jefe de grupo.</div>
 
@@ -1768,7 +1804,7 @@ body {
 
                     <!-- Footer -->
                     <div style="text-align: center; margin-top: 12px;">
-                        <p style="font-size: 0.7em; color: #999;">Plataforma de Formacion de Adultos ASC</p>
+                        <p style="font-size: 0.7em; color: #767676;">Plataforma de Formacion de Adultos ASC</p>
                     </div>
                 </div>
 
@@ -1842,6 +1878,27 @@ let userProfile = {};
 // (DECISIONES.md raiz ADR-023, Fase 2). Ver ESTADO-AUDITORIA.md.
 const COMPETENCY_SCALE_VERSION = 2;
 
+// --- Escritura segura en localStorage ---
+// saveProgress() no manejaba el fallo en absoluto y mostraba el indicador de "guardado"
+// sin comprobar que la escritura hubiera funcionado. Si localStorage falla (cuota llena,
+// modo privado de Safari, almacenamiento bloqueado por politica del navegador), el
+// estudiante veia el visto verde y perdia su trabajo sin enterarse. Ahora se entera.
+var _avisoAlmacenamiento = false;
+function guardarLocal(clave, valor) {
+    try {
+        localStorage.setItem(clave, valor);
+        return true;
+    } catch (e) {
+        if (!_avisoAlmacenamiento) {
+            _avisoAlmacenamiento = true;
+            if (typeof showNotification === 'function') {
+                showNotification('⚠️ No pudimos guardar tu avance en este navegador. Puede ser falta de espacio o el modo privado. Anota lo que escribiste antes de cerrar.', 'warning');
+            }
+        }
+        return false;
+    }
+}
+
 // --- Inicializacion ---
 window.addEventListener('DOMContentLoaded', function () {
     moduleProgress = new Array(COURSE_CONFIG.totalModules).fill(false);
@@ -1892,8 +1949,8 @@ function saveGlobalUserProfile(profile) {
             region: profile.region, email: profile.email, motivation: profile.motivation,
             updatedAt: new Date().toISOString()
         };
-        localStorage.setItem('globalUserProfile', JSON.stringify(reusable));
-    } catch (e) { /* ignore */ }
+        guardarLocal('globalUserProfile', JSON.stringify(reusable));
+    } catch (e) { /* el aviso lo da guardarLocal */ }
 }
 
 function prefillFromGlobalProfile() {
@@ -2139,7 +2196,8 @@ function saveProgress() {
         currentModule: currentModule, startTime: startTime.toISOString(),
         lastSaved: new Date().toISOString(), version: '3.0'
     };
-    localStorage.setItem(key, JSON.stringify(progress));
+    // Solo confirmar visualmente si la escritura funciono de verdad.
+    if (!guardarLocal(key, JSON.stringify(progress))) return;
     var indicator = document.getElementById('saveIndicator');
     if (indicator) { indicator.classList.add('show'); setTimeout(function () { indicator.classList.remove('show'); }, 2000); }
 }
@@ -3082,8 +3140,8 @@ function recoverProgress() {
                                 var existing = raw ? JSON.parse(raw) : {};
                                 existing.reflections = courseReflections;
                                 existing.lastSaved = new Date().toISOString();
-                                localStorage.setItem(key, JSON.stringify(existing));
-                            } catch (e) { /* ignore */ }
+                                guardarLocal(key, JSON.stringify(existing));
+                            } catch (e) { /* el aviso lo da guardarLocal */ }
                         }
                     });
                 }
