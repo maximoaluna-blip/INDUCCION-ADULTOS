@@ -51,7 +51,7 @@ INDUCCION-ADULTOS/
 │
 ├── 02-Plataforma-Web/
 │   ├── cursos.json               ← Catálogo de cursos
-│   ├── bienvenida-adultos.html   ← Curso 1 (generado)
+│   ├── bienvenida-adultos.html   ← Curso 1 (generado, 7 lecciones)
 │   ├── bienvenida-adultos/videos/   (4 videos)
 │   ├── politica-marco.html       ← Curso 2 (generado)
 │   ├── politica-marco/videos/       (3 videos)
@@ -77,7 +77,7 @@ INDUCCION-ADULTOS/
 │       ├── ciclo-adulto.json
 │       ├── competencias-esenciales.json
 │       ├── plan-personal.json
-│       └── politica-adultos.json      ← v1 archivada (gitignored, sólo respaldo local)
+│       └── politica-adultos.json      ← v1 monolítica archivada (el JSON sí se versiona; su HTML y videos están gitignored, por eso no se publica)
 │
 ├── .github/workflows/
 │   └── pruebas-e2e.yml               ← GitHub Actions: corre la suite en cada push/PR a main
@@ -92,10 +92,10 @@ INDUCCION-ADULTOS/
 
 | # | Curso | courseId | Duración | Lecciones | Hitos pedagógicos |
 |---|---|---|---|---|---|
-| 1 | 🦸 Bienvenida al Movimiento de Adultos | `bienvenida-adultos` | 25 min | 6 | Hook Avengers, mitos, dibujo del consejero ideal, primer compromiso |
+| 1 | 🦸 Bienvenida al Movimiento de Adultos | `bienvenida-adultos` | 45 min | 7 | Hook Avengers, mitos, dibujo del consejero ideal, voces de la comunidad, primer compromiso |
 | 2 | 📜 La Política — Marco y Principios | `politica-marco` | 30 min | 6 | 13 principios, 12 herramientas, definición Spencer-Spencer de competencia |
 | 3 | 🔄 El Ciclo del Adulto | `ciclo-adulto` | 30 min | 6 | Atracción y vinculación, desempeño, decisiones para el futuro |
-| 4 | 🧠 Las 7 Competencias Esenciales | `competencias-esenciales` | 35 min | 6 | Autodiagnóstico interactivo (sliders 1-4) + perfil cross-course |
+| 4 | 🧠 Las 7 Competencias Esenciales | `competencias-esenciales` | 40 min | 6 | Autodiagnóstico interactivo (4 grados por competencia) + perfil cross-course versionado |
 | 5 | 🗺️ Tu Plan Personal de Desarrollo | `plan-personal` | 30 min | 6 | Plan-builder interactivo + PDF imprimible + cierre de la ruta |
 
 **Curso archivado:** `politica-adultos` (v1 monolítica de 90 min, reemplazada por la ruta).
@@ -104,11 +104,11 @@ INDUCCION-ADULTOS/
 
 ## Features de plataforma activas
 
-- ✅ Lecciones cortas (3-8 min cada una) con auto-guardado en `localStorage`.
+- ✅ Lecciones cortas (5-8 min; la de "Voces de la comunidad" llega a 12 por su video) con auto-guardado en `localStorage` **verificado** — si la escritura falla, se avisa al estudiante en vez de perder su trabajo en silencio.
 - ✅ **Pre-llenado del registro** entre cursos (clave global `globalUserProfile`).
 - ✅ **Recuperación de avance** vía email (botón "Recuperar mi Avance" → consulta al Apps Script).
 - ✅ **Subida de foto** (Curso 1, dibujo del consejero ideal) — comprime a 1200px JPEG, guarda en localStorage.
-- ✅ **Autodiagnóstico de competencias** (Curso 4) — guarda perfil en clave global `competencyProfile` para que el Curso 5 lo lea.
+- ✅ **Autodiagnóstico de competencias** (Curso 4) — guarda perfil en clave global `competencyProfile` para que el Curso 5 lo lea, **versionado con `COMPETENCY_SCALE_VERSION`**: si cambian los criterios de los grados, los perfiles viejos se invalidan con aviso en vez de arrastrarse.
 - ✅ **Plan-builder interactivo** (Curso 5) — produce PDF imprimible.
 - ✅ **5 certificados acumulables** + verificación pública por código `ASC-AAAA-XXXXX`.
 - ✅ **Citas oficiales plegables** (`policy-quote`) en cada lección con redacción literal de la política.
@@ -138,14 +138,23 @@ Documentación detallada de cada uno en `05-Generador-Cursos/SKILL.md`.
 
 ### Cambio de motor o template
 
+> ⚠️ **El motor está copiado en las 3 líneas** (`engine.js` PA↔PJ es 97 % idéntico). Un arreglo aplicado aquí **no viaja solo** a Desarrollo Institucional ni a Programa de Jóvenes — ya pasó con el `status` del catálogo, que quedó arreglado en DI y roto aquí durante semanas. Ver `DECISIONES.md` ADR-025.
+
 1. Editar `05-Generador-Cursos/build-course.js` o `05-Generador-Cursos/templates/{styles.css,engine.js}`.
-2. Rebuild de **todos** los cursos (porque el engine.js se inlinea en cada HTML):
+2. **Aplicar el mismo cambio en las otras dos líneas** si es del núcleo común (no si es de un componente propio).
+3. Rebuild de **todos** los cursos (el `engine.js` se inlinea en cada HTML):
    ```bash
    for c in bienvenida-adultos politica-marco ciclo-adulto competencias-esenciales plan-personal; do
      node 05-Generador-Cursos/build-course.js $c
    done
    ```
-3. Push.
+4. **Verificar que no quedó divergencia:**
+   ```bash
+   python ../verificar-motor.py
+   ```
+5. Correr `cd PRUEBAS-E2E && npx playwright test` y push.
+
+> **Regla de estilo:** no poner `color:` en estilos **inline** desde `build-course.js`. El tema oscuro no puede sobrescribirlo y el elemento queda ilegible en modo oscuro (así se colaron el `blockquote` a 1.65:1 y el pie de video a 2.06:1). Los colores van en `styles.css` con su variante `html[data-theme="dark"]`.
 
 ### Cambio de backend (Apps Script)
 
@@ -186,14 +195,21 @@ Correr local: `cd PRUEBAS-E2E && npm test`. En **GitHub Actions** corre sola en 
 
 ---
 
+## Estado actual (03-ago-2026)
+
+**Nivel 1 completo, en producción y con las 3 auditorías pasadas.** Los 5 cursos están `active` y verificados en vivo.
+
+| Auditoría | Estado | Detalle |
+|---|---|---|
+| **Doctrinal** (`/auditar-curso`) | ✅ 02-ago-2026 | Los 3 cursos que nunca se habían auditado dieron **11 críticos, 15 mayores, 26 menores**. Todos corregidos con fuente oficial. Ver `ESTADO-AUDITORIA.md` del repo raíz |
+| **Pedagógica** (`/auditar-pedagogia`) | ✅ 02-ago-2026 | Primera de la línea. ~30 quizzes reescritos de memoria a escenario; el Curso 1 pasó de 6 a 7 lecciones al partir una que declaraba 5 min y tenía 23 reales |
+| **Funcional** (`PRUEBAS-E2E`) | ✅ en CI | 43 tests. Desde el 03-ago la auditoría de accesibilidad recorre **todos los módulos**, no solo el registro |
+
+> **El piloto humano dejó de ser bloqueante** (ADR-019): las 3 auditorías son la compuerta. Sigue siendo recomendable para validar recepción real — plantilla en `INFORME-PILOTO.md`.
+
 ## Pendientes / próximas etapas
 
-### Fase actual (lista para piloto)
-- Compartir URL pública con 5-10 adultos voluntarios.
-- Recoger retroalimentación durante 1-2 semanas.
-- Aplicar ajustes de contenido según observaciones.
-
-### Fase siguiente (post-piloto)
+### Fase siguiente
 - **Tier 2 — Cursos de profundización por fase del ciclo:**
   - Curso 6 — Vinculación de nuevos adultos al grupo.
   - Curso 7 — Cómo ser asesor personal.
@@ -213,13 +229,25 @@ Correr local: `cd PRUEBAS-E2E && npm test`. En **GitHub Actions** corre sola en 
 
 Los videos del Curso 1 (Bienvenida) y los testimonios incrustados se construyeron a partir del **Taller Flor de Lis 2 — Sesión 1**, dictado por dirigentes de la Regional Valle del Cauca el 30 de abril de 2026. Los segmentos originales están en `../flor de lis 2/segmentos/` (fuera del repo, respaldo local).
 
-Las definiciones doctrinales (principios, competencias, ciclo) provienen de los documentos oficiales de la Política Nacional de Adultos en el Movimiento (PNAM 2022 v. Acuerdo CSN 176 de 2017), conservados en `../DOCUMENTOS BASE/Información para CRAM/Documentos Oficiales PNAM 2022/`.
+Las definiciones doctrinales (principios, competencias, ciclo) provienen de los documentos oficiales de la Política Nacional de Adultos en el Movimiento (PNAM 2017, Acuerdo CSN 176; la carpeta local se llama "PNAM 2022" por el año de compilación, no de la política), conservados en `../DOCUMENTOS BASE/Información para CRAM/Documentos Oficiales PNAM 2022/`.
 
 ---
 
 ## Auditoría del código
 
 Cuando el dueño del proyecto diga _"revisa completo el código"_ se ejecutan las 4 etapas documentadas en [`AUDITORIA.md`](AUDITORIA.md): scan → report → apply → verify.
+
+**Última ejecución completa: 03-ago-2026** (`DECISIONES.md` ADR-025). Resultado: limpio en 6 de los 8 checks (0 funciones muertas, sin XSS, sin código huérfano, producción sincronizada). Dos hallazgos de fondo: el **motor triplicado** que ya divergió, y la **auditoría de accesibilidad que solo cubría el módulo de registro** — al ampliarla aparecieron 5 bugs de contraste reales, ya corregidos.
+
+### Herramientas de verificación
+
+| Comando | Qué revisa |
+|---|---|
+| `node 05-Generador-Cursos/build-course.js <curso>` | Esquema del JSON, reglas de quiz, sesgo de longitud |
+| `cd PRUEBAS-E2E && npx playwright test` | Flujo del alumno, enlaces, responsive y accesibilidad de **todos** los módulos |
+| `python ../verificar-motor.py` | Divergencia del motor entre las 3 líneas |
+| `python ../verificar-consistencia.py` | Catálogo ↔ portal ↔ panel admin ↔ ledger de auditorías |
+| `node 05-Generador-Cursos/verificar-backend.js` | Sincronización con el Apps Script |
 
 ---
 
@@ -228,3 +256,7 @@ Cuando el dueño del proyecto diga _"revisa completo el código"_ se ejecutan la
 Todos los cambios se aplican **end-to-end automáticamente** (edit → validate → build → preview → verify → commit → push → verify deploy). El usuario no tiene que pedir cada paso del pipeline.
 
 Inventario completo de scripts (`build-course.js`, `preview-course.js`, `verificar-backend.js`, etc.), triggers que activan procesos automáticos, y patrón de "self-applying changes" documentado en [`FLUJOS-AUTONOMOS-Y-SCRIPTS.md`](https://github.com/maximoaluna-blip/PORTAL-ADULTOS-ASC/blob/main/FLUJOS-AUTONOMOS-Y-SCRIPTS.md) (vive en PORTAL-ADULTOS-ASC porque aplica al ecosistema completo).
+
+---
+
+_Revisado el 03-ago-2026 contra el estado real (auditoría de código, `DECISIONES.md` ADR-025). Correcciones: Curso 1 a **45 min y 7 lecciones** y Curso 4 a **40 min** (las duraciones no contaban el video); sección de estado con las 3 auditorías en vez de "lista para piloto", derogado por ADR-019; el workflow de motor advierte que el cambio **no viaja solo** a las otras líneas y suma `verificar-motor.py`; añadida la tabla de herramientas de verificación; cita de la PNAM unificada como 2017._

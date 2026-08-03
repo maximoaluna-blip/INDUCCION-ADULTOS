@@ -252,13 +252,39 @@ Retorna: total de usuarios, certificados, evaluaciones, promedios y completacion
 
 ## Estructura de la base de datos
 
+> Las hojas se crean solas la primera vez que llega un dato de ese tipo. **Fuente de verdad: el arreglo de definiciones al inicio de `google-apps-script.js`** — si esta tabla y el código discrepan, manda el código.
+
 | Hoja | Contenido | Columnas |
 |------|-----------|----------|
-| `Registros` | Inscripciones | Timestamp, Nombre, Edad, Grupo, Region, Email, Motivacion, Curso, UserAgent, URL |
+| `Registros` | Inscripciones | Timestamp, Nombre Completo, Edad, Grupo, Region, Email, Motivacion, Curso, UserAgent, URL |
 | `Progreso` | Modulos completados | Timestamp, Email, Nombre, Curso, Modulo Completado, Nombre Modulo |
 | `Evaluaciones` | Resultados de quizzes | Timestamp, Email, Nombre, Curso, Modulo, Puntuacion |
-| `Certificados` | Certificados emitidos | Timestamp, Email, Nombre, Curso, Grupo, Region, Codigo, Fecha, Puntuacion, Tiempo |
+| `Certificados` | Certificados emitidos | Timestamp, Email, Nombre, Curso, Grupo, Region, Codigo Certificado, Fecha Completacion, Puntuacion, Tiempo Estudio |
 | `Compromisos` | Compromisos finales | Timestamp, Email, Nombre, Curso, Compromiso |
+| `Reflexiones` | Reflexiones por leccion | Timestamp, Email, Nombre, Curso, ModuloId, Texto |
+| `Autodiagnosticos` | Grados del autodiagnostico de competencias | Timestamp, Email, Nombre, Curso, AssessmentId, CompetenciaId, Grado |
+| `Planes` | Planes personales generados | Timestamp, Email, Nombre, Curso, PlanId, PlanType, Contenido |
+| `Catalogos DI` | Buenas practicas (solo Desarrollo Institucional) | Timestamp, Email, Nombre, Curso, CatalogoId, AmbitoId, Estado, Descripcion, Atributos |
+| `Recordatorios` | Avisos por inactividad | Timestamp, Email, Nombre, Curso, Dias Inactivo, Tipo |
+
+## Acciones que acepta el backend
+
+| Acción | Método | Qué hace |
+|---|---|---|
+| `register` | POST | Inscribe al adulto en un curso |
+| `progress` | POST | Marca un módulo como completado |
+| `quiz` | POST | Guarda el resultado de una evaluación |
+| `certificate` | POST | Emite un certificado con su código |
+| `commitment` | POST | Guarda el compromiso final del curso |
+| `reflection` | POST | Guarda una reflexión de lección |
+| `assessment` | POST | Guarda un grado del autodiagnóstico |
+| `plan` | POST | Guarda el plan personal generado |
+| `catalog` | POST | Guarda una buena práctica (Desarrollo Institucional) |
+| `recover` | GET | Reconstruye el avance de un correo |
+| `verify` | GET | Verifica públicamente un código de certificado |
+| `stats` | GET | KPIs agregados para el dashboard |
+
+> **Un solo backend para las 3 líneas.** Los registros se diferencian por `courseId`; el token `ADULTOS_ASC_2026` se valida del lado del servidor. Cualquier cambio aquí afecta a Política de Adultos, Desarrollo Institucional y Programa de Jóvenes a la vez.
 
 ---
 
@@ -367,5 +393,12 @@ En la parte superior del bloque de backup en `google-apps-script.js` puedes ajus
 | `google-apps-script.js` | `05-Generador-Cursos/` | Codigo backend para Google Apps Script (incluye backup) |
 | `backup-automatico.js` | `05-Generador-Cursos/` | Modulo standalone de backup (referencia) |
 | `INSTRUCCIONES-GOOGLE-APPS-SCRIPT.md` | `05-Generador-Cursos/` | Este documento de instrucciones |
+| `verificar-backend.js` | `05-Generador-Cursos/` | **Correr antes y despues de tocar el backend** — debe dar 4/4 OK |
 | `build-course.js` | `05-Generador-Cursos/` | Generador de HTML para cursos |
 | `templates/engine.js` | `05-Generador-Cursos/templates/` | Motor JavaScript del frontend |
+
+Operacion del dia a dia (deployments, URLs, restauracion) en [`../BACKEND.md`](../BACKEND.md). Este documento cubre el **setup desde cero**.
+
+---
+
+_Revisado el 03-ago-2026 contra el codigo real de `google-apps-script.js` (auditoria de codigo, `DECISIONES.md` ADR-025): la tabla de la base de datos listaba **5 hojas de 10** y no habia inventario de acciones — el backend acepta **12**. Corregido con los datos extraidos del propio script._
