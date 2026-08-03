@@ -423,9 +423,26 @@
             return '#';
         }
 
-        function parseHours(duration) {
-            var m = (duration || '').match(/(\d+)/);
-            return m ? parseInt(m[1], 10) : 0;
+        // El campo "duration" del catalogo es texto libre y mezcla formatos
+        // ("25 minutos", "~35 min", "1.5 horas"). Se normaliza todo a minutos
+        // antes de sumar: leer el numero suelto y asumir horas daba totales
+        // absurdos (185 "horas" cuando eran 185 minutos).
+        function parseMinutes(duration) {
+            var texto = String(duration == null ? '' : duration).toLowerCase();
+            var horas = texto.match(/(\d+(?:[.,]\d+)?)\s*h/);
+            if (horas) {
+                var minutosSueltos = texto.match(/h\D*(\d+)\s*m/);
+                return Math.round(parseFloat(horas[1].replace(',', '.')) * 60) +
+                    (minutosSueltos ? parseInt(minutosSueltos[1], 10) : 0);
+            }
+            var minutos = texto.match(/(\d+)/);
+            return minutos ? parseInt(minutos[1], 10) : 0;
+        }
+
+        // Una decimal solo cuando aporta: "2,5" pero "4" en vez de "4,0".
+        function formatHoras(totalMinutos) {
+            var horas = Math.round(totalMinutos / 6) / 10;
+            return horas.toFixed(horas % 1 === 0 ? 0 : 1).replace('.', ',');
         }
 
         function escapeHtml(str) {
@@ -475,11 +492,11 @@
             }
             grid.innerHTML = disponibles.map(renderCard).join('');
 
-            var totalHoras = disponibles.reduce(function(sum, c) {
-                return sum + parseHours(c.duration);
+            var totalMinutos = disponibles.reduce(function(sum, c) {
+                return sum + parseMinutes(c.duration);
             }, 0);
             document.getElementById('statCursos').textContent = disponibles.length;
-            document.getElementById('statHoras').textContent = totalHoras;
+            document.getElementById('statHoras').textContent = formatHoras(totalMinutos);
         }
 
         fetch(CATALOG_URL, { cache: 'no-cache' })
