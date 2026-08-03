@@ -41,7 +41,15 @@ console.log('📖 Leyendo curso: ' + course.title);
 
 // --- Leer templates ---
 const cssContent = fs.readFileSync(path.join(TEMPLATES_DIR, 'styles.css'), 'utf-8');
-const jsEngine = fs.readFileSync(path.join(TEMPLATES_DIR, 'engine.js'), 'utf-8');
+// El motor se reparte en dos: el nucleo compartido por las 3 lineas (sincronizado
+// desde _MOTOR/ del repo raiz) y la extension propia de esta linea. La extension va
+// PRIMERO porque ahi se declaran las variables globales; las funciones se hoistean,
+// asi que el orden entre ellas no importa. Ver DECISIONES.md ADR-025.
+const rutaLinea = path.join(TEMPLATES_DIR, 'engine.linea.js');
+const rutaCore = path.join(TEMPLATES_DIR, 'engine.core.js');
+const jsEngine = fs.existsSync(rutaCore)
+    ? fs.readFileSync(rutaLinea, 'utf-8') + '\n\n' + fs.readFileSync(rutaCore, 'utf-8')
+    : fs.readFileSync(path.join(TEMPLATES_DIR, 'engine.js'), 'utf-8');
 const SCHEMA_PATH = path.join(BASE_DIR, 'course-schema.json');
 
 // --- Validacion contra course-schema.json ---
