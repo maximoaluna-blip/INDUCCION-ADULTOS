@@ -1,25 +1,41 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Esquema de Curso - Plataforma Educativa Rover ASC",
-  "description": "Define la estructura completa de un curso para la plataforma de formacion Rover. Cada curso se compone de modulos con contenido, reflexiones y evaluaciones.",
+  "title": "Esquema de Curso — Línea Política de Adultos en el Movimiento (Plataforma de Formación de Adultos ASC)",
+  "description": "Contrato del JSON fuente de un curso. El JSON es la unica fuente de verdad del contenido (MARCO-METODOLOGICO §3.1); el HTML es un artefacto generado. El catalogo de tipos de seccion de \"type\" es PROPIO DE ESTA LINEA: solo incluye los que su build-course.js sabe renderizar.",
   "type": "object",
-  "required": ["courseId", "title", "description", "icon", "duration", "totalContentModules", "modules", "achievements", "certificate"],
+  "required": [
+    "courseId",
+    "title",
+    "description",
+    "icon",
+    "duration",
+    "totalContentModules",
+    "modules",
+    "achievements",
+    "certificate"
+  ],
   "properties": {
     "courseId": {
       "type": "string",
       "description": "Identificador unico del curso en formato kebab-case. Se usa como nombre de carpeta.",
       "pattern": "^[a-z0-9-]+$",
-      "examples": ["fundamentos-scout", "metodo-scout", "pedagogia-scout"]
+      "examples": [
+        "fundamentos-scout",
+        "metodo-scout",
+        "pedagogia-scout"
+      ]
     },
     "title": {
       "type": "string",
       "description": "Titulo completo del curso que se muestra en la cabecera y el catalogo.",
-      "examples": ["Fundamentos del Movimiento Scout"]
+      "examples": [
+        "Fundamentos del Movimiento Scout"
+      ]
     },
     "subtitle": {
       "type": "string",
-      "description": "Subtitulo opcional que aparece debajo del titulo.",
-      "default": "Formacion para Rovers - Sinodales y Ayudantes"
+      "description": "Subtitulo bajo el titulo. Convencion: \"Curso N de la Linea X\". Si se omite, el build usa el valor por defecto.",
+      "default": "Formación de Adultos Voluntarios — Asociación Scouts de Colombia"
     },
     "description": {
       "type": "string",
@@ -28,12 +44,34 @@
     "icon": {
       "type": "string",
       "description": "Emoji que representa el curso en el catalogo.",
-      "examples": ["🏕️", "⚙️", "📚", "🧭"]
+      "examples": [
+        "🏕️",
+        "⚙️",
+        "📚",
+        "🧭"
+      ]
     },
     "duration": {
       "type": "string",
-      "description": "Duracion estimada del curso en horas.",
-      "examples": ["6 horas", "8 horas", "4 horas"]
+      "description": "Duracion estimada del curso, en MINUTOS. El marco metodologico fija 20-40 min por curso; si el curso incluye video, su duracion cuenta dentro de ese total.",
+      "examples": [
+        "25 minutos",
+        "30 minutos",
+        "40 minutos"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "new",
+        "under-review",
+        "archived",
+        "coming-soon"
+      ],
+      "default": "draft",
+      "description": "Estado de publicacion. Solo \"active\" y \"new\" se muestran al estudiante. Por defecto \"draft\": un curso recien compilado NO se autopublica — debe declararse explicitamente. build-course.js preserva el status que ya tenga el catalogo, de modo que recompilar un curso retirado no lo reactiva."
     },
     "totalContentModules": {
       "type": "integer",
@@ -52,7 +90,12 @@
       "minItems": 3,
       "items": {
         "type": "object",
-        "required": ["id", "title", "emoji", "sections"],
+        "required": [
+          "id",
+          "title",
+          "emoji",
+          "sections"
+        ],
         "properties": {
           "id": {
             "type": "integer",
@@ -80,11 +123,28 @@
             "description": "Contenido del modulo, en orden de aparicion.",
             "items": {
               "type": "object",
-              "required": ["type"],
+              "required": [
+                "type"
+              ],
               "properties": {
                 "type": {
                   "type": "string",
-                  "enum": ["paragraph", "heading", "info-box", "mission-box", "list", "timeline", "method-grid", "blockquote", "course-objectives", "video", "policy-quote", "photo-upload", "self-assessment", "plan-builder"],
+                  "enum": [
+                    "paragraph",
+                    "heading",
+                    "info-box",
+                    "mission-box",
+                    "list",
+                    "timeline",
+                    "method-grid",
+                    "blockquote",
+                    "course-objectives",
+                    "video",
+                    "policy-quote",
+                    "photo-upload",
+                    "self-assessment",
+                    "plan-builder"
+                  ],
                   "description": "Tipo de seccion de contenido."
                 },
                 "text": {
@@ -93,7 +153,10 @@
                 },
                 "level": {
                   "type": "integer",
-                  "enum": [3, 4],
+                  "enum": [
+                    3,
+                    4
+                  ],
                   "description": "Nivel de heading (solo para type=heading). Usar 3 para secciones principales, 4 para subsecciones."
                 },
                 "ordered": {
@@ -114,8 +177,12 @@
                         "type": "object",
                         "description": "Item de timeline o method-grid.",
                         "properties": {
-                          "title": { "type": "string" },
-                          "description": { "type": "string" },
+                          "title": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
                           "color": {
                             "type": "string",
                             "description": "Color de fondo para method-grid items (formato hex)."
@@ -126,11 +193,16 @@
                           },
                           "subitems": {
                             "type": "array",
-                            "items": { "type": "string" },
+                            "items": {
+                              "type": "string"
+                            },
                             "description": "Sub-lista dentro de un timeline item."
                           }
                         },
-                        "required": ["title", "description"]
+                        "required": [
+                          "title",
+                          "description"
+                        ]
                       }
                     ]
                   }
@@ -147,24 +219,35 @@
                 "description": "Pregunta de reflexion para el estudiante."
               }
             },
-            "required": ["prompt"]
+            "required": [
+              "prompt"
+            ]
           },
           "quiz": {
             "type": "object",
             "description": "Evaluacion del modulo. Minimo 2 preguntas. El estudiante necesita 70% para avanzar.",
-            "required": ["title", "questions"],
+            "required": [
+              "title",
+              "questions"
+            ],
             "properties": {
               "title": {
                 "type": "string",
                 "description": "Titulo de la evaluacion.",
-                "examples": ["Evaluacion - Mision Scout"]
+                "examples": [
+                  "Evaluacion - Mision Scout"
+                ]
               },
               "questions": {
                 "type": "array",
                 "minItems": 2,
                 "items": {
                   "type": "object",
-                  "required": ["text", "options", "correctIndex"],
+                  "required": [
+                    "text",
+                    "options",
+                    "correctIndex"
+                  ],
                   "properties": {
                     "text": {
                       "type": "string",
@@ -174,7 +257,9 @@
                       "type": "array",
                       "minItems": 3,
                       "maxItems": 4,
-                      "items": { "type": "string" },
+                      "items": {
+                        "type": "string"
+                      },
                       "description": "Opciones de respuesta (3 o 4)."
                     },
                     "correctIndex": {
@@ -188,7 +273,9 @@
               "nextLabel": {
                 "type": "string",
                 "description": "Texto del boton para continuar al siguiente modulo.",
-                "examples": ["Continuar a Mafeking ⛰️"]
+                "examples": [
+                  "Continuar a Mafeking ⛰️"
+                ]
               }
             }
           }
@@ -200,21 +287,32 @@
       "description": "Logros desbloqueables durante el curso (4-6 recomendado).",
       "items": {
         "type": "object",
-        "required": ["id", "name", "emoji", "unlockOnModule"],
+        "required": [
+          "id",
+          "name",
+          "emoji",
+          "unlockOnModule"
+        ],
         "properties": {
           "id": {
             "type": "string",
             "description": "ID unico del logro.",
-            "examples": ["achievement-1"]
+            "examples": [
+              "achievement-1"
+            ]
           },
           "name": {
             "type": "string",
             "description": "Nombre del logro.",
-            "examples": ["Historiador Scout"]
+            "examples": [
+              "Historiador Scout"
+            ]
           },
           "emoji": {
             "type": "string",
-            "examples": ["📚"]
+            "examples": [
+              "📚"
+            ]
           },
           "unlockOnModule": {
             "type": "integer",
@@ -226,19 +324,27 @@
     "certificate": {
       "type": "object",
       "description": "Configuracion del certificado de completacion.",
-      "required": ["courseName", "description"],
+      "required": [
+        "courseName",
+        "description"
+      ],
       "properties": {
         "courseName": {
           "type": "string",
           "description": "Nombre del curso en MAYUSCULAS para el certificado.",
-          "examples": ["FUNDAMENTOS DEL MOVIMIENTO SCOUT"]
+          "examples": [
+            "FUNDAMENTOS DEL MOVIMIENTO SCOUT"
+          ]
         },
         "description": {
           "type": "string",
           "description": "Texto descriptivo del certificado.",
-          "examples": ["ha completado exitosamente el curso de Historia y Caracteristicas Esenciales del Movimiento Scout"]
+          "examples": [
+            "ha completado exitosamente el curso de Historia y Caracteristicas Esenciales del Movimiento Scout"
+          ]
         }
       }
     }
-  }
+  },
+  "version": "2.0"
 }

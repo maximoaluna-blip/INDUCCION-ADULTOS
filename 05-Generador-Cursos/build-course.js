@@ -42,6 +42,64 @@ console.log('📖 Leyendo curso: ' + course.title);
 // --- Leer templates ---
 const cssContent = fs.readFileSync(path.join(TEMPLATES_DIR, 'styles.css'), 'utf-8');
 const jsEngine = fs.readFileSync(path.join(TEMPLATES_DIR, 'engine.js'), 'utf-8');
+const SCHEMA_PATH = path.join(BASE_DIR, 'course-schema.json');
+
+// --- Validacion contra course-schema.json ---
+// El esquema era hasta ahora un contrato decorativo: ningun proceso lo leia, y el
+// checklist pedia marcar "JSON valida contra course-schema.json" sin que existiera el
+// mecanismo. Esto lo hace real. Subconjunto de JSON Schema draft-07 suficiente para
+// las reglas que estos esquemas declaran (required, type, enum, pattern, minimum,
+// maximum, minItems, maxItems, oneOf) y sin dependencias externas.
+function validarContraEsquema(dato, esquema, ruta) {
+    ruta = ruta || '(raiz)';
+    const errs = [];
+    if (!esquema || typeof esquema !== 'object') return errs;
+
+    if (esquema.oneOf) {
+        const ok = esquema.oneOf.some(sub => validarContraEsquema(dato, sub, ruta).length === 0);
+        if (!ok) errs.push(`${ruta}: no coincide con ninguna forma permitida`);
+        return errs;
+    }
+
+    const tipos = { string: 'string', integer: 'number', number: 'number', boolean: 'boolean' };
+    if (esquema.type === 'object') {
+        if (typeof dato !== 'object' || dato === null || Array.isArray(dato)) {
+            errs.push(`${ruta}: se esperaba un objeto`);
+            return errs;
+        }
+        (esquema.required || []).forEach(k => {
+            if (dato[k] === undefined) errs.push(`${ruta}: falta el campo obligatorio "${k}"`);
+        });
+        Object.keys(esquema.properties || {}).forEach(k => {
+            if (dato[k] !== undefined) {
+                errs.push(...validarContraEsquema(dato[k], esquema.properties[k], `${ruta}.${k}`));
+            }
+        });
+    } else if (esquema.type === 'array') {
+        if (!Array.isArray(dato)) { errs.push(`${ruta}: se esperaba una lista`); return errs; }
+        if (esquema.minItems !== undefined && dato.length < esquema.minItems)
+            errs.push(`${ruta}: necesita al menos ${esquema.minItems} elementos (tiene ${dato.length})`);
+        if (esquema.maxItems !== undefined && dato.length > esquema.maxItems)
+            errs.push(`${ruta}: admite maximo ${esquema.maxItems} elementos (tiene ${dato.length})`);
+        if (esquema.items) dato.forEach((v, i) => errs.push(...validarContraEsquema(v, esquema.items, `${ruta}[${i}]`)));
+    } else if (esquema.type && tipos[esquema.type]) {
+        if (typeof dato !== tipos[esquema.type])
+            errs.push(`${ruta}: se esperaba ${esquema.type}`);
+        if (esquema.type === 'integer' && typeof dato === 'number' && !Number.isInteger(dato))
+            errs.push(`${ruta}: se esperaba un entero`);
+    }
+
+    if (esquema.enum && !esquema.enum.includes(dato))
+        errs.push(`${ruta}: "${dato}" no esta permitido. Valores validos: ${esquema.enum.join(', ')}`);
+    if (esquema.pattern && typeof dato === 'string' && !new RegExp(esquema.pattern).test(dato))
+        errs.push(`${ruta}: "${dato}" no cumple el formato ${esquema.pattern}`);
+    if (esquema.minimum !== undefined && typeof dato === 'number' && dato < esquema.minimum)
+        errs.push(`${ruta}: ${dato} es menor que el minimo ${esquema.minimum}`);
+    if (esquema.maximum !== undefined && typeof dato === 'number' && dato > esquema.maximum)
+        errs.push(`${ruta}: ${dato} es mayor que el maximo ${esquema.maximum}`);
+
+    return errs;
+}
 
 // --- Validacion basica ---
 function validate(course) {
@@ -92,6 +150,16 @@ function checkSesgoLongitud(course) {
         });
     });
     return { total, culpables };
+}
+
+if (fs.existsSync(SCHEMA_PATH)) {
+    const esquema = JSON.parse(fs.readFileSync(SCHEMA_PATH, 'utf-8'));
+    const errsEsquema = validarContraEsquema(course, esquema);
+    if (errsEsquema.length > 0) {
+        console.error('❌ El JSON no cumple course-schema.json:');
+        errsEsquema.forEach(e => console.error('   - ' + e));
+        process.exit(1);
+    }
 }
 
 const errors = validate(course);
@@ -669,6 +737,7 @@ if (fs.existsSync(CATALOGO_PATH)) {
 }
 
 const existingIndex = catalogo.findIndex(c => c.courseId === course.courseId);
+const existingEntry = existingIndex >= 0 ? catalogo[existingIndex] : null;
 const entry = {
     courseId: course.courseId,
     title: course.title,
@@ -676,7 +745,12 @@ const entry = {
     icon: course.icon,
     duration: course.duration,
     modules: course.modules.length,
-    status: 'active',
+    // Precedencia: lo que ya estaba en el catalogo > lo que declare el JSON > draft.
+    // Nunca 'active' por defecto: un curso recien compilado no debe autopublicarse
+    // (el 02-ago-2026 eso metio un borrador sin auditar al catalogo de esta linea).
+    // Preservar lo existente ademas evita que un rebuild reactive un curso retirado,
+    // que es el mecanismo de retiro que documenta ECOSISTEMA.md.
+    status: existingEntry ? existingEntry.status : (course.status || 'draft'),
     file: course.courseId + '.html',
     folder: course.courseId
 };
