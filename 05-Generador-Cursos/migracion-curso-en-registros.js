@@ -18,6 +18,17 @@
  * Cómo ejecutarla: desde el editor de Apps Script, seleccionar `migrarCursoEnRegistros`
  * y pulsar Ejecutar. Primero con SIMULAR = true (no escribe, solo informa en el log);
  * después con SIMULAR = false.
+ *
+ * EJECUTADA el 03-ago-2026 sobre el Sheet de producción: 15 filas recuperadas, 2 que ya
+ * tenían curso, 3 sin evidencia (personas que se inscribieron y no empezaron; se dejaron
+ * como estaban). Las 15 asignaciones se verificaron una por una contra la actividad real
+ * de cada correo. Se conserva el archivo por si hiciera falta repetirla.
+ *
+ * ⚠️ AL INVOCARLA DESDE UN ROUTER, cuidado con la semántica del parámetro: la función
+ *    recibe SIMULAR, no "aplicar". Pasarle `aplicar === 'si'` la ejecuta de verdad cuando
+ *    se pretendía simular. Es exactamente el error que se cometió el 03-ago: la primera
+ *    llamada, que debía ser una simulación, escribió en el Sheet. El resultado fue
+ *    correcto, pero por suerte, no por diseño.
  */
 
 var MIGRACION_SIMULAR = true; // ← poner en false para que escriba de verdad
