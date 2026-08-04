@@ -55,20 +55,27 @@ Esto actualiza el **HEAD** del script (la "Última versión"). Los deployments e
 4. Click en el lápiz ✏️
 5. En "Versión": selecciona **"Nueva versión"** → descripción → **Implementar**
 
-**Opción B — Desde clasp (requiere conocer el Deployment ID interno):**
+**Opción B — Desde clasp:**
 ```bash
-# El Deployment ID interno NO es la Web App URL. Se obtiene de:
 cd .clasp-workspace && clasp deployments
-# Busca el que corresponde a producción y guárdalo aquí:
-# PROD_DEPLOYMENT_INTERNAL_ID = (anotar cuando se confirme)
-
-clasp deploy -i <PROD_DEPLOYMENT_INTERNAL_ID> -d "descripción del cambio"
 ```
 
-> ⚠️ **No confundir Web App URL con Deployment ID:**
-> - Web App URL: `https://script.google.com/macros/s/{ID_PUBLICO}/exec` — para clientes HTTP.
-> - Deployment ID interno: `AKfycb{...otra cadena...}` — para `clasp deploy -i`.
-> Aunque ambos empiezan con `AKfycb`, **son distintos**.
+Salida real (verificada el 03-ago-2026) — hay **3 deployments**:
+
+| Deployment ID | Versión | Qué es |
+|---|---|---|
+| `AKfycbxDK0Ty_IzrZ4QoJ3LAS70hcCtPhac_cnPxTh6_M2rO` | `@HEAD` | Sirve el código actual del editor. **Exige autenticación del dueño**, así que no sirve para los cursos |
+| `AKfycbz8QNiUMo7CzBb2iM3D-Hy7ER6kNMdKOpJpub4mZ4lNm4WhzP9f-DmJF-P8KByu-rGQow` | `@1` | Pruebas |
+| `AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw` | **`@6`** | **PRODUCCIÓN** — es el ID que va en `PROD_DEPLOYMENT_URL` |
+
+```bash
+clasp push                    # sube el código, pero NO cambia lo que sirve producción
+clasp deploy -i AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw   -d "descripción del cambio"
+```
+
+> 🚨 **Producción está fijada a la versión `@6`, no a `@HEAD`.** Un `clasp push` (o editar en el navegador y guardar) **no llega a los estudiantes**: hay que crear una versión nueva y reapuntar ese deployment. Es la causa más probable de "arreglé el backend y sigue fallando igual".
+
+> ⚠️ **Web App URL vs. Deployment ID.** Son conceptos distintos, pero **para el deployment de producción de este proyecto la cadena es la misma**: el `AKfycbxxZBp6...` de la URL es literalmente el ID que espera `clasp deploy -i`. (El de `@HEAD` sí es otra cadena, más corta.) No salir a buscar un identificador distinto.
 
 ### Paso 4 — Verificar
 ```bash
