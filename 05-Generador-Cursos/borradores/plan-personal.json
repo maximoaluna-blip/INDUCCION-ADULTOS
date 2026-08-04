@@ -121,7 +121,7 @@
           "items": [
             "<strong>Diagnóstico:</strong> dónde estás hoy. La política lo llama <em>valoración inicial por competencias</em>: te evalúas tú (el autodiagnóstico del Curso 4 es exactamente eso) y después lo revisas con tu asesor.",
             "<strong>Metas:</strong> qué quieres lograr en cada competencia priorizada",
-            "<strong>Plazos:</strong> cuándo lo vas a lograr (típicamente ciclos de 6-12 meses)",
+            "<strong>Plazos:</strong> cuándo lo vas a lograr (dentro del ciclo de tu nombramiento actual)",
             "<strong>Recursos:</strong> qué cursos, módulos, lecturas, prácticas vas a usar"
           ]
         },
@@ -355,9 +355,8 @@
           "items": [
             "Tu <strong>hoja de vida</strong> como adulto (datos, formación previa, experiencia)",
             "Tu <strong>Plan Personal de Desarrollo</strong> firmado",
-            "El <strong>Acuerdo Mutuo</strong> de cada cargo que ejerces",
             "Tus <strong>autoevaluaciones, coevaluaciones y heteroevaluaciones</strong> (la 360°)",
-            "Las <strong>certificaciones</strong> que vas obteniendo (Insignia de Madera, etc.)",
+            "Las <strong>certificaciones</strong> que vas obteniendo — dentro del Movimiento y fuera de él",
             "Los <strong>cargos a los que postulas</strong> dentro de la asociación"
           ]
         },
@@ -398,7 +397,7 @@
         },
         {
           "type": "blockquote",
-          "text": "Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.)"
+          "text": "Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.) Y guarda además tu propio archivo personal —certificados, actas de reunión, evidencias—: la política lo recomienda expresamente, sin importar lo que ya esté cargado en la plataforma."
         }
       ],
       "reflection": {
@@ -408,9 +407,9 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Tu jefe de grupo te pide dos cosas: 'renueva tu afiliación de este año y sube tu Acuerdo Mutuo firmado'. ¿Dónde haces cada una?",
+            "text": "Tu jefe de grupo te pide dos cosas: 'renueva tu afiliación de este año y sube el certificado del curso que acabas de terminar'. ¿Dónde haces cada una?",
             "options": [
-              "La afiliación en SiScout y el Acuerdo Mutuo en Talento 360°",
+              "La afiliación en SiScout y el certificado en Talento 360°, como parte de tu hoja de vida",
               "Las dos en Talento 360°, que es donde vive todo lo relacionado con el adulto",
               "Las dos en SiScout, que es la plataforma principal de la asociación"
             ],
@@ -458,7 +457,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>💡 Tips para llenarlo bien:</strong><br>📌 <strong>Meta:</strong> sé concreto. No 'mejorar trabajo en equipo' sino 'pasar de grado 2 a 3, evidenciado en mediar al menos 2 conflictos del consejo'.<br>📌 <strong>Plazo:</strong> realista. 6-12 meses suele funcionar.<br>📌 <strong>Recursos:</strong> tan específicos como puedas. 'Leer la cartilla X', 'asistir al taller Y de la regional', 'pedir mentoría a Z'."
+          "text": "<strong>💡 Tips para llenarlo bien:</strong><br>📌 <strong>Meta:</strong> sé concreto. No 'mejorar trabajo en equipo' sino 'pasar de grado 2 a 3, evidenciado en mediar al menos 2 conflictos del consejo'.<br>📌 <strong>Plazo:</strong> realista, dentro del ciclo de tu nombramiento — en el Grupo eso suele ser un año.<br>📌 <strong>Recursos:</strong> tan específicos como puedas. 'Leer la cartilla X', 'asistir al taller Y de la regional', 'pedir mentoría a Z'."
         },
         {
           "type": "plan-builder",
