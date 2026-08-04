@@ -372,7 +372,9 @@ function saveReflection(moduleNum, text) {
 }
 
 function saveCommitment(text) {
-    localStorage.setItem('commitment_' + COURSE_CONFIG.courseId, text);
+    // Por guardarLocal, no directo: si el almacenamiento falla, el alumno pierde
+    // su compromiso sin enterarse (AUDITORIA.md check E-bis).
+    guardarLocal('commitment_' + COURSE_CONFIG.courseId, text);
 }
 
 // --- Foto-upload (resize + persist + descargar) ---
@@ -639,8 +641,11 @@ function generateCertificate() {
             name: userProfile.fullName, code: code, date: fechaISO,
             score: avg, course: COURSE_CONFIG.courseId
         });
-        localStorage.setItem('certificate_' + code, registro); // lookup por codigo (verify)
-        localStorage.setItem(courseKey, registro);              // puntero estable por curso
+        // Por guardarLocal, no directo (AUDITORIA.md check E-bis). Es la escritura mas
+        // sensible del motor: si falla en silencio, verificar-certificado.html no
+        // encuentra el registro y el alumno no puede validar su propio certificado.
+        guardarLocal('certificate_' + code, registro); // lookup por codigo (verify)
+        guardarLocal(courseKey, registro);             // puntero estable por curso
     }
 }
 

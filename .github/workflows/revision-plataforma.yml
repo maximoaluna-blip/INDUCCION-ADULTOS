@@ -6,13 +6,17 @@ name: Revision plataforma (Playwright · todas las lineas)
 # La suite es agnostica de linea: lee el cursos.json de cada ASC_BASE_URL.
 # No escribe en ningun backend de Apps Script.
 #
-# Disparo: a mano desde la pestaña Actions (workflow_dispatch).
-# Para convertirlo en rutina periodica, descomentar el bloque "schedule".
+# Disparo: semanal automatico + a mano desde la pestaña Actions.
+#
+# El schedule estuvo COMENTADO hasta el 03-ago-2026, asi que esta revision solo
+# corria si alguien se acordaba de lanzarla — que es exactamente el modo de fallo
+# que documenta el ADR-025 ("lo automatizado se cumple, lo que depende de acordarse
+# deriva"). Activado por ADR-033.
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: '0 11 * * 1'   # lunes 11:00 UTC (~6:00 a.m. Colombia)
+  schedule:
+    - cron: '0 11 * * 1'   # lunes 11:00 UTC (~6:00 a.m. Colombia)
 
 jobs:
   lineas:

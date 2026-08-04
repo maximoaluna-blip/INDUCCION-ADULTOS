@@ -1,12 +1,23 @@
 # Proceso de Auditoría, Revisión y Depuración
 
-Este documento describe el proceso que se debe ejecutar cuando el usuario diga la frase trigger:
+El objetivo es mantener la plataforma sana después de cada ronda de cambios — encontrar inconsistencias, código muerto, problemas de seguridad o calidad, y aplicar mejoras incrementales sin romper lo que funciona.
+
+## ⚙️ Qué corre solo y qué necesita a una persona (ADR-033)
+
+> **Desde el 03-ago-2026 esta auditoría ya no depende de que alguien la pida.** Antes se disparaba únicamente con la frase *"revisa completo el código"*, y eso falló: tras una tanda de cambios en el motor y el backend nadie la dijo, y quedaron publicadas 4 escrituras a `localStorage` que se saltaban `guardarLocal()` —una era la del certificado— y un color con contraste por debajo de AA.
+
+**Automático, en cada push y PR** (`PRUEBAS-E2E/tests/codigo.spec.js`, dentro del CI que ya existía):
+toda escritura a `localStorage` pasa por `guardarLocal()` · ningún `catch` vacío se traga una escritura · sin `console.log`/`debugger` en el motor · sin el token viejo `ROVER_ASC_2025` · ningún HTML sobre 500 KB · ningún curso publicado sin su JSON fuente. Cuando falla, dice archivo y línea.
+
+**Automático, accesibilidad** (`a11y.spec.js` para los cursos, `panel-a11y.spec.js` para el **panel administrativo y el portal** — estos dos no los auditaba nadie hasta el ADR-033).
+
+**Automático, semanal**: `revision-plataforma.yml` revisa producción los lunes. Su `schedule` estuvo comentado desde su creación.
+
+**Sigue necesitando a una persona** — es criterio, no mecánica: si una función divergente entre líneas es legítima; si un comentario sigue siendo cierto; si la arquitectura es sensata; si un `color:` inline está justificado (los 14 de `build-course.js` lo están: son del certificado, un imprimible siempre sobre blanco). Para eso está el resto de este documento, y se dispara con:
 
 > **"revisa completo el codigo"**
 
 (o variaciones: "audita el código", "haz limpieza", "optimiza todo")
-
-El objetivo es mantener la plataforma sana después de cada ronda de cambios — encontrar inconsistencias, código muerto, problemas de seguridad o calidad, y aplicar mejoras incrementales sin romper lo que funciona.
 
 ---
 

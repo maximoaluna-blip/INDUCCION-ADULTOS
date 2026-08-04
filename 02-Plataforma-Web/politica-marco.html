@@ -1844,17 +1844,18 @@ function calculateAssessment(assessmentId) {
     data.opportunities = opportunities.map(function (e) { return e.id; });
     data.completedAt = new Date().toISOString();
     saveProgress();
-    // Save to global key for cross-course consumption
-    try {
-        localStorage.setItem('competencyProfile', JSON.stringify({
-            grades: data.grades,
-            strengths: data.strengths,
-            opportunities: data.opportunities,
-            completedAt: data.completedAt,
-            sourceCourse: COURSE_CONFIG.courseId,
-            scaleVersion: COMPETENCY_SCALE_VERSION
-        }));
-    } catch (e) { /* ignore */ }
+    // Save to global key for cross-course consumption.
+    // Por guardarLocal, no en un catch vacio (AUDITORIA.md check E-bis): este perfil
+    // lo consume el Curso 5 para precargar el plan personal. Si se pierde en silencio,
+    // el alumno rehace el autodiagnostico sin saber por que.
+    guardarLocal('competencyProfile', JSON.stringify({
+        grades: data.grades,
+        strengths: data.strengths,
+        opportunities: data.opportunities,
+        completedAt: data.completedAt,
+        sourceCourse: COURSE_CONFIG.courseId,
+        scaleVersion: COMPETENCY_SCALE_VERSION
+    }));
     // Sincronizacion en segundo plano al backend (persistencia hibrida)
     if (userProfile && userProfile.email && typeof sendToGoogleSheets === 'function') {
         sendToGoogleSheets({
@@ -2536,7 +2537,9 @@ function saveReflection(moduleNum, text) {
 }
 
 function saveCommitment(text) {
-    localStorage.setItem('commitment_' + COURSE_CONFIG.courseId, text);
+    // Por guardarLocal, no directo: si el almacenamiento falla, el alumno pierde
+    // su compromiso sin enterarse (AUDITORIA.md check E-bis).
+    guardarLocal('commitment_' + COURSE_CONFIG.courseId, text);
 }
 
 // --- Foto-upload (resize + persist + descargar) ---
@@ -2803,8 +2806,11 @@ function generateCertificate() {
             name: userProfile.fullName, code: code, date: fechaISO,
             score: avg, course: COURSE_CONFIG.courseId
         });
-        localStorage.setItem('certificate_' + code, registro); // lookup por codigo (verify)
-        localStorage.setItem(courseKey, registro);              // puntero estable por curso
+        // Por guardarLocal, no directo (AUDITORIA.md check E-bis). Es la escritura mas
+        // sensible del motor: si falla en silencio, verificar-certificado.html no
+        // encuentra el registro y el alumno no puede validar su propio certificado.
+        guardarLocal('certificate_' + code, registro); // lookup por codigo (verify)
+        guardarLocal(courseKey, registro);             // puntero estable por curso
     }
 }
 
