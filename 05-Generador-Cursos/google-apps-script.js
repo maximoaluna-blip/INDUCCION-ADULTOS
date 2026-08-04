@@ -297,6 +297,14 @@ var SHEET_CONFIG = {
   planes: {
     name: 'Planes',
     headers: ['Timestamp', 'Email', 'Nombre', 'Curso', 'PlanId', 'PlanType', 'Contenido']
+  },
+  // Analisis de items (ADR-030, nivel 2 de Kirkpatrick). DELIBERADAMENTE ANONIMA:
+  // no lleva Email ni Nombre. Sirve para saber que pregunta falla todo el mundo,
+  // no quien la falla. Es la unica hoja que registra intentos REPROBADOS — el resto
+  // del backend solo ve los aprobados, que es justo donde no esta el problema.
+  items: {
+    name: 'Items',
+    headers: ['Timestamp', 'Curso', 'Modulo', 'Pregunta', 'OpcionElegida', 'Correcta', 'Intento']
   }
 };
 
@@ -595,6 +603,7 @@ function handleStats() {
       registros: [],
       certificados: [],
       modulos: [],
+      items: [],        // analisis de items por pregunta (ADR-030)
       resumen: null,
       generatedAt: new Date().toISOString()
     };
@@ -667,6 +676,42 @@ function handleStats() {
       }
     }
 
+    // Analisis de items: que pregunta falla la gente (ADR-030). Hoja anonima.
+    try {
+      var itSheet = getOrCreateSheet(SHEET_CONFIG.items.name, SHEET_CONFIG.items.headers);
+      var itData = itSheet.getDataRange().getValues();
+      var itemAgg = {};
+      for (var t = 1; t < itData.length; t++) {
+        var iCurso = String(itData[t][1] || 'curso');
+        var iMod = String(itData[t][2] || '?');
+        var iPreg = String(itData[t][3] || '?');
+        var iOpc = String(itData[t][4]);
+        var iOk = Number(itData[t][5]) === 1;
+        var iKey = iCurso + '_m' + iMod + '_p' + iPreg;
+        if (!itemAgg[iKey]) {
+          itemAgg[iKey] = {
+            curso: iCurso, modulo: iMod, pregunta: iPreg,
+            intentos: 0, aciertos: 0, tasaAcierto: 0,
+            elecciones: {}   // opcion original -> veces elegida
+          };
+        }
+        var ag = itemAgg[iKey];
+        ag.intentos++;
+        if (iOk) ag.aciertos++;
+        ag.elecciones[iOpc] = (ag.elecciones[iOpc] || 0) + 1;
+      }
+      for (var ik in itemAgg) {
+        var a = itemAgg[ik];
+        a.tasaAcierto = a.intentos > 0 ? Math.round((a.aciertos / a.intentos) * 100) : 0;
+        stats.items.push(a);
+      }
+      // Lo peor primero: la pregunta que mas gente falla es la que hay que arreglar
+      stats.items.sort(function(x, y) {
+        if (x.tasaAcierto !== y.tasaAcierto) return x.tasaAcierto - y.tasaAcierto;
+        return y.intentos - x.intentos;
+      });
+    } catch (err) { /* Sin datos aun */ }
+
     // Completaciones por modulo (agregado + array para grafico)
     try {
       var progSheet = getOrCreateSheet(SHEET_CONFIG.progreso.name, SHEET_CONFIG.progreso.headers);
@@ -693,6 +738,22 @@ function handleStats() {
         var bn = parseInt(b.modulo, 10) || 0;
         return an - bn;
       });
+
+      // Abandono por leccion: cuanta gente que completo el modulo anterior NO llego
+      // a este. Sale de lo que ya se guardaba; no hizo falta tocar nada del registro.
+      var previoPorCurso = {};
+      for (var mi = 0; mi < stats.modulos.length; mi++) {
+        var m = stats.modulos[mi];
+        var previo = previoPorCurso[m.curso];
+        if (previo === undefined) {
+          m.abandono = 0;          // primer modulo del curso: no hay de donde caerse
+          m.abandonoPct = 0;
+        } else {
+          m.abandono = Math.max(0, previo - m.completados);
+          m.abandonoPct = previo > 0 ? Math.round((m.abandono / previo) * 100) : 0;
+        }
+        previoPorCurso[m.curso] = m.completados;
+      }
     } catch (err) { /* Sin datos aun */ }
 
     // Estadisticas de evaluaciones
@@ -828,6 +889,9 @@ function doPost(e) {
 
       case 'plan':
         return handlePlan(body, timestamp);
+
+      case 'items':
+        return handleItems(body, timestamp);
 
       default:
         return jsonResponse(false, null, 'Accion POST no reconocida: ' + action);
@@ -1425,6 +1489,67 @@ var REMINDER_CONFIG = {
   cooldownDays: 7,         // Minimo entre dos recordatorios al mismo usuario+curso
   maxEmailsPerRun: 50      // Cap defensivo para cuota Gmail (~100/dia en cuentas gratis)
 };
+
+/**
+ * Guarda el detalle pregunta por pregunta de un intento de quiz (ADR-030).
+ *
+ * ANONIMA A PROPOSITO: no recibe ni guarda email ni nombre. El objetivo es saber
+ * que pregunta falla la gente, no quien la falla. Por eso tampoco valida identidad.
+ *
+ * Es la unica accion que registra intentos REPROBADOS: 'quiz' solo se dispara al
+ * aprobar, asi que el dato pedagogicamente util —en que se equivocan antes de
+ * aprobar— no existia en ningun lado.
+ *
+ * Se mantiene SEPARADA de handleQuiz a proposito: si escribiera en Evaluaciones,
+ * los intentos fallidos entrarian en totalQuizzes y hundirian averageScore, que
+ * hoy solo promedia aprobados.
+ *
+ * @param {Object} body  { course, module, attempt, items: [{q, o, c}, ...] }
+ */
+function handleItems(body, timestamp) {
+  var course = sanitize(body.course, 200);
+  if (!course) {
+    return jsonResponse(false, null, 'El curso es requerido.');
+  }
+
+  var moduleNum = parseInt(body.module, 10);
+  if (isNaN(moduleNum) || moduleNum < 0) {
+    return jsonResponse(false, null, 'Numero de modulo invalido.');
+  }
+
+  var attempt = parseInt(body.attempt, 10);
+  if (isNaN(attempt) || attempt < 1) attempt = 1;
+
+  var items = body.items;
+  if (!items || !items.length) {
+    return jsonResponse(false, null, 'No hay items que guardar.');
+  }
+  // Tope defensivo: ningun quiz del catalogo pasa de 5 preguntas
+  if (items.length > 50) items = items.slice(0, 50);
+
+  try {
+    var sheet = getOrCreateSheet(SHEET_CONFIG.items.name, SHEET_CONFIG.items.headers);
+    var filas = [];
+    for (var i = 0; i < items.length; i++) {
+      var pregunta = parseInt(items[i].q, 10);
+      if (isNaN(pregunta) || pregunta < 0) continue;
+      // -1 = la dejo sin responder
+      var elegida = parseInt(items[i].o, 10);
+      if (isNaN(elegida)) elegida = -1;
+      var acerto = (items[i].c === 1 || items[i].c === true) ? 1 : 0;
+      filas.push([timestamp, course, moduleNum, pregunta, elegida, acerto, attempt]);
+    }
+    if (!filas.length) {
+      return jsonResponse(false, null, 'Ningun item valido.');
+    }
+    // Una sola escritura: appendRow por fila multiplicaria las llamadas al Sheet
+    sheet.getRange(sheet.getLastRow() + 1, 1, filas.length, filas[0].length).setValues(filas);
+
+    return jsonResponse(true, { message: 'Items guardados.', guardados: filas.length });
+  } catch (error) {
+    return jsonResponse(false, null, 'Error al guardar items: ' + error.message);
+  }
+}
 
 /**
  * Construye un map "email|curso" -> ultima fecha de actividad (Date).

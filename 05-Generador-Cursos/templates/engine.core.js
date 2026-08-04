@@ -203,6 +203,11 @@ function shuffleQuizOptions() {
     });
 }
 
+// Intentos por modulo en ESTA sesion de pagina (ADR-030). No se persiste a proposito:
+// no es estado del alumno, solo contexto del analisis de items. Si recarga y reintenta,
+// vuelve a contar desde 1 — asumido, porque lo que interesa es la pregunta, no la persona.
+var quizAttempts = {};
+
 function checkQuiz(moduleNum) {
     var quizData = QUIZ_ANSWERS[moduleNum];
     if (!quizData) return;
@@ -211,13 +216,22 @@ function checkQuiz(moduleNum) {
     var correctAnswers = 0;
     var totalQuestions = quizData.length;
 
+    // Detalle pregunta por pregunta para el analisis de items (ADR-030).
+    // data-selected-index guarda el indice ORIGINAL de la opcion en el JSON, no su
+    // posicion en pantalla, asi que sobrevive al barajado de shuffleQuizOptions().
+    var itemsDetalle = [];
+
     questions.forEach(function (question, qIndex) {
         var selectedOption = question.querySelector('.option.selected');
+        var elegida = -1;   // -1 = la dejo sin responder
+        var acerto = 0;
         if (selectedOption) {
             var selectedIdx = parseInt(selectedOption.getAttribute('data-selected-index'));
+            elegida = isNaN(selectedIdx) ? -1 : selectedIdx;
             if (selectedIdx === quizData[qIndex]) {
                 selectedOption.classList.add('correct');
                 correctAnswers++;
+                acerto = 1;
             } else {
                 selectedOption.classList.add('incorrect');
                 // Mostrar la correcta
@@ -225,10 +239,21 @@ function checkQuiz(moduleNum) {
                 if (options[quizData[qIndex]]) options[quizData[qIndex]].classList.add('correct');
             }
         }
+        itemsDetalle.push({ q: qIndex, o: elegida, c: acerto });
     });
 
     var score = Math.round((correctAnswers / totalQuestions) * 100);
     quizScores[moduleNum] = score;
+
+    // Analisis de items — se envia SIEMPRE, apruebe o no. Es la unica via por la que
+    // el backend ve un intento fallido: la accion 'quiz' de abajo solo se dispara con
+    // score >= 70, asi que el dato util (en que se equivoca la gente antes de aprobar)
+    // no llegaba a ninguna parte. Va a una hoja anonima: sin email ni nombre.
+    quizAttempts[moduleNum] = (quizAttempts[moduleNum] || 0) + 1;
+    sendToGoogleSheets({
+        action: 'items', course: COURSE_CONFIG.courseId,
+        module: moduleNum, attempt: quizAttempts[moduleNum], items: itemsDetalle
+    });
 
     var checkBtn = document.getElementById('checkBtn-' + moduleNum);
     if (checkBtn) checkBtn.style.display = 'none';
