@@ -3,6 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
+  "contentVersion": "2026-08-03",
   "icon": "🔄",
   "duration": "30 minutos",
   "totalContentModules": 6,
@@ -378,17 +379,17 @@
         },
         {
           "type": "paragraph",
-          "text": "No tienes que memorizar estos números. Piénsalo como un índice: cuando llegue el momento de evaluar, pides el documento por su nombre y ya. Varios de estos ya los viste en la mochila de 12 herramientas del Curso 2 — aquí es donde se usan."
+          "text": "No son 5 herramientas sueltas: son los instrumentos concretos de <strong>una</strong> de las 12 herramientas que viste en el Curso 2 — la de <em>Acompañamiento, Seguimiento y Evaluación</em>. Aquí es donde esa herramienta se vuelve papeles que se llenan. No tienes que memorizarlos: los pides por su nombre en la biblioteca oficial cuando llegue el momento de evaluar."
         },
         {
           "type": "list",
           "ordered": false,
           "items": [
-            "<strong>Bitácora de Acompañamiento al adulto</strong> (Doc 15) — para documentar reuniones con el asesor",
-            "<strong>Encuesta de percepción de padres o acudientes al dirigente</strong> (Doc 16)",
-            "<strong>Encuesta de percepción del scout, caminante o rover al dirigente</strong> (Doc 17)",
-            "<strong>Encuesta de percepción del lobato al dirigente</strong> (Doc 18)",
-            "<strong>Recomendaciones para aplicar las encuestas</strong> (Doc 20)"
+            "<strong>Bitácora de Acompañamiento al Adulto</strong> — para documentar reuniones con el asesor",
+            "<strong>Encuesta de Percepción de Padres o Acudientes al Dirigente</strong>",
+            "<strong>Encuesta de Percepción del Scout, Caminante y Rover al Dirigente</strong>",
+            "<strong>Encuesta de Percepción del Lobato al Dirigente</strong>",
+            "<strong>Recomendaciones para la Aplicación de Encuestas de Percepción y Evaluación</strong>"
           ]
         },
         {
