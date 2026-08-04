@@ -111,6 +111,15 @@ function sanitize(str, maxLen) {
 }
 
 /**
+ * True si la celda esta realmente vacia. Existe porque `valor || defecto` trata el
+ * CERO como vacio, y varias columnas del Sheet son indices que empiezan en 0
+ * (modulo, pregunta). Con `||` la pregunta 0 desaparecia en el comodin '?'.
+ */
+function vacio(v) {
+  return v === '' || v === null || v === undefined;
+}
+
+/**
  * Construye una respuesta JSON estandarizada.
  * @param {boolean} success
  * @param {object} data
@@ -683,8 +692,11 @@ function handleStats() {
       var itemAgg = {};
       for (var t = 1; t < itData.length; t++) {
         var iCurso = String(itData[t][1] || 'curso');
-        var iMod = String(itData[t][2] || '?');
-        var iPreg = String(itData[t][3] || '?');
+        // OJO: aqui NO se puede usar `valor || '?'`. El modulo y la pregunta son
+        // indices que empiezan en 0, y 0 es falsy: la pregunta 0 —la primera de
+        // TODOS los quizzes— acababa agregada bajo '?'. Se comprueba vacio de verdad.
+        var iMod = vacio(itData[t][2]) ? '?' : String(itData[t][2]);
+        var iPreg = vacio(itData[t][3]) ? '?' : String(itData[t][3]);
         var iOpc = String(itData[t][4]);
         var iOk = Number(itData[t][5]) === 1;
         var iKey = iCurso + '_m' + iMod + '_p' + iPreg;
@@ -719,7 +731,9 @@ function handleStats() {
       var moduloAgg = {};
       for (var k = 1; k < progData.length; k++) {
         var mCurso = String(progData[k][3] || 'curso');
-        var mNum = String(progData[k][4] || '?');
+        // Mismo cuidado que en el analisis de items: el modulo 0 (la intro) es falsy
+        // y con `|| '?'` acabaria en el comodin, rompiendo la cadena de abandono.
+        var mNum = vacio(progData[k][4]) ? '?' : String(progData[k][4]);
         var mNom = String(progData[k][5] || ('Modulo ' + mNum));
         var modKey = mCurso + '_modulo_' + mNum;
         stats.completionsByModule[modKey] = (stats.completionsByModule[modKey] || 0) + 1;
