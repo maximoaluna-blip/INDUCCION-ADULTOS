@@ -113,6 +113,85 @@ function loadProgress() {
     }
 }
 
+// --- Autodiagnóstico de competencias (self-assessment) y perfil ---
+// Trasladado desde _MOTOR/engine.core.js el 14-sep-2026 (ADR-034, Fase 1). Es el
+// plano del ADULTO: las 7 competencias esenciales del Diccionario de Competencias
+// (ASC ago-2020) con sus grados de dominio. Solo esta linea lo usa —
+// competencias-esenciales (Curso 4) escribe el perfil, plan-personal (Curso 5) lo lee.
+// Mientras vivio en el nucleo compartido, su vocabulario viajo por copia a las otras
+// dos lineas y llego a publicarse en un ejercicio sobre areas de crecimiento del joven.
+
+function recordAssessmentGrade(assessmentId, competenceId, level) {
+    if (!selfAssessments[assessmentId]) selfAssessments[assessmentId] = { grades: {} };
+    selfAssessments[assessmentId].grades[competenceId] = level;
+    selfAssessments[assessmentId].updatedAt = new Date().toISOString();
+    selfAssessments[assessmentId].scaleVersion = COMPETENCY_SCALE_VERSION;
+}
+
+// Restore selection state if user has saved assessment grades
+function restoreAssessmentSelections() {
+    Object.keys(selfAssessments).forEach(function (aid) {
+        var saved = selfAssessments[aid] || {};
+        // Selecciones hechas con una escala anterior: los grados ya no describen los
+        // mismos peldanos, asi que se descartan en vez de restaurarse en silencio.
+        if (saved.grades && Object.keys(saved.grades).length &&
+            saved.scaleVersion !== COMPETENCY_SCALE_VERSION) {
+            selfAssessments[aid] = { grades: {} };
+            var container = document.getElementById('sa-' + aid);
+            if (container && !container.querySelector('.sa-scale-notice')) {
+                var notice = document.createElement('div');
+                notice.className = 'info-box sa-scale-notice';
+                notice.innerHTML = '<strong>🔄 Actualizamos este autodiagnóstico.</strong><br>Corregimos los grados de varias competencias para que coincidan con el Diccionario de Competencias oficial. Como los peldaños cambiaron, tus respuestas anteriores se borraron: <strong>vuelve a calificarte</strong> con los criterios nuevos.';
+                container.insertBefore(notice, container.firstChild);
+            }
+            saveProgress();
+            return;
+        }
+        var grades = saved.grades || {};
+        Object.keys(grades).forEach(function (compId) {
+            var radio = document.querySelector('input[name="sa-' + aid + '-' + compId + '"][value="' + grades[compId] + '"]');
+            if (radio) radio.checked = true;
+        });
+    });
+}
+
+function getCompetencyProfile() {
+    try {
+        var raw = localStorage.getItem('competencyProfile');
+        return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+}
+
+// Un perfil guardado con una escala anterior describe peldanos distintos a los que el
+// adulto eligio: sus grados ya no significan lo mismo. No se puede reinterpretar, hay
+// que rehacer el autodiagnostico.
+function isProfileStale(profile) {
+    return !!profile && profile.scaleVersion !== COMPETENCY_SCALE_VERSION;
+}
+
+// El perfil del Curso 4 debe aparecer solo, sin depender de que el adulto pulse el boton
+// "Cargar mi perfil": si no lo pulsa, ve el constructor vacio y pierde la precarga que el
+// Curso 4 le prometio (y tampoco se entera de que su perfil quedo con una escala vieja).
+// Si ya empezo a llenar su plan, no se pisa lo que escribio: solo se evalua el aviso.
+function initPlanBuilders() {
+    var banners = document.querySelectorAll('[id^="pb-profile-"]');
+    [].forEach.call(banners, function (banner) {
+        var builderId = banner.id.replace('pb-profile-', '');
+        var plan = personalPlans[builderId];
+        var yaEmpezo = !!(plan && plan.competences && Object.keys(plan.competences).length);
+        if (!yaEmpezo) {
+            loadProfileIntoPlan(builderId);
+            return;
+        }
+        // Plan en curso: respetar lo escrito, pero avisar si el perfil quedo obsoleto.
+        var profile = getCompetencyProfile();
+        if (isProfileStale(profile)) {
+            banner.classList.add('no-profile');
+            banner.innerHTML = '<strong>🔄 Actualizamos el autodiagnóstico del Curso 4.</strong><br>Corregimos los grados de varias competencias, así que el perfil con el que empezaste este plan ya no describe los mismos peldaños. Tu plan sigue intacto — pero conviene <strong>repetir el autodiagnóstico</strong> del Curso 4 y revisar si tus prioridades siguen siendo esas.';
+        }
+    });
+}
+
 function calculateAssessment(assessmentId) {
     var data = selfAssessments[assessmentId];
     var container = document.getElementById('sa-' + assessmentId);

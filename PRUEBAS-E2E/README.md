@@ -1,5 +1,8 @@
 # PRUEBAS-E2E — Pruebas automatizadas del portal de formación ASC
 
+> ⚠️ **Sin `ASC_BASE_URL`, esta suite corre contra PRODUCCIÓN** (la URL pública de GitHub Pages), no contra el HTML que acabas de compilar. Un «todo en verde» en local sin esa variable valida lo publicado, no tu cambio. Para probar el repo local haz lo que hace el CI: `python -m http.server 8099` en la raíz del repo y `ASC_BASE_URL=http://127.0.0.1:8099/02-Plataforma-Web/ npx playwright test`. (Aprendido el 14-sep-2026, ADR-034 Fase 1.)
+
+
 Suite de [Playwright](https://playwright.dev) que verifica el portal de formación de forma
 repetible. Sustituye verificación manual del `CHECKLIST-CALIDAD-CURSO.md` por chequeos
 automáticos. **No reemplaza el piloto humano** (Parte L del checklist): prueba que la
@@ -41,6 +44,7 @@ corre esta suite contra las **3 líneas activas en producción** (matriz) + un s
 |---|---|---|
 | `tests/e2e-flujo.spec.js` | Registro → responder cada quiz ≥70% → recorrer módulos → certificado `ASC-AAAA-XXXXX`. Verifica el contrato POST (`register`/`quiz`/`progress`/`certificate` + `token` + `course`). | §F, §G |
 | `tests/e2e-plan-builder.spec.js` | El plan-builder (meta/plazo/recursos/compromiso) persiste tras recargar | §F |
+| `tests/e2e-perfil-competencias.spec.js` | El plan-builder (meta/plazo/recursos/compromiso) persiste tras recargar | Hilo autodiagnóstico → perfil de competencias → plan personal, incluida la primera visita y el aviso de escala vieja (ADR-034 Fase 1) |
 | `tests/_backend.js` | Helper: intercepta y captura las llamadas a Apps Script | — |
 
 > **Resuelto:** el certificado es ahora **idempotente** — se emite una sola vez por curso y

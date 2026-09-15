@@ -54,6 +54,13 @@ function handleRegistration(event) {
     // Jovenes mostraba 0 adultos registrados pese a tener alumnos con cursos completos.
     sendToGoogleSheets({ action: 'register', ...userProfile, course: COURSE_CONFIG.courseId });
     showModule(1);
+    // Si el curso consume un dato de otro de su linea (el perfil del Curso 4 en el plan
+    // personal), debe cargarse solo, sin boton (CHECKLIST seccion I). Hasta el 14-sep-2026
+    // eso solo pasaba dentro de loadProgress(), o sea SOLO si ya habia progreso guardado:
+    // en la primera visita el banner quedaba vacio hasta recargar. Lo atrapo la prueba
+    // e2e-perfil-competencias antes de mover el bloque (ADR-034 Fase 1). Va con typeof
+    // porque solo lo define la linea que tiene ese hilo de datos.
+    if (typeof initPlanBuilders === 'function') initPlanBuilders();
     var firstName = userProfile.fullName.split(' ')[0];
     var welcomeEl = document.getElementById('welcomeName');
     if (welcomeEl) welcomeEl.textContent = firstName;
@@ -449,55 +456,18 @@ function clearPhoto(photoId) {
     showNotification('Imagen quitada');
 }
 
-// --- Autodiagnóstico de competencias (self-assessment) ---
-function recordAssessmentGrade(assessmentId, competenceId, level) {
-    if (!selfAssessments[assessmentId]) selfAssessments[assessmentId] = { grades: {} };
-    selfAssessments[assessmentId].grades[competenceId] = level;
-    selfAssessments[assessmentId].updatedAt = new Date().toISOString();
-    selfAssessments[assessmentId].scaleVersion = COMPETENCY_SCALE_VERSION;
-}
-
-// Restore selection state if user has saved assessment grades
-function restoreAssessmentSelections() {
-    Object.keys(selfAssessments).forEach(function (aid) {
-        var saved = selfAssessments[aid] || {};
-        // Selecciones hechas con una escala anterior: los grados ya no describen los
-        // mismos peldanos, asi que se descartan en vez de restaurarse en silencio.
-        if (saved.grades && Object.keys(saved.grades).length &&
-            saved.scaleVersion !== COMPETENCY_SCALE_VERSION) {
-            selfAssessments[aid] = { grades: {} };
-            var container = document.getElementById('sa-' + aid);
-            if (container && !container.querySelector('.sa-scale-notice')) {
-                var notice = document.createElement('div');
-                notice.className = 'info-box sa-scale-notice';
-                notice.innerHTML = '<strong>🔄 Actualizamos este autodiagnóstico.</strong><br>Corregimos los grados de varias competencias para que coincidan con el Diccionario de Competencias oficial. Como los peldaños cambiaron, tus respuestas anteriores se borraron: <strong>vuelve a calificarte</strong> con los criterios nuevos.';
-                container.insertBefore(notice, container.firstChild);
-            }
-            saveProgress();
-            return;
-        }
-        var grades = saved.grades || {};
-        Object.keys(grades).forEach(function (compId) {
-            var radio = document.querySelector('input[name="sa-' + aid + '-' + compId + '"][value="' + grades[compId] + '"]');
-            if (radio) radio.checked = true;
-        });
-    });
-}
+// --- Autodiagnóstico de competencias (self-assessment) y perfil ---
+// NO ESTA AQUI a proposito (ADR-034, Fase 1, 14-sep-2026). recordAssessmentGrade,
+// restoreAssessmentSelections, getCompetencyProfile, isProfileStale e initPlanBuilders
+// son del plano del ADULTO —competencias esenciales con grados de dominio— y solo los
+// usa Politica de Adultos. Vivian en el nucleo y por eso viajaron a las otras dos
+// lineas, donde su vocabulario llego a publicarse. Ahora estan en el engine.linea.js
+// de Politica de Adultos. Las lineas ya los invocan con `typeof fn === 'function'`,
+// asi que donde no existen simplemente no ocurren.
+// Si otra linea necesita un autodiagnostico, se construye con SU vocabulario en SU
+// extension — nunca aqui.
 
 // --- Plan Personal Builder ---
-function getCompetencyProfile() {
-    try {
-        var raw = localStorage.getItem('competencyProfile');
-        return raw ? JSON.parse(raw) : null;
-    } catch (e) { return null; }
-}
-
-// Un perfil guardado con una escala anterior describe peldanos distintos a los que el
-// adulto eligio: sus grados ya no significan lo mismo. No se puede reinterpretar, hay
-// que rehacer el autodiagnostico.
-function isProfileStale(profile) {
-    return !!profile && profile.scaleVersion !== COMPETENCY_SCALE_VERSION;
-}
 
 function togglePlanCompetence(builderId, compId) {
     var fields = document.getElementById('pb-fields-' + compId);
@@ -529,33 +499,6 @@ function savePlanCommitment(builderId, value) {
     if (!personalPlans[builderId]) personalPlans[builderId] = { competences: {}, commitment: '' };
     personalPlans[builderId].commitment = value;
     saveProgress();
-}
-
-// El perfil del Curso 4 debe aparecer solo, sin depender de que el adulto pulse el boton
-// "Cargar mi perfil": si no lo pulsa, ve el constructor vacio y pierde la precarga que el
-// Curso 4 le prometio (y tampoco se entera de que su perfil quedo con una escala vieja).
-// Si ya empezo a llenar su plan, no se pisa lo que escribio: solo se evalua el aviso.
-function initPlanBuilders() {
-    // Guard (23-ago-2026): el perfil de competencias es del plano del ADULTO.
-    // Solo carga si la LINEA define loadProfileIntoPlan en su engine.linea.js
-    // (PA y DI lo definen; PJ no debe definirlo — GLOSARIO-ASC.md §E-bis).
-    if (typeof loadProfileIntoPlan !== 'function') return;
-    var banners = document.querySelectorAll('[id^="pb-profile-"]');
-    [].forEach.call(banners, function (banner) {
-        var builderId = banner.id.replace('pb-profile-', '');
-        var plan = personalPlans[builderId];
-        var yaEmpezo = !!(plan && plan.competences && Object.keys(plan.competences).length);
-        if (!yaEmpezo) {
-            loadProfileIntoPlan(builderId);
-            return;
-        }
-        // Plan en curso: respetar lo escrito, pero avisar si el perfil quedo obsoleto.
-        var profile = getCompetencyProfile();
-        if (isProfileStale(profile)) {
-            banner.classList.add('no-profile');
-            banner.innerHTML = '<strong>🔄 Actualizamos el autodiagnóstico del Curso 4.</strong><br>Corregimos los grados de varias competencias, así que el perfil con el que empezaste este plan ya no describe los mismos peldaños. Tu plan sigue intacto — pero conviene <strong>repetir el autodiagnóstico</strong> del Curso 4 y revisar si tus prioridades siguen siendo esas.';
-        }
-    });
 }
 
 function restorePlanState() {
@@ -1011,8 +954,6 @@ function sendToGoogleSheets(data) {
         }
     }
 }
-
-
 
 // --- Timers ---
 // Incrementar studyTime cada minuto y guardar progreso (solo si esta en un modulo de contenido)

@@ -2,9 +2,7 @@
   "_porQue": "ADR-034. Ninguna compuerta comparaba lo que los manuales prescriben contra lo que el codigo hace: en Programa de Jovenes eso dejo una clave prescrita (dirigenteProfile) sin implementar durante meses, y el manual ademas la daba por hecha. Este archivo es esa comparacion, hecha maquina.",
   "_comoFunciona": "codigo.spec.js extrae las claves reales del motor y falla si: (a) el codigo usa una clave no declarada; (b) una clave 'implementada' no aparece en el codigo — el documento miente; (c) una clave 'planeada' si aparece — hay que promoverla y documentarla.",
   "_ojo": "Las lineas comparten dominio (maximoaluna-blip.github.io) y por tanto localStorage: no hay frontera entre lineas. Una clave sin apellido de linea es legible por las otras tres y por las dos apps.",
-
   "linea": "Politica de Adultos en el Movimiento",
-
   "claves": [
     {
       "clave": "courseProgress_<courseId>",
@@ -40,7 +38,7 @@
       "estado": "implementada",
       "que": "Perfil de las 7 competencias ESENCIALES del adulto: grados autoevaluados, fortalezas, areas de oportunidad y scaleVersion. Lo escribe competencias-esenciales (Curso 4) y lo lee plan-personal (Curso 5) para precargar el Plan Personal de Desarrollo.",
       "alcance": "cross-course dentro de la linea",
-      "nota": "Esta es su linea propia y aqui es correcta. PERO la clave no lleva apellido de linea, y como las lineas comparten localStorage, cualquier otra puede leerla: fue el origen del ADR-034, cuando un ejercicio de Programa de Jovenes la cargo en una pantalla de areas de crecimiento. La Fase 1 le pondra espacio de nombres. Lleva COMPETENCY_SCALE_VERSION para invalidar perfiles calibrados con la escala vieja (ADR-023 Fase 2)."
+      "nota": "Esta es su linea propia y aqui es correcta. Desde el 14-sep-2026 (ADR-034 Fase 1) las funciones que la leen y escriben viven en engine.linea.js de esta linea, no en el nucleo: DI y PJ ya no la traen. PENDIENTE (Fase 1 parte B): la clave sigue sin apellido de linea, y como las lineas comparten localStorage, cualquier codigo futuro de otra linea podria leerla. Lleva COMPETENCY_SCALE_VERSION para invalidar perfiles calibrados con la escala vieja (ADR-023 Fase 2)."
     }
   ]
 }
