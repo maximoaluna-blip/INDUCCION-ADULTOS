@@ -1668,7 +1668,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                             <img src="../assets/logo-vallescout.png" alt="Valle Scout" style="height: 45px;">
                         </div>
                         <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociacion Scouts de Colombia</p>
-                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #636363; margin: 2px 0;">Formación de Adultos en el Movimiento</p>
+                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #636363; margin: 2px 0;">Política de Adultos en el Movimiento</p>
                     </div>
 
                     <hr style="border: none; border-top: 2px solid #622599; margin: 10px 30px;">
@@ -1751,6 +1751,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
         totalModules: 10,
         contentModules: 7,
         googleScriptUrl: "https://script.google.com/macros/s/AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw/exec",
+        lineName: "Política de Adultos en el Movimiento",
         achievements: [{"id":"achievement-1","name":"Diste el Primer Paso","emoji":"🚪","unlockOnModule":2},{"id":"achievement-2","name":"Reconoces tu Superpoder","emoji":"🦸","unlockOnModule":3},{"id":"achievement-3","name":"Desarmas los Mitos","emoji":"❌","unlockOnModule":4},{"id":"achievement-voces","name":"Escuchaste a la Comunidad","emoji":"🎙️","unlockOnModule":6},{"id":"achievement-4","name":"Adulto Comprometido","emoji":"💚","unlockOnModule":7},{"id":"achievement-5","name":"Curso 1 Completado","emoji":"🏆","unlockOnModule":-1}]
     };
 
@@ -3045,7 +3046,11 @@ function downloadCertificatePDF() {
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(8);
         pdf.setTextColor(120, 120, 120);
-        pdf.text('Formación de Adultos en el Movimiento', pageW / 2, y, { align: 'center' });
+        // ADR-034: el nucleo no lleva vocabulario de dominio. El nombre de la linea
+        // lo declara cada curso; si el HTML viene de un builder viejo que no lo emite,
+        // se cae a un neutro antes que afirmar una linea equivocada (era 'Formación de
+        // Adultos en el Movimiento' para las cuatro, falso en DI y en PJ).
+        pdf.text(COURSE_CONFIG.lineName || 'Plataforma de Formación de Adultos ASC', pageW / 2, y, { align: 'center' });
         y += 5;
 
         // --- Línea divisoria morada ---

@@ -790,7 +790,11 @@ function downloadCertificatePDF() {
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(8);
         pdf.setTextColor(120, 120, 120);
-        pdf.text('Formación de Adultos en el Movimiento', pageW / 2, y, { align: 'center' });
+        // ADR-034: el nucleo no lleva vocabulario de dominio. El nombre de la linea
+        // lo declara cada curso; si el HTML viene de un builder viejo que no lo emite,
+        // se cae a un neutro antes que afirmar una linea equivocada (era 'Formación de
+        // Adultos en el Movimiento' para las cuatro, falso en DI y en PJ).
+        pdf.text(COURSE_CONFIG.lineName || 'Plataforma de Formación de Adultos ASC', pageW / 2, y, { align: 'center' });
         y += 5;
 
         // --- Línea divisoria morada ---

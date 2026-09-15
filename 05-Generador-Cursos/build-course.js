@@ -495,7 +495,7 @@ function buildCertificateModule(course, certModuleId) {
                             <img src="../assets/logo-vallescout.png" alt="Valle Scout" style="height: 45px;">
                         </div>
                         <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociacion Scouts de Colombia</p>
-                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #636363; margin: 2px 0;">Formación de Adultos en el Movimiento</p>
+                        <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #636363; margin: 2px 0;">Política de Adultos en el Movimiento</p>
                     </div>
 
                     <hr style="border: none; border-top: 2px solid #622599; margin: 10px 30px;">
@@ -692,6 +692,7 @@ ${certificateHtml}
         totalModules: ${totalModules},
         contentModules: ${contentModules},
         googleScriptUrl: ${JSON.stringify(googleUrl)},
+        lineName: "Política de Adultos en el Movimiento",
         achievements: ${JSON.stringify(course.achievements)}
     };
 
