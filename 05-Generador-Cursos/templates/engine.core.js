@@ -536,6 +536,10 @@ function savePlanCommitment(builderId, value) {
 // Curso 4 le prometio (y tampoco se entera de que su perfil quedo con una escala vieja).
 // Si ya empezo a llenar su plan, no se pisa lo que escribio: solo se evalua el aviso.
 function initPlanBuilders() {
+    // Guard (23-ago-2026): el perfil de competencias es del plano del ADULTO.
+    // Solo carga si la LINEA define loadProfileIntoPlan en su engine.linea.js
+    // (PA y DI lo definen; PJ no debe definirlo — GLOSARIO-ASC.md §E-bis).
+    if (typeof loadProfileIntoPlan !== 'function') return;
     var banners = document.querySelectorAll('[id^="pb-profile-"]');
     [].forEach.call(banners, function (banner) {
         var builderId = banner.id.replace('pb-profile-', '');

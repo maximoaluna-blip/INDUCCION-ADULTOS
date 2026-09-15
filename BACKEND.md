@@ -57,23 +57,25 @@ Esto actualiza el **HEAD** del script (la "Última versión"). Los deployments e
 
 **Opción B — Desde clasp:**
 ```bash
-cd .clasp-workspace && clasp deployments
+cd .clasp-workspace && npx clasp list-deployments
 ```
 
-Salida real (verificada el 03-ago-2026) — hay **3 deployments**:
+Salida real (verificada el 23-ago-2026) — hay **3 deployments**:
 
 | Deployment ID | Versión | Qué es |
 |---|---|---|
 | `AKfycbxDK0Ty_IzrZ4QoJ3LAS70hcCtPhac_cnPxTh6_M2rO` | `@HEAD` | Sirve el código actual del editor. **Exige autenticación del dueño**, así que no sirve para los cursos |
 | `AKfycbz8QNiUMo7CzBb2iM3D-Hy7ER6kNMdKOpJpub4mZ4lNm4WhzP9f-DmJF-P8KByu-rGQow` | `@1` | Pruebas |
-| `AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw` | **`@6`** | **PRODUCCIÓN** — es el ID que va en `PROD_DEPLOYMENT_URL` |
+| `AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw` | **`@8`** | **PRODUCCIÓN** — es el ID que va en `PROD_DEPLOYMENT_URL` |
 
 ```bash
-clasp push                    # sube el código, pero NO cambia lo que sirve producción
-clasp deploy -i AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw   -d "descripción del cambio"
+npx clasp push                       # sube el código, pero NO cambia lo que sirve producción
+npx clasp create-deployment -i AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw -d "descripción del cambio"
 ```
 
-> 🚨 **Producción está fijada a la versión `@6`, no a `@HEAD`.** Un `clasp push` (o editar en el navegador y guardar) **no llega a los estudiantes**: hay que crear una versión nueva y reapuntar ese deployment. Es la causa más probable de "arreglé el backend y sigue fallando igual".
+> 🚨 **Producción está fijada a una versión concreta (hoy `@8`), no a `@HEAD`.** Un `clasp push` (o editar en el navegador y guardar) **no llega a los estudiantes**: hay que crear una versión nueva y reapuntar ese deployment. Es la causa más probable de "arreglé el backend y sigue fallando igual".
+>
+> **No te fíes del número que dice esta tabla** — se desactualiza sola. La fuente de verdad es `clasp list-deployments`, y `verificar-backend.js` (Paso 5) comprueba contra el endpoint vivo si el código desplegado conoce ADR-030.
 
 > ⚠️ **Web App URL vs. Deployment ID.** Son conceptos distintos, pero **para el deployment de producción de este proyecto la cadena es la misma**: el `AKfycbxxZBp6...` de la URL es literalmente el ID que espera `clasp deploy -i`. (El de `@HEAD` sí es otra cadena, más corta.) No salir a buscar un identificador distinto.
 
@@ -121,6 +123,7 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 | 2026-05-17 | Dashboard mostraba solo agregados, no detalle. `handleStats()` no devolvía arrays. | Crear `verificar-backend.js` + este documento BACKEND.md. Documentar diferencia entre Web App URL y Deployment ID. |
 | 2026-05-17 (cont.) | El Script ID que se creía como producción era de otro proyecto de pruebas. El clasp local apuntaba al script equivocado. | Verificar el script de producción es el que está vinculado al Google Sheet vivo (Extensiones → Apps Script desde el sheet). El Script ID real es `1TTJ2VjN...gCrqe`, no `1x151jip...`. Reconfigurado `.clasp.json` y aplicado el parche de `handleStats()` al script correcto. |
 | 2026-06-20 | El script de prod `1TTJ2VjN…` **y su Sheet contenedor estaban en la papelera de Drive**. La web app seguía sirviendo, pero Drive purga la papelera a los 30 días → habría tumbado el backend y borrado los datos. Causa probable: borrado accidental (el frontend nunca cambió de URL). Además, prod tenía una validación `edad >= 18` en `handleRegister` que **no estaba en el repo** (drift por edición directa). | **Restaurado** desde la papelera (Apps Script → "Recuperar de la papelera"; al ser script vinculado, restaura también el Sheet contenedor). Redeploy **Versión 6** con el fix de código de certificado (el backend ahora honra el `certificateCode` del frontend). Repo `google-apps-script.js` **sincronizado con prod** (se incorporó la validación edad>=18). Pendiente: anotar arriba el ID/URL del Sheet vivo. |
+| 2026-08-23 | **Este documento decía `@6` cuando producción llevaba en `@8` desde el 03-ago.** La memoria del proyecto repetía el mismo dato viejo, así que una consulta de estado concluyó "el deploy de ADR-030 sigue pendiente" cuando llevaba tres semanas hecho. `verificar-backend.js` daba 4/4 verde: sus pasos comprueban coherencia entre archivos, no contra el código realmente desplegado. | **El número de versión escrito en un `.md` no es fuente de verdad.** Añadido el **Paso 5** a `verificar-backend.js`: pregunta al endpoint vivo si el payload de `stats` trae la clave `items` (solo existe desde ADR-030). Un doc desactualizado ya no puede afirmar que producción está al día. |
 
 ---
 

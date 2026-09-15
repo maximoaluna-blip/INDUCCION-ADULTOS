@@ -2,7 +2,7 @@
 /**
  * verificar-backend.js — Validación pre-deploy del backend Apps Script.
  *
- * Verifica 4 cosas antes de tocar producción:
+ * Verifica 5 cosas antes de tocar producción:
  *   1. La URL de `googleScriptUrl` en build-course.js coincide con la URL del
  *      deployment de producción declarado en BACKEND.md.
  *   2. El endpoint responde (no está caído).
@@ -10,6 +10,9 @@
  *      (registros[], certificados[], modulos[], resumen{}) — no solo los KPI.
  *   4. Si hay un workspace clasp local, su deployment activo coincide con
  *      el de producción declarado (detecta scripts duplicados).
+ *   5. El código que producción SIRVE de verdad conoce ADR-030 (análisis de
+ *      ítems). Los pasos 1-4 solo comparan archivos entre sí: un backend
+ *      fijado a una versión vieja los pasa todos en verde.
  *
  * Uso:
  *   node verificar-backend.js
@@ -170,6 +173,8 @@ function fetchUrl(url, timeoutMs = 15000) {
     }
   }
 
+  let statsData = null;
+
   // -------- Hacer GET al endpoint y validar shape de la respuesta --------
   step('Paso 4 — endpoint responde y devuelve los campos detallados');
   if (!prodUrl) {
@@ -202,6 +207,7 @@ function fetchUrl(url, timeoutMs = 15000) {
             ];
             const missing = checks.filter(c => !c[1]).map(c => c[0]);
             if (missing.length === 0) {
+              statsData = data;
               pass('JSON contiene todos los campos detallados.');
               pass(`Stats actuales: ${data.totalUsers} registros · ${data.totalCertificates} certificados.`);
             } else {
@@ -215,6 +221,41 @@ function fetchUrl(url, timeoutMs = 15000) {
       }
     } catch (e) {
       fail('Error al hacer fetch al endpoint.', e.message);
+    }
+  }
+
+  // -------- El código desplegado conoce ADR-030 --------
+  step('Paso 5 — el deployment sirve el análisis de ítems (ADR-030)');
+  if (!statsData) {
+    warn('Sin respuesta válida en el paso 4, no puedo comprobarlo.');
+  } else if (!Array.isArray(statsData.items)) {
+    fail('El código desplegado NO conoce el análisis de ítems (ADR-030).',
+      [
+        'Falta la clave `items` en el payload de stats.',
+        '',
+        '    Causa: producción está fijada a una versión anterior a ADR-030.',
+        '    Los cursos envían action "items", el backend responde "Acción POST no',
+        '    reconocida" y el dato se pierde en silencio: el motor ignora la respuesta.',
+        '    Un `clasp push` NO basta — hay que crear versión y reapuntar el deployment:',
+        '      npx clasp list-deployments',
+        '      npx clasp create-deployment -i <deploymentId> -d "<motivo>"',
+      ].join('\n'));
+  } else {
+    pass('El deployment conoce ADR-030 (' + statsData.items.length + ' ítem(s) en el análisis).');
+
+    const conAbandono = (statsData.modulos || []).some(m => typeof m.abandonoPct === 'number');
+    if (!conAbandono) {
+      warn('Hay `items` pero ningún módulo trae `abandonoPct` — el deployment puede haber quedado a medias.');
+    }
+
+    // Los datos de prueba falsean las tasas de acierto reales.
+    const pruebas = statsData.items
+      .map(i => i && i.curso)
+      .filter(c => c && /^zz-|prueba|test/i.test(c));
+    const unicos = pruebas.filter((c, i) => pruebas.indexOf(c) === i);
+    if (unicos.length) {
+      warn('Datos de prueba en producción: ' + unicos.join(', '));
+      console.log('    ' + colors.yellow('Bórralos del Sheet antes de que ensucien las tasas de acierto reales.'));
     }
   }
 

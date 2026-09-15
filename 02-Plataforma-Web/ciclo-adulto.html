@@ -1577,7 +1577,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                 <h2>🧭 Lección 6 — Lo que sigue en la ruta</h2>
                 <div class="badge">Módulo 6/6</div>
 
-                <div class="info-box"><strong>⏱️ 3 minutos · 1 idea central:</strong><br>Acabas de ver el panorama completo del sistema. Ahora tu próximo paso es entrar al detalle: las competencias específicas (Curso 4) y tu plan personal aterrizado (Curso 5).</div>
+                <div class="info-box"><strong>⏱️ 3 minutos · 1 idea central:</strong><br>Acabas de ver el panorama completo del sistema. Ahora tu próximo paso es entrar al detalle: las competencias esenciales (Curso 4) y tu plan personal aterrizado (Curso 5).</div>
 
                 <h3>✅ Tu progreso en la ruta</h3>
 
@@ -2770,6 +2770,10 @@ function savePlanCommitment(builderId, value) {
 // Curso 4 le prometio (y tampoco se entera de que su perfil quedo con una escala vieja).
 // Si ya empezo a llenar su plan, no se pisa lo que escribio: solo se evalua el aviso.
 function initPlanBuilders() {
+    // Guard (23-ago-2026): el perfil de competencias es del plano del ADULTO.
+    // Solo carga si la LINEA define loadProfileIntoPlan en su engine.linea.js
+    // (PA y DI lo definen; PJ no debe definirlo — GLOSARIO-ASC.md §E-bis).
+    if (typeof loadProfileIntoPlan !== 'function') return;
     var banners = document.querySelectorAll('[id^="pb-profile-"]');
     [].forEach.call(banners, function (banner) {
         var builderId = banner.id.replace('pb-profile-', '');

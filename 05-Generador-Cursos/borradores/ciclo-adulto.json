@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-08-03",
+  "contentVersion": "2026-08-23",
   "icon": "🔄",
   "duration": "30 minutos",
   "totalContentModules": 6,
@@ -554,7 +554,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 3 minutos · 1 idea central:</strong><br>Acabas de ver el panorama completo del sistema. Ahora tu próximo paso es entrar al detalle: las competencias específicas (Curso 4) y tu plan personal aterrizado (Curso 5)."
+          "text": "<strong>⏱️ 3 minutos · 1 idea central:</strong><br>Acabas de ver el panorama completo del sistema. Ahora tu próximo paso es entrar al detalle: las competencias esenciales (Curso 4) y tu plan personal aterrizado (Curso 5)."
         },
         {
           "type": "heading",
