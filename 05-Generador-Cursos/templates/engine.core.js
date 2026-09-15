@@ -456,16 +456,16 @@ function clearPhoto(photoId) {
     showNotification('Imagen quitada');
 }
 
-// --- Autodiagnóstico de competencias (self-assessment) y perfil ---
-// NO ESTA AQUI a proposito (ADR-034, Fase 1, 14-sep-2026). recordAssessmentGrade,
+// --- Bloque de perfil propio de una linea: NO ESTA AQUI a proposito ---
+// (ADR-034, Fase 1, 14-sep-2026). recordAssessmentGrade,
 // restoreAssessmentSelections, getCompetencyProfile, isProfileStale e initPlanBuilders
 // son del plano del ADULTO —competencias esenciales con grados de dominio— y solo los
 // usa Politica de Adultos. Vivian en el nucleo y por eso viajaron a las otras dos
 // lineas, donde su vocabulario llego a publicarse. Ahora estan en el engine.linea.js
 // de Politica de Adultos. Las lineas ya los invocan con `typeof fn === 'function'`,
 // asi que donde no existen simplemente no ocurren.
-// Si otra linea necesita un autodiagnostico, se construye con SU vocabulario en SU
-// extension — nunca aqui.
+// Si otra linea necesita un bloque asi, se construye con SU vocabulario en SU
+// extension — nunca aqui: este archivo se inlinea en el HTML de las 3 lineas.
 
 // --- Plan Personal Builder ---
 
@@ -504,8 +504,9 @@ function savePlanCommitment(builderId, value) {
 // generatePlan vive en el nucleo desde el 14-sep-2026 (ADR-034 Fase 1 B): antes
 // habia una copia por linea, distintas solo por sus textos. Ahora los textos los deja
 // el renderizador en <script id="pb-labels-{id}"> y aqui no hay vocabulario de ningun
-// plano. Lo que SI es de un plano —el "(Grado actual: N)" del adulto— lo aporta la
-// linea con planPrioritySuffix(compId), si lo define.
+// plano — ni siquiera en los comentarios: este archivo se inlinea en el HTML de las 3
+// lineas. Si una linea quiere anadir un sufijo propio junto al nombre de cada
+// elemento del plan, define planPrioritySuffix(compId) en su engine.linea.js.
 function planLabels(builderId) {
     var el = document.getElementById('pb-labels-' + builderId);
     try { return el ? JSON.parse(el.textContent) : {}; } catch (e) { return {}; }
