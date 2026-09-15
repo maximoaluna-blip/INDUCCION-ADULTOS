@@ -1,0 +1,29 @@
+{
+  "_porQue": "ADR-034. Esta es la linea de ORIGEN del vocabulario que se filtro a las otras dos: su componente de autodiagnostico, con sus 'competencias' y sus 'grados', se copio entero a Desarrollo Institucional y a Programa de Jovenes, donde no aplicaba y llego a publicarse. Aqui ese vocabulario es CORRECTO. Lo que esta lista vigila es lo inverso: que no entre vocabulario del plano del JOVEN.",
+  "_comoFunciona": "codigo.spec.js extrae las cadenas de texto VISIBLES del motor de linea y del generador (ignorando comentarios) y falla si alguna casa un patron prohibido. NO barre la prosa de los cursos: eso lo juzga el auditor doctrinal. Ver GLOSARIO-ASC.md seccion E-bis.",
+
+  "linea": "Politica de Adultos en el Movimiento",
+  "plano": "adulto",
+
+  "_loQueSiEsCorrectoAqui": "Las 7 competencias ESENCIALES y las 29 ESPECIFICAS del Diccionario de Competencias (ASC ago-2020), con sus grados de dominio, sus areas de oportunidad y la clave competencyProfile. Todo eso es el plano propio de esta linea y NO se prohibe.",
+
+  "prohibido": [
+    {
+      "patron": "areas?\\s+de\\s+crecimiento",
+      "porQue": "Las 6 areas de crecimiento son lo que se desarrolla en el JOVEN (Modelo de Aplicacion PNPJ, Cap. 6.1 p. 29). Esta linea desarrolla al ADULTO voluntario. Confundirlas borra justamente la distincion que el ADR-034 vino a fijar. Ojo: 'areas de oportunidad' —del autodiagnostico del adulto— si es correcta aqui y no la toca este patron.",
+      "enSuLugar": "competencias esenciales, o areas de oportunidad si hablas del resultado del autodiagnostico"
+    },
+    {
+      "patron": "competencias?\\s+(terminales?|intermedias?|educativas?)",
+      "porQue": "Terminales e intermedias son competencias del JOVEN, dentro de un area de crecimiento. Las del adulto son esenciales (7) y especificas (29), y no se organizan asi.",
+      "enSuLugar": "competencias esenciales o competencias especificas"
+    },
+    {
+      "patron": "dirigenteProfile",
+      "porQue": "Clave prevista para el perfil de dirigente de Programa de Jovenes (su CREAR-CURSO.md seccion 5.A). No pertenece a esta linea: las lineas comparten dominio y por tanto localStorage, asi que leerla seria consumir datos de otro plano — el error exacto que el ADR-034 documenta, pero en sentido contrario.",
+      "enSuLugar": "competencyProfile, que es la clave propia de esta linea"
+    }
+  ],
+
+  "_estado": "Verde. Esta linea conserva su componente de autodiagnostico porque SI lo usa: competencias-esenciales (Curso 4) y plan-personal (Curso 5). El bloque vive hoy en el nucleo compartido; la Fase 1 del ADR-034 lo movera aqui, a su extension de linea, que es donde le corresponde."
+}
