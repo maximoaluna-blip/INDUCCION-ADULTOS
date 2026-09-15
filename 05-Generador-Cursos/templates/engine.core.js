@@ -501,6 +501,81 @@ function savePlanCommitment(builderId, value) {
     saveProgress();
 }
 
+// generatePlan vive en el nucleo desde el 14-sep-2026 (ADR-034 Fase 1 B): antes
+// habia una copia por linea, distintas solo por sus textos. Ahora los textos los deja
+// el renderizador en <script id="pb-labels-{id}"> y aqui no hay vocabulario de ningun
+// plano. Lo que SI es de un plano —el "(Grado actual: N)" del adulto— lo aporta la
+// linea con planPrioritySuffix(compId), si lo define.
+function planLabels(builderId) {
+    var el = document.getElementById('pb-labels-' + builderId);
+    try { return el ? JSON.parse(el.textContent) : {}; } catch (e) { return {}; }
+}
+
+function generatePlan(builderId) {
+    var L = planLabels(builderId);
+    var minimo = Number(L.minimo) || 1;
+    var plan = personalPlans[builderId];
+    if (!plan || !plan.competences || Object.keys(plan.competences).length < minimo) {
+        showNotification(L.avisoMinimo || '⚠️ Faltan elementos por seleccionar antes de generar el plan.', 'warning');
+        return;
+    }
+    // Validate fields
+    var entries = Object.keys(plan.competences);
+    var incomplete = entries.filter(function (compId) {
+        var d = plan.competences[compId];
+        return !d.meta || !d.meta.trim() || !d.plazo || !d.plazo.trim() || !d.recursos || !d.recursos.trim();
+    });
+    if (incomplete.length > 0) {
+        showNotification(L.avisoCampos || '⚠️ Hay campos vacíos. Completa meta, plazo y recursos.', 'warning');
+        return;
+    }
+    // Get names from checkboxes
+    var nameByCompId = {};
+    document.querySelectorAll('.pb-comp-check').forEach(function (cb) {
+        nameByCompId[cb.getAttribute('data-competence')] = cb.getAttribute('data-name');
+    });
+    var fullName = (userProfile && userProfile.fullName) || 'Adulto del Movimiento';
+    var groupName = (userProfile && userProfile.group) || '—';
+    var dateStr = new Date().toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });
+    var prioritiesHtml = entries.map(function (compId, idx) {
+        var d = plan.competences[compId];
+        var name = nameByCompId[compId] || compId;
+        var sufijo = (typeof planPrioritySuffix === 'function') ? (planPrioritySuffix(compId) || '') : '';
+        return '<div class="pb-priority"><h3>' + (idx + 1) + '. ' + name + sufijo + '</h3>' +
+            '<dt>🎯 Meta concreta</dt><dd>' + escapeHtml(d.meta) + '</dd>' +
+            '<dt>⏰ Plazo</dt><dd>' + escapeHtml(d.plazo) + '</dd>' +
+            '<dt>📚 Recursos</dt><dd>' + escapeHtml(d.recursos) + '</dd></div>';
+    }).join('');
+    var commitmentHtml = (plan.commitment || '').trim() ?
+        '<div class="pb-final-commitment"><h3>💚 Mi compromiso</h3><p style="margin:0;white-space:pre-wrap;">' + escapeHtml(plan.commitment) + '</p></div>' : '';
+    var output = document.getElementById('pb-output-' + builderId);
+    if (output) {
+        output.innerHTML =
+            '<h2>' + (L.titulo || '📋 Mi plan') + '</h2>' +
+            '<p class="pb-output-meta"><strong>' + escapeHtml(fullName) + '</strong> · Grupo ' + escapeHtml(groupName) + ' · ' + dateStr + '</p>' +
+            '<h3 style="margin-top:24px;color:#622599;">' + (L.subtituloPrioridades || 'Mis prioridades') + '</h3>' +
+            prioritiesHtml +
+            commitmentHtml +
+            '<button class="pb-print-btn" onclick="printPlan()">🖨️ Imprimir / Guardar como PDF</button>' +
+            (L.cierre ? '<p style="text-align:center;color:#666;font-size:0.85em;margin:14px 0 0 0;font-style:italic;">' + L.cierre + '</p>' : '');
+        output.classList.remove('hidden');
+        output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    showNotification('✅ Plan generado. Puedes imprimirlo.');
+    // Sincronizacion en segundo plano al backend (persistencia hibrida)
+    if (userProfile && userProfile.email && typeof sendToGoogleSheets === 'function') {
+        sendToGoogleSheets({
+            action: 'plan',
+            email: userProfile.email,
+            name: userProfile.fullName,
+            course: COURSE_CONFIG.courseId,
+            planId: builderId,
+            planType: 'plan-builder-v1',
+            contenido: plan
+        });
+    }
+}
+
 function restorePlanState() {
     Object.keys(personalPlans).forEach(function (bid) {
         var plan = personalPlans[bid];

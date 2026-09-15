@@ -33,12 +33,20 @@
       "alcance": "por curso"
     },
     {
-      "clave": "competencyProfile",
-      "patron": "competencyProfile",
+      "clave": "politica-adultos:competencyProfile",
+      "patron": "politica-adultos:competencyProfile",
       "estado": "implementada",
       "que": "Perfil de las 7 competencias ESENCIALES del adulto: grados autoevaluados, fortalezas, areas de oportunidad y scaleVersion. Lo escribe competencias-esenciales (Curso 4) y lo lee plan-personal (Curso 5) para precargar el Plan Personal de Desarrollo.",
       "alcance": "cross-course dentro de la linea",
-      "nota": "Esta es su linea propia y aqui es correcta. Desde el 14-sep-2026 (ADR-034 Fase 1) las funciones que la leen y escriben viven en engine.linea.js de esta linea, no en el nucleo: DI y PJ ya no la traen. PENDIENTE (Fase 1 parte B): la clave sigue sin apellido de linea, y como las lineas comparten localStorage, cualquier codigo futuro de otra linea podria leerla. Lleva COMPETENCY_SCALE_VERSION para invalidar perfiles calibrados con la escala vieja (ADR-023 Fase 2)."
+      "nota": "Con apellido de linea desde el 14-sep-2026 (ADR-034 Fase 1 B2): las lineas comparten localStorage y sin apellido cualquier otra podia leerla. Solo la extension de esta linea la lee y escribe. Lleva COMPETENCY_SCALE_VERSION para invalidar perfiles calibrados con la escala vieja (ADR-023 Fase 2)."
+    },
+    {
+      "clave": "competencyProfile",
+      "patron": "competencyProfile",
+      "estado": "legada",
+      "que": "Nombre ANTERIOR del perfil, sin apellido de linea. Solo se lee en la migracion de getCompetencyProfile: si no existe la clave nueva, se toma de aqui y se copia.",
+      "alcance": "solo lectura, migracion",
+      "nota": "No se borra a proposito: es el dato de estudiantes reales anteriores al 14-sep-2026. Retirar la lectura de migracion cuando ya no queden perfiles viejos que importen (criterio: meses, no dias)."
     }
   ]
 }

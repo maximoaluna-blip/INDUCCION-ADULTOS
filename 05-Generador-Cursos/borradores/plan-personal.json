@@ -56,12 +56,30 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "Lección 1 — ¿Qué es un Plan Personal de Desarrollo?", "description": "5 min. La diferencia entre 'plan de capacitación' y 'plan personal'." },
-            { "title": "Lección 2 — Tu Asesor Personal", "description": "6 min. Cómo encontrarlo, qué hace y cómo trabajar con él/ella." },
-            { "title": "Lección 3 — El Acuerdo Mutuo", "description": "5 min. Los 6 elementos oficiales + el formato descargable." },
-            { "title": "Lección 4 — Talento 360°", "description": "5 min. La plataforma oficial donde vive tu plan." },
-            { "title": "Lección 5 — Construye tu Plan", "description": "8 min. Herramienta interactiva. Genera PDF para firmar." },
-            { "title": "Lección 6 — Tu hoja de ruta + cierre", "description": "3 min. Próximos pasos concretos." }
+            {
+              "title": "Lección 1 — ¿Qué es un Plan Personal de Desarrollo?",
+              "description": "5 min. La diferencia entre 'plan de capacitación' y 'plan personal'."
+            },
+            {
+              "title": "Lección 2 — Tu Asesor Personal",
+              "description": "6 min. Cómo encontrarlo, qué hace y cómo trabajar con él/ella."
+            },
+            {
+              "title": "Lección 3 — El Acuerdo Mutuo",
+              "description": "5 min. Los 6 elementos oficiales + el formato descargable."
+            },
+            {
+              "title": "Lección 4 — Talento 360°",
+              "description": "5 min. La plataforma oficial donde vive tu plan."
+            },
+            {
+              "title": "Lección 5 — Construye tu Plan",
+              "description": "8 min. Herramienta interactiva. Genera PDF para firmar."
+            },
+            {
+              "title": "Lección 6 — Tu hoja de ruta + cierre",
+              "description": "3 min. Próximos pasos concretos."
+            }
           ]
         }
       ]
@@ -84,8 +102,18 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "❌ Plan de capacitación tradicional", "description": "La asociación define los cursos. Todos hacen lo mismo. Mides tu progreso por asistencia. Termina cuando termina la jornada.", "color": "#ffebee", "borderColor": "#f44336" },
-            { "title": "✅ Plan Personal de Desarrollo", "description": "TÚ defines qué necesitas. Tu plan es único. Mides tu progreso por las conductas observables que demuestras. Es continuo a lo largo de todo tu nombramiento.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+            {
+              "title": "❌ Plan de capacitación tradicional",
+              "description": "La asociación define los cursos. Todos hacen lo mismo. Mides tu progreso por asistencia. Termina cuando termina la jornada.",
+              "color": "#ffebee",
+              "borderColor": "#f44336"
+            },
+            {
+              "title": "✅ Plan Personal de Desarrollo",
+              "description": "TÚ defines qué necesitas. Tu plan es único. Mides tu progreso por las conductas observables que demuestras. Es continuo a lo largo de todo tu nombramiento.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            }
           ]
         },
         {
@@ -179,8 +207,18 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "✅ SÍ hace", "description": "Te escucha. Te ayuda a definir prioridades. Sugiere recursos. Te da retroalimentación honesta. Firma su <strong>Aval de Asesor Personal</strong>. Te acompaña <strong>y, al final del ciclo, es quien certifica</strong> que ya demostraste las competencias del cargo — con la evaluación 360° y tus evidencias. No es un examen sorpresa: es alguien que confirma lo que te vio hacer durante meses.", "color": "#e8f5e9", "borderColor": "#4caf50" },
-            { "title": "❌ NO hace", "description": "No te da órdenes en este espacio. No te 'raja' ni te pone nota. No te dice qué hacer. No te impone un plan. No es responsable de tu progreso si tú no avanzas.", "color": "#ffebee", "borderColor": "#f44336" }
+            {
+              "title": "✅ SÍ hace",
+              "description": "Te escucha. Te ayuda a definir prioridades. Sugiere recursos. Te da retroalimentación honesta. Firma su <strong>Aval de Asesor Personal</strong>. Te acompaña <strong>y, al final del ciclo, es quien certifica</strong> que ya demostraste las competencias del cargo — con la evaluación 360° y tus evidencias. No es un examen sorpresa: es alguien que confirma lo que te vio hacer durante meses.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "❌ NO hace",
+              "description": "No te da órdenes en este espacio. No te 'raja' ni te pone nota. No te dice qué hacer. No te impone un plan. No es responsable de tu progreso si tú no avanzas.",
+              "color": "#ffebee",
+              "borderColor": "#f44336"
+            }
           ]
         },
         {
@@ -275,12 +313,30 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "1. Vigencia del nombramiento", "description": "Cuánto dura tu compromiso: hasta 2 años, y se puede prorrogar de común acuerdo si la evaluación salió bien." },
-            { "title": "2. Inducción y período de prueba", "description": "Cómo se hará tu inducción y cuánto dura el período inicial de adaptación." },
-            { "title": "3. Compromisos del adulto", "description": "Qué te comprometes tú a hacer (asistencia, plan personal, formación, etc.)." },
-            { "title": "4. Apoyos y beneficios al adulto", "description": "Qué te ofrece la asociación (formación, asesor, materiales, reconocimiento)." },
-            { "title": "5. Voluntad de desarrollar competencias", "description": "Tu compromiso explícito con tu plan personal y tu crecimiento." },
-            { "title": "6. Procedimiento de evaluación", "description": "Cómo y cuándo se va a evaluar tu desempeño (autoevaluación + asesor + 360°)." }
+            {
+              "title": "1. Vigencia del nombramiento",
+              "description": "Cuánto dura tu compromiso: hasta 2 años, y se puede prorrogar de común acuerdo si la evaluación salió bien."
+            },
+            {
+              "title": "2. Inducción y período de prueba",
+              "description": "Cómo se hará tu inducción y cuánto dura el período inicial de adaptación."
+            },
+            {
+              "title": "3. Compromisos del adulto",
+              "description": "Qué te comprometes tú a hacer (asistencia, plan personal, formación, etc.)."
+            },
+            {
+              "title": "4. Apoyos y beneficios al adulto",
+              "description": "Qué te ofrece la asociación (formación, asesor, materiales, reconocimiento)."
+            },
+            {
+              "title": "5. Voluntad de desarrollar competencias",
+              "description": "Tu compromiso explícito con tu plan personal y tu crecimiento."
+            },
+            {
+              "title": "6. Procedimiento de evaluación",
+              "description": "Cómo y cuándo se va a evaluar tu desempeño (autoevaluación + asesor + 360°)."
+            }
           ]
         },
         {
@@ -369,8 +425,18 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "1. Registro y validación", "description": "La primera vez creas tu cuenta, llenas tus datos básicos, subes tu hoja de vida, y la asociación valida que estás efectivamente nombrado en un cargo. Una vez al inicio.", "color": "#fff3e0", "borderColor": "#ff9800" },
-            { "title": "2. Postulación a cargos", "description": "Cuando un cargo queda vacante en tu grupo, regional o nivel nacional, puedes postularte directamente desde la plataforma. Tu hoja de vida ya está ahí.", "color": "#e3f2fd", "borderColor": "#2196f3" }
+            {
+              "title": "1. Registro y validación",
+              "description": "La primera vez creas tu cuenta, llenas tus datos básicos, subes tu hoja de vida, y la asociación valida que estás efectivamente nombrado en un cargo. Una vez al inicio.",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            },
+            {
+              "title": "2. Postulación a cargos",
+              "description": "Cuando un cargo queda vacante en tu grupo, regional o nivel nacional, puedes postularte directamente desde la plataforma. Tu hoja de vida ya está ahí.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            }
           ]
         },
         {
@@ -464,14 +530,50 @@
           "type": "plan-builder",
           "builderId": "plan-personal",
           "competences": [
-            { "id": "adaptabilidad", "name": "Adaptabilidad al cambio" },
-            { "id": "aprendizaje", "name": "Aprendizaje y desarrollo personal" },
-            { "id": "compromiso", "name": "Compromiso" },
-            { "id": "conciencia-organizacional", "name": "Conciencia organizacional" },
-            { "id": "planeamiento", "name": "Planeamiento estratégico" },
-            { "id": "relaciones", "name": "Relaciones interpersonales" },
-            { "id": "trabajo-equipo", "name": "Trabajo en equipo" }
-          ]
+            {
+              "id": "adaptabilidad",
+              "name": "Adaptabilidad al cambio"
+            },
+            {
+              "id": "aprendizaje",
+              "name": "Aprendizaje y desarrollo personal"
+            },
+            {
+              "id": "compromiso",
+              "name": "Compromiso"
+            },
+            {
+              "id": "conciencia-organizacional",
+              "name": "Conciencia organizacional"
+            },
+            {
+              "id": "planeamiento",
+              "name": "Planeamiento estratégico"
+            },
+            {
+              "id": "relaciones",
+              "name": "Relaciones interpersonales"
+            },
+            {
+              "id": "trabajo-equipo",
+              "name": "Trabajo en equipo"
+            }
+          ],
+          "labels": {
+            "intro": "Selecciona <strong>2 a 3 competencias</strong> en las que quieras trabajar este ciclo. Si tomaste el Curso 4, las áreas de oportunidad ya están sugeridas. Puedes cambiarlas si quieres.",
+            "placeholderMeta": "Ej: pasar del grado 2 al 3 en esta competencia, evidenciado en...",
+            "placeholderPlazo": "Ej: 6 meses",
+            "placeholderRecursos": "Ej: leer la cartilla X, asistir al taller Y, pedir retroalimentación a...",
+            "placeholderCompromiso": "Ej: Me comprometo a trabajar en mi plan con disciplina, a buscar a mi asesor cada mes, y a no rendirme cuando me cueste...",
+            "botonGenerar": "📄 Generar mi Plan Personal",
+            "minimo": 1,
+            "avisoMinimo": "⚠️ Selecciona al menos 1 competencia y completa sus campos antes de generar el plan.",
+            "avisoCampos": "⚠️ Hay campos vacíos. Completa meta, plazo y recursos en todas las competencias seleccionadas.",
+            "titulo": "📋 Plan Personal de Desarrollo",
+            "subtituloPrioridades": "Mis prioridades de desarrollo",
+            "cierre": "Imprime este plan y llévalo a tu conversación con tu Asesor Personal. Tu plan definitivo se escribe dentro de Talento 360°.",
+            "botonPerfil": "🔄 Cargar mi perfil del Curso 4"
+          }
         }
       ],
       "reflection": {
@@ -520,10 +622,22 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "1. Imprime tu Plan o guárdalo en PDF", "description": "Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo." },
-            { "title": "2. Identifica a tu asesor y agenda una reunión", "description": "Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa." },
-            { "title": "3. Firma tu Acuerdo Mutuo con tu Grupo", "description": "Diligencia el formato oficial 'Compromiso de Acuerdo Mutuo' de la DNAM (lo descargas del portal oficial) y pídele a tu asesor que firme su 'Aval de Asesor Personal' — son dos papeles distintos, ambos cortos, y ambos están en la biblioteca." },
-            { "title": "4. Registra todo en Talento 360°", "description": "Tu hoja de vida + el Acuerdo firmado + los 5 certificados de la ruta. Ojo: tu plan definitivo se escribe dentro de Talento 360° con ayuda de tu asesor; este PDF es tu borrador para la conversación." }
+            {
+              "title": "1. Imprime tu Plan o guárdalo en PDF",
+              "description": "Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo."
+            },
+            {
+              "title": "2. Identifica a tu asesor y agenda una reunión",
+              "description": "Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa."
+            },
+            {
+              "title": "3. Firma tu Acuerdo Mutuo con tu Grupo",
+              "description": "Diligencia el formato oficial 'Compromiso de Acuerdo Mutuo' de la DNAM (lo descargas del portal oficial) y pídele a tu asesor que firme su 'Aval de Asesor Personal' — son dos papeles distintos, ambos cortos, y ambos están en la biblioteca."
+            },
+            {
+              "title": "4. Registra todo en Talento 360°",
+              "description": "Tu hoja de vida + el Acuerdo firmado + los 5 certificados de la ruta. Ojo: tu plan definitivo se escribe dentro de Talento 360° con ayuda de tu asesor; este PDF es tu borrador para la conversación."
+            }
           ]
         },
         {
@@ -547,11 +661,26 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "🦸 Curso 1 — Bienvenida al Movimiento de Adultos", "description": "Por qué estás aquí, qué se espera de ti, primer compromiso." },
-            { "title": "📜 Curso 2 — La Política — Marco y Principios", "description": "El marco oficial, los 13 principios, las 12 herramientas." },
-            { "title": "🔄 Curso 3 — El Ciclo del Adulto", "description": "El panorama del sistema completo: atracción, desempeño, decisiones para el futuro." },
-            { "title": "🧠 Curso 4 — Las 7 Competencias Esenciales", "description": "Tu autodiagnóstico personal con perfil consolidado." },
-            { "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo (estás aquí)", "description": "Tu plan real, listo para firmar con tu asesor." }
+            {
+              "title": "🦸 Curso 1 — Bienvenida al Movimiento de Adultos",
+              "description": "Por qué estás aquí, qué se espera de ti, primer compromiso."
+            },
+            {
+              "title": "📜 Curso 2 — La Política — Marco y Principios",
+              "description": "El marco oficial, los 13 principios, las 12 herramientas."
+            },
+            {
+              "title": "🔄 Curso 3 — El Ciclo del Adulto",
+              "description": "El panorama del sistema completo: atracción, desempeño, decisiones para el futuro."
+            },
+            {
+              "title": "🧠 Curso 4 — Las 7 Competencias Esenciales",
+              "description": "Tu autodiagnóstico personal con perfil consolidado."
+            },
+            {
+              "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo (estás aquí)",
+              "description": "Tu plan real, listo para firmar con tu asesor."
+            }
           ]
         },
         {
@@ -626,11 +755,36 @@
     }
   ],
   "achievements": [
-    { "id": "achievement-1", "name": "Conoce el PPD", "emoji": "📋", "unlockOnModule": 2 },
-    { "id": "achievement-2", "name": "Identifica a su Asesor", "emoji": "🤝", "unlockOnModule": 3 },
-    { "id": "achievement-3", "name": "Domina el Acuerdo", "emoji": "✍️", "unlockOnModule": 4 },
-    { "id": "achievement-4", "name": "Construye su Plan", "emoji": "🛠️", "unlockOnModule": 6 },
-    { "id": "achievement-5", "name": "Ruta Completa", "emoji": "🏆", "unlockOnModule": -1 }
+    {
+      "id": "achievement-1",
+      "name": "Conoce el PPD",
+      "emoji": "📋",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Identifica a su Asesor",
+      "emoji": "🤝",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Domina el Acuerdo",
+      "emoji": "✍️",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Construye su Plan",
+      "emoji": "🛠️",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-5",
+      "name": "Ruta Completa",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
   ],
   "certificate": {
     "courseName": "TU PLAN PERSONAL DE DESARROLLO",

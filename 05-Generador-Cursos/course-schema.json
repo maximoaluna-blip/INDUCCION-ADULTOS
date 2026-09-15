@@ -211,6 +211,39 @@
                       }
                     ]
                   }
+                },
+                "labels": {
+                  "type": "object",
+                  "description": "Solo para type=plan-builder. Textos del componente escritos por el autor del curso, con el vocabulario de SU plano (ADR-034): el motor no trae ninguno por defecto y el build falla si faltan. Obligatorias: intro, placeholderMeta, botonGenerar, titulo, cierre, avisoMinimo, avisoCampos. Opcionales: minimo (entero, elementos a seleccionar), placeholderPlazo, placeholderRecursos, placeholderCompromiso, subtituloPrioridades, campoMeta/campoPlazo/campoRecursos/campoCompromiso, y botonPerfil (solo si la linea consume un perfil de otro curso; renderiza el banner y el boton).",
+                  "properties": {
+                    "intro": {
+                      "type": "string"
+                    },
+                    "placeholderMeta": {
+                      "type": "string"
+                    },
+                    "botonGenerar": {
+                      "type": "string"
+                    },
+                    "titulo": {
+                      "type": "string"
+                    },
+                    "cierre": {
+                      "type": "string"
+                    },
+                    "avisoMinimo": {
+                      "type": "string"
+                    },
+                    "avisoCampos": {
+                      "type": "string"
+                    },
+                    "minimo": {
+                      "type": "integer"
+                    },
+                    "botonPerfil": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }

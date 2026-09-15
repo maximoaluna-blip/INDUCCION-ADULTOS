@@ -173,7 +173,8 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
     // acepciones; un spec no.
     const objetivos = [];
 
-    for (const f of ['engine.linea.js', '../build-course.js']) {
+    // render.plan-builder.js es compartido y NO debe tener vocabulario: barrerlo lo demuestra.
+    for (const f of ['engine.linea.js', '../build-course.js', 'render.plan-builder.js']) {
       const ruta = path.join(TEMPLATES, f);
       const js = leer(ruta);
       if (!js) continue;

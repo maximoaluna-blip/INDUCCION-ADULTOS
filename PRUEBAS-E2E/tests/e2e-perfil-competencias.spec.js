@@ -74,8 +74,9 @@ test('@solo-escritorio e2e: el autodiagnostico deja un perfil y el plan personal
   await page.locator(`#sa-${aid} .self-assessment-actions button`).click();
   await expect(page.locator(`#sa-result-${aid}`)).not.toHaveClass(/hidden/);
 
-  const perfil = await page.evaluate(() => JSON.parse(localStorage.getItem('competencyProfile') || 'null'));
-  expect(perfil, 'competencyProfile guardado').not.toBeNull();
+  // Clave con apellido de linea (ADR-034 Fase 1 B2).
+  const perfil = await page.evaluate(() => JSON.parse(localStorage.getItem('politica-adultos:competencyProfile') || 'null'));
+  expect(perfil, 'perfil guardado bajo la clave con apellido de linea').not.toBeNull();
   expect(perfil.sourceCourse).toBe(cursoSA.courseId);
   expect(typeof perfil.scaleVersion).toBe('number');
   expect(new Set(perfil.opportunities)).toEqual(new Set(bajas));
@@ -138,4 +139,42 @@ test('@solo-escritorio e2e: un perfil con escala vieja avisa y no preselecciona 
   await expect(page.locator(`.pb-comp-check[data-competence="${compIds[0]}"]`)).toBeChecked();
   await expect(page.locator(`.pb-field-meta[data-competence="${compIds[0]}"]`)).toHaveValue('Meta escrita antes del aviso');
   await expect(page.locator('[id^="pb-profile-"]').first()).toContainText(/Actualizamos el autodiagn/);
+});
+
+test('@solo-escritorio e2e: un perfil guardado con la clave vieja migra solo y sigue precargando', async ({ page }) => {
+  // ADR-034 Fase 1 B2: la clave paso a llevar apellido de linea. Un estudiante que
+  // hizo el Curso 4 ANTES del cambio tiene su perfil bajo 'competencyProfile' a secas.
+  // No puede perderlo: getCompetencyProfile lo lee una vez y lo copia a la clave nueva.
+  await stubBackend(page);
+  const cursoPB = await descubrir(page, '.pb-comp-check');
+  test.skip(!cursoPB, 'ningun curso del catalogo renderiza un plan-builder');
+
+  const compIds = await page.locator('.pb-comp-check').evaluateAll((cs) => cs.map((c) => c.getAttribute('data-competence')));
+  const version = await page.evaluate(() => COMPETENCY_SCALE_VERSION);
+
+  // Sembrar SOLO la clave vieja, con la escala vigente (perfil valido, formato anterior).
+  await page.evaluate(({ ids, version }) => {
+    localStorage.removeItem('politica-adultos:competencyProfile');
+    localStorage.setItem('competencyProfile', JSON.stringify({
+      grades: Object.fromEntries(ids.map((id, i) => [id, i < 3 ? 1 : 4])),
+      strengths: ids.slice(-3), opportunities: ids.slice(0, 3),
+      completedAt: new Date().toISOString(), sourceCourse: 'competencias-esenciales', scaleVersion: version,
+    }));
+  }, { ids: compIds, version });
+
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await registrar(page);
+  await abrirModulo(page, await moduloQueContiene(page, '.pb-comp-check'));
+
+  // Precarga como si nada hubiera cambiado...
+  const banner = page.locator('[id^="pb-profile-"]').first();
+  await expect(banner).not.toHaveClass(/no-profile/);
+  await expect(banner).toContainText(/cargado/i);
+  for (const id of compIds.slice(0, 3)) {
+    await expect(page.locator(`.pb-comp-check[data-competence="${id}"]`)).toBeChecked();
+  }
+  // ...y el perfil quedo copiado bajo la clave nueva.
+  const migrado = await page.evaluate(() => JSON.parse(localStorage.getItem('politica-adultos:competencyProfile') || 'null'));
+  expect(migrado, 'perfil copiado a la clave con apellido de linea').not.toBeNull();
+  expect(new Set(migrado.opportunities)).toEqual(new Set(compIds.slice(0, 3)));
 });
