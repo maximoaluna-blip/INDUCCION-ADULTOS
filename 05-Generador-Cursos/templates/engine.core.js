@@ -384,6 +384,27 @@ function saveCommitment(text) {
     guardarLocal('commitment_' + COURSE_CONFIG.courseId, text);
 }
 
+function restoreCommitment() {
+    // El compromiso se guardaba y no se leia NUNCA. loadProgress repuebla
+    // reflection-*, fotos, autodiagnosticos, planes y catalogos, pero jamas
+    // #commitment: el alumno escribia su compromiso, cerraba, y al volver
+    // encontraba la caja vacia. Pasaba en los 21 cursos de las 4 lineas.
+    // Lo detecto la re-auditoria pedagogica del Curso 03 de Politicas
+    // Transversales el 15-sep-2026, leyendo el motor y no la pagina, cuando
+    // el curso empezo a prometerle al adulto que podria releerlo el domingo.
+    // Nota: esto restaura en el MISMO navegador. La recuperacion entre
+    // dispositivos iria en el payload de saveProgress, que toca el contrato
+    // con el backend y es otra decision.
+    try {
+        var ta = document.getElementById('commitment');
+        if (!ta || ta.value) return;
+        var txt = localStorage.getItem('commitment_' + COURSE_CONFIG.courseId);
+        if (txt) ta.value = txt;
+    } catch (e) {
+        // localStorage bloqueado o lleno: la caja queda vacia, como hasta hoy.
+    }
+}
+
 // --- Foto-upload (resize + persist + descargar) ---
 function handlePhotoUpload(input, photoId) {
     var file = input.files && input.files[0];

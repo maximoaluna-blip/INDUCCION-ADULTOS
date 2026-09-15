@@ -97,6 +97,7 @@ function loadProgress() {
             var ta = document.getElementById('reflection-' + k);
             if (ta) ta.value = reflections[k];
         });
+        restoreCommitment();
         Object.keys(photos).forEach(function (k) {
             var preview = document.getElementById('photo-preview-' + k);
             var actions = document.getElementById('photo-actions-' + k);
