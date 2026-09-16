@@ -131,9 +131,12 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
   // decision explicita de AUDITORIA.md. El texto visible que vive en el codigo
   // quedaba en la costura. Este check cierra esa costura.
   //
-  // MIRA solo cadenas de texto VISIBLES (literales entre comillas y el HTML
-  // compilado). Los comentarios quedan fuera a proposito: documentan el porque de
-  // una decision y no le llegan a nadie que curse.
+  // MIRA solo las cadenas de texto VISIBLES de los TRES ARCHIVOS DEL MOTOR
+  // (engine.linea.js, build-course.js, render.plan-builder.js). NO barre el HTML
+  // compilado: eso se probo, produjo puro ruido y se descarto a proposito -- ver el
+  // comentario de mas abajo. La prosa de los cursos la juzga el auditor doctrinal.
+  // Los comentarios de codigo quedan fuera: documentan el porque de una decision y
+  // no le llegan a nadie que curse.
   test('el motor no usa vocabulario de otro plano (ADR-034)', () => {
     const lexicoPath = path.join(__dirname, '..', 'lexico.json');
     if (!fs.existsSync(lexicoPath)) test.skip();
