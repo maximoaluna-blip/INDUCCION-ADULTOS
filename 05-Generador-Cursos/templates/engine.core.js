@@ -667,7 +667,15 @@ function generateCertificate() {
     if (el('certCode')) el('certCode').textContent = code;
     if (el('finalScore')) el('finalScore').textContent = avg;
 
-    unlockAchievement('achievement-5');
+    // El logro final del curso es el que declara `unlockOnModule: -1`, y el bucle
+    // de logros del quiz nunca puede encenderlo porque compara contra el numero de
+    // modulo. Aqui estaba cableado 'achievement-5', que solo acertaba en los cursos
+    // donde el logro final se llama asi: en los demas la insignia culminante se
+    // quedaba gris para siempre (16 de 23 cursos, 15-sep-2026). Se barre por la
+    // convencion, no por el id.
+    COURSE_CONFIG.achievements.forEach(function (ach) {
+        if (ach.unlockOnModule === -1) unlockAchievement(ach.id);
+    });
     var bar = document.getElementById('progressBar');
     var text = document.getElementById('progressText');
     if (bar) bar.style.width = '100%';

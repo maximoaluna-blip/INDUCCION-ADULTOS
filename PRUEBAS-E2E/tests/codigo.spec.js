@@ -96,6 +96,37 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
     expect(sospechosos, 'El token viejo no debe sobrevivir en ningun archivo.').toEqual([]);
   });
 
+  // --- B-bis. Logros --------------------------------------------------------
+  // La convencion: el logro que se gana al TERMINAR el curso se declara con
+  // `unlockOnModule: -1`. El bucle del quiz no puede encenderlo —compara contra el
+  // numero de modulo, que nunca vale -1—, asi que le toca a generateCertificate().
+  // Ahi estuvo cableado `unlockAchievement('achievement-5')` hasta el 15-sep-2026
+  // (ADR-046): acertaba solo en los 7 cursos cuyo logro final se llamaba asi, y en
+  // los otros 16 dejaba la insignia culminante gris para siempre, ademas de
+  // encender una que el alumno podia no haber ganado. Nadie lo vio en meses porque
+  // ninguna prueba miraba los logros. Un id literal aqui es ese defecto volviendo.
+  test('el motor no desbloquea logros por id cableado (ADR-046)', () => {
+    const infractores = [];
+    for (const { nombre, texto } of fuentesMotor()) {
+      coincidencias(texto, /unlockAchievement\(\s*['"`]/).forEach(({ n, linea }) => {
+        infractores.push(`${nombre}:${n}  ${linea}`);
+      });
+    }
+    const detalle = ['El logro final se resuelve por unlockOnModule === -1, nunca por su id.']
+      .concat(infractores)
+      .join('\n');
+    expect(infractores, detalle).toEqual([]);
+  });
+
+  test('el certificado barre los logros con unlockOnModule === -1 (ADR-046)', () => {
+    const core = leer(path.join(TEMPLATES, 'engine.core.js'));
+    expect(core, 'Esta linea deberia tener engine.core.js sincronizado desde _MOTOR/.').not.toBeNull();
+    expect(
+      core,
+      'generateCertificate() debe encender el logro final barriendo unlockOnModule === -1.'
+    ).toMatch(/unlockOnModule === -1\)\s*unlockAchievement\(ach\.id\)/);
+  });
+
   // --- C. Performance -------------------------------------------------------
   test('ningun curso compilado supera los 500 KB', () => {
     if (!fs.existsSync(WEB)) test.skip();
