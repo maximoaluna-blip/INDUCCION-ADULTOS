@@ -151,6 +151,39 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
       .map((c) => c.courseId);
     expect(huerfanos, `Cursos publicados sin JSON fuente en borradores/.\n${huerfanos.join('\n')}`).toEqual([]);
   });
+
+  // --- C-bis. Estructura de modulos ------------------------------------------
+  // `isIntro` marca el modulo de registro: sin ella el build no pinta el panel de
+  // logros con sus ids -asi que NINGUN logro puede encenderse-, no pinta el nombre
+  // del alumno, y numera el primer modulo como si fuera de contenido, con lo que el
+  // ultimo acaba mostrando un badge imposible («Modulo 8/7»). Le paso al Curso 11 de
+  // PJ el 16-sep-2026 y no lo vio nadie: ni el build, ni las tres auditorias, ni esta
+  // suite. Es mecanico, asi que desde hoy lo mira una prueba.
+  test('cada curso tiene exactamente un modulo de intro, y es el primero', () => {
+    const malos = [];
+    for (const f of fs.readdirSync(path.join(GEN, 'borradores')).filter((x) => x.endsWith('.json'))) {
+      const curso = JSON.parse(fs.readFileSync(path.join(GEN, 'borradores', f), 'utf-8'));
+      const mods = curso.modules || [];
+      const intros = mods.filter((m) => m.isIntro === true).length;
+      if (intros !== 1) malos.push(`${f}: ${intros} modulos con isIntro (debe ser 1)`);
+      else if (mods[0].isIntro !== true) malos.push(`${f}: el modulo de intro no es el primero`);
+    }
+    expect(malos, ['Sin isIntro no hay logros ni nombre del alumno, y la numeracion se desborda.']
+      .concat(malos).join(String.fromCharCode(10))).toEqual([]);
+  });
+
+  test('totalContentModules coincide con los modulos que no son intro', () => {
+    const malos = [];
+    for (const f of fs.readdirSync(path.join(GEN, 'borradores')).filter((x) => x.endsWith('.json'))) {
+      const curso = JSON.parse(fs.readFileSync(path.join(GEN, 'borradores', f), 'utf-8'));
+      const reales = (curso.modules || []).filter((m) => !m.isIntro).length;
+      if (curso.totalContentModules !== reales) {
+        malos.push(`${f}: declara ${curso.totalContentModules} y tiene ${reales}`);
+      }
+    }
+    expect(malos, ['El badge de cada modulo sale de este numero: si no cuadra, el alumno ve «Modulo N/M» imposible.']
+      .concat(malos).join(String.fromCharCode(10))).toEqual([]);
+  });
   // --- ADR-034. Vocabulario de dominio ---------------------------------------
   // POR QUE: el motor se propaga por copia entre lineas, y con el viajo el
   // vocabulario del plano del ADULTO hasta Programa de Jovenes, donde se publico:
