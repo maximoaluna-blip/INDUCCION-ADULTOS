@@ -51,6 +51,38 @@ corre esta suite contra las **3 líneas activas en producción** (matriz) + un s
 > revisitar el módulo reusa el mismo código sin reenviar al backend (antes duplicaba filas).
 > El test `e2e-flujo.spec.js` lo verifica revisitando el módulo y exigiendo `certificate === 1`.
 
+## Dos trampas de esta suite (verde no siempre significa probado)
+
+**1. Un curso en `draft` se salta la suite entera (ADR-052).** El catálogo dinámico filtra
+por `status: "active"/"new"`, así que un curso en `draft` **no entra en la lista y la suite
+pasa en verde sin haberlo tocado**. Es la forma más silenciosa de creer que hay compuerta
+cuando no la hay. Para probar un curso **antes** de activarlo:
+
+1. Copiar `02-Plataforma-Web/`, `assets/`, `index.html` y `404.html` a una carpeta temporal.
+2. Voltear el `status` **en la copia** — nunca en el catálogo real; ya se quedó puesto una vez.
+3. Servir esa copia con **`ThreadingHTTPServer`**, no con `python -m http.server`: el segundo
+   es monohilo y obliga a `--workers=1`; con hilos la suite corre en paralelo.
+4. Comprobar que **el número de pruebas subió**. Si no subió, no se probó nada.
+5. Al terminar, verificar que el catálogo real quedó como estaba.
+
+**2. Una compuerta intermitente deja de ser compuerta (ADR-051).** Hasta el 16-sep-2026 el CI
+se veía «en verde» con **13 de 125 pruebas intermitentes**, todas `color-contrast` sobre
+`module-0`, y el mismo cuadro en las cuatro líneas — `tests/a11y.spec.js` era **byte-idéntico**
+en todas. La causa no era de accesibilidad sino de **orden de las aserciones**: el spec auditaba
+`module-0` **antes** de desactivar las animaciones con `addStyleTag`, mientras seguía en su
+`fadeIn`, y axe medía el contraste de un texto semitransparente. Los demás módulos sí esperaban
+a que el elemento fuera opaco.
+
+Corregido en las cuatro: `addStyleTag` va **por encima** de la primera auditoría, `module-0`
+recibe la misma espera de opacidad que sus hermanos, y **una espera fallida es ruidosa** — si el
+módulo no llega a ser opaco en 3 s, la prueba registra `no-auditado` como hallazgo **grave** en
+vez de saltárselo en silencio. Esa tercera parte es la que impide que el arreglo se convierta en
+el defecto siguiente.
+
+> **La regla:** un test que parpadea se arregla o se borra. No falla el CI, pero enseña a
+> ignorarlo — y una compuerta que se ignora ya no es una compuerta. Y antes de descartar un
+> hallazgo de a11y como ruido, **comprobar si la prueba mide lo que cree medir**.
+
 ## Instalación
 
 ```bash
