@@ -28,4 +28,6 @@ Una de las 3 líneas activas de formación digital para adultos voluntarios de l
 
 ## Estado (ver `INDICE-PROYECTO.md` para el detalle vivo)
 
-5 cursos activos (Nivel 1: Bienvenida, Política Marco, Ciclo del Adulto, Competencias Esenciales, Plan Personal). Un borrador (`politica-adultos`) sin publicar. 17 cursos en el roadmap total.
+5 cursos activos (**Nivel 1 «Ruta de Fundamentación»**: Bienvenida, Política Marco, Ciclo del Adulto, Competencias Esenciales, Plan Personal). Un borrador (`politica-adultos`) sin publicar. 17 cursos en el roadmap total, en **4 niveles**.
+> **La landing agrupa por nivel desde el 17-sep-2026 (ADR-058).** Cada entrada de `cursos.json` lleva **`level`, `levelName` y `order`**, y el `index.html` los pinta en secciones plegables. **Hasta ese día esta línea no los emitía siquiera**: su `build-course.js` no los escribía y la landing era una lista plana. El `levelName` sale del **Plan de Formación** (tabla 0: «Ruta de Fundamentación»), no se inventa. ⚠️ Son **metadatos de catálogo** — no entran en el HTML del curso, así que añadirlos **no cambió ninguna página publicada**. Y nació `PRUEBAS-E2E/tests/landing.spec.js`, porque **ninguna prueba tocaba esta página**: las suites se parametrizan por el catálogo y lo que no es un curso quedaba fuera por construcción.
+
