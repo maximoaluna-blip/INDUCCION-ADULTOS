@@ -46,12 +46,28 @@ async function activosDelCatalogo(request) {
 }
 
 test.describe('@solo-escritorio landing de la linea', () => {
-  test('pinta el catalogo completo, agrupado por nivel', async ({ page, request }) => {
+  test('pinta el catalogo completo, agrupado por nivel', async ({ page, request }, testInfo) => {
     const activos = await activosDelCatalogo(request);
-    expect(activos.length, 'el catalogo no declara ningun curso visible').toBeGreaterThan(0);
 
     const resp = await page.goto(LANDING, { waitUntil: 'domcontentloaded' });
     expect(resp && resp.status(), `${LANDING} deberia responder 200`).toBeLessThan(400);
+
+    // Linea todavia sin cursos publicados: el estado vacio TAMBIEN hay que probarlo.
+    // No se da por buena la pagina sin mirarla —eso seria el fallo del ADR-051—: se
+    // comprueba que muestre el mensaje de catalogo vacio y NO un error de carga.
+    if (!activos.length) {
+      await page.waitForFunction(
+        () => !document.body.innerText.includes('Cargando catalogo'),
+        null,
+        { timeout: 15000 }
+      );
+      const vacio = await page.locator('body').innerText();
+      expect(vacio, 'la landing muestra un error de carga del catalogo').not.toContain('Error al cargar');
+      expect(vacio, 'con el catalogo vacio deberia decirlo explicitamente').toContain('No hay cursos disponibles');
+      expect(await page.locator('.level-section').count(), 'sin cursos activos no deberia pintar niveles').toBe(0);
+      testInfo.annotations.push({ type: 'estado', description: 'linea sin cursos activos: probado el estado vacio' });
+      return;
+    }
 
     // El catalogo se pide por fetch: esperar a que el contenedor deje de estar vacio.
     await page.waitForFunction(
@@ -97,11 +113,9 @@ test.describe('@solo-escritorio landing de la linea', () => {
 
   test('sin violaciones serias de accesibilidad', async ({ page }) => {
     await page.goto(LANDING, { waitUntil: 'domcontentloaded' });
+    // Vale igual con catalogo vacio: la pagina se audita cuando deja de cargar.
     await page.waitForFunction(
-      () => {
-        const c = document.getElementById('levelsContainer');
-        return c && c.querySelectorAll('.level-section').length > 0;
-      },
+      () => !document.body.innerText.includes('Cargando catalogo'),
       null,
       { timeout: 15000 }
     );
