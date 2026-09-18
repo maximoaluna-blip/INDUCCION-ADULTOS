@@ -353,4 +353,30 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
     ).toEqual([]);
   });
 
+
+  // --- G. El feedback del quiz (ADR-061) -------------------------------------
+  // El motor se INLINEA en tiempo de build, asi que arreglarlo no arregla nada hasta
+  // recompilar cada curso. Esta prueba mira el HTML YA COMPILADO -incluidos los que
+  // estan en `draft`, que la suite se salta por el ADR-052- y exige que la opcion
+  // correcta se busque por el atributo sellado y no por su posicion en un DOM barajado.
+  test('ningun curso compilado marca la correcta por posicion (ADR-061)', () => {
+    if (!fs.existsSync(WEB)) test.skip();
+    const rotos = [];
+    for (const f of fs.readdirSync(WEB).filter((x) => x.endsWith('.html'))) {
+      const html = fs.readFileSync(path.join(WEB, f), 'utf-8');
+      if (!html.includes('shuffleQuizOptions')) continue;   // sin barajado no hay defecto
+      if (/options\s*\[\s*quizData\s*\[\s*qIndex\s*\]\s*\]/.test(html)) {
+        rotos.push(`${f} — indexa el DOM barajado con el indice del JSON`);
+      } else if (!html.includes('data-option-index')) {
+        rotos.push(`${f} — sin data-option-index: compilado antes del arreglo`);
+      }
+    }
+    expect(
+      rotos,
+      'Al fallar un quiz, estos cursos marcan en VERDE una opcion equivocada.\n' +
+        'Casi siempre significa que el curso no se recompilo tras tocar el motor.\n' +
+        rotos.join('\n')
+    ).toEqual([]);
+  });
+
 });

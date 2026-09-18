@@ -196,12 +196,22 @@ function selectOption(element, optionIndex) {
 }
 
 // Baraja las opciones de cada pregunta una vez por sesion (Fisher-Yates).
-// Como cada <label class="option"> conserva su onclick="selectOption(this, oi)" con su indice original,
-// QUIZ_ANSWERS sigue siendo valido sin tocar build-course.js.
+// Cada <label class="option"> conserva su onclick="selectOption(this, oi)" con su indice original,
+// asi que CALIFICAR sigue siendo correcto sin tocar build-course.js.
+// ⚠️ Pero el FEEDBACK no lo era: checkQuiz indexaba el DOM ya barajado con el indice
+// del JSON y resaltaba en verde una opcion equivocada al fallar — 12 de 14 preguntas
+// medidas en un curso real. Por eso aqui se sella data-option-index (ADR-061).
 function shuffleQuizOptions() {
     document.querySelectorAll('.quiz-container .question').forEach(function (question) {
         var options = Array.prototype.slice.call(question.querySelectorAll('.option'));
         if (options.length < 2) return;
+        // Sella el indice ORIGINAL antes de mover nada: aqui el DOM todavia esta en
+        // el orden del JSON, asi que la posicion ES el indice. Sin esto, checkQuiz
+        // indexaba el DOM BARAJADO con el indice del JSON y marcaba en verde una
+        // opcion equivocada al fallar (ADR-061).
+        options.forEach(function (opt, i) {
+            if (!opt.hasAttribute('data-option-index')) opt.setAttribute('data-option-index', String(i));
+        });
         for (var i = options.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
             var tmp = options[i]; options[i] = options[j]; options[j] = tmp;
@@ -242,8 +252,14 @@ function checkQuiz(moduleNum) {
             } else {
                 selectedOption.classList.add('incorrect');
                 // Mostrar la correcta
-                var options = question.querySelectorAll('.option');
-                if (options[quizData[qIndex]]) options[quizData[qIndex]].classList.add('correct');
+                // Por el ATRIBUTO, no por la posicion: el DOM esta barajado (ADR-061).
+                var laCorrecta = question.querySelector('.option[data-option-index="' + quizData[qIndex] + '"]');
+                if (!laCorrecta) {
+                    // Sin sellar (curso viejo servido con motor nuevo): el orden del DOM
+                    // sigue siendo el del JSON, asi que la posicion vale.
+                    laCorrecta = question.querySelectorAll('.option')[quizData[qIndex]];
+                }
+                if (laCorrecta) laCorrecta.classList.add('correct');
             }
         }
         itemsDetalle.push({ q: qIndex, o: elegida, c: acerto });
