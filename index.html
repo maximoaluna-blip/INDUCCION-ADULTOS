@@ -164,6 +164,85 @@
             display: inline-block;
         }
 
+        /* --- Chips de navegacion por nivel --- */
+        .level-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .level-chip {
+            background: #ffffff;
+            border: 2px solid #622599;
+            color: #622599;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+
+        .level-chip:hover {
+            background: #622599;
+            color: #ffffff;
+        }
+
+        .level-chip-count {
+            opacity: 0.8;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        /* --- Niveles (agrupacion del catalogo) --- */
+        .level-section {
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        .level-section + .level-section {
+            margin-top: 10px;
+        }
+
+        .level-summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 4px 0 16px;
+            user-select: none;
+        }
+
+        .level-summary::-webkit-details-marker { display: none; }
+
+        .level-summary::before {
+            content: '▸';
+            display: inline-block;
+            color: #622599;
+            font-size: 1.1em;
+            transition: transform 0.2s;
+            margin-right: -2px;
+        }
+
+        .level-section[open] > .level-summary::before {
+            transform: rotate(90deg);
+        }
+
+        .level-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #622599;
+        }
+
+        .level-count {
+            font-size: 0.85em;
+            color: #636363;
+            font-weight: 600;
+        }
+
         .courses-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -406,8 +485,10 @@
     <div class="container">
         <h2 class="section-title">Cursos Disponibles</h2>
 
-        <div class="courses-grid" id="coursesGrid">
-            <p style="color: #636363; grid-column: 1/-1; text-align: center; padding: 20px;">Cargando catalogo de cursos...</p>
+        <div class="level-nav" id="levelNav"></div>
+
+        <div id="levelsContainer">
+            <p style="color: #636363; text-align: center; padding: 20px;">Cargando catalogo de cursos...</p>
         </div>
     </div>
 
@@ -480,17 +561,70 @@
             '</div>';
         }
 
+        // Agrupa los cursos disponibles por nivel (level/levelName), en el orden
+        // declarado por cada curso (order). Cursos sin "level" caen en Nivel 1
+        // (Fundamentacion) para no romper catalogos viejos sin ese campo.
+        function agruparPorNivel(disponibles) {
+            var niveles = {};
+            disponibles.forEach(function(c) {
+                var lvl = c.level != null ? c.level : 1;
+                var nombre = c.levelName || 'Fundamentación';
+                if (!niveles[lvl]) niveles[lvl] = { level: lvl, levelName: nombre, cursos: [] };
+                niveles[lvl].cursos.push(c);
+            });
+            var grupos = Object.keys(niveles).map(function(k) { return niveles[k]; });
+            grupos.sort(function(a, b) { return a.level - b.level; });
+            grupos.forEach(function(g) {
+                g.cursos.sort(function(a, b) { return (a.order || 0) - (b.order || 0); });
+            });
+            return grupos;
+        }
+
+        function renderLevelSection(grupo, esPrimero) {
+            return '<details class="level-section" id="nivel-' + escapeHtml(grupo.level) + '"' + (esPrimero ? ' open' : '') + '>' +
+                '<summary class="level-summary">' +
+                    '<span class="level-name">Nivel ' + escapeHtml(grupo.level) + ' — ' + escapeHtml(grupo.levelName) + '</span>' +
+                    '<span class="level-count">' + grupo.cursos.length + ' curso' + (grupo.cursos.length === 1 ? '' : 's') + '</span>' +
+                '</summary>' +
+                '<div class="courses-grid">' + grupo.cursos.map(renderCard).join('') + '</div>' +
+            '</details>';
+        }
+
+        // Fila de chips arriba de la grilla: un vistazo a cuantos niveles hay y
+        // cuantos cursos tiene cada uno, sin necesidad de scrollear ni expandir
+        // nada. Cada chip salta a su seccion y la abre si estaba colapsada.
+        function renderLevelChip(grupo) {
+            return '<a href="#nivel-' + escapeHtml(grupo.level) + '" class="level-chip" data-nivel="' + escapeHtml(grupo.level) + '">' +
+                'Nivel ' + escapeHtml(grupo.level) +
+                '<span class="level-chip-count">(' + grupo.cursos.length + ')</span>' +
+            '</a>';
+        }
+
         function renderCatalog(courses) {
-            var grid = document.getElementById('coursesGrid');
+            var contenedor = document.getElementById('levelsContainer');
+            var nav = document.getElementById('levelNav');
             // Solo mostrar cursos activos o nuevos
             var disponibles = (courses || []).filter(function(c) {
                 return c.status === 'active' || c.status === 'new';
             });
             if (!disponibles.length) {
-                grid.innerHTML = '<p style="color: #636363; grid-column: 1/-1; text-align: center;">No hay cursos disponibles por ahora.</p>';
+                contenedor.innerHTML = '<p style="color: #636363; text-align: center;">No hay cursos disponibles por ahora.</p>';
+                nav.innerHTML = '';
                 return;
             }
-            grid.innerHTML = disponibles.map(renderCard).join('');
+            var grupos = agruparPorNivel(disponibles);
+            // El primer nivel (el que tiene cursos) arranca expandido; los siguientes
+            // colapsados, para no abrumar cuando haya varios niveles con contenido.
+            contenedor.innerHTML = grupos.map(function(g, i) { return renderLevelSection(g, i === 0); }).join('');
+
+            // Los chips solo tienen sentido si hay mas de un nivel con cursos.
+            nav.innerHTML = grupos.length > 1 ? grupos.map(renderLevelChip).join('') : '';
+            nav.querySelectorAll('.level-chip').forEach(function(chip) {
+                chip.addEventListener('click', function() {
+                    var destino = document.getElementById('nivel-' + chip.getAttribute('data-nivel'));
+                    if (destino) destino.open = true;
+                });
+            });
 
             var totalMinutos = disponibles.reduce(function(sum, c) {
                 return sum + parseMinutes(c.duration);
@@ -506,8 +640,8 @@
             })
             .then(renderCatalog)
             .catch(function(err) {
-                document.getElementById('coursesGrid').innerHTML =
-                    '<p style="color: #b00; grid-column: 1/-1; text-align: center;">Error al cargar catalogo: ' + escapeHtml(err.message) + '</p>';
+                document.getElementById('levelsContainer').innerHTML =
+                    '<p style="color: #b00; text-align: center;">Error al cargar catalogo: ' + escapeHtml(err.message) + '</p>';
             });
     })();
     </script>

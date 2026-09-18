@@ -6,6 +6,9 @@
   "contentVersion": "2026-08-02",
   "icon": "📜",
   "duration": "30 minutos",
+  "level": 1,
+  "levelName": "Ruta de Fundamentación",
+  "order": 2,
   "totalContentModules": 6,
   "modules": [
     {
@@ -50,12 +53,30 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "Lección 1 — ¿Qué es esta política y de dónde vino?", "description": "5 min. La historia corta." },
-            { "title": "Lección 2 — ¿A quién le aplica?", "description": "4 min. Spoiler: a más gente de la que crees." },
-            { "title": "Lección 3 — Los 5 principios que más impactan tu día a día", "description": "7 min. Lo más práctico de la política." },
-            { "title": "Lección 4 — Los otros 8 principios", "description": "5 min. Lectura ágil." },
-            { "title": "Lección 5 — Gestión por competencias — qué significa para ti", "description": "6 min. La idea central." },
-            { "title": "Lección 6 — Tu mochila de herramientas", "description": "5 min. Las 12 herramientas oficiales." }
+            {
+              "title": "Lección 1 — ¿Qué es esta política y de dónde vino?",
+              "description": "5 min. La historia corta."
+            },
+            {
+              "title": "Lección 2 — ¿A quién le aplica?",
+              "description": "4 min. Spoiler: a más gente de la que crees."
+            },
+            {
+              "title": "Lección 3 — Los 5 principios que más impactan tu día a día",
+              "description": "7 min. Lo más práctico de la política."
+            },
+            {
+              "title": "Lección 4 — Los otros 8 principios",
+              "description": "5 min. Lectura ágil."
+            },
+            {
+              "title": "Lección 5 — Gestión por competencias — qué significa para ti",
+              "description": "6 min. La idea central."
+            },
+            {
+              "title": "Lección 6 — Tu mochila de herramientas",
+              "description": "5 min. Las 12 herramientas oficiales."
+            }
           ]
         },
         {
@@ -343,14 +364,54 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "Enfoque por competencias", "description": "El adulto se desarrolla, evalúa y certifica por competencias (saber, hacer, ser), no por años en el grupo. <em>Traducción: llevar 10 años no te certifica. Saber hacerlo bien, sí.</em>", "color": "#fff3e0", "borderColor": "#ff9800" },
-            { "title": "Coherencia", "description": "Lo que dice la política nacional debe alinearse con la mundial e interamericana. No inventamos en cada grupo.", "color": "#e3f2fd", "borderColor": "#2196f3" },
-            { "title": "Organización que aprende", "description": "El grupo, la regional y la nación reconocen y aprenden de las experiencias de sus adultos. Se sistematiza, no se pierde.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
-            { "title": "Subsidiariedad y descentralización", "description": "Los temas se resuelven en el nivel más cercano al adulto. Solo escalas a la regional o a Bogotá si el grupo no puede. <em>Traducción: si dos dirigentes tienen un roce, no se llama a Bogotá — se resuelve en el consejo.</em>", "color": "#e8f5e9", "borderColor": "#4caf50" },
-            { "title": "Accesibilidad y flexibilidad", "description": "La formación llega de muchas formas: cursos, módulos online, experiencias externas reconocidas. No tienes que ir presencial obligado.", "color": "#fff8e1", "borderColor": "#ffc107" },
-            { "title": "Transparencia", "description": "Las decisiones de selección, evaluación, certificación y retiro siguen procesos claros y conocidos. No 'a dedo'. <em>Traducción: si nombraron tesorero a alguien y nadie sabe con qué criterio, eso incumple la política.</em>", "color": "#fce4ec", "borderColor": "#e91e63" },
-            { "title": "Participación", "description": "Tú participas activamente en la definición de tu plan, en tu evaluación, en las decisiones sobre tu futuro en el grupo. <em>Traducción: si tu asesor te entrega el plan ya escrito para que lo firmes, ahí falta participación.</em>", "color": "#e0f7fa", "borderColor": "#00bcd4" },
-            { "title": "Calidad", "description": "El sistema busca mejora continua. No es una vez y ya — se revisa, se ajusta, se actualiza.", "color": "#efebe9", "borderColor": "#795548" }
+            {
+              "title": "Enfoque por competencias",
+              "description": "El adulto se desarrolla, evalúa y certifica por competencias (saber, hacer, ser), no por años en el grupo. <em>Traducción: llevar 10 años no te certifica. Saber hacerlo bien, sí.</em>",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            },
+            {
+              "title": "Coherencia",
+              "description": "Lo que dice la política nacional debe alinearse con la mundial e interamericana. No inventamos en cada grupo.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            },
+            {
+              "title": "Organización que aprende",
+              "description": "El grupo, la regional y la nación reconocen y aprenden de las experiencias de sus adultos. Se sistematiza, no se pierde.",
+              "color": "#f3e5f5",
+              "borderColor": "#9c27b0"
+            },
+            {
+              "title": "Subsidiariedad y descentralización",
+              "description": "Los temas se resuelven en el nivel más cercano al adulto. Solo escalas a la regional o a Bogotá si el grupo no puede. <em>Traducción: si dos dirigentes tienen un roce, no se llama a Bogotá — se resuelve en el consejo.</em>",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "Accesibilidad y flexibilidad",
+              "description": "La formación llega de muchas formas: cursos, módulos online, experiencias externas reconocidas. No tienes que ir presencial obligado.",
+              "color": "#fff8e1",
+              "borderColor": "#ffc107"
+            },
+            {
+              "title": "Transparencia",
+              "description": "Las decisiones de selección, evaluación, certificación y retiro siguen procesos claros y conocidos. No 'a dedo'. <em>Traducción: si nombraron tesorero a alguien y nadie sabe con qué criterio, eso incumple la política.</em>",
+              "color": "#fce4ec",
+              "borderColor": "#e91e63"
+            },
+            {
+              "title": "Participación",
+              "description": "Tú participas activamente en la definición de tu plan, en tu evaluación, en las decisiones sobre tu futuro en el grupo. <em>Traducción: si tu asesor te entrega el plan ya escrito para que lo firmes, ahí falta participación.</em>",
+              "color": "#e0f7fa",
+              "borderColor": "#00bcd4"
+            },
+            {
+              "title": "Calidad",
+              "description": "El sistema busca mejora continua. No es una vez y ya — se revisa, se ajusta, se actualiza.",
+              "color": "#efebe9",
+              "borderColor": "#795548"
+            }
           ]
         },
         {
@@ -423,9 +484,24 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "Saber", "description": "Conocimientos. Lo que has leído, estudiado, te han enseñado.", "color": "#fff3e0", "borderColor": "#ff9800" },
-            { "title": "Hacer", "description": "Habilidad práctica. Saber aplicar el conocimiento en una situación.", "color": "#e3f2fd", "borderColor": "#2196f3" },
-            { "title": "Ser", "description": "Principios y valores. Cómo actúas: con honestidad, empatía, compromiso.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+            {
+              "title": "Saber",
+              "description": "Conocimientos. Lo que has leído, estudiado, te han enseñado.",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            },
+            {
+              "title": "Hacer",
+              "description": "Habilidad práctica. Saber aplicar el conocimiento en una situación.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            },
+            {
+              "title": "Ser",
+              "description": "Principios y valores. Cómo actúas: con honestidad, empatía, compromiso.",
+              "color": "#f3e5f5",
+              "borderColor": "#9c27b0"
+            }
           ]
         },
         {
@@ -596,11 +672,36 @@
     }
   ],
   "achievements": [
-    { "id": "achievement-1", "name": "Conocedor del Marco", "emoji": "📜", "unlockOnModule": 2 },
-    { "id": "achievement-2", "name": "Identifica a los Sujetos", "emoji": "👥", "unlockOnModule": 3 },
-    { "id": "achievement-3", "name": "Maestro de los Principios", "emoji": "⭐", "unlockOnModule": 5 },
-    { "id": "achievement-4", "name": "Comprende las Competencias", "emoji": "🧠", "unlockOnModule": 6 },
-    { "id": "achievement-5", "name": "Curso Completado", "emoji": "🏆", "unlockOnModule": -1 }
+    {
+      "id": "achievement-1",
+      "name": "Conocedor del Marco",
+      "emoji": "📜",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Identifica a los Sujetos",
+      "emoji": "👥",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Maestro de los Principios",
+      "emoji": "⭐",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-4",
+      "name": "Comprende las Competencias",
+      "emoji": "🧠",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-5",
+      "name": "Curso Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
   ],
   "certificate": {
     "courseName": "LA POLÍTICA — MARCO Y PRINCIPIOS",

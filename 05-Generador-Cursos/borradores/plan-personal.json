@@ -6,6 +6,9 @@
   "contentVersion": "2026-08-03",
   "icon": "🗺️",
   "duration": "30 minutos",
+  "level": 1,
+  "levelName": "Ruta de Fundamentación",
+  "order": 5,
   "totalContentModules": 6,
   "modules": [
     {

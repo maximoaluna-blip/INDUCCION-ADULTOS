@@ -6,6 +6,9 @@
   "contentVersion": "2026-08-23",
   "icon": "🔄",
   "duration": "30 minutos",
+  "level": 1,
+  "levelName": "Ruta de Fundamentación",
+  "order": 3,
   "totalContentModules": 6,
   "modules": [
     {
@@ -56,12 +59,30 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "Lección 1 — ¿Qué es el ciclo de vida del adulto?", "description": "5 min. El concepto base y por qué la política lo formaliza." },
-            { "title": "Lección 2 — Atracción y Vinculación", "description": "6 min. Las 5 sub-fases para integrar a un nuevo adulto." },
-            { "title": "Lección 3 — Desempeño: básica + continua", "description": "6 min. La diferencia clave entre 'formarte para el cargo' y 'mantenerte vigente'." },
-            { "title": "Lección 4 — Acompañamiento y evaluación 360°", "description": "5 min. Las 4 modalidades de evaluación + las encuestas oficiales." },
-            { "title": "Lección 5 — Decisiones para el Futuro", "description": "5 min. Renovación, reubicación o retiro — y el reconocimiento que siempre va." },
-            { "title": "Lección 6 — Cierre de la ruta", "description": "3 min. Resumen y próximos pasos en tu camino como adulto del movimiento." }
+            {
+              "title": "Lección 1 — ¿Qué es el ciclo de vida del adulto?",
+              "description": "5 min. El concepto base y por qué la política lo formaliza."
+            },
+            {
+              "title": "Lección 2 — Atracción y Vinculación",
+              "description": "6 min. Las 5 sub-fases para integrar a un nuevo adulto."
+            },
+            {
+              "title": "Lección 3 — Desempeño: básica + continua",
+              "description": "6 min. La diferencia clave entre 'formarte para el cargo' y 'mantenerte vigente'."
+            },
+            {
+              "title": "Lección 4 — Acompañamiento y evaluación 360°",
+              "description": "5 min. Las 4 modalidades de evaluación + las encuestas oficiales."
+            },
+            {
+              "title": "Lección 5 — Decisiones para el Futuro",
+              "description": "5 min. Renovación, reubicación o retiro — y el reconocimiento que siempre va."
+            },
+            {
+              "title": "Lección 6 — Cierre de la ruta",
+              "description": "3 min. Resumen y próximos pasos en tu camino como adulto del movimiento."
+            }
           ]
         }
       ]
@@ -84,9 +105,24 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "1. Atracción y Vinculación", "description": "Cómo el grupo identifica que necesita un adulto, lo busca, lo selecciona, lo integra y firma el acuerdo mutuo. Aterrizamos esto en la Lección 2.", "color": "#fff3e0", "borderColor": "#ff9800" },
-            { "title": "2. Desempeño", "description": "Lo que pasa durante todo tu nombramiento: formación básica, perfeccionamiento continuo, acompañamiento, evaluación. Lecciones 3 y 4.", "color": "#e3f2fd", "borderColor": "#2196f3" },
-            { "title": "3. Decisiones para el Futuro", "description": "Al cerrar el nombramiento — el Acuerdo Mutuo dura <strong>máximo 2 años</strong> y se puede prorrogar; en el Grupo, la mayoría de los cargos se renuevan <strong>cada año</strong> —, ¿qué sigue? Renovación, reubicación o retiro. Siempre con reconocimiento. Lección 5.", "color": "#f3e5f5", "borderColor": "#9c27b0" }
+            {
+              "title": "1. Atracción y Vinculación",
+              "description": "Cómo el grupo identifica que necesita un adulto, lo busca, lo selecciona, lo integra y firma el acuerdo mutuo. Aterrizamos esto en la Lección 2.",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            },
+            {
+              "title": "2. Desempeño",
+              "description": "Lo que pasa durante todo tu nombramiento: formación básica, perfeccionamiento continuo, acompañamiento, evaluación. Lecciones 3 y 4.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            },
+            {
+              "title": "3. Decisiones para el Futuro",
+              "description": "Al cerrar el nombramiento — el Acuerdo Mutuo dura <strong>máximo 2 años</strong> y se puede prorrogar; en el Grupo, la mayoría de los cargos se renuevan <strong>cada año</strong> —, ¿qué sigue? Renovación, reubicación o retiro. Siempre con reconocimiento. Lección 5.",
+              "color": "#f3e5f5",
+              "borderColor": "#9c27b0"
+            }
           ]
         },
         {
@@ -170,11 +206,26 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "1. Determinación de Necesidades", "description": "Cada estamento (en el Grupo, el consejo) revisa qué cargos existen, cuáles están vacantes y qué se necesita cubrir. NO es 'el primero que pase y diga sí'." },
-            { "title": "2. Identificación de Competencias", "description": "Se definen las competencias específicas requeridas para ese cargo. Tesorero ≠ Secretario ≠ Asesor. Cada uno requiere algo distinto." },
-            { "title": "3. Búsqueda y Selección", "description": "Se busca a la persona adecuada (no necesariamente solo papás del grupo). Se evalúa su afinidad. Se considera la inserción juvenil y equidad de género." },
-            { "title": "4. Integración", "description": "Período inicial donde el adulto conoce el contexto, el equipo, las dinámicas. NO se le exige desempeño inmediato — se le da espacio para aprender el rol. En paralelo se ponen al día los trámites (abajo te los listamos)." },
-            { "title": "5. Compromiso, Acuerdo Mutuo y Nombramiento", "description": "Se firma el Acuerdo Mutuo (los 6 elementos del Curso 5) + se hace el nombramiento oficial. Aquí formalmente entra al ciclo." }
+            {
+              "title": "1. Determinación de Necesidades",
+              "description": "Cada estamento (en el Grupo, el consejo) revisa qué cargos existen, cuáles están vacantes y qué se necesita cubrir. NO es 'el primero que pase y diga sí'."
+            },
+            {
+              "title": "2. Identificación de Competencias",
+              "description": "Se definen las competencias específicas requeridas para ese cargo. Tesorero ≠ Secretario ≠ Asesor. Cada uno requiere algo distinto."
+            },
+            {
+              "title": "3. Búsqueda y Selección",
+              "description": "Se busca a la persona adecuada (no necesariamente solo papás del grupo). Se evalúa su afinidad. Se considera la inserción juvenil y equidad de género."
+            },
+            {
+              "title": "4. Integración",
+              "description": "Período inicial donde el adulto conoce el contexto, el equipo, las dinámicas. NO se le exige desempeño inmediato — se le da espacio para aprender el rol. En paralelo se ponen al día los trámites (abajo te los listamos)."
+            },
+            {
+              "title": "5. Compromiso, Acuerdo Mutuo y Nombramiento",
+              "description": "Se firma el Acuerdo Mutuo (los 6 elementos del Curso 5) + se hace el nombramiento oficial. Aquí formalmente entra al ciclo."
+            }
           ]
         },
         {
@@ -185,8 +236,18 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "❌ Lo que pasa en muchos grupos", "description": "Hay un cargo vacío. Alguien dice 'tú lo harás'. La persona acepta sin saber qué se espera. Sin inducción, sin acuerdo, sin acompañamiento. A los 6 meses, está quemada o se fue.", "color": "#ffebee", "borderColor": "#f44336" },
-            { "title": "✅ Lo que la política propone", "description": "Identifico qué necesito → defino el perfil → busco con criterio → integro con tiempo → formalizo con acuerdo. Resultado: la persona se queda y crece.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+            {
+              "title": "❌ Lo que pasa en muchos grupos",
+              "description": "Hay un cargo vacío. Alguien dice 'tú lo harás'. La persona acepta sin saber qué se espera. Sin inducción, sin acuerdo, sin acompañamiento. A los 6 meses, está quemada o se fue.",
+              "color": "#ffebee",
+              "borderColor": "#f44336"
+            },
+            {
+              "title": "✅ Lo que la política propone",
+              "description": "Identifico qué necesito → defino el perfil → busco con criterio → integro con tiempo → formalizo con acuerdo. Resultado: la persona se queda y crece.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            }
           ]
         },
         {
@@ -250,8 +311,18 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "🎯 Formación Básica", "description": "Te prepara para el cargo concreto. Se basa en tu Plan Personal (del Curso 5). Termina con la <strong>Insignia de Madera</strong> (símbolo oficial de certificación) cuando demuestras las competencias requeridas.", "color": "#fff3e0", "borderColor": "#ff9800" },
-            { "title": "🔄 Perfeccionamiento Continuo", "description": "Una vez certificado, el aprendizaje no para. Cursos de actualización, módulos, experiencias formativas que te mantienen vigente. Se renueva año a año.", "color": "#e3f2fd", "borderColor": "#2196f3" }
+            {
+              "title": "🎯 Formación Básica",
+              "description": "Te prepara para el cargo concreto. Se basa en tu Plan Personal (del Curso 5). Termina con la <strong>Insignia de Madera</strong> (símbolo oficial de certificación) cuando demuestras las competencias requeridas.",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            },
+            {
+              "title": "🔄 Perfeccionamiento Continuo",
+              "description": "Una vez certificado, el aprendizaje no para. Cursos de actualización, módulos, experiencias formativas que te mantienen vigente. Se renueva año a año.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            }
           ]
         },
         {
@@ -366,10 +437,30 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "1. Autoevaluación", "description": "Tú te evalúas a ti mismo/a. Es la base — y la profundizarás con el autodiagnóstico del Curso 4.", "color": "#fff3e0", "borderColor": "#ff9800" },
-            { "title": "2. Coevaluación", "description": "Tus pares te evalúan: otros consejeros, otros dirigentes con cargos similares.", "color": "#e3f2fd", "borderColor": "#2196f3" },
-            { "title": "3. Heteroevaluación", "description": "Quienes reciben tu trabajo te evalúan: chicos, padres, lobatos, scouts, caminantes, rovers — según corresponda al cargo.", "color": "#f3e5f5", "borderColor": "#9c27b0" },
-            { "title": "4. Evaluación", "description": "Quien tiene la responsabilidad formal de certificar tus competencias (típicamente tu asesor + tu jefe inmediato) emite la evaluación final.", "color": "#e8f5e9", "borderColor": "#4caf50" }
+            {
+              "title": "1. Autoevaluación",
+              "description": "Tú te evalúas a ti mismo/a. Es la base — y la profundizarás con el autodiagnóstico del Curso 4.",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            },
+            {
+              "title": "2. Coevaluación",
+              "description": "Tus pares te evalúan: otros consejeros, otros dirigentes con cargos similares.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            },
+            {
+              "title": "3. Heteroevaluación",
+              "description": "Quienes reciben tu trabajo te evalúan: chicos, padres, lobatos, scouts, caminantes, rovers — según corresponda al cargo.",
+              "color": "#f3e5f5",
+              "borderColor": "#9c27b0"
+            },
+            {
+              "title": "4. Evaluación",
+              "description": "Quien tiene la responsabilidad formal de certificar tus competencias (típicamente tu asesor + tu jefe inmediato) emite la evaluación final.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            }
           ]
         },
         {
@@ -458,9 +549,24 @@
         {
           "type": "method-grid",
           "items": [
-            { "title": "🔄 Renovación", "description": "Sigues en el mismo cargo. Se firma un nuevo Acuerdo Mutuo, con nuevas metas y un nuevo plan personal. Pasas a un nuevo ciclo en el mismo rol.", "color": "#e3f2fd", "borderColor": "#2196f3" },
-            { "title": "↔️ Reubicación", "description": "Cambias de cargo dentro del grupo o subes/te mueves a otro nivel (regional, nacional). Reconoces lo aprendido y arrancas un ciclo nuevo en otro rol.", "color": "#e8f5e9", "borderColor": "#4caf50" },
-            { "title": "👋 Retiro", "description": "Cierras tu participación en cargos. Puede ser tu decisión voluntaria, porque el cargo dejó de existir, o porque la organización determinó que no es lo mejor seguir. Siempre con reconocimiento.", "color": "#fff3e0", "borderColor": "#ff9800" }
+            {
+              "title": "🔄 Renovación",
+              "description": "Sigues en el mismo cargo. Se firma un nuevo Acuerdo Mutuo, con nuevas metas y un nuevo plan personal. Pasas a un nuevo ciclo en el mismo rol.",
+              "color": "#e3f2fd",
+              "borderColor": "#2196f3"
+            },
+            {
+              "title": "↔️ Reubicación",
+              "description": "Cambias de cargo dentro del grupo o subes/te mueves a otro nivel (regional, nacional). Reconoces lo aprendido y arrancas un ciclo nuevo en otro rol.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "👋 Retiro",
+              "description": "Cierras tu participación en cargos. Puede ser tu decisión voluntaria, porque el cargo dejó de existir, o porque la organización determinó que no es lo mejor seguir. Siempre con reconocimiento.",
+              "color": "#fff3e0",
+              "borderColor": "#ff9800"
+            }
           ]
         },
         {
@@ -564,11 +670,26 @@
         {
           "type": "timeline",
           "items": [
-            { "title": "🦸 Curso 1 — Bienvenida al Movimiento de Adultos", "description": "✅ Si lo hiciste: ya sabes por qué estás aquí." },
-            { "title": "📜 Curso 2 — La Política — Marco y Principios", "description": "✅ Si lo hiciste: ya tienes el marco doctrinal." },
-            { "title": "🔄 Curso 3 — El Ciclo del Adulto (estás aquí)", "description": "✅ Acabas de cerrar el panorama del sistema completo." },
-            { "title": "🧠 Curso 4 — Las 7 Competencias Esenciales", "description": "🔮 Lo siguiente. Vas a hacer tu autodiagnóstico personal y descubrir en qué eres fuerte y qué priorizar." },
-            { "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo", "description": "🔮 El cierre de la ruta. Vas a construir tu plan real, listo para firmar con tu asesor." }
+            {
+              "title": "🦸 Curso 1 — Bienvenida al Movimiento de Adultos",
+              "description": "✅ Si lo hiciste: ya sabes por qué estás aquí."
+            },
+            {
+              "title": "📜 Curso 2 — La Política — Marco y Principios",
+              "description": "✅ Si lo hiciste: ya tienes el marco doctrinal."
+            },
+            {
+              "title": "🔄 Curso 3 — El Ciclo del Adulto (estás aquí)",
+              "description": "✅ Acabas de cerrar el panorama del sistema completo."
+            },
+            {
+              "title": "🧠 Curso 4 — Las 7 Competencias Esenciales",
+              "description": "🔮 Lo siguiente. Vas a hacer tu autodiagnóstico personal y descubrir en qué eres fuerte y qué priorizar."
+            },
+            {
+              "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo",
+              "description": "🔮 El cierre de la ruta. Vas a construir tu plan real, listo para firmar con tu asesor."
+            }
           ]
         },
         {
@@ -632,12 +753,42 @@
     }
   ],
   "achievements": [
-    { "id": "achievement-1", "name": "Comprende el Ciclo", "emoji": "🔄", "unlockOnModule": 2 },
-    { "id": "achievement-2", "name": "Domina la Vinculación", "emoji": "🚪", "unlockOnModule": 3 },
-    { "id": "achievement-3", "name": "Conoce el Desempeño", "emoji": "🎓", "unlockOnModule": 4 },
-    { "id": "achievement-4", "name": "Maestro de la Evaluación 360°", "emoji": "🧭", "unlockOnModule": 5 },
-    { "id": "achievement-5", "name": "Cierra con Dignidad", "emoji": "🏆", "unlockOnModule": 6 },
-    { "id": "achievement-6", "name": "Curso 3 Completado", "emoji": "🏆", "unlockOnModule": -1 }
+    {
+      "id": "achievement-1",
+      "name": "Comprende el Ciclo",
+      "emoji": "🔄",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Domina la Vinculación",
+      "emoji": "🚪",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Conoce el Desempeño",
+      "emoji": "🎓",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Maestro de la Evaluación 360°",
+      "emoji": "🧭",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Cierra con Dignidad",
+      "emoji": "🏆",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 3 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
   ],
   "certificate": {
     "courseName": "EL CICLO DEL ADULTO EN EL MOVIMIENTO",

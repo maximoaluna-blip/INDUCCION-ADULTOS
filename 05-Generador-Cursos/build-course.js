@@ -811,6 +811,9 @@ const entry = {
     description: course.description,
     icon: course.icon,
     duration: course.duration,
+    level: course.level || 1,
+    levelName: course.levelName || 'Fundamentación',
+    order: course.order || 0,
     modules: course.modules.length,
     // Precedencia: lo que ya estaba en el catalogo > lo que declare el JSON > draft.
     // Nunca 'active' por defecto: un curso recien compilado no debe autopublicarse
