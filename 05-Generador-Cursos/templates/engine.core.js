@@ -670,8 +670,13 @@ function generateCertificate() {
     var code = esNuevo
         ? 'ASC-' + date.getFullYear() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase()
         : issued.code;
+    // quizScores se indexa por NUMERO DE MODULO, y los modulos con quiz empiezan en el 2:
+    // los indices bajos quedan VACIOS. reduce() se salta los huecos pero length los CUENTA,
+    // asi que seis quizzes perfectos daban 600/8 = 75. Se promedia sobre los que existen.
+    // (19-sep-2026: el certificado imprimia 75 % a quien habia acertado todo, en las 5 lineas.)
+    var puntajes = quizScores.filter(function (s) { return typeof s === 'number'; });
     var avg = esNuevo
-        ? (quizScores.length > 0 ? Math.round(quizScores.reduce(function (a, b) { return a + b; }, 0) / quizScores.length) : 100)
+        ? (puntajes.length > 0 ? Math.round(puntajes.reduce(function (a, b) { return a + b; }, 0) / puntajes.length) : 100)
         : issued.score;
     var fechaISO = esNuevo ? date.toISOString() : (issued.date || date.toISOString());
 
