@@ -166,10 +166,14 @@ Ejemplos del proyecto: `photo-upload` (Curso 1), `self-assessment` (Curso 4), `p
 |---|---|---|
 | C1.1 | Diseñar el tipo: qué inputs acepta, cómo se renderiza, dónde guarda datos | (diseño en papel) |
 | C1.2 | Agregarlo al renderer | `build-course.js` (nuevo `case 'tipo'`) |
-| C1.3 | Agregarlo al schema | `course-schema.json` (enum de tipos) |
+| C1.3 | Agregarlo al schema | `course-schema.json` (enum de tipos) — **el esquema y el build tienen que decir lo mismo** |
 | C1.4 | Agregar render placeholder | `preview-course.js` (versión visible para PDF) |
 | C1.5 | Agregar handlers JS | `templates/engine.js` (si es interactivo) |
 | C1.6 | Agregar CSS | `templates/styles.css` |
+
+> ⚠️ **El orden importa, y desde el 19-sep-2026 (ADR-067) el build te lo recuerda.** Si un JSON declara un tipo que `renderSection` no sabe dibujar, el build **falla nombrándolo**; hasta ese día imprimía un `<p>` **vacío y sin error**, y así se publicaron ocho secciones en blanco en dos cursos de Desarrollo Institucional durante cinco días. Lo vigilan además `python verificar-motor.py` —que compara el `course-schema.json` de cada línea contra los `case` de su build— y `codigo.spec.js`, que prohíbe que una sección compilada salga vacía. **Esta línea dibuja 14 tipos**, `self-assessment` incluido: aquí sí se usa (Curso 4).
+
+> ⚠️ **Si el tipo nuevo es un `plan-builder`:** sus rótulos de campo (`campoMeta`, `campoPlazo`, `campoRecursos`, `campoCompromiso`) se declaran en `labels` y **desde el 19-sep-2026 llegan también al plan impreso**. Si no se declaran, el motor imprime el rótulo genérico corto — que es lo que hace hoy `plan-personal`.
 | C1.7 | Documentar | `SKILL.md` (tabla de tipos disponibles) |
 | C1.8 | Rebuild masivo | **Rebuild de TODOS los cursos** (porque `engine.js` se inlinea en cada HTML) |
 
