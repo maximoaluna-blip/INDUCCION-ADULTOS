@@ -579,13 +579,16 @@ function generatePlan(builderId) {
         var d = plan.competences[compId];
         var name = nameByCompId[compId] || compId;
         var sufijo = (typeof planPrioritySuffix === 'function') ? (planPrioritySuffix(compId) || '') : '';
+        // Los rotulos salen del curso si el curso los declaro (viajan en pb-labels): lo
+        // que se imprime tiene que decir lo mismo que la pantalla donde se escribio.
+        // Si el curso no los declara, el rotulo generico corto de siempre.
         return '<div class="pb-priority"><h3>' + (idx + 1) + '. ' + name + sufijo + '</h3>' +
-            '<dt>🎯 Meta concreta</dt><dd>' + escapeHtml(d.meta) + '</dd>' +
-            '<dt>⏰ Plazo</dt><dd>' + escapeHtml(d.plazo) + '</dd>' +
-            '<dt>📚 Recursos</dt><dd>' + escapeHtml(d.recursos) + '</dd></div>';
+            '<dt>' + (L.campoMeta || '🎯 Meta concreta') + '</dt><dd>' + escapeHtml(d.meta) + '</dd>' +
+            '<dt>' + (L.campoPlazo || '⏰ Plazo') + '</dt><dd>' + escapeHtml(d.plazo) + '</dd>' +
+            '<dt>' + (L.campoRecursos || '📚 Recursos') + '</dt><dd>' + escapeHtml(d.recursos) + '</dd></div>';
     }).join('');
     var commitmentHtml = (plan.commitment || '').trim() ?
-        '<div class="pb-final-commitment"><h3>💚 Mi compromiso</h3><p style="margin:0;white-space:pre-wrap;">' + escapeHtml(plan.commitment) + '</p></div>' : '';
+        '<div class="pb-final-commitment"><h3>' + (L.campoCompromiso || '💚 Mi compromiso') + '</h3><p style="margin:0;white-space:pre-wrap;">' + escapeHtml(plan.commitment) + '</p></div>' : '';
     var output = document.getElementById('pb-output-' + builderId);
     if (output) {
         output.innerHTML =

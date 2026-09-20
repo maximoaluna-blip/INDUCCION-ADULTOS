@@ -135,22 +135,22 @@
                 "type": {
                   "type": "string",
                   "enum": [
-                    "paragraph",
-                    "heading",
-                    "info-box",
-                    "mission-box",
-                    "list",
-                    "timeline",
-                    "method-grid",
-                    "blockquote",
-                    "course-objectives",
-                    "video",
-                    "policy-quote",
-                    "photo-upload",
-                    "self-assessment",
-                    "plan-builder"
-                  ],
-                  "description": "Tipo de seccion de contenido."
+                      "paragraph",
+                      "heading",
+                      "info-box",
+                      "mission-box",
+                      "list",
+                      "timeline",
+                      "method-grid",
+                      "blockquote",
+                      "course-objectives",
+                      "video",
+                      "policy-quote",
+                      "photo-upload",
+                      "self-assessment",
+                      "plan-builder"
+                    ],
+                  "description": "Tipo de seccion de contenido. Esta lista es EXACTAMENTE lo que el build-course.js de esta linea sabe dibujar: desde el 19-sep-2026 (ADR-066) un tipo sin `case` hace FALLAR el build en vez de imprimir un parrafo vacio. Lo vigila `python verificar-motor.py`."
                 },
                 "text": {
                   "type": "string",

@@ -139,6 +139,32 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
     expect(pesados, `HTML por encima del limite de 500 KB.\n${pesados.join('\n')}`).toEqual([]);
   });
 
+  // --- C-ter. Secciones que no imprimen nada --------------------------------
+  // El `default` del switch de build-course.js devolvia un parrafo VACIO para
+  // cualquier tipo de seccion que no supiera dibujar: sin error y sin aviso. El
+  // 14-sep-2026 un corte de codigo muerto se llevo siete `case` de Desarrollo
+  // Institucional y dos cursos PUBLICADOS quedaron con ocho secciones en blanco
+  // entre los dos -el ejercicio central de uno de ellos- durante cinco dias, con
+  // esta suite en verde: ninguna prueba afirmaba que una seccion imprimiera algo.
+  // Desde el 19-sep-2026 (ADR-066) el build FALLA ante un tipo sin dibujante; esto
+  // vigila la huella que dejaba el defecto, y va aparte porque es mecanica y no
+  // depende de que el tipo este declarado en ningun sitio.
+  test('ninguna seccion compilada sale vacia (ADR-066)', () => {
+    if (!fs.existsSync(WEB)) test.skip();
+    const vacias = fs
+      .readdirSync(WEB)
+      .filter((f) => f.endsWith('.html'))
+      .map((f) => ({ f, n: (leer(path.join(WEB, f)) || '').split('<p></p>').length - 1 }))
+      .filter((x) => x.n > 0)
+      .map((x) => `${x.f} — ${x.n} seccion(es) en blanco`);
+    expect(
+      vacias,
+      'Hay secciones compiladas que no imprimen nada. Casi siempre es un tipo de seccion sin ' +
+        'case en el build-course.js de su linea: comprueba con `python verificar-motor.py` que ' +
+        'el course-schema.json y el build dicen lo mismo.\n' + vacias.join('\n')
+    ).toEqual([]);
+  });
+
   // --- F. Integridad del catalogo ------------------------------------------
   // Que cada curso publicado tenga su JSON fuente. Un HTML sin JSON es una entrada
   // huerfana: se compilo y despues se borro el origen, asi que nadie puede rehacerlo.

@@ -391,7 +391,24 @@ function renderSection(section) {
                     <div id="sa-result-${saId}" class="self-assessment-result hidden"></div>
                 </div>`;
         default:
-            return `<p>${section.text || ''}</p>`;
+            // ⚠️ 19-sep-2026 (ADR-066): hasta hoy esto devolvia `<p>${section.text || ''}</p>`,
+            // es decir, un parrafo VACIO y sin aviso para cualquier tipo que este build no
+            // supiera dibujar. Un curso podia declarar un tipo que el course-schema.json
+            // acepta, pasar la validacion, compilar sin una sola queja y publicarse con la
+            // seccion en blanco. Paso: el 14-sep-2026 un corte demasiado ancho se llevo
+            // siete `case` de Desarrollo Institucional y dos cursos publicados quedaron
+            // con ocho secciones vacias entre los dos, cinco dias sin que nadie lo viera.
+            // Que el esquema acepte un tipo no significa que el build sepa dibujarlo: esta
+            // es la linea que lo convierte en un fallo ruidoso.
+            console.error(`❌ Tipo de seccion sin dibujante: "${section.type}".`);
+            console.error('   Este build no tiene un `case` para ese tipo, asi que la seccion');
+            console.error('   saldria VACIA en el HTML publicado. Revisa que:');
+            console.error('     1. el tipo este bien escrito en el JSON del curso;');
+            console.error('     2. `renderSection` de esta linea tenga su `case`;');
+            console.error('     3. el `course-schema.json` de la linea lo declare.');
+            console.error('   (El esquema y el build tienen que decir lo mismo: lo vigila');
+            console.error('    `python verificar-motor.py` desde la raiz del proyecto.)');
+            process.exit(1);
     }
 }
 

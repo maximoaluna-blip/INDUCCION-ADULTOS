@@ -94,6 +94,18 @@ function renderPlanBuilder(section) {
     subtituloPrioridades: L.subtituloPrioridades,
     cierre: L.cierre,
   };
+
+  // Los rotulos de los tres campos y el del compromiso viajan tambien al runtime, o lo
+  // que se IMPRIME dice otra cosa que la PANTALLA donde se escribio (19-sep-2026,
+  // hallazgo H4 de una auditoria pedagogica y M4 de la doctrinal, que coincidieron):
+  // generatePlan los llevaba cocidos y no miraba estas labels.
+  // Solo se envian si el curso los DECLARO. Si no, generatePlan imprime su rotulo
+  // generico corto y el plan sale identico al de siempre: el default del formulario
+  // trae ademas la ayuda entre parentesis ("...que quieres lograr"), que es una
+  // instruccion para rellenar, no un titulo para el papel.
+  ['campoMeta', 'campoPlazo', 'campoRecursos', 'campoCompromiso'].forEach((k) => {
+    if (labels[k]) runtime[k] = labels[k];
+  });
   const runtimeJson = JSON.stringify(runtime).replace(/</g, '\\u003c');
 
   return `<div class="plan-builder" id="pb-${pbId}" data-minimo="${runtime.minimo}">
