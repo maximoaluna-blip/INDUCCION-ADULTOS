@@ -28,6 +28,10 @@ Una de las 3 líneas activas de formación digital para adultos voluntarios de l
 
 ## Estado (ver `INDICE-PROYECTO.md` para el detalle vivo)
 
+> ⚠️ **Esta línea NO versiona el diseño de sus cursos (visto el 21-sep-2026).** No hay `01-Diseno-Cursos/` ni un solo `.md` de diseño: de los **6 cursos** —5 activos y el borrador— **el JSON de `05-Generador-Cursos/borradores/` es el único original**. PJ tiene 15 de 15, DI 6 de 6 y PT 5 de 5. **Al auditar o corregir aquí, no busques el documento de diseño: no existe**, y por eso no hay dónde ver qué se quiso enseñar cuando el JSON y la intención difieren. El Plan de Formación de la línea es un **`.docx`**, así que tampoco lo ve un `grep`. Decisión abierta en `DECISIONES.md`.
+>
+> **20-sep-2026 — los 6 cursos pasaron el barrido de paridad de quizzes (ADR-073):** 34 opciones reescritas, **todas distractores**, la correcta intacta; `contentVersion` en `2026-09-20`. Era la línea con más deuda después de Rover.
+
 > **La página que verifica los certificados vive en la RAÍZ del repo** (`verificar-certificado.html`) y se enlaza desde el pie del `index.html` — **ADR-070, 20-sep-2026**. El certificado le dice al adulto *«verifica este certificado ingresando el código en la plataforma web»*, así que la página es la otra mitad de esa promesa. ⚠️ Hasta ese día **apuntaba al backend de Rover** (1 certificado) en vez de al de la plataforma (21), así que **ningún certificado real se podía validar**; y **nadie la enlazaba desde ningún sitio**. Al tocar esa página, comprobar las dos cosas: el `SCRIPT_URL` y que siga enlazada.
 
 5 cursos activos (**Nivel 1 «Ruta de Fundamentación»**: Bienvenida, Política Marco, Ciclo del Adulto, Competencias Esenciales, Plan Personal). Un borrador (`politica-adultos`) sin publicar. 17 cursos en el roadmap total, en **4 niveles**.

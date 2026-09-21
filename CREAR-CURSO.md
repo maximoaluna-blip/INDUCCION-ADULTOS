@@ -225,6 +225,7 @@ Independiente del caso:
 - [ ] `cursos.json` con orden correcto y status `active`
 - [ ] **Auditoría doctrinal** (`/auditar-curso <courseId>`) pasada — sin críticos ni mayores pendientes
 - [ ] **Auditoría pedagógica** (`/auditar-pedagogia <courseId>`) pasada
+- [ ] **Las dos reglas de paridad del quiz, leídas en los avisos del build** (`MANUAL` §A.6.5, reglas 6 y 7): la correcta **no es el extremo de longitud** de su pregunta por 12 caracteres o más, y **dos opciones comparten su primera palabra** (y su polaridad en las de sí/no). ⚠️ **El build avisa, no rompe**: si nadie lee el `⚠️`, el curso se publica con el sesgo. Se empareja moviendo **distractores**, nunca la correcta (ADR-073).
 - [ ] **Auditoría funcional**: `courseId` nuevo sumado al bucle de `.github/workflows/pruebas-e2e.yml` y suite `PRUEBAS-E2E` en verde (local o CI)
 - [ ] Commit con mensaje descriptivo
 - [ ] Push a GitHub
