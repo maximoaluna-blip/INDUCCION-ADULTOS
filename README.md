@@ -27,6 +27,7 @@ Plataforma de formación online de la **Línea Política de Adultos** de la Asoc
 INDUCCION-ADULTOS/
 ├── index.html                          # Landing público (GitHub Pages)
 ├── 404.html
+├── verificar-certificado.html        # Valida un código ASC-AAAA-XXXXX contra el backend (ADR-070)
 ├── assets/                             # Logos, favicon, dark theme
 ├── 02-Plataforma-Web/                  # HTMLs públicos
 │   ├── cursos.json                     # Catálogo
