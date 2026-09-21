@@ -978,13 +978,13 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                 </form>
 
                 <div class="data-privacy">
-                    <h4>📊 Información sobre tus datos</h4>
-                    <p>Este curso guarda tu progreso de dos formas:</p>
+                    <h4>📊 Qué se guarda, dónde y quién lo ve</h4>
+                    <p>Este curso guarda dos cosas en dos sitios distintos:</p>
                     <ul>
-                        <li>📱 <strong>Localmente:</strong> En tu navegador para que puedas continuar sin internet</li>
-                        <li>☁️ <strong>Google Sheets:</strong> Para que los dirigentes puedan verificar certificados y hacer seguimiento</li>
+                        <li>📱 <strong>En este navegador:</strong> todo tu avance y lo que escribes, para que puedas seguir sin internet</li>
+                        <li>☁️ <strong>En una hoja de la Asociación:</strong> tu registro, los módulos que completas, tus puntuaciones y tu certificado — y también <strong>lo que escribes</strong> en reflexiones, compromisos y planes, que el equipo de formación puede leer</li>
                     </ul>
-                    <p style="margin-top: 10px; font-size: 0.9em;">Tus datos solo se usan para fines educativos de la Asociación Scouts de Colombia.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em;"><strong>Si recuperas tu avance con tu correo, vuelven tus módulos y tus puntuaciones, no lo que escribiste:</strong> eso se queda en el navegador donde lo escribiste. Tus datos solo se usan para fines educativos de la Asociación Scouts de Colombia.</p>
                 </div>
             </div>
 
@@ -2110,60 +2110,28 @@ function recoverProgress() {
                     quizScores = data.quizScores;
                 }
 
-                // StudyTime y reflections (si vienen directamente)
+                // StudyTime: el unico dato de sesion que el backend sigue devolviendo
                 if (data.studyTime) studyTime = data.studyTime;
-                if (data.reflections) {
-                    reflections = data.reflections;
-                    Object.keys(reflections).forEach(function(k) {
-                        var ta = document.getElementById('reflection-' + k);
-                        if (ta) ta.value = reflections[k];
-                    });
-                }
 
-                // Reflexiones por curso (persistencia hibrida): hidratar cada curso en localStorage
-                if (serverData.reflectionsByCourse && typeof serverData.reflectionsByCourse === 'object') {
-                    Object.keys(serverData.reflectionsByCourse).forEach(function (cid) {
-                        var courseReflections = serverData.reflectionsByCourse[cid] || {};
-                        if (cid === COURSE_CONFIG.courseId) {
-                            reflections = courseReflections;
-                            Object.keys(reflections).forEach(function (k) {
-                                var ta = document.getElementById('reflection-' + k);
-                                if (ta) ta.value = reflections[k];
-                            });
-                        } else {
-                            try {
-                                var key = 'courseProgress_' + cid;
-                                var raw = localStorage.getItem(key);
-                                var existing = raw ? JSON.parse(raw) : {};
-                                existing.reflections = courseReflections;
-                                existing.lastSaved = new Date().toISOString();
-                                guardarLocal(key, JSON.stringify(existing));
-                            } catch (e) { /* el aviso lo da guardarLocal */ }
-                        }
-                    });
-                }
-
-                // Autodiagnósticos: restaurar grados desde el backend
-                if (serverData.assessments && typeof serverData.assessments === 'object') {
-                    Object.keys(serverData.assessments).forEach(function (aid) {
-                        var saved = serverData.assessments[aid] || {};
-                        if (!selfAssessments[aid]) selfAssessments[aid] = { grades: {} };
-                        if (saved.grades) selfAssessments[aid].grades = saved.grades;
-                    });
-                    if (typeof restoreAssessmentSelections === 'function') restoreAssessmentSelections();
-                }
-
-                // Planes personales: restaurar plan-builder
-                if (serverData.plans && typeof serverData.plans === 'object') {
-                    Object.keys(serverData.plans).forEach(function (pid) {
-                        var savedPlan = serverData.plans[pid] || {};
-                        var contenido = savedPlan.contenido;
-                        if (contenido && typeof contenido === 'object') {
-                            personalPlans[pid] = contenido;
-                        }
-                    });
-                    if (typeof restorePlanState === 'function') restorePlanState();
-                }
+                // ADR-074 - AQUI NO SE HIDRATA NINGUN TEXTO, A PROPOSITO.
+                // `recover` no esta autenticado: pide un correo y nada mas. Por eso el
+                // backend dejo de mandar lo que la persona escribio -reflexiones,
+                // compromisos, planes, catalogos y los grados del autodiagnostico- y solo
+                // dice QUE hay guardado (serverData.saved), nunca que dice.
+                // Eso vive en el navegador donde se escribio, y alli sigue: es local por
+                // diseno. Si algun dia se quiere recuperarlo entre dispositivos, primero
+                // hay que autenticar a la persona, no ampliar esta respuesta.
+                var guardado = serverData.saved || {};
+                var anotaciones = 0;
+                Object.keys(guardado.reflections || {}).forEach(function (cid) {
+                    anotaciones += (guardado.reflections[cid] || []).length;
+                });
+                Object.keys(guardado.commitments || {}).forEach(function (cid) {
+                    anotaciones += guardado.commitments[cid] || 0;
+                });
+                anotaciones += (guardado.plans || []).length +
+                               (guardado.catalogs || []).length +
+                               (guardado.assessments || []).length;
 
                 saveProgress();
                 updateStats();
@@ -2183,6 +2151,18 @@ function recoverProgress() {
 
                 var completedCount = moduleProgress.filter(Boolean).length;
                 showNotification('¡Avance recuperado, ' + firstName + '! ' + completedCount + ' módulos completados 🎉');
+
+                if (anotaciones > 0) {
+                    msgDiv.style.display = 'block';
+                    msgDiv.innerHTML = '<p style="color: #2e7d32; font-weight: 600;">✅ Recuperamos tu avance: ' +
+                        completedCount + ' módulos.</p>' +
+                        '<p style="color: #636363; margin-top: 10px;">Tienes <strong>' + anotaciones +
+                        '</strong> anotaciones guardadas (reflexiones, compromisos o planes). ' +
+                        'Lo que escribes <strong>no se recupera por correo</strong>: se queda en el navegador donde lo escribiste. ' +
+                        'Abre el curso en ese dispositivo para verlas.</p>';
+                } else {
+                    msgDiv.style.display = 'none';
+                }
                 showModule(lastModule > 0 ? lastModule : 1);
             } else {
                 var reason = (data && data.message) ? data.message : 'No se encontro avance asociado a este correo.';

@@ -522,13 +522,13 @@ function buildRegistrationModule(course) {
                 </form>
 
                 <div class="data-privacy">
-                    <h4>📊 Información sobre tus datos</h4>
-                    <p>Este curso guarda tu progreso de dos formas:</p>
+                    <h4>📊 Qué se guarda, dónde y quién lo ve</h4>
+                    <p>Este curso guarda dos cosas en dos sitios distintos:</p>
                     <ul>
-                        <li>📱 <strong>Localmente:</strong> En tu navegador para que puedas continuar sin internet</li>
-                        <li>☁️ <strong>Google Sheets:</strong> Para que los dirigentes puedan verificar certificados y hacer seguimiento</li>
+                        <li>📱 <strong>En este navegador:</strong> todo tu avance y lo que escribes, para que puedas seguir sin internet</li>
+                        <li>☁️ <strong>En una hoja de la Asociación:</strong> tu registro, los módulos que completas, tus puntuaciones y tu certificado — y también <strong>lo que escribes</strong> en reflexiones, compromisos y planes, que el equipo de formación puede leer</li>
                     </ul>
-                    <p style="margin-top: 10px; font-size: 0.9em;">Tus datos solo se usan para fines educativos de la Asociación Scouts de Colombia.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em;"><strong>Si recuperas tu avance con tu correo, vuelven tus módulos y tus puntuaciones, no lo que escribiste:</strong> eso se queda en el navegador donde lo escribiste. Tus datos solo se usan para fines educativos de la Asociación Scouts de Colombia.</p>
                 </div>
             </div>`;
 }

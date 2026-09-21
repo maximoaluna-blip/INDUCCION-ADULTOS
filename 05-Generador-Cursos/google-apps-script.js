@@ -364,7 +364,21 @@ function doGet(e) {
 }
 
 /**
- * Recupera todos los datos de un estudiante buscando por email.
+ * Recupera el AVANCE de un estudiante buscando por email.
+ *
+ * ADR-074 (21-sep-2026) - QUE DEVUELVE Y QUE NO, Y POR QUE:
+ * Este endpoint es de lectura y NO esta autenticado: doGet no pide token, y el
+ * token del backend viaja en el HTML publicado de cada curso, asi que no lo
+ * estaria aunque lo pidiera. Cualquiera que sepa un correo puede llamarlo.
+ * Por eso devuelve lo MINIMO para retomar el curso en otro dispositivo:
+ *   - registro basico (nombre, grupo, region, correo, curso)
+ *   - modulos completados, puntajes de quiz y certificados emitidos
+ * y NO devuelve NADA de lo que la persona escribio:
+ *   - motivacion del registro, reflexiones, compromisos, planes personales,
+ *     descripciones del catalogo de practicas y grados del autodiagnostico.
+ * De eso solo informa QUE existe y DONDE (ids), nunca su contenido, para que la
+ * interfaz pueda decir "esto ya lo hiciste" sin exponerlo.
+ * Lo escrito se queda en el navegador donde se escribio: es local por diseno.
  */
 function handleRecover(params) {
   var email = sanitize(params.email, 200);
@@ -378,14 +392,17 @@ function handleRecover(params) {
     modules: [],
     quizzes: [],
     certificates: [],
-    commitments: [],
-    catalogs: {},
-    reflectionsByCourse: {},
-    assessments: {},
-    plans: {}
+    // Que hay guardado, sin su contenido (ver cabecera).
+    saved: {
+      reflections: {},   // courseId -> [moduloId, ...]
+      commitments: {},   // courseId -> cuantos
+      plans: [],         // [planId, ...]
+      catalogs: [],      // [catalogId, ...]
+      assessments: []    // [assessmentId, ...]
+    }
   };
 
-  // Buscar en Registros
+  // Buscar en Registros - sin el campo Motivacion, que es texto libre.
   try {
     var regSheet = getOrCreateSheet(SHEET_CONFIG.registros.name, SHEET_CONFIG.registros.headers);
     var regData = regSheet.getDataRange().getValues();
@@ -398,7 +415,6 @@ function handleRecover(params) {
           group: regData[i][3],
           region: regData[i][4],
           email: regData[i][5],
-          motivation: regData[i][6],
           course: regData[i][7]
         };
         break; // Tomar el primer registro
@@ -458,45 +474,33 @@ function handleRecover(params) {
     }
   } catch (err) { /* Hoja puede no existir aun */ }
 
-  // Buscar en Compromisos
+  // --- De aqui en adelante, SOLO senales de existencia: nunca el texto. ---
+
+  // Compromisos: cuantos por curso.
   try {
     var comSheet = getOrCreateSheet(SHEET_CONFIG.compromisos.name, SHEET_CONFIG.compromisos.headers);
     var comData = comSheet.getDataRange().getValues();
     for (var n = 1; n < comData.length; n++) {
       if (String(comData[n][1]).toLowerCase().trim() === email) {
-        result.commitments.push({
-          timestamp: comData[n][0],
-          course: comData[n][3],
-          commitment: comData[n][4]
-        });
+        var comCourse = String(comData[n][3] || '').trim() || 'sin-curso';
+        result.saved.commitments[comCourse] = (result.saved.commitments[comCourse] || 0) + 1;
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
 
-  // Buscar en Catalogos DI (Curso 5 — Buenas Practicas)
+  // Catalogos de practicas (DI/PT): que catalogos tiene, no que dicen.
   try {
     var catSheet = getOrCreateSheet(SHEET_CONFIG.catalogos.name, SHEET_CONFIG.catalogos.headers);
     var catData = catSheet.getDataRange().getValues();
     for (var p = 1; p < catData.length; p++) {
       if (String(catData[p][1]).toLowerCase().trim() === email) {
         var cid = String(catData[p][4]).trim();
-        if (!cid) continue;
-        if (!result.catalogs[cid]) result.catalogs[cid] = {};
-        var ambitoId = String(catData[p][5]).trim();
-        if (!ambitoId) continue;
-        var attrStr = String(catData[p][8] || '');
-        var attrArr = attrStr ? attrStr.split(',').map(function(a) { return a.trim(); }).filter(function(a) { return !!a; }) : [];
-        result.catalogs[cid][ambitoId] = {
-          state: String(catData[p][6] || ''),
-          description: String(catData[p][7] || ''),
-          attributes: attrArr,
-          timestamp: catData[p][0]
-        };
+        if (cid && result.saved.catalogs.indexOf(cid) === -1) result.saved.catalogs.push(cid);
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
 
-  // Reflexiones por curso (Curso -> {moduloId: texto})
+  // Reflexiones: en que modulos de que curso hay una escrita.
   try {
     var refSheet = getOrCreateSheet(SHEET_CONFIG.reflexiones.name, SHEET_CONFIG.reflexiones.headers);
     var refData = refSheet.getDataRange().getValues();
@@ -504,43 +508,35 @@ function handleRecover(params) {
       if (String(refData[q][1]).toLowerCase().trim() === email) {
         var refCourse = String(refData[q][3]).trim();
         var refModId = String(refData[q][4]).trim();
-        var refTxt = String(refData[q][5] || '');
         if (!refCourse || !refModId) continue;
-        if (!result.reflectionsByCourse[refCourse]) result.reflectionsByCourse[refCourse] = {};
-        result.reflectionsByCourse[refCourse][refModId] = refTxt;
+        if (!result.saved.reflections[refCourse]) result.saved.reflections[refCourse] = [];
+        if (result.saved.reflections[refCourse].indexOf(refModId) === -1) {
+          result.saved.reflections[refCourse].push(refModId);
+        }
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
 
-  // Autodiagnosticos (assessmentId -> {competenciaId: grado})
+  // Autodiagnosticos: que autodiagnosticos hizo, NUNCA con que grados.
   try {
     var asSheet = getOrCreateSheet(SHEET_CONFIG.autodiagnosticos.name, SHEET_CONFIG.autodiagnosticos.headers);
     var asData = asSheet.getDataRange().getValues();
     for (var s = 1; s < asData.length; s++) {
       if (String(asData[s][1]).toLowerCase().trim() === email) {
         var aid = String(asData[s][4]).trim();
-        var cmpId = String(asData[s][5]).trim();
-        var grade = parseInt(asData[s][6], 10);
-        if (!aid || !cmpId || isNaN(grade)) continue;
-        if (!result.assessments[aid]) result.assessments[aid] = { grades: {} };
-        result.assessments[aid].grades[cmpId] = grade;
+        if (aid && result.saved.assessments.indexOf(aid) === -1) result.saved.assessments.push(aid);
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
 
-  // Planes (planId -> {planType, contenido})
+  // Planes personales: que planes existen, no su contenido.
   try {
     var plSheet = getOrCreateSheet(SHEET_CONFIG.planes.name, SHEET_CONFIG.planes.headers);
     var plData = plSheet.getDataRange().getValues();
     for (var t = 1; t < plData.length; t++) {
       if (String(plData[t][1]).toLowerCase().trim() === email) {
         var plId = String(plData[t][4]).trim();
-        if (!plId) continue;
-        var plType = String(plData[t][5] || '');
-        var contStr = String(plData[t][6] || '');
-        var cont = null;
-        try { cont = JSON.parse(contStr); } catch (e) { cont = contStr; }
-        result.plans[plId] = { planType: plType, contenido: cont, timestamp: plData[t][0] };
+        if (plId && result.saved.plans.indexOf(plId) === -1) result.saved.plans.push(plId);
       }
     }
   } catch (err) { /* Hoja puede no existir aun */ }
@@ -577,7 +573,8 @@ function handleVerify(params) {
         return jsonResponse(true, {
           valid: true,
           studentName: certData[i][2],
-          email: certData[i][1],
+          // ADR-074: el correo NO se devuelve. Verificar un certificado es
+          // comprobar que existe y a nombre de quien, no obtener como escribirle.
           course: certData[i][3],
           group: certData[i][4],
           region: certData[i][5],
