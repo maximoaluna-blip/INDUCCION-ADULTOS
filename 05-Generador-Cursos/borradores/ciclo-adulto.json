@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-08-23",
+  "contentVersion": "2026-09-20",
   "icon": "🔄",
   "duration": "30 minutos",
   "level": 1,
@@ -169,7 +169,7 @@
           {
             "text": "Marcela lleva tres meses de tesorera. Ya firmó su Acuerdo Mutuo, está armando su plan con su asesora, y todavía no le han hecho ninguna evaluación. ¿En qué fase del ciclo está?",
             "options": [
-              "En Atracción y Vinculación: apenas lleva tres meses en el cargo.",
+              "En Atracción y Vinculación: apenas lleva tres meses ejerciendo el cargo.",
               "En Desempeño: ya está nombrada, y ahí van formación, acompañamiento y evaluación.",
               "En Decisiones para el Futuro: todavía nadie la ha evaluado."
             ],
@@ -180,7 +180,7 @@
             "options": [
               "Tiene un solo ciclo: el de sus 22 años en el movimiento.",
               "Tiene dos ciclos abiertos en paralelo, uno por cada nombramiento, y ambos arrancan de cero.",
-              "No aplica el ciclo: con esa trayectoria ya no necesita acuerdo ni plan."
+              "No aplica el ciclo: con esa trayectoria ya no necesita acuerdo mutuo ni plan personal."
             ],
             "correctIndex": 1
           }
@@ -523,7 +523,7 @@
             "options": [
               "Sí: el asesor personal es el único responsable de acompañar al adulto durante su nombramiento",
               "No: lo proveen el asesor, tu jefe, tu equipo y tus formadores",
-              "Solo el jefe de grupo, que es quien responde por los adultos del grupo ante la asociación"
+              "Solo el jefe de grupo, que responde por los adultos ante la asociación"
             ],
             "correctIndex": 1
           }
@@ -626,7 +626,7 @@
             "options": [
               "Retiro: si no puede con el cargo, sale del grupo.",
               "Reubicación: se le busca otro cargo que se ajuste mejor, y arranca un ciclo nuevo.",
-              "Renovación: se le firma otro año igual y se espera que mejore."
+              "Renovación: se le firma otro año en el mismo cargo y se espera que mejore."
             ],
             "correctIndex": 1
           },
@@ -644,7 +644,7 @@
             "options": [
               "Solo a una falta de competencia comprobada en la evaluación de desempeño del adulto",
               "Decisión voluntaria, fin del cargo o decisión de la organización",
-              "Solo a una decisión de la asociación; el adulto no puede retirarse por su cuenta"
+              "Decisión exclusiva de la asociación; el adulto no puede retirarse solo"
             ],
             "correctIndex": 1
           }
@@ -741,7 +741,7 @@
           {
             "text": "Si en el futuro asumes un cargo nuevo (ej. pasas de tesorero a presidente del consejo), ¿qué es lo primero que cambia?",
             "options": [
-              "Nada formal: como ya estás vinculado al grupo, sigues con el acuerdo y el plan que ya tienes.",
+              "Nada formal: como ya estás vinculado, sigues con el acuerdo y el plan que ya tienes.",
               "Se abre un ciclo nuevo: hay que acordar y firmar un Acuerdo Mutuo para ese cargo.",
               "Solo se actualiza tu registro en SiScout con el nuevo cargo y sigues con el mismo plan de siempre."
             ],

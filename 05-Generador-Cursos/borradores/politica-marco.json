@@ -3,7 +3,7 @@
   "title": "La Política — Marco y Principios",
   "subtitle": "Curso 2 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecciones cortas vas a entender qué dice la Política Nacional de Adultos, a quién aplica, cuáles son sus principios y qué herramientas trae para acompañarte. Sin tecnicismos: con ejemplos del día a día de un grupo scout.",
-  "contentVersion": "2026-08-02",
+  "contentVersion": "2026-09-20",
   "icon": "📜",
   "duration": "30 minutos",
   "level": 1,
@@ -144,7 +144,7 @@
             "text": "Camilo entró hace 8 meses como tesorero. Nadie le explicó qué se esperaba de él, nadie lo acompañó, y ya está pensando en irse. ¿Qué problema, exactamente, vino a resolver esta política?",
             "options": [
               "Que a los grupos les faltan cargos por llenar: el problema de fondo sería conseguir más voluntarios dispuestos a asumir una responsabilidad",
-              "Que la formación se dictaba presencial y había que volverla virtual, para que alcanzara a llegar a los grupos más alejados",
+              "El de la formación: se dictaba presencial y había que volverla virtual para llegar a los grupos alejados",
               "Exactamente ese: la gente entra con ganas y se quema porque no hay inducción ni acompañamiento"
             ],
             "correctIndex": 2
@@ -334,7 +334,7 @@
             "options": [
               "Que no puede hasta los 25 años",
               "Que se le debe preferir cuando cumple el perfil, por el principio de inserción juvenil",
-              "Que solo puede serlo si lleva más de 5 años en el grupo"
+              "Que solo puede serlo si lleva más de 5 años en el grupo y ya fue dirigente antes"
             ],
             "correctIndex": 1
           },
@@ -554,7 +554,7 @@
             "options": [
               "Sí: si tienes el conocimiento técnico, lo demás se aprende sobre la marcha ejerciendo el cargo",
               "No, hay que demostrar que sabes aplicarlo en el contexto real del grupo",
-              "Solo si el curso está certificado por la ASC; uno externo no cuenta para ejercer el cargo"
+              "Solo si el curso está certificado por la ASC; uno externo no cuenta para el cargo"
             ],
             "correctIndex": 1
           }
@@ -643,7 +643,7 @@
             "text": "El Diccionario de Competencias y el Manual de Cargos son…",
             "options": [
               "Documentos opcionales que cada grupo decide si usar",
-              "Documentos solo para directores nacionales",
+              "Herramientas pensadas solo para los directores nacionales",
               "Dos de las herramientas oficiales del modelo de gestión"
             ],
             "correctIndex": 2
@@ -652,7 +652,7 @@
             "text": "Acabas de acordar tu plan personal de desarrollo con tu asesor y quieres que quede registrado donde la asociación lo pueda ver. ¿Dónde va?",
             "options": [
               "En la plataforma Talento 360°, donde vive tu hoja de vida, tu plan personal y tus evaluaciones",
-              "En el acta del consejo de grupo, que es donde queda constancia de todo",
+              "En el acta del consejo de grupo, que es donde queda constancia de todo lo que se acuerda",
               "En SiScout, que es donde está tu registro de membresía"
             ],
             "correctIndex": 0

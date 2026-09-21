@@ -3,7 +3,7 @@
   "title": "Tu Plan Personal de Desarrollo",
   "subtitle": "Curso 5 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.",
-  "contentVersion": "2026-08-03",
+  "contentVersion": "2026-09-20",
   "icon": "🗺️",
   "duration": "30 minutos",
   "level": 1,
@@ -182,7 +182,7 @@
           {
             "text": "¿De dónde salen las competencias que priorizas en tu PPD?",
             "options": [
-              "De una lista fija, igual para todos los adultos",
+              "De una lista fija de competencias, igual para todos los adultos",
               "De tu valoración inicial por competencias, analizada con tu asesor",
               "De los cursos que estén disponibles ese mes"
             ],
@@ -480,7 +480,7 @@
             "text": "Tu jefe de grupo te pide dos cosas: 'renueva tu afiliación de este año y sube el certificado del curso que acabas de terminar'. ¿Dónde haces cada una?",
             "options": [
               "La afiliación en SiScout y el certificado en Talento 360°, como parte de tu hoja de vida",
-              "Las dos en Talento 360°, que es donde vive todo lo relacionado con el adulto",
+              "Todo en Talento 360°, que es donde vive lo relacionado con el adulto y su hoja de vida",
               "Las dos en SiScout, que es la plataforma principal de la asociación"
             ],
             "correctIndex": 0
@@ -489,7 +489,7 @@
             "text": "Te acaban de nombrar vocal del consejo de grupo — un cargo pequeño, de un año. Un compañero te dice: 'no vale la pena que subas eso a Talento 360°'. ¿Quién tiene razón?",
             "options": [
               "Tu compañero: Talento 360° es solo si vas a postularte a un cargo nacional",
-              "Tu compañero, pero por otra razón: primero necesitas tener la Insignia de Madera",
+              "Tiene razón tu compañero, pero por otra razón: primero necesitas tener la Insignia de Madera y algo de trayectoria",
               "Tú: se sube apenas te nombren en cualquier cargo, incluso de comité o vocal — ahí empieza tu hoja de vida"
             ],
             "correctIndex": 2
@@ -598,7 +598,7 @@
             "text": "Estas tres metas las escribieron adultos reales en su plan. ¿Cuál le sirve a tu asesor para decir en 6 meses si se cumplió o no?",
             "options": [
               "«Pasar de grado 2 a 3 en Relaciones interpersonales: mediar 2 desacuerdos del consejo antes de diciembre.»",
-              "«Comprometerme mucho más con mi rama y con el grupo, poniéndole todas las ganas y el tiempo que este año va a necesitar de mí.»",
+              "«Comprometerme mucho más con mi rama y con el grupo, poniéndole todas las ganas y el tiempo que este año necesite.»",
               "«Mejorar de forma notable mi trabajo en equipo durante este año, para que la relación con los demás dirigentes fluya mucho mejor.»"
             ],
             "correctIndex": 0
@@ -747,7 +747,7 @@
             "text": "El Acuerdo Mutuo se firma:",
             "options": [
               "Entre tú y el estamento (Grupo, Región o Nación) que te nombra",
-              "Entre tú, tu asesor y el jefe de grupo",
+              "Entre tú, tu asesor personal y el jefe de tu grupo scout",
               "Solo con tu asesor"
             ],
             "correctIndex": 0

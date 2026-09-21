@@ -3,7 +3,7 @@
   "title": "La Política de Adultos en el Movimiento",
   "subtitle": "Formación de Adultos Voluntarios — Asociación Scouts de Colombia",
   "description": "Curso introductorio sobre la Política Nacional de Adultos en el Movimiento Scout: el adulto que necesitamos, el enfoque por competencias y el ciclo de gestión del adulto. Dirigido a consejeros, dirigentes y voluntarios que asumen roles en sus grupos scouts.",
-  "contentVersion": "2026-08-02",
+  "contentVersion": "2026-09-20",
   "icon": "🦸",
   "duration": "1 hora 30 minutos",
   "totalContentModules": 5,
@@ -138,7 +138,7 @@
             "options": [
               "Un adulto perfecto que domina todas las áreas desde su llegada",
               "Una persona en formación continua que aporta sus competencias y desarrolla otras nuevas",
-              "Un experto técnico que enseña a los chicos sin involucrarse emocionalmente"
+              "Una persona experta que enseña a los chicos sin involucrarse emocionalmente con ellos"
             ],
             "correctIndex": 1
           },
@@ -329,7 +329,7 @@
             "options": [
               "Conocimiento, experiencia y antigüedad",
               "Saber, hacer y ser",
-              "Teoría, práctica y reconocimiento"
+              "Estudio, práctica y tiempo"
             ],
             "correctIndex": 1
           },
@@ -350,7 +350,7 @@
           {
             "text": "El compromiso aparece como competencia esencial porque:",
             "options": [
-              "Mide cuántas horas dedicas semanalmente al grupo",
+              "Mide cuántas horas le dedicas cada semana al grupo scout",
               "Refleja la adhesión a los principios y valores del movimiento",
               "Es un requisito legal de la asociación"
             ],
@@ -437,7 +437,7 @@
             "options": [
               "La firma del acuerdo mutuo",
               "Identificar la necesidad del grupo y el perfil que requiere",
-              "Subir la hoja de vida a Talento 360"
+              "Subir la hoja de vida a la plataforma Talento 360"
             ],
             "correctIndex": 1
           },
@@ -555,7 +555,7 @@
             "options": [
               "Una persona perfecta y experimentada",
               "Una persona idónea, motivada, en formación continua y comprometida",
-              "Un experto técnico con muchos años en el escultismo"
+              "Un experto técnico con muchos años de experiencia en el escultismo"
             ],
             "correctIndex": 1
           },

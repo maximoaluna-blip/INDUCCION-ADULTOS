@@ -3,7 +3,7 @@
   "title": "Bienvenida al Movimiento de Adultos",
   "subtitle": "Curso 1 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 45 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
-  "contentVersion": "2026-08-02",
+  "contentVersion": "2026-09-20",
   "icon": "🦸",
   "duration": "45 minutos",
   "level": 1,
@@ -291,14 +291,14 @@
             "options": [
               "De que cada uno tenga todas las habilidades",
               "De la complementariedad de sus superpoderes trabajando juntos",
-              "De la antigüedad de cada uno en el movimiento"
+              "De la antigüedad de cada uno de ellos en el movimiento"
             ],
             "correctIndex": 1
           },
           {
             "text": "Camila lleva 15 años de enfermera y es la que calma a todo el mundo cuando hay una crisis. Le proponen entrar al consejo y responde: 'yo no tengo nada especial que aportar al grupo'. ¿Qué está pasando ahí, según esta lección?",
             "options": [
-              "Tiene razón: la enfermería no tiene mucho que ver con lo que necesita un grupo scout",
+              "Tiene razón: la enfermería poco tiene que ver con un grupo scout",
               "Su superpoder le resulta tan natural que ni lo ve como aporte",
               "Le falta rodaje: conviene que lleve un par de años en el grupo antes de opinar sobre lo que aporta"
             ],
@@ -378,7 +378,7 @@
             "options": [
               "Que tiene razón: mientras su hijo esté en el grupo sigue siendo una mamá colaboradora, no una scout",
               "Que al aceptar el cargo en el consejo se volvió 'adulta del movimiento'",
-              "Que primero tendría que hacer la promesa scout para contar como adulta del movimiento"
+              "Que primero tendría que hacer la promesa scout para contar como adulta"
             ],
             "correctIndex": 1
           },
@@ -468,7 +468,7 @@
           {
             "text": "Un compañero te dice: 'me salté el dibujo y me fui directo a los videos, total es lo mismo'. ¿Qué se perdió?",
             "options": [
-              "Nada: los videos terminan explicando lo mismo que uno dibuja",
+              "Nada: los videos explican lo mismo que uno dibuja",
               "Comparar su propia idea con la de los demás",
               "Los 3 minutos de la actividad, pero llega igual al resultado"
             ],
@@ -532,7 +532,7 @@
             "options": [
               "Que el título es buen filtro: garantiza que la persona sabe organizarse y cumplir",
               "Que se pregunte por escucha, compromiso y trabajo en equipo",
-              "Que se deje sin perfil: cualquiera que se ofrezca sirve para el consejo"
+              "Que se deje sin perfil: quien se ofrezca sirve para el consejo"
             ],
             "correctIndex": 1
           }
@@ -714,7 +714,7 @@
             "options": [
               "El compromiso de una frase que escribiste en el Curso 1 y el autodiagnóstico del Curso 4",
               "Un plan que ya te llega armado desde la regional, de acuerdo con su calendario anual de formación",
-              "Un certificado de Talento 360 que se obtiene por separado antes de empezar"
+              "El certificado de Talento 360 que se obtiene por separado antes de empezar"
             ],
             "correctIndex": 0
           }
