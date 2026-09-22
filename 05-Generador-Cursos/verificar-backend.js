@@ -102,7 +102,12 @@ function deploymentIdFromUrl(url) {
   return m ? m[1] : null;
 }
 
-function fetchUrl(url, timeoutMs = 15000) {
+// 45 s, y no 15. El payload de `stats` agrega SEIS hojas -registros, certificados,
+// progreso, evaluaciones, items- y hoy tarda decenas de segundos; la primera llamada
+// despues de promover una version tarda mas todavia, porque Apps Script recompila.
+// Con 15 s este paso salía en rojo con un backend perfectamente sano, y un rojo que
+// significa "tardó" se lee igual que uno que significa "está roto".
+function fetchUrl(url, timeoutMs = 45000) {
   return new Promise((resolve, reject) => {
     const req = https.get(url, { timeout: timeoutMs }, res => {
       // Apps Script suele redirigir a googleusercontent — seguir redirección
@@ -187,7 +192,16 @@ function fetchUrl(url, timeoutMs = 15000) {
   } else {
     const url = prodUrl + (prodUrl.includes('?') ? '&' : '?') + 'action=stats&t=' + Date.now();
     try {
-      const res = await fetchUrl(url);
+      // Un reintento, y solo ante Timeout: si el endpoint responde mal, que falle a
+      // la primera; si tarda, que no invente una averia que no hay.
+      let res;
+      try {
+        res = await fetchUrl(url);
+      } catch (e1) {
+        if (!/Timeout/i.test(e1.message)) throw e1;
+        warn('Primer intento agotado (' + e1.message + '). Reintentando una vez\u2026');
+        res = await fetchUrl(url);
+      }
       if (res.status !== 200) {
         fail('El endpoint devolvió HTTP ' + res.status, 'Esperado 200.');
       } else {
