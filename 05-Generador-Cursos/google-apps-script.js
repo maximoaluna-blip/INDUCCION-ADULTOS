@@ -601,7 +601,6 @@ function handleStats() {
       totalUsers: 0,
       totalCertificates: 0,
       totalQuizzes: 0,
-      totalCommitments: 0,
       completionsByModule: {},
       courseStats: {},
       averageScore: 0,
@@ -799,12 +798,15 @@ function handleStats() {
       }
     } catch (err) { /* Sin datos aun */ }
 
-    // Contar compromisos
-    try {
-      var comSheet = getOrCreateSheet(SHEET_CONFIG.compromisos.name, SHEET_CONFIG.compromisos.headers);
-      var comData = comSheet.getDataRange().getValues();
-      stats.totalCommitments = Math.max(0, comData.length - 1);
-    } catch (err) { /* Sin datos aun */ }
+    // Sin metrica de compromisos (hallazgo C4, auditoria del 20-sep-2026).
+    // La caja del compromiso es LOCAL POR DISENO: saveCommitment() de
+    // engine.core.js solo escribe en localStorage y ningun curso de las cuatro
+    // lineas envia action='commitment', asi que el conteo era 0 estructural y
+    // el panel habria mostrado un cero como si fuera un dato. Se retira en vez
+    // de conectarse: guardar en una hoja lo que cada adulto se compromete a
+    // hacer va en direccion contraria al ADR-074, y esa decision es del dueno.
+    // La hoja 'Compromisos' y handleCommitment() se conservan: si algun dia se
+    // decide conectarlo, el camino de escritura ya existe.
 
     // Resumen agregado que el dashboard usa para los KPI principales
     stats.resumen = {

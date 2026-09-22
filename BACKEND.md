@@ -99,7 +99,7 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 | POST | `action=progress` | token + datos del módulo | ✅ AUTH_TOKEN | Guardar completación de módulo |
 | POST | `action=quiz` | token + datos del quiz | ✅ AUTH_TOKEN | Guardar resultado de mini-quiz |
 | POST | `action=certificate` | token + datos del cert | ✅ AUTH_TOKEN | Emitir certificado |
-| POST | `action=commitment` | token + datos del compromiso | ✅ AUTH_TOKEN | Guardar compromiso final |
+| POST | `action=commitment` | token + datos del compromiso | ✅ AUTH_TOKEN | Guardar compromiso final. ⚠️ **Existe pero no lo llama nadie**: `saveCommitment()` del motor escribe solo en `localStorage` (el compromiso es local por diseño, ADR-040). La hoja está vacía desde siempre |
 
 ---
 
@@ -111,7 +111,7 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 | `Progreso` | Timestamp, Email, Nombre, Curso, Modulo Completado, Nombre Modulo |
 | `Evaluaciones` | Timestamp, Email, Nombre, Curso, Modulo, Puntuacion |
 | `Certificados` | Timestamp, Email, Nombre, Curso, Grupo, Region, Codigo Certificado, Fecha Completacion, Puntuacion, Tiempo Estudio |
-| `Compromisos` | Timestamp, Email, Nombre, Curso, Compromiso |
+| `Compromisos` | Timestamp, Email, Nombre, Curso, Compromiso — ⚠️ **vacía**: ningún curso envía `action=commitment` |
 | `Recordatorios` | Timestamp, Email, Nombre, Curso, Dias Inactivo, Tipo |
 
 ---
@@ -123,6 +123,7 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 | 2026-05-17 | Dashboard mostraba solo agregados, no detalle. `handleStats()` no devolvía arrays. | Crear `verificar-backend.js` + este documento BACKEND.md. Documentar diferencia entre Web App URL y Deployment ID. |
 | 2026-05-17 (cont.) | El Script ID que se creía como producción era de otro proyecto de pruebas. El clasp local apuntaba al script equivocado. | Verificar el script de producción es el que está vinculado al Google Sheet vivo (Extensiones → Apps Script desde el sheet). El Script ID real es `1TTJ2VjN...gCrqe`, no `1x151jip...`. Reconfigurado `.clasp.json` y aplicado el parche de `handleStats()` al script correcto. |
 | 2026-06-20 | El script de prod `1TTJ2VjN…` **y su Sheet contenedor estaban en la papelera de Drive**. La web app seguía sirviendo, pero Drive purga la papelera a los 30 días → habría tumbado el backend y borrado los datos. Causa probable: borrado accidental (el frontend nunca cambió de URL). Además, prod tenía una validación `edad >= 18` en `handleRegister` que **no estaba en el repo** (drift por edición directa). | **Restaurado** desde la papelera (Apps Script → "Recuperar de la papelera"; al ser script vinculado, restaura también el Sheet contenedor). Redeploy **Versión 6** con el fix de código de certificado (el backend ahora honra el `certificateCode` del frontend). Repo `google-apps-script.js` **sincronizado con prod** (se incorporó la validación edad>=18). Pendiente: anotar arriba el ID/URL del Sheet vivo. |
+| 2026-09-21 | **Hallazgo C4** de la auditoría de plataforma. `handleStats()` publicaba `totalCommitments`, contado sobre la hoja `Compromisos`, que está vacía desde siempre: `saveCommitment()` del motor escribe solo en `localStorage` y ningún curso envía `action=commitment`. Con 20 usuarios y 21 certificados, la métrica valía **0**. **Retirada del payload** en los dos backends (plataforma y Rover) en vez de conectarla: sincronizar el compromiso significaría guardar en una hoja lo que cada adulto se compromete a hacer, que es lo contrario de lo que decidió el ADR-074 el mismo día. `handleCommitment()` y la hoja se conservan por si el dueño decide lo otro. | **Una métrica que nadie alimenta no es un cero: es una afirmación falsa.** El panel no la pintaba, así que nadie la echó en falta — y por eso llevaba meses publicándose. |
 | 2026-09-21 | **ADR-074.** `recover` devolvía, con solo un correo y sin autenticación, todo lo que la persona había escrito; `verify` devolvía su correo. Reescritos los dos: `recover` entrega **avance** y señales de existencia, `verify` ya no da el correo. Probado en local con un Sheets simulado (18 comprobaciones) y **probado disparando** contra la versión anterior. ⚠️ **Falta el despliegue**: el fuente está en `.clasp-workspace/`, pero producción sigue fijada a `@8` y promoverla es del dueño. |
 | 2026-08-23 | **Este documento decía `@6` cuando producción llevaba en `@8` desde el 03-ago.** La memoria del proyecto repetía el mismo dato viejo, así que una consulta de estado concluyó "el deploy de ADR-030 sigue pendiente" cuando llevaba tres semanas hecho. `verificar-backend.js` daba 4/4 verde: sus pasos comprueban coherencia entre archivos, no contra el código realmente desplegado. | **El número de versión escrito en un `.md` no es fuente de verdad.** Añadido el **Paso 5** a `verificar-backend.js`: pregunta al endpoint vivo si el payload de `stats` trae la clave `items` (solo existe desde ADR-030). Un doc desactualizado ya no puede afirmar que producción está al día. |
 
