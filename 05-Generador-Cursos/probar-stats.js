@@ -21,6 +21,14 @@
  * registro y su certificado se hacía POR CORREO, así que al sacar el correo del
  * payload lo que podía romperse en silencio era la columna Estado del panel.
  *
+ * QUÉ VIGILA TAMBIÉN, DESDE EL ADR-079. Que `tasaCompletacion` cuente
+ * INSCRIPCIONES y no certificados por inscripción. Hasta el 21-sep-2026 era
+ * `totalCertificates / totalUsers`, una división que cruza cursos: el panel
+ * publicaba 105 % con 21 certificados y 20 registros. Las hojas simuladas de
+ * aquí abajo reproducen esa forma a escala — Ana está inscrita en UN curso y
+ * tiene certificados de TRES — para que el defecto tenga dónde aparecer: con el
+ * código anterior esta prueba mide 150 %.
+ *
  * Uso:   node probar-stats.js
  * Salida: exit 0 si todo pasa, exit 1 al primer fallo real.
  */
@@ -46,6 +54,11 @@ const SHEETS = {
   'Certificados': [
     ['Timestamp', 'Email', 'Nombre', 'Curso', 'Grupo', 'Region', 'Codigo Certificado', 'Fecha Completacion', 'Puntuacion', 'Tiempo Estudio'],
     ['2026-09-03', 'ana@example.com', 'Ana Prueba', 'bienvenida-adultos', 'Grupo 12 Cali', 'Valle', 'ASC-CERT-0001', '2026-09-03', 100, '35'],
+    // Los dos siguientes son la forma que tiene producción y la razón del ADR-079:
+    // certificados de cursos en los que Ana NO tiene fila de inscripción. Con la
+    // división vieja subían el numerador sin tocar el denominador.
+    ['2026-09-04', 'ana@example.com', 'Ana Prueba', 'competencias-esenciales', 'Grupo 12 Cali', 'Valle', 'ASC-CERT-0002', '2026-09-04', 100, '31'],
+    ['2026-09-05', 'ana@example.com', 'Ana Prueba', 'plan-personal', 'Grupo 12 Cali', 'Valle', 'ASC-CERT-0003', '2026-09-05', 100, '28'],
   ],
   'Progreso': [
     ['Timestamp', 'Email', 'Nombre', 'Curso', 'Modulo Completado', 'Nombre Modulo'],
@@ -146,7 +159,7 @@ const crudoPublico = JSON.stringify(pub);
 
 check('El GET público responde con éxito', publico.success === true, publico.error);
 check('...y trae los agregados que el panel necesita',
-  pub.totalUsers === 2 && pub.totalCertificates === 1 && pub.resumen && Array.isArray(pub.modulos),
+  pub.totalUsers === 2 && pub.totalCertificates === 3 && pub.resumen && Array.isArray(pub.modulos),
   `totalUsers=${pub.totalUsers} totalCertificates=${pub.totalCertificates}`);
 check('...y `registros[]` viene VACÍO', Array.isArray(pub.registros) && pub.registros.length === 0,
   `length=${pub.registros && pub.registros.length}`);
@@ -156,7 +169,7 @@ check('...y lo declara con `detalleIncluido: false`', pub.detalleIncluido === fa
 check('...y NO aparece ningún nombre en todo el payload', !/Ana Prueba|Luis Prueba/.test(crudoPublico));
 check('...ni ningún correo', !/@example\.com/.test(crudoPublico));
 check('...ni ningún grupo o región', !/Grupo 12 Cali|Grupo 3 Bogota/.test(crudoPublico));
-check('...ni ningún código de certificado', !/ASC-CERT-0001/.test(crudoPublico));
+check('...ni ningún código de certificado', !/ASC-CERT-000[123]/.test(crudoPublico));
 
 // 2. POST sin la clave configurada en el script: falla CERRADA.
 scriptProperties = {};
@@ -184,8 +197,8 @@ const det = conClave.data || {};
 const crudoDetalle = JSON.stringify(det);
 
 check('Con la clave correcta, el detalle llega', conClave.success === true, conClave.error);
-check('...con los 2 registros y el 1 certificado',
-  det.registros && det.registros.length === 2 && det.certificados && det.certificados.length === 1,
+check('...con los 2 registros y los 3 certificados',
+  det.registros && det.registros.length === 2 && det.certificados && det.certificados.length === 3,
   `registros=${det.registros && det.registros.length} certificados=${det.certificados && det.certificados.length}`);
 check('...y lo declara con `detalleIncluido: true`', det.detalleIncluido === true, String(det.detalleIncluido));
 check('...y trae lo que el panel pinta (nombre, grupo, región)',
@@ -201,9 +214,37 @@ check('El estado «Completado» sigue calculándose sin el correo en el payload'
 check('...y quien no tiene certificado sigue «En progreso»',
   luis.estado === 'En progreso', `Luis: ${luis.estado}`);
 
+// 7. ADR-079: la tasa de completación cuenta inscripciones, no certificados.
+//    El fixture tiene 2 inscripciones y 3 certificados: la fórmula vieja daba 150 %.
+const res = pub.resumen || {};
+const crudoResumen = JSON.stringify(res);
+
+check('La tasa de completación NO puede pasar del 100 %',
+  typeof res.tasaCompletacion === 'number' && res.tasaCompletacion <= 100,
+  `tasaCompletacion=${res.tasaCompletacion}`);
+check('...porque cuenta inscripciones completadas, no certificados por inscripción',
+  res.tasaCompletacion === 50,
+  `tasaCompletacion=${res.tasaCompletacion} (la fórmula anterior daba 150)`);
+check('...y publica el numerador y el denominador de los que sale',
+  res.inscripciones === 2 && res.inscripcionesCompletadas === 1,
+  `inscripciones=${res.inscripciones} completadas=${res.inscripcionesCompletadas}`);
+check('...y los certificados sin inscripción se publican aparte, no se esconden',
+  res.certificadosSinInscripcion === 2,
+  `certificadosSinInscripcion=${res.certificadosSinInscripcion}`);
+check('...y el conteo nuevo sigue sin identificar a nadie',
+  crudoResumen.indexOf('Ana') === -1 && crudoResumen.indexOf('@') === -1, crudoResumen);
+
+// 8. Sin una sola fila: el porcentaje es 0, no NaN ni una división por cero.
+SHEETS['Registros'] = [SHEETS['Registros'][0]];
+SHEETS['Certificados'] = [SHEETS['Certificados'][0]];
+const sinFilas = (unwrap(ctx.doGet({ parameter: { action: 'stats' } })).data || {}).resumen || {};
+check('Con cero inscripciones la tasa es 0, no NaN',
+  sinFilas.tasaCompletacion === 0 && sinFilas.inscripciones === 0,
+  `tasaCompletacion=${sinFilas.tasaCompletacion} inscripciones=${sinFilas.inscripciones}`);
+
 // --- Informe ---------------------------------------------------------------
 const c = { verde: '\x1b[32m', rojo: '\x1b[31m', gris: '\x1b[90m', fin: '\x1b[0m' };
-console.log('\nADR-078 — el padrón no sale sin clave\n');
+console.log('\nADR-078 — el padrón no sale sin clave · ADR-079 — la tasa cuenta inscripciones\n');
 results.forEach((r) => {
   const marca = r.ok ? `${c.verde}OK  ${c.fin}` : `${c.rojo}FALLA${c.fin}`;
   const extra = !r.ok && r.detail ? ` ${c.gris}(${r.detail})${c.fin}` : '';

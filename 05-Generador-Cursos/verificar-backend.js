@@ -2,7 +2,7 @@
 /**
  * verificar-backend.js — Validación pre-deploy del backend Apps Script.
  *
- * Verifica 5 cosas antes de tocar producción:
+ * Verifica 6 cosas antes de tocar producción:
  *   1. La URL de `googleScriptUrl` en build-course.js coincide con la URL del
  *      deployment de producción declarado en BACKEND.md.
  *   2. El endpoint responde (no está caído).
@@ -15,6 +15,9 @@
  *   5. El código que producción SIRVE de verdad conoce ADR-030 (análisis de
  *      ítems). Los pasos 1-4 solo comparan archivos entre sí: un backend
  *      fijado a una versión vieja los pasa todos en verde.
+ *   6. Y que ese mismo código desplegado calcula la tasa de completación por
+ *      INSCRIPCIONES (ADR-079). Es el otro síntoma de lo mismo: el panel
+ *      publicaba 105 % porque dividía certificados entre registros.
  *
  * Uso:
  *   node verificar-backend.js
@@ -286,6 +289,40 @@ function fetchUrl(url, timeoutMs = 15000) {
     if (unicos.length) {
       warn('Datos de prueba en producción: ' + unicos.join(', '));
       console.log('    ' + colors.yellow('Bórralos del Sheet antes de que ensucien las tasas de acierto reales.'));
+    }
+  }
+
+  // -------- La tasa de completacion se mide por inscripciones --------
+  step('Paso 6 — el deployment calcula la tasa por inscripciones (ADR-079)');
+  if (!statsData) {
+    warn('Sin respuesta válida en el paso 4, no puedo comprobarlo.');
+  } else {
+    const resumen = statsData.resumen || {};
+    const tasa = resumen.tasaCompletacion;
+    if (typeof resumen.inscripciones !== 'number') {
+      fail('El código desplegado NO conoce el ADR-079.',
+        [
+          'El `resumen` no trae `inscripciones`, así que su `tasaCompletacion` (' + tasa + ')',
+          '    sigue siendo `totalCertificates / totalUsers`: una división que cruza cursos y',
+          '    que el 21-sep-2026 publicaba 105 % en el panel.',
+          '',
+          '    Un `clasp push` NO basta — hay que crear versión y reapuntar el deployment:',
+          '      npx clasp list-deployments',
+          '      npx clasp create-deployment -i <deploymentId> -d "<motivo>"',
+        ].join('\n'));
+    } else if (typeof tasa !== 'number' || tasa > 100) {
+      // Con la formula nueva esto no puede pasar: numerador y denominador son el
+      // mismo conjunto de pares persona+curso. Si pasa, algo cuenta de mas.
+      fail('La tasa de completación es imposible: ' + tasa + ' %.',
+        'Con ' + resumen.inscripcionesCompletadas + ' de ' + resumen.inscripciones +
+        ' inscripciones no puede pasar del 100 %.');
+    } else {
+      pass('Tasa por inscripciones: ' + tasa + ' % (' + resumen.inscripcionesCompletadas +
+           ' de ' + resumen.inscripciones + ').');
+      if (resumen.certificadosSinInscripcion) {
+        warn(resumen.certificadosSinInscripcion + ' certificado(s) sin inscripción que los respalde.');
+        console.log('    ' + colors.yellow('Alguien certifica sin pasar por el registro: no inflan la tasa, pero conviene mirarlo.'));
+      }
     }
   }
 

@@ -637,6 +637,14 @@ function handleStats(includeDetail) {
     // Set de emails con certificado emitido (para marcar estado del registro)
     var emailsConCertificado = {};
 
+    // Las dos caras del mismo cruce, para la tasa de completacion (ADR-079).
+    // `inscripcionKeys` es el conjunto de pares persona+curso INSCRITOS; `certKeys`
+    // es la clave de cada certificado emitido, en el orden de la hoja. Con los dos
+    // se cuenta la interseccion (inscripciones completadas) y lo que sobra por el
+    // lado de los certificados (emitidos sin inscripcion que los respalde).
+    var inscripcionKeys = {};
+    var certKeys = [];
+
     // Contar registros + construir array detallado
     try {
       var regSheet = getOrCreateSheet(SHEET_CONFIG.registros.name, SHEET_CONFIG.registros.headers);
@@ -650,6 +658,12 @@ function handleStats(includeDetail) {
           stats.courseStats[course] = { registrations: 0, certificates: 0, avgScore: 0, scores: [] };
         }
         stats.courseStats[course].registrations++;
+
+        // La inscripcion es el par persona+curso. Sin correo no hay par que cruzar,
+        // asi que esa fila no entra al conjunto: quedara 'En progreso' para siempre,
+        // que es lo unico que se puede afirmar de ella.
+        var regEmail = String(regData[i][5] || '').toLowerCase();
+        if (regEmail) inscripcionKeys[regEmail + '|' + course] = true;
 
         // Detalle para la tabla. `_email` lleva guion bajo porque NO se envia:
         // solo sirve para cruzar el registro con su certificado aqui dentro.
@@ -691,6 +705,9 @@ function handleStats(includeDetail) {
         });
         // Marcar al usuario como completado
         if (cEmail) emailsConCertificado[cEmail + '|' + cCourse] = true;
+        // Una entrada por FILA de certificado, tambien las que no tienen correo:
+        // un certificado sin correo no se puede emparejar con ninguna inscripcion.
+        certKeys.push(cEmail ? (cEmail + '|' + cCourse) : '');
       }
     } catch (err) { /* Sin datos aun */ }
 
@@ -700,6 +717,29 @@ function handleStats(includeDetail) {
       if (emailsConCertificado[key]) {
         regDetail[ri].estado = 'Completado';
       }
+    }
+
+    // --- Tasa de completacion: se cuentan INSCRIPCIONES (ADR-079) ---
+    // Hasta hoy era `certificados / registros`, y esa division cruza cursos: quien
+    // termina tres cursos suma tres al numerador y uno al denominador. El 21-sep-2026
+    // el panel publicaba 105 % con 21 certificados y 20 registros. Ahora se cuenta lo
+    // que el rotulo promete: de las inscripciones que hay, cuantas llegaron al
+    // certificado. Por construccion no puede pasar del 100 %, porque numerador y
+    // denominador son el MISMO conjunto de pares persona+curso.
+    var inscripciones = regDetail.length;
+    var inscripcionesCompletadas = 0;
+    for (var ic = 0; ic < regDetail.length; ic++) {
+      if (regDetail[ic].estado === 'Completado') inscripcionesCompletadas++;
+    }
+
+    // Lo que la division vieja escondia dentro del numerador. No es ruido: el
+    // 21-sep-2026 eran 7 de 21 certificados -un tercio- emitidos para pares
+    // persona+curso que no tienen fila en `Registros`. Se publica aparte para que
+    // el panel pueda decirlo en vez de inflar la tasa con ellos. Es un conteo: no
+    // identifica a nadie y por eso puede viajar en el agregado publico (ADR-078).
+    var certificadosSinInscripcion = 0;
+    for (var ck = 0; ck < certKeys.length; ck++) {
+      if (!certKeys[ck] || !inscripcionKeys[certKeys[ck]]) certificadosSinInscripcion++;
     }
 
     // Analisis de items: que pregunta falla la gente (ADR-030). Hoja anonima.
@@ -860,9 +900,14 @@ function handleStats(includeDetail) {
     stats.resumen = {
       totalRovers: stats.totalUsers,
       totalCertificados: stats.totalCertificates,
-      tasaCompletacion: (stats.totalUsers > 0
-        ? Math.round((stats.totalCertificates / stats.totalUsers) * 100)
+      // El denominador de la tasa y su numerador, publicados al lado de ella: un
+      // porcentaje solo se puede auditar si se ven las dos cifras de las que sale.
+      inscripciones: inscripciones,
+      inscripcionesCompletadas: inscripcionesCompletadas,
+      tasaCompletacion: (inscripciones > 0
+        ? Math.round((inscripcionesCompletadas / inscripciones) * 100)
         : 0),
+      certificadosSinInscripcion: certificadosSinInscripcion,
       promedioPuntuacion: stats.averageScore || 0
     };
 
