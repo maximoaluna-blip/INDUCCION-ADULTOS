@@ -379,6 +379,19 @@ function doGet(e) {
  * De eso solo informa QUE existe y DONDE (ids), nunca su contenido, para que la
  * interfaz pueda decir "esto ya lo hiciste" sin exponerlo.
  * Lo escrito se queda en el navegador donde se escribio: es local por diseno.
+ *
+ * ADR-080 (21-sep-2026) - Y AHORA DICE SI HAY INSCRIPCION PARA EL CURSO QUE SE PIDE.
+ * Esta funcion recibia `params.course` y lo tiraba: buscaba por correo y devolvia
+ * la PRIMERA fila que encontrara, del curso que fuera. El motor entraba con ese
+ * registro ajeno, la persona hacia el curso y al final se escribia su certificado
+ * -pero nunca su inscripcion-. Medido el 21-sep-2026: 7 certificados sin fila, y
+ * SEIS eran la linea Desarrollo Institucional entera, que el panel mostraba con
+ * cero adultos teniendo sus seis cursos completados.
+ * Desde hoy la respuesta lleva `registeredInCourse` para el curso preguntado, y el
+ * motor crea la inscripcion -por POST y con token- cuando vale false. Aqui NO se
+ * escribe nada: este endpoint es un GET publico y sin autenticar, y uno que
+ * escribiera dejaria que cualquiera que sepa un correo cree inscripciones, que es
+ * la direccion contraria al ADR-074 y al ADR-078.
  */
 function handleRecover(params) {
   var email = sanitize(params.email, 200);
@@ -389,6 +402,10 @@ function handleRecover(params) {
 
   var result = {
     registration: null,
+    // null cuando no se pregunto por un curso; true/false cuando si (ADR-080).
+    // Es un booleano sobre el correo que ya se esta preguntando: no anade ninguna
+    // identidad a una respuesta que ya devuelve el registro basico.
+    registeredInCourse: null,
     modules: [],
     quizzes: [],
     certificates: [],
@@ -402,13 +419,19 @@ function handleRecover(params) {
     }
   };
 
+  // El curso que se pregunta. Vacio = no se pregunta por ninguno, y entonces
+  // `registeredInCourse` se queda en null: "no se pregunto" no es "no esta inscrito".
+  var cursoPedido = sanitize(params.course, 200);
+
   // Buscar en Registros - sin el campo Motivacion, que es texto libre.
   try {
     var regSheet = getOrCreateSheet(SHEET_CONFIG.registros.name, SHEET_CONFIG.registros.headers);
     var regData = regSheet.getDataRange().getValues();
+    var primera = null;      // la primera fila de esta persona, sea del curso que sea
+    var deEsteCurso = null;  // la del curso preguntado, si existe
     for (var i = 1; i < regData.length; i++) {
       if (String(regData[i][5]).toLowerCase().trim() === email) {
-        result.registration = {
+        var fila = {
           timestamp: regData[i][0],
           fullName: regData[i][1],
           age: regData[i][2],
@@ -417,9 +440,18 @@ function handleRecover(params) {
           email: regData[i][5],
           course: regData[i][7]
         };
-        break; // Tomar el primer registro
+        if (!primera) primera = fila;
+        if (cursoPedido && String(regData[i][7] || '') === cursoPedido) {
+          deEsteCurso = fila;
+          break; // la del curso preguntado manda: no hay nada mejor que buscar
+        }
       }
     }
+    // Se prefiere la inscripcion DE ESTE CURSO cuando existe. Antes se devolvia
+    // siempre la primera, asi que la fecha de inscripcion y hasta el curso que
+    // acompanaban al perfil podian ser los de otro.
+    result.registration = deEsteCurso || primera;
+    if (cursoPedido) result.registeredInCourse = !!deEsteCurso;
   } catch (err) { /* Hoja puede no existir aun */ }
 
   // Buscar en Progreso

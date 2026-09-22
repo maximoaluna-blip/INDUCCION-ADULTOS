@@ -432,6 +432,35 @@ function recoverProgress() {
                 updateStats();
                 updateProgress();
 
+                // --- ADR-080: recuperar TAMBIEN inscribe en este curso ---
+                // `recover` busca por correo y devuelve la inscripcion que encuentre,
+                // sea del curso que sea. Hasta hoy se entraba aqui con el registro de
+                // OTRO curso, se hacia este entero y al final se escribia el
+                // certificado pero nunca la inscripcion. Medido el 21-sep-2026: 7
+                // certificados sin fila, y SEIS eran la linea Desarrollo Institucional
+                // entera -seis cursos completados que el panel mostraba con 0 adultos-.
+                // Se inscribe SOLO ante un `false` explicito. Si el campo no viene
+                // -deployment anterior al ADR-080- no se toca nada: un `undefined` no
+                // puede leerse como "vuelve a inscribirla", que seria duplicar filas.
+                var inscritoAhora = false;
+                if (serverData.registeredInCourse === false && userProfile && userProfile.fullName) {
+                    // Campo a campo y no con spread, para que se vea que `motivation`
+                    // va vacia: `recover` no la devuelve desde el ADR-074, y rellenarla
+                    // con cualquier cosa seria poner palabras en boca de alguien.
+                    sendToGoogleSheets({
+                        action: 'register',
+                        fullName: userProfile.fullName,
+                        age: userProfile.age,
+                        group: userProfile.group,
+                        region: userProfile.region,
+                        email: userProfile.email,
+                        motivation: '',
+                        registrationDate: new Date().toISOString(),
+                        course: COURSE_CONFIG.courseId
+                    });
+                    inscritoAhora = true;
+                }
+
                 // Determinar último módulo completado
                 var lastModule = data.currentModule || 0;
                 if (!lastModule && moduleProgress.length > 0) {
@@ -447,14 +476,22 @@ function recoverProgress() {
                 var completedCount = moduleProgress.filter(Boolean).length;
                 showNotification('¡Avance recuperado, ' + firstName + '! ' + completedCount + ' módulos completados 🎉');
 
-                if (anotaciones > 0) {
+                // ADR-080: si acabamos de inscribirla en este curso, se dice. Es la
+                // otra mitad de la decision -- el dato se arregla y el texto lo cuenta.
+                var avisoInscripcion = inscritoAhora
+                    ? '<p style="color: #2e7d32; margin-top: 10px;">Te inscribimos en <strong>este curso</strong> con esos mismos datos.</p>'
+                    : '';
+                var avisoAnotaciones = anotaciones > 0
+                    ? '<p style="color: #636363; margin-top: 10px;">Tienes <strong>' + anotaciones +
+                      '</strong> anotaciones guardadas (reflexiones, compromisos o planes). ' +
+                      'Lo que escribes <strong>no se recupera por correo</strong>: se queda en el navegador donde lo escribiste. ' +
+                      'Abre el curso en ese dispositivo para verlas.</p>'
+                    : '';
+
+                if (anotaciones > 0 || inscritoAhora) {
                     msgDiv.style.display = 'block';
                     msgDiv.innerHTML = '<p style="color: #2e7d32; font-weight: 600;">✅ Recuperamos tu avance: ' +
-                        completedCount + ' módulos.</p>' +
-                        '<p style="color: #636363; margin-top: 10px;">Tienes <strong>' + anotaciones +
-                        '</strong> anotaciones guardadas (reflexiones, compromisos o planes). ' +
-                        'Lo que escribes <strong>no se recupera por correo</strong>: se queda en el navegador donde lo escribiste. ' +
-                        'Abre el curso en ese dispositivo para verlas.</p>';
+                        completedCount + ' módulos.</p>' + avisoInscripcion + avisoAnotaciones;
                 } else {
                     msgDiv.style.display = 'none';
                 }

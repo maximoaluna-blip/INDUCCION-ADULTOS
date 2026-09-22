@@ -477,7 +477,7 @@ function buildRegistrationModule(course) {
 
                 <div class="recovery-section hidden" id="recoverySection">
                     <h3>🔄 Recuperar tu avance anterior</h3>
-                    <p style="color: #636363; margin-bottom: 15px;">Ingresa el correo electronico con el que te registraste para recuperar tu progreso.</p>
+                    <p style="color: #636363; margin-bottom: 15px;">Ingresa el correo con el que te registraste en cualquier curso de la plataforma. Recuperamos tu avance y, si es la primera vez que entras a este curso, te inscribimos con esos mismos datos.</p>
                     <div class="form-group">
                         <label for="recoveryEmail">Correo Electronico</label>
                         <input type="email" id="recoveryEmail" placeholder="Ej: juan.perez@email.com" required>
