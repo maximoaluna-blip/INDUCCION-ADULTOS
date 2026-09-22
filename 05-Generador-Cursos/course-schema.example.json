@@ -370,7 +370,7 @@
         "questions": [
           {
             "text": "¿En cuántos países está presente el movimiento scout actualmente?",
-            "options": ["50 países", "100 países", "172 países y territorios"],
+            "options": ["50 países y territorios", "100 países y territorios", "172 países y territorios"],
             "correctIndex": 2
           },
           {

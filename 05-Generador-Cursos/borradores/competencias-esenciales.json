@@ -3,7 +3,7 @@
   "title": "Las 7 Competencias Esenciales",
   "subtitle": "Curso 4 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~35 min, 6 lecciones cortas.",
-  "contentVersion": "2026-09-20",
+  "contentVersion": "2026-09-21",
   "icon": "🧠",
   "duration": "40 minutos",
   "level": 1,
@@ -217,6 +217,10 @@
               "borderColor": "#ffc107"
             }
           ]
+        },
+        {
+          "type": "info-box",
+          "text": "⚠️ <strong>¿Y la Familia de Cachorros?</strong> El Manual de Cargos es de 2020 y todavía no perfila al Jefe de Familia de Cachorros: si sirves ahí, el perfil que más se te parece es el de Jefe de Manada."
         },
         {
           "type": "info-box",
@@ -472,14 +476,14 @@
             "options": [
               "Está mostrando alta conciencia organizacional, porque reconoce lo particular de cada grupo",
               "Está mostrando un nivel bajo de conciencia organizacional",
-              "Tiene razón: cada grupo debería poder operar de forma autónoma"
+              "Tiene razón: las políticas nacionales no obligan a cada grupo"
             ],
             "correctIndex": 1
           },
           {
             "text": "El jefe de grupo llega al consejo con el plan estratégico de la región, explica qué parte les toca a ellos y arma con el equipo la malla de actividades del año con fechas de revisión en junio y noviembre. ¿Qué grado de Planeamiento estratégico está mostrando?",
             "options": [
-              "Grado 1 — conoce sus responsabilidades y resuelve lo cotidiano del grupo",
+              "Grado 1 — conoce sus responsabilidades y resuelve lo cotidiano de su cargo",
               "Grado 3 — convierte las políticas en planes concretos y fija puntos de control",
               "Grado 4 — propone mejoras al plan estratégico de la región"
             ],
@@ -911,7 +915,7 @@
             "options": [
               "Que ahí tienes el mayor espacio para crecer, y por eso entra a tus prioridades",
               "Que fallaste en esa competencia y conviene no mencionarla en tu plan para no quedar mal ante tu asesor",
-              "Que es tu competencia más débil y por eso es la primera que hay que atacar"
+              "Que es tu competencia más débil y la única que debes trabajar este ciclo"
             ],
             "correctIndex": 0
           },

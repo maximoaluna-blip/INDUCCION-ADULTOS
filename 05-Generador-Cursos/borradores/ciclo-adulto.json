@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-09-20",
+  "contentVersion": "2026-09-21",
   "icon": "🔄",
   "duration": "30 minutos",
   "level": 1,
@@ -451,7 +451,7 @@
             },
             {
               "title": "3. Heteroevaluación",
-              "description": "Quienes reciben tu trabajo te evalúan: chicos, padres, lobatos, scouts, caminantes, rovers — según corresponda al cargo.",
+              "description": "Quienes reciben tu trabajo te evalúan: chicos, padres, cachorros, lobatos, scouts, nómadas scout, rovers — según corresponda al cargo.",
               "color": "#f3e5f5",
               "borderColor": "#9c27b0"
             },
@@ -478,7 +478,7 @@
           "items": [
             "<strong>Bitácora de Acompañamiento al Adulto</strong> — para documentar reuniones con el asesor",
             "<strong>Encuesta de Percepción de Padres o Acudientes al Dirigente</strong>",
-            "<strong>Encuesta de Percepción del Scout, Caminante y Rover al Dirigente</strong>",
+            "<strong>Encuesta de Percepción del Scout, Caminante y Rover al Dirigente</strong> <em>(el formato conserva «Caminante», el nombre anterior de la rama; hoy se llama Nómadas Scout)</em>",
             "<strong>Encuesta de Percepción del Lobato al Dirigente</strong>",
             "<strong>Recomendaciones para la Aplicación de Encuestas de Percepción y Evaluación</strong>"
           ]

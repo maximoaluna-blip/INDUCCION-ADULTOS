@@ -1135,6 +1135,8 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                     </div>
                 </div>
 
+                <div class="info-box">⚠️ <strong>¿Y la Familia de Cachorros?</strong> El Manual de Cargos es de 2020 y todavía no perfila al Jefe de Familia de Cachorros: si sirves ahí, el perfil que más se te parece es el de Jefe de Manada.</div>
+
                 <div class="info-box"><strong>📌 ¿Cuándo aplican las específicas?</strong><br>Cada vez que asumes un cargo formal. La política te pide identificar las específicas de ese cargo, evaluar tu nivel actual, y ponerlas en tu plan personal. Las profundizamos en cursos posteriores cuando veamos cada cargo del consejo.</div>
 
                 <details class="policy-quote">
@@ -1392,7 +1394,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                         </label>
                         <label class="option" onclick="selectOption(this, 2)">
                             <input type="radio" name="q31">
-                            Tiene razón: cada grupo debería poder operar de forma autónoma
+                            Tiene razón: las políticas nacionales no obligan a cada grupo
                         </label>
                     </div>
 
@@ -1400,7 +1402,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                         <h4>3. El jefe de grupo llega al consejo con el plan estratégico de la región, explica qué parte les toca a ellos y arma con el equipo la malla de actividades del año con fechas de revisión en junio y noviembre. ¿Qué grado de Planeamiento estratégico está mostrando?</h4>
                         <label class="option" onclick="selectOption(this, 0)">
                             <input type="radio" name="q32">
-                            Grado 1 — conoce sus responsabilidades y resuelve lo cotidiano del grupo
+                            Grado 1 — conoce sus responsabilidades y resuelve lo cotidiano de su cargo
                         </label>
                         <label class="option" onclick="selectOption(this, 1)">
                             <input type="radio" name="q32">
@@ -1798,7 +1800,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                         </label>
                         <label class="option" onclick="selectOption(this, 2)">
                             <input type="radio" name="q60">
-                            Que es tu competencia más débil y por eso es la primera que hay que atacar
+                            Que es tu competencia más débil y la única que debes trabajar este ciclo
                         </label>
                     </div>
 
@@ -2282,7 +2284,7 @@ function recoverProgress() {
     var msgDiv = document.getElementById('recoveryMessage');
 
     if (!email) {
-        showNotification('⚠️ Ingresa tu correo electronico', 'warning');
+        showNotification('⚠️ Ingresa tu correo electrónico', 'warning');
         return;
     }
 

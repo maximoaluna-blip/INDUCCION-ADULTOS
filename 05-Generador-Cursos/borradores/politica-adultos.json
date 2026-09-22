@@ -3,7 +3,7 @@
   "title": "La Política de Adultos en el Movimiento",
   "subtitle": "Formación de Adultos Voluntarios — Asociación Scouts de Colombia",
   "description": "Curso introductorio sobre la Política Nacional de Adultos en el Movimiento Scout: el adulto que necesitamos, el enfoque por competencias y el ciclo de gestión del adulto. Dirigido a consejeros, dirigentes y voluntarios que asumen roles en sus grupos scouts.",
-  "contentVersion": "2026-09-20",
+  "contentVersion": "2026-09-21",
   "icon": "🦸",
   "duration": "1 hora 30 minutos",
   "totalContentModules": 5,
@@ -437,7 +437,7 @@
             "options": [
               "La firma del acuerdo mutuo",
               "Identificar la necesidad del grupo y el perfil que requiere",
-              "Subir la hoja de vida a la plataforma Talento 360"
+              "Postularte a un cargo en la plataforma Talento 360"
             ],
             "correctIndex": 1
           },

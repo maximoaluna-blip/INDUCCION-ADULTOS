@@ -3,7 +3,7 @@
   "title": "Bienvenida al Movimiento de Adultos",
   "subtitle": "Curso 1 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 45 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
-  "contentVersion": "2026-09-20",
+  "contentVersion": "2026-09-21",
   "icon": "🦸",
   "duration": "45 minutos",
   "level": 1,
@@ -325,7 +325,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Falso. La política de adultos del movimiento te define como <strong>'adulto en el movimiento'</strong> en el momento que aceptas un cargo o función. No importa si nunca fuiste lobato, scout o caminante de joven. <strong>El compromiso no se mide en años, se mide en presencia.</strong>"
+          "text": "Falso. La política de adultos del movimiento te define como <strong>'adulto en el movimiento'</strong> en el momento que aceptas un cargo o función. No importa si nunca fuiste cachorro, lobato, scout o nómada scout de joven. <strong>El compromiso no se mide en años, se mide en presencia.</strong>"
         },
         {
           "type": "blockquote",
@@ -714,7 +714,7 @@
             "options": [
               "El compromiso de una frase que escribiste en el Curso 1 y el autodiagnóstico del Curso 4",
               "Un plan que ya te llega armado desde la regional, de acuerdo con su calendario anual de formación",
-              "El certificado de Talento 360 que se obtiene por separado antes de empezar"
+              "El diagnóstico que tu jefe de grupo llena por ti antes de empezar el curso"
             ],
             "correctIndex": 0
           }

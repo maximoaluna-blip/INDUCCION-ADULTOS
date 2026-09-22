@@ -3,7 +3,7 @@
   "title": "Tu Plan Personal de Desarrollo",
   "subtitle": "Curso 5 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.",
-  "contentVersion": "2026-09-20",
+  "contentVersion": "2026-09-21",
   "icon": "🗺️",
   "duration": "30 minutos",
   "level": 1,
@@ -489,7 +489,7 @@
             "text": "Te acaban de nombrar vocal del consejo de grupo — un cargo pequeño, de un año. Un compañero te dice: 'no vale la pena que subas eso a Talento 360°'. ¿Quién tiene razón?",
             "options": [
               "Tu compañero: Talento 360° es solo si vas a postularte a un cargo nacional",
-              "Tiene razón tu compañero, pero por otra razón: primero necesitas tener la Insignia de Madera y algo de trayectoria",
+              "Tiene razón tu compañero, pero por otra razón: eso se sube al cerrar el nombramiento, junto con la evaluación",
               "Tú: se sube apenas te nombren en cualquier cargo, incluso de comité o vocal — ahí empieza tu hoja de vida"
             ],
             "correctIndex": 2

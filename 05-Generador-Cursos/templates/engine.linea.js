@@ -335,7 +335,7 @@ function recoverProgress() {
     var msgDiv = document.getElementById('recoveryMessage');
 
     if (!email) {
-        showNotification('⚠️ Ingresa tu correo electronico', 'warning');
+        showNotification('⚠️ Ingresa tu correo electrónico', 'warning');
         return;
     }
 
