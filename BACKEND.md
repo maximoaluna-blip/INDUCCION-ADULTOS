@@ -92,7 +92,8 @@ Debe reportar 4/4 pasos OK. Si el Paso 4 falla diciendo "el deployment es VIEJO"
 
 | Método | Acción | Parámetros | Auth | Propósito |
 |---|---|---|---|---|
-| GET | `?action=stats` | — | ❌ **Público — y entrega el padrón completo** | Indicadores y arrays detallados para el dashboard. ⚠️ `registros[]` lleva nombre, correo, grupo y región de **todas** las personas: el «TODO: agregar token» lleva aquí escrito desde que se documentó el backend y **sigue abierto** (decisión en `DECISIONES.md`) |
+| GET | `?action=stats` | — | ❌ Público, **y ya no identifica a nadie** (ADR-078) | **Solo agregados**: conteos, medias, completaciones por módulo, abandono y análisis de ítems. `registros[]` y `certificados[]` vuelven **vacíos**, con `detalleIncluido: false` para que un cero no se lea como «no hay nadie» |
+| POST | `action=stats` | token + `adminKey` | ✅ AUTH_TOKEN **+ `ADMIN_KEY`** | Lo anterior **más** `registros[]` y `certificados[]`. ⚠️ **La clave no es `AUTH_TOKEN`**: ese viaja en el HTML publicado de los 32 cursos y por eso no protege nada. `ADMIN_KEY` vive en las **propiedades del script** — no en este repo, no en el HTML del panel — y si no está configurada el detalle **no se sirve**. **Ni así viaja el correo** |
 | GET | `?action=recover&email=...` | email | ❌ **y no puede estarlo**: el token va en el HTML publicado | **Solo avance** (ADR-074): registro básico sin motivación, módulos, puntajes y certificados, más `saved` con **qué** hay guardado (ids y conteos). **Nunca** reflexiones, compromisos, planes, catálogo ni grados |
 | GET | `?action=verify&code=...` | código | ❌ | Verificar validez de un certificado. **No devuelve el correo** del titular (ADR-074) |
 | POST | `action=register` | token + datos del registro | ✅ AUTH_TOKEN | Crear nuevo registro de inscripción |

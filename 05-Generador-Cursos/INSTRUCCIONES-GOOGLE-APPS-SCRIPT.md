@@ -244,6 +244,7 @@ Retorna: validez del codigo, nombre del estudiante, curso y fecha.
 
 ```
 GET https://script.google.com/macros/s/TU_URL/exec?action=stats
+(solo agregados desde el ADR-078; el detalle con nombres va por POST con `adminKey`)
 ```
 
 Retorna: total de usuarios, certificados, evaluaciones, promedios y completaciones por modulo.

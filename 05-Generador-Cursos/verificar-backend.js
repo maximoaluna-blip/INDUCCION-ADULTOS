@@ -6,8 +6,10 @@
  *   1. La URL de `googleScriptUrl` en build-course.js coincide con la URL del
  *      deployment de producción declarado en BACKEND.md.
  *   2. El endpoint responde (no está caído).
- *   3. El JSON de respuesta tiene los campos detallados esperados
- *      (registros[], certificados[], modulos[], resumen{}) — no solo los KPI.
+ *   3. El JSON del GET publico trae los agregados (modulos[], resumen{}, KPI)
+ *      y NO trae identidades: desde el ADR-078 `registros[]` y `certificados[]`
+ *      solo se sirven por POST con la clave de administracion. Si vuelven llenos
+ *      sin clave, produccion esta sirviendo el padron a quien tenga la URL.
  *   4. Si hay un workspace clasp local, su deployment activo coincide con
  *      el de producción declarado (detecta scripts duplicados).
  *   5. El código que producción SIRVE de verdad conoce ADR-030 (análisis de
@@ -176,7 +178,7 @@ function fetchUrl(url, timeoutMs = 15000) {
   let statsData = null;
 
   // -------- Hacer GET al endpoint y validar shape de la respuesta --------
-  step('Paso 4 — endpoint responde y devuelve los campos detallados');
+  step('Paso 4 — el endpoint responde, trae agregados y NO identifica a nadie');
   if (!prodUrl) {
     fail('Sin PROD_DEPLOYMENT_URL, no puedo probar.');
   } else {
@@ -198,8 +200,6 @@ function fetchUrl(url, timeoutMs = 15000) {
           } else {
             const data = parsed.data || {};
             const checks = [
-              ['registros', Array.isArray(data.registros)],
-              ['certificados', Array.isArray(data.certificados)],
               ['modulos', Array.isArray(data.modulos)],
               ['resumen', typeof data.resumen === 'object' && data.resumen !== null],
               ['totalUsers', typeof data.totalUsers === 'number'],
@@ -208,13 +208,43 @@ function fetchUrl(url, timeoutMs = 15000) {
             const missing = checks.filter(c => !c[1]).map(c => c[0]);
             if (missing.length === 0) {
               statsData = data;
-              pass('JSON contiene todos los campos detallados.');
+              pass('JSON contiene los agregados esperados.');
               pass(`Stats actuales: ${data.totalUsers} registros · ${data.totalCertificates} certificados.`);
             } else {
-              fail('El endpoint responde pero NO devuelve los campos detallados.',
+              fail('El endpoint responde pero NO devuelve los agregados.',
                 'Faltan: ' + missing.join(', ') +
                 '\n\n    Causa probable: el código del deployment es VIEJO.' +
                 '\n    Solución: hacer redeploy del Apps Script con el código actualizado de google-apps-script.js.');
+            }
+
+            // --- ADR-078: la parte que de verdad importa de este paso ---
+            // Esta llamada NO lleva clave. Si vuelve con gente dentro, cualquiera
+            // con la URL del deployment —que viaja en el HTML de los 32 cursos—
+            // se lleva el padron. No es un aviso: es la fuga, medida en vivo.
+            const nReg = Array.isArray(data.registros) ? data.registros.length : 0;
+            const nCert = Array.isArray(data.certificados) ? data.certificados.length : 0;
+            if (nReg > 0 || nCert > 0) {
+              const muestra = (data.registros && data.registros[0]) || (data.certificados && data.certificados[0]) || {};
+              fail('EL PADRÓN ESTÁ ABIERTO: el GET sin clave devolvió datos identificados.',
+                [
+                  `Vinieron ${nReg} registro(s) y ${nCert} certificado(s) sin pedir nada.`,
+                  '    Campos que llegaron: ' + Object.keys(muestra).join(', '),
+                  '',
+                  '    Causa: producción sirve una versión anterior al ADR-078.',
+                  '    Un `clasp push` NO basta — hay que crear versión y reapuntar el deployment.',
+                ].join('\n'));
+            } else if (data.detalleIncluido === false) {
+              pass('El GET público no identifica a nadie, y lo declara (`detalleIncluido: false`).');
+            } else {
+              warn('El GET público no trajo identidades, pero tampoco declara `detalleIncluido`: ' +
+                   'el deployment puede ser anterior al ADR-078 y estar simplemente sin datos.');
+            }
+
+            // El correo no sale ni con clave: que no aparezca nunca en este payload.
+            const crudo = JSON.stringify(data);
+            if (/"email"\s*:/.test(crudo)) {
+              fail('El payload de stats trae el campo `email`.',
+                'El ADR-078 lo retiró del detalle: el panel nunca lo mostró ni lo exportó.');
             }
           }
         }

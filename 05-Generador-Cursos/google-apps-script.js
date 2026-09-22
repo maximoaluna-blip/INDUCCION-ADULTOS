@@ -350,9 +350,9 @@ function doGet(e) {
       case 'verify':
         return handleVerify(params);
 
-      // --- Estadisticas generales ---
+      // --- Estadisticas generales (PUBLICO: solo agregados, ADR-078) ---
       case 'stats':
-        return handleStats();
+        return handleStats(false);
 
       default:
         return jsonResponse(false, null, 'Accion GET no reconocida: ' + action);
@@ -593,9 +593,23 @@ function handleVerify(params) {
 }
 
 /**
- * Retorna estadisticas generales para el panel administrativo.
+ * Retorna estadisticas para el panel administrativo.
+ *
+ * ADR-078 (21-sep-2026) - POR QUE ESTA FUNCION RECIBE UN PARAMETRO:
+ * Hasta hoy devolvia SIEMPRE el padron completo -nombre, correo, grupo, region y
+ * curso de cada persona registrada, mas el detalle de cada certificado- y quien
+ * la servia era `doGet`, que no pide token ni puede pedirlo: el token del backend
+ * viaja en el HTML publicado de los 32 cursos. No hacia falta saber un correo,
+ * como en `recover`: bastaba la URL del despliegue. Desde hoy:
+ *   - `includeDetail` FALSO (doGet, publico): solo AGREGADOS. Conteos, medias,
+ *     completaciones por modulo, abandono y analisis de items. Ninguna identidad.
+ *   - `includeDetail` CIERTO (doPost con la clave de administracion): lo anterior
+ *     mas `registros[]` y `certificados[]` - y aun asi SIN CORREO: el panel no lo
+ *     muestra ni lo exporta, asi que no hay razon para enviarlo.
+ * El detalle se construye en variables locales y se adjunta en un solo sitio, al
+ * final: asi no puede salir por una vuelta que no sea esa. Falla CERRADA.
  */
-function handleStats() {
+function handleStats(includeDetail) {
   try {
     var stats = {
       totalUsers: 0,
@@ -604,14 +618,21 @@ function handleStats() {
       completionsByModule: {},
       courseStats: {},
       averageScore: 0,
-      // Arrays detallados para alimentar las tablas y graficos del dashboard
-      registros: [],
-      certificados: [],
+      // Agregados: no identifican a nadie, viajan siempre.
       modulos: [],
       items: [],        // analisis de items por pregunta (ADR-030)
       resumen: null,
+      // Detalle identificado: se rellena al final y SOLO con clave (ADR-078).
+      // Vacio no significa "no hay datos": mirar `detalleIncluido`.
+      registros: [],
+      certificados: [],
+      detalleIncluido: !!includeDetail,
       generatedAt: new Date().toISOString()
     };
+
+    // El detalle se acumula aqui, fuera de `stats`, mientras se recorre cada hoja.
+    var regDetail = [];
+    var certDetail = [];
 
     // Set de emails con certificado emitido (para marcar estado del registro)
     var emailsConCertificado = {};
@@ -630,13 +651,14 @@ function handleStats() {
         }
         stats.courseStats[course].registrations++;
 
-        // Detalle para la tabla
-        stats.registros.push({
+        // Detalle para la tabla. `_email` lleva guion bajo porque NO se envia:
+        // solo sirve para cruzar el registro con su certificado aqui dentro.
+        regDetail.push({
           fecha: regData[i][0],
           nombre: regData[i][1] || '',
           grupo: regData[i][3] || '',
           region: regData[i][4] || '',
-          email: String(regData[i][5] || '').toLowerCase(),
+          _email: String(regData[i][5] || '').toLowerCase(),
           curso: course,
           estado: 'En progreso' // se actualiza despues si hay certificado
         });
@@ -658,15 +680,14 @@ function handleStats() {
 
         // Detalle para la tabla
         var cEmail = String(certData[j][1] || '').toLowerCase();
-        stats.certificados.push({
+        certDetail.push({
           fecha: certData[j][0],
           nombre: certData[j][2] || '',
           curso: cCourse,
           grupo: certData[j][4] || '',
           region: certData[j][5] || '',
           codigo: certData[j][6] || '',
-          puntuacion: certData[j][8] || 0,
-          email: cEmail
+          puntuacion: certData[j][8] || 0
         });
         // Marcar al usuario como completado
         if (cEmail) emailsConCertificado[cEmail + '|' + cCourse] = true;
@@ -674,10 +695,10 @@ function handleStats() {
     } catch (err) { /* Sin datos aun */ }
 
     // Actualizar estado de registros con certificado emitido
-    for (var ri = 0; ri < stats.registros.length; ri++) {
-      var key = stats.registros[ri].email + '|' + stats.registros[ri].curso;
+    for (var ri = 0; ri < regDetail.length; ri++) {
+      var key = regDetail[ri]._email + '|' + regDetail[ri].curso;
       if (emailsConCertificado[key]) {
-        stats.registros[ri].estado = 'Completado';
+        regDetail[ri].estado = 'Completado';
       }
     }
 
@@ -808,6 +829,33 @@ function handleStats() {
     // La hoja 'Compromisos' y handleCommitment() se conservan: si algun dia se
     // decide conectarlo, el camino de escritura ya existe.
 
+    // --- UNICO sitio por el que sale el detalle identificado (ADR-078) ---
+    // Se copia campo a campo a proposito: si manana la hoja gana una columna,
+    // no se publica sola. Y el correo no esta en ninguna de las dos listas.
+    if (includeDetail) {
+      for (var rd = 0; rd < regDetail.length; rd++) {
+        stats.registros.push({
+          fecha:  regDetail[rd].fecha,
+          nombre: regDetail[rd].nombre,
+          grupo:  regDetail[rd].grupo,
+          region: regDetail[rd].region,
+          curso:  regDetail[rd].curso,
+          estado: regDetail[rd].estado
+        });
+      }
+      for (var cd = 0; cd < certDetail.length; cd++) {
+        stats.certificados.push({
+          fecha:      certDetail[cd].fecha,
+          nombre:     certDetail[cd].nombre,
+          curso:      certDetail[cd].curso,
+          grupo:      certDetail[cd].grupo,
+          region:     certDetail[cd].region,
+          codigo:     certDetail[cd].codigo,
+          puntuacion: certDetail[cd].puntuacion
+        });
+      }
+    }
+
     // Resumen agregado que el dashboard usa para los KPI principales
     stats.resumen = {
       totalRovers: stats.totalUsers,
@@ -906,6 +954,12 @@ function doPost(e) {
       case 'items':
         return handleItems(body, timestamp);
 
+      // --- Detalle identificado del padron para el panel (ADR-078) ---
+      // Va por POST y no por GET a proposito: asi la clave no viaja en una URL,
+      // donde acabaria en registros de servidor y en el historial del navegador.
+      case 'stats':
+        return handleStatsDetail(body);
+
       default:
         return jsonResponse(false, null, 'Accion POST no reconocida: ' + action);
     }
@@ -918,6 +972,33 @@ function doPost(e) {
 // ============================================================================
 // MANEJADORES DE ACCIONES POST
 // ============================================================================
+
+/**
+ * Sirve el detalle identificado del padron al panel de administracion.
+ *
+ * ADR-078 (21-sep-2026). LA CLAVE NO ES `AUTH_TOKEN`: ese viaja en el HTML
+ * publicado de cada curso, asi que no protege nada - por eso `recover` no podia
+ * pedirlo (ADR-074). Esta vive en las PROPIEDADES DEL SCRIPT (en el editor de
+ * Apps Script: Configuracion del proyecto > Propiedades del script, con nombre
+ * `ADMIN_KEY`), no esta en este archivo y no esta en ningun repositorio. El panel
+ * la pide una vez y la guarda en el navegador de quien administra; nunca se
+ * publica en su HTML, que es una pagina estatica y publica.
+ *
+ * Si `ADMIN_KEY` no esta configurada, el detalle NO SE SIRVE. Es deliberado:
+ * desplegar este codigo cierra la fuga aunque nadie configure nada despues.
+ */
+function handleStatsDetail(body) {
+  var configured = PropertiesService.getScriptProperties().getProperty('ADMIN_KEY');
+  if (!configured) {
+    return jsonResponse(false, null,
+      'El detalle del padron no esta habilitado: falta configurar ADMIN_KEY en las propiedades del script.');
+  }
+  var provided = (body && body.adminKey) ? String(body.adminKey) : '';
+  if (provided !== configured) {
+    return jsonResponse(false, null, 'Clave de administracion invalida o faltante.');
+  }
+  return handleStats(true);
+}
 
 /**
  * Registra un nuevo estudiante.
