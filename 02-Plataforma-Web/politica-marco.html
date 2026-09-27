@@ -613,6 +613,31 @@ body {
     background: #f3e8ff; border-left: 4px solid #622599;
     padding: 15px; margin: 20px 0;
 }
+/* --- Consentimiento de tratamiento de datos (Ley 1581 de 2012) --- */
+/* Replica lo que EVALUACIONES-ASC ya hacia desde junio (su D8): casilla
+   OBLIGATORIA donde se capturan los datos. Un aviso informa; una autorizacion es
+   otra cosa, y la ley pide la segunda. Los colores dan >=8:1 sobre este fondo:
+   el panel ya ense~no lo que cuesta un gris elegido a ojo. */
+.consent-box {
+    background: #f6f2fb; border-left: 4px solid #622599;
+    padding: 15px; margin: 25px 0 10px;
+}
+.consent-box h4 { margin: 0 0 8px; color: #3d1660; font-size: 1rem; }
+.consent-box p { margin: 0 0 12px; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5; }
+.consent-check {
+    display: flex; gap: 10px; align-items: flex-start;
+    cursor: pointer; font-weight: 600; color: #3d1660;
+}
+.consent-check input { width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; cursor: pointer; }
+
+/* Modo oscuro, con la paleta que ya usan .policy-quote y .self-assessment. Sin
+   esto la caja se queda con fondo claro y el texto se vuelve claro por herencia:
+   cuatro nodos ilegibles en los 32 cursos, que es justo lo que caza a11y.spec. */
+[data-theme="dark"] .consent-box { background: #2a1f3a; border-left-color: #b78fee; }
+[data-theme="dark"] .consent-box h4 { color: #d4b8ff; }
+[data-theme="dark"] .consent-box p { color: #ddd; }
+[data-theme="dark"] .consent-check { color: #d4b8ff; }
+
 .data-privacy {
     background: #fff8e1; border-left: 4px solid #ffe675;
     padding: 15px; margin: 20px 0;
@@ -906,6 +931,13 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                         <label for="recoveryEmail">Correo Electronico</label>
                         <input type="email" id="recoveryEmail" placeholder="Ej: juan.perez@email.com" required>
                     </div>
+                    <div class="consent-box">
+                        <p>Recuperar tu avance puede <strong>inscribirte en este curso</strong>, así que aquí autorizas lo mismo que en el registro: que la Asociación Scouts de Colombia trate tus datos y lo que escribas, solo para la formación, sin compartirlos con terceros y pudiendo pedir su eliminación. Conforme a la <strong>Ley 1581 de 2012</strong> (Habeas Data).</p>
+                        <label class="consent-check" for="consentRecover">
+                            <input type="checkbox" id="consentRecover">
+                            <span>He leído y autorizo el tratamiento de mis datos.</span>
+                        </label>
+                    </div>
                     <div style="text-align: center;">
                         <button class="btn" onclick="recoverProgress()">🔍 Recuperar</button>
                     </div>
@@ -971,6 +1003,14 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                     <div class="form-group">
                         <label for="motivation">¿Cuál es tu motivación para participar en el movimiento como adulto voluntario?</label>
                         <textarea id="motivation" name="motivation" rows="4" placeholder="Describe brevemente tu motivación..."></textarea>
+                    </div>
+                    <div class="consent-box">
+                        <h4>Tratamiento de datos personales</h4>
+                        <p>Autorizo a la Asociación Scouts de Colombia a tratar mis datos (nombre, edad, grupo, región y correo) y lo que escriba en las reflexiones, ejercicios y planes de este curso, con el único fin de acompañar y mejorar la formación. No se comparten con terceros y puedo solicitar su eliminación. Conforme a la <strong>Ley 1581 de 2012</strong> (Habeas Data).</p>
+                        <label class="consent-check" for="consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span>He leído y autorizo el tratamiento de mis datos.</span>
+                        </label>
                     </div>
                     <div style="text-align: center; margin-top: 30px;">
                         <button type="submit" class="btn" style="font-size: 1.1rem; padding: 15px 30px;">🚀 Comenzar Curso</button>
@@ -2041,6 +2081,16 @@ function recoverProgress() {
 
     if (!email) {
         showNotification('⚠️ Ingresa tu correo electrónico', 'warning');
+        return;
+    }
+
+    // Ley 1581 de 2012. La autorizacion va donde se capturan los datos, y desde el
+    // ADR-080 recuperar el avance PUEDE CREAR LA INSCRIPCION: es una puerta de
+    // entrada mas, no solo una de vuelta. La del registro la bloquea el navegador
+    // con `required`; esta no vive dentro de un <form>, asi que se mira a mano.
+    var consentRec = document.getElementById('consentRecover');
+    if (consentRec && !consentRec.checked) {
+        showNotification('⚠️ Para continuar, autoriza el tratamiento de tus datos', 'warning');
         return;
     }
 

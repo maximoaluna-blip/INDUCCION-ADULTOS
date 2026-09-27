@@ -482,6 +482,13 @@ function buildRegistrationModule(course) {
                         <label for="recoveryEmail">Correo Electronico</label>
                         <input type="email" id="recoveryEmail" placeholder="Ej: juan.perez@email.com" required>
                     </div>
+                    <div class="consent-box">
+                        <p>Recuperar tu avance puede <strong>inscribirte en este curso</strong>, así que aquí autorizas lo mismo que en el registro: que la Asociación Scouts de Colombia trate tus datos y lo que escribas, solo para la formación, sin compartirlos con terceros y pudiendo pedir su eliminación. Conforme a la <strong>Ley 1581 de 2012</strong> (Habeas Data).</p>
+                        <label class="consent-check" for="consentRecover">
+                            <input type="checkbox" id="consentRecover">
+                            <span>He leído y autorizo el tratamiento de mis datos.</span>
+                        </label>
+                    </div>
                     <div style="text-align: center;">
                         <button class="btn" onclick="recoverProgress()">🔍 Recuperar</button>
                     </div>
@@ -515,6 +522,14 @@ function buildRegistrationModule(course) {
                     <div class="form-group">
                         <label for="motivation">¿Cuál es tu motivación para participar en el movimiento como adulto voluntario?</label>
                         <textarea id="motivation" name="motivation" rows="4" placeholder="Describe brevemente tu motivación..."></textarea>
+                    </div>
+                    <div class="consent-box">
+                        <h4>Tratamiento de datos personales</h4>
+                        <p>Autorizo a la Asociación Scouts de Colombia a tratar mis datos (nombre, edad, grupo, región y correo) y lo que escriba en las reflexiones, ejercicios y planes de este curso, con el único fin de acompañar y mejorar la formación. No se comparten con terceros y puedo solicitar su eliminación. Conforme a la <strong>Ley 1581 de 2012</strong> (Habeas Data).</p>
+                        <label class="consent-check" for="consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span>He leído y autorizo el tratamiento de mis datos.</span>
+                        </label>
                     </div>
                     <div style="text-align: center; margin-top: 30px;">
                         <button type="submit" class="btn" style="font-size: 1.1rem; padding: 15px 30px;">🚀 Comenzar Curso</button>

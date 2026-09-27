@@ -19,6 +19,12 @@ async function registrarse(page) {
   if (await email.count()) await email.fill('e2e-prueba@example.com');
   const age = page.locator('#age');
   if (await age.count()) await age.fill('30');
+  // Ley 1581 (ADR-081): sin autorizar el tratamiento de datos, el formulario no se
+  // envia. Es obligatoria a proposito, asi que el flujo de prueba la marca como la
+  // marcaria una persona. El `if` no sobra: esta suite corre por defecto contra
+  // PRODUCCION, y hasta que se publique alli la casilla no existe.
+  const consent = page.locator('#consent');
+  if (await consent.count()) await consent.check();
   await page.locator('#registrationForm button[type="submit"]').click();
   // Tras el registro el motor muestra el modulo 1 (bienvenida).
   await expect(page.locator('#module-1')).toHaveClass(/active/);

@@ -339,6 +339,16 @@ function recoverProgress() {
         return;
     }
 
+    // Ley 1581 de 2012. La autorizacion va donde se capturan los datos, y desde el
+    // ADR-080 recuperar el avance PUEDE CREAR LA INSCRIPCION: es una puerta de
+    // entrada mas, no solo una de vuelta. La del registro la bloquea el navegador
+    // con `required`; esta no vive dentro de un <form>, asi que se mira a mano.
+    var consentRec = document.getElementById('consentRecover');
+    if (consentRec && !consentRec.checked) {
+        showNotification('⚠️ Para continuar, autoriza el tratamiento de tus datos', 'warning');
+        return;
+    }
+
     msgDiv.style.display = 'block';
     msgDiv.innerHTML = '<p style="color: #622599; font-weight: 600;">🔄 Buscando tu avance...</p>';
 

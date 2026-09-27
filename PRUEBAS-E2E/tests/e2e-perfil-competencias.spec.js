@@ -17,6 +17,11 @@ async function registrar(page) {
   await page.locator('#fullName').fill('Participante Perfil E2E');
   const email = page.locator('#email');
   if (await email.count()) await email.fill('perfil-e2e@example.com');
+  // Ley 1581 (ADR-081): la casilla es obligatoria, asi que el flujo la marca como
+  // la marcaria una persona. El `if` no sobra: por defecto la suite corre contra
+  // PRODUCCION, donde la casilla no existe hasta que se publique.
+  const consentPerfil = page.locator('#consent');
+  if (await consentPerfil.count()) await consentPerfil.check();
   await page.locator('#registrationForm button[type="submit"]').click();
   await expect(page.locator('#module-1')).toHaveClass(/active/);
 }
