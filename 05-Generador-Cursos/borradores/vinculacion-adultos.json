@@ -1,0 +1,828 @@
+{
+  "courseId": "vinculacion-adultos",
+  "title": "Vincular nuevos adultos al grupo",
+  "subtitle": "Curso 6 · Nivel 2 de la Línea Política de Adultos",
+  "description": "Atracción y Vinculación contada a quien la hace: el jefe de grupo, el consejo, el comité de selección, el jefe que recibe a alguien nuevo. Cómo determinar la necesidad antes de buscar a alguien, dónde buscar, cómo seleccionar con reglas claras y revisión de antecedentes, cómo integrar en los tres primeros meses y cómo cerrar con el acuerdo mutuo y el nombramiento.",
+  "contentVersion": "2026-09-27",
+  "icon": "🚪",
+  "duration": "40 minutos",
+  "level": 2,
+  "levelName": "Profundización por fase del ciclo",
+  "order": 6,
+  "status": "active",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Una escena que se repite.</strong><br>En la reunión de padres, Mónica, la jefa de grupo, cuenta que la Tropa se queda sin jefe en febrero. Julián, papá de un scout, levanta la mano: «Yo puedo». Todos aplauden. Tres meses después, Julián está agotado, nadie le explicó qué se esperaba de él y la Tropa sigue sin rumbo.<br><br><strong>Al que dijo «sí» en el pasillo no lo vinculaste: lo reclutaste. Vincular es que llegue sabiendo a qué, y que se quede.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 6, el primero del Nivel 2.</strong><br>En el Curso 3 viste en panorama que Atracción y Vinculación tiene cinco pasos. Aquí los vas a ejecutar. Este curso habla sobre todo a <strong>quien vincula</strong> —jefes de grupo, consejos, comités de selección, jefes que reciben a alguien nuevo— y también al adulto que llega, para que sepa qué puede pedir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para aprovecharlo mejor te sugerimos haber visto el <strong>Curso 3 — El Ciclo del Adulto en el Movimiento</strong>. No es requisito: si entras directo, la Lección 1 te da lo necesario."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada lección cierra con una reflexión y un mini-quiz de 2 preguntas. Para pasar hay que acertar el 70 %, o sea las dos; si fallas, lo intentas otra vez. Escribe tus reflexiones por el cargo, sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Determinar</strong> una necesidad antes de buscar a alguien: qué cargo, con qué perfil, en cantidad y calidad",
+            "<strong>Elegir</strong> dónde buscar entre fuentes internas y externas",
+            "<strong>Organizar</strong> una selección objetiva: convocatoria, comité y garantía de objetividad",
+            "<strong>Aplicar</strong> la revisión de antecedentes y una entrevista por competencias sobre hechos vividos",
+            "<strong>Planear</strong> la integración de los tres primeros meses",
+            "<strong>Cerrar</strong> con el acuerdo mutuo y el nombramiento, sabiendo qué se compromete cada parte"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Antes de buscar: la necesidad",
+              "description": "6 min. Qué cargo hace falta y con qué perfil, antes de pensar en quién."
+            },
+            {
+              "title": "Lección 2 — Dónde buscar",
+              "description": "6 min. Fuentes internas y externas, y lo que la selección debe promover."
+            },
+            {
+              "title": "Lección 3 — Seleccionar con reglas claras",
+              "description": "7 min. Convocatoria, comité y garantía de objetividad."
+            },
+            {
+              "title": "Lección 4 — Antecedentes y entrevista",
+              "description": "6 min. La revisión que protege a los niños y la entrevista por competencias."
+            },
+            {
+              "title": "Lección 5 — Integrar y acompañar el inicio",
+              "description": "7 min. La inducción paso a paso y el acompañamiento de los primeros meses."
+            },
+            {
+              "title": "Lección 6 — Acuerdo mutuo y nombramiento",
+              "description": "7 min. Qué se compromete cada parte y cómo se formaliza."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Antes de buscar: la necesidad",
+      "emoji": "🔎",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Se busca un <strong>perfil</strong>, no una persona. Antes de preguntar «¿quién puede?», el grupo responde «¿qué cargo nos falta y qué exige?»."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🪜 Los cinco pasos, recordados"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Determinación de necesidades",
+              "description": "Qué cargos existen, cuáles están vacantes y cuáles están ocupados sin el perfil que piden. Es esta lección."
+            },
+            {
+              "title": "2. Identificación de las competencias requeridas",
+              "description": "Las esenciales (las viste en el Curso 4) y las específicas del cargo, con el grado de dominio esperado. Salen del Manual de Cargos y del Diccionario de Competencias. Lo haces en esta misma lección: es la línea «Competencias» de la hoja de necesidad que verás al final."
+            },
+            {
+              "title": "3. Búsqueda y selección",
+              "description": "Dónde buscar y cómo escoger con objetividad. Lecciones 2, 3 y 4."
+            },
+            {
+              "title": "4. Integración",
+              "description": "El tiempo para conocer el contexto real con acompañamiento. Lección 5."
+            },
+            {
+              "title": "5. Compromiso, acuerdo mutuo y nombramiento",
+              "description": "La formalización. Lección 6."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📐 Qué significa «determinar la necesidad»"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "1. Definir el cargo",
+              "description": "El cargo existe en el Manual de Cargos, Funciones y Perfiles por Competencias, con sus funciones y su perfil. Si el grupo necesitara un cargo que el Manual no trae, ese cargo primero lo aprueba el Consejo Scout Nacional y después la Dirección Nacional de Adultos en el Movimiento le hace el perfil: no se inventa.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "2. Revisar cantidad y calidad",
+              "description": "No basta con que haya alguien en cada cargo. La revisión pregunta si están cubiertos en su totalidad (cantidad) y si lo están con adultos competentes para ellos (calidad).",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔀 Cuando ya hay alguien en el cargo"
+        },
+        {
+          "type": "paragraph",
+          "text": "El documento de Atracción y Vinculación trae un camino para el caso más delicado: el cargo está ocupado, pero la persona <strong>no tiene hoy las competencias</strong> que pide. La pregunta no es «¿lo cambiamos?», sino <strong>«¿tiene el potencial para alcanzarlas?»</strong>."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "✅ Sí tiene el potencial",
+              "description": "Se identifican las oportunidades de formación para desarrollarlas y los apoyos técnicos, morales y personales que necesita mientras tanto. Eso ya es la fase de Desempeño.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "↔️ No lo tiene",
+              "description": "Se toma una decisión para el futuro: reubicarlo en otro cargo donde sea o pueda ser competente, o su retiro. Solo entonces se abre la búsqueda para el cargo que queda vacante.",
+              "color": "#fff3e0",
+              "borderColor": "#ef6c00"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "Mónica no empieza por Julián. Empieza por una hoja que dice: «Jefe de Tropa. Funciones: las del Manual. Competencias: estas. Para: febrero». Con esa hoja, Julián deja de ser la única opción y pasa a ser un candidato."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Cada estamento velará porque los cargos se encuentren cubiertos, y en caso de identificar una vacante, deberán encaminarse acciones para cubrirla teniendo en cuenta la descripción del cargo.",
+          "source": "Atracción y Vinculación (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §1.1, p. 4",
+          "label": "📋 Ver lo que dice el documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en tu grupo hoy: ¿hay algún cargo cubierto «en cantidad» pero no «en calidad»? Descríbelo por el cargo, sin nombres, y di qué competencia es la que falta."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "El consejo de un grupo dice: «Tenemos a alguien en cada cargo, así que no hay necesidades de adultos este año». ¿Qué le falta a ese diagnóstico?",
+            "options": [
+              "Nada: si cada cargo tiene a una persona nombrada, la necesidad del grupo está cubierta.",
+              "Revisar la calidad: que quienes ocupan los cargos tengan las competencias que piden.",
+              "Revisar la antigüedad: que cada adulto lleve al menos un año en el cargo que ocupa."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "La tesorera lleva seis meses: es cumplida y ya aprendió sola a llevar el libro de caja, pero todavía no maneja los informes que el cargo exige. ¿Qué sigue según el camino del documento?",
+            "options": [
+              "Abrir la búsqueda de otra persona, porque hoy no cumple todo el perfil del cargo.",
+              "Acordar con ella formación y apoyo en los informes, mientras sigue en el cargo.",
+              "Reubicarla en otro cargo del grupo en el que no tenga que presentar informes."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Dónde buscar",
+      "emoji": "🧭",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Los papás del grupo son una fuente, no la única. La búsqueda se abre adentro y afuera, y la selección tiene que promover a los adultos jóvenes, la equidad de género y la diversidad."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🛤️ Las dos líneas de la atracción"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🎯 Buscar para un cargo",
+              "description": "La búsqueda puntual de un adulto que pueda ejercer un rol específico: la que hace Mónica para la Tropa.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📣 Hacerse visibles",
+              "description": "Actividades estratégicas y permanentes que muestran el Movimiento hacia afuera y atraen a adultos movidos por su sentido de servicio, aunque hoy no haya una vacante.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🏠 Fuentes internas y 🌍 externas"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🏠 Internas",
+              "description": "Adultos activos que cumplen los requisitos (si vienen de otro grupo o región, con su paz y salvo) · padres, madres o acudientes con las competencias requeridas · jóvenes adultos que muestran el deseo y las competencias para el cargo.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "🌍 Externas",
+              "description": "Adultos retirados con las competencias del cargo · antiguos miembros juveniles · patrocinadores · líderes comunitarios · universitarios, docentes y gremios de profesionales.",
+              "color": "#fff8e1",
+              "borderColor": "#f9a825"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La búsqueda puede ser <strong>puntual</strong> (un adulto para un cargo), <strong>múltiple</strong> (varios adultos para uno o varios cargos) o darse <strong>sin estar buscando</strong>: alguien que, sin que se lo pidan, quiere ingresar. Ese es Julián. Que haya llegado solo no lo convierte en el elegido: lo convierte en un candidato al que hay que conocer."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "⚖️ Lo que la selección tiene que promover"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Que <strong>adultos jóvenes</strong> lleguen a cargos y funciones de alta responsabilidad",
+            "La <strong>equidad de género</strong> en su contexto social y cultural",
+            "La <strong>diversidad</strong>, para llegar con el Movimiento a todos los segmentos de la sociedad"
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "La selección se basa en un proceso de conocimiento mutuo que permitirán un entendimiento más profundo del interesado y que descubra cómo encaja en lo esperado de él. Este momento debe: promover que adultos jóvenes lleguen a ocupar cargos y funciones de alta responsabilidad, fomentar la equidad de género en su contexto social y cultural, y promover la diversidad, para llegar con el Movimiento Scout a todos los segmentos de la sociedad.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.1.3, p. 12",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿De qué fuentes ha salido la mayoría de los adultos de tu grupo? Nombra una fuente, interna o externa, que tu grupo casi nunca usa y di por qué podría servir para el próximo cargo que se abra."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Un grupo siempre llena sus cargos con papás de los scouts actuales. Este año necesita un tesorero y nadie se ofrece. ¿Qué le propone el documento?",
+            "options": [
+              "Esperar a que se ofrezca algún papá, porque los cargos deben quedarse entre las familias.",
+              "Mirar también fuera del grupo: un antiguo scout que hoy sea contador, o un gremio de la zona.",
+              "Pedir a la región que designe a alguien, porque el grupo ya agotó su fuente habitual."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Para Jefe de Clan, el consejo solo piensa en adultos de más de 40: «un cargo así necesita a alguien mayor». ¿Qué haría el consejo si toma en serio lo que pide la política?",
+            "options": [
+              "Esperar a ver si algún joven se postula por su cuenta: promover es no ponerle trabas si aparece.",
+              "Invitar a jóvenes adultos, de adentro y de afuera, a postularse, y evaluarlos con el mismo perfil.",
+              "Reservar el cargo para un joven adulto, aunque haya que aflojar el perfil para que alguno lo cumpla."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Seleccionar con reglas claras",
+      "emoji": "⚖️",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Una selección objetiva no depende de la buena fe de quien selecciona: depende de reglas que se conocen antes. Convocatoria pública, comité y una mezcla de herramientas medibles."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📢 La convocatoria es pública"
+        },
+        {
+          "type": "paragraph",
+          "text": "La ASC tiene un <em>Procedimiento para Requisición, Convocatoria y Selección Objetiva</em> que vale para grupo, región y nación. La convocatoria se difunde por todos los medios idóneos, la rigen cinco principios —pluralidad, debido proceso, publicidad, transparencia y selección objetiva— y trae, entre otros, estos contenidos mínimos:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "El estamento que convoca, el cargo y su perfil",
+            "Los requisitos objetivos y los que serán evaluados",
+            "El tiempo mínimo de duración del cargo y a quién responde",
+            "Las funciones y las competencias esenciales y específicas del cargo",
+            "Quiénes seleccionan, el cronograma y dónde se reciben postulaciones y reclamos"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "👥 El comité de evaluación y selección"
+        },
+        {
+          "type": "paragraph",
+          "text": "Es <strong>obligatorio</strong> crear un comité <em>ad hoc</em> para el cargo convocado, con tres personas: un representante del consejo scout del estamento, un representante de adultos en el movimiento del estamento y un representante del estamento que convoca. Se exceptúan los cargos que por su naturaleza ya tienen un procedimiento especial ante los consejos, según los reglamentos. El Manual de Cargos dice, cargo por cargo, quién es el responsable del nombramiento: al Jefe de Grupo, por ejemplo, lo nombra el Jefe Regional previa postulación del consejo de grupo; al intendente, la Asamblea de Grupo; al tesorero, el Consejo de Grupo; y a los jefes y subjefes de rama, el Jefe de Grupo. Ojo: quien nombra no es lo mismo que quien selecciona. Al subjefe de rama lo nombra el Jefe de Grupo, pero lo escoge el comité. El comité no nombra: evalúa y deja la lista de elegibles, y quien nombra lo hace a partir de ella."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧪 Herramientas y garantía de objetividad"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "Altamente objetivas",
+              "description": "Experiencia laboral certificada relacionada con el cargo · prueba de conocimiento teórico con mínimos conocimientos scout · revisión de antecedentes · pruebas psicotécnicas interpretadas por un profesional.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "Medianamente objetivas",
+              "description": "Entrevista semiestructurada por competencias (grabada) · experiencia como voluntario en el Movimiento · plan de trabajo · assessment center, si hay personas capacitadas para hacerlo.",
+              "color": "#fff8e1",
+              "borderColor": "#f9a825"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔒 La garantía de objetividad, en tres números:</strong><br>• Al menos <strong>cuatro</strong> herramientas.<br>• Al menos <strong>dos</strong> de ellas altamente objetivas.<br>• Las medianamente objetivas no pasan del <strong>30 %</strong> del valor total."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🗓️ El recorrido de una convocatoria"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Se publica y se ajusta",
+              "description": "Se publica la convocatoria con todas sus reglas; hay unos días hábiles para observaciones y sale la convocatoria definitiva."
+            },
+            {
+              "title": "Se postulan y se evalúan",
+              "description": "Se reciben las postulaciones (en Talento 360° cuando está en uso), se revisan los requisitos y se aplican las herramientas escogidas. Cada paso tiene su plazo para corregir o reclamar."
+            },
+            {
+              "title": "Lista de elegibles",
+              "description": "En estricto orden de mérito y con vigencia de un año: si el primero no puede asumir, se llama al siguiente sin repetir el proceso."
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "Mónica escribe la convocatoria para Jefe de Tropa en una página y la comparte en la reunión de padres, en el chat del grupo y con la región. Arman el comité de tres. Escogen cuatro herramientas: la revisión de antecedentes y una prueba de conocimientos scout, que son altamente objetivas, y una entrevista por competencias y la experiencia como voluntario, que juntas no pasan del 30 %. Julián se postula como uno más."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Garantía de objetividad: Para los procesos de selección se deberán escoger al menos cuatro de estas herramientas, al menos dos de ellas deben ser altamente objetivas, y para todos los efectos en caso de que se usen las medianamente objetivas, estas no podrán exceder el 30% del valor total de la prueba.",
+          "source": "Procedimiento para Requisición, Convocatoria y Selección Objetiva (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4, p. 17",
+          "label": "📋 Ver lo que dice el procedimiento"
+        }
+      ],
+      "reflection": {
+        "prompt": "Recuerda la última vez que tu grupo llenó un cargo de dirigente de rama. ¿Cuáles de estas piezas hubo —convocatoria pública, comité, herramientas objetivas— y cuál faltó? ¿Qué cambió por eso? Cuéntalo por el cargo, sin nombres."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Para escoger al nuevo Jefe de Manada, un grupo planea usar solo una entrevista, el plan de trabajo, la experiencia como voluntario y la revisión de antecedentes. ¿Cumple la garantía de objetividad?",
+            "options": [
+              "Sí: son cuatro herramientas distintas, que es el mínimo que pide el procedimiento.",
+              "No: de las cuatro, solo una es altamente objetiva, y el procedimiento pide dos.",
+              "No: la revisión de antecedentes es un requisito, no cuenta como herramienta."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "La jefa de grupo propone escoger ella sola al nuevo Subjefe de Tropa, «porque conoce a todos y es imparcial». ¿Qué le respondes?",
+            "options": [
+              "Que está bien si el consejo lo aprueba después: basta con que otra persona firme.",
+              "Que su buena fe no alcanza: para ese cargo decide un comité de tres, no una persona.",
+              "Que puede hacerlo si antes publica la convocatoria: la publicidad ya da la objetividad."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Antecedentes y entrevista",
+      "emoji": "🛡️",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Revisar antecedentes no es desconfiar de Julián: es cumplir la obligación de dar entornos protectores a los niños, niñas y jóvenes. Y la entrevista pregunta por lo que alguien <strong>hizo</strong>, no por lo que <strong>haría</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🛡️ La revisión de antecedentes"
+        },
+        {
+          "type": "paragraph",
+          "text": "El documento de Atracción y Vinculación pide usar las plataformas oficiales para verificar antecedentes y así minimizar el riesgo previsible, respondiendo a la obligación que tenemos como adultos, según la <strong>Ley 1098 de 2006</strong>, de brindar entornos protectores. Son cuatro consultas:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Antecedentes fiscales",
+            "Antecedentes judiciales",
+            "Registro Nacional de Medidas Correctivas",
+            "Consulta de inhabilidades por delitos sexuales cometidos contra menores de edad"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📝 No es a escondidas.</strong> El formato de <em>Ingreso del Adulto</em> incluye la autorización para que la Asociación verifique, antes de la vinculación, la información personal del adulto, incluidos los antecedentes e inhabilidades por delitos sexuales contra menores de 18 años. Los enlaces de cada consulta cambian con el tiempo: búscalos siempre en las páginas oficiales."
+        },
+        {
+          "type": "paragraph",
+          "text": "La <strong>hoja de vida</strong> se revisa también: referencias, cargos anteriores y su permanencia. Si algo no queda claro —por ejemplo, cambios de empleo muy frecuentes—, se retoma en la entrevista."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "⭐ La entrevista por competencias: técnica STAR"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "S — Situación",
+              "description": "Un hecho concreto en el que la persona mostró la conducta que se quiere explorar.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "T — Tarea",
+              "description": "Qué responsabilidades tenía en ese momento. ¿Cuál era su rol?",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "A — Acción",
+              "description": "Qué hizo, específicamente, para enfrentar o resolver la situación.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "R — Resultado",
+              "description": "Qué efecto tuvieron sus acciones, positivo o negativo.",
+              "color": "#fff8e1",
+              "borderColor": "#f9a825"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "No: «¿Qué haría usted si un scout se lastima en una salida?». Sí: «Cuénteme una situación en la que alguien a su cargo se lastimó o estuvo en riesgo. ¿Qué hizo?»"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🎙️ Algunas recomendaciones al entrevistador</strong> (de las doce del documento):<br>• Avise que tomará notas y pida autorización para grabar: en la selección, esta entrevista debe quedar grabada.<br>• Busque un lugar cómodo y un ambiente seguro para el candidato.<br>• No interrumpa; pregunte solo cuando no entienda algo.<br>• Contraste lo que dice con su hoja de vida.<br>• Verifique que entiende la dimensión del cargo, y aclare los compromisos y apoyos de ambas partes."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es importante recordar que la entrevista por competencias busca determinar que la persona en algún momento evidenció la conducta observable, por lo que la situación debe ser un hecho real y no aspiracional, es decir debemos solicitar información de una situación vivida y evitar preguntas como ¿qué haría usted?, y hacer uso de preguntas como ¿cuénteme una situación donde usted..?",
+          "source": "Atracción y Vinculación (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §1.2.6.2, p. 12",
+          "label": "📋 Ver lo que dice el documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "Escribe una pregunta de entrevista por competencias, en formato STAR, para el cargo que más te toca de cerca. Empieza con «Cuénteme una situación en la que…» y di qué conducta observable quieres explorar con ella."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Julián se ofende: «¿Me van a revisar antecedentes? ¡Si todos me conocen!». ¿Qué le responderías con lo que viste?",
+            "options": [
+              "Que no se preocupe: a quienes el grupo ya conoce se les puede omitir la revisión.",
+              "Que no es por él: se revisa a todo adulto que estará con niños, y el Ingreso lo autoriza.",
+              "Que es un trámite de la región para el seguro, y que no tiene que ver con los niños."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Vas a entrevistar a un candidato a Jefe de Manada y quieres saber cómo maneja los conflictos. ¿Cuál pregunta sigue la entrevista por competencias?",
+            "options": [
+              "«Cuénteme qué haría usted si dos lobatos se pelean en plena reunión de Manada.»",
+              "«Cuénteme una vez en que tuvo que mediar entre dos personas. ¿Qué hizo y cómo terminó?»",
+              "«Cuénteme cómo se describiría usted cuando le toca resolver un conflicto en el grupo.»"
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Integrar y acompañar el inicio",
+      "emoji": "🤝",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La integración es el tiempo para que el adulto conozca el contexto real con alguien al lado. No se le exige todo el primer día: se le acompaña."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante la integración se firma el <strong>Ingreso del Adulto</strong>: la persona solicita su registro e inscripción, autoriza el uso de sus datos personales y acepta su acción voluntaria. La integración continúa el proceso de conocerse en las dos direcciones, y el documento recomienda: conversaciones personales, espacio para aclarar dudas y expectativas de ambas partes, lecturas sobre el Movimiento y el cargo, y <strong>ser honesto con el tiempo que exige y las responsabilidades que implica</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✅ La lista de chequeo de la inducción"
+        },
+        {
+          "type": "paragraph",
+          "text": "En el Curso 3 viste cuatro trámites de la integración; la <em>Guía — Fase de inducción de Adultos Voluntarios Nuevos</em> (marzo de 2025) los amplía y le da al líder del equipo esta lista para acompañar al adulto que llega:"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Hoja de vida en Talento 360°",
+              "description": "Diligenciada en todos sus campos, con fotografía."
+            },
+            {
+              "title": "Acuerdo mutuo, ingreso y nombramiento",
+              "description": "Los tres documentos al día (lección 6)."
+            },
+            {
+              "title": "Inscripción en SiScout",
+              "description": "El registro completo como miembro."
+            },
+            {
+              "title": "Manual de Cargos",
+              "description": "Leer y entender las funciones y competencias del cargo."
+            },
+            {
+              "title": "Curso de inducción general",
+              "description": "En la Universidad Scout; el certificado se entrega al jefe inmediato."
+            },
+            {
+              "title": "A Salvo del Peligro",
+              "description": "Los cuatro cursos habilitados; los certificados se entregan al jefe inmediato."
+            },
+            {
+              "title": "Asesor personal",
+              "description": "Con el aval de aceptación firmado, y una primera reunión para revisar la valoración inicial y empezar el Plan Personal de Desarrollo (el plan que armaste en el Curso 5)."
+            },
+            {
+              "title": "Valoración inicial por competencias",
+              "description": "La evaluación n.º 1 en Talento 360°, con seguimiento a sus resultados."
+            },
+            {
+              "title": "Acompañamiento de los tres primeros meses",
+              "description": "La guía lo recomienda: el jefe inmediato sigue las acciones, aclara dudas y al final hace una retroalimentación con las recomendaciones del asesor personal."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧩 ¿Y el orden?</strong> En la política, la integración es el paso 4 y el acuerdo con el nombramiento, el paso 5. En la práctica se cruzan: la guía de 2025 pone el acuerdo y el nombramiento dentro de la lista de la inducción, y recomienda que el acompañamiento siga durante los tres primeros meses. Lo que no cambia: nadie asume el cargo solo desde el primer día."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Para que se quede, no solo para que llegue</strong> — el documento lo resume en cuatro recordatorios:<br>• Los intereses de cada adulto para su voluntariado son diferentes.<br>• El acompañamiento es fundamental para que se sienta acogido.<br>• No exponerlo a actividades que vulneren su integridad.<br>• Identificar su tiempo disponible y flexibilizar su participación."
+        },
+        {
+          "type": "blockquote",
+          "text": "Mónica agenda con Julián una conversación cada dos semanas durante tres meses. No para vigilarlo: para que la pregunta «¿y esto cómo se hace?» tenga a quién llegar. Es la otra mitad de vincular: que llegue sabiendo a qué, <strong>y que se quede</strong>."
+        },
+        {
+          "type": "policy-quote",
+          "text": "El período de integración ofrece a cada adulto la oportunidad de descubrir y aprender sobre el papel que puede tener en la organización, identificar oportunidades de desarrollo, crecimiento personal y promover una verdadera conciencia del rol que debe desempeñar dentro de la organización; en consecuencia, debe permitirse el tiempo adecuado para que esto suceda.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.1.4, p. 13",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Planea la integración del próximo adulto que llegue a tu grupo, por su cargo y sin nombres: ¿quién lo acompaña, cada cuánto se reúnen y qué tres puntos de la lista de chequeo revisan en el primer mes?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Julián todavía no firma su acuerdo, pero ya dirige solo las reuniones de Tropa y nadie le ha preguntado cómo va. ¿Qué parte del proceso se está descuidando?",
+            "options": [
+              "La selección: si necesita ayuda tan pronto, el comité escogió mal a la persona.",
+              "La integración: nadie lo acompaña mientras aprende cómo funciona de verdad la Tropa.",
+              "La formación básica: debió terminar su Insignia de Madera antes de asumir el cargo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Julián ya tiene asesor personal, y en su primera reunión van a arrancar su Plan Personal de Desarrollo. ¿Con qué conviene empezar?",
+            "options": [
+              "Con la evaluación 360° del final del primer año, para no juzgarlo antes de tiempo.",
+              "Con la valoración inicial por competencias, para saber desde dónde parte su plan.",
+              "Con la lista de cursos de la Insignia de Madera, para inscribirlo en todos ya mismo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Acuerdo mutuo y nombramiento",
+      "emoji": "✍️",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>El acuerdo es <strong>mutuo</strong>: compromete al adulto y compromete al grupo. Y el nombramiento lo hace público."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📄 Los seis elementos del acuerdo"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "El término durante el cual el nombramiento será vigente",
+            "El término y la forma de la inducción y del período de prueba",
+            "Los compromisos que asume el adulto con la ASC",
+            "Los apoyos y beneficios que se le brindan al adulto",
+            "Su voluntad de desarrollar y perfeccionar las competencias del cargo",
+            "El procedimiento y los momentos de la evaluación del desempeño y de los compromisos"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🤝 Lo que se compromete cada parte"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "El adulto",
+              "description": "Entre otros: recibir la inducción general y la específica, hacer los módulos de A Salvo del Peligro, participar en su valoración inicial, generar y ejecutar su Plan Personal de Desarrollo, y participar en la evaluación 360° por competencias.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "El estamento (el grupo)",
+              "description": "Entre otros: resolver las inquietudes del adulto, darle las estrategias y los recursos para sus funciones, entregarle los estatutos, reglamentos, políticas y manuales de su cargo, e informarle a tiempo de las actividades.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⏳ Cuánto dura.</strong> El <em>Compromiso de Acuerdo Mutuo</em> vigente (versión 3.0, 28 de junio de 2025) fija un tiempo <strong>máximo de dos años</strong> desde el nombramiento, prorrogable de común acuerdo como resultado de las evaluaciones del desempeño por competencias. Y el adulto acepta ser evaluado <strong>semestralmente</strong>. Lo que pasa al final lo verás en el Curso 10."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📜 El nombramiento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Por regla general, el nombramiento lo realiza el <strong>jefe del estamento convocante</strong> —para jefes y subjefes de rama, el Jefe de Grupo— y da por iniciado el ciclo de vida del adulto en ese cargo; los cargos del consejo tienen su propio camino, como viste en la Lección 3. El formato oficial fija el <strong>periodo</strong> que cubre y dispone que se dé a conocer de manera pública a la comunidad scout, en ceremonia especial."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔁 ¿Te acuerdas del «sí» de pasillo?</strong><br>Julián sí terminó siendo Jefe de Tropa. Pero esta vez llegó por una convocatoria pública, pasó por un comité, se le revisaron los antecedentes, firmó un acuerdo que lo compromete a él <em>y al grupo</em> y tuvo tres meses de acompañamiento. Y su nombramiento se leyó en ceremonia, delante de la Tropa. <strong>Eso es vincular: que llegue sabiendo a qué, y que se quede.</strong>"
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Toma el próximo cargo que se abrirá en tu grupo y escribe su hoja de necesidad: cargo, funciones del Manual, competencias y fecha.<br>• Revisa con tu consejo si los adultos que entraron este año firmaron su acuerdo mutuo y tienen nombramiento con periodo.<br>• Si tú mismo entraste sin algún paso, pide la conversación para ponerte al día.<br><br>Una sola, con fecha concreta.<br><br>Cuando llegues al certificado, escríbela en tu <strong>Compromiso Personal</strong>: así la tienes a mano."
+        },
+        {
+          "type": "policy-quote",
+          "text": "El proceso de selección para cualquier cargo o función culmina con el establecimiento de un compromiso y acuerdo mutuo entre la ASC y el adulto seleccionado. Este será refrendado mediante un nombramiento oficial, emitido solamente por personas autorizadas para este fin, dentro de la organización.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.1.5, p. 13",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en el último adulto que entró a tu grupo, por su cargo y sin nombres. De lo que el grupo se compromete en el acuerdo —resolver dudas, dar recursos, entregar los documentos del cargo, avisar a tiempo—, ¿qué está cumpliendo y qué no? ¿Qué harías esta semana para cerrar esa brecha?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 6",
+        "questions": [
+          {
+            "text": "Julián firma su acuerdo mutuo. Seis meses después, el grupo no le ha entregado el Manual de Cargos ni le responde sus dudas. ¿Qué dice el acuerdo sobre eso?",
+            "options": [
+              "Nada: el acuerdo recoge lo que el adulto se compromete a hacer con la Asociación.",
+              "Que el estamento también se comprometió a resolver sus dudas y darle los documentos.",
+              "Que Julián debió pedir por escrito esos documentos antes de firmar el acuerdo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "En otro grupo, el jefe de grupo le escribe por WhatsApp al nuevo Jefe de Manada: «Ya tienes el cargo, bienvenido». ¿Qué le falta para ser un nombramiento como el que viste?",
+            "options": [
+              "Que no le falta nada: si él ya sabe que tiene el cargo, la forma es lo de menos.",
+              "Que sea formal: por escrito, con su periodo, y anunciado ante el grupo en una ceremonia.",
+              "Que lo firme la región: un jefe de grupo no puede nombrar a los adultos de su grupo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Busca perfiles, no personas",
+      "emoji": "🔎",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Abre la búsqueda",
+      "emoji": "🧭",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Selección con reglas",
+      "emoji": "⚖️",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Protege antes de vincular",
+      "emoji": "🛡️",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Integra con tiempo",
+      "emoji": "🤝",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 6 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "VINCULAR NUEVOS ADULTOS AL GRUPO",
+    "description": "ha completado el Curso 6 de la Línea Política de Adultos, Vincular nuevos adultos al grupo, y es capaz de llevar un proceso de atracción y vinculación de principio a fin: determinar la necesidad, buscar en fuentes internas y externas, seleccionar con objetividad y revisión de antecedentes, integrar con acompañamiento y formalizar con el compromiso de acuerdo mutuo y el nombramiento, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  },
+  "commitmentBox": {
+    "prompt": "Escribe aquí la misión que elegiste en la Lección 6, con su fecha:",
+    "placeholder": "Mi misión para vincular mejor es… y la cumplo antes del…"
+  }
+}

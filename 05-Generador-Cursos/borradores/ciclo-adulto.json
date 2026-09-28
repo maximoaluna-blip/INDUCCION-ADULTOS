@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-09-21",
+  "contentVersion": "2026-09-27",
   "icon": "🔄",
   "duration": "30 minutos",
   "level": 1,
@@ -563,7 +563,7 @@
             },
             {
               "title": "👋 Retiro",
-              "description": "Cierras tu participación en cargos. Puede ser tu decisión voluntaria, porque el cargo dejó de existir, o porque la organización determinó que no es lo mejor seguir. Siempre con reconocimiento.",
+              "description": "Dejas ese cargo. Puede ser tu decisión voluntaria, porque el cargo dejó de existir, o porque la organización determinó que no es lo mejor seguir. Siempre con reconocimiento.",
               "color": "#fff3e0",
               "borderColor": "#ff9800"
             }

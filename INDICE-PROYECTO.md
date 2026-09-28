@@ -100,6 +100,18 @@ INDUCCION-ADULTOS/
 
 **Curso archivado:** `politica-adultos` (v1 monolítica de 90 min, reemplazada por la ruta).
 
+## Nivel 2 — Profundización por fase del ciclo — 5 cursos (27-sep-2026, ADR-098)
+
+| # | Curso | courseId | Duración | Lecciones | Fase / hito pedagógico |
+|---|---|---|---|---|---|
+| 6 | 🚪 Vincular nuevos adultos al grupo | `vinculacion-adultos` | 40 min | 6 | Atracción y Vinculación desde quien vincula: necesidad, fuentes, selección objetiva, antecedentes, integración, acuerdo y nombramiento |
+| 7 | 🤝 Ser asesor personal | `asesor-personal` | 40 min | 6 | Rol, no cargo; de la valoración al plan; bitácora; solicitud del reconocimiento |
+| 8 | 📋 Acompañamiento y Evaluación 360° en la práctica | `evaluacion-360` | 40 min | 6 | Tres momentos, actores, encuestas de percepción, responder con honestidad, del informe al plan |
+| 9 | 💻 Talento 360° en la práctica | `talento-360` | 40 min | 6 | Dos puertas, hoja de vida evaluable, postulación, evaluación y plan en la plataforma |
+| 10 | 🏁 Cierre y reinicio de ciclo | `decisiones-para-el-futuro` | 40 min | 6 | Renovación, reubicación, retiro; camino del acuerdo; reconocer y agradecer; reiniciar |
+
+Plan del nivel y lo que las fuentes corrigieron del `.docx`: `Plan-de-Formacion-Linea-Politica-de-Adultos.md` §4. Diseños: `01-Diseno-Cursos/Curso-06…10`.
+
 ---
 
 ## Features de plataforma activas
@@ -195,9 +207,13 @@ Correr local: `cd PRUEBAS-E2E && npm test`. En **GitHub Actions** corre sola en 
 
 ---
 
-## Estado actual (03-ago-2026)
+## Estado actual
 
-**Nivel 1 completo, en producción y con las 3 auditorías pasadas.** Los 5 cursos están `active` y verificados en vivo.
+> Las cifras vivas (cursos publicados, horas, borradores) las genera `python generar-estado.py` en `ESTADO.md` de la raíz: no se escriben aquí.
+
+**Niveles 1 y 2 completos, en producción y con las 3 auditorías pasadas** (Nivel 2 el 27-sep-2026, ADR-098). Los diseños de los 10 cursos están versionados en `01-Diseno-Cursos/`; los del Nivel 1 se **reconstruyeron desde el JSON** (dicen lo que quedó, no lo que se quiso).
+
+Lo de abajo es la auditoría del **Nivel 1** (03-ago-2026):
 
 | Auditoría | Estado | Detalle |
 |---|---|---|
@@ -210,12 +226,7 @@ Correr local: `cd PRUEBAS-E2E && npm test`. En **GitHub Actions** corre sola en 
 ## Pendientes / próximas etapas
 
 ### Fase siguiente
-- **Tier 2 — Cursos de profundización por fase del ciclo:**
-  - Curso 6 — Vinculación de nuevos adultos al grupo.
-  - Curso 7 — Cómo ser asesor personal.
-  - Curso 8 — Acompañamiento y Evaluación 360° práctica.
-  - Curso 9 — Talento 360° práctico.
-  - Curso 10 — Cierre y reinicio de ciclo (decisiones para el futuro).
+- **Nivel 3 — Especialización por cargo (Cursos 11 a 17).** ⚠️ Antes de diseñar: revisar cada foco contra el *Manual de Cargos*; la Asesoría Personal **no tiene grados de dominio** (el `.docx` decía 4); y mirar los solapes con **Consejero juvenil** (PJ, Curso 19) y **Tesorería** (DI, Curso 10). Ver el Plan en Markdown, §5.
 - **Endpoint adicional en el Apps Script** (`?action=data`) que devuelva los rows completos para que el dashboard muestre tabla de detalle, filtros y exportación a CSV.
 
 ### Fase futura

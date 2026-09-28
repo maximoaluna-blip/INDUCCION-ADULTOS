@@ -15,6 +15,11 @@ const FALLBACK = [
   { courseId: 'ciclo-adulto', file: 'ciclo-adulto.html', tituloIncluye: 'Ciclo' },
   { courseId: 'competencias-esenciales', file: 'competencias-esenciales.html', tituloIncluye: 'Competencias' },
   { courseId: 'plan-personal', file: 'plan-personal.html', tituloIncluye: 'Plan Personal' },
+  { courseId: 'vinculacion-adultos', file: 'vinculacion-adultos.html', tituloIncluye: 'Vincular' },
+  { courseId: 'asesor-personal', file: 'asesor-personal.html', tituloIncluye: 'asesor' },
+  { courseId: 'evaluacion-360', file: 'evaluacion-360.html', tituloIncluye: 'Evaluación 360' },
+  { courseId: 'talento-360', file: 'talento-360.html', tituloIncluye: 'Talento 360' },
+  { courseId: 'decisiones-para-el-futuro', file: 'decisiones-para-el-futuro.html', tituloIncluye: 'Cierre' },
 ];
 
 let CURSOS = FALLBACK;

@@ -1,12 +1,12 @@
 # Línea Política de Adultos en el Movimiento · ASC
 
-Plataforma de formación online de la **Línea Política de Adultos** de la Asociación Scouts de Colombia. Cinco cursos cortos sobre el marco filosófico, el ciclo del adulto, las 7 competencias esenciales y el plan personal de desarrollo.
+Plataforma de formación online de la **Línea Política de Adultos** de la Asociación Scouts de Colombia. Cursos cortos sobre el marco filosófico, el ciclo del adulto, las 7 competencias esenciales y el plan personal de desarrollo (Nivel 1), y la práctica de cada fase del ciclo: vincular, asesorar, evaluar, Talento 360° y cerrar un nombramiento (Nivel 2).
 
 🌐 **Producción:** https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/
 
 ## Estado actual
 
-**Nivel 1 — Ruta de Fundamentación** completo: 5 cursos, ~3 horas, los 5 con las **3 auditorías pasadas** (doctrinal + pedagógica + funcional) desde el 02-ago-2026.
+**Nivel 1 — Ruta de Fundamentación** y **Nivel 2 — Profundización por fase del ciclo** completos, todos con las **3 auditorías pasadas** (doctrinal + pedagógica + funcional): el Nivel 1 desde el 02-ago-2026, el Nivel 2 desde el 27-sep-2026 (ADR-098). Las cifras vivas están en `ESTADO.md` de la raíz del proyecto.
 > **La landing agrupa por nivel desde el 17-sep-2026 (ADR-058).** Cada entrada de `cursos.json` lleva **`level`, `levelName` y `order`**, y el `index.html` los pinta en secciones plegables. **Hasta ese día esta línea no los emitía siquiera**: su `build-course.js` no los escribía y la landing era una lista plana. El `levelName` sale del **Plan de Formación** (tabla 0: «Ruta de Fundamentación»), no se inventa. ⚠️ Son **metadatos de catálogo** — no entran en el HTML del curso, así que añadirlos **no cambió ninguna página publicada**. Y nació `PRUEBAS-E2E/tests/landing.spec.js`, porque **ninguna prueba tocaba esta página**: las suites se parametrizan por el catálogo y lo que no es un curso quedaba fuera por construcción.
 
 
@@ -17,6 +17,11 @@ Plataforma de formación online de la **Línea Política de Adultos** de la Asoc
 | 3 | 🔄 El Ciclo del Adulto | `ciclo-adulto` | 30 min | ✅ Activo |
 | 4 | 🧠 Las 7 Competencias Esenciales | `competencias-esenciales` | 40 min | ✅ Activo |
 | 5 | 🗺️ Tu Plan Personal de Desarrollo | `plan-personal` | 30 min | ✅ Activo |
+| 6 | 🚪 Vincular nuevos adultos al grupo | `vinculacion-adultos` | 40 min | ✅ Activo |
+| 7 | 🤝 Ser asesor personal | `asesor-personal` | 40 min | ✅ Activo |
+| 8 | 📋 Acompañamiento y Evaluación 360° en la práctica | `evaluacion-360` | 40 min | ✅ Activo |
+| 9 | 💻 Talento 360° en la práctica | `talento-360` | 40 min | ✅ Activo |
+| 10 | 🏁 Cierre y reinicio de ciclo | `decisiones-para-el-futuro` | 40 min | ✅ Activo |
 | — | 🏛️ Política de Adultos (monográfico) | `politica-adultos` | 90 min | 📝 Borrador, sin publicar |
 
 > **La línea se auditó por primera vez en la Fase 2 del ADR-023 (02-ago-2026)**, y no salió limpia: 11 críticos, 15 mayores y 26 menores. Lo más grave estaba en `competencias-esenciales` (4 de las 7 competencias tenían los grados de dominio en el peldaño equivocado, y el autodiagnóstico calificaba contra esos descriptores) y en `plan-personal` (el rol del Asesor Personal se describía al revés de lo que dice la fuente). Todo corregido y desplegado. Detalle en `AUDITORIA.md` y en `CHANGELOG-DOCTRINA.md` del repo raíz.

@@ -85,7 +85,7 @@ Es el corazón técnico de la plataforma. Cada archivo tiene un rol específico 
 
 | # | Paso | Quién | Tiempo | Detalle |
 |---|---|---|---|---|
-| 1 | **Diseñar** la estructura del curso | Yo (propongo) → Tú (apruebas) | 5–15 min | Definir: # de lecciones, tiempos por lección, hitos pedagógicos, audiencia, fuentes oficiales que aterriza |
+| 1 | **Diseñar** la estructura del curso | Yo (propongo) → Tú (apruebas) | 5–15 min | Definir: # de lecciones, tiempos por lección, hitos pedagógicos, audiencia, fuentes oficiales que aterriza. **Se escribe en `01-Diseno-Cursos/Curso-NN-<Titulo>.md`** (ADR-098): el diseño va primero y el JSON es su traducción; si después cambia el contenido, se cambia primero el `.md`. El plan de la línea es `Plan-de-Formacion-Linea-Politica-de-Adultos.md` |
 | 2 | **Conseguir multimedia** (videos, imágenes) si los necesita | Tú entregas archivos | depende | Copiar a `02-Plataforma-Web/<courseId>/videos/` o `<courseId>/imgs/` |
 | 3 | **Escribir el JSON** | Yo | 20–40 min | En `05-Generador-Cursos/borradores/<courseId>.json` siguiendo `course-schema.json` |
 | 4 | **Validar JSON** | Yo | 10 seg | `python -c "import json; json.load(open('...json', encoding='utf-8'))"` |
@@ -100,6 +100,11 @@ Es el corazón técnico de la plataforma. Cada archivo tiene un rol específico 
 | 13 | **Commit + push** | Yo | 1 min | Mensaje descriptivo |
 | 14 | **Verificar deploy** | Yo (con `Monitor`) | 1–2 min | GitHub Pages redespliega y URL responde HTTP 200 |
 | 15 | **Anunciar** a piloto / usuarios | Tú | — | Compartir URL del curso |
+
+> **Tres reglas de autoría que dejó el Nivel 2 (ADR-098):**
+> - **Ninguna reflexión pide el nombre de una persona ni invita a identificar a un tercero** («de boca de quién», «a quién le tocó»): se escribe por el cargo o el rol. Regla del dueño del 27-sep-2026 para toda la plataforma.
+> - **El cierre declara su `commitmentBox`** (`prompt` y `placeholder`) cuando la última lección tiene una misión: así el Compromiso Personal del certificado recoge esa misión en vez del texto genérico «como adulto certificado».
+> - **Con 2 preguntas por quiz, el 70 % es acertar las dos**: dilo en la bienvenida. Y no añadas una tercera pregunta para «bajar el umbral»: con 3, el 70 % exige las 3.
 
 > **Las 3 auditorías (10–12) son la compuerta de calidad** antes de publicar — doctrinal, pedagógica y funcional (ADR-019, `DECISIONES.md` raíz: reemplazan al piloto humano como requisito bloqueante). No son opcionales ni intercambiables: la doctrinal verifica que lo que dice es **cierto**, la pedagógica que **enseña bien**, y la funcional que **funciona**.
 

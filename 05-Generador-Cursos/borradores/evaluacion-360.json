@@ -1,0 +1,672 @@
+{
+  "courseId": "evaluacion-360",
+  "title": "Acompañamiento y Evaluación 360° en la práctica",
+  "subtitle": "Curso 8 · Nivel 2 de la Línea Política de Adultos",
+  "description": "El proceso completo de acompañamiento y evaluación del adulto: qué es acompañar y evaluar, los tres momentos del año, quién evalúa a quién, cómo se aplican con cuidado las encuestas a niños, jóvenes y padres, cómo se responde una evaluación con honestidad y qué se hace con el informe.",
+  "contentVersion": "2026-09-27",
+  "icon": "📋",
+  "duration": "40 minutos",
+  "level": 2,
+  "levelName": "Profundización por fase del ciclo",
+  "order": 8,
+  "status": "active",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Un correo que asusta.</strong><br>Carolina, jefa de Tropa, recibe el aviso: «Se abrió tu evaluación 360°». Primero piensa que alguien se quejó de ella. Luego, que sus compañeros van a aprovechar para pasarle factura. Y al final, que mejor se pone la nota más alta en todo.<br><br><strong>La 360° no es un examen que te ponen: es un espejo con varios ángulos.</strong> Al final de este curso vas a ver por qué, y qué hace Carolina con su espejo."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 8.</strong><br>En el Curso 3 viste que la evaluación 360° tiene varias modalidades y que existen encuestas para niños, jóvenes y padres. Aquí vas a ver el proceso completo, de principio a fin: te sirve si te van a evaluar, si evalúas a otros o si en tu grupo te toca organizar la evaluación."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para aprovecharlo mejor te sugerimos haber visto el <strong>Curso 3 — El Ciclo del Adulto</strong>. Se complementa con el <strong>Curso 7 — Ser asesor personal</strong> y el <strong>Curso 9 — Talento 360° en la práctica</strong>. Ninguno es requisito. Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos; si no, repasas y vuelves a intentar. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Distinguir</strong> acompañar de evaluar, y explicar para qué sirve la 360°",
+            "<strong>Ubicar</strong> los tres momentos clave en el año scout",
+            "<strong>Identificar</strong> quién evalúa a quién, incluidos los consejeros",
+            "<strong>Organizar</strong> las encuestas de percepción con consentimiento y sin sesgo",
+            "<strong>Responder</strong> una evaluación por conductas observables, con honestidad",
+            "<strong>Convertir</strong> el informe en decisiones para el plan"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Qué es acompañar y evaluar",
+              "description": "7 min. Definiciones, conductas observables y para qué sirve."
+            },
+            {
+              "title": "Lección 2 — Los tres momentos",
+              "description": "6 min. Inicio, seguimiento y cierre del año."
+            },
+            {
+              "title": "Lección 3 — Quién evalúa a quién",
+              "description": "6 min. Los actores, y el caso de los consejeros."
+            },
+            {
+              "title": "Lección 4 — Las encuestas de percepción",
+              "description": "7 min. Niños, jóvenes y padres: con consentimiento y sin sesgo."
+            },
+            {
+              "title": "Lección 5 — Responder bien una evaluación",
+              "description": "6 min. Honestidad sobre lo que se ha visto."
+            },
+            {
+              "title": "Lección 6 — Del informe a las decisiones",
+              "description": "6 min. Qué se hace con los resultados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Qué es acompañar y evaluar",
+      "emoji": "🪞",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Acompañar y evaluar son dos caras del mismo proceso. Se evalúa para saber qué competencia fortalecer, no para juzgar a la persona."
+        },
+        {
+          "type": "paragraph",
+          "text": "Piensa en Carolina. Cada tanto se sienta con su asesor a revisar cómo va su plan: eso es <strong>acompañar</strong>. Dos veces al año, varias personas miran qué tanto hace lo que su cargo le pide: eso es <strong>evaluar</strong>. Van juntas: sin evaluación no se sabe qué acompañar, y sin acompañamiento la evaluación se queda en un número."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📖 Dos definiciones"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🤝 Acompañamiento",
+              "description": "Apoyo y seguimiento al desarrollo de un plan personal de desarrollo, que le permita al adulto fortalecer sus competencias para lograr con éxito su cargo o función actual.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📏 Evaluación",
+              "description": "Medición de las competencias del adulto en tiempos determinados, con las herramientas de la Asociación, para dar cuenta de las que se requieren fortalecer en el cargo actual.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "👁️ Lo que se mide: conductas observables"
+        },
+        {
+          "type": "paragraph",
+          "text": "La 360° no mide simpatía ni opiniones sueltas. Mide <strong>conductas observables</strong>: actividades, acciones, resultados, respuestas o reacciones frente a lo que el cargo pide, que pueden ser vistas y recordadas por quienes te rodean. Por eso importa que se describan de forma clara y a conciencia."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔄 Cuatro modalidades, dos instrumentos"
+        },
+        {
+          "type": "paragraph",
+          "text": "La política nombra las cuatro modalidades de la 360°: <strong>autoevaluación, coevaluación, heteroevaluación y evaluación</strong>. La <em>Guía de Acompañamiento y Evaluación</em> las lleva a la práctica con dos instrumentos:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "1️⃣ Evaluación por competencias",
+              "description": "Según el cargo o función. La responden el propio adulto, su jefe inmediato, su asesor personal y sus pares. Se hace en la plataforma Talento 360°.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "2️⃣ Encuestas de percepción",
+              "description": "A niños, jóvenes y padres sobre el desempeño del adulto, sobre todo de quienes tienen cargos en el programa de jóvenes. Las verás en la Lección 4.",
+              "color": "#fff8e1",
+              "borderColor": "#f9a825"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔗 Si vienes del Curso 3:</strong> allí viste que la 360° junta varias miradas: la tuya, la de tus pares, la de los chicos y los padres, y la de quien te acompaña. Aquí no se pierde ninguna: la tuya, la de tus pares, la de tu jefe y la de tu asesor van en el primer instrumento; la de los niños, jóvenes y padres, en el segundo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "La evaluación 360º grados para la ASC es una herramienta trasversal dentro del proceso de crecimiento de los adultos de la organización, que contribuye a la formación del adulto desde el desarrollo de las competencias y no como un documento que cuestiona o genera prejuicios sobre su trabajo.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4.4, p. 17",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en una evaluación que hayas vivido —en el trabajo, el estudio o el Movimiento— que se sintió como un juicio y no como una ayuda. ¿Qué la hizo sentir así? ¿Qué habría tenido que ser distinto para que te sirviera?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "Un par de Carolina está molesto con ella por un desacuerdo de la semana pasada y piensa usar su evaluación para «bajarle los humos». ¿Qué se le está olvidando?",
+            "options": [
+              "Nada: si el desacuerdo fue real, la 360° es justo el canal para hacérselo saber.",
+              "Que la 360° no es para ajustar cuentas, sino para mostrarle a Carolina qué fortalecer.",
+              "Que su calificación pesa poco, porque la que de verdad cuenta es la del jefe de grupo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "En tu grupo dicen: «La 360° es una encuesta que se les pasa a los papás». Según la Guía, ¿qué le falta a esa idea?",
+            "options": [
+              "Nada: la 360° se hace con encuestas a padres, niños y jóvenes, y no lleva ninguna otra parte.",
+              "Que eso es solo una parte: también está la evaluación por competencias del adulto y quienes trabajan con él.",
+              "Que las encuestas a los padres no hacen parte de la 360°, sino del informe anual del consejo de grupo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Los tres momentos",
+      "emoji": "🗓️",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Hay al menos tres revisiones formales al año: al empezar, a mitad de camino y al cerrar. Entre una y otra, conversaciones que se registran."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Momento 1 — Mes 0 · Vinculación, reubicación o renovación",
+              "description": "Al inicio del año scout, empalmado con el plan del grupo, la región o la nación. Si el adulto es nuevo en el cargo: valoración inicial por competencias y su primer Plan Personal de Desarrollo. Si renueva: el plan con lo que cumplió y la evaluación final del periodo anterior."
+            },
+            {
+              "title": "Momento 2 — Seguimiento a mitad de año o de periodo",
+              "description": "Se revisan los avances del plan, se ajustan tiempos y metas, y se aplica la 360° que incluye a pares, niños, jóvenes y padres. Se recomienda como mínimo a los seis meses de la primera evaluación, después de haber ejecutado acciones del plan."
+            },
+            {
+              "title": "Momento 3 — Mes 12 · Revisión anual o de fin de periodo",
+              "description": "Se revisa el plan con sus evidencias de cierre, más enfocado en la persona que en las metas. Se hace la 360° final, se toman las decisiones para el futuro y se pueden hacer los reconocimientos. Con eso se formula un plan nuevo y el ciclo vuelve a empezar."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💬 Entre el Momento 2 y el 3</strong>, la Guía pide reuniones informales y charlas permanentes entre el adulto, su jefe inmediato y su asesor, <strong>registradas en bitácoras</strong>, para que el plan sea claro y efectivo.<br><br><strong>🔗 Si vienes del Curso 7:</strong> allí viste que el asesor pide una segunda evaluación cuando el plan pasa del 80 %. No se contradicen. El Momento 2 llega a mitad de periodo, nunca antes de seis meses, para ver cómo va el plan. La evaluación que pide el asesor cuando el plan pasa del 80 % es la que puede sostener el reconocimiento: a veces coincide con el Momento 2 y a veces es la del Momento 3."
+        },
+        {
+          "type": "paragraph",
+          "text": "La Guía recomienda usar los tiempos del <strong>año scout, que va de marzo a marzo</strong>, para no amontonar tareas con el cierre y el comienzo del año. Y en la práctica cuadra con el <em>Compromiso de Acuerdo Mutuo</em>, en el que el adulto acepta ser evaluado <strong>semestralmente</strong>: los momentos 2 y 3 dan dos evaluaciones por año."
+        },
+        {
+          "type": "blockquote",
+          "text": "La primera 360° completa de Carolina —con pares, scouts y padres— no es una prueba sorpresa: es su Momento 2. En el Momento 1, en marzo, hizo su valoración inicial y armó su plan con su asesor."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Se establece un mínimo de tres momentos para las revisiones formales durante el año de vigencia Scout o el tiempo de desempeño del cargo establecido en la estrategia o las regulaciones de la Asociación Scouts de Colombia.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4.1, p. 11",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "Ubica tu propio año scout: ¿en qué momento clave estás hoy con tu cargo actual? ¿Tuviste tu Momento 1 —valoración y plan— o te lo saltaste? Escribe qué harías para ponerte al día."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Un grupo hace una sola evaluación al año, en diciembre, «para no cansar a la gente». ¿Qué le falta según la Guía?",
+            "options": [
+              "Nada: basta con una evaluación anual, siempre que se haga en la fecha de cierre del año.",
+              "Al menos un seguimiento a mitad de periodo, además del inicio y de la revisión final.",
+              "Una evaluación cada mes, porque el plan personal se revisa formalmente mes a mes."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Martín renueva su nombramiento como jefe de Clan. ¿Con qué arranca su Momento 1 del nuevo periodo?",
+            "options": [
+              "Con una valoración inicial desde cero, como si acabara de llegar al grupo.",
+              "Con lo que ya trae: cómo le fue con su plan y cómo cerró su última evaluación.",
+              "Con nada: al renovar el mismo cargo, ese momento se salta y se va directo al 2."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Quién evalúa a quién",
+      "emoji": "👥",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El adulto es el protagonista de su evaluación, pero no el único que la hace. Cada actor mira desde un ángulo distinto: eso es lo «360»."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Los actores"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>El jefe inmediato</strong> — quien lidera el equipo: el jefe de rama o de grupo, el jefe regional o el nacional según el nivel. La Guía espera que sea un asesor natural del proceso",
+            "<strong>El asesor personal</strong> — guía el desarrollo y, con la 360°, orienta la decisión para el futuro",
+            "<strong>Los pares</strong> — los compañeros de equipo, que aterrizan la evaluación a la realidad del cargo",
+            "<strong>Los beneficiarios</strong> — niños, niñas, adolescentes, jóvenes y padres, sobre todo para quienes tienen cargos en el programa",
+            "<strong>El Comisionado Regional de Adultos en el Movimiento</strong> — dinamiza que el proceso se haga, asesora a los jefes y revisa avances y evidencias",
+            "<strong>Los expertos</strong> — mentores o asesores externos que apoyan competencias específicas",
+            "<strong>La Dirección Nacional de Adultos en el Movimiento</strong> — vela porque el modelo cumpla su objetivo"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🏛️ El caso de los consejeros"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "¿Quién los acompaña?",
+              "description": "No tienen un jefe inmediato como individuo. El presidente del consejo y los jefes de los distintos niveles son las figuras que pueden apoyar su proceso, e incluso ser sus asesores.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "¿Hasta dónde llega?",
+              "description": "Son sujetos de evaluación de desempeño y de plan personal. Pero como su vinculación o continuidad depende de la asamblea, su proceso no termina en un retiro o una reubicación: eso lo decide la elección.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Los niños, niñas, adolescentes, jóvenes y padres son actores beneficiarios del proyecto educativo, los cuales participan de la evaluación del adulto, especialmente los que tienen cargos en programa, en proceso de fortalecimiento de competencias, respondiendo a la evaluación 360º, evidenciando falencias como receptores del proyecto educativo del Movimiento Scout.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4.2, p. 14",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en tu propio cargo: ¿quiénes de esta lista deberían mirarte en tu próxima 360° —por su rol, no por su nombre— y cuál de ellos casi no te ve trabajar? ¿Qué podrías hacer para que su mirada sea justa?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Un consejero de grupo, elegido por la asamblea, tiene una 360° baja. El jefe de grupo propone «reubicarlo en otro cargo» como resultado. ¿Qué dicen los documentos?",
+            "options": [
+              "Que es lo indicado: toda evaluación baja termina en una reubicación o en un retiro.",
+              "Que el consejero sí se evalúa y hace plan, pero su continuidad la decide la asamblea.",
+              "Que los consejeros no se evalúan, porque la asamblea ya los evaluó al elegirlos."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "En una región, varios grupos llevan dos años sin evaluar a sus adultos y nadie lo ha notado. ¿A quién le toca empujar que esas evaluaciones se hagan en los grupos?",
+            "options": [
+              "Al jefe de cada grupo, que es el jefe inmediato de los dirigentes de su grupo.",
+              "Al Comisionado Regional de Adultos, que asesora a los jefes y revisa los avances.",
+              "A la Dirección Nacional de Adultos, que vela porque el modelo cumpla su objetivo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Las encuestas de percepción",
+      "emoji": "🧒",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Preguntarles a los niños, jóvenes y padres cómo ven a su dirigente es valioso y delicado: se hace con autorización, sin sesgar y cuidando la privacidad de quien responde."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "❓ A quién y quién"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se evalúa a <strong>todos los adultos que tienen un cargo en la línea de programa de jóvenes</strong>. Y evalúan los niños, jóvenes y padres o acudientes que tienen <strong>trato directo</strong> con el dirigente evaluado."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📝 Los tres formularios"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🐺 Lobatos",
+              "description": "Preguntas de Sí o No —si es amigo de todos, si te pregunta lo que te gusta hacer, si te sientes seguro con tu dirigente…— y unas pocas preguntas abiertas.",
+              "color": "#fff8e1",
+              "borderColor": "#f9a825"
+            },
+            {
+              "title": "⚜️ Scouts, caminantes y rovers",
+              "description": "Escala de 1 (nunca) a 4 (siempre) —si es creativo, si sabe qué hacer en un conflicto, si reconoce tu progresión…— y preguntas abiertas. (El formulario de 2020 dice «caminantes», el nombre anterior de los Nómadas Scout de la Comunidad.)",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "👪 Padres o acudientes",
+              "description": "Escala de 1 a 4, más preguntas abiertas: qué es lo que más les agrada del dirigente y qué les gustaría que cambiara.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🐾 ¿Y la Familia de Cachorros?</strong> Los formularios oficiales son de 2020 y nombran Manada, Tropa, Comunidad y Clan. Si tu grupo tiene Familia de Cachorros, consulta con tu Comisionado Regional de Adultos cómo recoger la percepción de esa rama antes de improvisar un formulario propio."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✅ Cómo aplicarlas bien"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "El <strong>Jefe de Grupo</strong> provee el formulario que corresponde y decide si se aplica en papel o virtual",
+            "Con menores de edad, primero la <strong>autorización de los padres</strong>: hay un formato de consentimiento informado, conforme a la Ley 1581 de 2012",
+            "Quien dirige la encuesta —el Jefe de Grupo o de Rama, según se asigne— da instrucciones y resuelve dudas <strong>sin sesgar</strong> las respuestas; con los lobatos, sobre todo",
+            "Son <strong>individuales, no grupales</strong>, en un espacio tranquilo y sin prisa",
+            "No hace falta que el niño o joven escriba su nombre, y la información se usa solo para retroalimentar, <strong>respetando la privacidad</strong> de quien responde",
+            "El Jefe de Grupo recoge los cuestionarios y los analiza, o los entrega al asesor personal, al jefe inmediato y al adulto evaluado"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🗓️ ¿Cuándo?</strong> En el mismo periodo en que el adulto hace su 360° por competencias: el Momento 2. Y la recomendación oficial es <strong>no dejar pasar más de dos ciclos de programa</strong> sin aplicarla."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es importante mencionar que la información recolectada de las encuestas, se utiliza con fines de retroalimentación sobre la labor del adulto en pro del desarrollo del mismo, respetando la privacidad acerca de quien la diligencia.",
+          "source": "Recomendaciones para aplicar las encuestas de percepción y evaluación del dirigente (Dirección Nacional de Adultos en el Movimiento), punto 7, p. 3",
+          "label": "📋 Ver lo que dicen las recomendaciones"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si diriges una rama: ¿qué pregunta de la encuesta crees que te saldría más baja con tus scouts, y qué harías con ese resultado si lo vieras como un espejo y no como un juicio? Si no diriges una rama: ¿qué pregunta de los formularios crees que a los dirigentes en general les cuesta más, y por qué?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Para ahorrar tiempo, un jefe de Manada reúne a los lobatos en círculo, les lee la encuesta en voz alta y cada uno responde levantando la mano. Ya tiene las autorizaciones de los padres. ¿Qué opinas?",
+            "options": [
+              "Que está bien: con las autorizaciones firmadas, la forma de aplicarla queda a su criterio.",
+              "Que no sirve así: la encuesta es individual, y a mano alzada nadie responde con libertad.",
+              "Que no sirve así: a los lobatos no se les aplica; por su edad, la responden solo los padres."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Una jefa de grupo quiere aplicar este sábado la encuesta a los scouts de la Tropa, que son menores de edad. Los chicos están de acuerdo y con ganas. ¿Puede empezar?",
+            "options": [
+              "Sí: si los scouts aceptan de buena gana, su propio sí basta como autorización.",
+              "Todavía no: como son menores, antes sus padres tienen que autorizar esos datos.",
+              "Todavía no: antes el dirigente evaluado tiene que aprobar las preguntas de la encuesta."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Responder bien una evaluación",
+      "emoji": "✍️",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Una evaluación solo sirve si es honesta. Se califica lo que se ha visto hacer, no lo que se supone ni lo que se quisiera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando se abre una evaluación en la plataforma, queda programada por un tiempo de <strong>un mes aproximadamente</strong>. La recomendación oficial es hacerla a tiempo, pero <strong>pausada, coherente y honesta</strong>: que los resultados sean pertinentes y sirvan tanto al cargo como al crecimiento de la persona."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "👁️ La regla de oro: ¿lo he visto?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Como la evaluación se basa en conductas observables, la pregunta ante cada ítem es <strong>si lo has visto o no</strong>. Puede que hasta la fecha no le haya tocado hacer esa actividad: entonces no se da por hecha, y se contempla para el plan."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "⚠️ Dos trampas"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "😇 La complacencia",
+              "description": "Ponerse —o ponerle al otro— la nota más alta en todo «para no quedar mal». Deja el informe sin brechas, y sin brechas no hay plan que sirva.",
+              "color": "#fff3e0",
+              "borderColor": "#ef6c00"
+            },
+            {
+              "title": "😠 El castigo",
+              "description": "Usar la evaluación para cobrar un desacuerdo. Mide el conflicto del momento, no las conductas del cargo, y rompe la confianza que el proceso necesita.",
+              "color": "#ffebee",
+              "borderColor": "#c62828"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "A Carolina le toca también evaluar a un par, el jefe de Manada del grupo, que llegó hace poco. En «realiza actividades ajustadas a la edad de la rama que dirige, usando el marco simbólico adecuado» duda: todavía no lo ha visto preparar una actividad. No le pone la nota más alta por amistad ni la más baja por duda: lo señala como algo para su plan. Ahí entiende la otra cara de la frase: <strong>la 360° no es un examen que te ponen: es un espejo con varios ángulos</strong>, y hoy ella es uno de esos ángulos. Uno honesto."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Recomendamos llevar a cabo la evaluación de manera oportuna porque tiene una programación en tiempo de un mes aproximadamente, pero pausada, coherente y honesta, con el fin de garantizar que los resultados obtenidos sean pertinentes y contribuyan no solo a una ejecución efectiva del cargo, sino también al crecimiento personal y al desarrollo integral del ser.",
+          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 2",
+          "label": "📋 Ver lo que dice la circular"
+        }
+      ],
+      "reflection": {
+        "prompt": "En tu última autoevaluación —o en la próxima—, ¿qué ítem te sentirías tentado a calificar más alto de lo que realmente has demostrado? ¿Qué evidencia necesitarías para ponerle esa nota con honestidad?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Al autoevaluarse, un jefe de Manada llega a la conducta «diseña sus actividades teniendo en cuenta su diagnóstico de la rama y de los intereses expresados en los juegos democráticos y organismos de gobierno». Nunca lo ha hecho, pero cree que le saldría bien. ¿Cómo lo responde con honestidad?",
+            "options": [
+              "Con la nota alta, porque cree que si lo intentara lo haría bien sin mucho esfuerzo.",
+              "Como no demostrado todavía, y lo contempla como algo para trabajar en su plan.",
+              "Lo deja en blanco, porque solo se califican los ítems que el jefe inmediato ha visto."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Una subjefa se pone la nota más alta en todas las competencias «para que no la pongan a hacer un plan». ¿Qué consigue?",
+            "options": [
+              "Un informe que la protege, porque sin brechas nadie le revisa el cargo después.",
+              "Un informe sin brechas reales, del que no sale un plan que la ayude a crecer.",
+              "Un reconocimiento más rápido, porque sin brechas ya demuestra que domina el cargo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Del informe a las decisiones",
+      "emoji": "📈",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El informe no es el final: es el mapa para el siguiente tramo del plan. Se lee acompañado y se convierte en pocas decisiones concretas."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. El informe",
+              "description": "Cuando todos los que debían evaluar lo hicieron y la evaluación se cierra, el informe se puede descargar. Antes de cerrarla, no."
+            },
+            {
+              "title": "2. Leerlo con el asesor",
+              "description": "Fortalezas y brechas, competencia por competencia, junto con los resultados de las encuestas de percepción."
+            },
+            {
+              "title": "3. Decidir pocas cosas",
+              "description": "Se ajusta el plan en las competencias que más impacto tienen en el cargo. Puede significar nuevas metas, nuevas formas de apoyo o formación adicional."
+            },
+            {
+              "title": "4. Dejar evidencia",
+              "description": "Las estrategias del plan y sus soportes, las bitácoras de seguimiento y, en el Momento 3, el acta de la evaluación final con las decisiones para el futuro firmada por las partes."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧭 Lo que sigue en la ruta:</strong> cómo se acompaña ese plan lo viste o verás en el <strong>Curso 7 — Ser asesor personal</strong>; dónde se registra todo, en el <strong>Curso 9 — Talento 360° en la práctica</strong>; y qué se decide al final del periodo, en el <strong>Curso 10 — Cierre y reinicio de ciclo</strong>."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔁 ¿Te acuerdas del correo que asustó a Carolina?</strong><br>Su informe no trajo quejas escondidas ni cuentas por cobrar. Como no se puso la nota más alta en todo, su autoevaluación se pudo comparar con lo que ven los demás: sus scouts la ven creativa y se sienten escuchados, pero casi nunca celebran los logros de la Tropa. Con su asesor escogió una sola cosa para los próximos seis meses. <strong>La 360° no es un examen que te ponen: es un espejo con varios ángulos</strong>, y Carolina por fin se vio desde donde la ven sus scouts."
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Averigua en qué momento clave estás con tu cargo y cuándo es tu próxima evaluación.<br>• Si eres jefe de grupo: revisa cuándo fue la última vez que se aplicaron las encuestas de percepción y agenda las del próximo Momento 2, con sus autorizaciones.<br>• Si tienes un informe descargado: léelo con tu asesor y escojan juntos una sola competencia.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "El seguimiento busca el cumplimiento, análisis y evaluación de resultados verificables, previamente acordados. Puede conducir al establecimiento de nuevas metas, formas de apoyo, modificar comportamientos y enfoques de los problemas, así como la identificación de medios de formación adicionales para el desarrollo de las competencias del adulto.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.2.4, p. 16",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Elige una competencia de tu cargo que consideres fuerte. Si tu próxima 360° mostrara una brecha ahí, ¿cuál sería tu primera reacción, y qué evidencia buscarías con tu asesor antes de decidir qué hacer?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 8",
+        "questions": [
+          {
+            "text": "Un adulto quiere descargar su informe 360°, pero dos de sus pares todavía no han respondido y la evaluación sigue abierta. ¿Qué pasa?",
+            "options": [
+              "Puede descargarlo igual, y las respuestas faltantes se agregan solas cuando lleguen.",
+              "No puede descargarlo todavía: el informe sale cuando la evaluación está cerrada.",
+              "Le basta con pedirle al asesor que responda por los pares que faltan y cerrarla."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Al leer su informe con su asesor, Martín ve que se calificó alto en trabajo en equipo, pero sus pares le pusieron ahí las notas más bajas del informe. ¿Qué hace con esa diferencia?",
+            "options": [
+              "La toma como una pista clave del informe y la vuelve una meta concreta del plan.",
+              "La descarta, porque la nota de sus pares pesa menos que la de su jefe inmediato.",
+              "La compensa subiendo su nota en la próxima autoevaluación, para que el promedio suba."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Espejo, no examen",
+      "emoji": "🪞",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Tres momentos",
+      "emoji": "🗓️",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Todos los ángulos",
+      "emoji": "👥",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Escucha con cuidado",
+      "emoji": "🧒",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Evalúa lo que ve",
+      "emoji": "✍️",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 8 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "ACOMPAÑAMIENTO Y EVALUACIÓN 360° EN LA PRÁCTICA",
+    "description": "ha completado el Curso 8 de la Línea Política de Adultos, Acompañamiento y Evaluación 360° en la práctica, comprendiendo el proceso de acompañamiento y evaluación del adulto en sus tres momentos clave, los actores que intervienen, la aplicación responsable de las encuestas de percepción y el uso de los resultados para el plan personal de desarrollo, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  },
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  }
+}

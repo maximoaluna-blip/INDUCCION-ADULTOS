@@ -1,0 +1,609 @@
+{
+  "courseId": "decisiones-para-el-futuro",
+  "title": "Cierre y reinicio de ciclo",
+  "subtitle": "Curso 10 · Nivel 2 de la Línea Política de Adultos",
+  "description": "Las decisiones para el futuro trabajadas a fondo y desde los dos lados: el del adulto al que se le acaba el nombramiento y el de quien decide con él. Renovación, reubicación o retiro; el camino que prevé el acuerdo cuando el desempeño no alcanza; el reconocimiento que siempre va; la entrega del cargo; y cómo el ciclo vuelve a empezar. Cierra el Nivel 2.",
+  "contentVersion": "2026-09-27",
+  "icon": "🏁",
+  "duration": "40 minutos",
+  "level": 2,
+  "levelName": "Profundización por fase del ciclo",
+  "order": 10,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Marzo se acerca.</strong><br>Beatriz, jefa de Manada, cumple en marzo dos años de su acuerdo. Nadie le ha dicho nada. Ella tampoco ha preguntado: no sabe si quiere seguir, si le vendría mejor otro cargo o si ya le toca parar. Y teme que, si no dice nada, un día simplemente deje de ir.<br><br><strong>Un nombramiento no se acaba: se cierra. Y cerrarlo bien también es servir.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 10, el que cierra el Nivel 2.</strong><br>En el Curso 3 viste en una lección que al final de un nombramiento hay tres decisiones posibles. Aquí las vas a trabajar a fondo, desde los dos lados: el del adulto al que se le acaba el periodo y el de quien decide con él —jefe inmediato, asesor, consejo—."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para aprovecharlo mejor te sugerimos haber visto el <strong>Curso 3 — El Ciclo del Adulto</strong> y el <strong>Curso 8 — Acompañamiento y Evaluación 360°</strong>. Ninguno es requisito. Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos; si no, repasas y vuelves a intentar. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Anticipar</strong> el final de un nombramiento desde el acuerdo y el nombramiento",
+            "<strong>Distinguir</strong> renovación, reubicación y retiro, y lo que abre cada una",
+            "<strong>Recorrer</strong> el camino que prevé el acuerdo cuando el desempeño no alcanza",
+            "<strong>Reconocer y agradecer</strong> formalmente, cualquiera sea la decisión",
+            "<strong>Entregar</strong> el cargo pensando en quien sigue",
+            "<strong>Reiniciar</strong> el ciclo con un plan nuevo"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — El final está escrito desde el principio",
+              "description": "6 min. Plazos, evaluación final y conversación a tiempo."
+            },
+            {
+              "title": "Lección 2 — Tres caminos",
+              "description": "6 min. Renovar, reubicarse o retirarse."
+            },
+            {
+              "title": "Lección 3 — Cuando el desempeño no alcanza",
+              "description": "7 min. El camino que prevé el acuerdo."
+            },
+            {
+              "title": "Lección 4 — Reconocer y agradecer",
+              "description": "6 min. Lo que siempre va, cualquiera sea la decisión."
+            },
+            {
+              "title": "Lección 5 — Entregar el cargo",
+              "description": "6 min. Pensar en quien sigue."
+            },
+            {
+              "title": "Lección 6 — Volver a empezar",
+              "description": "6 min. Cómo arranca el ciclo siguiente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — El final está escrito desde el principio",
+      "emoji": "⏳",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El final de un nombramiento no es una sorpresa: la fecha está en el acuerdo desde el día en que se firmó. Lo que falta, casi siempre, es la conversación."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📅 Dónde está escrita la fecha"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📄 El acuerdo mutuo",
+              "description": "Fija un tiempo máximo de dos años desde el nombramiento. Se puede prorrogar de común acuerdo, como resultado de las evaluaciones del desempeño en el cargo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📜 El nombramiento",
+              "description": "Dice el periodo que cubre: entre qué fecha y qué fecha. Lo viste en el Curso 6.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La política dice que el ciclo de vida del adulto en un cargo <strong>culmina con una evaluación final</strong> al término de su nombramiento, y que esa evaluación es la que permite tomar la decisión más acertada. Es el Momento 3 que viste en el Curso 8. Y el ciclo es por cargo: quien tiene dos cargos tiene dos finales, cada uno con su fecha."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🗣️ La decisión se prepara durante todo el periodo.</strong> La política explica que el acompañamiento permanente permite conocer a tiempo las necesidades, intereses y capacidades del adulto, mantener su motivación y <strong>apoyar el proceso posterior de decisiones para el futuro</strong>. Si la primera vez que se habla del tema es la semana en que se vence el acuerdo, ya se llegó tarde."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🏛️ Los consejeros son distintos.</strong> Como viste en el Curso 8, a quien elige la asamblea se le evalúa y tiene plan, pero su continuidad la decide la elección: su proceso no termina en una reubicación o un retiro decididos por esta vía."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Las partes definen como término para la duración de este acuerdo de voluntades, un tiempo máximo de dos (2) años contados a partir de la fecha de nombramiento del ADULTO EN EL MOVIMIENTO, término que puede ser prorrogado por las partes de común acuerdo, como resultado de las respectivas evaluaciones del desempeño por competencias en el cargo, periodo durante el cual EL ADULTO mantendrá vigente su inscripción a la ASOCIACIÓN SCOUTS DE COLOMBIA.",
+          "source": "Compromiso de Acuerdo Mutuo, versión 3.0 (Dirección Nacional de Adultos en el Movimiento, 28 de junio de 2025), «Término de duración del acuerdo»",
+          "label": "📋 Ver lo que dice el acuerdo"
+        }
+      ],
+      "reflection": {
+        "prompt": "En el Curso 3 quizá averiguaste cuándo termina tu nombramiento. Da un paso más: ¿cuántos meses faltan, y qué conversación tendría que ocurrir antes, y con quién (por su cargo, no por su nombre)? Si no sabes cuánto falta, ¿dónde lo buscarías esta semana?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "Un jefe de grupo dice: «A los dirigentes les renovamos solos cada año; si nadie se queja, siguen». ¿Qué se está saltando?",
+            "options": [
+              "El papeleo: basta con prorrogar el acuerdo por escrito si nadie se ha quejado del adulto.",
+              "La evaluación final: la renovación sale de ella y de un acuerdo entre las partes.",
+              "La aprobación de la región, que es la que renueva a los dirigentes cada año."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Beatriz es jefa de Manada y, desde el año pasado, también tiene un cargo en el equipo regional. Su acuerdo de jefa vence en marzo. ¿Qué pasa con su cargo en la región?",
+            "options": [
+              "Vence también en marzo: un adulto tiene un solo periodo, que cubre todos sus cargos.",
+              "Sigue su propio plazo: cada cargo es un ciclo, con su acuerdo, su evaluación y su final.",
+              "Se vuelve el principal: al vencer la jefatura, el cargo regional absorbe el periodo que quedaba."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Tres caminos",
+      "emoji": "🔀",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Al final de un periodo hay tres caminos, y ninguno es un fracaso. La evaluación orienta; la decisión se conversa."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🔄 Renovación",
+              "description": "Seguir en el mismo cargo. La guía para desarrollarse en el cargo lo pone en voz del adulto: si quiero seguir, mi evaluación demuestra el desarrollo de las competencias y he hecho una gestión con calidad, mi jefe inmediato podría renombrarme.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "↔️ Reubicación",
+              "description": "Pasar a otro cargo o función, «como resultado de la movilidad dentro de un sistema flexible». Si crees que otro cargo se ajusta mejor a tus competencias, se habla con el jefe inmediato. El nuevo cargo abre un ciclo nuevo.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "👋 Retiro",
+              "description": "Dejar el cargo. Puede ser porque el cargo dejó de existir, porque el adulto lo decide por su cuenta o porque la organización y los responsables de la evaluación final determinan que es lo mejor por falta de cualificación o compromiso.",
+              "color": "#fff3e0",
+              "borderColor": "#ef6c00"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🤝 ¿Quién decide?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las fuentes lo muestran desde dos lados. El documento <em>Desempeño</em> habla de la decisión que toma el adulto sobre su cargo, orientada por la evaluación. La política dice que el retiro por falta de cualificación o compromiso lo pueden determinar la organización y los responsables de la evaluación final. Juntas se complementan: <strong>se decide con la evaluación en la mesa y conversando</strong>; y cuando el desempeño no alcanza, el estamento también tiene su parte, como verás en la Lección 3."
+        },
+        {
+          "type": "blockquote",
+          "text": "Beatriz pide la conversación con su jefe de grupo y su asesora. Ella lleva lo que quiere; su asesora, lo que vio en el año; el jefe, lo que el grupo necesita. Sobre la mesa, su 360° final: muy buena con los lobatos, floja en todo lo administrativo que le tocó asumir. La pregunta ya no es «¿sigo o no?», sino «¿dónde sirvo mejor?»."
+        },
+        {
+          "type": "policy-quote",
+          "text": "El ciclo de vida del adulto en un cargo o función culmina con una evaluación final, al término de su nombramiento, que permitirá tomar la decisión más acertada para el futuro, y que puede ser: La renovación del nombramiento del adulto en el mismo cargo o función. La reubicación del adulto en otro cargo o función, como resultado de la movilidad dentro de un sistema flexible. El retiro del adulto del cargo, podrá ser porque el cargo o función dejó de existir; porque el adulto mismo tome voluntariamente esta determinación; o bien porque la organización y los responsables de la evaluación final determinen que es lo mejor por falta de cualificación o compromiso del adulto, esta última situación, incluso, antes de la finalización del nombramiento.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.3, p. 18",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si hoy terminara tu periodo, ¿cuál de los tres caminos elegirías y qué parte de tu última evaluación —o de lo que sabes de tu desempeño— lo respalda? Si no tienes evaluación, ¿con qué lo decidirías?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Al jefe de grupo le preocupa quedarse sin jefa de Manada y le propone a Beatriz renovar «un año más, mientras aparece alguien». Su 360° final dice que lo administrativo la desborda, y en el grupo hay un cargo vacante con más campo y menos papeles. ¿Qué camino tiene más sentido explorar con ella?",
+            "options": [
+              "Una renovación tal cual: en la 360° de una jefa de Manada lo administrativo no cuenta.",
+              "Una reubicación: otro cargo que aproveche mejor las competencias que ya demostró.",
+              "Un retiro voluntario: si lo administrativo la desborda, lo sano es que pare un tiempo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un subjefe de Tropa decide dejar el cargo porque cambió de ciudad por trabajo. ¿Cómo lo clasifica la política?",
+            "options": [
+              "Como un retiro por falta de compromiso, que es lo que dice el acuerdo en esos casos.",
+              "Como un retiro voluntario: es el propio adulto quien toma la determinación.",
+              "Como un retiro que decide el consejo, que es quien tiene que aceptar su salida."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Cuando el desempeño no alcanza",
+      "emoji": "🧭",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Cuando una evaluación no da los resultados esperados, el acuerdo no dice «fuera»: dice «plan de mejora». Si el retiro llega por desempeño, llega al final de ese camino."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🪜 El camino del acuerdo"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Evaluación semestral",
+              "description": "El adulto aceptó en su acuerdo ser evaluado cada semestre con los modelos autorizados."
+            },
+            {
+              "title": "2. Si no da los resultados esperados",
+              "description": "El adulto y su asesor personal (Curso 7) diseñan un plan personal de desarrollo para mejorar ese desempeño."
+            },
+            {
+              "title": "3. Seis meses de plan",
+              "description": "Es el plazo que fija el acuerdo para ejecutar ese plan de mejora."
+            },
+            {
+              "title": "4. Nueva evaluación",
+              "description": "Si los resultados siguen sin mejoría, el estamento podrá dar por terminado el acuerdo, según lo que dice la política sobre las decisiones para el futuro."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🫱 Si el plan es el tuyo.</strong> Un plan de mejora no es un aviso de salida: son seis meses, con tu asesor al lado, para mostrar lo que sí puedes. Pregunta qué conductas concretas se esperan y cómo se van a observar."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🌱 Antes, una pregunta.</strong> El documento de Atracción y Vinculación, que viste en el Curso 6, pide preguntarse si el adulto tiene el potencial para alcanzar las competencias del cargo. Si lo tiene, se buscan formación y apoyos. Si no, la decisión puede ser <strong>reubicarlo donde pueda ser competente</strong>, o su retiro. Muchas veces la salida no es irse: es cambiar de lugar."
+        },
+        {
+          "type": "paragraph",
+          "text": "El acuerdo también dice cómo puede terminar: por mutuo acuerdo, porque se vence su plazo, o antes, de forma unilateral, por causales como el incumplimiento reiterado de los compromisos, el cierre del grupo o de la rama, el fin del proyecto para el que se firmó o la pérdida de la calidad de miembro. <strong>No los mezcles:</strong> el camino de arriba es para cuando el desempeño no alcanza; las causales son otra cosa, como faltar una y otra vez a lo que se firmó. Nada de esto reemplaza el debido proceso ni los reglamentos de la Asociación."
+        },
+        {
+          "type": "blockquote",
+          "text": "Lo que no cabe en ninguna fuente es la sorpresa: que un adulto se entere de que no sigue el día que llega y encuentra a otro en su lugar."
+        },
+        {
+          "type": "policy-quote",
+          "text": "PARÁGRAFO: EL ADULTO EN EL MOVIMIENTO acuerda y acepta ser evaluado semestralmente de acuerdo a los modelos de evaluación autorizados por la organización, en caso de que la evaluación de desempeño de su cargo no arroje los resultados esperados, el adulto conjuntamente con su asesor personal diseñará un plan personal de desarrollo con miras a la mejoría de dicho desempeño, si vencido el plazo para la ejecución del plan personal de desarrollo, que será de seis (6) meses, y realizada una nueva evaluación los resultados permanecen sin mejoría, el estamento podrá dar por terminado el presente acuerdo, según lo establecido en la Política Nacional de Adultos en el Movimiento de la ASOCIACIÓN SCOUTS DE COLOMBIA sobre la etapa de decisiones para el futuro.",
+          "source": "Compromiso de Acuerdo Mutuo, versión 3.0 (Dirección Nacional de Adultos en el Movimiento, 28 de junio de 2025), «Terminación anticipada», parágrafo",
+          "label": "📋 Ver lo que dice el acuerdo"
+        }
+      ],
+      "reflection": {
+        "prompt": "Imagina que eres el asesor o el jefe inmediato de un adulto cuya evaluación no dio lo esperado. Sin pensar en nadie en particular: ¿con qué frase abrirías la primera conversación para que se oiga «plan de mejora» y no «fuera»? Escríbela tal como la dirías."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "La evaluación semestral de un subjefe de Clan sale muy por debajo de lo esperado. El consejo propone terminar su acuerdo esa misma semana. ¿Qué prevé el acuerdo?",
+            "options": [
+              "Que el estamento ya puede terminarlo, porque una evaluación baja es incumplimiento.",
+              "Que primero va un plan de mejora de seis meses con su asesor y una nueva evaluación.",
+              "Que se espera a la evaluación final de los dos años y ahí se decide si se renueva."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Tras el plan de mejora y la nueva evaluación, un adulto sigue sin mejorar en su cargo de jefe de rama, pero es excelente organizando la logística del grupo. ¿Qué opción no hay que perder de vista?",
+            "options": [
+              "La terminación del acuerdo, que el estamento ya puede decidir sin mirar otros cargos.",
+              "Una reubicación en un cargo donde pueda ser competente, antes de pensar en su retiro.",
+              "Un segundo plan de seis meses, y otro después, hasta que por fin alcance el perfil."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Reconocer y agradecer",
+      "emoji": "🙏",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Cualquiera sea la decisión —renovar, reubicarse o retirarse—, la política pide considerar siempre el reconocimiento y el agradecimiento formal del desempeño."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🗓️ El Momento 3, visto de cerca"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Se revisa el plan con sus evidencias de cierre, <strong>más enfocado en la persona que en las metas</strong>",
+            "Se hace la evaluación 360° final",
+            "Se toman las decisiones para el futuro y quedan en un <strong>acta firmada por las partes</strong>",
+            "Se pueden hacer los reconocimientos: por la formación básica, por el perfeccionamiento continuo o por la labor cumplida con éxito",
+            "El reconocimiento lo solicita el asesor personal, en común acuerdo con el jefe inmediato"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El documento <em>Desempeño</em> lo resume en una palabra que pone sola, en grande, al final de su capítulo sobre las decisiones para el futuro: <strong>GRACIAS</strong>. Y pide que el retiro, igual que el ingreso, se dé de manera acordada, reconociendo el esfuerzo, el tiempo y el trabajo del adulto."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🎁 Agradecer no es un trámite, pero tampoco se deja al azar.</strong> Lo formal es lo que el grupo hace en nombre de todos y deja constancia: el agradecimiento en una ceremonia o en el consejo, delante de los scouts, y el reconocimiento que corresponda, que solicita el asesor con el jefe inmediato. Un mensaje en el Muro Kudo de Talento 360° (lo viste en el Curso 9) o una tarjeta de la Manada lo acompañan muy bien. Lo que no puede ser es el silencio."
+        },
+        {
+          "type": "blockquote",
+          "text": "Beatriz y su jefe de grupo acuerdan su reubicación. Pero antes, en la ceremonia de cierre de año, la Manada le entrega una tarjeta hecha a mano y el jefe de grupo lee en voz alta lo que su 360° dijo de ella: que los lobatos se sienten seguros a su lado. Beatriz no se va de ningún lado; cierra una etapa. Y la cierra bien."
+        },
+        {
+          "type": "policy-quote",
+          "text": "En todo caso, cualquiera que sea la decisión que se adopte sobre el adulto, siempre debe considerarse el reconocimiento y agradecimiento formal de su desempeño, si correspondiera; para ello la ASC, determinará e implementará los procedimientos adecuados para apoyar la toma de decisiones, reconocimiento y agradecimiento de sus adultos.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.3, p. 18",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en cómo se suelen cerrar los cargos en tu grupo, sin señalar a nadie. Escribe un gesto concreto y de poco costo que tú, desde tu cargo, podrías proponer para que el próximo cierre diga «gracias», y en qué momento del año lo harías."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Un subjefe de Tropa se retira por decisión propia. Un compañero le escribe «gracias por todo» por WhatsApp y en el consejo dicen que «ya se le agradeció». ¿Qué pide la política?",
+            "options": [
+              "Que basta con eso: el reconocimiento formal es para quien completó su formación básica.",
+              "Que el grupo considere un reconocimiento formal; un mensaje suelto no lo reemplaza.",
+              "Que se espere a que vuelva a un cargo, porque el reconocimiento va con la renovación."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "En el Momento 3 de Beatriz, el jefe de grupo y ella acuerdan su reubicación de palabra. ¿Qué le falta a ese cierre?",
+            "options": [
+              "Un aviso a la región, que es la que registra las reubicaciones de los grupos.",
+              "Un acta de la decisión, firmada por Beatriz y por quien decidió con ella.",
+              "Una carta de renuncia de Beatriz a la jefatura, para poder nombrarla en el otro."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Entregar el cargo",
+      "emoji": "🔑",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Quien deja un cargo no se lleva la llave: la entrega. Pensar en quien sigue es parte de cerrar bien."
+        },
+        {
+          "type": "paragraph",
+          "text": "En el Curso 6 viste que cada estamento vela porque sus cargos estén cubiertos <strong>en cantidad y en calidad</strong>. Cuando alguien se retira o se reubica, su cargo queda vacante, y ahí empieza de nuevo la determinación de necesidades. El documento <em>Desempeño</em> nombra dos prácticas que la Asociación contempla para eso: el <strong>plan de carrera</strong> y el <strong>plan de sucesión</strong>, que buscan que los cargos no queden vacíos ni en manos de alguien sin preparar."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📦 Qué se entrega"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Los registros de tu gestión en el cargo: informes, actas y lo que ya está en Talento 360°. Tu plan personal de desarrollo es tuyo y sigue contigo",
+            "Lo que el cargo tiene a su cargo: documentos, compromisos en curso, contactos y fechas",
+            "Tu mirada: qué funcionó, qué no y qué harías distinto, contado a quien llega o a quien lo va a buscar"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧭 El retiro es del cargo, y no cierra la puerta.</strong> La política habla del «retiro del adulto del cargo». Quien se retira puede volver más adelante, en otro cargo o en otro momento: el documento de Atracción y Vinculación cuenta a los adultos retirados entre las fuentes para buscar a quien se necesita."
+        },
+        {
+          "type": "blockquote",
+          "text": "Antes de pasar a su nuevo cargo, Beatriz se sienta una tarde con la subjefa de Manada que se postuló para reemplazarla: le deja el cuaderno de la Manada, el calendario del semestre y una lista de lo que ella hubiera querido saber el primer día."
+        },
+        {
+          "type": "policy-quote",
+          "text": "En cualquier caso, la evaluación es un elemento que da información importante que orienta la decisión del adulto, así como el ingreso, el retiro debe darse también de manera acordada, manteniendo vigentes los principios y valores del Movimiento Scout y reconociendo el esfuerzo, tiempo y trabajo del adulto durante su permanencia en el cargo, es decir partiendo siempre desde el agradecimiento por el trabajo realizado y por los aportes brindados.",
+          "source": "Desempeño (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §5, p. 23",
+          "label": "📋 Ver lo que dice el documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si mañana tuvieras que entregar tu cargo, ¿qué es lo que solo tú sabes y no está escrito en ningún lado? Escribe una cosa concreta que podrías dejar documentada esta semana."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Un tesorero se va del grupo y dice: «Lo que yo sé de las cuentas me lo llevo; el que llegue que aprenda como aprendí yo». ¿Qué se pierde con esa salida?",
+            "options": [
+              "La cantidad: el cargo queda vacante y el grupo tendrá que abrir otra convocatoria.",
+              "La calidad: quien llegue arranca de cero, sin lo que el grupo ya había aprendido.",
+              "El reconocimiento: a quien no entrega el cargo, el grupo ya no le debe el «gracias»."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Una dirigente se retira de su cargo para cuidar a un familiar. Dos años después quiere volver. Alguien le dice que «quien se retira, se retira del Movimiento». ¿Qué dicen las fuentes?",
+            "options": [
+              "Que es así: al retirarse cerró su acuerdo con la Asociación y ya no puede firmar otro.",
+              "Que la puerta sigue abierta: puede volver, y el grupo hasta la puede buscar.",
+              "Que tiene que volver al mismo cargo que dejó, porque su ciclo quedó abierto allí."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Volver a empezar",
+      "emoji": "🔄",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Por eso se llama ciclo: después de decidir, empieza otra vuelta. Y en cualquier vuelta hay un plan vivo."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🔄 Si renuevas",
+              "description": "Arrancas un nuevo Momento 1 con lo que ya traes: tu plan cumplido y tu evaluación final como punto de partida para el plan del nuevo periodo.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "↔️ Si te reubicas",
+              "description": "Empiezas un ciclo nuevo en otro cargo: su acuerdo, su nombramiento, su valoración inicial y la formación básica que pida ese cargo, porque son otras funciones y otras competencias.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "👋 Si te retiras",
+              "description": "El proceso cíclico de ese cargo termina ahí. Lo que aprendiste se queda contigo, y la puerta del Movimiento sigue abierta.",
+              "color": "#fff3e0",
+              "borderColor": "#ef6c00"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Y una regla que vale para todos: con o sin insignia, en el mismo cargo o en otro, siempre se cuenta con un plan personal de desarrollo que permita seguir avanzando. Las actualizaciones se reconocen según el nivel donde se sirve —grupo, región o nación—, no según la insignia que se porte."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔁 ¿Te acuerdas de Beatriz esperando marzo?</strong><br>No esperó a que alguien le dijera algo: pidió la conversación, miró su evaluación, eligió con su jefe y su asesora dónde servir mejor, recibió su «gracias» delante de la Manada, entregó el cargo a quien seguía y empezó un ciclo nuevo con un plan nuevo. <strong>Un nombramiento no se acaba: se cierra. Y cerrarlo bien también es servir.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🏁 Con este curso se cierra el Nivel 2.</strong> Sus cinco cursos recorren el ciclo en profundidad: cómo se vincula a un adulto (Curso 6), cómo se lo acompaña como asesor (Curso 7), cómo se evalúa su desempeño (Curso 8), dónde queda registrado todo (Curso 9) y cómo se cierra y se vuelve a empezar (este). Si te saltaste alguno, ahí te espera: ninguno es requisito del otro."
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Averigua cuándo vence tu nombramiento y agenda la conversación con tu jefe inmediato y tu asesor al menos un mes antes.<br>• Si en tu grupo alguien deja un cargo este año, propón al consejo cómo se le va a reconocer y agradecer.<br>• Escribe la «lista de lo que hubieras querido saber el primer día» de tu cargo y guárdala para quien te siga.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es relevante mencionar que, de manera independiente al ser Insignia de Madera, Tres Maderos o Cuatro Maderos, todo el tiempo se debe contar con un PPD que permita seguir avanzando y manteniendo actualización constante sin importar si se sigue con el mismo cargo o no.",
+          "source": "Desempeño (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §3, p. 14",
+          "label": "📋 Ver lo que dice el documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "Mira las tres columnas de esta lección y elige la que más probablemente te toque al cierre de tu periodo actual. ¿Qué te llevarías de tu plan de hoy al ciclo siguiente, o qué dejarías escrito para quien te siga? Escribe una cosa."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 10",
+        "questions": [
+          {
+            "text": "Un jefe de Tropa con Insignia de Madera renueva por otros dos años y dice: «Ya tengo mi insignia, así que este periodo no necesito plan». ¿Qué le responderías?",
+            "options": [
+              "Que tiene razón: la insignia certifica sus competencias y el plan ya no hace falta.",
+              "Que no: con insignia o sin ella, cada periodo arranca con un plan para seguir creciendo.",
+              "Que no del todo: el plan sigue, pero ya lo arma por su cuenta, sin asesor ni evaluación."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Beatriz fue reubicada de jefa de Manada a otro cargo de su grupo, con más campo y menos papeles. ¿Con qué arranca en ese cargo?",
+            "options": [
+              "Con el plan que tenía de jefa de Manada, que sigue vigente hasta que termine el año.",
+              "Con lo de quien llega a un cargo: acuerdo y nombramiento propios, y su formación básica.",
+              "Con una renovación: como sigue en el mismo grupo, se le prorroga el acuerdo que tenía."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Conversa a tiempo",
+      "emoji": "⏳",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Tres caminos",
+      "emoji": "🔀",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Mejora antes que sorpresa",
+      "emoji": "🧭",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Siempre gracias",
+      "emoji": "🙏",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Entrega la llave",
+      "emoji": "🔑",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 10 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "CIERRE Y REINICIO DE CICLO",
+    "description": "ha completado el Curso 10 de la Línea Política de Adultos, Cierre y reinicio de ciclo, y es capaz de preparar y conversar las decisiones para el futuro al final de un nombramiento —renovación, reubicación o retiro—, recorrer el camino que prevé el acuerdo mutuo cuando el desempeño no alcanza, reconocer y agradecer formalmente el servicio, entregar el cargo pensando en quien sigue y reiniciar el ciclo con un nuevo plan, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  }
+}

@@ -382,6 +382,18 @@
           ]
         }
       }
+    },
+    "commitmentBox": {
+      "type": "object",
+      "description": "Opcional. Textos de la casilla del Compromiso Personal junto al certificado; misma forma que en Programa de Jovenes y Politicas Transversales. Si falta, el build usa los de siempre de la linea. Llego a esta linea con el Nivel 2 (ADR-098): la casilla generica decia 'adulto certificado' justo despues de cursos que ensenan que no se certifica por hacer cursos.",
+      "properties": {
+        "prompt": {
+          "type": "string"
+        },
+        "placeholder": {
+          "type": "string"
+        }
+      }
     }
   },
   "version": "2.0"

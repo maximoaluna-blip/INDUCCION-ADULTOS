@@ -1,0 +1,747 @@
+{
+  "courseId": "asesor-personal",
+  "title": "Ser asesor personal",
+  "subtitle": "Curso 7 · Nivel 2 de la Línea Política de Adultos",
+  "description": "El Curso 5 te enseñó a buscar un asesor. Este te enseña a serlo: qué es la asesoría personal, quién puede asumirla, cómo arrancar con los pasos formales, cómo pasar de la valoración inicial a un plan de pocas competencias, cómo acompañar sin ahogar y cómo cerrar pidiendo el reconocimiento cuando el desempeño lo demuestra.",
+  "contentVersion": "2026-09-27",
+  "icon": "🤝",
+  "duration": "40 minutos",
+  "level": 2,
+  "levelName": "Profundización por fase del ciclo",
+  "order": 7,
+  "status": "active",
+  "totalContentModules": 6,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Una escena.</strong><br>Daniela acaba de llegar como subjefa de Manada y le pide a Hernán, el jefe, que sea su asesor personal. Hernán tiene su Insignia de Madera y ganas de ayudar. Esa noche le manda por WhatsApp una lista de ocho cursos: «Haz estos y quedas lista».<br><br><strong>El asesor no reparte cursos: acompaña hasta que el desempeño hable.</strong> Al final de este curso vas a saber por qué la lista de Hernán no es una asesoría."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 7.</strong><br>En el Curso 5 estuviste del lado de quien busca asesor. Aquí te sientas del otro lado de la mesa: el de quien acompaña. Te sirve si ya asesoras a alguien, si te lo acaban de pedir, o si eres jefe inmediato de otros adultos, porque la guía oficial espera que el jefe sea el asesor natural."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para aprovecharlo mejor te sugerimos haber visto el <strong>Curso 4 — Las 7 Competencias Esenciales</strong> y el <strong>Curso 5 — Tu Plan Personal de Desarrollo</strong>. No son requisito. Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos; si no, repasas y vuelves a intentar. Escribe tus reflexiones por el cargo o el rol, sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Explicar</strong> qué es la asesoría personal: un rol, una competencia y el eje del desarrollo del otro",
+            "<strong>Decidir</strong> si estás en condiciones de asesorar y qué te falta",
+            "<strong>Arrancar</strong> una asesoría con los pasos formales",
+            "<strong>Pasar</strong> de la valoración inicial a un plan de pocas competencias",
+            "<strong>Acompañar</strong> con encuentros registrados y retroalimentación oportuna",
+            "<strong>Cerrar</strong> una asesoría y solicitar el reconocimiento cuando corresponde"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Qué es asesorar",
+              "description": "6 min. Un rol, no un cargo; y una competencia con conductas observables."
+            },
+            {
+              "title": "Lección 2 — ¿Puedo ser asesor?",
+              "description": "6 min. Lo que se espera de quien asesora, empezando por su propio plan."
+            },
+            {
+              "title": "Lección 3 — Arrancar bien",
+              "description": "6 min. La carta, la plataforma y el primer encuentro."
+            },
+            {
+              "title": "Lección 4 — De la valoración al plan",
+              "description": "6 min. Pocas competencias, lo que ya sabe y cómo aprende."
+            },
+            {
+              "title": "Lección 5 — Acompañar sin ahogar",
+              "description": "6 min. Encuentros, bitácora y retroalimentación."
+            },
+            {
+              "title": "Lección 6 — Cerrar y pedir el reconocimiento",
+              "description": "7 min. Cuándo, cómo y quién solicita la certificación."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Qué es asesorar",
+      "emoji": "🧭",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Asesorar no es un cargo que te nombran: es un rol que asumes al servicio de otro adulto. Y es también una competencia que se desarrolla."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎭 Un rol, no un cargo"
+        },
+        {
+          "type": "paragraph",
+          "text": "La <em>Guía de Acompañamiento y Evaluación del Adulto</em> lo dice sin rodeos: el asesor no es un cargo, es un rol. No aparece como cargo en el Manual de Cargos ni tiene nombramiento. Los tips oficiales y la guía de inducción lo dicen claro: el adulto escoge a su asesor, y el asesor acepta firmando una carta."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "👤 ¿Quién, preferiblemente?",
+              "description": "El jefe inmediato, a quien la Guía llama «asesor natural». Para los cargos profesionales, su jefe inmediato; para los consejeros, los jefes de los distintos niveles o el presidente del consejo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🏋️ ¿Qué papel juega?",
+              "description": "El de entrenador y guía. No tiene que saberlo todo: si una competencia específica lo supera, se apoya en otros asesores, mentores o expertos.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧩 Y también una competencia"
+        },
+        {
+          "type": "paragraph",
+          "text": "El <em>Diccionario de Competencias</em> trae la <strong>Asesoría Personal</strong> entre las competencias específicas: <em>la capacidad de motivar, acompañar y guiar el desarrollo de las competencias del adulto para el desempeño de su cargo o función</em>. Sus conductas observables:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Comparte información relevante y herramientas actualizadas que orienten el trabajo de su equipo",
+            "Asiste e incentiva la participación de su equipo en actividades de actualización y perfeccionamiento continuo",
+            "Evalúa el desempeño de su equipo y orienta el desarrollo de competencias con medios efectivos y flexibles"
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>En simple:</strong> la competencia se ve en tres gestos. <em>Comparte</em> lo que le sirve al otro (Hernán le pasa a Daniela el material de Manada que a él le funcionó). <em>Anima a formarse</em> (la invita al taller de la región… como medio, no como meta). <em>Mira cómo lo hace y orienta</em> (después de la reunión, le dice qué salió bien y qué ajustar)."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔑 Lo que cambia todo:</strong> en la formación básica, la política pone en manos del <strong>asesor personal</strong> la certificación del desarrollo de las competencias, con la evaluación 360° y las evidencias (en la Lección 6 verás que él la solicita y la Dirección Nacional la autoriza). Y la política aclara que no se certifica por haber asistido a cursos, sino por lo que el adulto demuestra en su desempeño. Por eso la lista de Hernán no alcanza: los cursos son medios, no la meta."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es importante aclarar que el asesor no es un cargo, es un rol o tarea que esperamos en algún momento todos los adultos puedan desarrollar al servicio de otros.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4.2, p. 13",
+          "label": "📋 Ver lo que dice la guía"
+        },
+        {
+          "type": "policy-quote",
+          "text": "El asesor personal será como el entrenador y guía en el camino para desarrollar las competencias, puede no tener todos los conocimientos para soportar el desarrollo de competencias específicas, pero se apoyará de otros asesores o mentores quienes pueden contribuir con este desarrollo técnico.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4.2, p. 14",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en alguien que te acompañó bien en un reto de trabajo, estudio o del Movimiento, y nómbralo solo por su rol (un jefe, un profesor, un entrenador). ¿Qué hacía que se parezca a las conductas de la Asesoría Personal? ¿Cuál de esas conductas ya practicas tú con alguien de tu equipo?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "En la reunión de consejo, el Jefe de Grupo propone: «Nombremos a Hernán asesor personal de todos los dirigentes nuevos, y que quede en el acta como un cargo más». ¿Qué le responderías?",
+            "options": [
+              "Que está bien: así cada dirigente nuevo tiene su asesor desde el primer día, sin buscarlo.",
+              "Que no se nombra: cada adulto escoge a su asesor, idealmente su jefe, y este firma una carta.",
+              "Que no se nombra en el acta: lo designa la Comisión Regional de Adultos para cada grupo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Hernán duda: «No sé nada de campismo avanzado, que es justo lo que Daniela necesita. ¿Debo decirle que busque otro asesor?». ¿Qué le responderías?",
+            "options": [
+              "Que sí: el asesor tiene que dominar todas las competencias que su asesorado va a trabajar.",
+              "Que no hace falta: puede seguir siendo su guía y apoyarse en un mentor o experto para eso.",
+              "Que no hace falta: esa competencia se deja para otro periodo, cuando él ya la domine."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — ¿Puedo ser asesor?",
+      "emoji": "🪞",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Para asesorar a otro en su camino, primero hay que estar caminando el propio. Un asesor que no tiene plan no puede exigir uno."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧑‍🏫 Lo que la Guía espera del asesor"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un acompañante cercano y constante, que conozca el proceso de acompañamiento y evaluación, que <strong>ya haya desarrollado —y preferiblemente finalizado— su propio Plan Personal de Desarrollo</strong> en su cargo y que se encuentre en perfeccionamiento continuo. Con las competencias esenciales desarrolladas para guiar dentro de la filosofía del Movimiento."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "✅ Tres preguntas antes de decir que sí"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "¿Quiero y puedo?",
+              "description": "Disposición de servicio, tiempo para aportar con calidad y la libertad de decidir si aceptas o no una asesoría.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "¿Sé y sigo aprendiendo?",
+              "description": "Conocer la política, el modelo de gestión y sus herramientas; estar en perfeccionamiento continuo; y reconocer lo que no sabes para buscar a otros asesores o expertos.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "¿Me organizo y me apoyo?",
+              "description": "Seguimiento ordenado, uso de las herramientas de seguimiento, retroalimentación amable, cálida y oportuna, y el respaldo de la Comisión Regional y la Dirección Nacional.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            }
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Si vamos a asesorar a alguien es importante que: 1. Tengamos disposición de servicio a los demás, motivemos su crecimiento y logremos resultados positivos para beneficio del desarrollo personal. 2. Seamos organizados y responsables en el seguimiento del avance de nuestro asesorado. 3. Contemos con el tiempo para aportar con calidad al desarrollo de otro adulto en el Movimiento Scout. 4. Nos encontremos ejecutando un ciclo de vida, en perfeccionamiento continuo y estemos en la búsqueda de estrategias que nos permita desarrollar la competencia de asesoría personal. 5. Estemos actualizados y conozcamos con detalle la Política Nacional de Adultos, el modelo de gestión y todas las herramientas complementarias. 6. Tengamos la capacidad de decidir si aceptamos o no una asesoría, así como de realizar de manera amable, cálida y oportuna la retroalimentación que sea necesaria. 7. Reconozcamos nuestras limitaciones y busquemos a otros asesores o expertos que puedan apoyarnos en el diseño de estrategias que complementen el plan personal de desarrollo del asesorado. 8. Hacer uso de las herramientas de seguimiento y retroalimentación con el asesorado. 9. Apoyarnos de la Comisión Regional y Dirección Nacional de Adultos en el Movimiento para encontrar ideas o estrategias que aporten al plan personal de desarrollo de los adultos.",
+          "source": "Tips para encontrar a tu asesor personal y lograr una asesoría de éxito, publicación 4 de 4 (Adultos en el Movimiento, Asociación Scouts de Colombia). Transcripción de la infografía; la numeración es la de la pieza y se corrigió una palabra repetida en el punto 8.",
+          "label": "📋 Ver los nueve puntos completos"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>👀 Tu asesor no se queda quieto.</strong> En el Curso 5 viste qué mira quien busca asesor. Uno de esos criterios ahora es para ti: que quien asesora esté desarrollando su propio plan, con acciones para fortalecer su competencia de asesoría."
+        },
+        {
+          "type": "blockquote",
+          "text": "Hernán revisa su propio plan en Talento 360°: está vacío desde que recibió la insignia. Antes de mandarle nada a Daniela, se pone una tarea a sí mismo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "De igual forma me comprometo a seguir trabajando en el desarrollo de mis competencias en el cargo que me encuentro desempeñando, en especial la de Asesoría personal.",
+          "source": "Carta de aceptación de la asesoría personal («Aval asesor personal», Dirección Nacional de Adultos en el Movimiento)",
+          "label": "📋 Ver lo que firma el asesor"
+        }
+      ],
+      "reflection": {
+        "prompt": "De las tres preguntas —¿quiero y puedo?, ¿sé y sigo aprendiendo?, ¿me organizo y me apoyo?—, ¿en cuál estás más firme y en cuál más flojo? Para la floja, escribe una acción concreta que pondrías en tu propio plan este mes."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Un dirigente con veinte años en el Movimiento acepta asesorar a tres adultos nuevos, pero hace años que no tiene ningún plan propio. ¿Qué le sugerirías antes de empezar?",
+            "options": [
+              "Que arranque tranquilo: con veinte años en el Movimiento, su ejemplo ya vale por un plan.",
+              "Que abra también su propio plan, con alguna acción para su competencia de asesoría.",
+              "Que asesore solo a adultos de su rama, donde su experiencia le da toda la autoridad."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "A Gloria le piden su cuarta asesoría del año y apenas le alcanza el tiempo para las otras tres. ¿Qué le recuerdan los criterios para asesorar?",
+            "options": [
+              "Que debe aceptarla, porque negarse a asesorar va contra la disposición de servicio.",
+              "Que puede decidir si la acepta o no, porque asesorar exige tiempo para hacerlo bien.",
+              "Que debe aceptarla y reducir los encuentros de las otras tres asesorías a la mitad."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Arrancar bien",
+      "emoji": "🚀",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Una asesoría empieza con tres cosas formales y una humana: verificar la inducción, firmar la carta, registrarla en la plataforma… y un primer encuentro para conocerse."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🪜 Los primeros pasos"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Verifica que terminó su inducción",
+              "description": "Con el jefe inmediato de tu asesorado: que conozca las funciones y competencias de su cargo, esté alineado con el plan del grupo, región o nación, tenga el certificado del Módulo de Inducción General y conozca la política y Talento 360°. Si no, pídele que lo haga."
+            },
+            {
+              "title": "2. Firma la carta de aceptación",
+              "description": "La carta de aceptación de la asesoría personal inicia tu compromiso. El asesorado la entrega a su jefe inmediato."
+            },
+            {
+              "title": "3. Queda registrado en Talento 360°",
+              "description": "Tu asesorado te incluye como asesor personal en su cargo, dentro de su hoja de vida en la plataforma."
+            },
+            {
+              "title": "4. El primer encuentro",
+              "description": "Para romper el hielo, definir juntos la agenda de reuniones y explorar las herramientas de la plataforma."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>¿Y si el asesor eres tú, su jefe?</strong><br>Es lo preferible, no un conflicto: la Guía te llama «asesor natural». Pero fíjate en lo que cambia: la verificación de la inducción y la carta pasan por el jefe inmediato… que eres tú. Al arrancar, nadie más lo revisa por ti: la región y la Dirección Nacional lo verán mucho después, cuando se pida el reconocimiento. Así que antes del primer encuentro, Hernán comprueba él mismo que Daniela tenga su Módulo de Inducción General."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧰 Las cuatro herramientas del primer encuentro"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "💬 Retroalimentación",
+              "description": "Donde registran tareas y acuerdos de la asesoría.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📊 Evaluación",
+              "description": "Donde se evidencian las competencias a trabajar.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "🗺️ Plan Personal de Desarrollo",
+              "description": "Donde consignan el plan de trabajo y sus evidencias.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "🎉 Muro Kudo",
+              "description": "Donde se felicita y reconoce el avance durante el proceso.",
+              "color": "#fff8e1",
+              "borderColor": "#f9a825"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⏳ ¿Cuánto dura?</strong> La <em>Guía cómo desarrollarse en el cargo</em> le propone al adulto no dejar pasar más de <strong>un año</strong> para completar su proceso; lo ideal, un semestre. Acordar la agenda desde el primer encuentro es lo que hace posible ese ritmo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Firma la carta de aceptación de la asesoría personal que vas a prestar. Esta es importante para iniciar tu compromiso de asesorar a otro.",
+          "source": "Guía «Cómo realizar una asesoría personal» (Adultos en el Movimiento, Asociación Scouts de Colombia), p. 1",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en el primer encuentro con alguien a quien asesoras o podrías asesorar; descríbelo solo por su cargo y su rama, sin nombre. ¿Qué harías en los primeros diez minutos para romper el hielo, y qué dejarían acordado —fecha y frecuencia— antes de despedirse?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Iván, nuevo en la Tropa, le dice a su asesora: «La inducción es pura teoría; empecemos ya con el plan». ¿Por qué conviene verificar primero que la haya terminado?",
+            "options": [
+              "Porque sin conocer las funciones de su cargo, no hay con qué valorar ni priorizar su plan.",
+              "Porque la inducción ya cuenta como una competencia del plan y así adelanta la meta.",
+              "Porque es un trámite: al final nadie revisa si la hizo, lo que cuenta es el plan."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Gloria es la asesora de Iván, subjefe de Tropa; el jefe de Tropa es otra persona. Iván ya firmó con ella la carta de aceptación y pregunta: «¿Se la dejo a usted?». ¿Qué le responde Gloria?",
+            "options": [
+              "Que sí: la carta es un acuerdo entre asesor y asesorado, y la guarda quien asesora.",
+              "Que no: la carta va a su jefe de Tropa, con quien ella verifica también su inducción.",
+              "Que no: la carta va al Comisionado Regional de Adultos, que registra las asesorías."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — De la valoración al plan",
+      "emoji": "🗺️",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Un buen plan trabaja pocas competencias, las de más impacto, y no le hace repetir al adulto lo que ya sabe."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Priorizar"
+        },
+        {
+          "type": "paragraph",
+          "text": "El punto de partida es la <strong>valoración inicial</strong> por competencias. Con ella, asesor y asesorado priorizan las competencias que van a desarrollar respecto al cargo actual. La Guía es clara: el plan no es una carrera contra reloj ni una carrera para ganarle a otros adultos. Mejor pocas competencias trabajadas con calidad que metas grandes imposibles de cumplir en el periodo."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎒 Validar lo que ya trae"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "Claudia, trabajadora social",
+              "description": "Nunca fue scout. Llega como Jefa de Comunidad con diez años en proyectos sociales. Su asesora encuentra que ya tiene la mayoría de conductas de «Desarrollo comunitario»: lo que le falta es conocer las áreas de crecimiento del programa.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "Álvaro, veinte años en Manada",
+              "description": "Pasa a Jefe de Tropa. De nueve contenidos sugeridos para una de sus competencias, ya domina cuatro. Su plan trabaja solo los otros cinco.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Son los dos ejemplos del documento <em>Desempeño</em> de la Dirección Nacional. La lección es la misma en los dos: <strong>el plan se construye sobre lo que el adulto ya tiene</strong>. Eso sí, el modelo no contempla homologar certificaciones: lo que el adulto trae se reconoce a través de la evaluación, no de un trámite."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🛠️ Estrategias a la medida"
+        },
+        {
+          "type": "paragraph",
+          "text": "Toda forma de aprender vale si lleva al mejor desempeño: mentoring, coaching, cursos virtuales o presenciales, educación formal y no formal, lectura de documentos scouts, estudio de casos, talleres, práctica supervisada en las actividades habituales. El plan se diseña según cómo aprende el adulto, e invita a los espacios formativos del grupo, la región o la nación que estén alineados con lo que necesita."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🗑️ Hernán tira su lista.</strong> En el primer encuentro revisan juntos la valoración inicial de Daniela. Resulta que ella es docente y ya maneja casi todo lo relacionado con planear actividades para niños. Acuerdan dos competencias, no ocho cursos: una que conecta con su experiencia y otra que es nueva para ella. Esa noche lo entiende: <strong>el asesor no reparte cursos: acompaña hasta que el desempeño hable</strong>."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es importante tener en cuenta que el PPD no es una carrera contra reloj, ni una competencia entre los adultos, por ende se prioriza trabajar a conciencia, de manera adecuada y con calidad sobre pocas competencias, que trazarse metas grandes que no puedan ser cumplidas en el periodo, siempre priorizando sobre lo que más impacto tenga en el ejercicio del cargo.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §4.3, p. 15",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en tu propia experiencia fuera del Movimiento —trabajo, estudio, familia—. ¿Qué conducta observable de alguna competencia de tu cargo ya traías hecha y nadie te la reconoció? ¿Cómo la mostrarías con una evidencia?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "La valoración inicial de un adulto muestra brechas en seis competencias. El asesor propone trabajar las seis a la vez este semestre «para avanzar rápido». ¿Qué le diría la Guía?",
+            "options": [
+              "Que está bien: entre más competencias abarque el plan, antes llegará la certificación.",
+              "Que escoja unas pocas, las que más pesan en su cargo, y las trabaje a fondo.",
+              "Que espere a la segunda evaluación antes de escoger cualquier competencia."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un adulto nuevo es contador de profesión y va a ser tesorero del grupo. ¿Qué hace un buen asesor con esa experiencia previa?",
+            "options": [
+              "Ignorarla: en el Movimiento todo adulto parte de cero al asumir su primer cargo.",
+              "Tenerla en cuenta: validar lo que ya domina y enfocar el plan en lo que le falta.",
+              "Homologarla: pedir a la Dirección Nacional que le certifique esas competencias ya."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Acompañar sin ahogar",
+      "emoji": "👂",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Acompañar es estar presente sin tomar el control: encuentros acordados, registros sencillos y una retroalimentación que el otro pueda usar."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📓 La bitácora de cada encuentro"
+        },
+        {
+          "type": "paragraph",
+          "text": "La <em>Bitácora de Acompañamiento al adulto</em> deja evidencia del seguimiento. Se puede llevar en el formato físico o en la sección de retroalimentación de Talento 360°. Tiene cinco partes:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "El objetivo del encuentro, siempre ligado al plan y a las competencias que mostró la evaluación",
+            "Los temas tratados, con hallazgos, retroalimentación y conclusiones",
+            "Las tareas y acuerdos, con responsable y fecha",
+            "La fecha del próximo encuentro",
+            "Las firmas de los asistentes… y un mensaje positivo de la reunión"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "↔️ Horizontal, no de arriba abajo"
+        },
+        {
+          "type": "paragraph",
+          "text": "El principio de <strong>Horizontalidad</strong>, que viste en el Curso 2 como <em>«contigo se acuerda, no se te ordena»</em>, pide una relación de diálogo constructivo y confianza entre el adulto y quienes lo acompañan. Aunque el asesor sea el jefe inmediato, en la asesoría se conversa, no se ordena. La retroalimentación, dicen los tips oficiales, se da de manera <strong>amable, cálida y oportuna</strong>."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🧑‍🔬 Busca apoyo",
+              "description": "Expertos, mentores y otros asesores que puedan aportar a las competencias que tú no dominas.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            },
+            {
+              "title": "📡 Mantente en contacto",
+              "description": "Con el jefe inmediato del asesorado y con el Comisionado Regional de Adultos: para mostrar avances, retroalimentar y verificar que se estén programando las evaluaciones.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "En el Curso 5 viste que hay tres encuentros formales al año —al empezar, a los seis meses y al cierre—. Son el mínimo: entre ellos, las charlas que acuerden, cada una con su bitácora."
+        },
+        {
+          "type": "blockquote",
+          "text": "Hernán y Daniela se ven una vez al mes. Cada encuentro cabe en media página de bitácora. En el tercero, Daniela no avanzó en nada; Hernán no la regaña: le pregunta qué se atravesó y ajustan juntos la fecha."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Horizontalidad. El sistema de gestión de adultos promueve una relación horizontal entre el adulto sujeto del proceso de acompañamiento y todos los agentes que participan en su proceso, mediante la generación de un diálogo constructivo en un clima de confianza, que fortalece el aprendizaje significativo y que permite conocer las competencias ya desarrolladas y las necesidades reales de formación.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §3 Principios, pp. 4–5",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Recuerda una retroalimentación que te sirvió y otra que no, sin decir quién te las dio. ¿Qué hizo diferente a la que sirvió? Ahora escribe, palabra por palabra, lo que le dirías a alguien de tu rama que no cumplió lo acordado, de forma amable, cálida y oportuna."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Llega el encuentro mensual y el asesorado no hizo ninguna de las tareas acordadas. ¿Qué respuesta es coherente con el principio de Horizontalidad?",
+            "options": [
+              "Recordarle con firmeza que el asesor es quien decide y exigirle cumplir para la próxima.",
+              "Preguntarle qué le impidió avanzar, reajustar juntos y dejarlo anotado en la bitácora.",
+              "Suspender la asesoría hasta que el adulto demuestre que retoma su plan por su cuenta."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un asesor lleva seis meses de encuentros, pero nunca ha dejado nada por escrito. ¿Qué le va a faltar cuando haya que mostrar el proceso?",
+            "options": [
+              "Nada: la bitácora es un apoyo opcional, y al certificar solo se revisa la evaluación final.",
+              "La evidencia del acompañamiento: la bitácora, física o en la retroalimentación de la plataforma.",
+              "El visto bueno de la región, que es lo único que se revisa de cada asesoría antes de certificar."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Cerrar y pedir el reconocimiento",
+      "emoji": "🏅",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Cuando el desempeño habla, el asesor lo hace constar: pide la segunda evaluación y, si se cumplen los requisitos, solicita el reconocimiento. Esa solicitud es suya."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📈 ¿Cuándo?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando el plan va por encima del <strong>80 %</strong> de ejecución, se pide una segunda evaluación para medir el avance. Si el resultado lo sostiene, las evidencias están en la plataforma y el adulto está motivado y con buenos resultados en su gestión, llega el momento de solicitar el reconocimiento. Cómo se aplica la 360° y cómo se lee el informe lo ves en el <strong>Curso 8 — Acompañamiento y Evaluación 360° en la práctica</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📋 Lo que pide la circular DNAM-C-098-2024"
+        },
+        {
+          "type": "paragraph",
+          "text": "Son siete requisitos, pero no se juntan al final: <strong>se van armando desde el primer encuentro</strong>. Si hiciste bien lo de las lecciones 3 a 5, ya tienes casi todos."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Desde el arranque (Lecciones 3 y 4)",
+              "description": "La carta aval de aceptación del asesor personal; una valoración inicial en el cargo actual, que el adulto lleve ejerciendo mínimo tres meses; y el acompañamiento de un asesor personal que cumpla los requisitos."
+            },
+            {
+              "title": "2. Durante el acompañamiento (Lecciones 4 y 5, con los anexos que vienen desde la vinculación)",
+              "description": "El Plan Personal de Desarrollo cumplido por encima del 80 %, con sus anexos: nombramiento, acuerdo mutuo, módulo de inducción general, contenidos de formación básica, A Salvo del Peligro y las estrategias alineadas con la valoración inicial."
+            },
+            {
+              "title": "3. Al cierre",
+              "description": "Una evaluación final de desempeño superior al 90 %; estar activo al momento de la solicitud; y la hoja de vida actualizada en Talento 360°, con el asesor personal registrado en el cargo."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>✍️ ¿Quién la hace?</strong> La circular es explícita: la solicitud de la Insignia de Madera, Gestor Regional o Gestor Nacional <strong>es exclusiva del Asesor Personal de Desarrollo</strong>, de acuerdo con el jefe inmediato, e informando al Comisionado Regional de Adultos. El asesor certifica con la 360° y las evidencias; la Dirección Nacional verifica y autoriza."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "Si no se alcanza",
+              "description": "No es un fracaso: se ajusta el plan con nuevas acciones y se solicita otra evaluación cuando el adulto esté listo.",
+              "color": "#fff3e0",
+              "borderColor": "#ef6c00"
+            },
+            {
+              "title": "Si se alcanza",
+              "description": "Tampoco es el final: el adulto sigue en perfeccionamiento continuo, con un nuevo plan que mantenga vigentes sus competencias.",
+              "color": "#e8f5e9",
+              "borderColor": "#4caf50"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔁 ¿Te acuerdas de la lista de ocho cursos?</strong><br>Diez meses después, Hernán solicita el reconocimiento de Daniela. No manda certificados de cursos: manda su valoración inicial, su plan con evidencias, la bitácora de sus encuentros y una evaluación final que muestra lo que ella hace hoy con la Manada. <strong>El asesor no reparte cursos: acompaña hasta que el desempeño hable.</strong>"
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Si ya asesoras a alguien: revisa que la carta esté firmada y entregada, y que estés registrado en su cargo en Talento 360°.<br>• Si te piden asesorar: antes de responder, repasa las tres preguntas de la Lección 2 y decide con honestidad si tienes el tiempo.<br>• Si eres jefe inmediato: agrega a tu propio plan una acción para fortalecer tu competencia de asesoría.<br><br>Una sola, con fecha concreta. <strong>Escríbela en tu Compromiso Personal, al final del curso.</strong>"
+        },
+        {
+          "type": "policy-quote",
+          "text": "En la formación básica, la certificación del desarrollo de las competencias requeridas, las realizará el Asesor Personal, mediante la evaluación de 360° (Autoevaluación, Coevaluación, Heteroevaluación y Evaluación) y la valoración de las evidencias que sustentan su evolución. Por ello, la cualificación no se certificará por la simple participación en determinados cursos, módulos, experiencias de aprendizaje, sino por la demostración del adulto, en su desempeño.",
+          "source": "Política Nacional de Adultos en el Movimiento (Acuerdo C.S.N. 176 de 2017), §5.2.2, p. 15",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si mañana tuvieras que solicitar el reconocimiento de alguien a quien acompañas —o el tuyo propio—, ¿en cuál de los tres momentos (arranque, acompañamiento o cierre) estarías más flojo, y qué requisito concreto faltaría? ¿Qué harías este mes para resolverlo?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 7",
+        "questions": [
+          {
+            "text": "Daniela cumplió su plan y su evaluación final supera el 90 %. Hernán está de viaje un mes y ella propone: «Mejor la mando yo misma a la Dirección Nacional, para no esperar». ¿Qué le conviene hacer?",
+            "options": [
+              "Que la mande ella: la solicitud la puede presentar cada adulto sobre su propio proceso.",
+              "Que espere a Hernán: la solicitud le toca a su asesor, que avisa al Comisionado Regional.",
+              "Que la pida al Comisionado Regional de Adultos, porque él revisa las evidencias de la región."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un adulto hizo doce cursos este año, pero su plan va en un 40 % y no tiene segunda evaluación. Te pide, como su asesor, que solicites ya su Insignia de Madera «por todo lo que estudió». ¿Qué haces?",
+            "options": [
+              "Decirle que sí: doce cursos en un año demuestran más compromiso que cualquier plan.",
+              "Decirle que aún no: avanzar en el plan y pedir la segunda evaluación al pasar del 80 %.",
+              "Decirle que aún no: que primero termine los cursos que le falten del catálogo nacional."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Rol, no cargo",
+      "emoji": "🧭",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Camina su propio plan",
+      "emoji": "🪞",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Arranque formal",
+      "emoji": "🚀",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Pocas y con calidad",
+      "emoji": "🗺️",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Acompaña sin ahogar",
+      "emoji": "👂",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 7 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "SER ASESOR PERSONAL",
+    "description": "ha completado el Curso 7 de la Línea Política de Adultos, Ser asesor personal, comprendiendo la asesoría personal como rol y como competencia, y es capaz de iniciar una asesoría, acordar un plan personal de desarrollo centrado en pocas competencias, acompañarlo con registros y retroalimentación, y solicitar el reconocimiento cuando el desempeño lo demuestra, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  },
+  "commitmentBox": {
+    "prompt": "Escribe aquí la misión que elegiste en la Lección 6, con su fecha:",
+    "placeholder": "Mi misión como asesor es… y la cumplo antes del…"
+  }
+}

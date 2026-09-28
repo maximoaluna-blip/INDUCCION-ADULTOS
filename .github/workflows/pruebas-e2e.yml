@@ -36,7 +36,7 @@ jobs:
       - name: Recompilar cursos
         working-directory: 05-Generador-Cursos
         run: |
-          for c in bienvenida-adultos politica-marco ciclo-adulto competencias-esenciales plan-personal; do
+          for c in bienvenida-adultos politica-marco ciclo-adulto competencias-esenciales plan-personal vinculacion-adultos asesor-personal evaluacion-360 talento-360 decisiones-para-el-futuro; do
             node build-course.js "$c"
           done
 

@@ -3,7 +3,7 @@
   "title": "Tu Plan Personal de Desarrollo",
   "subtitle": "Curso 5 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.",
-  "contentVersion": "2026-09-21",
+  "contentVersion": "2026-09-27",
   "icon": "🗺️",
   "duration": "30 minutos",
   "level": 1,
@@ -267,7 +267,7 @@
         }
       ],
       "reflection": {
-        "prompt": "Pensando en tu grupo: ¿quién podría ser tu asesor personal? Escribe 1-2 nombres concretos y por qué los elegirías. Si no se te ocurre nadie, ¿qué necesitas para conseguir uno?"
+        "prompt": "Pensando en tu grupo: ¿quién podría ser tu asesor personal? Descríbelo por su rol o cargo, sin nombres, y di por qué lo elegirías. Si no se te ocurre nadie, ¿qué necesitas para conseguir uno?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 2",

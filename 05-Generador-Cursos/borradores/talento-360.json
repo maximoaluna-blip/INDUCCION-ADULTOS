@@ -1,0 +1,633 @@
+{
+  "courseId": "talento-360",
+  "title": "Talento 360° en la práctica",
+  "subtitle": "Curso 9 · Nivel 2 de la Línea Política de Adultos",
+  "description": "El recorrido práctico por la plataforma oficial de la Asociación: las dos puertas de entrada, una hoja de vida que permita ser evaluado, cómo postularse a una vacante, cómo responder y descargar una evaluación, cómo construir el plan con estrategias, actividades y soportes, y cómo reconocer y hacer visible el propio desarrollo.",
+  "contentVersion": "2026-09-27",
+  "icon": "💻",
+  "duration": "40 minutos",
+  "level": 2,
+  "levelName": "Profundización por fase del ciclo",
+  "order": 9,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la misión que elegiste en la Lección 6, con su fecha:",
+    "placeholder": "En Talento 360° voy a… y lo hago antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Dos años de buen trabajo… invisibles.</strong><br>Óscar, jefe de Comunidad, lleva dos años haciendo un trabajo que todo el grupo reconoce. Cuando su asesora quiere empezar a preparar la solicitud de su reconocimiento, abren su perfil en Talento 360°: tres cargos activos, ninguno con asesor, la foto de hace diez años y ni una evidencia cargada.<br><br><strong>Lo que no está en Talento 360°, para el sistema no pasó.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 9.</strong><br>En el Curso 5 viste qué es Talento 360° y por qué importa. Aquí vas a recorrerla en la práctica: qué se hace en cada parte, qué se llena para poder ser evaluado y qué errores cuestan caro. Te sirve si te van a evaluar, si asesoras a alguien o si te quieres postular a un cargo."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⚠️ Una plataforma cambia.</strong> Este curso sigue los tutoriales oficiales que distribuye la Dirección Nacional de Adultos en el Movimiento (febrero de 2024) y la circular DNAM-C-098-2024. Si al entrar ves un botón con otro nombre o en otro lugar, manda el tutorial vigente de la biblioteca oficial; y si te trabas, está la mesa de ayuda de la Asociación. Lo que no cambia es el <strong>recorrido</strong>, y eso es lo que vas a aprender."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para aprovecharlo mejor te sugerimos haber visto el <strong>Curso 5 — Tu Plan Personal de Desarrollo</strong>. Se complementa con el <strong>Curso 7 — Ser asesor personal</strong> y el <strong>Curso 8 — Acompañamiento y Evaluación 360°</strong>. Ninguno es requisito. Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos; si no, repasas y vuelves a intentar. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Distinguir</strong> las dos puertas de Talento 360° y para qué sirve cada una",
+            "<strong>Dejar</strong> una hoja de vida que permita ser evaluado",
+            "<strong>Postularte</strong> a una vacante sabiendo lo que no tiene marcha atrás",
+            "<strong>Encontrar y responder</strong> tu evaluación en la plataforma, y descargar su informe cuando esté cerrada",
+            "<strong>Construir</strong> tu plan en la plataforma: estrategias, actividades y soportes",
+            "<strong>Usar</strong> el Muro Kudo y saber qué revisa la Dirección Nacional antes de un reconocimiento"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Dos puertas",
+              "description": "5 min. Dónde se entra y para qué."
+            },
+            {
+              "title": "Lección 2 — Una hoja de vida que sirva",
+              "description": "6 min. Lo que hay que llenar para poder ser evaluado."
+            },
+            {
+              "title": "Lección 3 — Postularse a una vacante",
+              "description": "5 min. Cómo llegan las vacantes y qué no se puede deshacer."
+            },
+            {
+              "title": "Lección 4 — La evaluación en la plataforma",
+              "description": "6 min. Responderla, cerrarla y descargar el informe."
+            },
+            {
+              "title": "Lección 5 — El plan en la plataforma",
+              "description": "7 min. Estrategias, actividades, soportes y estados."
+            },
+            {
+              "title": "Lección 6 — Reconocer y ser reconocido",
+              "description": "7 min. El Muro Kudo y lo que se verifica antes de certificar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Dos puertas",
+      "emoji": "🚪",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Talento 360° tiene dos puertas: una para registrarte y postularte, otra para tu desarrollo. Mucha gente conoce solo una."
+        },
+        {
+          "type": "paragraph",
+          "text": "Talento 360° es el <strong>sistema de gestión de recursos humanos</strong> (HRM, por sus siglas en inglés) que la Asociación adquirió para apoyar el sistema de gestión de adultos. Lo administra un miembro de la Dirección Nacional de Adultos en el Movimiento, a quien se le reportan las dificultades con la plataforma."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🚪 Puerta 1 — «Trabaje con nosotros»",
+              "description": "Donde creas tu cuenta con un correo y una contraseña, y donde están las vacantes y tus postulaciones. Se llega desde la página de la Asociación, en la opción «T360 – Hoja de Vida y Vacantes». Si olvidas la contraseña, aquí mismo la recuperas.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🏠 Puerta 2 — La plataforma (HRM)",
+              "description": "Donde, con la misma cuenta, editas y mantienes al día tu hoja de vida —en «Mi Perfil», que se abre desde tu usuario—, respondes y revisas evaluaciones de desempeño, construyes tu plan personal de desarrollo y reconoces a tus compañeros en el Muro Kudo. Tiene su propia dirección: la de hoy es scouts.talento360.com.co/hrm, y desde la página de la Asociación se llega por la opción «T360 – Selección y Desempeño»; si cambia, la trae el tutorial vigente. Ojo: la Puerta 1 también te muestra tu hoja de vida, pero los cargos, el estado y el asesor se corrigen aquí.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔀 No la confundas con SiScout.</strong> Como viste en el Curso 5: SiScout es tu registro como miembro de la Asociación; Talento 360° es tu hoja de vida como adulto, tu evaluación y tu plan. Estar al día en una no te pone al día en la otra."
+        },
+        {
+          "type": "blockquote",
+          "text": "Óscar entraba siempre por «Trabaje con nosotros», veía su hoja de vida y cerraba. Nunca había abierto la parte donde viven las evaluaciones y el plan: creía que eran la misma cosa."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Talento 360° es la herramienta que utiliza la Asociación Scout de Colombia que nos ayuda a operativizar la Política Nacional de Adultos en el Movimiento y su modelo de gestión.",
+          "source": "Registro y Validación de Datos en Talento 360° (tutorial, Dirección Nacional de Adultos en el Movimiento, 5 de febrero de 2024), p. 1",
+          "label": "📋 Ver lo que dice el tutorial"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cuándo fue la última vez que entraste a Talento 360° y qué hiciste? Si nunca has entrado, o solo por una de las dos puertas, ¿qué es lo primero que quieres revisar después de este curso?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "Un adulto olvidó su contraseña y quiere entrar a responder una evaluación. ¿Dónde la recupera?",
+            "options": [
+              "En la página de registro y vacantes; con esa clave entra después a la otra parte.",
+              "En la parte de las evaluaciones, que maneja una clave distinta de la de las vacantes.",
+              "En SiScout, porque Talento 360° usa la misma clave de su registro como miembro."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Un adulto quiere responder la evaluación de su jefe de Manada, pero solo conoce la página donde se registró y ve vacantes. ¿Qué le falta?",
+            "options": [
+              "Entrar a sus postulaciones en esa misma página, porque ahí aparece lo que le toca evaluar.",
+              "Entrar con esa misma cuenta por la otra dirección de la plataforma, la de su desarrollo.",
+              "Pedirle a la Dirección Nacional una cuenta aparte, que sirva solo para las evaluaciones."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Una hoja de vida que sirva",
+      "emoji": "🪪",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La hoja de vida en Talento 360° no es un adorno: de cómo la llenes depende que la plataforma te pueda evaluar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Todo esto se hace por la <strong>Puerta 2</strong>, en «Mi Perfil». Son seis partes, pero cuatro son las que más pesan para que te puedan evaluar: el estado «Vinculado», el área, un solo cargo activo por nivel y tu asesor. Las demás suman: llénalas, pero empieza por esas cuatro."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧾 Lo que pide el tutorial oficial, parte por parte"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Mi Perfil",
+              "description": "Tus datos personales y tu foto. En el campo de estado, la opción <strong>«Vinculado»</strong>: sin ella no puedes ser parte de las evaluaciones."
+            },
+            {
+              "title": "Información Scout",
+              "description": "Desde qué año eres parte del Movimiento, cuánto tiempo fuiste miembro juvenil y cuánto llevas como adulto."
+            },
+            {
+              "title": "Perfil profesional y área",
+              "description": "Tu perfil laboral. En «Asignar Área», el tutorial indica <strong>Programa de Jóvenes</strong> para los dirigentes y <strong>Desarrollo Institucional</strong> para los consejeros o el jefe de grupo."
+            },
+            {
+              "title": "Vínculos familiares scout",
+              "description": "Si tienes familiares en el Movimiento, puedes relacionarlos."
+            },
+            {
+              "title": "Cargos",
+              "description": "Tu historial como adulto. Se escoge bien el nivel —Grupo, Región o Nación— y <strong>solo puede haber un cargo activo por nivel</strong>: los anteriores llevan fecha de finalización. En el campo <strong>«Asesor»</strong> queda quién te acompaña."
+            },
+            {
+              "title": "Educación y experiencia",
+              "description": "Entre más completa, mejor. Y puedes adjuntar los certificados que obtengas, dentro o fuera del Movimiento."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔑 El error que más cuesta:</strong> dejar activos varios cargos del mismo nivel. El tutorial es explícito: de tener un solo cargo activo por nivel depende que la evaluación de desempeño se pueda realizar con éxito. Si fuiste jefe de Tropa y ahora eres jefe de Comunidad en el mismo grupo, el primero lleva fecha de finalización."
+        },
+        {
+          "type": "blockquote",
+          "text": "Óscar cierra dos de sus tres cargos del grupo con su fecha de finalización, deja activo el de jefe de Comunidad, escribe el nombre de su asesora en el campo «Asesor» y cambia la foto. Diez minutos."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Recuerde: Valide que solo tenga un cargo activo por nivel a la vez y de ser necesario, puede editar o eliminar con los iconos de la derecha porque de esto depende que la evaluación de desempeño pueda realizarse de manera exitosa.",
+          "source": "Registro y Validación de Datos en Talento 360° (tutorial, Dirección Nacional de Adultos en el Movimiento, 5 de febrero de 2024), p. 5",
+          "label": "📋 Ver lo que dice el tutorial"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si puedes, abre ahora tu perfil; si no, haz memoria: ¿cuáles de estas partes de tu hoja de vida tienes al día y cuál sospechas que no? Escribe la que vas a revisar primero y por qué."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Paula fue subjefa de Manada y este año es jefa de Manada en el mismo grupo. En Talento 360° tiene los dos cargos activos, y su evaluación no aparece. ¿Qué revisa primero?",
+            "options": [
+              "Su foto de perfil, porque las evaluaciones solo se habilitan con una foto reciente.",
+              "Que solo quede un cargo activo en el nivel de grupo, y el otro con su fecha de fin.",
+              "El área asignada, porque en Programa de Jóvenes las evaluaciones son solo anuales."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un dirigente deja de ser jefe de Tropa porque lo nombraron jefe de grupo. Ya cerró el cargo viejo y abrió el nuevo. ¿Qué más revisa en su perfil?",
+            "options": [
+              "El área: pasa de Programa de Jóvenes a Desarrollo Institucional, que es la de su nuevo cargo.",
+              "Nada más: el área se escoge una sola vez, al registrarse, y queda igual en todos los cargos.",
+              "El nivel del cargo: el de jefe de grupo se registra en la Región, porque responde ante ella."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Postularse a una vacante",
+      "emoji": "📨",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 5 minutos · 1 idea central:</strong><br>Postularse es fácil; deshacerlo, no. Antes del botón, se leen los detalles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando un estamento abre una convocatoria (la viste en el Curso 6), la vacante se publica en la plataforma —cuando el proceso la usa— y <strong>llega al correo de todos los adultos registrados</strong>. Para postularte entras por «Trabaje con nosotros», con la misma cuenta de tu hoja de vida."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧭 El recorrido"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Revisa tu disponibilidad para viajar",
+              "description": "Tiene que estar activada en tu perfil: si no, la plataforma no te deja postularte."
+            },
+            {
+              "title": "2. El menú",
+              "description": "Tres opciones: Hoja de vida (para revisarla y actualizarla), Vacantes (los cargos disponibles) y Postulaciones (los procesos en los que ya participas)."
+            },
+            {
+              "title": "3. Lee los detalles",
+              "description": "Filtra las vacantes y abre «Detalles»: ahí están los requerimientos del cargo."
+            },
+            {
+              "title": "4. «+Postularme»",
+              "description": "Solo si lo que pide el cargo corresponde con tus competencias y tu disposición."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🛑 Lo que no tiene marcha atrás:</strong> una vez postulado, la plataforma no te deja cancelar el proceso hasta que termine, y no puedes eliminar la postulación desde tu perfil. Si te postulaste por error, ponte en contacto con el estamento que convoca o con la Dirección Nacional de Adultos en el Movimiento."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Recuerde que no es posible eliminar postulaciones desde su perfil por lo que le recomendamos que se postule, en caso de estar seguro de querer aspirar al cargo.",
+          "source": "Postulación a Cargos dentro de la plataforma Talento 360° (tutorial distribuido por la Dirección Nacional de Adultos en el Movimiento, 5 de febrero de 2024), p. 4",
+          "label": "📋 Ver lo que dice el tutorial"
+        }
+      ],
+      "reflection": {
+        "prompt": "Imagina que mañana llega a tu correo una vacante que te interesa. ¿Qué tendrías que revisar de tu hoja de vida, y de tu tiempo real disponible, antes de pulsar «+Postularme»?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Andrea encuentra una vacante abierta que le encanta y ya leyó sus detalles, pero al pulsar «+Postularme» la plataforma no la deja. ¿Qué revisa?",
+            "options": [
+              "Si tiene activada la disponibilidad para viajar, porque sin ella no puede postularse.",
+              "Si ya respondió su autoevaluación de este año, porque sin ella no puede aspirar a otro cargo.",
+              "Si ya pasó un día desde que se publicó, porque antes de eso el botón no se activa."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Mateo se postuló sin leer los detalles y ahora ve que el cargo exige viajar cada mes, algo que no puede. ¿Qué hace?",
+            "options": [
+              "Eliminar la postulación desde su perfil, en la sección Postulaciones, y volver a empezar.",
+              "Contactar al estamento que convoca o a la Dirección Nacional, porque él no puede retirarla.",
+              "Nada: la plataforma cancela sola las postulaciones de quien no cumple los requisitos."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — La evaluación en la plataforma",
+      "emoji": "📊",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La evaluación se responde en la pestaña de desempeño, tiene un plazo y solo da su informe cuando se cierra."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Se programa",
+              "description": "La valoración la programa el Jefe de Grupo, el Comisionado de Adultos o la Dirección de Adultos, según el cargo. Si el nivel del adulto no la programa, él puede pedírsela al nivel siguiente: tener su proceso de desarrollo es un derecho y un deber del acuerdo mutuo."
+            },
+            {
+              "title": "2. Se responde",
+              "description": "En la pestaña de desempeño aparecen la autoevaluación y las evaluaciones que te tocan de otros miembros del equipo. Queda abierta cerca de un mes."
+            },
+            {
+              "title": "3. Se cierra",
+              "description": "Cuando todos los que debían evaluar lo hicieron y la evaluación está cerrada, se puede descargar el informe. Si no está cerrada, no."
+            },
+            {
+              "title": "4. Se elige bien",
+              "description": "Puedes tener varias evaluaciones: una por cada cargo y, dentro del mismo cargo, la inicial y la final. Antes de descargar, asegúrate de escoger la correcta."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>👤 Si administras un grupo o una región:</strong> la circular advierte que los usuarios con perfil de administrador (AdminGrupo o AdminRegión) tienen que cambiar a perfil de usuario; si no, el menú no les muestra las evaluaciones que deben responder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cómo responderla con honestidad —por conductas observables, sin complacencia y sin castigo— lo trabaja el <strong>Curso 8</strong>. Aquí basta con la regla de la circular: si no has visto hacer algo, no lo des por hecho; se contempla para el plan."
+        },
+        {
+          "type": "blockquote",
+          "text": "La asesora de Óscar es la jefa de grupo y además administra el grupo en la plataforma. Durante una semana no encontró la evaluación que tenía que responder… hasta que cambió a perfil de usuario."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Todos los adultos tienen el derecho además del deber, según el compromiso y acuerdo mutuo de contar con su proceso de desarrollo, por lo tanto, si el nivel al que el adulto pertenece no programa la evaluación podrá solicitar al siguiente que programe su evaluación.",
+          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 2",
+          "label": "📋 Ver lo que dice la circular"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Tienes hoy una evaluación abierta, una cerrada o ninguna? Según tu respuesta, escribe el siguiente paso que te toca: responderla, descargar el informe o pedir que te la programen."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Llevas un año en tu cargo y en tu grupo nadie ha programado tu valoración por competencias. ¿Qué puedes hacer según la circular?",
+            "options": [
+              "Esperar: la valoración solo la puede programar el jefe del grupo al que perteneces.",
+              "Pedirle al nivel siguiente, por ejemplo a la región, que te programe la evaluación.",
+              "Autoevaluarte por tu cuenta en la plataforma, que la valoración inicial no necesita a nadie."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un comisionado de la región, que gestiona la región en la plataforma, entra a hacer su autoevaluación y el menú no se la muestra. ¿Qué revisa primero?",
+            "options": [
+              "Si entró como administrador: con ese perfil el menú no le enseña lo que le toca a él.",
+              "Si la programó el Jefe de Grupo: un cargo de la región solo ve lo que programa su grupo.",
+              "Si activó la disponibilidad para viajar: sin ella la plataforma no le muestra evaluaciones."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — El plan en la plataforma",
+      "emoji": "🗺️",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>En la plataforma, el plan se arma de arriba abajo: estrategias, que se parten en actividades, que se respaldan con soportes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con el informe de la evaluación en la mano, el adulto y su asesor identifican las competencias y funciones que van a trabajar. Luego, en la pestaña <strong>Desarrollo</strong>, en <strong>Plan de desarrollo personal</strong>, construyen el plan así:"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Estrategias",
+              "description": "Se redacta con claridad cuál es la estrategia y se describe, y se seleccionan las competencias o funciones que va a impactar. Siempre con «Guardar», para no perder lo escrito."
+            },
+            {
+              "title": "2. Actividades",
+              "description": "Cada estrategia se desglosa en actividades específicas. Al marcar las que ya hiciste, la plataforma calcula el porcentaje de ejecución."
+            },
+            {
+              "title": "3. Soportes",
+              "description": "Se cargan las evidencias de lo realizado: productos, certificados, actas. En la pestaña de anexos."
+            },
+            {
+              "title": "4. Estados",
+              "description": "Cuando una estrategia tiene sus evidencias, se mueve de <em>planeado</em> a <em>en desarrollo</em> o a <em>terminado</em>."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⏳ ¿Cuánto dura?</strong> La circular sugiere unos <strong>seis meses</strong> de plan; al terminarlo se programa una evaluación final, que puede mostrar que el plan funcionó o que hace falta ajustarlo con uno nuevo. Y la sección de <strong>retroalimentación</strong> de la plataforma es donde se registran las tareas y acuerdos de cada encuentro con el asesor: la bitácora en versión digital."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📁 Y un respaldo propio.</strong> El documento <em>Desempeño</em> sugiere que el adulto y su asesor tengan además un archivo personal con sus certificados, actas, fotografías e históricos de las sesiones. La plataforma guarda; tu archivo te cubre si algo falla."
+        },
+        {
+          "type": "blockquote",
+          "text": "Con el informe en la mano, Óscar y su asesora arman dos estrategias, cada una partida en actividades. Lo que hace con la Comunidad por fin deja rastro: el acta del consejo de Comunidad, las fotos de la expedición, el proyecto terminado. En las semanas siguientes carga los soportes y pasa las dos estrategias a «terminado». El trabajo ya existía; ahora existe también la prueba. <strong>Lo que no está en Talento 360°, para el sistema no pasó.</strong>"
+        },
+        {
+          "type": "policy-quote",
+          "text": "Luego de que cada estrategia planeada posea evidencias (productos) y se carguen en la plataforma se pueden ir movilizando las estrategias de planeado a en desarrollo o terminado únicamente seleccionado la estrategia y desplazando a la casilla que corresponda.",
+          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 6",
+          "label": "📋 Ver lo que dice la circular"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en algo que ya hayas hecho bien en tu cargo este año. ¿Con qué evidencia concreta lo podrías demostrar —un acta, una foto, un producto, un certificado— y a qué competencia o función de tu cargo le apuntaría?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Laura escribió una sola estrategia en su plan: «Mejorar como dirigente». No tiene actividades y su porcentaje sigue en cero. ¿Qué le falta?",
+            "options": [
+              "Nada: el porcentaje sube solo cuando su asesor revisa el plan al final del periodo.",
+              "Una estrategia más clara, ligada a una competencia, y partida en actividades que pueda marcar.",
+              "Más estrategias: el porcentaje se calcula por el número de estrategias, no por lo hecho."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Óscar hizo todas las actividades de una estrategia, pero no ha cargado nada. Quiere moverla a «terminado». ¿Qué le recuerda la circular?",
+            "options": [
+              "Que puede moverla ya: con las actividades marcadas la estrategia queda terminada.",
+              "Que primero cargue las evidencias, y después mueva la estrategia a «terminado».",
+              "Que no puede moverla él: solo el asesor pasa las estrategias entre los estados."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Reconocer y ser reconocido",
+      "emoji": "🎉",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La plataforma sirve para reconocer a otros en el día a día, y es donde la Dirección Nacional mira antes de reconocerte a ti."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎉 El Muro Kudo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Es el espacio de la plataforma para <strong>felicitar y reconocer avances</strong> durante el proceso. La guía para desarrollarse en el cargo lo pone en su lista: reconocer a tus compañeros, a tu jefe inmediato y a tu asesor. No es un adorno: el reconocimiento oportuno es parte de la gestión de la motivación."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔎 Lo que se verifica antes de un reconocimiento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando el asesor solicita la Insignia de Madera, Gestor Regional o Gestor Nacional de alguien (lo viste en el Curso 7), la circular DNAM-C-098-2024 dice qué se revisa. El Curso 7 te dio los requisitos completos; esta es la lista de verificación, y casi toda se mira en Talento 360°:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "La carta aval de aceptación del asesor personal",
+            "La hoja de vida scout completa en Talento 360°",
+            "La valoración inicial por competencias",
+            "El Plan Personal de Desarrollo finalizado y con soportes en Talento 360°",
+            "La valoración final por competencias",
+            "La inscripción vigente en SiScout"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Fíjate en el «casi»: la carta aval y la inscripción en SiScout van por fuera. Pero todo lo que muestra tu desempeño —hoja de vida, valoraciones, plan y soportes— se revisa en la plataforma."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔁 ¿Te acuerdas de Óscar?</strong><br>Hace tres meses su perfil tenía tres cargos activos, ningún asesor y ni una evidencia. Hoy tiene un solo cargo activo, a su asesora registrada, un plan con soportes y un informe descargado. El trabajo con su Comunidad es el mismo de siempre; lo que cambió es que ahora el sistema lo puede ver. <strong>Lo que no está en Talento 360°, para el sistema no pasó.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧭 El recorrido, aunque cambien los botones.</strong> Cada vez que entres, hazte tres preguntas: <strong>¿por qué puerta entro?</strong> (cuenta y vacantes, o mi desarrollo), <strong>¿qué me deja ser evaluado?</strong> (estado «Vinculado», un solo cargo activo por nivel, mi asesor) y <strong>¿qué queda como prueba?</strong> (soportes cargados, informe de una evaluación cerrada). Si la pantalla no coincide con este curso, busca la función y no el botón. Si aun así te trabas: primero el tutorial vigente de la biblioteca oficial —<em>Registro y Validación de Datos en Talento 360°</em> y <em>Postulación a Cargos dentro de la plataforma Talento 360°</em>—, y después la mesa de ayuda de la Asociación."
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Entra por las dos puertas y revisa tu hoja de vida: estado «Vinculado», un solo cargo activo por nivel y tu asesor registrado.<br>• Si tienes un plan en la plataforma: carga la evidencia de una actividad que ya hiciste.<br>• Reconoce en el Muro Kudo a alguien de tu equipo por algo concreto que hizo este mes.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Recordamos nuevamente que se realizará la verificación de: a. Carta aval de aceptación por parte del Asesor Personal de Desarrollo. b. Hoja de vida scout completa en la plataforma Talento360°. c. Evaluación (valoración inicial) por competencias. d. Plan Personal de Desarrollo finalizado y con soportes en la plataforma Talento360° e. Evaluación (valoración final) por competencias que debe poseer un porcentaje no inferior al 90%. f. Inscripción vigencia actual de la plataforma SISCOUT.",
+          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 7",
+          "label": "📋 Ver lo que dice la circular"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en algo concreto que alguien de tu equipo hizo este mes —dilo por su cargo, sin nombre—. ¿Cómo lo escribirías en el Muro Kudo para que se entienda qué hizo y por qué le sirvió al grupo?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 9",
+        "questions": [
+          {
+            "text": "Un adulto tiene un desempeño excelente y una evaluación final muy alta, pero su plan no tiene ningún soporte cargado. Su asesor va a solicitar su Insignia de Madera. ¿Qué pasa?",
+            "options": [
+              "Nada grave: la evaluación final alta ya demuestra todo y los soportes son opcionales.",
+              "Le falta uno de los puntos que se verifican: el plan finalizado y con sus soportes.",
+              "Se aprueba igual si el asesor manda los soportes por correo junto con la solicitud."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Vas a cargar un soporte en tu plan y el menú ya no se parece al de este curso: el botón cambió de nombre. ¿Qué haces?",
+            "options": [
+              "Buscas la parte del plan aunque ahora se llame distinto, y si no la hallas, pides ayuda.",
+              "Buscas el botón exacto del curso: si ya no está, ese paso dejó de hacerse en la plataforma.",
+              "Buscas otra vía: le mandas los soportes por correo a tu asesor, que cuentan igual."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Conoce las dos puertas",
+      "emoji": "🚪",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Hoja de vida en orden",
+      "emoji": "🪪",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Se postula con cabeza",
+      "emoji": "📨",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Evaluación cerrada",
+      "emoji": "📊",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Plan con evidencias",
+      "emoji": "🗺️",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 9 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "TALENTO 360° EN LA PRÁCTICA",
+    "description": "ha completado el Curso 9 de la Línea Política de Adultos, Talento 360° en la práctica, y es capaz de mantener una hoja de vida que permita su evaluación, postularse a una vacante, responder y descargar una evaluación por competencias y construir su plan personal de desarrollo con estrategias, actividades y soportes en la plataforma oficial de la Asociación Scouts de Colombia"
+  }
+}
