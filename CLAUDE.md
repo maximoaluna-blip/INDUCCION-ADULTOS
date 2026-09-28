@@ -4,7 +4,7 @@
 
 ## Qué es
 
-Una de las 3 líneas activas de formación digital para adultos voluntarios de la Asociación Scouts de Colombia (junto a Desarrollo Institucional y Programa de Jóvenes). Cursos cortos, certificables y autoservicio sobre el ciclo del adulto en el Movimiento: marco filosófico, principios, las 7 competencias esenciales y el plan personal de desarrollo.
+Una de las líneas de formación digital para adultos voluntarios de la Asociación Scouts de Colombia (junto a Desarrollo Institucional, Programa de Jóvenes y Políticas Transversales). Cursos cortos, certificables y autoservicio sobre el ciclo del adulto en el Movimiento: la fundamentación (Nivel 1) y la práctica de cada fase del ciclo (Nivel 2).
 
 **En vivo:** https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/
 
@@ -31,6 +31,10 @@ Una de las 3 líneas activas de formación digital para adultos voluntarios de l
 > **Diseño versionado desde el 27-sep-2026 (ADR-098).** Cada curso tiene su `.md` en `01-Diseno-Cursos/`, y **un cambio de contenido se hace ahí primero**. ⚠️ Los diseños de los Cursos 1–5 y del borrador `politica-adultos` se **reconstruyeron desde el JSON**: dicen lo que quedó, no lo que se quiso. El Plan de Formación vigente es **`Plan-de-Formacion-Linea-Politica-de-Adultos.md`**; el `.docx` queda como histórico.
 >
 > **Ninguna reflexión pide el nombre de una persona ni invita a identificar a un tercero** (regla del dueño, 27-sep-2026): se escribe por el cargo o el rol. Al barrer el Nivel 1 se corrigieron cuatro que lo hacían.
+>
+> **La fuga de conjunto no la mide ninguna compuerta** (ADR-099): con la «regla ciega» —descartar opciones con absolutos y elegir la que más suena a la lección— el Nivel 2 aprobaba hasta 5 de 6 quizzes sin leer. Al tocar un quiz, volver a medirla (≤ 1 de 6).
+>
+> **Antes del Nivel 3:** revisar cada foco contra el *Manual de Cargos* (quién nombra ≠ quién selecciona); la Asesoría Personal **no tiene grados de dominio**; solapes con Consejero juvenil (PJ) y Tesorería (DI). Ver `Plan-de-Formacion-Linea-Politica-de-Adultos.md` §5.
 >
 > **El build admite `commitmentBox` por curso** (ADR-098): los cursos del Nivel 2 lo declaran para que el Compromiso Personal recoja la misión de su última lección. Sin él, el build imprime el texto genérico de siempre.
 

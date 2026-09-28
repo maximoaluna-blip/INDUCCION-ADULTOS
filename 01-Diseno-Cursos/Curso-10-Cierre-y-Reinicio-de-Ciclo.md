@@ -109,5 +109,7 @@ L3 y L4 ya no invitan a identificar a un tercero; se distingue lo **formal** del
 es el tuyo» da el lado del adulto en la L3; el logro final es «Curso 10 Completado» y el cierre del nivel no afirma un
 recorrido que el alumno pudo no hacer; el certificado nombra la entrega del cargo.
 
+**Segunda vuelta (27-09-2026).** Doctrinal: 1 mayor (un distractor que la propia L5 sostenía: «tu plan sigue contigo») y 3 menores, aplicados; el blockquote de Beatriz ya incluye el acta, y el quiz del cierre «de palabra» usa a otro adulto (Camilo). Pedagógica: la regla ciega aún aprobaba 5 de 6 → siete opciones reescritas; queda en ≤ 1 de 6.
+
 ---
 _Documento de diseño v1.1 — 27 de septiembre de 2026 (tras las auditorías)._

@@ -101,5 +101,7 @@ y asesor, en «Mi Perfil»); la L2 separa las **cuatro partes que más pesan**; 
 botones»** (tres preguntas y a quién acudir) y un quiz de transferencia; el hook se prueba en la L5 sin modelar un plan
 rellenado hacia atrás; puente con los siete requisitos del Curso 7; duraciones re-medidas (5·6·5·6·7·7).
 
+**Segunda vuelta (27-09-2026).** Doctrinal: apto con 4 menores (la Puerta 1 también deja actualizar la hoja de vida; el área entra en la lista de lo que deja ser evaluado; la mesa de ayuda es «Tickets»; «AdminRegion» como lo escribe la circular). Pedagógica: la regla ciega aún aprobaba 4 de 6 quizzes → cinco distractores reescritos; queda en ≤ 1 de 6. El relato de Óscar ya no cierra un plan en semanas.
+
 ---
 _Documento de diseño v1.1 — 27 de septiembre de 2026 (tras las auditorías)._
