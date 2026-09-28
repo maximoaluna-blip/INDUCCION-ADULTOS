@@ -326,7 +326,7 @@
             "text": "Tras el plan de mejora y la nueva evaluación, un adulto sigue sin mejorar en su cargo de jefe de rama, pero es excelente organizando la logística del grupo. ¿Qué opción no hay que perder de vista?",
             "options": [
               "La terminación del acuerdo, que el estamento ya puede decidir sin mirar otros cargos.",
-              "Una reubicación en un cargo donde pueda ser competente, antes de pensar en su retiro.",
+              "Una reubicación en un cargo donde pueda ser competente, además del retiro.",
               "Un segundo plan de seis meses, y otro después, hasta que por fin alcance el perfil."
             ],
             "correctIndex": 1
@@ -367,11 +367,11 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🎁 Agradecer no es un trámite, pero tampoco se deja al azar.</strong> Lo formal es lo que el grupo hace en nombre de todos y deja constancia: el agradecimiento en una ceremonia o en el consejo, delante de los scouts, y el reconocimiento que corresponda, que solicita el asesor con el jefe inmediato. Un mensaje en el Muro Kudo de Talento 360° (lo viste en el Curso 9) o una tarjeta de la Manada lo acompañan muy bien. Lo que no puede ser es el silencio."
+          "text": "<strong>🎁 Agradecer no es un trámite, pero tampoco se deja al azar.</strong> Lo formal es lo que queda registrado: el reconocimiento que corresponda —lo solicita tu asesor con el jefe inmediato— y un agradecimiento que el grupo hace en nombre de todos, por ejemplo en una ceremonia delante de los scouts o en el consejo de grupo. Un mensaje en el Muro Kudo de Talento 360° (lo viste en el Curso 9) o una tarjeta de la Manada lo acompañan muy bien. Lo que no puede ser es el silencio."
         },
         {
           "type": "blockquote",
-          "text": "Beatriz y su jefe de grupo acuerdan su reubicación. Pero antes, en la ceremonia de cierre de año, la Manada le entrega una tarjeta hecha a mano y el jefe de grupo lee en voz alta lo que su 360° dijo de ella: que los lobatos se sienten seguros a su lado. Beatriz no se va de ningún lado; cierra una etapa. Y la cierra bien."
+          "text": "Beatriz y su jefe de grupo acuerdan su reubicación y la dejan en un acta que firman los dos. Pero antes, en la ceremonia de cierre de año, la Manada le entrega una tarjeta hecha a mano y el jefe de grupo lee en voz alta lo que su 360° dijo de ella: que los lobatos se sienten seguros a su lado. Beatriz no se va de ningún lado; cierra una etapa. Y la cierra bien."
         },
         {
           "type": "policy-quote",
@@ -396,7 +396,7 @@
             "correctIndex": 1
           },
           {
-            "text": "En el Momento 3 de Beatriz, el jefe de grupo y ella acuerdan su reubicación de palabra. ¿Qué le falta a ese cierre?",
+            "text": "Imagina que Beatriz y su jefe de grupo hubieran acordado la reubicación solo de palabra. ¿Qué le faltaría a ese cierre?",
             "options": [
               "Un aviso a la región, que es la que registra las reubicaciones de los grupos.",
               "Un acta de la decisión, firmada por Beatriz y por quien decidió con ella.",
@@ -431,7 +431,7 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Los registros de tu gestión en el cargo: informes, actas y lo que ya está en Talento 360°. Tu plan personal de desarrollo es tuyo y sigue contigo",
+            "Los registros de tu gestión en el cargo: informes, actas y lo que ya está en Talento 360°. Tu plan personal de desarrollo no se entrega: es tuyo, y lo que lograste con él te acompaña al ciclo siguiente",
             "Lo que el cargo tiene a su cargo: documentos, compromisos en curso, contactos y fechas",
             "Tu mirada: qué funcionó, qué no y qué harías distinto, contado a quien llega o a quien lo va a buscar"
           ]
@@ -553,7 +553,7 @@
           {
             "text": "Beatriz fue reubicada de jefa de Manada a otro cargo de su grupo, con más campo y menos papeles. ¿Con qué arranca en ese cargo?",
             "options": [
-              "Con el plan que tenía de jefa de Manada, que sigue vigente hasta que termine el año.",
+              "Con el acuerdo de jefa de Manada, que sigue vigente hasta marzo y cubre el cargo nuevo.",
               "Con lo de quien llega a un cargo: acuerdo y nombramiento propios, y su formación básica.",
               "Con una renovación: como sigue en el mismo grupo, se le prorroga el acuerdo que tenía."
             ],

@@ -33,7 +33,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>⚠️ Una plataforma cambia.</strong> Este curso sigue los tutoriales oficiales que distribuye la Dirección Nacional de Adultos en el Movimiento (febrero de 2024) y la circular DNAM-C-098-2024. Si al entrar ves un botón con otro nombre o en otro lugar, manda el tutorial vigente de la biblioteca oficial; y si te trabas, está la mesa de ayuda de la Asociación. Lo que no cambia es el <strong>recorrido</strong>, y eso es lo que vas a aprender."
+          "text": "<strong>⚠️ Una plataforma cambia.</strong> Este curso sigue los tutoriales oficiales que distribuye la Dirección Nacional de Adultos en el Movimiento (febrero de 2024) y la circular DNAM-C-098-2024. Si al entrar ves un botón con otro nombre o en otro lugar, manda el tutorial vigente de la biblioteca oficial; y si te trabas, está la mesa de ayuda de la Asociación («Tickets», en su página). Lo que no cambia es el <strong>recorrido</strong>, y eso es lo que vas a aprender."
         },
         {
           "type": "paragraph",
@@ -117,7 +117,7 @@
             },
             {
               "title": "🏠 Puerta 2 — La plataforma (HRM)",
-              "description": "Donde, con la misma cuenta, editas y mantienes al día tu hoja de vida —en «Mi Perfil», que se abre desde tu usuario—, respondes y revisas evaluaciones de desempeño, construyes tu plan personal de desarrollo y reconoces a tus compañeros en el Muro Kudo. Tiene su propia dirección: la de hoy es scouts.talento360.com.co/hrm, y desde la página de la Asociación se llega por la opción «T360 – Selección y Desempeño»; si cambia, la trae el tutorial vigente. Ojo: la Puerta 1 también te muestra tu hoja de vida, pero los cargos, el estado y el asesor se corrigen aquí.",
+              "description": "Donde, con la misma cuenta, editas y mantienes al día tu hoja de vida —en «Mi Perfil», que se abre desde tu usuario—, respondes y revisas evaluaciones de desempeño, construyes tu plan personal de desarrollo y reconoces a tus compañeros en el Muro Kudo. Tiene su propia dirección: la de hoy es scouts.talento360.com.co/hrm, y desde la página de la Asociación se llega por la opción «T360 – Selección y Desempeño»; si cambia, la trae el tutorial vigente. Ojo: la Puerta 1 también te deja ver y actualizar tu hoja de vida, pero el estado, los cargos y el asesor —lo que decide si te pueden evaluar— el tutorial los muestra aquí.",
               "color": "#e3f2fd",
               "borderColor": "#1565c0"
             }
@@ -369,7 +369,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>👤 Si administras un grupo o una región:</strong> la circular advierte que los usuarios con perfil de administrador (AdminGrupo o AdminRegión) tienen que cambiar a perfil de usuario; si no, el menú no les muestra las evaluaciones que deben responder."
+          "text": "<strong>👤 Si administras un grupo o una región:</strong> la circular advierte que los usuarios con perfil de administrador (AdminGrupo o AdminRegion) tienen que cambiar a perfil de usuario; si no, el menú no les muestra las evaluaciones que deben responder."
         },
         {
           "type": "paragraph",
@@ -546,7 +546,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🧭 El recorrido, aunque cambien los botones.</strong> Cada vez que entres, hazte tres preguntas: <strong>¿por qué puerta entro?</strong> (cuenta y vacantes, o mi desarrollo), <strong>¿qué me deja ser evaluado?</strong> (estado «Vinculado», un solo cargo activo por nivel, mi asesor) y <strong>¿qué queda como prueba?</strong> (soportes cargados, informe de una evaluación cerrada). Si la pantalla no coincide con este curso, busca la función y no el botón. Si aun así te trabas: primero el tutorial vigente de la biblioteca oficial —<em>Registro y Validación de Datos en Talento 360°</em> y <em>Postulación a Cargos dentro de la plataforma Talento 360°</em>—, y después la mesa de ayuda de la Asociación."
+          "text": "<strong>🧭 El recorrido, aunque cambien los botones.</strong> Cada vez que entres, hazte tres preguntas: <strong>¿por qué puerta entro?</strong> (cuenta y vacantes, o mi desarrollo), <strong>¿qué me deja ser evaluado?</strong> (estado «Vinculado», el área, un solo cargo activo por nivel, mi asesor) y <strong>¿qué queda como prueba?</strong> (soportes cargados, informe de una evaluación cerrada). Si la pantalla no coincide con este curso, busca la función y no el botón. Si aun así te trabas: primero el tutorial vigente de la biblioteca oficial —<em>Registro y Validación de Datos en Talento 360°</em> y <em>Postulación a Cargos dentro de la plataforma Talento 360°</em>—, y después la mesa de ayuda de la Asociación («Tickets», en su página) o el administrador de la plataforma en la Dirección Nacional."
         },
         {
           "type": "mission-box",
