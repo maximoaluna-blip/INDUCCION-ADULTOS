@@ -155,9 +155,9 @@
             "correctIndex": 1
           },
           {
-            "text": "Beatriz es jefa de Manada y, desde el año pasado, también tiene un cargo en el equipo regional. Su acuerdo de jefa vence en marzo. ¿Qué pasa con su cargo en la región?",
+            "text": "Una jefa de Manada tiene, desde el año pasado, también un cargo en el equipo regional. Su acuerdo de jefa vence en marzo. ¿Qué pasa con su cargo en la región?",
             "options": [
-              "Vence también en marzo: un adulto tiene un solo periodo, que cubre todos sus cargos.",
+              "Culmina con la misma evaluación final de marzo, que decide el futuro del adulto en sus dos cargos.",
               "Sigue su propio plazo: cada cargo es un ciclo, con su acuerdo, su evaluación y su final.",
               "Se vuelve el principal: al vencer la jefatura, el cargo regional absorbe el periodo que quedaba."
             ],
@@ -231,7 +231,7 @@
             "options": [
               "Una renovación tal cual: en la 360° de una jefa de Manada lo administrativo no cuenta.",
               "Una reubicación: otro cargo que aproveche mejor las competencias que ya demostró.",
-              "Un retiro voluntario: si lo administrativo la desborda, lo sano es que pare un tiempo."
+              "Un retiro: la organización lo puede determinar por falta de cualificación en su evaluación final."
             ],
             "correctIndex": 1
           },
@@ -317,8 +317,8 @@
             "text": "La evaluación semestral de un subjefe de Clan sale muy por debajo de lo esperado. El consejo propone terminar su acuerdo esa misma semana. ¿Qué prevé el acuerdo?",
             "options": [
               "Que el estamento ya puede terminarlo, porque una evaluación baja es incumplimiento.",
-              "Que primero va un plan de mejora de seis meses con su asesor y una nueva evaluación.",
-              "Que se espera a la evaluación final de los dos años y ahí se decide si se renueva."
+              "Que antes trabaje con su asesor un plan de seis meses para mejorar, y luego lo evalúen otra vez.",
+              "Que se espera a la evaluación final de los dos años del acuerdo, y ahí se decide si se renueva."
             ],
             "correctIndex": 1
           },
@@ -371,7 +371,7 @@
         },
         {
           "type": "blockquote",
-          "text": "Beatriz y su jefe de grupo acuerdan su reubicación y la dejan en un acta que firman los dos. Pero antes, en la ceremonia de cierre de año, la Manada le entrega una tarjeta hecha a mano y el jefe de grupo lee en voz alta lo que su 360° dijo de ella: que los lobatos se sienten seguros a su lado. Beatriz no se va de ningún lado; cierra una etapa. Y la cierra bien."
+          "text": "Beatriz, su asesora y su jefe de grupo acuerdan su reubicación y la dejan en un acta que firman las partes. En la ceremonia de cierre de año, la Manada le entrega una tarjeta hecha a mano y el jefe de grupo lee en voz alta lo que su 360° dijo de ella: que los lobatos se sienten seguros a su lado. Beatriz no se va de ningún lado; cierra una etapa. Y la cierra bien."
         },
         {
           "type": "policy-quote",
@@ -396,11 +396,11 @@
             "correctIndex": 1
           },
           {
-            "text": "Imagina que Beatriz y su jefe de grupo hubieran acordado la reubicación solo de palabra. ¿Qué le faltaría a ese cierre?",
+            "text": "En el Momento 3 de Camilo, subjefe de Tropa, el jefe de grupo y él acuerdan su reubicación de palabra. ¿Qué le falta a ese cierre?",
             "options": [
-              "Un aviso a la región, que es la que registra las reubicaciones de los grupos.",
-              "Un acta de la decisión, firmada por Beatriz y por quien decidió con ella.",
-              "Una carta de renuncia de Beatriz a la jefatura, para poder nombrarla en el otro."
+              "La solicitud de su asesor personal con el jefe inmediato, que es como se piden las reubicaciones.",
+              "Dejarlo por escrito: un documento de la decisión que firmen Camilo y quienes decidieron con él.",
+              "Una carta de renuncia de Camilo a su cargo actual, para poder nombrarlo en el otro."
             ],
             "correctIndex": 1
           }
@@ -546,14 +546,14 @@
             "options": [
               "Que tiene razón: la insignia certifica sus competencias y el plan ya no hace falta.",
               "Que no: con insignia o sin ella, cada periodo arranca con un plan para seguir creciendo.",
-              "Que no del todo: el plan sigue, pero ya lo arma por su cuenta, sin asesor ni evaluación."
+              "Que en parte: el plan sigue, pero ya lo arma por su cuenta, sin asesor ni evaluación."
             ],
             "correctIndex": 1
           },
           {
             "text": "Beatriz fue reubicada de jefa de Manada a otro cargo de su grupo, con más campo y menos papeles. ¿Con qué arranca en ese cargo?",
             "options": [
-              "Con el acuerdo de jefa de Manada, que sigue vigente hasta marzo y cubre el cargo nuevo.",
+              "Con su evaluación final de jefa de Manada como valoración inicial, sin tener que evaluarse de nuevo.",
               "Con lo de quien llega a un cargo: acuerdo y nombramiento propios, y su formación básica.",
               "Con una renovación: como sigue en el mismo grupo, se le prorroga el acuerdo que tenía."
             ],

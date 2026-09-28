@@ -266,7 +266,7 @@
             "options": [
               "Que arranque tranquilo: con veinte años en el Movimiento, su ejemplo ya vale por un plan.",
               "Que abra también su propio plan, con alguna acción para su competencia de asesoría.",
-              "Que asesore solo a adultos de su rama, donde su experiencia le da toda la autoridad."
+              "Que se apoye en otros asesores o expertos para las competencias, y así no le hace falta un plan propio."
             ],
             "correctIndex": 1
           },
@@ -378,7 +378,7 @@
             "text": "Iván, nuevo en la Tropa, le dice a su asesora: «La inducción es pura teoría; empecemos ya con el plan». ¿Por qué conviene verificar primero que la haya terminado?",
             "options": [
               "Porque sin conocer las funciones de su cargo, no hay con qué valorar ni priorizar su plan.",
-              "Porque la inducción ya cuenta como una competencia del plan y así adelanta la meta.",
+              "Porque la inducción se registra en Talento 360° como la primera estrategia de su plan.",
               "Porque es un trámite: al final nadie revisa si la hizo, lo que cuenta es el plan."
             ],
             "correctIndex": 0
@@ -472,7 +472,7 @@
             "options": [
               "Que está bien: entre más competencias abarque el plan, antes llegará la certificación.",
               "Que escoja unas pocas, las que más pesan en su cargo, y las trabaje a fondo.",
-              "Que espere a la segunda evaluación antes de escoger cualquier competencia."
+              "Que escoja las seis, pero trabaje primero las que ya domina, para validar lo que trae."
             ],
             "correctIndex": 1
           },

@@ -336,7 +336,7 @@
             "options": [
               "Que es lo indicado: toda evaluación baja termina en una reubicación o en un retiro.",
               "Que el consejero sí se evalúa y hace plan, pero su continuidad la decide la asamblea.",
-              "Que los consejeros no se evalúan, porque la asamblea ya los evaluó al elegirlos."
+              "Que el consejero se evalúa con la 360°, y por eso la asamblea puede reubicarlo con ese resultado."
             ],
             "correctIndex": 1
           },
@@ -345,7 +345,7 @@
             "options": [
               "Al jefe de cada grupo, que es el jefe inmediato de los dirigentes de su grupo.",
               "Al Comisionado Regional de Adultos, que asesora a los jefes y revisa los avances.",
-              "A la Dirección Nacional de Adultos, que vela porque el modelo cumpla su objetivo."
+              "A la Dirección Nacional de Adultos, que revisa los avances de cada evaluación en los grupos."
             ],
             "correctIndex": 1
           }
@@ -603,7 +603,7 @@
           {
             "text": "Un adulto quiere descargar su informe 360°, pero dos de sus pares todavía no han respondido y la evaluación sigue abierta. ¿Qué pasa?",
             "options": [
-              "Puede descargarlo igual, y las respuestas faltantes se agregan solas cuando lleguen.",
+              "Puede descargar un informe parcial de la evaluación abierta, con los pares que ya respondieron.",
               "No puede descargarlo todavía: el informe sale cuando la evaluación está cerrada.",
               "Le basta con pedirle al asesor que responda por los pares que faltan y cerrarla."
             ],
@@ -613,7 +613,7 @@
             "text": "Al leer su informe con su asesor, Martín ve que se calificó alto en trabajo en equipo, pero sus pares le pusieron ahí las notas más bajas del informe. ¿Qué hace con esa diferencia?",
             "options": [
               "La toma como una pista clave del informe y la vuelve una meta concreta del plan.",
-              "La descarta, porque la nota de sus pares pesa menos que la de su jefe inmediato.",
+              "La descarta como meta: el plan se arma con las competencias del informe de su jefe inmediato.",
               "La compensa subiendo su nota en la próxima autoevaluación, para que el promedio suba."
             ],
             "correctIndex": 0
