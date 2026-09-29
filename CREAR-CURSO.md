@@ -117,7 +117,7 @@ Es el corazón técnico de la plataforma. Cada archivo tiene un rol específico 
 Procedimiento universal en `../MANUAL-CREACION-CURSOS.md` §A.3-bis y `../CLAUDE.md` §7-bis. Datos propios de **Política de Adultos**:
 
 1. **Raíz del repo:** verificar que `index.html` (con botón `.back-portal`) + `404.html` siguen presentes.
-2. **Portal** `../PORTAL-ADULTOS-ASC/lineas.json` → entrada `"id": "politica-adultos"`: mantener `status: "active"`, `url: "https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/"`, `color: "#622599"`, y **actualizar `coursesActive`** al nº de cursos con `status: "active"` (`coursesPlanned: 17`). Sincronizar la tabla del `README.md` del portal.
+2. **Portal** `../PORTAL-ADULTOS-ASC/lineas.json` → entrada `"id": "politica-adultos"`: mantener `status: "active"`, `url: "https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/"`, `color: "#622599"`, y **actualizar `coursesActive`** al nº de cursos con `status: "active"` (`coursesPlanned: 15` desde el ADR-107). Sincronizar la tabla del `README.md` del portal.
 3. Push del repo del portal + **verificar en producción** (landing 200, curso 200, tarjeta clickeable en el portal).
 
 ### Diagrama del flujo
@@ -281,7 +281,7 @@ Los HTMLs en `02-Plataforma-Web/` son **artefactos generados** — si los editas
 
 - [`INDICE-PROYECTO.md`](INDICE-PROYECTO.md) — Estado actual del proyecto, cuentas, URLs, dependencias
 - [`AUDITORIA.md`](AUDITORIA.md) — Proceso de auditoría/depuración del código a demanda
-- [`Plan-de-Formacion-Linea-Politica-de-Adultos.docx`](Plan-de-Formacion-Linea-Politica-de-Adultos.docx) — Plan completo de los 4 niveles y 17 cursos
+- [`Plan-de-Formacion-Linea-Politica-de-Adultos.docx`](Plan-de-Formacion-Linea-Politica-de-Adultos.docx) — Plan histórico (el vigente es el `.md`: 15 cursos desde el ADR-107)
 - [`05-Generador-Cursos/SKILL.md`](05-Generador-Cursos/SKILL.md) — Manual del generador de cursos para la IA
 - [`05-Generador-Cursos/INSTRUCCIONES-GOOGLE-APPS-SCRIPT.md`](05-Generador-Cursos/INSTRUCCIONES-GOOGLE-APPS-SCRIPT.md) — Setup del backend
 - [`PRUEBAS-E2E/README.md`](PRUEBAS-E2E/README.md) — Auditoría funcional (Playwright + axe); corre en cada push/PR

@@ -1,0 +1,582 @@
+{
+  "courseId": "canciller-de-grupo",
+  "title": "El Canciller y los reconocimientos",
+  "subtitle": "Curso 13 · Nivel 3 de la Línea Política de Adultos",
+  "description": "La ficha del Canciller de Grupo y lo que la rodea: un cargo para agradecer, custodiar y registrar lo que el grupo entrega, tramitar hacia arriba lo que decide el comité de estímulos, elegir el estímulo nacional que corresponde, saber quién aprueba hoy y reconocer a tiempo y con reserva. Sirve también al Jefe de Grupo y al Presidente del Consejo.",
+  "contentVersion": "2026-09-28",
+  "icon": "🎖️",
+  "duration": "40 minutos",
+  "level": 3,
+  "levelName": "Especialización por cargo",
+  "order": 13,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>«Se merecía algo».</strong><br>Marta, jefa de Manada, lleva veinte años sirviendo como dirigente con Insignia de Madera y deja el cargo. En su despedida, entre fotos y torta, todos dicen lo mismo: «Se merecía algo». Nadie lo pidió nunca.<br><br><strong>Un reconocimiento que no se pide a tiempo es un agradecimiento que no llega.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 13.</strong><br>En el Curso 10 viste que, al final de un nombramiento, la política pide considerar siempre un reconocimiento formal, y que ese reconocimiento del ciclo lo solicita tu asesor con el jefe inmediato. Además de ese, la Asociación tiene <strong>estímulos nacionales</strong> —medallas, distinciones— que el grupo pide para sus miembros o para sí mismo. Ese camino tiene un cargo propio: el <strong>Canciller de Grupo</strong>. Sirve también al Jefe de Grupo y al Presidente del Consejo, que forman con él el comité de estímulos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te sugerimos haber visto los <strong>Cursos 10 y 11</strong>; ninguno es requisito. La ficha del Canciller es la 2.1.6 del <em>Manual de cargos</em>, y el catálogo de estímulos está en el <em>Manual de Estímulos Nacionales</em>; los dos, en la biblioteca virtual de la Asociación (<a href=\"https://scout.org.co/biblioteca\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca</a>). Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Ubicar</strong> el cargo: quién lo nombra, ante quién responde y qué pasa si no existe",
+            "<strong>Custodiar y registrar</strong> lo que el grupo entrega",
+            "<strong>Tramitar</strong> hacia arriba lo que decide el comité de estímulos",
+            "<strong>Elegir</strong> el estímulo nacional que corresponde a un caso",
+            "<strong>Identificar</strong> a quién va hoy la solicitud y <strong>distinguir</strong> lo que no le toca al Canciller",
+            "<strong>Reconocer bien</strong>: a tiempo, con reserva y en ceremonia"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Un cargo para agradecer",
+              "description": "6 min. Quién lo nombra y qué pasa si no hay."
+            },
+            {
+              "title": "Lección 2 — Custodiar y registrar",
+              "description": "6 min. La memoria de lo que el grupo entrega."
+            },
+            {
+              "title": "Lección 3 — Tramitar hacia arriba",
+              "description": "6 min. El comité y la solicitud."
+            },
+            {
+              "title": "Lección 4 — El catálogo nacional",
+              "description": "7 min. Qué estímulo corresponde a cada caso."
+            },
+            {
+              "title": "Lección 5 — Quién aprueba hoy",
+              "description": "6 min. La Cancillería Nacional y lo que no es tuyo."
+            },
+            {
+              "title": "Lección 6 — Reconocer bien",
+              "description": "6 min. A tiempo, con reserva y en ceremonia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Un cargo para agradecer",
+      "emoji": "🎖️",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El Canciller custodia y tramita los reconocimientos del grupo. Lo nombra la Asamblea y ante ella responde. Es un cargo opcional: si no lo hay, su trámite lo asume el Jefe de Grupo."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Volvamos a la despedida de Marta.</strong> Cuando alguien preguntó «¿y a quién le tocaba pedirlo?», nadie supo qué responder. Esta lección es sobre ese «a quién»."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🗳️ Lo nombra",
+              "description": "La Asamblea Scout de Grupo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📣 Responde a",
+              "description": "La Asamblea Scout de Grupo, ante la que presenta el informe de su labor.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📥 Le responden",
+              "description": "«No aplica»: no tiene a nadie a su cargo.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Requisitos de la ficha:</strong> ser mayor de 18 años; preferiblemente bachiller; conocer el entorno social y cultural de los jóvenes y adultos de la Asociación; conocer sus Estatutos, Políticas y Reglamentos; contar con las competencias esenciales del cargo o demostrar interés para desarrollarlas; y no haber sido expulsado de la Asociación, ni tener medida de aseguramiento vigente, ni estar en el registro nacional de agresores sexuales."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧩 ¿Todo grupo tiene Canciller?</strong> No necesariamente. El Reglamento de Grupos dice que el Grupo «podrá designar» un Canciller, y el <em>Manual de Estímulos</em> prevé que, si no hay Canciller nombrado, la responsabilidad de enviar las solicitudes la asume el Jefe de Grupo. Ese Reglamento (2013) habla de un periodo de un año; la ficha vigente no fija periodo, así que revisa en tu nombramiento hasta cuándo va el tuyo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es el responsable de custodiar, gestionar y velar por la entrega oportuna de estímulos, distinciones y reconocimientos ante los niveles superiores para los miembros del grupo scout que se encuentren contemplados en el reglamento de estímulos de la Asociación, así mismo custodiará los reconocimientos con los que cuente el grupo scout.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.6 Canciller de Grupo Scout, p. 44",
+          "label": "📋 Ver la descripción en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Tiene tu grupo Canciller? Si lo tiene, ¿sabías qué hace? Si no, ¿quién se encarga hoy de pedir los reconocimientos y cómo se enteran los demás de que se pueden pedir? Escríbelo por cargos."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "En un grupo sin Canciller, la jefa de Tropa quiere pedir la Medalla de Servicios para un compañero. El Jefe de Grupo le dice: «Esa solicitud la mando yo mientras no haya Canciller». ¿Tiene razón?",
+            "options": [
+              "Sí: si el grupo no ha nombrado Canciller, enviar la solicitud pasa a ser tarea suya.",
+              "Sí, con tal de que la Asamblea lo designe antes como Canciller para ese caso.",
+              "No: esa solicitud le toca al Presidente del Consejo, que también forma parte del comité."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Al terminar su periodo, el Canciller pregunta en el Consejo a quién le presenta el informe de su labor. El Jefe de Grupo le dice: «A la Asamblea, que fue la que te nombró». ¿Tiene razón?",
+            "options": [
+              "Sí: el Canciller le responde a la Asamblea de Grupo, y a ella le presenta su informe.",
+              "No: se lo presenta al Jefe de Grupo, que conduce el grupo y está en el comité.",
+              "Sí, pero después de pasarlo por el comité de estímulos, que debe aprobarlo antes."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Custodiar y registrar",
+      "emoji": "🗝️",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La primera función del Canciller es ser el depositario: guardar lo que el grupo tiene para reconocer y llevar el registro de lo que entrega."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Custodiar",
+              "description": "Mantener bajo custodia los elementos de las distinciones, estímulos y reconocimientos con los que cuenta el grupo."
+            },
+            {
+              "title": "Registrar",
+              "description": "Actualizar de manera permanente el registro de las entregas a los integrantes del grupo, y el inventario."
+            },
+            {
+              "title": "Disponer",
+              "description": "Tener listos, a tiempo, los elementos que se soliciten para una entrega."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📖 El Libro de Oro.</strong> El Reglamento de Grupos hace al Canciller depositario del Libro de Oro del Grupo y, si el grupo la tiene, de su Condecoración de Grupo, con sus medallas y diplomas. Es la memoria de a quién ha agradecido el grupo, y por qué."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🏵️ ¿Una condecoración propia del grupo?</strong> Se puede. El <em>Manual de la Orden al Mérito Scout</em> (2024) guía a grupos y regiones para crear la suya. Ese manual dice que la aprueba la Corte de Honor, y el Reglamento Nacional de 2026 le da a la Cancillería Nacional aprobar la creación de condecoraciones: consulta antes de empezar. Lo que ese manual trae de grados, collares y plazos es el ejemplo de un grupo, no una regla."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Qué pide tu ficha.</strong> En el Curso 11 viste sus dos competencias específicas; aquí se ven en acción. <strong>Elaboración y gestión de documentos</strong> es el registro de entregas y el Libro de Oro al día; <strong>Administración de bienes</strong> es saber qué hay en la caja, en qué estado y qué falta reponer. De las esenciales, dos conductas pesan más en este cargo: mantener confidenciales las discusiones privadas y asignar el crédito merecido a los demás."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Actualizar de manera permanente el registro de entregas realizadas de las distinciones, estímulos y reconocimientos que se entreguen a los integrantes del grupo scout, así como el inventario de las mismas.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.6, Función 1, p. 44",
+          "label": "📋 Ver la tarea en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si mañana alguien preguntara a quién ha reconocido tu grupo en los últimos cinco años, ¿dónde estaría esa respuesta? Escribe qué registro existe hoy y qué le falta."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Llegan al grupo el diploma y la joya de un estímulo nacional para una dirigente. ¿Qué le toca al Canciller según su ficha?",
+            "options": [
+              "Guardarlos hasta fin de año, cuando el Consejo decida si se entregan.",
+              "Enviarlos a la Región, que es la que impone los estímulos nacionales.",
+              "Custodiarlos, tenerlos listos para la entrega y dejarla en el registro."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Entra un Canciller nuevo. El anterior le entrega una caja con medallas y le dice: «A quién se le dio cada una lo tengo en la cabeza; pregúntame cuando quieras». ¿Qué le falta a esa entrega?",
+            "options": [
+              "Algo escrito que diga qué hay en la caja y quién recibió qué, para no depender de él.",
+              "El acta de la Asamblea que lo nombró, como constancia de la custodia del registro.",
+              "Un inventario hecho por el Consejo, porque custodiar los bienes del grupo es su tarea."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Tramitar hacia arriba",
+      "emoji": "📨",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El Canciller no decide solo a quién reconocer: tramita lo que determina el comité de estímulos, y lo hace a tiempo."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Marta cumplió sus veinte años meses antes de despedirse.</strong> Si alguien lo hubiera tenido anotado, el comité habría tenido tiempo de reunirse, escribir la solicitud y esperar respuesta. Tramitar es, sobre todo, llegar antes."
+        },
+        {
+          "type": "paragraph",
+          "text": "La segunda función de la ficha es gestionar y velar por la entrega oportuna de estímulos ante los niveles superiores: tramitar ante los estamentos nacionales los que <strong>el comité de estímulos determine</strong>, promoverlos entre los miembros del grupo y mantener al comité y al grupo al día sobre el reglamento de estímulos."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "👥 El comité de estímulos",
+              "description": "El Reglamento de Grupos lo integra con el Canciller, el Presidente del Consejo y el Jefe de Grupo. Ahí se decide qué se pide y para quién.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "✍️ La solicitud",
+              "description": "Por escrito, destacando los méritos del candidato y, en varios estímulos, con su hoja de vida scout. La envía el Canciller; si no hay, el Jefe de Grupo.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "✅ El candidato",
+              "description": "Si pertenece a un grupo, con afiliación vigente, y con una hoja de vida ejemplar, libre de sanciones.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💡 Promover también es tu trabajo.</strong> Muchos estímulos no se piden porque nadie sabe que existen. La ficha te pide mantener informados al comité y al grupo: una lista de fechas (aniversarios del grupo, años de servicio de sus dirigentes) evita que el agradecimiento llegue tarde. <strong>Un reconocimiento que no se pide a tiempo es un agradecimiento que no llega.</strong>"
+        },
+        {
+          "type": "policy-quote",
+          "text": "Para hacer coherente el proceso de estímulos en el grupo, quien envíe a la Corte de Honor Nacional la solicitud debe ser el Canciller del Grupo. Si no hay Canciller de Grupo Scout nombrado, esa responsabilidad la asume el Jefe de Grupo Scout.",
+          "source": "Manual de Estímulos (Corte de Honor Nacional, agosto de 2020), Blasón Nacional «Siempre Listo», p. 5. Quién aprueba hoy: ver la Lección 5",
+          "label": "📋 Ver lo que dice el manual"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en el calendario de tu grupo: ¿qué tipos de fecha deberían estar en la lista del comité (el aniversario del grupo, los años de servicio, el fin de un cargo…)? Escribe dos tipos y, para cada uno, con cuánta anticipación habría que empezar el trámite para no llegar tarde. Sin nombres ni fechas de personas."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "El Jefe de Grupo le dice al Canciller que la jefa de Tropa merece una distinción nacional y le pide enviar la solicitud mañana. ¿Puede enviarla?",
+            "options": [
+              "Sí: el Jefe de Grupo propone y el Canciller tramita lo que él le envíe.",
+              "Todavía no: antes tiene que decidirlo el comité del que hacen parte los dos.",
+              "Todavía no: primero la Asamblea tiene que aprobar la postulación del candidato."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El comité quiere postular a un dirigente de trabajo ejemplar, pero su afiliación venció hace dos meses y aún no la renueva. ¿Qué conviene hacer?",
+            "options": [
+              "Enviar la solicitud ya: sus méritos pesan más que un trámite administrativo pendiente.",
+              "Pedirle primero que renueve y enviarla cuando esté afiliado: es requisito del candidato.",
+              "Enviarla destacando por escrito sus méritos, y adjuntar la explicación de la afiliación."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — El catálogo nacional",
+      "emoji": "🏅",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>No hay que memorizar el catálogo: hay que saber qué tipo de caso tienes delante y buscar el estímulo que le corresponde."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🌟 El mejor de una rama",
+              "description": "Distinción Daniel Isaza: al mejor Lobato, Scout, Caminante, Rover o Dirigente de un grupo; una por rama al año. El Canciller es quien la solicita.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "⏳ Años de servicio",
+              "description": "Medalla de Servicios: para dirigentes con Insignia de Madera que cumplen diez, quince o veinte años sirviendo como tales.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "🌳 El grupo mismo",
+              "description": "Medalla La Ceiba: para el Grupo, en sus aniversarios múltiplos de cinco años de inscripción en la Asociación. Se impone en su bandera.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "🤝 Quien ayudó desde afuera o desde adentro",
+              "description": "Medalla de Gratitud: a miembros o a personas ajenas al Movimiento por acciones o aportes que superaron lo esperado.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Misión Cumplida:</strong> para quienes en vida pertenecieron al Movimiento, a solicitud del grupo o la región.",
+            "<strong>Cruz al Mérito:</strong> por un acto heroico en el que se pone en juego la integridad personal.",
+            "<strong>Ardilla de Plata:</strong> el máximo estímulo de la Asociación, para adultos con una trayectoria larga y nacional."
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🚪 Los que no pasan por el Canciller.</strong> Según el manual de 2020, la <strong>Distinción Flor de Lis</strong>, para quienes forman parte de un Consejo, la solicita el Presidente o un miembro del estamento; la <strong>Orden de San Jorge</strong> y la <strong>Orden de los Caballeros</strong> van por el nivel nacional. Conocerlos igual te sirve: el comité puede sugerirlos a quien corresponde."
+        }
+      ],
+      "reflection": {
+        "prompt": "Mira el catálogo con tu grupo en mente. ¿Cuál de estos tipos de caso —el grupo mismo, los años de servicio, quien ayuda desde afuera— crees que tu grupo tiene más riesgo de pasar por alto, y por qué? Escribe qué tendría que revisar el comité cada año para no olvidarlo."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "El grupo cumple 25 años. En el Consejo preguntan si hay algún estímulo nacional para el grupo mismo, no para una persona. ¿Qué responde el Canciller?",
+            "options": [
+              "Que sí: la Medalla La Ceiba, que se pide en aniversarios múltiplos de cinco.",
+              "Que sí: la Distinción Daniel Isaza, que se da al mejor grupo de la región.",
+              "Que no: los estímulos nacionales son para personas, y el grupo da los suyos."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Un señor del barrio, que no es scout, lleva años prestando su finca para los campamentos del grupo. El comité quiere agradecerle con un estímulo nacional. ¿Cuál encaja?",
+            "options": [
+              "La Medalla de Servicios, porque son años de servicio constante y generoso al grupo.",
+              "La Medalla de Gratitud, por un aporte que fue más allá de lo que se esperaba de él.",
+              "La Distinción Daniel Isaza, porque es el mejor aliado que ha tenido el grupo scout."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Quién aprueba hoy",
+      "emoji": "🏛️",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Hoy la aprobación de los estímulos está en la Cancillería Nacional, no en la Corte de Honor. Y el Canciller de Grupo no tiene funciones disciplinarias."
+        },
+        {
+          "type": "paragraph",
+          "text": "El <em>Manual de Estímulos</em> es de 2020 y dice que las solicitudes van a la Corte de Honor Nacional y que ella otorga. El <strong>Estatuto de 2025</strong> pone una <strong>Cancillería Nacional</strong>, que depende del Jefe Scout Nacional y está integrada por tres personas: ella estudia y aprueba o imprueba las solicitudes y lleva el registro de reconocimientos de la Asociación. A la Corte de Honor le quedaron las funciones disciplinarias. El Reglamento Nacional de 2026 le pide además acompañar a las cancillerías de los grupos."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔎 Antes de enviar, confirma el canal.</strong> El Reglamento Nacional de 2026 deja sin efecto lo que lo contradiga y da un año para actualizar los manuales. Mientras el <em>Manual de Estímulos</em> se actualiza, tramita tu solicitud ante el nivel nacional y confirma con tu Región o con la Cancillería Nacional a quién va dirigida."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🚫 Lo que no es tuyo.</strong> El Canciller no investiga ni sanciona, ni preside procesos disciplinarios: su ficha no trae esas funciones. «Garante del debido proceso» es una competencia de otros cargos, como el Jefe de Grupo, no del Canciller; y las faltas de un adulto las investiga la Corte de Honor Nacional. Lo que sí te toca es cuidar que la solicitud cumpla los requisitos, entre ellos que el candidato esté libre de sanciones."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Estudiar y aprobar o improbar las solicitudes que le sean presentadas para otorgar reconocimientos y condecoraciones para los miembros de la Asociación Scouts de Colombia y para otras personas o entidades que con sus acciones o ejemplos sean merecedoras de estímulo o agradecimiento.",
+          "source": "Estatuto de la Asociación Scouts de Colombia (2025), Art. 61, funciones de la Cancillería Nacional, p. 32",
+          "label": "📋 Ver lo que dice el Estatuto"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si tu grupo quisiera pedir un estímulo este mes, ¿a quién le preguntarías cómo va hoy el trámite en tu región? Escríbelo por cargo, y qué le preguntarías."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Antes de enviar una solicitud, la Canciller propone preguntar a la Región a quién va dirigida. El Jefe de Grupo dice que no hace falta: «el manual de 2020 dice que va a la Corte de Honor». ¿Quién tiene razón?",
+            "options": [
+              "La Canciller: después de ese manual cambió quién aprueba, así que vale la pena preguntar.",
+              "El Jefe de Grupo: mientras el manual no se actualice, la Corte de Honor sigue aprobando.",
+              "Los dos a medias: la Corte aprueba y la Cancillería Nacional lleva el registro nacional."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "En el Consejo proponen que el Canciller presida el proceso por la falta de un dirigente, «porque es el garante del debido proceso». ¿Qué dice su ficha?",
+            "options": [
+              "Que puede presidirlo si la Asamblea se lo encarga para ese caso concreto.",
+              "Que le toca cuando la falta tiene que ver con un estímulo mal otorgado.",
+              "Que su ficha no le da ese papel: el debido proceso es de otro cargo."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Reconocer bien",
+      "emoji": "🙏",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Reconocer bien es pedir a tiempo, guardar reserva sobre lo privado del candidato y entregar pronto, en ceremonia, dejando constancia."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🤐 Con reserva",
+              "description": "Lo que te cuenten del candidato en confianza se queda ahí. Al comité llevas sus méritos, no su vida privada.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "⏱️ Pronto",
+              "description": "Cuando llega un estímulo, el manual pide al solicitante imponerlo prontamente y en ceremonia especial.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📖 Con constancia",
+              "description": "Cada entrega va al registro del grupo, para que su memoria no dependa de nadie en particular.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>🔁 ¿Te acuerdas de Marta?</strong> Con veinte años sirviendo como Insignia de Madera, cumplía para la Medalla de Servicios. Bastaba con que el comité lo supiera a tiempo y el Canciller —o, sin él, el Jefe de Grupo— enviara la solicitud escrita con sus méritos y su hoja de vida scout; el nivel nacional verifica el tiempo con Adultos en el Movimiento. Todavía se puede pedir: más vale tarde que nunca, pero mejor a tiempo. <strong>Un reconocimiento que no se pide a tiempo es un agradecimiento que no llega.</strong>"
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Arma con el comité la lista de fechas del próximo año que podrían merecer un reconocimiento (aniversarios, años de servicio).<br>• Revisa el registro de entregas de tu grupo y ponlo al día; si no existe, empiézalo.<br>• Si tu grupo no tiene Canciller, propón en el Consejo que la próxima Asamblea lo nombre, o acuerda con el Jefe de Grupo quién lleva el trámite mientras tanto.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Mantiene confidenciales las discusiones privadas y no alimenta rumores.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.6, Relaciones interpersonales (grado 2), conductas, p. 47",
+          "label": "📋 Ver la conducta en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué momento fijo del año de tu grupo —una ceremonia, un campamento, la Asamblea— podría ser el lugar para entregar los reconocimientos que lleguen? Escribe cuál y qué harías para que una entrega no espere meses."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 13",
+        "questions": [
+          {
+            "text": "Una familia le cuenta al Canciller, en confianza, detalles de la vida personal de un dirigente al que quieren postular. ¿Qué hace con eso?",
+            "options": [
+              "Lo guarda en reserva y lleva al comité los méritos del dirigente.",
+              "Lo comparte con el Consejo, para que todos conozcan al candidato.",
+              "Lo comenta solo con el Presidente y el Jefe de Grupo, que son el resto del comité."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Llegan la resolución y la joya de la Medalla de Servicios de un dirigente. La ceremonia de fin de año es dentro de ocho meses. ¿Qué hace el Canciller?",
+            "options": [
+              "Guardarla hasta fin de año y, mientras tanto, anotar la entrega pendiente en el registro del grupo.",
+              "Acordar que el grupo, que fue el que la pidió, la imponga pronto en un acto dedicado a ella.",
+              "Pedirle a la Región que la imponga en su próximo evento, para que tenga ceremonia pronto."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Un cargo para agradecer",
+      "emoji": "🎖️",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Guardián de la memoria",
+      "emoji": "🗝️",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Trámite a tiempo",
+      "emoji": "📨",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Conozco el catálogo",
+      "emoji": "🏅",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Sé quién aprueba",
+      "emoji": "🏛️",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 13 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "EL CANCILLER Y LOS RECONOCIMIENTOS",
+    "description": "ha completado el Curso 13 de la Línea Política de Adultos, El Canciller y los reconocimientos, y es capaz de custodiar y registrar los reconocimientos del Grupo, tramitar ante el nivel nacional los estímulos que determine el comité de estímulos, elegir el que corresponde a cada caso y reconocer a tiempo y con reserva, según el Manual de cargos, perfiles y funciones por competencias, el Manual de Estímulos y el Estatuto de la Asociación Scouts de Colombia"
+  }
+}

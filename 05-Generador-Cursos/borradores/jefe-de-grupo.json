@@ -1,0 +1,576 @@
+{
+  "courseId": "jefe-de-grupo",
+  "title": "Jefe de Grupo: el que acompaña a los adultos",
+  "subtitle": "Curso 15 · Nivel 3 de la Línea Política de Adultos",
+  "description": "La ficha del Jefe de Grupo leída por su función con los adultos: quién lo nombra y ante quién rinde cuentas, cómo atrae y nombra a su equipo, cómo acompaña los primeros meses de un dirigente, cómo ejerce de asesor natural, cómo decide y reconoce con cada uno, y cómo vive su propio ciclo. Cierra el Nivel 3 y la línea.",
+  "contentVersion": "2026-09-28",
+  "icon": "🦸",
+  "duration": "40 minutos",
+  "level": 3,
+  "levelName": "Especialización por cargo",
+  "order": 15,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Más que nadie.</strong><br>Ricardo acaba de ser nombrado Jefe de Grupo. Hereda ocho dirigentes y una vacante en la Tropa. Su plan es sencillo: trabajar más que nadie. Él planea las salidas de las ramas, él habla con los padres, él mismo cubre la vacante los sábados. A los tres meses está agotado, y sus dirigentes siguen exactamente igual que cuando llegó.<br><br><strong>Un Jefe de Grupo no se mide por lo que hace, sino por cómo crecen los adultos que acompaña.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 15, el que cierra el Nivel 3 y la línea.</strong><br>Es un curso integrador: recorre el ciclo de un dirigente desde las manos del Jefe de Grupo y aplica lo que viste en los Cursos 6 a 13, sin repetirlo. La conducción del Programa y del Plan de Grupo las trabajan las líneas de Programa de Jóvenes y Desarrollo Institucional; aquí nos quedamos con su función con los adultos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te sugerimos haber visto los <strong>Cursos 6 a 11</strong>; en las lecciones 5 y 6 te apoyamos también en los Cursos 12 y 13. Ninguno es requisito. La ficha del Jefe de Grupo es la 2.1.10 del <em>Manual de cargos</em>, en la biblioteca de la Dirección Nacional de Adultos en el Movimiento (<a href=\"https://scout.org.co/biblioteca/dnam\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca/dnam</a>). Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Identificar</strong> quién te nombra, ante quién rindes cuentas y a quién nombras tú",
+            "<strong>Atraer y nombrar</strong> a tu equipo con el perfil del cargo como guía",
+            "<strong>Acompañar</strong> los primeros meses de un dirigente nuevo",
+            "<strong>Ejercer</strong> de asesor natural sin quitarle al adulto la elección de su asesor",
+            "<strong>Decidir y reconocer</strong> junto con el adulto y su asesor",
+            "<strong>Leer</strong> tu propia ficha para encontrar tu brecha y saber quién vigila tu gestión"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — La máxima autoridad técnica",
+              "description": "6 min. El cargo y sus seis funciones."
+            },
+            {
+              "title": "Lección 2 — Atraer y nombrar a tu equipo",
+              "description": "6 min. El perfil antes que la urgencia."
+            },
+            {
+              "title": "Lección 3 — Los primeros meses",
+              "description": "6 min. Inducción y valoración inicial."
+            },
+            {
+              "title": "Lección 4 — Asesor natural",
+              "description": "7 min. Acompañar y evaluar sin imponerse."
+            },
+            {
+              "title": "Lección 5 — Decidir y reconocer",
+              "description": "6 min. Las decisiones se conversan."
+            },
+            {
+              "title": "Lección 6 — Tu propio ciclo",
+              "description": "6 min. Quién te acompaña a ti, y el cierre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — La máxima autoridad técnica",
+      "emoji": "🦸",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El Jefe de Grupo conduce lo técnico del Grupo y es responsable de atraer, vincular y desarrollar a sus adultos. Lo nombra el Jefe Regional a partir de la postulación del Consejo."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🗳️ Lo nombra",
+              "description": "El Jefe Regional, previa postulación del Consejo de Grupo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📣 Rinde cuentas",
+              "description": "Su ficha dice: al Consejo Scout de Grupo y al Jefe Regional. El Estatuto agrega la Asamblea de Grupo.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "✍️ Nombra",
+              "description": "Al Subjefe de Grupo y a los jefes y subjefes de Manada, Tropa, Comunidad y Clan (el Manual de 2020 todavía no trae la Familia de Cachorros); con el Consejo, al Asesor espiritual.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Seis funciones.</strong> Este curso trabaja la cuarta, que es la que conecta con toda esta línea:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Garantizar que se cumplan las normas de la Asociación en el Grupo.",
+            "Coordinar al equipo de dirigentes de las ramas.",
+            "Representar al Grupo en las instancias que le corresponden.",
+            "<strong>Apoyar y motivar la gestión de los adultos del Grupo.</strong>",
+            "Cuidar la comunicación entre los dirigentes y las familias.",
+            "Acompañar los procesos de las ramas según el plan del Grupo."
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⚖️ Si alguien te cita el Reglamento.</strong> El Reglamento de Grupos de 2013 le ponía al Jefe de Grupo una edad mínima, la Insignia de Madera como requisito, un periodo de un año y una lista de facultades. Para los cargos de adultos esas disposiciones están suspendidas (Acuerdo 558 de 2023): manda la ficha del Manual, y el periodo es el que diga el nombramiento."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es la máxima autoridad técnica del Grupo y responsable de la conducción, aplicación y ejecución del Programa de Jóvenes, de la atracción y vinculación de Adultos, así como el desarrollo de competencias de los mismos, adicional de las acciones para el crecimiento y seguridad del mismo…",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.10 Jefe de Grupo, p. 68",
+          "label": "📋 Ver la descripción en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "De las seis funciones, ¿cuál se quedó sin hacer la última vez que tu grupo tuvo un mes difícil? Escribe qué pasó con ella y qué cargo terminó cubriéndola, sin nombres."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "Ricardo quiere que el nuevo Asesor espiritual del Grupo empiece este mes. El presidente del Consejo le dice: «Ese nombramiento lo hacemos entre el Consejo y usted». ¿Tiene razón?",
+            "options": [
+              "Sí: la ficha del Asesor espiritual pone al Consejo de Grupo y al Jefe de Grupo.",
+              "No: como a los jefes y subjefes de rama, al Asesor espiritual lo nombra Ricardo.",
+              "Sí, pero el nombramiento lo firma el Jefe Regional, previa postulación del Consejo."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "El Consejo le pide a Ricardo un informe de su gestión. Un padre dice que eso sobra: «al Jefe de Grupo solo le pide cuentas el Jefe Regional, que es quien lo nombra». ¿Quién tiene razón?",
+            "options": [
+              "El Consejo: le rinde cuentas a él, al Jefe Regional y a la Asamblea.",
+              "El padre: rinde cuentas a quien lo nombró, y el Consejo solo lo postula.",
+              "Ninguno: rinde cuentas a la Asamblea, y los otros dos reciben copia."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Atraer y nombrar a tu equipo",
+      "emoji": "🚪",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Una vacante no se tapa con el primero que llega: se cubre con el perfil del cargo en la mano. Y el ciclo del adulto empieza con el nombramiento que firmas tú."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una de tus competencias específicas es <strong>Gestión de grupo</strong>. Entre sus conductas: atraer y vincular a nuevos adultos que deseen ejercer su voluntariado en el grupo, y <strong>asignar responsabilidades según el perfil del cargo</strong> y las metas del plan de grupo."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Determinar la necesidad",
+              "description": "Qué cargo falta y qué perfil pide su ficha (Curso 11)."
+            },
+            {
+              "title": "2. Buscar y seleccionar",
+              "description": "Los pasos de atracción y vinculación que viste en el Curso 6."
+            },
+            {
+              "title": "3. Acordar y nombrar",
+              "description": "El acuerdo mutuo con el adulto y el nombramiento, que expide el jefe del estamento que convoca. Con él empieza el ciclo."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🚦 Ricardo y la vacante.</strong> Cubrir él mismo la Tropa cada sábado resolvía el sábado, no el cargo. La vacante seguía abierta, y el grupo no buscaba a nadie porque «ya estaba cubierta». La atracción empieza por reconocer la vacante como vacante."
+        },
+        {
+          "type": "policy-quote",
+          "text": "El nombramiento lo realiza el jefe del estamento convocante y es el tercer anexo del proceso de atracción y vinculación que da por iniciado el ciclo de vida…",
+          "source": "Atracción y Vinculación (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), §1.4, p. 20",
+          "label": "📋 Ver lo que dice el documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Hay hoy en tu grupo un cargo que alguien cubre «mientras tanto»? Escribe qué cargo es y cuál sería el primer paso para buscar a quien lo ocupe de verdad."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Un padre muy comprometido llegó al grupo hace un mes y el Jefe de Grupo quiere nombrarlo jefe de Manada ya, sin ningún proceso. ¿Qué le recuerda esta línea?",
+            "options": [
+              "Que puede hacerlo: el Jefe de Grupo nombra con libertad a su equipo.",
+              "Que antes el Consejo debe aprobar ese nombramiento en su reunión.",
+              "Que el ciclo empieza por la necesidad y el perfil, antes de nombrar."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un adulto aceptó ser subjefe de Clan y ya acordó con Ricardo su compromiso. Ricardo piensa esperar a que termine la inducción para firmarle el nombramiento. ¿Qué conviene?",
+            "options": [
+              "Esperar a que termine la inducción, porque el ciclo empieza cuando la completa.",
+              "Firmárselo tras el periodo de prueba, porque con eso empieza el ciclo del adulto.",
+              "Firmárselo ya: tener el nombramiento es de lo primero que pide la inducción."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Los primeros meses",
+      "emoji": "🧭",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Los tres primeros meses de un dirigente nuevo tienen dueño: su jefe inmediato. Y antes de que terminen, la valoración inicial."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>¿Quién es el jefe inmediato?</strong> De un jefe de rama, el Jefe de Grupo. Un subjefe de rama responde a los dos: a su jefe de rama, con quien trabaja cada semana, y al Jefe de Grupo, que lo nombró. Pónganse de acuerdo en quién le hace el seguimiento. En cualquier caso, el Jefe de Grupo cuida que el acompañamiento ocurra."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📜 Nombramiento e inducción",
+              "description": "Que tenga su nombramiento, que haga el módulo de inducción general y los cursos A Salvo del Peligro, y que conozca las funciones y competencias de su cargo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "👣 Tres meses de seguimiento",
+              "description": "El jefe inmediato sigue sus acciones, aclara dudas y, al final de ese tiempo, lo retroalimenta con las recomendaciones de su asesor.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📊 La valoración inicial",
+              "description": "Durante los tres primeros meses en el cargo (Comunicado DNAM-2026-124, que rige desde el 1 de octubre de 2026). En el Grupo la programa el Jefe de Grupo; si no la programa, el adulto puede pedirla al nivel siguiente.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Se recomienda acompañar al adulto nuevo durante los 3 primeros meses, en donde el jefe inmediato hará seguimiento a las acciones puntuales, aclara inquietudes y al finalizar este periodo realizará una retroalimentación de acuerdo con el desempeño y las recomendaciones del asesor personal.",
+          "source": "Guía — Fase de inducción de Adultos Voluntarios Nuevos (Dirección Nacional de Adultos en el Movimiento, marzo de 2025), p. 2",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué recibe hoy en tu grupo un dirigente nuevo durante sus tres primeros meses: seguimiento, dudas resueltas, una retroalimentación al final? Escribe cuál de esas tres falta más y un paso para dársela al próximo que llegue."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "La nueva subjefa de Manada lleva un mes y nadie le ha hecho seguimiento: la jefa de Manada creía que lo hacía Ricardo, y Ricardo creía que lo hacía ella. ¿Qué les pide esta lección?",
+            "options": [
+              "Esperar al asesor personal de ella, que es quien hace el seguimiento de los nuevos.",
+              "Ponerse de acuerdo en quién lo hace; y que Ricardo cuide que de verdad ocurra.",
+              "Que la subjefa pida ella misma el seguimiento, cuando sienta que lo necesita."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Ricardo tiene tres dirigentes nuevos y ninguno tiene su valoración inicial. Prefiere esperar a que cada uno la pida, «para no imponerse». ¿Qué le corresponde según el comunicado que rige desde octubre de 2026?",
+            "options": [
+              "Programarla él, dentro de los tres primeros meses de cada uno en el cargo.",
+              "Esperar, como planea: la valoración la pide el adulto cuando se sienta listo.",
+              "Pedirle a cada asesor que la programe cuando la considere oportuna."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Asesor natural",
+      "emoji": "🤝",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>Tu ficha te llama «asesor natural» de tu equipo. Eso no te hace el asesor personal de cada uno: ese lo escoge el adulto."
+        },
+        {
+          "type": "paragraph",
+          "text": "La cuarta función de tu ficha es <strong>apoyar y motivar la gestión de los adultos</strong>: acompañar a los dirigentes en su ciclo de vida, promover y supervisar que desarrollen las competencias de su cargo, asesorar y colaborar en su formación como asesor natural de tu equipo, reconocer su desempeño y garantizar su integración y motivación. Y una de tus específicas es <strong>Asesoría personal</strong>: compartir herramientas, impulsar la formación de tu equipo, y evaluar su desempeño y orientar su desarrollo."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔀 Asesor natural, no asesor por derecho.</strong> Como viste en el Curso 7, el asesor personal es un rol que el adulto escoge, y la política prefiere que sea alguien cercano, a menudo su jefe inmediato. Si un dirigente escoge a otra persona, tu papel no desaparece: sigues acompañando, evaluando como su jefe y firmando lo que te toca."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📝 En la 360°",
+              "description": "El jefe inmediato evalúa, junto con la autoevaluación, el asesor y los pares. Y el Jefe de Grupo vela por que la información se analice y se use.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📋 En las encuestas",
+              "description": "El Jefe de Grupo provee el instrumento que corresponde, decide si va en papel o virtual, garantiza que vuelvan los cuestionarios y vela por que se analicen. Y quien la dirija lo hace sin sesgar las respuestas (Curso 8).",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>🚦 Ricardo y el asesor natural.</strong> La jefa de Tropa escogió como asesora a alguien de otro grupo, y Ricardo sintió que perdía su lugar. No lo perdió: sigue siendo su jefe, la evalúa en la 360° y firma lo que le toca. Lo que dejó de hacer fue elegir por ella."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Acompaña a los dirigentes del Grupo Scout en su ciclo de vida, de acuerdo a lo establecido en la Política de Adultos en el Movimiento Scout. Promueve y supervisa que cada dirigente desarrolle las competencias para su cargo. Asesora y colabora en la formación de los dirigentes del Grupo, siendo el asesor natural de su equipo de dirigentes.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.10 Jefe de Grupo, Función 4, p. 69",
+          "label": "📋 Ver la Función 4 en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cuántos de los dirigentes de tu grupo tienen hoy un asesor personal, y cuántos tienen un plan en marcha? Si no lo sabes, escribe dónde lo averiguarías esta semana."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Terminó la valoración inicial 360° de la jefa de Tropa. Ricardo cargó su evaluación y dice: «Mi parte acabó; lo que sigue es cosa de ella y de su asesora». ¿Qué le conviene saber?",
+            "options": [
+              "Que tiene razón: como jefe inmediato, lo suyo en la 360° era cargar su evaluación.",
+              "Que no acabó: también le toca cuidar que esos resultados se analicen y se usen.",
+              "Que no acabó: ahora le toca a él escribirle el plan con esos resultados."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Para la 360° de un jefe de Manada, Ricardo propone que el propio jefe de Manada escoja si la encuesta a las familias va en papel o virtual, «porque conoce a su gente». ¿Qué dice la guía?",
+            "options": [
+              "Que es buena idea: Ricardo provee el instrumento y el jefe de Manada escoge cómo.",
+              "Que esa decisión es de Ricardo, que la toma según lo que necesite el grupo.",
+              "Que lo decide el jefe de rama que la aplique, cuidando de no sesgar respuestas."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Decidir y reconocer",
+      "emoji": "🔄",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Al final de un periodo, el Jefe de Grupo no decide solo: conversa con el adulto y su asesor sobre la evaluación. Y reconoce el desempeño, cualquiera sea la decisión."
+        },
+        {
+          "type": "paragraph",
+          "text": "Las tres decisiones para el futuro —renovar, reubicar o retirar— las viste en el Curso 10. Desde tu silla, lo que cambia es con quién las conversas. En un ejemplo de la Dirección Nacional, la decisión de que un dirigente con veinte años en la Manada asumiera la jefatura de la Tropa se tomó <strong>en diálogo con el Jefe de Grupo, el asesor personal y el propio adulto</strong>, y a partir de ahí se definió qué competencias debía trabajar."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🙏 Reconocer",
+              "description": "Tu ficha te pide reconocer el desempeño de tu equipo. Para los estímulos, trabajas con el Canciller; si el grupo no tiene Canciller, las solicitudes las envías tú (Curso 13).",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "✍️ Declarar",
+              "description": "Cuando el asesor solicita la Insignia de Madera de alguien de quien eres jefe inmediato, tú firmas la Declaración del jefe inmediato. La solicitud es del asesor, no del jefe, salvo que tú seas las dos cosas (Curso 7).",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "🧭 Cuando no alcanza",
+              "description": "Un retiro por desempeño no se decide de un día para otro: el acuerdo mutuo prevé evaluación, un plan de mejora de seis meses y una nueva evaluación (Curso 10).",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Dado que el Grupo Scout requiere un Jefe de Tropa, y que en diálogo con el Jefe de Grupo y el Asesor Personal de Desarrollo y el nuevo adulto, se consideró que Álvaro puede asumir el cargo, se decide después de esta valoración que Álvaro, para llevar a cabo el cargo de manera exitosa, debe desarrollar las competencias propias de un Jefe de Tropa y ser un adulto idóneo, competente, motivado y permanente.",
+          "source": "Desempeño (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), anexo, ejemplo 2, p. 27",
+          "label": "📋 Ver el ejemplo del documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cómo se toman hoy en tu grupo las decisiones sobre la continuidad de un dirigente: con la evaluación sobre la mesa o por costumbre? Escribe un cambio que harías, sin nombrar a nadie."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Tras la evaluación final, el jefe de Manada, su asesor y Ricardo acuerdan que pase a la Tropa. ¿Qué le toca hacer ahora a Ricardo?",
+            "options": [
+              "Nombrarlo jefe de Tropa: según la ficha de ese cargo, ese nombramiento es suyo.",
+              "Llevar el acuerdo al Consejo, para que lo conversen también con las familias.",
+              "Esperar a que tenga su nuevo plan de desarrollo antes de nombrarlo en la Tropa."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "La asesora de una jefa de Clan va a solicitar su Insignia de Madera y le pide a Ricardo, su jefe inmediato, la declaración que le toca. Ricardo duda: «Eso es entre ellas dos». ¿Qué le corresponde?",
+            "options": [
+              "Firmar la declaración y enviar él la solicitud, porque es su jefe inmediato.",
+              "Firmarla si además es su asesor; si no lo es, la solicitud va sin ella.",
+              "Firmarla él: da fe de que conoce de primera mano cómo le fue en el cargo."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Tu propio ciclo",
+      "emoji": "🔗",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El Jefe de Grupo también es un adulto en su ciclo: tiene perfil, evaluación y plan. Y quien vigila su gestión es el Consejo, con el Jefe Regional."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📶 Tu perfil",
+              "description": "Grado 3 en cinco esenciales; grado 2 en Planeamiento estratégico; y grado 4 —el más alto de la escala— en Trabajo en equipo. Tus específicas: Desarrollo comunitario, Asesoría personal, Supervisión del proyecto educativo, Gestión de grupo y Garante del debido proceso.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⚖️ Garante del debido proceso.</strong> Ante un conflicto entre dos o más partes, tu ficha te pide objetividad, presunción de inocencia, buen nombre de todos y el conducto regular, remitiendo los casos por las rutas que correspondan. Quien vigila tu propia gestión es el Consejo, con el Jefe Regional (Curso 12). Y para la motivación de tu equipo, la línea Políticas Transversales tiene sus cursos <em>Gestión para la Motivación</em> y <em>Motivar al equipo de dirigentes</em>."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>🔁 ¿Te acuerdas de Ricardo?</strong> Trabajar más que nadie no hizo crecer a nadie. Al cuarto mes cambió de plan: abrió la vacante de la Tropa y buscó a alguien con el perfil; programó las valoraciones iniciales pendientes; acompañó a cada jefe de rama en su plan y los dejó planear sus salidas. Hoy trabaja menos sábados y su equipo hace más. <strong>Un Jefe de Grupo no se mide por lo que hace, sino por cómo crecen los adultos que acompaña.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🏁 Con este curso cierras el Nivel 3 y la línea.</strong> Empezaste por la política y tu plan (Nivel 1), recorriste cada fase del ciclo (Nivel 2) y leíste a fondo los cargos (Nivel 3). La línea termina aquí, pero tu ciclo no: siempre hay un plan personal de desarrollo en marcha."
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Haz la lista de tus dirigentes con tres columnas: ¿tiene valoración inicial?, ¿tiene asesor?, ¿tiene plan? Y empieza por el que tenga más vacíos.<br>• Si hay una vacante cubierta «mientras tanto», abre su búsqueda con el perfil de la ficha.<br>• Agenda con cada jefe de rama una conversación sobre su plan antes de fin de mes.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        }
+      ],
+      "reflection": {
+        "prompt": "Si fueras Jefe de Grupo (o si ya lo eres), ¿qué harías distinto en tus primeros tres meses después de este curso? Escribe dos cosas concretas."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 15",
+        "questions": [
+          {
+            "text": "En su valoración inicial, Ricardo se ubica en grado 3 en Trabajo en equipo y en grado 2 en Planeamiento estratégico. ¿Qué le muestra su ficha?",
+            "options": [
+              "Que su brecha está en Planeamiento, porque es la más baja de las dos.",
+              "Que no tiene brecha: el grado 3 es el que piden las esenciales de un jefe.",
+              "Que su brecha está en Trabajo en equipo, que su cargo pide en grado 4."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Dos jefes de rama chocan en una reunión: uno acusa al otro de mentirles a las familias. Ricardo corta la discusión, escucha a cada uno por separado y lleva el caso por el conducto regular. Un jefe le reclama que así «lo está tapando». ¿Qué dice su ficha?",
+            "options": [
+              "Que el jefe tiene razón: el debido proceso pide ventilar el caso ante el equipo.",
+              "Que Ricardo actúa bien: objetividad, presunción de inocencia y conducto regular.",
+              "Que ninguno: un choque entre dirigentes pasa sin más al Consejo, que sanciona."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Conozco el cargo",
+      "emoji": "🦸",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "El perfil primero",
+      "emoji": "🚪",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Tres meses que cuentan",
+      "emoji": "🧭",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Asesor natural",
+      "emoji": "🤝",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Decidir conversando",
+      "emoji": "🔄",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 15 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "JEFE DE GRUPO: EL QUE ACOMPAÑA A LOS ADULTOS",
+    "description": "ha completado el Curso 15 de la Línea Política de Adultos, Jefe de Grupo: el que acompaña a los adultos, y es capaz de atraer, nombrar y acompañar a su equipo de dirigentes a lo largo de su ciclo de vida, ejercer como su asesor natural, conversar las decisiones para el futuro y reconocer su desempeño, según el Manual de cargos, perfiles y funciones por competencias y la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  }
+}

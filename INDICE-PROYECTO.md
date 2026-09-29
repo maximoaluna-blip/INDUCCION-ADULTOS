@@ -112,6 +112,18 @@ INDUCCION-ADULTOS/
 
 Plan del nivel y lo que las fuentes corrigieron del `.docx`: `Plan-de-Formacion-Linea-Politica-de-Adultos.md` §4. Diseños: `01-Diseno-Cursos/Curso-06…10`.
 
+## Nivel 3 — Especialización por cargo — 5 cursos (28-sep-2026, ADR-107)
+
+| # | Curso | courseId | Duración | Lecciones | Foco |
+|---|---|---|---|---|---|
+| 11 | 🗂️ Los cargos del Grupo: leer una ficha | `cargos-del-grupo` | 40 min | 6 | Las 20 fichas, quién nombra, grado esperado, específicas, de la ficha al plan |
+| 12 | 🏛️ Ser consejero de grupo | `consejero-de-grupo` | 40 min | 6 | Ficha 2.1.1: vigilar sin conducir, desarrollo del talento humano, su propio ciclo |
+| 13 | 🎖️ El Canciller y los reconocimientos | `canciller-de-grupo` | 40 min | 6 | Custodiar, tramitar, catálogo nacional, Cancillería Nacional |
+| 14 | 🧭 Comisionado Regional de Adultos en el Movimiento | `comisionado-regional-adultos` | 40 min | 6 | Dinamizar el modelo en grupos que no dirige; revisar solicitudes de certificación |
+| 15 | 🦸 Jefe de Grupo: el que acompaña a los adultos | `jefe-de-grupo` | 40 min | 6 | Función 4: atraer, nombrar, acompañar, asesor natural, decidir y reconocer |
+
+Plan del nivel y reparto con DI: `Plan-de-Formacion-Linea-Politica-de-Adultos.md` §5. Diseños: `01-Diseno-Cursos/Curso-11…15`.
+
 ---
 
 ## Features de plataforma activas
@@ -211,7 +223,7 @@ Correr local: `cd PRUEBAS-E2E && npm test`. En **GitHub Actions** corre sola en 
 
 > Las cifras vivas (cursos publicados, horas, borradores) las genera `python generar-estado.py` en `ESTADO.md` de la raíz: no se escriben aquí.
 
-**Niveles 1 y 2 completos, en producción y con las 3 auditorías pasadas** (Nivel 2 el 27-sep-2026, ADR-098). Los diseños de los 10 cursos están versionados en `01-Diseno-Cursos/`; los del Nivel 1 se **reconstruyeron desde el JSON** (dicen lo que quedó, no lo que se quiso).
+**Niveles 1, 2 y 3 completos, en producción y con las 3 auditorías pasadas** (Nivel 2 el 27-sep-2026, ADR-098; Nivel 3 el 28-sep-2026, ADR-107). Los diseños de los 15 cursos están versionados en `01-Diseno-Cursos/`; los del Nivel 1 se **reconstruyeron desde el JSON** (dicen lo que quedó, no lo que se quiso).
 
 Lo de abajo es la auditoría del **Nivel 1** (03-ago-2026):
 
@@ -226,11 +238,9 @@ Lo de abajo es la auditoría del **Nivel 1** (03-ago-2026):
 ## Pendientes / próximas etapas
 
 ### Fase siguiente
-- **Nivel 3 — Especialización por cargo (Cursos 11 a 17).** ⚠️ Antes de diseñar: revisar cada foco contra el *Manual de Cargos*; la Asesoría Personal **no tiene grados de dominio** (el `.docx` decía 4); y mirar los solapes con **Consejero juvenil** (PJ, Curso 19) y **Tesorería** (DI, Curso 10). Ver el Plan en Markdown, §5.
 - **Endpoint adicional en el Apps Script** (`?action=data`) que devuelva los rows completos para que el dashboard muestre tabla de detalle, filtros y exportación a CSV.
 
 ### Fase futura
-- **Tier 3 — Cursos por cargo específico** (Tesorero, Secretario, Asesor Personal, etc., apoyados en el Manual de Cargos y las 29 competencias específicas).
 - **Tier 4 — Cursos transversales** (Safe from Harm, Diversidad e Inclusión, Gestión para la Motivación).
 - Polishes de los videos del Curso 1: subtítulos quemados, intros/outros, audio limpio.
 

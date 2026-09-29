@@ -6,7 +6,7 @@ Plataforma de formación online de la **Línea Política de Adultos** de la Asoc
 
 ## Estado actual
 
-**Nivel 1 — Ruta de Fundamentación** y **Nivel 2 — Profundización por fase del ciclo** completos, todos con las **3 auditorías pasadas** (doctrinal + pedagógica + funcional): el Nivel 1 desde el 02-ago-2026, el Nivel 2 desde el 27-sep-2026 (ADR-098). Las cifras vivas están en `ESTADO.md` de la raíz del proyecto.
+**La línea está completa: Niveles 1 (Ruta de Fundamentación), 2 (Profundización por fase del ciclo) y 3 (Especialización por cargo)**, todos con las **3 auditorías pasadas** (doctrinal + pedagógica + funcional): el Nivel 1 desde el 02-ago-2026, el Nivel 2 desde el 27-sep-2026 (ADR-098) y el Nivel 3 desde el 28-sep-2026 (ADR-107). El Nivel 4 del plan lo cubre la línea Políticas Transversales. Las cifras vivas están en `ESTADO.md` de la raíz del proyecto.
 > **La landing agrupa por nivel desde el 17-sep-2026 (ADR-058).** Cada entrada de `cursos.json` lleva **`level`, `levelName` y `order`**, y el `index.html` los pinta en secciones plegables. **Hasta ese día esta línea no los emitía siquiera**: su `build-course.js` no los escribía y la landing era una lista plana. El `levelName` sale del **Plan de Formación** (tabla 0: «Ruta de Fundamentación»), no se inventa. ⚠️ Son **metadatos de catálogo** — no entran en el HTML del curso, así que añadirlos **no cambió ninguna página publicada**. Y nació `PRUEBAS-E2E/tests/landing.spec.js`, porque **ninguna prueba tocaba esta página**: las suites se parametrizan por el catálogo y lo que no es un curso quedaba fuera por construcción.
 
 

@@ -1,0 +1,655 @@
+{
+  "courseId": "cargos-del-grupo",
+  "title": "Los cargos del Grupo: leer una ficha",
+  "subtitle": "Curso 11 · Nivel 3 de la Línea Política de Adultos",
+  "description": "El mapa de los veinte cargos del Grupo y la herramienta para leer el tuyo: la ficha del Manual de cargos. Quién nombra a quién, a quién respondes, qué partes tiene una ficha, qué grado espera tu cargo en cada competencia esencial, cuáles son sus competencias específicas y cómo llevar todo eso a tu plan personal. Abre el Nivel 3.",
+  "contentVersion": "2026-09-28",
+  "icon": "🗂️",
+  "duration": "40 minutos",
+  "level": 3,
+  "levelName": "Especialización por cargo",
+  "order": 11,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Tres papeles y ninguna ficha.</strong><br>Tomás acaba de ser nombrado subjefe de Tropa. Tiene nombramiento, acuerdo mutuo firmado y fecha para su valoración inicial. Hizo el Curso 4 y conoce las 7 esenciales, pero en su valoración aparece «Administración de actividades», que no está entre ellas, y no sabe qué grado se espera de un subjefe. Nadie le ha mostrado la ficha de su cargo.<br><br><strong>El nombramiento dice qué cargo tienes. La ficha dice qué se espera de ti.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 11, el que abre el Nivel 3.</strong><br>El Nivel 1 te dio las 7 competencias esenciales y tu plan personal; el Nivel 2, cada fase del ciclo del adulto. El Nivel 3 baja a los cargos. Este primer curso no es el de un cargo: es el mapa de todos los cargos del Grupo y la herramienta para leer el tuyo, <strong>la ficha del Manual de cargos</strong>."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para aprovecharlo mejor te sugerimos haber visto el <strong>Curso 4 — Las 7 Competencias Esenciales</strong> y el <strong>Curso 5 — Tu Plan Personal de Desarrollo</strong>. Ninguno es requisito. Te ayudará tener a mano el <em>Manual de cargos, perfiles y funciones por competencias</em>: está en la biblioteca virtual de la Asociación, sección de la Dirección Nacional de Adultos en el Movimiento (<a href=\"https://scout.org.co/biblioteca/dnam\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca/dnam</a>). Lo vas a necesitar desde la Lección 3. Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos; si no, repasas y vuelves a intentar. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Ubicar</strong> los veinte cargos del Grupo y quién nombra cada uno",
+            "<strong>Distinguir</strong> a quién responde cada cargo y quién le responde",
+            "<strong>Leer</strong> una ficha del Manual de cargos de principio a fin",
+            "<strong>Comparar</strong> el grado que tu cargo espera en cada esencial con tu autodiagnóstico, para hallar brechas y fortalezas",
+            "<strong>Reconocer</strong> las competencias específicas de tu cargo",
+            "<strong>Llevar</strong> lo que dice la ficha a tu plan personal de desarrollo"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Veinte cargos en el Grupo",
+              "description": "6 min. Quién nombra a quién."
+            },
+            {
+              "title": "Lección 2 — A quién respondes",
+              "description": "6 min. Las líneas de rendición de cuentas."
+            },
+            {
+              "title": "Lección 3 — Anatomía de una ficha",
+              "description": "6 min. Sus partes, en orden."
+            },
+            {
+              "title": "Lección 4 — El grado que pide tu cargo",
+              "description": "6 min. Las esenciales, cargo por cargo."
+            },
+            {
+              "title": "Lección 5 — Las específicas: lo técnico de tu cargo",
+              "description": "6 min. Lo que no se mide con grados."
+            },
+            {
+              "title": "Lección 6 — De la ficha a tu plan",
+              "description": "6 min. Cinco pasos hasta tu PPD."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Veinte cargos en el Grupo",
+      "emoji": "🗺️",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>En el Grupo hay veinte cargos con ficha en el Manual, y los nombran cuatro instancias distintas. Saber cuál te nombró es el primer dato para ubicar tu cargo en el Grupo."
+        },
+        {
+          "type": "paragraph",
+          "text": "El <em>Manual de cargos, perfiles y funciones por competencias</em> de la Dirección Nacional de Adultos en el Movimiento (agosto de 2020) describe los cargos de la Asociación nivel por nivel. En el Grupo trae veinte fichas. El Manual las presenta una tras otra; aquí te las agrupamos por <strong>quién nombra</strong>, que es lo primero que conviene saber de un cargo:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🗳️ La Asamblea de Grupo nombra…",
+              "description": "…a los consejeros —el Consejero Scout de Grupo y el Presidente, el Vicepresidente, el Secretario y el Intendente del Consejo— y al Canciller de Grupo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🏛️ El Consejo de Grupo nombra…",
+              "description": "…a los cargos de apoyo: el Tesorero, el Contador y el Auxiliar administrativo.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "🧭 El Jefe Regional nombra…",
+              "description": "…al Jefe de Grupo, «previa postulación del consejo de grupo».",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "🦸 El Jefe de Grupo nombra…",
+              "description": "…al Subjefe de Grupo y a los jefes y subjefes de Manada, Tropa, Comunidad y Clan.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🕊️ Y el vigésimo:</strong> la ficha del Asesor espiritual de Grupo pone dos responsables de su nombramiento, «Consejo de grupo» y «Jefe de grupo», sin decir si deciden juntos o cualquiera de los dos. <strong>¿Y la Familia de Cachorros?</strong> Como viste en el Curso 4, el Manual es de 2020 y no tiene ficha para esa rama: si sirves ahí, trabaja este curso con la ficha de Jefe (o Subjefe) de Manada: el Curso 4 la señala como la que más se te parece."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⚖️ Si el Reglamento dice otra cosa.</strong> El Reglamento Nacional de Grupos Scouts trae reglas distintas para algunos cargos: por ejemplo, que el Consejo elige de entre sus miembros al Presidente, al Vicepresidente y al Secretario, o edades mínimas de 21 y 25 años para las jefaturas. Para los cargos de adultos, esas disposiciones están suspendidas por el Acuerdo 558 de 2023 del Consejo Scout Nacional, y <strong>manda el Manual</strong>. Si alguien te cita el Reglamento para un cargo, compáralo con la ficha."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Se definen como competencias específicas aquellas capacidades que se relacionan directamente con los aspectos técnicos y propician un desempeño superior del Adulto en su cargo o función. Para ello, la ASC previo análisis, establecerá en su manual de cargos funciones y perfiles, las competencias específicas necesarias para el adecuado desempeño en relación a lo requerido para el logro de la Misión del Movimiento Scout.",
+          "source": "Política Nacional de Adultos en el Movimiento, §4.2, p. 9",
+          "label": "📋 Ver por qué existe el Manual de cargos"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué instancia te nombró en tu cargo actual (o en el último que tuviste)? ¿Lo sabías antes de esta lección? Si hoy no tienes cargo, piensa en el que te gustaría ejercer y escribe quién tendría que nombrarte."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "En un grupo quedaron dos vacantes: un subjefe de Comunidad y un tesorero. Según las fichas del Manual, ¿quién nombra a cada uno?",
+            "options": [
+              "Al subjefe, el Jefe de Grupo; al tesorero, el Consejo de Grupo.",
+              "Al subjefe, el Consejo de Grupo; al tesorero, la Asamblea de Grupo.",
+              "Al subjefe, el Jefe de Grupo; al tesorero, la Asamblea de Grupo."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "En la Asamblea, alguien lee el Reglamento de Grupos: el Consejo debe elegir de entre sus miembros al Presidente. ¿Qué conviene responderle?",
+            "options": [
+              "Que manda el Reglamento: el Manual trae perfiles, no quién nombra a quién.",
+              "Que para los cargos de adultos manda el Manual: esa regla está suspendida.",
+              "Que se aplican los dos: el Consejo lo propone y la Asamblea lo nombra."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — A quién respondes",
+      "emoji": "🔗",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Cada ficha dice a quién respondes de tu gestión y quién te responde a ti. En la conducción del programa, todos responden al Consejo y a su jefe; los subjefes de rama, a sus dos jefes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Justo después del nombre y la descripción, toda ficha trae tres casillas: <strong>«Responsable de su nombramiento»</strong>, <strong>«Responde de su Gestión a»</strong> y <strong>«Le responden de su gestión»</strong>. Leídas juntas, te dicen dónde está tu cargo en el Grupo. Cuatro ejemplos:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🏛️ Consejero Scout de Grupo",
+              "description": "Lo nombra la Asamblea y responde a la Asamblea.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🦸 Jefe de Grupo",
+              "description": "Lo nombra el Jefe Regional, previa postulación del Consejo. Responde al Consejo Scout de Grupo y al Jefe Regional. Le responden los jefes y subjefes de rama.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "⛺ Jefe de Tropa",
+              "description": "Lo nombra el Jefe de Grupo. Responde al Consejo y al Jefe de Grupo. Le responde el subjefe de rama.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            },
+            {
+              "title": "🧢 Subjefe de Tropa",
+              "description": "Lo nombra el Jefe de Grupo. Responde al Consejo, al Jefe de Grupo y al jefe de Tropa. Quién le responde: «No aplica».",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔀 Doble dependencia, no choque.</strong> En la conducción del programa, cada cargo responde al Consejo, que administra el Grupo y vigila la gestión de sus adultos, y a su jefe, que conduce el trabajo técnico. El Jefe de Grupo responde además al Jefe Regional. Cuando lo que te piden no cuadra, la ficha no te dice a quién hacerle caso: te dice con quiénes tienes que conversarlo."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⚠️ Una ficha no es un organigrama perfecto.</strong> Algunas líneas no cuadran con el resto de la ficha. La del Contador, por ejemplo, pone al Jefe de Grupo y a los jefes de rama entre quienes «le responden»; esa casilla se lee con sus funciones, que son de libros y estados financieros. Si una línea de tu ficha no cuadra con el resto de lo que dice, léela con criterio y pregunta antes de actuar sobre ella."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Responsable de su nombramiento: Jefe Regional, previa postulación del consejo de grupo. Responde de su Gestión a: Consejo Scout de Grupo, Jefe Regional. Le responden de su gestión: Jefe de Rama, Subjefe de Rama.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.10 Jefe de Grupo, p. 68",
+          "label": "📋 Ver las tres casillas de una ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "Según tu ficha, ¿a qué instancias respondes de tu gestión (escríbelas por cargo)? ¿A cuál de ellas le cuentas hoy menos de tu trabajo, y qué harías tú para rendirles cuentas a todas?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "Una subjefa de Manada recién nombrada lee su ficha para saber a quién le rinde cuentas de su gestión. ¿Qué va a encontrar?",
+            "options": [
+              "A la jefa de Manada, al Jefe de Grupo que la nombró y a la Asamblea.",
+              "Al Consejo de Grupo, al Jefe de Grupo y también a la jefa de Manada.",
+              "Al Consejo, a la jefa de Manada y a la Asamblea que eligió al Consejo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un contador nuevo lee en su ficha que le «responden» el Jefe de Grupo y los jefes de rama, y quiere revisarles la planeación de las ramas. ¿Qué le dirías?",
+            "options": [
+              "Que sus funciones son contables: la planeación de las ramas no es suya.",
+              "Que le toca revisarla, porque la ficha lo pone a cargo de los jefes del Grupo.",
+              "Que la revise con permiso del Consejo, que es quien lo nombró en el cargo."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Anatomía de una ficha",
+      "emoji": "📄",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Todas las fichas tienen las mismas partes, en el mismo orden. Si aprendes a leer una, las lees todas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧩 Las partes, de arriba abajo"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Nombre y descripción",
+              "description": "La misión del cargo en un párrafo: para qué existe."
+            },
+            {
+              "title": "2. Nombramiento y rendición de cuentas",
+              "description": "Quién te nombra, a quién respondes y quién te responde (lecciones 1 y 2)."
+            },
+            {
+              "title": "3. Requisitos objetivos",
+              "description": "Edad, formación, conocer el entorno y las normas, incompatibilidades con otros cargos, antecedentes y las competencias esenciales."
+            },
+            {
+              "title": "4. Funciones y tareas",
+              "description": "Cada función, con las tareas que implica."
+            },
+            {
+              "title": "5. Competencias esenciales",
+              "description": "Las 7, cada una con el grado de dominio que pide el cargo, su criterio y sus conductas (Lección 4)."
+            },
+            {
+              "title": "6. Posicionamiento",
+              "description": "Un gráfico con las 7 esenciales y una marca en el grado que pide el cargo."
+            },
+            {
+              "title": "7. Competencias específicas",
+              "description": "Las técnicas del cargo, con su criterio y sus conductas (Lección 5)."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔎 Un ejemplo: la ficha del Consejero Scout de Grupo.</strong> La nombra la Asamblea. Tiene tres funciones: participar de las instancias que le corresponden como consejero; fomentar, apoyar y vigilar la gestión de los adultos del Grupo; y aplicar los canales de comunicación. Luego vienen las 7 esenciales con su grado y cuatro específicas. Las fichas del Presidente, el Vicepresidente, el Secretario y el Intendente repiten esas tres funciones y suman una cuarta, propia de cada uno: lo verás en el Curso 12."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🚫 Lo que la ficha no trae.</strong> Ni el periodo del cargo (eso lo dice tu nombramiento), ni el paso a paso para nombrar a alguien (es la vinculación del Curso 6), ni una lista de cursos obligatorios. Y el Manual no incluye una guía para leer sus fichas: la de esta lección es nuestra."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Ser mayor de 18 años. Poseer preferiblemente nivel de formación bachiller. Conocer las características del entorno social y cultural en que actúan los jóvenes y adultos de la Asociación. Conocer los Estatutos, Políticas y Reglamentos de la Asociación Scouts de Colombia. No formar parte del Consejo Scout Regional. Contar con las competencias esenciales para desempeñar el cargo o demostrar interés para desarrollarlas. No haber sido expulsado de la Asociación, ni tener medida de aseguramiento vigente, ni aparecer en el registro nacional de agresores sexuales.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.1 Consejero Scout de Grupo, «Requisitos objetivos», p. 5",
+          "label": "📋 Ver los requisitos de una ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "Busca la ficha de tu cargo (o la del cargo que te interesa) y lee sus funciones. ¿Cuál te sorprendió porque no sabías que era tuya? ¿Qué harías distinto este mes ahora que lo sabes?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "Una consejera recién elegida busca en la ficha de su cargo tres datos: sus funciones, su periodo y la edad mínima. ¿Qué va a encontrar ahí?",
+            "options": [
+              "Las funciones y el periodo; la edad mínima la dice su nombramiento.",
+              "La edad mínima y el periodo; las funciones las dice el Reglamento.",
+              "Las funciones y la edad mínima; el periodo lo dice su nombramiento."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un aspirante a jefe de Clan lee los requisitos de su ficha y no se siente listo en dos competencias esenciales. ¿Qué le dice ese requisito?",
+            "options": [
+              "Que puede aspirar si demuestra interés en desarrollarlas en el cargo.",
+              "Que debe contar con ellas antes: son requisito para desempeñar el cargo.",
+              "Que puede aspirar si otro jefe de la rama cubre esas dos competencias."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — El grado que pide tu cargo",
+      "emoji": "📶",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Las 7 esenciales son las mismas para todos los adultos, pero cada cargo pide un grado distinto en cada una. La ficha te dice cuál."
+        },
+        {
+          "type": "paragraph",
+          "text": "En el Curso 4 aprendiste que cada competencia esencial tiene cuatro grados y te hiciste un autodiagnóstico. Lo que ese curso no te dijo es que <strong>cada ficha fija el grado que espera</strong> en cada una de las 7. Mira cómo cambia de un cargo a otro:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🤝 Trabajo en equipo",
+              "description": "Grado 4 para el Jefe y el Subjefe de Grupo y para los jefes y subjefes de rama. Grado 1 para el Contador y el Auxiliar administrativo.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "🧭 Planeamiento estratégico",
+              "description": "Grado 3 en las cinco fichas de consejeros (Consejero, Presidente, Vicepresidente, Secretario e Intendente). Grado 2 para el Jefe de Grupo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🏛️ Conciencia organizacional",
+              "description": "Grado 3 para el jefe de una rama y grado 2 para su subjefe. Es la única diferencia de grados entre jefe y subjefe, en las cuatro ramas.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            },
+            {
+              "title": "🎖️ Canciller de Grupo",
+              "description": "Grado 1 en cinco esenciales y grado 2 en Relaciones interpersonales y en Trabajo en equipo.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🎯 Una meta, no una puerta.</strong> La política habla de avanzar de manera gradual «hasta el nivel esperado», y la mayoría de las fichas piden en sus requisitos contar con las competencias esenciales «o demostrar interés para desarrollarlas». Casi nadie llega a un cargo con todo en su grado: para eso existen la valoración inicial y el plan."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Cómo se usa:</strong> pon tu autodiagnóstico del Curso 4 al lado del grado de tu ficha. Donde estás por debajo hay una <strong>brecha</strong>, que es candidata para tu plan; donde estás igual o por encima hay una <strong>fortaleza</strong>, que puedes poner al servicio de tu equipo. Ojo con el cambio: en el Curso 4 tus áreas de oportunidad salían de tus grados más bajos. Con la ficha en la mano, la pregunta ya no es dónde estás más bajo, sino dónde estás por debajo de lo que pide tu cargo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "El modelo propuesto aplica en cada cargo las competencias esenciales y específicas que permiten identificar y evaluar el estado actual de la competencia, así como el avance gradual hasta el nivel esperado según las necesidades de cada adulto en el ejercicio del cargo o función.",
+          "source": "Política Nacional de Adultos en el Movimiento, §4, p. 7",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "Toma dos esenciales de la ficha de tu cargo. ¿Qué grado pide tu cargo en cada una y en qué grado te ubicaste en el Curso 4? Escribe dónde tienes una brecha y dónde una fortaleza."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Una subjefa de Manada pasa a ser jefa de Manada. Si compara las dos fichas, ¿qué grado de competencia esencial le cambia?",
+            "options": [
+              "Trabajo en equipo, que pasa de grado 2 a grado 3 al asumir la jefatura.",
+              "Relaciones interpersonales, que pasa de grado 2 a grado 3 en la jefatura.",
+              "Conciencia organizacional, que pasa de grado 2 a grado 3 en la jefatura."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un consejero lee que su cargo pide grado 3 en Planeamiento estratégico, y él se ubicó en el 1. Piensa renunciar: «No doy la talla». ¿Qué le dirías con la ficha en la mano?",
+            "options": [
+              "Que el grado es el nivel hacia el que avanza, y la brecha va a su plan.",
+              "Que el grado es el mínimo del cargo, y le conviene uno que le pida menos.",
+              "Que el grado es el que debe alcanzar antes de su valoración inicial."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Las específicas: lo técnico de tu cargo",
+      "emoji": "🛠️",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Además de las 7 esenciales, cada cargo tiene sus competencias específicas: las técnicas del oficio. En el Diccionario y en tu ficha no tienen grados: tienen un criterio y unas conductas."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>¿Te acuerdas de Tomás?</strong> Buscó «Administración de actividades» entre las 7 esenciales y no la encontró. No está ahí porque es una <strong>específica</strong>: una de las competencias técnicas de su cargo. La ficha dice qué se espera de ti, y una parte de eso son las específicas."
+        },
+        {
+          "type": "paragraph",
+          "text": "El <em>Diccionario de Competencias</em> numera 29 específicas; las fichas del Grupo usan 19 de ellas. Cada ficha trae de dos a cinco. Algunos ejemplos:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🏛️ Las fichas de consejeros",
+              "description": "Administración y gestión del Grupo, Seguridad y control de actividades, Desarrollo del talento humano, y Gestión y administración de recursos. Cada dignidad suma una: el Presidente y el Vicepresidente, Gestión de estrategias generadoras de valor; el Secretario, Elaboración y gestión de documentos; el Intendente, Administración de bienes.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🦸 Jefe y Subjefe de Grupo",
+              "description": "Desarrollo comunitario, Asesoría personal, Supervisión del proyecto educativo, Gestión de grupo y Garante del debido proceso.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "⛺ Jefes y subjefes de rama",
+              "description": "Administración del proyecto educativo, Desarrollo comunitario, Administración de actividades, Asesoría personal, y Habilidades y conocimientos scouts.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            },
+            {
+              "title": "🎖️ Canciller de Grupo",
+              "description": "Elaboración y gestión de documentos, y Administración de bienes.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📏 Sin escalera.</strong> En el Diccionario, cada esencial tiene cuatro grados; cada específica tiene un solo criterio y una lista de conductas observables. Por eso no te vas a ubicar en «grado 2 de Asesoría personal»: vas a mirar qué conductas de esa lista ya haces y cuáles te faltan."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>👥 Dos cargos, dos fichas.</strong> Como viste en el Curso 4, quien ejerce dos cargos tiene las específicas de cada uno, y un ciclo por cada cargo: la política habla de ciclos de vida paralelos."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Cada competencia está compuesta por: número, nombre, criterio o descripción y conductas observables, este último es el que nos permitirá determinar la competencia de la persona en el cargo o función que está involucrado.",
+          "source": "Diccionario de Competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), Introducción",
+          "label": "📋 Ver lo que dice el Diccionario"
+        }
+      ],
+      "reflection": {
+        "prompt": "Lee el criterio y las conductas de una de las competencias específicas de tu cargo. ¿Qué conducta de esa lista ya haces, y cuál no has hecho nunca?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Preparando su valoración inicial, un jefe de Tropa pregunta en qué grado de 1 a 4 está en «Administración de actividades». ¿Qué le responde su asesor?",
+            "options": [
+              "Que arranca en grado 1, como todas las competencias de un cargo nuevo.",
+              "Que su ficha le pide grado 3, igual que en las esenciales de la rama.",
+              "Que esa es específica: no tiene grados, se mira por sus conductas."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un jefe de Tropa pasa a ser Jefe de Grupo. Al comparar las dos fichas, ¿qué competencias específicas conserva?",
+            "options": [
+              "Asesoría personal y Habilidades y conocimientos scouts, que son de base.",
+              "Desarrollo comunitario y Asesoría personal; las otras tres cambian.",
+              "Habilidades y conocimientos scouts y Administración del proyecto educativo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — De la ficha a tu plan",
+      "emoji": "🎯",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La ficha no se lee una vez y se guarda: es la base de tu valoración inicial y de tu plan personal de desarrollo."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. Busca tu ficha",
+              "description": "En el Manual de cargos, en la biblioteca de la Dirección Nacional de Adultos en el Movimiento. Si tienes dos cargos, busca las dos."
+            },
+            {
+              "title": "2. Marca lo que pide",
+              "description": "Tus funciones, el grado de cada esencial y tus específicas."
+            },
+            {
+              "title": "3. Ponla al lado de tu diagnóstico",
+              "description": "Tu autodiagnóstico del Curso 4 y tu valoración inicial, que se hace en Talento 360° (Curso 9)."
+            },
+            {
+              "title": "4. Prioriza con tu asesor",
+              "description": "Pocas competencias, las de más impacto en tu cargo (Curso 7)."
+            },
+            {
+              "title": "5. Llévalo a tu plan",
+              "description": "Estrategias, plazos y evidencias en tu Plan Personal de Desarrollo (Curso 5)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>🔁 ¿Te acuerdas de Tomás?</strong> Una semana antes de su valoración inicial, su asesor le pasa la ficha 2.1.15, la del Subjefe de Tropa. Ahí está la lista que no entendía: sus funciones, las 7 esenciales con el grado que pide su cargo —Conciencia organizacional en 2, Trabajo en equipo en 4— y cinco específicas, entre ellas Administración de actividades. Tomás llega a la valoración sabiendo qué le van a preguntar y por qué. <strong>El nombramiento dice qué cargo tienes. La ficha dice qué se espera de ti.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧭 Lo que sigue en el Nivel 3.</strong> Cada curso lee a fondo la ficha de un cargo: el <strong>Curso 12</strong>, la del consejero de grupo; el <strong>Curso 13</strong>, la del Canciller; el <strong>Curso 14</strong>, la del Comisionado Regional de Adultos en el Movimiento (no es un cargo del Grupo: es a quien te remitieron los Cursos 7, 8 y 9); y el <strong>Curso 15</strong>, la del Jefe de Grupo. Tómalos según tu cargo: ninguno es requisito de otro. Tesorero y Contador los trata el Curso 10 de Desarrollo Institucional, <em>Finanzas Sanas: Presupuesto y Tesorería</em>."
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Descarga el Manual de cargos, busca la ficha de tu cargo y marca el grado que pide en cada esencial.<br>• Con tu autodiagnóstico del Curso 4 al lado de tu ficha, anota dónde estás por debajo del grado que pide tu cargo y lleva esa lista a tu próximo encuentro con tu asesor, para escoger juntos las de más impacto.<br>• Si nombras o acompañas a otros adultos, entrégale su ficha a quien empiece un cargo antes de su valoración inicial.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Recibí una inducción en mi cargo con información sobre funciones, competencias, y el plan del grupo, región o nación. Tengo el certificado del módulo de inducción general de la ASC. Conozco la Política de Adultos, su caja de herramientas y el Manual de Cargos.",
+          "source": "Guía «Cómo desarrollarte en tu cargo con calidad» (Dirección Nacional de Adultos en el Movimiento), «Inducción y plataforma Talento 360»",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué te llevas de la ficha de tu cargo a tu plan? Escribe una competencia, esencial o específica, y una acción concreta para trabajarla en los próximos meses."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 11",
+        "questions": [
+          {
+            "text": "Un jefe de Grupo recibe a una subjefa de Comunidad recién nombrada. Su valoración inicial es en tres semanas. ¿Qué le conviene hacer con la ficha de su cargo?",
+            "options": [
+              "Esperar a la valoración inicial y leerla allá, al lado de su autodiagnóstico.",
+              "Dársela antes, para que llegue a la valoración sabiendo qué se espera.",
+              "Dársela después, para que su autodiagnóstico no quede condicionado."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El contador de un grupo hace su autodiagnóstico y queda en grado 1 en Trabajo en equipo. Preocupado, quiere ponerla de primera en su plan. ¿Qué le muestra su ficha?",
+            "options": [
+              "Que ahí está su brecha mayor: el grado 1 es el piso, y el plan debe subirlo.",
+              "Que ahí no aplica: esa esencial es para cargos que conducen adultos.",
+              "Que ahí no tiene brecha: su cargo pide grado 1, y ya está en ese grado."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Mapa del Grupo",
+      "emoji": "🗺️",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Sé a quién respondo",
+      "emoji": "🔗",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Lector de fichas",
+      "emoji": "📄",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Sé qué grado me piden",
+      "emoji": "📶",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Lo técnico del cargo",
+      "emoji": "🛠️",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 11 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "LOS CARGOS DEL GRUPO",
+    "description": "ha completado el Curso 11 de la Línea Política de Adultos, Los cargos del Grupo: leer una ficha, y es capaz de ubicar los cargos del Grupo y quién nombra a cada uno, leer la ficha de un cargo en el Manual de cargos, perfiles y funciones por competencias, identificar el grado de dominio que el cargo espera en cada competencia esencial y sus competencias específicas, y llevarlo a su plan personal de desarrollo, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  }
+}

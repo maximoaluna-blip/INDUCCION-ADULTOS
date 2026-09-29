@@ -1,0 +1,585 @@
+{
+  "courseId": "comisionado-regional-adultos",
+  "title": "Comisionado Regional de Adultos en el Movimiento",
+  "subtitle": "Curso 14 · Nivel 3 de la Línea Política de Adultos",
+  "description": "El cargo al que te remitieron los cursos de asesoría, evaluación y Talento 360°: quién nombra al comisionado regional y a quién responde, sus siete funciones, la Comisión y su equipo, cómo dinamiza el modelo de adultos en grupos que no dirige, el trámite vigente de formación y certificación, y su perfil de competencias.",
+  "contentVersion": "2026-09-28",
+  "icon": "🧭",
+  "duration": "40 minutos",
+  "level": 3,
+  "levelName": "Especialización por cargo",
+  "order": 14,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>Tres pedidos en la primera semana.</strong><br>Andrea acaba de ser nombrada Comisionada Regional de Adultos en el Movimiento. En su primera semana le llegan tres pedidos: un asesor le notifica una solicitud de Insignia de Madera; un jefe de grupo le pide que le asigne un asesor a una dirigente nueva; y un jefe de rama le pide que sea ella quien evalúe a su subjefe. Andrea quiere ayudar en los tres.<br><br><strong>El comisionado no dirige grupos: hace que el modelo de adultos se aplique bien en grupos que no dirige.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 14.</strong><br>En los Cursos 7, 8 y 9 te remitieron varias veces a «la Comisión Regional de Adultos» o al «Comisionado Regional de Adultos». Este curso es sobre ese cargo. A diferencia de los Cursos 11 a 13, <strong>no es un cargo del Grupo: es regional</strong>. Sirve al comisionado y a su equipo, al Jefe Regional, y a los jefes y asesores que trabajan con la Comisión."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te sugerimos haber visto el <strong>Curso 11 — Los cargos del Grupo</strong> y los Cursos 7 a 9; ninguno es requisito. La ficha del cargo es la 2.2.23 del <em>Manual de cargos</em>, en la biblioteca de la Dirección Nacional de Adultos en el Movimiento (<a href=\"https://scout.org.co/biblioteca/dnam\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca/dnam</a>). Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Ubicar</strong> el cargo: quién lo nombra, a quién responde y por qué no es el jefe de los jefes",
+            "<strong>Organizar</strong> sus siete funciones en tres frentes",
+            "<strong>Distinguir</strong> la Comisión, su equipo y lo que le toca a cada uno",
+            "<strong>Dinamizar</strong> el modelo en los grupos sin reemplazar al jefe inmediato ni al asesor",
+            "<strong>Aplicar</strong> el trámite vigente de formación y certificación",
+            "<strong>Leer</strong> su perfil de competencias y planear el primer mes"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Un cargo regional para el modelo de adultos",
+              "description": "6 min. Nombramiento y a quién responde."
+            },
+            {
+              "title": "Lección 2 — Siete funciones, tres frentes",
+              "description": "6 min. Planear, aplicar el modelo, crecer."
+            },
+            {
+              "title": "Lección 3 — La Comisión y su equipo",
+              "description": "6 min. Quién es quién en la Comisión."
+            },
+            {
+              "title": "Lección 4 — El modelo en los grupos",
+              "description": "6 min. Dinamizar sin reemplazar."
+            },
+            {
+              "title": "Lección 5 — Formación y certificación",
+              "description": "7 min. Flor de Lis y el trámite vigente."
+            },
+            {
+              "title": "Lección 6 — Perfil y primer mes",
+              "description": "6 min. Competencias y el plan de arranque."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Un cargo regional para el modelo de adultos",
+      "emoji": "🧭",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Al comisionado lo nombra el Jefe Scout Regional y responde a la Región y a la Dirección Nacional. Los jefes de grupo y de rama le rinden cuentas, pero él no es su jefe: los acompaña y asesora."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🗳️ Lo nombra",
+              "description": "El Jefe Scout Regional, previo aval de la Dirección Nacional de Adultos en el Movimiento. (La ficha del Jefe Regional habla de un visto bueno de la Jefatura Nacional.)",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📣 Responde a",
+              "description": "El Consejo Scout Regional, el Jefe Scout Regional y el Director Nacional de Adultos en el Movimiento: una dependencia en la Región y otra técnica, en la Nación.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📥 Le responden",
+              "description": "Los jefes de grupo y los jefes de rama. Pero sus fichas dicen que ellos responden al Consejo de Grupo y a su jefe: el comisionado los acompaña; no es su jefe inmediato. Es la misma trampa que viste con el contador en el Curso 11: que alguien te rinda cuentas no te hace su jefe.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Requisitos propios:</strong> formación tecnológica o experiencia relacionada con gestión, formación o desarrollo del talento humano, preferiblemente con estudios superiores; y no formar parte del Consejo Scout Regional. El Reglamento Nacional lo refuerza: quien tiene un cargo operativo en la Región no integra el Consejo de su nivel. Y si quiere postularse al Consejo Regional, tiene que haber dejado el cargo al menos seis meses antes de la elección."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Comisión Regional de Adultos en el Movimiento Scout. En el nivel regional, será la encargada de la red de adultos de su área de influencia. Estará integrada por el Comisionado Regional de Adultos y su equipo de colaboradores con el objetivo de aplicar y promover los desarrollos de la presente política, apoyar los procesos de implementación de la misma.",
+          "source": "Política Nacional de Adultos en el Movimiento, §7, p. 20",
+          "label": "📋 Ver lo que dice la política"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cómo se relaciona hoy tu grupo o tu cargo con la Comisión Regional de Adultos? Escribe una cosa en la que ya te apoya y otra que, después de esta lección, sabes que le puedes pedir. Escríbelo por cargos, sin nombres."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "Un jefe de grupo le entrega su informe de gestión a la comisionada y le pregunta: «¿Entonces usted es ahora mi jefa?». ¿Qué le responde?",
+            "options": [
+              "Que sí: si él le rinde cuentas de su gestión, ella es su jefa en la Región.",
+              "Que no: rendirle cuentas no la hace su jefa; ella lo apoya con el modelo.",
+              "Que no: a ella le rinden cuentas los jefes de rama, pero no los jefes de grupo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Una comisionada quiere postularse al Consejo Scout Regional sin dejar la Comisión, «para que los adultos tengan voz allí». ¿Qué le conviene saber?",
+            "options": [
+              "Que tendría que dejar el cargo al menos medio año antes de que se haga la elección.",
+              "Que puede, porque su cargo ya la hace responder ante ese mismo Consejo Regional.",
+              "Que tendría que dejar el cargo, pero alcanza con renunciar antes de la votación."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Siete funciones, tres frentes",
+      "emoji": "🗺️",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Las siete funciones de la ficha caben en tres frentes: planear con la Región, hacer que el modelo de adultos se aplique en los grupos y ayudar a crecer."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📅 Planear y cumplir",
+              "description": "Participar en el plan operativo regional en lo que toca a adultos, proponer proyectos al Jefe Regional y hacer seguimiento al plan. Conocer y hacer cumplir las normas de la Asociación. (La función de orientar a los adultos de la propia Comisión la ves en la Lección 3.)",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🌐 El modelo en la Región",
+              "description": "Impulsar el sistema de gestión de adultos y acompañar a los grupos en su aplicación. Difundir la política, acompañarla en los grupos —la ficha lo llama «animación territorial»— y evaluar cómo se aplica. Y formación, en la Lección 5.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📈 Crecer",
+              "description": "Proponer objetivos y actividades para el crecimiento de la membresía de los grupos, y buscar actividades, alianzas y convenios.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>¿Cómo se ve la animación territorial un sábado cualquiera?</strong> Una llamada a un jefe de grupo para preguntarle cuántos de sus dirigentes ya tienen plan; una visita a un consejo de grupo para explicar la valoración inicial; un taller de media mañana con los asesores de un distrito. No es dirigir el grupo: es encender el modelo donde está apagado."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📏 Evaluar sin una regla escrita.</strong> La ficha le pide evaluar la aplicación de la política en los grupos, pero ni la ficha ni los documentos publicados de la Dirección Nacional traen indicadores para hacerlo. La política dice que un manual operativo los incorporará. Mientras tanto, apóyate en lo que sí se registra —valoraciones, planes y evidencias en Talento 360°— y acuerda con la Dirección Nacional qué mirar."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>La otra punta de la cuerda.</strong> La ficha del Director Nacional de Adultos le pide evaluar la aplicación de la política en cada región <strong>por medio de los comisionados regionales</strong>. Lo que tú mides en tus grupos es lo que la Nación sabe de tu Región."
+        }
+      ],
+      "reflection": {
+        "prompt": "De los tres frentes —planear, aplicar el modelo en los grupos, crecer—, ¿en cuál podrías aportarle más a la Comisión de tu Región desde tu cargo actual? Escribe una acción concreta y qué dato de Talento 360° o de tu grupo te diría que funcionó. Escríbelo por cargos, sin nombres."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "El Jefe Regional le pide a la comisionada un balance de cómo aplican los grupos la política de adultos. No hay indicadores oficiales. ¿Qué hace ella?",
+            "options": [
+              "Esperar a que la Dirección Nacional publique indicadores, para no medir a ojo.",
+              "Devolverle la tarea: medir la política en su grupo le toca a cada jefe.",
+              "Armarlo con lo que ya está registrado y acordar con la Nación qué mirar."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un comisionado regional de desarrollo institucional le dice a la comisionada de adultos: «Conseguir más adultos para los grupos es tarea mía». ¿Qué le responde?",
+            "options": [
+              "Que tiene razón: la membresía es de desarrollo institucional; a ella le toca formar.",
+              "Que ese frente también está en su cargo, así que les conviene trabajarlo juntos.",
+              "Que el crecimiento es de ella, porque se trata de adultos y no de jóvenes."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — La Comisión y su equipo",
+      "emoji": "👥",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El comisionado arma y acompaña a su equipo, pero no nombra a sus miembros. Y a él le toca algo que ellos no tienen: orientar la atracción y vinculación de los adultos de la Comisión (acompañar su desarrollo lo comparten)."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🔤 Antes de seguir: dos nombres que confunden.</strong> CRAM es la sigla que usa la Dirección Nacional para este cargo. Y «Equipo Regional» tiene dos sentidos: en el Estatuto y el Reglamento de Regiones es todo el equipo del Jefe Regional, con sus comisionados; aquí, en el Manual, es el equipo de la Comisión de adultos."
+        },
+        {
+          "type": "paragraph",
+          "text": "La función que es solo del comisionado es <strong>orientar y acompañar la atracción y vinculación de los adultos de su Comisión</strong>: detectar qué perfiles le faltan al equipo, crear los equipos de trabajo que necesite y mantener comunicación con los comisionados a su cargo, los coordinadores de distrito, los jefes de grupo y los jefes de rama. Acompañar el desarrollo de las competencias del equipo lo hacen él y los miembros."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🗳️ Al miembro del equipo lo nombra…",
+              "description": "…el Jefe Scout Regional, previo aval de la Dirección Nacional. No lo nombra el comisionado, aunque le responde a él y al Jefe Regional.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🧩 Tiene las mismas funciones…",
+              "description": "…que el comisionado, menos la de orientar la atracción y vinculación de los adultos de la Comisión.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📶 Y dos grados distintos",
+              "description": "Relaciones interpersonales y Trabajo en equipo: grado 3 para el miembro, grado 4 para el comisionado. Las específicas son las mismas.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🌱 Las competencias que mueven al equipo.</strong> De las cinco específicas del cargo, dos miran a las personas: <strong>Asesoría personal</strong> —motivar, acompañar y guiar el desarrollo de competencias— y <strong>Gestión estratégica del talento humano</strong> —diseñar acciones de atracción, vinculación, desempeño y evaluación según el modelo de competencias—. El comisionado también es asesor: empieza por su propio equipo."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Responsable de su nombramiento: Jefe Scout Regional, previo aval de la dirección Nacional de Adultos en el Movimiento. Responde de su Gestión a: Jefe Scout Regional, Comisionado Regional de Adultos en el Movimiento.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.2.24 Miembro del Equipo Regional de Adultos en el Movimiento, p. 333",
+          "label": "📋 Ver la ficha del miembro del equipo"
+        }
+      ],
+      "reflection": {
+        "prompt": "Si tuvieras que armar hoy el equipo de una Comisión Regional de Adultos, ¿qué dos perfiles le harían más falta, y para qué? Escríbelo por funciones, no por personas."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "La comisionada encontró a una psicóloga ideal para el Equipo Regional de Adultos y quiere que empiece ya. ¿Qué le toca hacer a ella?",
+            "options": [
+              "Llevarle el caso al Jefe Regional, que es quien la puede nombrar allí.",
+              "Nombrarla ella, porque armar y acompañar su equipo es función de su cargo.",
+              "Pedirle al Consejo Regional que la elija, para que el nombramiento sea firme."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Un miembro del Equipo Regional quiere diseñar por su cuenta el plan para atraer y vincular nuevos integrantes a la Comisión. ¿Qué le conviene saber?",
+            "options": [
+              "Que puede: tiene las mismas funciones que la comisionada, por ser de su equipo.",
+              "Que eso es del Jefe Regional, porque es quien nombra a los miembros del equipo.",
+              "Que esa la orienta la comisionada; él puede aportar, pero no le toca liderarla."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — El modelo en los grupos",
+      "emoji": "🔄",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>En los grupos, el comisionado dinamiza, asesora a los jefes y revisa evidencias. No reemplaza al jefe inmediato ni al asesor de nadie."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "⚙️ Dinamiza",
+              "description": "Que en la Región y en los grupos se esté haciendo el proceso de acompañamiento y evaluación, y que las herramientas se usen bien.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🤝 Asesora a los jefes",
+              "description": "Es asesor de la labor de los líderes o jefes inmediatos: los orienta a ellos, que son quienes, junto con el asesor personal, acompañan a cada adulto.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "🔍 Revisa evidencias",
+              "description": "Mira los avances y los resultados de las herramientas para que el proceso se logre.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>La valoración inicial.</strong> La programa el Jefe de Grupo, el Comisionado Regional de Adultos o la Dirección Nacional, según el cargo del adulto. Y si el nivel al que pertenece un adulto no la programa, él puede pedírsela al nivel siguiente: por eso a la Comisión pueden llegarle pedidos de adultos cuyos grupos no se movieron."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🚫 Lo que no le toca.</strong> No designa asesores: el asesor lo escoge el adulto (Curso 7). No es a quien se le entrega la carta aval cuando empieza la asesoría: esa va al jefe inmediato; la verá después, cuando revise una solicitud de certificación. No hace la inducción de los adultos nuevos: la acompaña su jefe inmediato. Y no evalúa a un dirigente en lugar de su jefe. Sí puede orientar a los jefes y asesores para que cada cosa se haga bien. <strong>El comisionado no dirige grupos: hace que el modelo de adultos se aplique bien en grupos que no dirige.</strong>"
+        },
+        {
+          "type": "policy-quote",
+          "text": "Comisionados Regionales de Adultos en el Movimiento, importantes dentro del proceso de acompañamiento en la evaluación de los adultos en los distintos grupos ya sean dirigentes, asesores o consejeros. Estos actores permiten dinamizar que en las regiones y grupos se esté realizando el proceso y se utilicen las herramientas de forma adecuada, son asesores a la labor de los líderes o jefes inmediatos y revisan avances en evidencias y resultados de herramientas en el proceso para que se logre con éxito.",
+          "source": "Guía de Acompañamiento y Evaluación del Adulto (Dirección Nacional de Adultos en el Movimiento, 2020), §4.2, p. 14",
+          "label": "📋 Ver lo que dice la guía"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Qué pedido le llega más a menudo a una Comisión Regional de Adultos y no le corresponde? Escribe cómo lo reorientarías hacia quien sí le toca, por cargo."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "Una dirigente escribe a la Comisión: su grupo lleva un año sin programarle la valoración inicial y ella quiere tenerla. ¿Qué le responde la comisionada?",
+            "options": [
+              "Que espere a su jefe de grupo: la Comisión no reemplaza al jefe inmediato.",
+              "Que la Comisión puede atenderla: si su grupo no la programa, puede pedirla aquí.",
+              "Que la pida a la Dirección Nacional, que es la que programa las de los grupos."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un jefe de rama le pide a la comisionada que evalúe ella a su subjefe, «porque usted sabe más del modelo». ¿Qué le responde?",
+            "options": [
+              "Que la haga quien le toca en su grupo, y le ofrece orientación para hacerla bien.",
+              "Que sí: como conoce mejor el modelo, su evaluación va a ser la más justa.",
+              "Que la haga el asesor personal del subjefe, que es quien mejor lo conoce."
+            ],
+            "correctIndex": 0
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Formación y certificación",
+      "emoji": "🎓",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La Comisión forma a los adultos de la Región y, desde octubre de 2026, el comisionado revisa las solicitudes de Insignia de Madera y Gestor Regional antes de que suban a la instancia nacional."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Formación.</strong> La ficha le pide desarrollar documentos y procesos de formación y perfeccionamiento continuo, con apoyo del equipo nacional de adultos y de las comisiones regionales de programa y de desarrollo institucional, y promover que los dirigentes participen en la formación regional, nacional e internacional. En <strong>Flor de Lis 1 y 2</strong>, los formadores pueden venir de la Comisión Regional, las fichas de sesión las retroalimenta el comisionado (en Flor de Lis 1 también puede hacerlo el Jefe de Grupo) y la Dirección Nacional revisa el contenido."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📨 El trámite de certificación (desde el 1 de octubre de 2026)"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "1. El asesor solicita",
+              "description": "La solicitud de Insignia de Madera o Gestor Regional es exclusiva del asesor personal, que se la notifica por correo al Comisionado Regional de Adultos de la región del adulto."
+            },
+            {
+              "title": "2. El comisionado revisa",
+              "description": "El comisionado revisa cada requisito antes de enviarla."
+            },
+            {
+              "title": "3. La instancia nacional valida",
+              "description": "La recibe la Comisión Nacional de Evaluación y Acompañamiento, con copia a la Dirección Nacional, para la validación final. Si se aprueba, la secretaría de la Dirección Nacional le envía el certificado digital al asesor."
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🧭 Y dos cosas más.</strong> La solicitud de <strong>Gestor Nacional</strong> no pasa por la Región: va directo a la Comisión Nacional. Y el comisionado no aprueba: revisa y envía. Su propio reconocimiento, por servir en la Región, es el de <strong>Gestor Regional</strong>."
+        },
+        {
+          "type": "policy-quote",
+          "text": "La solicitud de certificados de Insignia de Madera (IM) y Gestor Regional (GR) es exclusiva del Asesor Personal, quien debe notificar vía correo electrónico al Comisionado Regional de Adultos en el Movimiento (CRAM) de la Región Scout a la cual pertenece el adulto a certificarse; el CRAM debe revisar cada uno de los requisitos aquí estipulados antes de enviarlo a la Comisión Nacional de Evaluación y Acompañamiento (evaluacion@scout.org.co) y con copia a la Dirección Nacional de Adultos en el Movimiento (adultos@scout.org.co), para su validación final adjuntando de ser necesario toda la documentación requerida, para dar trámite a la certificación solicitada.",
+          "source": "Comunicado DNAM-2026-124 (Dirección Nacional de Adultos en el Movimiento, 9 de septiembre de 2026), p. 3",
+          "label": "📋 Ver lo que dice el comunicado"
+        }
+      ],
+      "reflection": {
+        "prompt": "Cuando llegue a la Comisión una solicitud de Insignia de Madera, ¿qué requisito crees que faltará más a menudo en tu Región? Escribe cómo lo detectarías antes de enviarla."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Al revisar una solicitud de Insignia de Madera, la comisionada ve que el plan del adulto no tiene evidencias cargadas. ¿Qué hace?",
+            "options": [
+              "Enviarla igual a la Comisión Nacional, que es la que hace la validación final.",
+              "Pedirle al adulto que la complete y la envíe él mismo a la Comisión Nacional.",
+              "Pedirle al asesor las evidencias que faltan y enviarla cuando esté completa."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un asesor de la Región va a solicitar el reconocimiento de Gestor Nacional para su asesorado. ¿Por dónde va la solicitud?",
+            "options": [
+              "Por la comisionada regional, que la revisa igual que una Insignia de Madera.",
+              "Por el Jefe Regional, que es quien avala las certificaciones de nivel nacional.",
+              "Por fuera de la Región: directo a la Comisión Nacional, con copia a la DNAM."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Perfil y primer mes",
+      "emoji": "📋",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Es uno de los perfiles más exigentes del Manual: cinco esenciales en grado 4. Y su primer mes se juega en saber qué es suyo y qué no."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📶 Esenciales",
+              "description": "Grado 4 en Adaptabilidad al cambio, Compromiso, Conciencia organizacional, Relaciones interpersonales y Trabajo en equipo; grado 3 en Aprendizaje y desarrollo personal y en Planeamiento estratégico.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🛠️ Específicas",
+              "description": "Asesoría personal, Garante del debido proceso, Generación de contenido, Administración y gestión estratégica, y Gestión estratégica del talento humano. En la práctica: Asesoría personal es acompañar a su propio equipo; Gestión estratégica del talento humano es decidir qué perfiles buscar y cómo evaluarlos.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🛡️ Garante del debido proceso.</strong> Entre sus conductas, la ficha le pide remitir los casos activando las rutas determinadas según la situación. Si se trata de la seguridad de un niño, niña o joven, la ruta la trabaja la línea Políticas Transversales: remitir, no investigar."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>🔁 ¿Te acuerdas de Andrea?</strong> De sus tres pedidos, solo uno era suyo: revisar los requisitos de la solicitud de Insignia de Madera y enviarla a la Comisión Nacional. El asesor de la dirigente nueva lo escoge ella; Andrea puede orientar al jefe de grupo sobre cómo buscarlo. Y al subjefe lo evalúa quien corresponde en su grupo; Andrea asesora a ese jefe para que la evaluación salga bien. <strong>El comisionado no dirige grupos: hace que el modelo de adultos se aplique bien en grupos que no dirige.</strong>"
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Si eres comisionado o parte del equipo: preséntate a los jefes de grupo de tu Región y cuéntales en qué los puede apoyar la Comisión y en qué no.<br>• Averigua cuántos adultos de tu grupo o tu Región tienen valoración inicial y plan en Talento 360°.<br>• Si eres asesor: revisa con los requisitos del Curso 7 y la lista de verificación del Curso 9 que la próxima solicitud que envíes a la Comisión vaya completa.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Tiene a su cargo promover e impulsar la aplicación de la política nacional de Adultos en el movimiento, su modelo de ejecución y su sistema de gestión. Además de las acciones para el crecimiento con respecto a los adultos voluntarios.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.2.23 Comisionado Regional de Adultos en el Movimiento, p. 324",
+          "label": "📋 Ver la descripción en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "De las cosas que antes creías que hacía un comisionado regional, ¿cuál resultó no ser suya? Escribe a qué cargo le toca y cómo se lo explicarías a quien te la pidiera."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 14",
+        "questions": [
+          {
+            "text": "En su primer mes, una comisionada nueva quiere que los grupos dejen de pedirle cosas que no le tocan. ¿Qué le funcionaría mejor?",
+            "options": [
+              "Responderles «eso no me corresponde» a cada pedido ajeno, para que aprendan.",
+              "Atender lo que le pidan este primer mes, para ganarse la confianza de los grupos.",
+              "Reunirse pronto con los jefes de grupo y aclararles qué pueden esperar de ella."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Esta semana le llegan a la comisionada tres pedidos. ¿Cuál debe atender ella misma?",
+            "options": [
+              "Un jefe de grupo le pide que reciba la carta aval de la asesoría de una dirigente.",
+              "Un asesor le notifica una solicitud de Gestor Regional para que la revise.",
+              "Una jefa de rama le pide que dé ella la inducción a tres adultos nuevos."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Sé dónde estoy",
+      "emoji": "🧭",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Tres frentes",
+      "emoji": "🗺️",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Mi Comisión",
+      "emoji": "👥",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Dinamizar sin reemplazar",
+      "emoji": "🔄",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Revisar y enviar",
+      "emoji": "🎓",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 14 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "COMISIONADO REGIONAL DE ADULTOS EN EL MOVIMIENTO",
+    "description": "ha completado el Curso 14 de la Línea Política de Adultos, Comisionado Regional de Adultos en el Movimiento, y es capaz de ubicar el cargo en la estructura regional y nacional, organizar sus funciones, dinamizar el modelo de gestión de adultos en los grupos sin reemplazar a sus jefes ni asesores, y aplicar el trámite vigente de formación y certificación, según el Manual de cargos, perfiles y funciones por competencias y la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  }
+}

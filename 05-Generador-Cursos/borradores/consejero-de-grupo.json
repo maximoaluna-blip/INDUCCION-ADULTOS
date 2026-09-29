@@ -1,0 +1,626 @@
+{
+  "courseId": "consejero-de-grupo",
+  "title": "Ser consejero de grupo",
+  "subtitle": "Curso 12 · Nivel 3 de la Línea Política de Adultos",
+  "description": "La ficha del Consejero Scout de Grupo leída desde los adultos: tu silla en el Consejo y con quién no puedes compartirla, lo común a los cinco consejeros y lo propio de cada dignidad, cómo fomentar, apoyar y vigilar la gestión de los adultos sin conducir el programa, cómo acompañar su desarrollo, cómo es tu propio ciclo y cómo comunicar por el conducto regular.",
+  "contentVersion": "2026-09-28",
+  "icon": "🏛️",
+  "duration": "40 minutos",
+  "level": 3,
+  "levelName": "Especialización por cargo",
+  "order": 12,
+  "status": "active",
+  "totalContentModules": 6,
+  "commitmentBox": {
+    "prompt": "Escribe aquí la acción que elegiste en tu misión y la fecha en que la vas a cumplir:",
+    "placeholder": "Voy a… antes del…"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Bienvenida",
+      "emoji": "🏠",
+      "navLabel": "Inicio",
+      "isIntro": true,
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>La primera reunión.</strong><br>Marcela, madre de un lobato, fue elegida consejera en la Asamblea de marzo. En su primera reunión, un consejero propone que el Consejo decida a dónde va de campamento la Tropa y que revise la planeación de cada rama. Otro le responde que el Consejo «solo firma cheques». Marcela no sabe quién tiene razón.<br><br><strong>Al Consejo no se llega a dirigir la Tropa: se llega a cuidar a quienes la dirigen.</strong>"
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>Bienvenido/a al Curso 12.</strong><br>En el Curso 11 aprendiste a leer una ficha del Manual de cargos. Aquí leemos a fondo la del <strong>Consejero Scout de Grupo</strong> con la mirada de esta línea: qué hace el consejero con los adultos del Grupo y cómo vive él su propio ciclo. Cómo sesiona el Consejo —citación, quórum, actas— lo enseña Desarrollo Institucional en <em>Gobernanza Práctica</em>; las finanzas, su curso <em>Finanzas Sanas</em>."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te sugerimos haber visto el <strong>Curso 11 — Los cargos del Grupo: leer una ficha</strong>; ninguno es requisito. Ten a mano el <em>Manual de cargos</em> (biblioteca de la Dirección Nacional de Adultos en el Movimiento, <a href=\"https://scout.org.co/biblioteca/dnam\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca/dnam</a>): la ficha del consejero es la 2.1.1. Cada lección cierra con una reflexión y dos preguntas: para seguir hay que acertar las dos. Escribe tus reflexiones sin nombres de personas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Al terminar este curso vas a…"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Ubicar</strong> tu silla: quién te nombra, a quién respondes y con quién no puedes compartir el Consejo",
+            "<strong>Distinguir</strong> lo común a los cinco consejeros de lo propio de cada dignidad",
+            "<strong>Ejercer</strong> la función de fomentar, apoyar y vigilar la gestión de los adultos, sin conducir el programa",
+            "<strong>Acompañar</strong> el desarrollo de los adultos del Grupo",
+            "<strong>Planear</strong> tu propio ciclo: qué tienes y qué te falta —evaluación, plan, asesor, inducción— y quién decide tu continuidad",
+            "<strong>Comunicar</strong> por el conducto regular y declarar un conflicto de intereses"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📚 Las 6 lecciones"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Lección 1 — Tu silla en el Consejo",
+              "description": "6 min. Quién te nombra y con quién no la compartes."
+            },
+            {
+              "title": "Lección 2 — Una base y cinco sillas",
+              "description": "6 min. Lo común y lo propio de cada dignidad."
+            },
+            {
+              "title": "Lección 3 — Cuidar a quienes educan",
+              "description": "7 min. Fomentar, apoyar y vigilar sin conducir."
+            },
+            {
+              "title": "Lección 4 — Desarrollo del talento humano",
+              "description": "6 min. Acompañar a los adultos del Grupo."
+            },
+            {
+              "title": "Lección 5 — Tu propio ciclo",
+              "description": "6 min. El consejero también se evalúa y aprende."
+            },
+            {
+              "title": "Lección 6 — Comunicar y rendir cuentas",
+              "description": "6 min. El conducto regular y el conflicto de intereses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lección 1 — Tu silla en el Consejo",
+      "emoji": "🪑",
+      "navLabel": "L1",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Te nombra la Asamblea y ante ella respondes. El Jefe de Grupo y los jefes de rama te rinden cuentas, pero no los nombras tú."
+        },
+        {
+          "type": "paragraph",
+          "text": "La ficha 2.1.1 del Manual describe al consejero como el responsable de velar por el correcto desarrollo administrativo y financiero del Grupo, liderando los procesos de gestión, el manejo de recursos y su buen funcionamiento. Por eso tantos creen que el Consejo «solo firma cheques». Pero mira sus funciones: la segunda es <strong>fomentar, apoyar y vigilar la gestión de los adultos</strong> (la verás en la Lección 3). Primero, tres casillas que ubican tu silla:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🗳️ Te nombra",
+              "description": "La Asamblea Scout de Grupo.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "📣 Respondes a",
+              "description": "La Asamblea Scout de Grupo.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📥 Te responden",
+              "description": "El Jefe de Grupo y los jefes de rama. Te rinden cuentas; a los jefes de rama los nombra el Jefe de Grupo.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Quiénes se sientan contigo.</strong> El Reglamento de Grupos integra el Consejo con cuatro miembros elegidos entre y por los representantes legales de los niños, niñas y jóvenes; un Rover elegido por sus pares; y un representante de la entidad auspiciadora, si la hay. Y el Consejo cita de forma permanente al Jefe de Grupo a sus reuniones."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🚫 Con quién no compartes el Consejo"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Con quien sirve en las ramas.</strong> El Reglamento Nacional dice que los adultos con cargos operativos en las ramas no pueden integrar el Consejo de su nivel.",
+            "<strong>Con tu núcleo familiar.</strong> Un solo integrante por núcleo familiar, ni como principal ni como suplente; el núcleo incluye a padres e hijos y al cónyuge o compañero permanente. El Reglamento de Grupos de 2013 dejaba al cónyuge ser suplente; el Reglamento Nacional de 2026, que manda sobre él, ya no lo permite.",
+            "<strong>Con el Consejo Regional.</strong> La ficha del consejero (2.1.1) pide no formar parte del Consejo Scout Regional."
+          ]
+        },
+        {
+          "type": "policy-quote",
+          "text": "Los adultos que ejerzan cargos operativos en las ramas de los grupos, en las regiones o en la nación no podrán integrar los Consejos de su respectivo nivel.",
+          "source": "Reglamento Nacional (Acuerdo CSN 684 de 2026), Art. 71, p. 21",
+          "label": "📋 Ver lo que dice el Reglamento Nacional"
+        }
+      ],
+      "reflection": {
+        "prompt": "Piensa en un tema que haya pasado por tu Consejo este año, o que imaginas si aún no llegas. Según la ficha, ¿al Consejo le tocaba decidirlo, vigilarlo o ninguna de las dos? Escribe el tema, sin nombres ni casos de personas, y por qué."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 1",
+        "questions": [
+          {
+            "text": "Un consejero cuenta que su hija, Rover de 19 años, quiere postularse ante sus pares como representante de los Rovers en el Consejo. Él propone: «Si la eligen, yo dejo el Consejo: no podemos estar los dos». ¿Qué dice la regla?",
+            "options": [
+              "Que no hace falta: la regla del núcleo familiar alcanza al cónyuge, no a los hijos.",
+              "Que tiene razón: padre e hija son un mismo núcleo familiar, y en el Consejo cabe uno.",
+              "Que no hace falta: la regla es para los principales, así que basta con que él pase a suplente."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "Un jefe de Tropa muy querido quiere postularse al Consejo en la próxima Asamblea «para ayudar desde adentro», sin dejar la Tropa. ¿Qué le dirías?",
+            "options": [
+              "Que eso lo decide la Asamblea: si lo elige, el Consejo gana a alguien que conoce las ramas.",
+              "Que no puede integrar el Consejo mientras tenga un cargo operativo en una rama del Grupo.",
+              "Que lo acuerde antes con el Jefe de Grupo, que fue quien lo nombró jefe de la Tropa."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 2 →"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lección 2 — Una base y cinco sillas",
+      "emoji": "🧩",
+      "navLabel": "L2",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>Presidente, Vicepresidente, Secretario e Intendente son consejeros con algo más: las mismas tres funciones, una cuarta propia y una competencia específica de más."
+        },
+        {
+          "type": "paragraph",
+          "text": "Las cinco fichas de consejeros (2.1.1 a 2.1.5) comparten tres funciones: <strong>participar</strong> de las instancias que te corresponden como consejero; <strong>fomentar, apoyar y vigilar la gestión de los adultos</strong> del Grupo; y <strong>aplicar los canales de comunicación</strong>. También comparten los grados de las 7 esenciales y cuatro específicas. Cada dignidad suma una cuarta función:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🎙️ Presidente",
+              "description": "Representa al Grupo ante entidades, coordina su administración, suscribe a nombre del Grupo y autoriza los gastos según las cuantías que fije el Consejo. Suma: Gestión de estrategias generadoras de valor.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🔁 Vicepresidente",
+              "description": "Reemplaza al Presidente en sus ausencias, estudia proyectos para el Grupo y los somete al Consejo. Suma la misma competencia que el Presidente.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "📚 Secretario",
+              "description": "Salvaguarda y administra la gestión documental: libros, registro de miembros, actas y resoluciones con el Presidente. Suma: Elaboración y gestión de documentos.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "🧰 Intendente",
+              "description": "Administra y preserva los bienes del Grupo: inventario, cuidado, reposición. Suma: Administración de bienes.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🗳️ ¿Quién asigna cada silla?</strong> A las cinco las nombra la Asamblea de Grupo. Si alguien cita el Reglamento de Grupos —«el Consejo elige sus dignatarios»—, recuerda lo del Curso 11: para los cargos de adultos esa disposición está suspendida y manda el Manual."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>💰 ¿Y el Tesorero?</strong> No es un consejero: lo nombra el Consejo y su ficha le pide no formar parte del Consejo ni de la jefatura. Lo trata <em>Finanzas Sanas: Presupuesto y Tesorería</em>, el Curso 10 de Desarrollo Institucional. <strong>¿Y «la máxima autoridad»?</strong> La ficha del Presidente lo llama así, pero la máxima autoridad del Grupo es la Asamblea (Estatuto, Art. 18)."
+        }
+      ],
+      "reflection": {
+        "prompt": "Si tienes una dignidad en el Consejo, ¿cuál de las tareas de tu cuarta función haces menos, y qué necesitarías para hacerla? Si no la tienes, ¿cuál te gustaría asumir y por qué?"
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 2",
+        "questions": [
+          {
+            "text": "El Tesorero del Grupo pide que lo citen a votar en el Consejo «porque maneja la plata». El Presidente le responde que él no forma parte del Consejo. ¿Quién tiene razón según las fichas?",
+            "options": [
+              "El Presidente: al Tesorero lo nombra el Consejo, y su ficha le pide no formar parte de él.",
+              "El Tesorero: como lo nombró el Consejo, forma parte de él con voz y con voto.",
+              "Los dos a medias: forma parte del Consejo con voz, pero sin voto, cuando se tratan cuentas."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "text": "Antes del campamento, el Intendente propone revisar el inventario de ollas y toldos y presentarle al Consejo la compra de lo que está dañado. Un consejero le dice: «Eso es de la jefatura: son las ramas las que usan ese material». ¿Quién tiene razón según las fichas?",
+            "options": [
+              "El consejero: ese material lo usan las ramas, y lo que toca a sus actividades lo conduce la jefatura.",
+              "Ninguno: esa compra la aprueba el Tesorero, porque es quien recauda y custodia los fondos.",
+              "El Intendente: llevar el inventario y presentarle al Consejo la reposición es su cuarta función."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Continuar a Lección 3 →"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lección 3 — Cuidar a quienes educan",
+      "emoji": "👥",
+      "navLabel": "L3",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La segunda función de todo consejero es fomentar, apoyar y vigilar la gestión de los adultos del Grupo. Vigilar no es conducir: el programa lo conduce la jefatura."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🧭 Lo que te pide la Función 2"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "Gestionar la selección del Jefe de Grupo",
+              "description": "El Consejo postula; el Jefe Regional nombra. El Reglamento de Grupos le da al Consejo la facultad de seleccionar candidatos, consultando antes al Equipo de Jefatura, y someterlos al Jefe Regional."
+            },
+            {
+              "title": "Vigilar su gestión y la de sus dirigentes",
+              "description": "Estar al tanto de cómo se conduce el programa y cómo están los adultos que lo llevan."
+            },
+            {
+              "title": "Acompañar las decisiones según el desempeño",
+              "description": "Las del Jefe de Grupo, junto con el Jefe Regional; y las de los demás jefes del Grupo."
+            },
+            {
+              "title": "Velar por A Salvo del Peligro",
+              "description": "Que las políticas de entornos seguros se cumplan en el Grupo."
+            }
+          ]
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "👀 Vigilar y acompañar (te toca)",
+              "description": "Pedirle al Jefe de Grupo un informe de cómo van los dirigentes; preguntar qué formación necesitan; conversar con él una preocupación sobre un jefe de rama.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "🧭 Conducir (le toca a la jefatura)",
+              "description": "Escoger el destino del campamento; revisar la planeación de cada rama; decidir quién sigue en una rama.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🚦 Vigilar no es conducir.</strong> El Jefe de Grupo es la máxima autoridad técnica del Grupo y nombra a los dirigentes de las ramas. Si al Consejo le preocupa la gestión de un dirigente, lo conversa con el Jefe de Grupo y acompaña la decisión; no la toma por encima de él. Y si la preocupación es sobre el propio Jefe de Grupo, el acompañamiento es con el Jefe Regional, que lo nombró. Por eso: <strong>al Consejo no se llega a dirigir la Tropa: se llega a cuidar a quienes la dirigen.</strong>"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Los adultos que sí nombra el Consejo.</strong> El Tesorero, el Contador y el Auxiliar administrativo los nombra el Consejo y a él le responden. Con ellos, el Consejo es quien nombra y a quien se responde: su ciclo pasa también por tus manos."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Fomenta, apoya y vigila la gestión de los adultos del Grupo. Gestiona el proceso de selección de Jefe de Grupo. Vigila la gestión del Jefe de Grupo y sus dirigentes. Acompaña la toma decisiones con el Jefe regional según el desempeño del Jefe de Grupo. Acompaña la toma de decisiones según el desempeño de los Jefes del Grupo. Procura el desarrollo permanente de las competencias específicas para su función a fin de prestar un servicio de calidad dentro del consejo siendo ejemplo de crecimiento personal para el resto del equipo de Consejeros. Vela por el cumplimento de las políticas de a salvo del peligro dentro del Grupo.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.1 Consejero Scout de Grupo, Función 2, p. 6",
+          "label": "📋 Ver la Función 2 en la ficha"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Cómo se entera hoy tu Consejo de la gestión de los adultos del Grupo: por informes, por conversaciones, por quejas? Sin contar ningún caso ni referirte a un cargo en particular, escribe una forma regular en que podría enterarse mejor, sin meterse en la conducción del programa."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 3",
+        "questions": [
+          {
+            "text": "El Jefe de Grupo renuncia. En el Consejo alguien propone: «Nombremos ya a la subjefa de Grupo como jefa». ¿Qué le toca al Consejo?",
+            "options": [
+              "Esperar a que el Jefe Regional nombre, y acompañar al nuevo jefe: vigilar no es conducir.",
+              "Postular candidatos ante la Asamblea, que es ante quien responde el Consejo de su gestión.",
+              "Consultar al Equipo de Jefatura y postularle candidatos al Jefe Regional para que nombre."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Varias familias se quejan de cómo el jefe de Manada lleva las reuniones. Un consejero propone que el Consejo lo retire del cargo. ¿Qué le pide su ficha?",
+            "options": [
+              "Retirarlo si la queja es de varias familias y el Consejo lo deja en acta.",
+              "Vigilar y acompañar: conversarlo con el Jefe de Grupo, que es quien lo nombró.",
+              "Mantenerse al margen: la gestión de los dirigentes es asunto del Jefe de Grupo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 4 →"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Lección 4 — Desarrollo del talento humano",
+      "emoji": "🌱",
+      "navLabel": "L4",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>De las cuatro competencias específicas del consejero, una mira directo a los adultos: acompañar y motivar su desarrollo para que hagan bien su trabajo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tu ficha trae cuatro específicas: <strong>Administración y gestión del Grupo</strong>, <strong>Seguridad y control de actividades</strong>, <strong>Desarrollo del talento humano</strong> y <strong>Gestión y administración de recursos</strong>. Las de gestión y recursos las trabaja Desarrollo Institucional. Aquí nos quedamos con la tercera, que es el corazón de esta línea. Sus conductas, en la práctica:"
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "🧰 Usa herramientas para desarrollar competencias",
+              "description": "Apoya que los adultos se formen, en persona o vinculándolos al perfeccionamiento continuo: espacios del Grupo, la Región o la Nación.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "📊 Verifica y acompaña los planes",
+              "description": "Pregunta al Jefe de Grupo cómo van las valoraciones y los planes personales de los dirigentes, y en qué necesitan apoyo. No evalúa por su cuenta a cada uno.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🔀 Sugiere y acompaña decisiones",
+              "description": "Al final de un periodo, acompaña las decisiones para el futuro de los adultos según lo que mostró su evaluación (lo viste en el Curso 10 de esta línea, <em>Cierre y reinicio de ciclo</em>).",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            }
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🛡️ Y la seguridad.</strong> Tu ficha te pide velar porque las actividades cumplan las normas de seguridad e intervenir cuando se afecta la integridad de un joven o un adulto. Su descripción habla de «denunciar ante las autoridades» la conducta de un dirigente que dañe a los jóvenes. Ese deber con el Estado sigue en pie; y dentro de la Asociación, la ruta es <strong>reportar</strong> por el canal oficial «Me pongo a salvo del peligro», sin investigar por tu cuenta: quien recibe el reporte activa las rutas (lo trabaja el Curso 3 de Políticas Transversales, <em>El Adulto como Garante: reportar, no investigar</em>)."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Es la capacidad de acompañar y motivar el desarrollo de competencias de los adultos para asegurar la calidad de su trabajo en el cumplimiento de sus funciones.",
+          "source": "Manual de cargos, perfiles y funciones por competencias (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), ficha 2.1.1, competencia específica «Desarrollo del talento humano», criterio, p. 11",
+          "label": "📋 Ver el criterio de la competencia"
+        }
+      ],
+      "reflection": {
+        "prompt": "¿Sabe hoy tu Consejo cuántos dirigentes del Grupo tienen valoración inicial y plan personal? Si no, escribe la pregunta que llevarías a la próxima reunión para averiguarlo, y a qué cargo se la harías."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 4",
+        "questions": [
+          {
+            "text": "En el Consejo, una consejera propone pedirle al Jefe de Grupo que cuente en la próxima reunión cómo van las valoraciones y los planes de los dirigentes, y en qué necesitan apoyo. ¿Le corresponde al Consejo pedirlo?",
+            "options": [
+              "Sí, pero solo si antes lo aprueba la Asamblea, que es ante quien responde el Consejo.",
+              "Sí: verificar y acompañar los planes de los adultos está entre las conductas de su ficha.",
+              "No: pedirle ese informe al Jefe de Grupo es meterse en la conducción del programa."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "En una salida del Grupo, un consejero que acompaña ve que la Tropa entra a bañarse en un río crecido, sin chalecos. El jefe de Tropa dice que lo tiene controlado. ¿Qué le toca al consejero?",
+            "options": [
+              "Lo anota y lo conversa después con el Jefe de Grupo: la actividad la conduce la jefatura, no el Consejo.",
+              "Interviene ya para que salgan del río: su ficha le pide velar por la seguridad de las actividades.",
+              "Interviene llamando a los padres para que vengan por sus hijos, y después lo reporta."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 5 →"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lección 5 — Tu propio ciclo",
+      "emoji": "🔄",
+      "navLabel": "L5",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>El consejero también tiene evaluación, plan y asesor; lo distinto es que llega por elección, se le invita a evaluarse y su continuidad la decide la Asamblea."
+        },
+        {
+          "type": "method-grid",
+          "items": [
+            {
+              "title": "📝 Evaluación por invitación",
+              "description": "A los consejeros, elegidos democráticamente, se les invita y motiva a hacer la evaluación por competencias en Talento 360°.",
+              "color": "#ede7f6",
+              "borderColor": "#622599"
+            },
+            {
+              "title": "🗺️ Plan y asesor",
+              "description": "Son sujetos de un plan personal de desarrollo y de asesoría: se les invita a tener uno o varios asesores.",
+              "color": "#e8f5e9",
+              "borderColor": "#2e7d32"
+            },
+            {
+              "title": "🙋 Sin jefe inmediato",
+              "description": "No hay una persona que sea su jefe inmediato. El presidente del consejo y los jefes de los distintos niveles pueden apoyar su proceso, y la guía aconseja que sean sus asesores.",
+              "color": "#e3f2fd",
+              "borderColor": "#1565c0"
+            },
+            {
+              "title": "🗳️ Decide la Asamblea",
+              "description": "Ya lo asomaste en el Curso 8: su proceso no termina en un retiro o una reubicación decididos por la evaluación; la continuidad la deciden las asambleas. Pero un buen proceso fortalece la postulación y la elección.",
+              "color": "#fff3e0",
+              "borderColor": "#e65100"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Qué se espera de ti.</strong> Tu ficha pide grado 3 en Adaptabilidad al cambio, Compromiso, Conciencia organizacional y Planeamiento estratégico, y grado 2 en Aprendizaje y desarrollo personal, Relaciones interpersonales y Trabajo en equipo. Con el Curso 11 ya sabes leer esos grados como meta, no como puerta."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>🌼 Flor de Lis 2.</strong> Es el espacio de inducción para consejeros de grupo y regionales. La Dirección Nacional aconseja hacerlo en el primer trimestre de cada año, después de la elección en la Asamblea, y dice que es importante y deseable que los padres que quieran integrar los consejos pasen por Flor de Lis 1 y 2. Pregunta en tu Región cuándo se ofrece."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Para el caso especial de los Consejeros, por la forma de elección, su proceso no llegará a una toma de decisiones como retiro o reubicación, pero son sujetos de evaluación de desempeño y un plan personal de desarrollo que busca acompañar su tarea y desarrollar sus competencias, así mismo, los consejeros son sujetos de asesoría, por lo que se les invita a contar con uno o varios asesores que le acompañen en el proceso de desarrollo de competencias.",
+          "source": "Desempeño (Dirección Nacional de Adultos en el Movimiento, agosto de 2020), p. 6",
+          "label": "📋 Ver lo que dice el documento"
+        }
+      ],
+      "reflection": {
+        "prompt": "De los cuatro puntos de tu ciclo —evaluación, plan, asesor e inducción—, ¿cuál tienes y cuál te falta? Escribe el primer paso para el que te falta y ponle una fecha."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 5",
+        "questions": [
+          {
+            "text": "Un consejero va a postularse otra vez en la próxima Asamblea. Un amigo le dice: «Tu evaluación no pesa: a los consejeros los elige la Asamblea». ¿Qué dicen los documentos?",
+            "options": [
+              "Que tiene razón: si no hay retiro ni reubicación por esa vía, la evaluación no pesa en la elección.",
+              "Que la Asamblea revisa esa evaluación antes de votar, y con ella decide si lo vuelve a elegir.",
+              "Que no decide si sigue, pero haber hecho bien su proceso le da fuerza a su postulación."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "text": "Un consejero recién elegido le pide al Presidente del Consejo que sea su asesor para el plan. El Presidente duda de que eso sea lo que prevé la guía. ¿Qué le responderías?",
+            "options": [
+              "Que no: el asesor de un consejero debe venir de otro Consejo, para que mire con distancia.",
+              "Que sí: para los consejeros, la guía propone al presidente del consejo o a los jefes de nivel.",
+              "Que no: como un consejero no tiene jefe inmediato, el asesor se lo asigna el Jefe de Grupo."
+            ],
+            "correctIndex": 1
+          }
+        ],
+        "nextLabel": "Continuar a Lección 6 →"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lección 6 — Comunicar y rendir cuentas",
+      "emoji": "🗣️",
+      "navLabel": "L6",
+      "sections": [
+        {
+          "type": "info-box",
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La tercera función del consejero es aplicar los canales de comunicación: por el conducto regular, con las familias y con los dirigentes. Y cuando tu interés personal entra en juego, lo declaras."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Vela por el conducto regular</strong> de la comunicación dentro del Grupo.",
+            "<strong>Recibe y gestiona las peticiones</strong> de los miembros del Grupo.",
+            "<strong>Garantiza espacios de comunicación</strong> con los padres de familia y los dirigentes.",
+            "<strong>Aplica el conducto regular</strong> entre el Consejo y el Jefe de Grupo.",
+            "<strong>Distingue el destino.</strong> Si la petición es de un asunto del Consejo —cuotas, bienes, gastos—, la llevas al Consejo; si es del programa o de un dirigente, va por el Jefe de Grupo."
+          ]
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>⚖️ Conflicto de intereses.</strong> El Reglamento Nacional pide a todo miembro declarar de inmediato cualquier situación en la que sus intereses —también los familiares o de amistad— puedan influir, o parecer influir, en una decisión (Art. 82). Y quien está en conflicto no participa en la discusión ni en la decisión sobre ese tema (Art. 83)."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>🔁 ¿Te acuerdas de Marcela?</strong> Ninguno de los dos consejeros tenía razón. El campamento y la planeación de las ramas los conduce la jefatura; al Consejo le toca aprobar el Plan de Grupo, no decidir cada salida. Y el Consejo no solo firma: cuida a los adultos que llevan el programa. En la segunda reunión, Marcela propone pedirle al Jefe de Grupo un informe breve: cómo van las valoraciones y los planes de los dirigentes, qué formación necesitan y en qué puede apoyar el Consejo. <strong>Al Consejo no se llega a dirigir la Tropa: se llega a cuidar a quienes la dirigen.</strong>"
+        },
+        {
+          "type": "mission-box",
+          "text": "<strong>🎯 Tu misión — elige UNA y ponle fecha:</strong><br><br>• Propón que en la próxima reunión del Consejo el Jefe de Grupo cuente cómo van las valoraciones y los planes de los dirigentes, y en qué puede apoyar el Consejo.<br>• Si nunca has hecho tu evaluación por competencias, pide que te la programen y busca a tu asesor.<br>• Averigua cuándo ofrece tu Región Flor de Lis 2 y comprométete a asistir.<br><br>Una sola, con fecha concreta. Escríbela en tu <strong>Compromiso Personal</strong>, al final del curso."
+        },
+        {
+          "type": "policy-quote",
+          "text": "Los miembros de la Asociación deberán declarar la existencia de un conflicto de intereses de manera inmediata, en cuanto tengan conocimiento de cualquier situación en la que sus intereses personales u otros intereses puedan influir, o parecer influir, en la toma de decisiones.",
+          "source": "Reglamento Nacional (Acuerdo CSN 684 de 2026), Art. 82, p. 23",
+          "label": "📋 Ver lo que dice el Reglamento Nacional"
+        }
+      ],
+      "reflection": {
+        "prompt": "Imagina una queja cualquiera de una familia sobre una actividad —no cuentes una real—. Escribe el recorrido que debería hacer según el conducto regular: quién la recibe, a qué cargo se lleva y cómo se le responde a la familia."
+      },
+      "quiz": {
+        "title": "Mini-quiz Lección 6 — Cierre del Curso 12",
+        "questions": [
+          {
+            "text": "A la salida de una reunión, una madre le pide a un consejero que se revise el valor de la cuota mensual, porque no la alcanza a pagar. ¿Qué hace el consejero?",
+            "options": [
+              "Recibe la petición y la remite al Jefe de Grupo por el conducto regular, para que la presente.",
+              "Recibe la petición y la lleva al Consejo, que es el que fija el valor de la cuota del Grupo.",
+              "Le sugiere plantearla en la próxima Asamblea, que es donde votan las familias del Grupo."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "text": "El Consejo va a escoger quién prepara la comida del aniversario del Grupo. Una consejera es muy amiga del dueño de uno de los restaurantes que cotizaron, aunque no tiene negocio con él. Ella dice: «Yo no gano nada, así que no hay conflicto». ¿Qué corresponde?",
+            "options": [
+              "Tiene razón: si ella no obtiene un beneficio con la decisión, no hay conflicto que declarar.",
+              "Lo declara y participa, porque lo que pide la regla es que el Consejo esté enterado.",
+              "Lo declara y no participa: basta con que su interés pueda parecer que influye en la decisión."
+            ],
+            "correctIndex": 2
+          }
+        ],
+        "nextLabel": "Obtener Certificado 🏆"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement-1",
+      "name": "Conozco mi silla",
+      "emoji": "🪑",
+      "unlockOnModule": 2
+    },
+    {
+      "id": "achievement-2",
+      "name": "Una base, cinco sillas",
+      "emoji": "🧩",
+      "unlockOnModule": 3
+    },
+    {
+      "id": "achievement-3",
+      "name": "Vigilar sin conducir",
+      "emoji": "👥",
+      "unlockOnModule": 4
+    },
+    {
+      "id": "achievement-4",
+      "name": "Talento que crece",
+      "emoji": "🌱",
+      "unlockOnModule": 5
+    },
+    {
+      "id": "achievement-5",
+      "name": "Mi propio ciclo",
+      "emoji": "🔄",
+      "unlockOnModule": 6
+    },
+    {
+      "id": "achievement-6",
+      "name": "Curso 12 Completado",
+      "emoji": "🏆",
+      "unlockOnModule": -1
+    }
+  ],
+  "certificate": {
+    "courseName": "SER CONSEJERO DE GRUPO",
+    "description": "ha completado el Curso 12 de la Línea Política de Adultos, Ser consejero de grupo, y es capaz de ejercer las funciones comunes a los consejeros de grupo según el Manual de cargos, perfiles y funciones por competencias —en especial fomentar, apoyar y vigilar la gestión de los adultos del Grupo sin conducir el programa—, acompañar su desarrollo, vivir su propio ciclo de desempeño y comunicar por el conducto regular, según la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  }
+}

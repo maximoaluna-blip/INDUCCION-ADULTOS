@@ -124,8 +124,8 @@ cursos y no los duplica (su propio plan, §5.2, ya lo prevé).
 |---|---|---|---|
 | 11 | 🗂️ Los cargos del Grupo: leer una ficha | `cargos-del-grupo` | *Manual* §2.1 (20 fichas); *Diccionario de Competencias*; PNAM §4 y §5.1.2 |
 | 12 | 🏛️ Ser consejero de grupo | `consejero-de-grupo` | *Manual* 2.1.1–2.1.5; Reglamento de Grupos 5.1 (integración); *Desempeño* y *Guía de Acompañamiento y Evaluación* (los consejeros en el ciclo) |
-| 13 | 🎖️ El Canciller y los reconocimientos | `canciller-de-grupo` | *Manual* 2.1.6; Reglamento de Grupos 4.3.7, 8.8; *Manual de Estímulos Nacionales* (2020); Estatuto 2025 Arts. 60–61 y Reglamento Nacional 2026 Arts. 176–179 (Cancillería Nacional) |
-| 14 | 🧭 Comisionado Regional de Adultos | `comisionado-regional-adultos` | *Manual* 2.2.23 y 2.2.24; PNAM §7; *Guía de Acompañamiento y Evaluación*; circular DNAM-C-098-2024 |
+| 13 | 🎖️ El Canciller y los reconocimientos | `canciller-de-grupo` | *Manual* 2.1.6; Reglamento de Grupos 4.3.7, 8.8; *Manual de Estímulos Nacionales* (2020); Estatuto 2025 Arts. 60–61 y Reglamento Nacional 2026 Arts. 176–179 y 246 (Cancillería Nacional) |
+| 14 | 🧭 Comisionado Regional de Adultos | `comisionado-regional-adultos` | *Manual* 2.2.23 y 2.2.24; PNAM §7; *Guía de Acompañamiento y Evaluación*; Comunicado DNAM-2026-124 |
 | 15 | 🦸 Jefe de Grupo: el que acompaña a los adultos | `jefe-de-grupo` | *Manual* 2.1.10 y 2.1.11; Estatuto 2025 Art. 19; documentos DNAM del ciclo (*Recomendaciones* de encuestas, circular, *Desempeño*) |
 
 **Reglas del nivel** (además de las del Nivel 2):

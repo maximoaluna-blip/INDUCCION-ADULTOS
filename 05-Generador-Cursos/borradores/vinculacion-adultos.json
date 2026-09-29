@@ -3,7 +3,7 @@
   "title": "Vincular nuevos adultos al grupo",
   "subtitle": "Curso 6 · Nivel 2 de la Línea Política de Adultos",
   "description": "Atracción y Vinculación contada a quien la hace: el jefe de grupo, el consejo, el comité de selección, el jefe que recibe a alguien nuevo. Cómo determinar la necesidad antes de buscar a alguien, dónde buscar, cómo seleccionar con reglas claras y revisión de antecedentes, cómo integrar en los tres primeros meses y cómo cerrar con el acuerdo mutuo y el nombramiento.",
-  "contentVersion": "2026-09-27",
+  "contentVersion": "2026-09-28",
   "icon": "🚪",
   "duration": "40 minutos",
   "level": 2,
@@ -112,7 +112,7 @@
             },
             {
               "title": "2. Identificación de las competencias requeridas",
-              "description": "Las esenciales (las viste en el Curso 4) y las específicas del cargo, con el grado de dominio esperado. Salen del Manual de Cargos y del Diccionario de Competencias. Lo haces en esta misma lección: es la línea «Competencias» de la hoja de necesidad que verás al final."
+              "description": "Las esenciales (las viste en el Curso 4), con el grado de dominio que espera el cargo, y las específicas del cargo. Salen del Manual de Cargos y del Diccionario de Competencias. Lo haces en esta misma lección: es la línea «Competencias» de la hoja de necesidad que verás al final."
             },
             {
               "title": "3. Búsqueda y selección",
