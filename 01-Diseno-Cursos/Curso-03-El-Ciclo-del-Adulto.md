@@ -148,7 +148,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
      - Retiro: si no puede con el cargo, sale del grupo.
      - Reubicación: se le busca otro cargo que se ajuste mejor, y arranca un ciclo nuevo. ✅
      - Renovación: se le firma otro año en el mismo cargo y se espera que mejore.
-  2. En el grupo de Nicolás, el consejo decidió no renovarle el nombramiento a un dirigente por bajo desempeño. Alguien propone agradecerle en la ceremonia de cierre y otro responde: 'no, ese reconocimiento es para los que se van bien'. Según la política, ¿quién tiene razón?
+  2. En el grupo de Nicolás se decidió no renovarle el nombramiento a un dirigente por bajo desempeño. Alguien propone agradecerle en la ceremonia de cierre y otro responde: 'no, ese reconocimiento es para los que se van bien'. Según la política, ¿quién tiene razón?
      - El segundo: el reconocimiento se reserva para quien renueva o asciende.
      - El primero: la política pide considerar el reconocimiento sea cual sea la decisión. ✅
      - Ninguno: el reconocimiento formal es opcional y cada grupo decide si lo hace.
@@ -193,3 +193,6 @@ Citadas en `policy-quote`:
 ---
 
 _Diseño reconstruido v1.0 — 27 de septiembre de 2026 (ADR-098)._
+
+
+**Corrección del 28-09-2026 (ADR-107).** «El consejo decidió no renovarle el nombramiento a un dirigente»: a los dirigentes de rama los nombra el Jefe de Grupo (*Manual* 2.1.12–2.1.19); el consejo **acompaña** esas decisiones (2.1.1, Función 2). El caso ya no dice quién decidió.

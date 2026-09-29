@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-09-27",
+  "contentVersion": "2026-09-28",
   "icon": "🔄",
   "duration": "30 minutos",
   "level": 1,
@@ -631,7 +631,7 @@
             "correctIndex": 1
           },
           {
-            "text": "En el grupo de Nicolás, el consejo decidió no renovarle el nombramiento a un dirigente por bajo desempeño. Alguien propone agradecerle en la ceremonia de cierre y otro responde: 'no, ese reconocimiento es para los que se van bien'. Según la política, ¿quién tiene razón?",
+            "text": "En el grupo de Nicolás se decidió no renovarle el nombramiento a un dirigente por bajo desempeño. Alguien propone agradecerle en la ceremonia de cierre y otro responde: 'no, ese reconocimiento es para los que se van bien'. Según la política, ¿quién tiene razón?",
             "options": [
               "El segundo: el reconocimiento se reserva para quien renueva o asciende.",
               "El primero: la política pide considerar el reconocimiento sea cual sea la decisión.",

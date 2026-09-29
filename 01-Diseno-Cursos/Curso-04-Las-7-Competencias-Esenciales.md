@@ -51,7 +51,7 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
 - `blockquote` — Ejemplo: para 'Adaptabilidad al cambio' grado 1 una conducta observable es 'Acepta otras formas de hacer las cosas'. Grado 4 es 'Crea nuevos modelos y métodos organizacionales en respuesta a nuevos contextos, condicione…
 - `info-box` — 📌 Ojo con los nombres: la política los numera 1, 2, 3 y 4 — sin ponerles nombre. Aquí les pusimos un apodo para que se te queden, pero lo que cuenta en la evaluación es el criterio de cada competencia, que verás en las…
 - `paragraph` — La política distingue dos familias de competencias:
-- `list` (2) — Esenciales (7): aplican a todos los adultos del movimiento, sin impor… · Específicas (29): aplican según el cargo concreto. Una persona que ej…
+- `list` (2) — Esenciales (7): aplican a todos los adultos del movimiento, sin impor… · Específicas (29): aplican según el cargo concreto. Quien ejerce dos cargos tiene las específicas de cada uno…
 - `method-grid` (6) — Tesorero · Secretario · Jefe de rama (Manada, Tropa, Comunidad, Clan) · Jefe de grupo · Consejero de Grupo · Intendente
 - `info-box` — ⚠️ ¿Y la Familia de Cachorros? El Manual de Cargos es de 2020 y todavía no perfila al Jefe de Familia de Cachorros: si sirves ahí, el perfil que más se te parece es el de Jefe de Manada.
 - `info-box` — 📌 ¿Cuándo aplican las específicas? Cada vez que asumes un cargo formal. La política te pide identificar las específicas de ese cargo, evaluar tu nivel actual, y ponerlas en tu plan personal. Las profundizamos en cursos…
@@ -66,10 +66,10 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
      - Las esenciales aplican solo a los jefes de grupo; las específicas, a los demás cargos del grupo
      - Las esenciales aplican a todos los adultos del movimiento; las específicas se asocian a un cargo concreto ✅
      - Las específicas son más importantes que las esenciales
-  3. Una persona que ejerce DOS cargos en el grupo (por ejemplo, consejero de grupo y jefe de manada):
-     - Aplica únicamente el set de específicas del cargo principal
-     - Acumula los dos sets de competencias específicas, uno por cada cargo ✅
-     - Solo necesita aplicar las 7 esenciales
+  3. Una persona ejerce DOS cargos (por ejemplo, jefa de Manada en su grupo y miembro del equipo regional de Adultos en el Movimiento):
+     - Aplica únicamente las específicas del cargo que considera principal
+     - Tiene las específicas de cada cargo: cada uno tiene su ficha y su ciclo ✅
+     - Solo necesita aplicar las 7 esenciales, que valen para cualquier cargo
 
 ### 🪞 Lección 2 — Hacia TI mismo (3 competencias)  (`L2`, módulo 3)
 
@@ -211,3 +211,6 @@ Citadas en `policy-quote`:
 ---
 
 _Diseño reconstruido v1.0 — 27 de septiembre de 2026 (ADR-098)._
+
+
+**Corrección del 28-09-2026 (ADR-107).** El ejemplo de dos cargos era «consejero de grupo y jefe de manada», combinación que el Reglamento de Grupos (5.1, parágrafo cuarto) y la ficha del Jefe de Manada (2.1.12, «No formar parte del Consejo Scout de Grupo») impiden; y «acumula dos sets» no está escrito en ninguna fuente. Ahora: cada cargo tiene su ficha y su ciclo (PNAM §5.2.1: un cargo en paralelo es un nuevo ciclo de vida), con un par compatible (la ficha 2.2.24 solo excluye al Consejo Regional).

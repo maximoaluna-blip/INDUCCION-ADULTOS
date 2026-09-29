@@ -1,6 +1,6 @@
 # Diseño del Curso 10 — 🏁 Cierre y reinicio de ciclo
 
-> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **10** de 17 — **cierra el Nivel 2**
+> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **10** de 15 — **cierra el Nivel 2**
 > **`courseId`:** `decisiones-para-el-futuro`
 > **Diseño pedagógico:** Claude Code, con autonomía delegada el 27-09-2026 (ADR-098).
 > **Estado:** publicado el 27-09-2026 con las tres auditorías y su re-auditoría (ADR-099).

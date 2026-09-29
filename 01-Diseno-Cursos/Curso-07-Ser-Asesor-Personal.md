@@ -1,6 +1,6 @@
 # Diseño del Curso 7 — 🤝 Ser asesor personal
 
-> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **7** de 17
+> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **7** de 15
 > **`courseId`:** `asesor-personal`
 > **Diseño pedagógico:** Claude Code, con autonomía delegada el 27-09-2026 (ADR-098).
 > **Estado:** publicado el 27-09-2026 con las tres auditorías y su re-auditoría (ADR-099).
@@ -22,7 +22,7 @@ cómo pasar de la valoración al plan, cómo acompañar sin ahogar y cómo cerra
 | ***Guía cómo realizar una asesoría personal*** (DNAM, 2025) | Verificar que el asesorado terminó su inducción; firmar la carta; que el asesorado te incluya como asesor en Talento 360°; primer encuentro y las herramientas (Retroalimentación, Evaluación, PPD, Muro Kudo); revisar la valoración inicial y priorizar; invitar a espacios formativos; apoyo de expertos; contacto con el Comisionado Regional de Adultos y el jefe inmediato; los criterios para pedir el reconocimiento. |
 | ***Guía cómo desarrollarse en el cargo*** (DNAM, 2025) | La carta firmada se entrega al jefe inmediato; el proceso no debería pasar de un año (ideal, un semestre). |
 | ***Desempeño*** (DNAM, 2020) | El asesor como **eje** del proceso; validar presaberes (ejemplos de Claudia y Álvaro: no todo se trabaja); estrategias válidas (mentoring, coaching, cursos, práctica supervisada…); **no hay homologación** de certificaciones: la evaluación indica el avance. |
-| **Circular DNAM-C-098-2024** (28-11-2024) | Requisitos de la certificación IM/GR/GN (carta aval, valoración inicial con **mínimo tres meses** en el cargo, PPD > 80 %, evaluación final **superior al 90 %**…); **la solicitud es exclusiva del Asesor Personal de Desarrollo**, con aviso al Comisionado Regional de Adultos. |
+| **Circular DNAM-C-098-2024** (28-11-2024) — *sin aplicación desde el 1-10-2026; ver §7* | Requisitos de la certificación IM/GR/GN (carta aval, valoración inicial con **mínimo tres meses** en el cargo, PPD > 80 %, evaluación final **superior al 90 %**…); **la solicitud es exclusiva del Asesor Personal de Desarrollo**, con aviso al Comisionado Regional de Adultos. |
 | ***Bitácora de Acompañamiento al adulto*** | Las cinco partes del registro de un encuentro. |
 
 ### Lo que el curso tiene que resolver
@@ -106,5 +106,21 @@ y puedo?, ¿sé y sigo aprendiendo?, ¿me organizo y me apoyo?) con los **nueve 
 Los siete requisitos de la L6 se agrupan en tres momentos y la lección declara 7 min. Puentes con los Cursos 2, 5 y 8.
 `commitmentBox` propio.
 
+
+## 7. Actualización al Comunicado DNAM-2026-124 (28-09-2026, ADR-107)
+
+El **Comunicado DNAM-2026-124** (DNAM, 9-09-2026; biblioteca oficial, «Procedimiento para solicitud de certificaciones IM,
+GR, GN») deja **sin aplicación la circular DNAM-C-098-2024 desde el 1 de octubre de 2026**. Lo que cambia en la L6: (1) la
+valoración inicial se hace **durante los tres primeros meses** en el cargo (antes: «mínimo tres meses» ejerciéndolo); (2) la
+valoración final pide **al menos el 80 % de cumplimiento promedio** (antes: superior al 90 %), lo que resuelve la tensión del
+§0.2 a favor del documento vigente; (3) **requisito nuevo: la *Declaración del jefe inmediato*** (formato en la biblioteca;
+local `31- Declaracion jefe inmediato.pdf`); (4) el asesor debe tener **su propio PPD vigente en al menos el último año**; (5)
+los anexos de inducción incluyen el módulo de inducción general de la Universidad Scout y los cursos A Salvo del Peligro
+SfH 1, 2, 3 y 3B; (6) **trámite**: el asesor notifica por correo al **Comisionado Regional de Adultos**, que **revisa cada
+requisito** antes de enviarla a la **Comisión Nacional de Evaluación y Acompañamiento** con copia a la DNAM, que hace la
+validación final (Gestor Nacional: directo a la Comisión Nacional). El quiz de cierre ya no usa «el Comisionado revisa» como
+distractor: ahora es parcialmente cierto.
+Fuente local: `DOCUMENTOS BASE/…/Documentos Oficiales PNAM 2022/32- Comunicacion DNAM 2026-124 Reconocimiento IM GR GN.pdf`.
+
 ---
-_Documento de diseño v1.1 — 27 de septiembre de 2026 (tras las auditorías)._
+_Documento de diseño v1.2 — 28 de septiembre de 2026 (Comunicado DNAM-2026-124). v1.1 — 27-09-2026._

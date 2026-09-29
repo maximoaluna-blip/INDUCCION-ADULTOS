@@ -1,6 +1,6 @@
 # Diseño del Curso 8 — 📋 Acompañamiento y Evaluación 360° en la práctica
 
-> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **8** de 17
+> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **8** de 15
 > **`courseId`:** `evaluacion-360`
 > **Diseño pedagógico:** Claude Code, con autonomía delegada el 27-09-2026 (ADR-098).
 > **Estado:** publicado el 27-09-2026 con las tres auditorías y su re-auditoría (ADR-099).
@@ -21,7 +21,7 @@ padres, cómo se responde una evaluación con honestidad y qué se hace con el i
 | ***Recomendaciones para aplicar las encuestas*** | A quién se evalúa (cargos de programa de jóvenes), quién evalúa (niños, jóvenes y padres con trato directo), el Jefe de Grupo provee, decide versión física o virtual y analiza; **autorización de los padres**; no sesgar; individuales y sin prisa; privacidad; momento 2; **no más de dos ciclos de programa sin aplicarla**. |
 | ***Consentimiento informado*** y las tres ***Encuestas de percepción*** | Autorización del padre, madre o cuidador (Ley 1581 de 2012); formularios: lobato (Sí/No), scout-caminante-rover (1 a 4), padres o acudientes (1 a 4). |
 | ***Bitácora de Acompañamiento al adulto*** | Evidencia de los encuentros de seguimiento. |
-| **Circular DNAM-C-098-2024** | La evaluación en la plataforma dura cerca de un mes; responder **pausada, coherente y honestamente**, sobre conductas observables: si no se ha visto, no se da por hecha; el informe se descarga cuando la evaluación está cerrada. |
+| **Circular DNAM-C-098-2024** — *sin aplicación desde el 1-10-2026; ver §7* | La evaluación en la plataforma dura cerca de un mes; responder **pausada, coherente y honestamente**, sobre conductas observables: si no se ha visto, no se da por hecha; el informe se descarga cuando la evaluación está cerrada. |
 
 ### Lo que el curso tiene que resolver
 
@@ -101,5 +101,13 @@ traen preguntas abiertas. «Subjefe», en una palabra.
 la L1 abre con un caso antes de las definiciones y tiende un puente con el Curso 3; preguntas de memoria convertidas; la L6
 ya no repite una pregunta del Curso 7; puente con el Curso 7 (80 % frente a seis meses: compatibles). `commitmentBox` propio.
 
+
+## 7. Actualización al Comunicado DNAM-2026-124 (28-09-2026, ADR-107)
+
+El **Comunicado DNAM-2026-124** (DNAM, 9-09-2026; biblioteca oficial, «Procedimiento para solicitud de certificaciones IM,
+GR, GN») deja **sin aplicación la circular DNAM-C-098-2024 desde el 1 de octubre de 2026**. La cita de la L5 (evaluación de
+un mes, «pausada, coherente y honesta») está **igual** en el comunicado (anexo, p. 6): solo cambia la fuente.
+Fuente local: `DOCUMENTOS BASE/…/Documentos Oficiales PNAM 2022/32- Comunicacion DNAM 2026-124 Reconocimiento IM GR GN.pdf`.
+
 ---
-_Documento de diseño v1.1 — 27 de septiembre de 2026 (tras las auditorías)._
+_Documento de diseño v1.2 — 28 de septiembre de 2026 (Comunicado DNAM-2026-124). v1.1 — 27-09-2026._

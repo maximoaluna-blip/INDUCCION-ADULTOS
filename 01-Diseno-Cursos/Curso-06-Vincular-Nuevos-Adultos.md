@@ -1,6 +1,6 @@
 # Diseño del Curso 6 — 🚪 Vincular nuevos adultos al grupo
 
-> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **6** de 17 — abre el Nivel 2
+> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **6** de 15 — abre el Nivel 2
 > **`courseId`:** `vinculacion-adultos`
 > **Diseño pedagógico:** Claude Code, con autonomía de punta a punta otorgada por el dueño el 27-09-2026 hasta cerrar el Nivel 2 (ADR-098).
 > **Estado:** publicado el 27-09-2026 con las tres auditorías y su re-auditoría (ADR-099).

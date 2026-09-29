@@ -3,7 +3,7 @@
   "title": "Talento 360° en la práctica",
   "subtitle": "Curso 9 · Nivel 2 de la Línea Política de Adultos",
   "description": "El recorrido práctico por la plataforma oficial de la Asociación: las dos puertas de entrada, una hoja de vida que permita ser evaluado, cómo postularse a una vacante, cómo responder y descargar una evaluación, cómo construir el plan con estrategias, actividades y soportes, y cómo reconocer y hacer visible el propio desarrollo.",
-  "contentVersion": "2026-09-27",
+  "contentVersion": "2026-09-28",
   "icon": "💻",
   "duration": "40 minutos",
   "level": 2,
@@ -33,7 +33,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>⚠️ Una plataforma cambia.</strong> Este curso sigue los tutoriales oficiales que distribuye la Dirección Nacional de Adultos en el Movimiento (febrero de 2024) y la circular DNAM-C-098-2024. Si al entrar ves un botón con otro nombre o en otro lugar, manda el tutorial vigente de la biblioteca oficial; y si te trabas, está la mesa de ayuda de la Asociación («Tickets», en su página). Lo que no cambia es el <strong>recorrido</strong>, y eso es lo que vas a aprender."
+          "text": "<strong>⚠️ Una plataforma cambia.</strong> Este curso sigue los tutoriales oficiales que distribuye la Dirección Nacional de Adultos en el Movimiento (febrero de 2024) y el Comunicado DNAM-2026-124, que desde el 1 de octubre de 2026 reemplaza a la circular C-098-2024. Si al entrar ves un botón con otro nombre o en otro lugar, manda el tutorial vigente de la biblioteca oficial; y si te trabas, está la mesa de ayuda de la Asociación («Tickets», en su página). Lo que no cambia es el <strong>recorrido</strong>, y eso es lo que vas a aprender."
         },
         {
           "type": "paragraph",
@@ -53,7 +53,7 @@
             "<strong>Postularte</strong> a una vacante sabiendo lo que no tiene marcha atrás",
             "<strong>Encontrar y responder</strong> tu evaluación en la plataforma, y descargar su informe cuando esté cerrada",
             "<strong>Construir</strong> tu plan en la plataforma: estrategias, actividades y soportes",
-            "<strong>Usar</strong> el Muro Kudo y saber qué revisa la Dirección Nacional antes de un reconocimiento"
+            "<strong>Usar</strong> el Muro Kudo y saber qué se revisa antes de un reconocimiento"
           ]
         },
         {
@@ -369,11 +369,11 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>👤 Si administras un grupo o una región:</strong> la circular advierte que los usuarios con perfil de administrador (AdminGrupo o AdminRegion) tienen que cambiar a perfil de usuario; si no, el menú no les muestra las evaluaciones que deben responder."
+          "text": "<strong>👤 Si administras un grupo o una región:</strong> el comunicado advierte que los usuarios con perfil de administrador (AdminGrupo o AdminRegion) tienen que cambiar a perfil de usuario; si no, el menú no les muestra las evaluaciones que deben responder."
         },
         {
           "type": "paragraph",
-          "text": "Cómo responderla con honestidad —por conductas observables, sin complacencia y sin castigo— lo trabaja el <strong>Curso 8</strong>. Aquí basta con la regla de la circular: si no has visto hacer algo, no lo des por hecho; se contempla para el plan."
+          "text": "Cómo responderla con honestidad —por conductas observables, sin complacencia y sin castigo— lo trabaja el <strong>Curso 8</strong>. Aquí basta con la regla del comunicado: si no has visto hacer algo, no lo des por hecho; se contempla para el plan."
         },
         {
           "type": "blockquote",
@@ -381,9 +381,9 @@
         },
         {
           "type": "policy-quote",
-          "text": "Todos los adultos tienen el derecho además del deber, según el compromiso y acuerdo mutuo de contar con su proceso de desarrollo, por lo tanto, si el nivel al que el adulto pertenece no programa la evaluación podrá solicitar al siguiente que programe su evaluación.",
-          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 2",
-          "label": "📋 Ver lo que dice la circular"
+          "text": "Todos los adultos tienen el derecho además del deber, según el acuerdo mutuo de contar con su proceso de desarrollo, por lo tanto, si el nivel al que el adulto pertenece no programa la evaluación podrá solicitar al siguiente nivel que programe su evaluación.",
+          "source": "Comunicado DNAM-2026-124 (Dirección Nacional de Adultos en el Movimiento, 9 de septiembre de 2026), anexo, p. 5",
+          "label": "📋 Ver lo que dice el comunicado"
         }
       ],
       "reflection": {
@@ -393,7 +393,7 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Llevas un año en tu cargo y en tu grupo nadie ha programado tu valoración por competencias. ¿Qué puedes hacer según la circular?",
+            "text": "Llevas un año en tu cargo y en tu grupo nadie ha programado tu valoración por competencias. ¿Qué puedes hacer según el comunicado?",
             "options": [
               "Esperar: la valoración solo la puede programar el jefe del grupo al que perteneces.",
               "Pedirle al nivel siguiente, por ejemplo a la región, que te programe la evaluación.",
@@ -451,7 +451,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>⏳ ¿Cuánto dura?</strong> La circular sugiere unos <strong>seis meses</strong> de plan; al terminarlo se programa una evaluación final, que puede mostrar que el plan funcionó o que hace falta ajustarlo con uno nuevo. Y la sección de <strong>retroalimentación</strong> de la plataforma es donde se registran las tareas y acuerdos de cada encuentro con el asesor: la bitácora en versión digital."
+          "text": "<strong>⏳ ¿Cuánto dura?</strong> El comunicado sugiere unos <strong>seis meses</strong> de plan; al terminarlo se programa una evaluación final, que puede mostrar que el plan funcionó o que hace falta ajustarlo con uno nuevo. Y la sección de <strong>retroalimentación</strong> de la plataforma es donde se registran las tareas y acuerdos de cada encuentro con el asesor: la bitácora en versión digital."
         },
         {
           "type": "info-box",
@@ -463,9 +463,9 @@
         },
         {
           "type": "policy-quote",
-          "text": "Luego de que cada estrategia planeada posea evidencias (productos) y se carguen en la plataforma se pueden ir movilizando las estrategias de planeado a en desarrollo o terminado únicamente seleccionado la estrategia y desplazando a la casilla que corresponda.",
-          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 6",
-          "label": "📋 Ver lo que dice la circular"
+          "text": "Luego de que cada estrategia planeada posea evidencias (productos) y se carguen en la plataforma se pueden ir movilizando las estrategias de planeado a en desarrollo o terminado únicamente seleccionado la estrategia y desplazando a la columna que corresponda.",
+          "source": "Comunicado DNAM-2026-124 (Dirección Nacional de Adultos en el Movimiento, 9 de septiembre de 2026), anexo, p. 9",
+          "label": "📋 Ver lo que dice el comunicado"
         }
       ],
       "reflection": {
@@ -484,7 +484,7 @@
             "correctIndex": 1
           },
           {
-            "text": "Óscar hizo todas las actividades de una estrategia, pero no ha cargado nada. Quiere moverla a «terminado». ¿Qué le recuerda la circular?",
+            "text": "Óscar hizo todas las actividades de una estrategia, pero no ha cargado nada. Quiere moverla a «terminado». ¿Qué le recuerda el comunicado?",
             "options": [
               "Que puede moverla ya: con las actividades marcadas la estrategia queda terminada.",
               "Que primero cargue las evidencias, y después mueva la estrategia a «terminado».",
@@ -504,7 +504,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La plataforma sirve para reconocer a otros en el día a día, y es donde la Dirección Nacional mira antes de reconocerte a ti."
+          "text": "<strong>⏱️ 7 minutos · 1 idea central:</strong><br>La plataforma sirve para reconocer a otros en el día a día, y es donde la región y la instancia nacional miran antes de reconocerte a ti."
         },
         {
           "type": "heading",
@@ -522,23 +522,24 @@
         },
         {
           "type": "paragraph",
-          "text": "Cuando el asesor solicita la Insignia de Madera, Gestor Regional o Gestor Nacional de alguien (lo viste en el Curso 7), la circular DNAM-C-098-2024 dice qué se revisa. El Curso 7 te dio los requisitos completos; esta es la lista de verificación, y casi toda se mira en Talento 360°:"
+          "text": "Cuando el asesor solicita la Insignia de Madera, Gestor Regional o Gestor Nacional de alguien (lo viste en el Curso 7), el Comunicado DNAM-2026-124 dice qué se verifica. El Curso 7 te dio los requisitos completos; esta es la lista de verificación, y buena parte se mira en Talento 360°:"
         },
         {
           "type": "list",
           "ordered": false,
           "items": [
-            "La carta aval de aceptación del asesor personal",
-            "La hoja de vida scout completa en Talento 360°",
+            "Los anexos de la fase de inducción (nombramiento, acuerdo mutuo, módulo de inducción general y cursos A Salvo del Peligro), en el plan o en una carpeta enlazada",
             "La valoración inicial por competencias",
-            "El Plan Personal de Desarrollo finalizado y con soportes en Talento 360°",
-            "La valoración final por competencias",
-            "La inscripción vigente en SiScout"
+            "La carta aval del asesor personal",
+            "El Plan Personal de Desarrollo con sus estrategias y evidencias, cumplido al menos en un 80 %",
+            "La declaración del jefe inmediato",
+            "La valoración final por competencias, con al menos un 80 % de cumplimiento promedio",
+            "Que el asesor tenga su propio plan vigente en al menos el último año"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Fíjate en el «casi»: la carta aval y la inscripción en SiScout van por fuera. Pero todo lo que muestra tu desempeño —hoja de vida, valoraciones, plan y soportes— se revisa en la plataforma."
+          "text": "Fíjate en el «buena parte»: la carta aval y la declaración del jefe inmediato son documentos firmados, y que estés activo se mira en SiScout. Pero todo lo que muestra tu desempeño —valoraciones, plan y evidencias— se revisa en la plataforma, junto con tu hoja de vida al día y tu asesor registrado en el cargo."
         },
         {
           "type": "info-box",
@@ -554,9 +555,9 @@
         },
         {
           "type": "policy-quote",
-          "text": "Recordamos nuevamente que se realizará la verificación de: a. Carta aval de aceptación por parte del Asesor Personal de Desarrollo. b. Hoja de vida scout completa en la plataforma Talento360°. c. Evaluación (valoración inicial) por competencias. d. Plan Personal de Desarrollo finalizado y con soportes en la plataforma Talento360° e. Evaluación (valoración final) por competencias que debe poseer un porcentaje no inferior al 90%. f. Inscripción vigencia actual de la plataforma SISCOUT.",
-          "source": "Circular DNAM-C-098-2024 (Dirección Nacional de Adultos en el Movimiento, 28 de noviembre de 2024), p. 7",
-          "label": "📋 Ver lo que dice la circular"
+          "text": "Recuerda nuevamente, se realizará la verificación de: 1. Anexos de la Fase de Inducción 2. Valoración Inicial por competencias. 3. Carta Aval del Asesor Personal. 4. Plan Personal de Desarrollo con las estrategias de desarrollo de competencias y sus evidencias, con un cumplimiento de al menos el 80%. 5. Declaración del jefe inmediato. 6. Valoración final por competencias, con un porcentaje de cumplimiento promedio de al menos el 80% 7. Que el Asesor cuente con su Plan Personal de Desarrollo vigente en al menos el último año",
+          "source": "Comunicado DNAM-2026-124 (Dirección Nacional de Adultos en el Movimiento, 9 de septiembre de 2026), p. 4",
+          "label": "📋 Ver lo que dice el comunicado"
         }
       ],
       "reflection": {
@@ -569,7 +570,7 @@
             "text": "Un adulto tiene un desempeño excelente y una evaluación final muy alta, pero su plan no tiene ningún soporte cargado. Su asesor va a solicitar su Insignia de Madera. ¿Qué pasa?",
             "options": [
               "Nada grave: la evaluación final alta ya demuestra todo y los soportes son opcionales.",
-              "Le falta uno de los puntos que se verifican: el plan finalizado y con sus soportes.",
+              "Le falta uno de los puntos que se verifican: el plan con sus evidencias cargadas.",
               "Se aprueba igual: la hoja de vida y las valoraciones se miran en la plataforma, y el plan va aparte."
             ],
             "correctIndex": 1

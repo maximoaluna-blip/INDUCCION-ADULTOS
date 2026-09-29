@@ -1,6 +1,6 @@
 # Diseño del Curso 9 — 💻 Talento 360° en la práctica
 
-> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **9** de 17
+> **Línea:** Política de Adultos · **Nivel 2 «Profundización por fase del ciclo»** · Curso **9** de 15
 > **`courseId`:** `talento-360`
 > **Diseño pedagógico:** Claude Code, con autonomía delegada el 27-09-2026 (ADR-098).
 > **Estado:** publicado el 27-09-2026 con las tres auditorías y su re-auditoría (ADR-099).
@@ -18,7 +18,7 @@ construir el plan con estrategias, actividades y soportes, y reconocer y pedir e
 | ***Registro y Validación de Datos en Talento 360°*** (tutorial DNAM, 05-02-2024) | La herramienta operativiza la PNAM y su modelo; registro en «Trabaje con nosotros» y acceso al HRM; «Mi Perfil»; **estado «Vinculado»** para poder ser parte de las evaluaciones; Información Scout; Perfil profesional y **«Asignar Área»** (Programa de Jóvenes para dirigentes, Desarrollo Institucional para consejeros o jefe de grupo); vínculos familiares; **Cargos**: nivel correcto, **un solo cargo activo por nivel**, campo **«Asesor»**; educación y experiencia. |
 | ***Postulación a Cargos dentro de la plataforma Talento 360°*** (tutorial DNAM, 05-02-2024) | Entrada por «Trabaje con Nosotros Scout» o desde la página de la ASC («T360 – Hoja de Vida y Vacantes»); activar **disponibilidad para viajar** o no deja postularse; menú Hoja de vida / Vacantes / Postulaciones; filtros; Detalles; «+Postularme»; **no se puede cancelar ni eliminar una postulación** hasta que el proceso termine; si fue un error, contactar al estamento convocante o a la DNAM. |
 | ***Procedimiento para Requisición, Convocatoria y Selección Objetiva*** (2020) §1 | Talento 360° es el HRM (*Human Resource Management*) adquirido por la Asociación, administrado por un miembro de la DNAM; por él se hace la requisición y se publican vacantes que **llegan al correo de todos los adultos registrados**. |
-| **Circular DNAM-C-098-2024** | Evaluación: pestaña de desempeño; los usuarios con perfil **AdminRegión o AdminGrupo** deben cambiar a perfil usuario para ver sus evaluaciones; programación de **un mes aproximadamente**; el informe **solo se descarga con la evaluación cerrada**; elegir la evaluación correcta si hay varios ciclos. Plan: pestaña **Desarrollo → Plan de desarrollo personal**; **estrategias** (descripción + competencias o funciones que impacta) → **actividades** que se marcan y dan el porcentaje → **soportes** → mover entre *planeado*, *en desarrollo* y *terminado*. El plan se sugiere de unos **seis meses**. |
+| **Circular DNAM-C-098-2024** — *sin aplicación desde el 1-10-2026; ver §7* | Evaluación: pestaña de desempeño; los usuarios con perfil **AdminRegión o AdminGrupo** deben cambiar a perfil usuario para ver sus evaluaciones; programación de **un mes aproximadamente**; el informe **solo se descarga con la evaluación cerrada**; elegir la evaluación correcta si hay varios ciclos. Plan: pestaña **Desarrollo → Plan de desarrollo personal**; **estrategias** (descripción + competencias o funciones que impacta) → **actividades** que se marcan y dan el porcentaje → **soportes** → mover entre *planeado*, *en desarrollo* y *terminado*. El plan se sugiere de unos **seis meses**. |
 | ***Guía cómo realizar una asesoría personal*** y ***Guía cómo desarrollarse en el cargo*** | Las cuatro herramientas (Retroalimentación, Evaluación, Plan Personal de Desarrollo, Muro Kudo; *asesoría*, p. 1); evidencias en la pestaña de **anexos** (*desarrollarse en el cargo*, p. 1); reconocer a compañeros, jefe y asesor en el **Muro Kudo**. |
 | ***Desempeño*** (2020) | Talento 360° indica de forma estadística y detallada fortalezas y elementos a trabajar; los certificados se pueden adjuntar a la hoja de vida; se sugiere además un archivo personal de evidencias. |
 
@@ -103,5 +103,16 @@ rellenado hacia atrás; puente con los siete requisitos del Curso 7; duraciones 
 
 **Segunda vuelta (27-09-2026).** Doctrinal: apto con 4 menores (la Puerta 1 también deja actualizar la hoja de vida; el área entra en la lista de lo que deja ser evaluado; la mesa de ayuda es «Tickets»; «AdminRegion» como lo escribe la circular). Pedagógica: la regla ciega aún aprobaba 4 de 6 quizzes → cinco distractores reescritos; queda en ≤ 1 de 6. El relato de Óscar ya no cierra un plan en semanas.
 
+
+## 7. Actualización al Comunicado DNAM-2026-124 (28-09-2026, ADR-107)
+
+El **Comunicado DNAM-2026-124** (DNAM, 9-09-2026; biblioteca oficial, «Procedimiento para solicitud de certificaciones IM,
+GR, GN») deja **sin aplicación la circular DNAM-C-098-2024 desde el 1 de octubre de 2026**. Las citas operativas de la plataforma
+(derecho a pedir la evaluación al nivel siguiente, perfiles Admin, mover estrategias con evidencia, seis meses de plan) están
+en el anexo del comunicado (pp. 5, 6 y 9) casi con las mismas palabras: se cambia la fuente. La lista de verificación de la L6
+pasa a los **siete puntos** del comunicado (p. 4): anexos de inducción, valoración inicial, carta aval, PPD con evidencias y
+≥ 80 %, **declaración del jefe inmediato**, valoración final ≥ 80 % promedio y asesor con PPD vigente.
+Fuente local: `DOCUMENTOS BASE/…/Documentos Oficiales PNAM 2022/32- Comunicacion DNAM 2026-124 Reconocimiento IM GR GN.pdf`.
+
 ---
-_Documento de diseño v1.1 — 27 de septiembre de 2026 (tras las auditorías)._
+_Documento de diseño v1.2 — 28 de septiembre de 2026 (Comunicado DNAM-2026-124). v1.1 — 27-09-2026._

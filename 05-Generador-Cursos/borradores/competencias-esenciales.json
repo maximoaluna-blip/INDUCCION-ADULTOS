@@ -3,7 +3,7 @@
   "title": "Las 7 Competencias Esenciales",
   "subtitle": "Curso 4 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~35 min, 6 lecciones cortas.",
-  "contentVersion": "2026-09-21",
+  "contentVersion": "2026-09-28",
   "icon": "🧠",
   "duration": "40 minutos",
   "level": 1,
@@ -169,7 +169,7 @@
           "ordered": false,
           "items": [
             "<strong>Esenciales (7):</strong> aplican a <em>todos</em> los adultos del movimiento, sin importar el cargo. Son el foco de este curso.",
-            "<strong>Específicas (29):</strong> aplican según el cargo concreto. Una persona que ejerce dos cargos acumula dos sets diferentes de específicas."
+            "<strong>Específicas (29):</strong> aplican según el cargo concreto. Quien ejerce dos cargos tiene las específicas de cada uno: cada cargo tiene su ficha en el Manual y su propio ciclo."
           ]
         },
         {
@@ -258,11 +258,11 @@
             "correctIndex": 1
           },
           {
-            "text": "Una persona que ejerce DOS cargos en el grupo (por ejemplo, consejero de grupo y jefe de manada):",
+            "text": "Una persona ejerce DOS cargos (por ejemplo, jefa de Manada en su grupo y miembro del equipo regional de Adultos en el Movimiento):",
             "options": [
-              "Aplica únicamente el set de específicas del cargo principal",
-              "Acumula los dos sets de competencias específicas, uno por cada cargo",
-              "Solo necesita aplicar las 7 esenciales"
+              "Aplica únicamente las específicas del cargo que considera principal",
+              "Tiene las específicas de cada cargo: cada uno tiene su ficha y su ciclo",
+              "Solo necesita aplicar las 7 esenciales, que valen para cualquier cargo"
             ],
             "correctIndex": 1
           }

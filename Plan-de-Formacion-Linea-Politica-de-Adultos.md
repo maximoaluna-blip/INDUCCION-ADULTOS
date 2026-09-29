@@ -1,6 +1,6 @@
 # Plan de Formación — Línea Política de Adultos en el Movimiento
 
-> **Versión 1.1 — 27-09-2026 (ADR-098).** Transcripción a Markdown del `Plan-de-Formacion-Linea-Politica-de-Adultos.docx`
+> **Versión 1.2 — 28-09-2026 (ADR-107): Nivel 3 replanteado.** Versión 1.1 — 27-09-2026 (ADR-098). Transcripción a Markdown del `Plan-de-Formacion-Linea-Politica-de-Adultos.docx`
 > (versión inicial, 09-05-2026) **más el Plan del Nivel 2 detallado**. Desde hoy **este `.md` es el plan vigente**: el `.docx`
 > queda como histórico y no se edita. Se pasó a Markdown porque un `.docx` no lo lee ningún `grep` ni ningún barrido de
 > términos, y el plan está aguas arriba de todo diseño (`CLAUDE.md` raíz §3).
@@ -37,7 +37,7 @@ otro (ADR-019): cada curso **recomienda** los previos.
 |---|---|---|---|
 | 1 | Ruta de Fundamentación | 5 (1–5) | Todo adulto |
 | 2 | Profundización por fase del ciclo | 5 (6–10) | Adultos con experiencia y quienes acompañan a otros |
-| 3 | Especialización por cargo | ~7 (11–17) | Adulto en un cargo específico |
+| 3 | Especialización por cargo | 5 (11–15) | Adulto en un cargo específico |
 | 4 | Transversales | — | Cubierto por la línea Políticas Transversales |
 
 ## 3. Nivel 1 — Ruta de Fundamentación (publicado)
@@ -98,12 +98,47 @@ a un curso inexistente.
   al debido proceso ni a los reglamentos.
 - Ninguna reflexión pide el nombre de una persona (decisión del dueño, 27-09-2026).
 
-## 5. Nivel 3 — Especialización por cargo (futuro)
+## 5. Nivel 3 — Especialización por cargo
 
-Tal como el `.docx`, **pendiente de revisar contra el *Manual de Cargos* antes de diseñar** (ver §4.1.2). Cursos 11 a 17:
-Cargos del Consejo (panorama), Tesorero, Secretario, Asesor Personal a fondo, Canciller, Consejero juvenil, Jefe de Grupo.
-⚠️ Solapes a mirar antes de construir: **Consejero juvenil** ya existe en Programa de Jóvenes (Curso 19) y **Tesorería** en
-Desarrollo Institucional (Curso 10).
+**Replanteado el 28-09-2026 (ADR-107), con autonomía delegada por el dueño.** El `.docx` proponía siete cursos (11–17)
+sin haberlos cotejado con el *Manual de cargos, perfiles y funciones por competencias* (DNAM, agosto de 2020). Al cotejarlos:
+
+| Curso del `.docx` | Qué pasó | Por qué |
+|---|---|---|
+| 11 Cargos del Consejo (panorama) | **Se queda, reenfocado** | «Los 11 cargos oficiales del consejo» no tiene fuente: el Reglamento de Grupos (5.7) da al Consejo Presidente, Vicepresidente, Secretario, Tesorero e Intendente opcional; el *Manual* tiene **20 fichas** de Grupo. El curso enseña el mapa de las 20 y a **leer una ficha** |
+| 12 Tesorero | **Se cae** | Lo cubre Desarrollo Institucional, Curso 10 (fichas 2.1.7 y 2.1.8, Cap. 10 del Reglamento de Grupos) |
+| 13 Secretario | **Se integra al Curso 12** | Su ficha (2.1.4) es la del consejero más una Función 4 y una competencia; DI 9 ya trata actas y registro |
+| 14 Asesor Personal a fondo | **Se cae** | Es el Curso 7 de esta línea. Y el asesor es un **rol**, no un cargo (§4.1.1) |
+| 15 Canciller | **Se queda** | Ficha 2.1.6; ninguna otra línea lo trata. **No** es «garante del debido proceso» (esa es la competencia 8 del Jefe de Grupo) |
+| 16 Consejero juvenil | **Se cae** | Lo cubre Programa de Jóvenes, Curso 19; no es un cargo de adulto y el *Manual* no tiene ficha |
+| 17 Jefe de Grupo | **Se queda y cierra el nivel** | Ficha 2.1.10 |
+| — | **Se añade: Comisionado Regional de Adultos** | Fichas 2.2.23 y 2.2.24 y PNAM §7: la Comisión Regional es a quien remiten los Cursos 7, 8 y 9. Precedente: Comisionado de Programa de Jóvenes (PJ 18) |
+
+**Reparto con Desarrollo Institucional (decidido por el dueño, 28-09-2026).** El Nivel 3 de DI (planeado, sin construir)
+proponía también un panorama de cargos, Jefe de Grupo y Consejero. Cada línea mira el cargo con su lente: **PA, desde las
+competencias y el ciclo del adulto** (el *Manual de Cargos* es el documento 4 de la PNAM); **DI, desde los órganos, la
+gestión y el Plan de Grupo** (Presidente y Vicepresidente, comisionado en general, órganos de control). DI remite a estos
+cursos y no los duplica (su propio plan, §5.2, ya lo prevé).
+
+| # | Curso | `courseId` | Fuentes angulares |
+|---|---|---|---|
+| 11 | 🗂️ Los cargos del Grupo: leer una ficha | `cargos-del-grupo` | *Manual* §2.1 (20 fichas); *Diccionario de Competencias*; PNAM §4 y §5.1.2 |
+| 12 | 🏛️ Ser consejero de grupo | `consejero-de-grupo` | *Manual* 2.1.1–2.1.5; Reglamento de Grupos 5.1 (integración); *Desempeño* y *Guía de Acompañamiento y Evaluación* (los consejeros en el ciclo) |
+| 13 | 🎖️ El Canciller y los reconocimientos | `canciller-de-grupo` | *Manual* 2.1.6; Reglamento de Grupos 4.3.7, 8.8; *Manual de Estímulos Nacionales* (2020); Estatuto 2025 Arts. 60–61 y Reglamento Nacional 2026 Arts. 176–179 (Cancillería Nacional) |
+| 14 | 🧭 Comisionado Regional de Adultos | `comisionado-regional-adultos` | *Manual* 2.2.23 y 2.2.24; PNAM §7; *Guía de Acompañamiento y Evaluación*; circular DNAM-C-098-2024 |
+| 15 | 🦸 Jefe de Grupo: el que acompaña a los adultos | `jefe-de-grupo` | *Manual* 2.1.10 y 2.1.11; Estatuto 2025 Art. 19; documentos DNAM del ciclo (*Recomendaciones* de encuestas, circular, *Desempeño*) |
+
+**Reglas del nivel** (además de las del Nivel 2):
+- **En cargos manda el *Manual*** (Acuerdo CSN 558/2023). Donde el Reglamento de Grupos dice otra cosa (quién elige las
+  dignidades del Consejo, edades, Insignia de Madera como requisito, periodos), el curso lo advierte y no lo enseña como vigente.
+- **Las competencias específicas no tienen grados**; las esenciales sí, y **cada ficha fija el grado esperado** del cargo:
+  es un nivel hacia el que se avanza («o demostrar interés para desarrollarlas»), no un filtro de entrada.
+- **Se cita por nombre** la competencia específica, con el número del *Diccionario*: el *Manual* numera mal alguna (el «13»
+  del Vicepresidente es la 12).
+- **No se enseñan los defectos de plantilla del *Manual*** como jerarquía (p. ej., que al Contador «le responde» el Jefe de Grupo).
+- **Si el Jefe de Grupo es o no miembro del Consejo**: discrepancia registrada en el Glosario y sin arbitrar; ningún curso
+  lo afirma en ningún sentido.
+- Duración: intro + 6 lecciones de 5–7 min → **35–45 min por curso**, como el Nivel 2.
 
 ## 6. Fuentes
 
@@ -112,4 +147,4 @@ CRAM/Documentos Oficiales PNAM 2022/` (numeración de archivo **nuestra**, no of
 `Tutoriales Talento 360°/`.
 
 ---
-_v1.1 — 27-09-2026. v1.0 = el `.docx` del 09-05-2026._
+_v1.2 — 28-09-2026 (Nivel 3). v1.1 — 27-09-2026. v1.0 = el `.docx` del 09-05-2026._

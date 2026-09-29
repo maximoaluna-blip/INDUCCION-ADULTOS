@@ -182,3 +182,6 @@ Citadas en `policy-quote`:
 ---
 
 _Diseño reconstruido v1.0 — 27 de septiembre de 2026 (ADR-098)._
+
+
+**Corrección del 28-09-2026 (ADR-107).** «Pídele a la Comisión Regional… que te conecten con un asesor de otro grupo de la región» no tenía cita. Ahora: pedirle **orientación** a la Comisión Regional, que dinamiza el acompañamiento y asesora a los jefes (*Guía de Acompañamiento y Evaluación*, p. 14). El distractor del quiz («mejor alguien de otro grupo») sigue siendo falso por otra razón: la política prefiere al jefe inmediato.

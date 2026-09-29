@@ -3,7 +3,7 @@
   "title": "Ser asesor personal",
   "subtitle": "Curso 7 · Nivel 2 de la Línea Política de Adultos",
   "description": "El Curso 5 te enseñó a buscar un asesor. Este te enseña a serlo: qué es la asesoría personal, quién puede asumirla, cómo arrancar con los pasos formales, cómo pasar de la valoración inicial a un plan de pocas competencias, cómo acompañar sin ahogar y cómo cerrar pidiendo el reconocimiento cuando el desempeño lo demuestra.",
-  "contentVersion": "2026-09-27",
+  "contentVersion": "2026-09-28",
   "icon": "🤝",
   "duration": "40 minutos",
   "level": 2,
@@ -144,7 +144,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🔑 Lo que cambia todo:</strong> en la formación básica, la política pone en manos del <strong>asesor personal</strong> la certificación del desarrollo de las competencias, con la evaluación 360° y las evidencias (en la Lección 6 verás que él la solicita y la Dirección Nacional la autoriza). Y la política aclara que no se certifica por haber asistido a cursos, sino por lo que el adulto demuestra en su desempeño. Por eso la lista de Hernán no alcanza: los cursos son medios, no la meta."
+          "text": "<strong>🔑 Lo que cambia todo:</strong> en la formación básica, la política pone en manos del <strong>asesor personal</strong> la certificación del desarrollo de las competencias, con la evaluación 360° y las evidencias (en la Lección 6 verás que él la solicita, la región la revisa y la instancia nacional la valida). Y la política aclara que no se certifica por haber asistido a cursos, sino por lo que el adulto demuestra en su desempeño. Por eso la lista de Hernán no alcanza: los cursos son medios, no la meta."
         },
         {
           "type": "policy-quote",
@@ -204,7 +204,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Un acompañante cercano y constante, que conozca el proceso de acompañamiento y evaluación, que <strong>ya haya desarrollado —y preferiblemente finalizado— su propio Plan Personal de Desarrollo</strong> en su cargo y que se encuentre en perfeccionamiento continuo. Con las competencias esenciales desarrolladas para guiar dentro de la filosofía del Movimiento."
+          "text": "Un acompañante cercano y constante, que conozca el proceso de acompañamiento y evaluación, que <strong>ya haya desarrollado —y preferiblemente finalizado— su propio Plan Personal de Desarrollo</strong> en su cargo y que se encuentre en perfeccionamiento continuo. Y que ese plan esté vigente: desde el 1 de octubre de 2026 se verifica que el asesor lo tenga al menos del último año. Con las competencias esenciales desarrolladas para guiar dentro de la filosofía del Movimiento."
         },
         {
           "type": "heading",
@@ -610,32 +610,32 @@
         {
           "type": "heading",
           "level": 3,
-          "text": "📋 Lo que pide la circular DNAM-C-098-2024"
+          "text": "📋 Lo que pide el Comunicado DNAM-2026-124"
         },
         {
           "type": "paragraph",
-          "text": "Son siete requisitos, pero no se juntan al final: <strong>se van armando desde el primer encuentro</strong>. Si hiciste bien lo de las lecciones 3 a 5, ya tienes casi todos."
+          "text": "Desde el <strong>1 de octubre de 2026</strong> rigen los requisitos del Comunicado DNAM-2026-124 de la Dirección Nacional, que reemplaza a la circular C-098-2024. Son seis requisitos y dos condiciones de estar al día, pero no se juntan al final: <strong>se van armando desde el primer encuentro</strong>. Si hiciste bien lo de las lecciones 3 a 5, ya tienes casi todos."
         },
         {
           "type": "timeline",
           "items": [
             {
               "title": "1. Desde el arranque (Lecciones 3 y 4)",
-              "description": "La carta aval de aceptación del asesor personal; una valoración inicial en el cargo actual, que el adulto lleve ejerciendo mínimo tres meses; y el acompañamiento de un asesor personal que cumpla los requisitos."
+              "description": "La carta aval del asesor personal (y ojo: el asesor debe tener su propio Plan Personal de Desarrollo vigente, al menos durante el último año); y una valoración inicial en el cargo, hecha en los tres primeros meses de ejecución."
             },
             {
               "title": "2. Durante el acompañamiento (Lecciones 4 y 5, con los anexos que vienen desde la vinculación)",
-              "description": "El Plan Personal de Desarrollo cumplido por encima del 80 %, con sus anexos: nombramiento, acuerdo mutuo, módulo de inducción general, contenidos de formación básica, A Salvo del Peligro y las estrategias alineadas con la valoración inicial."
+              "description": "El Plan Personal de Desarrollo ejecutado mínimo al 80 %, con estrategias de desarrollo de competencias alineadas con la valoración inicial y soportadas con evidencias en Talento 360°. Y los anexos de la fase de inducción: nombramiento, acuerdo mutuo firmado, módulo de inducción general de la Universidad Scout y los cursos A Salvo del Peligro."
             },
             {
               "title": "3. Al cierre",
-              "description": "Una evaluación final de desempeño superior al 90 %; estar activo al momento de la solicitud; y la hoja de vida actualizada en Talento 360°, con el asesor personal registrado en el cargo."
+              "description": "La declaración del jefe inmediato, que retroalimentó la ejecución del plan y conoce de primera mano el desempeño; una valoración final con un cumplimiento promedio de al menos el 80 %; estar activo en SiScout; y la hoja de vida actualizada en Talento 360°, con el asesor personal registrado en el cargo."
             }
           ]
         },
         {
           "type": "info-box",
-          "text": "<strong>✍️ ¿Quién la hace?</strong> La circular es explícita: la solicitud de la Insignia de Madera, Gestor Regional o Gestor Nacional <strong>es exclusiva del Asesor Personal de Desarrollo</strong>, de acuerdo con el jefe inmediato, e informando al Comisionado Regional de Adultos. El asesor certifica con la 360° y las evidencias; la Dirección Nacional verifica y autoriza."
+          "text": "<strong>✍️ ¿Quién la hace?</strong> El comunicado es explícito: la solicitud de la Insignia de Madera o de Gestor Regional <strong>es exclusiva del Asesor Personal</strong>. La notifica por correo al <strong>Comisionado Regional de Adultos en el Movimiento</strong> de la región del adulto, que revisa cada requisito antes de enviarla a la Comisión Nacional de Evaluación y Acompañamiento, con copia a la Dirección Nacional, para la validación final. (La de Gestor Nacional va directo a la Comisión Nacional.) El jefe inmediato no la solicita, pero firma su declaración; y la Guía pide que el asesor la haga de acuerdo con él. El asesor certifica con la 360° y las evidencias; la instancia nacional valida."
         },
         {
           "type": "method-grid",
@@ -656,7 +656,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🔁 ¿Te acuerdas de la lista de ocho cursos?</strong><br>Diez meses después, Hernán solicita el reconocimiento de Daniela. No manda certificados de cursos: manda su valoración inicial, su plan con evidencias, la bitácora de sus encuentros y una evaluación final que muestra lo que ella hace hoy con la Manada. <strong>El asesor no reparte cursos: acompaña hasta que el desempeño hable.</strong>"
+          "text": "<strong>🔁 ¿Te acuerdas de la lista de ocho cursos?</strong><br>Diez meses después, Hernán solicita el reconocimiento de Daniela. No manda certificados de cursos: manda su valoración inicial, su plan con evidencias, la bitácora de sus encuentros y una evaluación final que muestra lo que ella hace hoy con la Manada; y firma él mismo la declaración de jefe inmediato, porque en este caso el asesor y el jefe son la misma persona. <strong>El asesor no reparte cursos: acompaña hasta que el desempeño hable.</strong>"
         },
         {
           "type": "mission-box",
@@ -676,11 +676,11 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 7",
         "questions": [
           {
-            "text": "Daniela cumplió su plan y su evaluación final supera el 90 %. Hernán está de viaje un mes y ella propone: «Mejor la mando yo misma a la Dirección Nacional, para no esperar». ¿Qué le conviene hacer?",
+            "text": "Daniela cumplió su plan y su valoración final supera el 80 %. Hernán, su asesor, está de viaje un mes y ella propone: «Mejor la mando yo misma a la Comisión Nacional, para no esperar». ¿Qué le conviene hacer?",
             "options": [
               "Que la mande ella: la solicitud la puede presentar cada adulto sobre su propio proceso.",
-              "Que espere a Hernán: la solicitud le toca a su asesor, que avisa al Comisionado Regional.",
-              "Que la pida al Comisionado Regional de Adultos, porque él revisa las evidencias de la región."
+              "Que espere a Hernán: la solicitud es de su asesor, que la envía al Comisionado Regional.",
+              "Que la presente el Jefe de Grupo en nombre de Hernán, para no frenar el trámite."
             ],
             "correctIndex": 1
           },
