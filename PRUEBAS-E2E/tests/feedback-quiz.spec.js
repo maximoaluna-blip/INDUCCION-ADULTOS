@@ -69,7 +69,7 @@ test.describe('@solo-escritorio feedback del quiz (ADR-061, ADR-127)', () => {
               if (radios.length) fallos.push(`modulo ${m}, pregunta ${qi + 1} (fallada): quedo un radio marcado`);
             });
             const aviso = avisos[avisos.length - 1] || '';
-            if (!/Te falt/.test(aviso) || !aviso.includes(String(qs.length))) {
+            if (!/Fallaste/.test(aviso) || !aviso.includes(String(qs.length))) {
               fallos.push(`modulo ${m}: el aviso no nombra la pregunta fallada: «${aviso}»`);
             }
             if (/%/.test(aviso)) fallos.push(`modulo ${m}: el aviso habla de porcentajes: «${aviso}»`);

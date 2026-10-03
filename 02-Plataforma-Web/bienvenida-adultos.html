@@ -2654,8 +2654,8 @@ function checkQuiz(moduleNum) {
         // Habla de preguntas, no de porcentajes: con dos preguntas el 70 % es un 100 %
         // y el aviso introducia una regla que nadie habia explicado (ADR-127).
         var cuales = falladas.length === 1
-            ? 'Te faltó la pregunta ' + falladas[0]
-            : 'Te faltaron las preguntas ' + falladas.slice(0, -1).join(', ') + ' y ' + falladas[falladas.length - 1];
+            ? 'Fallaste la pregunta ' + falladas[0]
+            : 'Fallaste las preguntas ' + falladas.slice(0, -1).join(', ') + ' y ' + falladas[falladas.length - 1];
         showNotification(cuales + '. Revisa esa parte de la lección y vuelve a intentarlo; puedes hacerlo las veces que quieras.', 'warning');
         // No auto-reset: en cuanto el usuario hace clic en una opcion, selectOption() limpia las marcas
         // de esa pregunta y vuelve a mostrar el boton "Verificar". Esto evita que un reset por tiempo
