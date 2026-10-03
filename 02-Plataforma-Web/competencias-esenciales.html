@@ -2725,12 +2725,21 @@ function shuffleQuizOptions() {
         options.forEach(function (opt, i) {
             if (!opt.hasAttribute('data-option-index')) opt.setAttribute('data-option-index', String(i));
         });
-        for (var i = options.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var tmp = options[i]; options[i] = options[j]; options[j] = tmp;
-        }
-        options.forEach(function (opt) { question.appendChild(opt); });
+        barajarOpciones(question);
     });
+}
+
+// Baraja las opciones de UNA pregunta (Fisher-Yates). La usa shuffleQuizOptions al cargar
+// y checkQuiz al fallar (ADR-127): rebarajar la pregunta fallada evita que el reintento
+// se resuelva por la posicion de la opcion descartada.
+function barajarOpciones(question) {
+    var options = Array.prototype.slice.call(question.querySelectorAll('.option'));
+    if (options.length < 2) return;
+    for (var i = options.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = options[i]; options[i] = options[j]; options[j] = tmp;
+    }
+    options.forEach(function (opt) { question.appendChild(opt); });
 }
 
 // Intentos por modulo en ESTA sesion de pagina (ADR-030). No se persiste a proposito:
@@ -2751,6 +2760,7 @@ function checkQuiz(moduleNum) {
     // posicion en pantalla, asi que sobrevive al barajado de shuffleQuizOptions().
     var itemsDetalle = [];
 
+    // Primero se califica y despues se marca: lo que se muestra depende de si aprueba (ADR-127).
     questions.forEach(function (question, qIndex) {
         var selectedOption = question.querySelector('.option.selected');
         var elegida = -1;   // -1 = la dejo sin responder
@@ -2759,26 +2769,47 @@ function checkQuiz(moduleNum) {
             var selectedIdx = parseInt(selectedOption.getAttribute('data-selected-index'));
             elegida = isNaN(selectedIdx) ? -1 : selectedIdx;
             if (selectedIdx === quizData[qIndex]) {
-                selectedOption.classList.add('correct');
                 correctAnswers++;
                 acerto = 1;
-            } else {
-                selectedOption.classList.add('incorrect');
-                // Mostrar la correcta
-                // Por el ATRIBUTO, no por la posicion: el DOM esta barajado (ADR-061).
-                var laCorrecta = question.querySelector('.option[data-option-index="' + quizData[qIndex] + '"]');
-                if (!laCorrecta) {
-                    // Sin sellar (curso viejo servido con motor nuevo): el orden del DOM
-                    // sigue siendo el del JSON, asi que la posicion vale.
-                    laCorrecta = question.querySelectorAll('.option')[quizData[qIndex]];
-                }
-                if (laCorrecta) laCorrecta.classList.add('correct');
             }
         }
         itemsDetalle.push({ q: qIndex, o: elegida, c: acerto });
     });
 
     var score = Math.round((correctAnswers / totalQuestions) * 100);
+    var aprueba = score >= 70;
+    var falladas = [];
+
+    questions.forEach(function (question, qIndex) {
+        var selectedOption = question.querySelector('.option.selected');
+        if (itemsDetalle[qIndex].c === 1) {
+            if (selectedOption) selectedOption.classList.add('correct');
+            return;
+        }
+        falladas.push(qIndex + 1);
+        if (aprueba) {
+            // Aprobo con alguna mala (p. ej. 3 de 4): ahi si se ensena cual era la buena.
+            if (selectedOption) selectedOption.classList.add('incorrect');
+            // Por el ATRIBUTO, no por la posicion: el DOM esta barajado (ADR-061).
+            var laCorrecta = question.querySelector('.option[data-option-index="' + quizData[qIndex] + '"]');
+            if (!laCorrecta) {
+                // Sin sellar (curso viejo servido con motor nuevo): el orden del DOM
+                // sigue siendo el del JSON, asi que la posicion vale.
+                laCorrecta = question.querySelectorAll('.option')[quizData[qIndex]];
+            }
+            if (laCorrecta) laCorrecta.classList.add('correct');
+        } else {
+            // No aprobo: NO se revela la correcta ni se marca la descartada (ADR-127).
+            // Con tres opciones, cualquiera de las dos marcas regalaba el reintento.
+            // Se desmarca y se rebaraja la pregunta para que haya que volver a leer.
+            question.querySelectorAll('.option').forEach(function (opt) {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+                var radio = opt.querySelector('input[type="radio"]');
+                if (radio) radio.checked = false;
+            });
+            barajarOpciones(question);
+        }
+    });
     quizScores[moduleNum] = score;
 
     // Analisis de items — se envia SIEMPRE, apruebe o no. Es la unica via por la que
@@ -2794,7 +2825,7 @@ function checkQuiz(moduleNum) {
     var checkBtn = document.getElementById('checkBtn-' + moduleNum);
     if (checkBtn) checkBtn.style.display = 'none';
 
-    if (score >= 70) {
+    if (aprueba) {
         var nextBtn = document.getElementById('nextBtn-' + moduleNum);
         if (nextBtn) nextBtn.classList.remove('hidden');
 
@@ -2809,7 +2840,12 @@ function checkQuiz(moduleNum) {
             module: moduleNum, score: score, course: COURSE_CONFIG.courseId
         });
     } else {
-        showNotification('Puntuación: ' + score + '%. Necesitas 70% para continuar. Revisa el contenido y vuelve a intentarlo.', 'warning');
+        // Habla de preguntas, no de porcentajes: con dos preguntas el 70 % es un 100 %
+        // y el aviso introducia una regla que nadie habia explicado (ADR-127).
+        var cuales = falladas.length === 1
+            ? 'Te faltó la pregunta ' + falladas[0]
+            : 'Te faltaron las preguntas ' + falladas.slice(0, -1).join(', ') + ' y ' + falladas[falladas.length - 1];
+        showNotification(cuales + '. Revisa esa parte de la lección y vuelve a intentarlo; puedes hacerlo las veces que quieras.', 'warning');
         // No auto-reset: en cuanto el usuario hace clic en una opcion, selectOption() limpia las marcas
         // de esa pregunta y vuelve a mostrar el boton "Verificar". Esto evita que un reset por tiempo
         // borrara la nueva seleccion del usuario antes de que pulsara verificar.
