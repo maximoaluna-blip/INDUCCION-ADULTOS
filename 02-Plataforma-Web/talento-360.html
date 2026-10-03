@@ -859,7 +859,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
     <div class="top-bar">
         <div class="top-bar-inner">
             <div class="logos">
-                <img src="../assets/logo-asc.png" alt="Asociacion Scouts de Colombia">
+                <img src="../assets/logo-asc.png" alt="Asociación Scouts de Colombia">
                 <div class="separator"></div>
                 <img src="../assets/logo-vallescout.png" alt="Scouts del Valle">
             </div>
@@ -1618,7 +1618,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                             <div style="width: 1px; height: 35px; background: #ddd;"></div>
                             <img src="../assets/logo-vallescout.png" alt="Valle Scout" style="height: 45px;">
                         </div>
-                        <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociacion Scouts de Colombia</p>
+                        <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: #622599; font-weight: 600; margin: 5px 0;">Asociación Scouts de Colombia</p>
                         <p style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; color: #636363; margin: 2px 0;">Política de Adultos en el Movimiento</p>
                     </div>
 
@@ -1626,7 +1626,7 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
 
                     <!-- Title -->
                     <div style="text-align: center; margin: 15px 0 10px;">
-                        <h2 style="color: #622599; font-size: 1.3em; letter-spacing: 2px; margin: 0;">CERTIFICADO DE APROBACION</h2>
+                        <h2 style="color: #622599; font-size: 1.3em; letter-spacing: 2px; margin: 0;">CERTIFICADO DE APROBACIÓN</h2>
                     </div>
 
                     <!-- Course name -->
@@ -1644,22 +1644,22 @@ html[data-theme="dark"] .module a:hover { color: #adc8fb; }
                     <!-- Details grid -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; margin: 15px 0; padding: 12px 15px; background: #f9f7fc; border-left: 3px solid #622599; font-size: 0.82em;">
                         <p style="margin: 0;"><strong>Fecha:</strong> <span id="certDate"></span></p>
-                        <p style="margin: 0;"><strong>Puntuacion:</strong> <span id="finalScore"></span>%</p>
+                        <p style="margin: 0;"><strong>Puntuación:</strong> <span id="finalScore"></span>%</p>
                         <p style="margin: 0;"><strong>Grupo Scout:</strong> <span id="certGroup"></span></p>
-                        <p style="margin: 0;"><strong>Region:</strong> <span id="certRegion"></span></p>
+                        <p style="margin: 0;"><strong>Región:</strong> <span id="certRegion"></span></p>
                         <p style="margin: 0;"><strong>Tiempo de estudio:</strong> <span id="totalTime"></span> min</p>
                         <p style="margin: 0;"><strong>Estado:</strong> <span style="color: #2e7d32; font-weight: 700;">APROBADO ✅</span></p>
                     </div>
 
                     <!-- Verification code -->
                     <div style="text-align: center; margin: 12px 0; padding: 8px; border: 1px dashed #622599; background: #faf8fd;">
-                        <p style="font-size: 0.75em; color: #636363; margin: 0 0 3px;">Codigo de Verificacion</p>
+                        <p style="font-size: 0.75em; color: #636363; margin: 0 0 3px;">Código de Verificación</p>
                         <strong style="font-size: 1em; color: #622599; letter-spacing: 2px;" id="certCode">ASC-2026-XXXXX</strong>
                     </div>
 
                     <!-- Footer -->
                     <div style="text-align: center; margin-top: 12px;">
-                        <p style="font-size: 0.7em; color: #767676;">Plataforma de Formacion de Adultos ASC</p>
+                        <p style="font-size: 0.7em; color: #767676;">Plataforma de Formación de Adultos ASC</p>
                     </div>
                 </div>
 
@@ -2567,7 +2567,8 @@ function checkQuiz(moduleNum) {
         var cuales = falladas.length === 1
             ? 'Fallaste la pregunta ' + falladas[0]
             : 'Fallaste las preguntas ' + falladas.slice(0, -1).join(', ') + ' y ' + falladas[falladas.length - 1];
-        showNotification(cuales + '. Revisa esa parte de la lección y vuelve a intentarlo; puedes hacerlo las veces que quieras.', 'warning');
+        showNotification(cuales + '. Revisa ' + (falladas.length === 1 ? 'esa parte' : 'esas partes') +
+            ' de la lección y vuelve a intentarlo; puedes hacerlo las veces que quieras.', 'warning');
         // No auto-reset: en cuanto el usuario hace clic en una opcion, selectOption() limpia las marcas
         // de esa pregunta y vuelve a mostrar el boton "Verificar". Esto evita que un reset por tiempo
         // borrara la nueva seleccion del usuario antes de que pulsara verificar.

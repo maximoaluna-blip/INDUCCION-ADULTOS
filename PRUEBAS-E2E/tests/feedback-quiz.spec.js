@@ -73,6 +73,11 @@ test.describe('@solo-escritorio feedback del quiz (ADR-061, ADR-127)', () => {
               fallos.push(`modulo ${m}: el aviso no nombra la pregunta fallada: «${aviso}»`);
             }
             if (/%/.test(aviso)) fallos.push(`modulo ${m}: el aviso habla de porcentajes: «${aviso}»`);
+            // Concordancia (ADR-129): una fallada, «esa parte»; varias, «esas partes».
+            const plural = qs.length - 1 > 1;
+            if (plural ? !/esas partes/.test(aviso) : !/esa parte /.test(aviso)) {
+              fallos.push(`modulo ${m}: el aviso no concuerda en numero: «${aviso}»`);
+            }
           }
         } finally {
           window.showNotification = original;

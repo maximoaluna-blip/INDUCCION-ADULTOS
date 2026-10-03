@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificacion de Certificados - Plataforma de Formacion de Adultos ASC</title>
+    <title>Verificación de Certificados - Plataforma de Formación de Adultos ASC</title>
 
     <!-- SEO -->
-    <meta name="description" content="Verifica la autenticidad de certificados emitidos por la Plataforma de Formacion de Adultos de la Asociacion Scouts de Colombia. Ingresa el codigo ASC-YYYY-XXXXX del certificado.">
+    <meta name="description" content="Verifica la autenticidad de certificados emitidos por la Plataforma de Formación de Adultos de la Asociación Scouts de Colombia. Ingresa el código ASC-YYYY-XXXXX del certificado.">
     <meta name="keywords" content="verificar certificado scout, certificado adultos asc, certificado consejero, certificado dirigente, ASC certificado, autenticidad certificado scout">
-    <meta name="author" content="Asociacion Scouts de Colombia">
+    <meta name="author" content="Asociación Scouts de Colombia">
     <link rel="canonical" href="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/verificar-certificado.html">
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/verificar-certificado.html">
-    <meta property="og:title" content="Verificacion de Certificados - Adultos ASC">
-    <meta property="og:description" content="Comprueba la autenticidad de un certificado emitido por la Plataforma de Formacion de Adultos ASC usando su codigo unico.">
+    <meta property="og:title" content="Verificación de Certificados - Adultos ASC">
+    <meta property="og:description" content="Comprueba la autenticidad de un certificado emitido por la Plataforma de Formación de Adultos ASC usando su código único.">
     <meta property="og:image" content="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/assets/logo-asc.png">
     <meta property="og:locale" content="es_CO">
-    <meta property="og:site_name" content="Plataforma de Formacion de Adultos ASC">
+    <meta property="og:site_name" content="Plataforma de Formación de Adultos ASC">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Verificacion de Certificados Adultos ASC">
+    <meta name="twitter:title" content="Verificación de Certificados Adultos ASC">
     <meta name="twitter:description" content="Comprueba la autenticidad de certificados emitidos por la plataforma.">
     <meta name="twitter:image" content="https://maximoaluna-blip.github.io/INDUCCION-ADULTOS/assets/logo-asc.png">
 
@@ -644,14 +644,14 @@
                 <div class="separator"></div>
                 <img src="assets/logo-vallescout.png" alt="ValleScout">
             </div>
-            <span class="top-bar-title">Verificacion de Certificados</span>
+            <span class="top-bar-title">Verificación de Certificados</span>
         </div>
     </div>
 
     <!-- Hero -->
     <div class="hero">
-        <h1>Verificacion de Certificados</h1>
-        <p>Ingresa el codigo del certificado para validar su autenticidad</p>
+        <h1>Verificación de Certificados</h1>
+        <p>Ingresa el código del certificado para validar su autenticidad</p>
     </div>
 
     <!-- Verification Form -->
@@ -667,7 +667,7 @@
                 >
                 <button id="verify-btn" onclick="verificarCertificado()">Verificar</button>
             </div>
-            <p class="form-hint">Ingresa el codigo tal como aparece en tu certificado</p>
+            <p class="form-hint">Ingresa el código tal como aparece en tu certificado</p>
         </div>
     </div>
 
@@ -680,10 +680,10 @@
             <a href="index.html" class="footer-back">Volver a la Plataforma</a>
             <div class="footer-divider"></div>
             <div class="footer-contact">
-                <strong>Asociacion Scouts de Colombia</strong><br>
-                Plataforma de Formacion de Adultos
+                <strong>Asociación Scouts de Colombia</strong><br>
+                Plataforma de Formación de Adultos
             </div>
-            <p class="footer-copy">Plataforma de Formacion de Adultos ASC. Todos los derechos reservados.</p>
+            <p class="footer-copy">Plataforma de Formación de Adultos ASC. Todos los derechos reservados.</p>
         </div>
     </div>
 
@@ -777,10 +777,10 @@
                 // region, completionDate, score. Antes leia nombre/curso/fecha/... (ADR-128).
                 { label: 'Nombre del participante', value: data.studentName || '---', highlight: true },
                 { label: 'Curso completado', value: data.course || '---', highlight: false },
-                { label: 'Fecha de emision', value: data.completionDate ? String(data.completionDate).slice(0, 10) : '---', highlight: false },
-                { label: 'Puntuacion', value: (data.score !== undefined && data.score !== '') ? String(data.score) + (/%$/.test(String(data.score)) ? '' : ' %') : '---', highlight: false },
+                { label: 'Fecha de emisión', value: data.completionDate ? String(data.completionDate).slice(0, 10) : '---', highlight: false },
+                { label: 'Puntuación', value: (data.score !== undefined && data.score !== '') ? String(data.score) + (/%$/.test(String(data.score)) ? '' : ' %') : '---', highlight: false },
                 { label: 'Grupo Scout', value: data.group || '---', highlight: false },
-                { label: 'Region', value: data.region || '---', highlight: false }
+                { label: 'Región', value: data.region || '---', highlight: false }
             ];
 
             var fieldsHTML = '';
@@ -793,20 +793,20 @@
             }
 
             return '<div class="print-header">' +
-                '<h2>Plataforma de Formacion de Adultos ASC</h2>' +
-                '<p>Verificacion de Certificado</p>' +
+                '<h2>Plataforma de Formación de Adultos ASC</h2>' +
+                '<p>Verificación de Certificado</p>' +
             '</div>' +
             '<div class="result-valid">' +
                 '<div class="result-header">' +
                     '<div class="icon-check"></div>' +
                     '<div>' +
-                        '<h2>Certificado Valido</h2>' +
-                        '<p class="result-subtitle">Este certificado fue emitido por la Plataforma de Formacion de Adultos ASC</p>' +
+                        '<h2>Certificado Válido</h2>' +
+                        '<p class="result-subtitle">Este certificado fue emitido por la Plataforma de Formación de Adultos ASC</p>' +
                     '</div>' +
                 '</div>' +
                 '<div class="cert-card">' +
                     '<div class="cert-card-header">' +
-                        '<h3>Certificado de Formacion</h3>' +
+                        '<h3>Certificado de Formación</h3>' +
                         '<span class="cert-code">' + escapeHtml(code) + '</span>' +
                     '</div>' +
                     '<div class="cert-card-body">' +
@@ -815,7 +815,7 @@
                     '<div class="cert-accent-bar"></div>' +
                 '</div>' +
                 '<div class="print-btn-container">' +
-                    '<button class="print-btn" onclick="window.print()">Imprimir Verificacion</button>' +
+                    '<button class="print-btn" onclick="window.print()">Imprimir Verificación</button>' +
                 '</div>' +
             '</div>';
         }
@@ -829,7 +829,7 @@
                     '</div>' +
                 '</div>' +
                 '<div class="invalid-message">' +
-                    'El codigo ingresado no corresponde a ningun certificado emitido. Verifica que el codigo sea correcto.' +
+                    'El código ingresado no corresponde a ningún certificado emitido. Verifica que el código sea correcto.' +
                 '</div>' +
             '</div>';
         }
@@ -839,11 +839,11 @@
                 '<div class="result-header" style="padding:0 0 0 0;">' +
                     '<div class="icon-x"></div>' +
                     '<div>' +
-                        '<h2 class="invalid">Error de Conexion</h2>' +
+                        '<h2 class="invalid">Error de Conexión</h2>' +
                     '</div>' +
                 '</div>' +
                 '<div class="invalid-message">' +
-                    'No fue posible conectar con el servidor de verificacion. Por favor intenta nuevamente en unos minutos.' +
+                    'No fue posible conectar con el servidor de verificación. Por favor intenta nuevamente en unos minutos.' +
                 '</div>' +
             '</div>';
         }
