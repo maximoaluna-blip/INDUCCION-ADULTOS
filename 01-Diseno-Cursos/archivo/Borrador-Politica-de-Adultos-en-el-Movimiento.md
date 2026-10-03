@@ -1,5 +1,7 @@
 # Diseño del Borrador (sin publicar) — 🦸 La Política de Adultos en el Movimiento
 
+> 🗄️ **Archivado el 02-10-2026 (ADR-119).** Nunca se publicó y lo reemplazaron los Niveles 1 a 3 de la línea. Sale del catálogo; este diseño y su JSON (`05-Generador-Cursos/archivo/politica-adultos.json`) quedan como histórico. **No se mantiene**: arrastra, entre otros, el defecto de privacidad que el ADR-118 corrigió en los Cursos 1 y 2 (la reflexión de la L6 pide el compromiso completo). Si algún día se reactiva, se corrige eso primero.
+
 > **Diseño reconstruido desde el JSON** el 27-09-2026 (**ADR-098**). Hasta ese día Política de Adultos no versionaba el diseño de sus cursos y `05-Generador-Cursos/borradores/politica-adultos.json` era el único original. **Este documento dice lo que quedó, no lo que se quiso**: la intención original no se conserva en ningún archivo. Desde ahora este `.md` es el diseño y el JSON su traducción: **un cambio de contenido se hace aquí primero**.
 
 ## Ficha

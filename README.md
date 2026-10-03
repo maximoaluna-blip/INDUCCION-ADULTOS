@@ -22,7 +22,7 @@ Plataforma de formación online de la **Línea Política de Adultos** de la Asoc
 | 8 | 📋 Acompañamiento y Evaluación 360° en la práctica | `evaluacion-360` | 40 min | ✅ Activo |
 | 9 | 💻 Talento 360° en la práctica | `talento-360` | 40 min | ✅ Activo |
 | 10 | 🏁 Cierre y reinicio de ciclo | `decisiones-para-el-futuro` | 40 min | ✅ Activo |
-| — | 🏛️ Política de Adultos (monográfico) | `politica-adultos` | 90 min | 📝 Borrador, sin publicar |
+| — | 🏛️ Política de Adultos (monográfico) | `politica-adultos` | 90 min | 🗄️ Archivado (ADR-119), nunca publicado |
 
 > **La línea se auditó por primera vez en la Fase 2 del ADR-023 (02-ago-2026)**, y no salió limpia: 11 críticos, 15 mayores y 26 menores. Lo más grave estaba en `competencias-esenciales` (4 de las 7 competencias tenían los grados de dominio en el peldaño equivocado, y el autodiagnóstico calificaba contra esos descriptores) y en `plan-personal` (el rol del Asesor Personal se describía al revés de lo que dice la fuente). Todo corregido y desplegado. Detalle en `AUDITORIA.md` y en `CHANGELOG-DOCTRINA.md` del repo raíz.
 

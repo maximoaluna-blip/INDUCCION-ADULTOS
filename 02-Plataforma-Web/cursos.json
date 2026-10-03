@@ -70,20 +70,6 @@
     "folder": "plan-personal"
   },
   {
-    "courseId": "politica-adultos",
-    "title": "La Política de Adultos en el Movimiento",
-    "description": "Curso introductorio sobre la Política Nacional de Adultos en el Movimiento Scout: el adulto que necesitamos, el enfoque por competencias y el ciclo de gestión del adulto. Dirigido a consejeros, dirigentes y voluntarios que asumen roles en sus grupos scouts.",
-    "icon": "🦸",
-    "duration": "1 hora 30 minutos",
-    "level": 1,
-    "levelName": "Fundamentación",
-    "order": 0,
-    "modules": 6,
-    "status": "draft",
-    "file": "politica-adultos.html",
-    "folder": "politica-adultos"
-  },
-  {
     "courseId": "vinculacion-adultos",
     "title": "Vincular nuevos adultos al grupo",
     "description": "Atracción y Vinculación contada a quien la hace: el jefe de grupo, el consejo, el comité de selección, el jefe que recibe a alguien nuevo. Cómo determinar la necesidad antes de buscar a alguien, dónde buscar, cómo seleccionar con reglas claras y revisión de antecedentes, cómo integrar en los tres primeros meses y cómo cerrar con el acuerdo mutuo y el nombramiento.",

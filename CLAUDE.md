@@ -28,7 +28,7 @@ Una de las líneas de formación digital para adultos voluntarios de la Asociaci
 
 ## Estado (ver `INDICE-PROYECTO.md` para el detalle vivo)
 
-> **Diseño versionado desde el 27-sep-2026 (ADR-098).** Cada curso tiene su `.md` en `01-Diseno-Cursos/`, y **un cambio de contenido se hace ahí primero**. ⚠️ Los diseños de los Cursos 1–5 y del borrador `politica-adultos` se **reconstruyeron desde el JSON**: dicen lo que quedó, no lo que se quiso. El Plan de Formación vigente es **`Plan-de-Formacion-Linea-Politica-de-Adultos.md`**; el `.docx` queda como histórico.
+> **Diseño versionado desde el 27-sep-2026 (ADR-098).** Cada curso tiene su `.md` en `01-Diseno-Cursos/`, y **un cambio de contenido se hace ahí primero**. ⚠️ Los diseños de los Cursos 1–5 se **reconstruyeron desde el JSON**: dicen lo que quedó, no lo que se quiso. El Plan de Formación vigente es **`Plan-de-Formacion-Linea-Politica-de-Adultos.md`**; el `.docx` queda como histórico.
 >
 > **Ninguna reflexión pide el nombre de una persona ni invita a identificar a un tercero** (regla del dueño, 27-sep-2026): se escribe por el cargo o el rol. Al barrer el Nivel 1 se corrigieron cuatro que lo hacían.
 >
@@ -40,6 +40,6 @@ Una de las líneas de formación digital para adultos voluntarios de la Asociaci
 
 > **La página que verifica los certificados vive en la RAÍZ del repo** (`verificar-certificado.html`) y se enlaza desde el pie del `index.html` — **ADR-070, 20-sep-2026**. El certificado le dice al adulto *«verifica este certificado ingresando el código en la plataforma web»*, así que la página es la otra mitad de esa promesa. ⚠️ Hasta ese día **apuntaba al backend de Rover** (1 certificado) en vez de al de la plataforma (21), así que **ningún certificado real se podía validar**; y **nadie la enlazaba desde ningún sitio**. Al tocar esa página, comprobar las dos cosas: el `SCRIPT_URL` y que siga enlazada.
 
-Estado vivo en `ESTADO.md` de la raíz (se genera con `python generar-estado.py`). **Niveles 1, 2 y 3** publicados (el 3, «Especialización por cargo», desde el ADR-107); un borrador (`politica-adultos`) sin publicar; el Nivel 4 del plan lo cubre la línea Políticas Transversales.
+Estado vivo en `ESTADO.md` de la raíz (se genera con `python generar-estado.py`). **Niveles 1, 2 y 3** publicados (el 3, «Especialización por cargo», desde el ADR-107); la v1 monolítica `politica-adultos`, que nunca se publicó, está archivada en `05-Generador-Cursos/archivo/` y `01-Diseno-Cursos/archivo/` (ADR-119): no se mantiene ni se compila; el Nivel 4 del plan lo cubre la línea Políticas Transversales.
 > **La landing agrupa por nivel desde el 17-sep-2026 (ADR-058).** Cada entrada de `cursos.json` lleva **`level`, `levelName` y `order`**, y el `index.html` los pinta en secciones plegables. **Hasta ese día esta línea no los emitía siquiera**: su `build-course.js` no los escribía y la landing era una lista plana. El `levelName` sale del **Plan de Formación** (tabla 0: «Ruta de Fundamentación»), no se inventa. ⚠️ Son **metadatos de catálogo** — no entran en el HTML del curso, así que añadirlos **no cambió ninguna página publicada**. Y nació `PRUEBAS-E2E/tests/landing.spec.js`, porque **ninguna prueba tocaba esta página**: las suites se parametrizan por el catálogo y lo que no es un curso quedaba fuera por construcción.
 

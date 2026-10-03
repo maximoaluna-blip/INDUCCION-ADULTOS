@@ -76,8 +76,7 @@ INDUCCION-ADULTOS/
 │       ├── politica-marco.json
 │       ├── ciclo-adulto.json
 │       ├── competencias-esenciales.json
-│       ├── plan-personal.json
-│       └── politica-adultos.json      ← v1 monolítica archivada (el JSON sí se versiona; su HTML y videos están gitignored, por eso no se publica)
+│       └── plan-personal.json
 │
 ├── .github/workflows/
 │   └── pruebas-e2e.yml               ← GitHub Actions: corre la suite en cada push/PR a main
@@ -98,7 +97,7 @@ INDUCCION-ADULTOS/
 | 4 | 🧠 Las 7 Competencias Esenciales | `competencias-esenciales` | 40 min | 6 | Autodiagnóstico interactivo (4 grados por competencia) + perfil cross-course versionado |
 | 5 | 🗺️ Tu Plan Personal de Desarrollo | `plan-personal` | 30 min | 6 | Plan-builder interactivo + PDF imprimible + cierre de la ruta |
 
-**Curso archivado:** `politica-adultos` (v1 monolítica de 90 min, reemplazada por la ruta).
+**Curso archivado:** `politica-adultos` (v1 monolítica de 90 min, reemplazada por la ruta; nunca publicado). Desde el ADR-119 (02-10-2026) su JSON está en `05-Generador-Cursos/archivo/` y su diseño en `01-Diseno-Cursos/archivo/`, fuera del catálogo.
 
 ## Nivel 2 — Profundización por fase del ciclo — 5 cursos (27-sep-2026, ADR-098)
 
