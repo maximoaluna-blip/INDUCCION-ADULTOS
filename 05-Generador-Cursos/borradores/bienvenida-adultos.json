@@ -3,7 +3,7 @@
   "title": "Bienvenida al Movimiento de Adultos",
   "subtitle": "Curso 1 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 45 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
-  "contentVersion": "2026-09-27",
+  "contentVersion": "2026-10-02",
   "icon": "🦸",
   "duration": "45 minutos",
   "level": 1,
@@ -580,7 +580,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Escribe tu frase de compromiso en el cuadro de reflexión más abajo. <strong>Solo una.</strong> Si te salen varias, escoge la más importante."
+          "text": "Tu frase va en el recuadro <strong>«Compromiso Personal»</strong> de tu certificado, al final del curso: ese recuadro se queda solo en este navegador. <strong>Solo una.</strong> Si te salen varias, escoge la más importante."
         },
         {
           "type": "blockquote",
@@ -597,7 +597,7 @@
         }
       ],
       "reflection": {
-        "prompt": "Escribe AQUÍ tu frase de compromiso (una sola, concreta, con plazo, sobre algo que tú puedas controlar)."
+        "prompt": "Antes de escribir tu frase en el certificado: de las tres condiciones —una acción, un plazo, algo que dependa de ti—, ¿cuál te cuesta más cumplir, y por qué?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 5",
@@ -764,5 +764,9 @@
   "certificate": {
     "courseName": "BIENVENIDA AL MOVIMIENTO DE ADULTOS",
     "description": "ha completado el Curso 1 de la Ruta de Formación de Adultos en el Movimiento, dando el primer paso para reconocer su rol, identificar sus superpoderes y comprometerse con su crecimiento dentro de la Asociación Scouts de Colombia"
+  },
+  "commitmentBox": {
+    "prompt": "Escribe aquí tu frase de compromiso: una sola, concreta, con plazo y sobre algo que tú puedas controlar.",
+    "placeholder": "Voy a… antes del…"
   }
 }

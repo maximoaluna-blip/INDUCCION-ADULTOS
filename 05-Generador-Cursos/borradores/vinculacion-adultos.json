@@ -3,7 +3,7 @@
   "title": "Vincular nuevos adultos al grupo",
   "subtitle": "Curso 6 · Nivel 2 de la Línea Política de Adultos",
   "description": "Atracción y Vinculación contada a quien la hace: el jefe de grupo, el consejo, el comité de selección, el jefe que recibe a alguien nuevo. Cómo determinar la necesidad antes de buscar a alguien, dónde buscar, cómo seleccionar con reglas claras y revisión de antecedentes, cómo integrar en los tres primeros meses y cómo cerrar con el acuerdo mutuo y el nombramiento.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-10-02",
   "icon": "🚪",
   "duration": "40 minutos",
   "level": 2,
@@ -724,7 +724,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>⏳ Cuánto dura.</strong> El <em>Compromiso de Acuerdo Mutuo</em> vigente (versión 3.0, 28 de junio de 2025) fija un tiempo <strong>máximo de dos años</strong> desde el nombramiento, prorrogable de común acuerdo como resultado de las evaluaciones del desempeño por competencias. Y el adulto acepta ser evaluado <strong>semestralmente</strong>. Lo que pasa al final lo verás en el Curso 10."
+          "text": "<strong>⏳ Cuánto dura.</strong> El <em>Compromiso de Acuerdo Mutuo</em> vigente (versión 4.0, 21 de septiembre de 2026) fija un tiempo <strong>máximo de dos años</strong> desde el nombramiento, prorrogable de común acuerdo como resultado de las evaluaciones del desempeño por competencias. Y el adulto acepta ser evaluado <strong>semestralmente</strong>. Lo que pasa al final lo verás en el Curso 10."
         },
         {
           "type": "heading",

@@ -187,3 +187,7 @@ Citadas en `policy-quote`:
 ---
 
 _Diseño reconstruido v1.0 — 27 de septiembre de 2026 (ADR-098)._
+
+## Actualización 02-10-2026 (ADR-118) — privacidad del compromiso
+
+Lección 6. El aviso de registro dice que «tu compromiso del cierre se queda solo en este navegador», pero las reflexiones viajan a la hoja: la reflexión ya no pide el compromiso completo, que pasa al recuadro «Compromiso Personal» del certificado (`commitmentBox`). Mismo patrón que DI (ADR-116) y que el inventario transversal (ADR-117). La reflexión pide la frase de la política y el **nombre** de la herramienta escogida; el día y mes van al recuadro.

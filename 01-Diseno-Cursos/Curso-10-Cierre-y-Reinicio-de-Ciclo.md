@@ -20,7 +20,7 @@ decidir, el ciclo vuelve a empezar.
 | **PNAM** §6 (p. 19) | El acompañamiento permanente mantiene la motivación y **apoya la toma de decisiones para el futuro**. |
 | ***Desempeño*** (DNAM, 2020) §5 | Las tres opciones como decisión del adulto; la evaluación orienta; el retiro **acordado**, partiendo **siempre del agradecimiento**. §3: todo el tiempo se cuenta con un PPD, con o sin insignia, siga o no en el cargo. §3.1: plan de carrera y **plan de sucesión**. §4: insignia de actualización según el nivel donde se sirve. Consejeros: su proceso no llega a retiro o reubicación. |
 | ***Guía de Acompañamiento y Evaluación*** §4.1 (Momento 3) y §4.5 | Revisión anual o de fin de periodo, más enfocada en la persona que en las metas; evaluación 360° final; reconocimientos (formación básica, perfeccionamiento continuo o labor cumplida), **solicitados por el asesor en común acuerdo con el jefe inmediato**; **acta** de la evaluación final con las decisiones, **firmada por las partes**; nuevo plan cada año. §5.1: en el retiro no continúa el proceso cíclico. |
-| ***Compromiso de Acuerdo Mutuo*** V3.0 (28-06-2025) | Máximo **dos años**, prorrogable de común acuerdo como resultado de las evaluaciones; **terminación anticipada** (mutuo acuerdo, expiración, y unilateral por causales); **parágrafo**: evaluación semestral; si no hay los resultados esperados, PPD de mejora de **seis meses**; si tras nueva evaluación no hay mejoría, el estamento **podrá** terminar el acuerdo según la PNAM. |
+| ***Compromiso de Acuerdo Mutuo*** V4.0 (21-09-2026) | Máximo **dos años**, prorrogable de común acuerdo como resultado de las evaluaciones; **terminación anticipada** (mutuo acuerdo, expiración, y unilateral por causales); **parágrafo**: evaluación semestral; si no hay los resultados esperados, PPD de mejora de **seis meses**; si tras nueva evaluación no hay mejoría, el estamento **podrá** terminar el acuerdo según la PNAM. |
 | ***Guía cómo desarrollarse en el cargo*** (2025) | Continuidad o reubicación: si la evaluación muestra desarrollo y gestión de calidad, el jefe inmediato **podría renombrarte**; si otro cargo se ajusta mejor, **hablar con el jefe sobre una reubicación**; seguir en perfeccionamiento continuo cada año. |
 | ***Atracción y Vinculación*** (2020) pp. 5 y 7 | Si el adulto no tiene el potencial para las competencias del cargo, la decisión puede ser reubicarlo donde pueda ser competente o su retiro (p. 5); los adultos retirados son **fuente externa** para buscar a quien se necesita (p. 7). |
 
@@ -113,3 +113,7 @@ recorrido que el alumno pudo no hacer; el certificado nombra la entrega del carg
 
 ---
 _Documento de diseño v1.1 — 27 de septiembre de 2026 (tras las auditorías)._
+
+## Actualización 02-10-2026 (ADR-118)
+
+Las dos citas pasan a la **versión 4.0** del *Compromiso de Acuerdo Mutuo* (21-09-2026). El término de dos años, el parágrafo (evaluación semestral, plan de mejora de seis meses, nueva evaluación) y las causales de terminación anticipada no cambiaron.

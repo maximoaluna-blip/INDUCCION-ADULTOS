@@ -3,7 +3,7 @@
   "title": "La Política — Marco y Principios",
   "subtitle": "Curso 2 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecciones cortas vas a entender qué dice la Política Nacional de Adultos, a quién aplica, cuáles son sus principios y qué herramientas trae para acompañarte. Sin tecnicismos: con ejemplos del día a día de un grupo scout.",
-  "contentVersion": "2026-09-27",
+  "contentVersion": "2026-10-02",
   "icon": "📜",
   "duration": "30 minutos",
   "level": 1,
@@ -634,7 +634,7 @@
         }
       ],
       "reflection": {
-        "prompt": "Dos cosas, cortas. (1) Tu frase: la política en un renglón, con tus palabras. (2) Tu compromiso: de las 12 herramientas, escoge UNA que vas a buscar o poner sobre la mesa de tu consejo, y ponle día y mes. Por ejemplo: 'Antes del 30 busco el Manual de Cargos y leo el perfil del mío'."
+        "prompt": "Dos cosas, cortas. (1) Tu frase: la política en un renglón, con tus palabras. (2) De las 12 herramientas, anota cuál escogiste (solo el nombre). El compromiso completo, con día y mes, lo escribes en el recuadro «Compromiso Personal» de tu certificado."
       },
       "quiz": {
         "title": "Mini-quiz Lección 6 — Cierre del curso",
@@ -706,5 +706,9 @@
   "certificate": {
     "courseName": "LA POLÍTICA — MARCO Y PRINCIPIOS",
     "description": "ha completado el Curso 2 de la Ruta de Formación de Adultos en el Movimiento, comprendiendo el marco, los sujetos, los 13 principios y las 12 herramientas oficiales de la Política Nacional de Adultos en el Movimiento de la Asociación Scouts de Colombia"
+  },
+  "commitmentBox": {
+    "prompt": "Escribe la herramienta que escogiste, qué vas a hacer con ella y el día y mes:",
+    "placeholder": "Antes del 30 busco el Manual de Cargos y leo el perfil del mío"
   }
 }

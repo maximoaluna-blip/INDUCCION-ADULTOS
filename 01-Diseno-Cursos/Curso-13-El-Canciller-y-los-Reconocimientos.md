@@ -26,7 +26,7 @@ del Consejo**: sin Canciller, la solicitud la envía el Jefe de Grupo, y los tre
 
 1. **Quién aprueba hoy.** El manual de 2020 dice «la Corte de Honor Nacional»; el Estatuto 2025 pone la aprobación en la
    **Cancillería Nacional** y deja a la Corte lo disciplinario. El curso enseña lo vigente por rango (Estatuto) y dice que el
-   manual está en actualización: **confirmar el canal** antes de enviar.
+   manual está en actualización. El canal lo fija el Comunicado CANC-2026-001 (ver la actualización del 02-10-2026).
 2. **El año de periodo** solo está en el Reglamento de Grupos (2013), cuyas disposiciones de cargo están suspendidas: se dice con
    su fuente, sin darlo por vigente.
 3. **No es un cargo disciplinario.** El Reglamento pone «Cancillería» en el título del capítulo disciplinario, pero la ficha no
@@ -113,3 +113,7 @@ personaje pasa de «Gloria» a **Marta** (Gloria ya es la asesora del Curso 7).
 
 ---
 _Documento de diseño v1.1 — 28 de septiembre de 2026 (tras las auditorías). v1.0 — 28 de septiembre de 2026._
+
+## Actualización 02-10-2026 (ADR-118) — el canal ya tiene fuente
+
+La auditoría dejó como no verificable a quién se dirige hoy la solicitud nacional, y la L5 pedía «confirmar el canal». La página de la Cancillería Nacional publica el **Comunicado CANC-2026-001** (6-02-2026), dirigido a Jefes de Grupo, Cancilleres de Grupo y Jefes Regionales: las postulaciones a estímulos nacionales van por los canales oficiales de la Cancillería —un formulario de postulación— y ella se reúne cada quince días a evaluarlas. Y la **Circular C.S.N. 2026-047** (3-06-2026): las condecoraciones nacionales tienen costo y el flete lo asume el nivel que hace la solicitud. La L5 enlaza la página de la Cancillería, no el formulario externo, y no da cifras (cambian). Sigue abierto quién aprueba la condecoración propia de un grupo.

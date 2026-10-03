@@ -3,7 +3,7 @@
   "title": "El Canciller y los reconocimientos",
   "subtitle": "Curso 13 · Nivel 3 de la Línea Política de Adultos",
   "description": "La ficha del Canciller de Grupo y lo que la rodea: un cargo para agradecer, custodiar y registrar lo que el grupo entrega, tramitar hacia arriba lo que decide el comité de estímulos, elegir el estímulo nacional que corresponde, saber quién aprueba hoy y reconocer a tiempo y con reserva. Sirve también al Jefe de Grupo y al Presidente del Consejo.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-10-02",
   "icon": "🎖️",
   "duration": "40 minutos",
   "level": 3,
@@ -419,7 +419,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🔎 Antes de enviar, confirma el canal.</strong> El Reglamento Nacional de 2026 deja sin efecto lo que lo contradiga y da un año para actualizar los manuales. Mientras el <em>Manual de Estímulos</em> se actualiza, tramita tu solicitud ante el nivel nacional y confirma con tu Región o con la Cancillería Nacional a quién va dirigida."
+          "text": "<strong>📮 Cómo se envía.</strong> La Cancillería Nacional les informó a los Jefes de Grupo, a los Cancilleres de Grupo y a los Jefes Regionales que las postulaciones a estímulos nacionales van por los canales oficiales que ella dispone —un formulario de postulación— y que se reúne <strong>cada quince días</strong> a evaluarlas (Comunicado CANC-2026-001). El formulario y el correo están en la <a href=\"https://scout.org.co/quienes-somos/cancilleria-nacional/\" target=\"_blank\" rel=\"noopener\">página de la Cancillería Nacional</a>. Ten en cuenta también que las condecoraciones nacionales tienen un costo, y que el envío lo asume el nivel que hace la solicitud (Circular C.S.N. 2026-047). El <em>Manual de Estímulos</em> sigue siendo de 2020: los requisitos de cada estímulo salen de ahí."
         },
         {
           "type": "info-box",
