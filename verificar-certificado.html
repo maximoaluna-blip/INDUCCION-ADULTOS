@@ -705,6 +705,14 @@
             }
         });
 
+        // ADR-128: el pie del certificado en PDF enlaza aqui con ?codigo=ASC-...;
+        // si viene, se pone en el campo y se verifica sin que nadie escriba nada.
+        var codigoEnlace = new URLSearchParams(location.search).get('codigo');
+        if (codigoEnlace) {
+            input.value = codigoEnlace.trim().toUpperCase();
+            setTimeout(verificarCertificado, 0);
+        }
+
         // Auto-trim on paste
         input.addEventListener('paste', function() {
             setTimeout(function() {
@@ -737,8 +745,11 @@
                     return response.json();
                 })
                 .then(function(data) {
-                    if (data.success) {
-                        resultArea.innerHTML = renderValid(data, code);
+                    // El backend responde {success:true, data:{valid:false}} cuando el codigo NO
+                    // existe: success solo dice que la consulta corrio. Hasta el ADR-128 la
+                    // pagina miraba solo success y daba por valido cualquier codigo bien escrito.
+                    if (data.success && data.data && data.data.valid === true) {
+                        resultArea.innerHTML = renderValid(data.data, code);
                     } else {
                         resultArea.innerHTML = renderInvalid();
                     }
@@ -762,11 +773,13 @@
 
         function renderValid(data, code) {
             var fields = [
-                { label: 'Nombre del participante', value: data.nombre || '---', highlight: true },
-                { label: 'Curso completado', value: data.curso || '---', highlight: false },
-                { label: 'Fecha de emision', value: data.fecha || '---', highlight: false },
-                { label: 'Puntuacion', value: data.puntuacion || '---', highlight: false },
-                { label: 'Grupo Scout', value: data.grupo || '---', highlight: false },
+                // Nombres de campo del backend (handleVerify): studentName, course, group,
+                // region, completionDate, score. Antes leia nombre/curso/fecha/... (ADR-128).
+                { label: 'Nombre del participante', value: data.studentName || '---', highlight: true },
+                { label: 'Curso completado', value: data.course || '---', highlight: false },
+                { label: 'Fecha de emision', value: data.completionDate ? String(data.completionDate).slice(0, 10) : '---', highlight: false },
+                { label: 'Puntuacion', value: (data.score !== undefined && data.score !== '') ? String(data.score) + (/%$/.test(String(data.score)) ? '' : ' %') : '---', highlight: false },
+                { label: 'Grupo Scout', value: data.group || '---', highlight: false },
                 { label: 'Region', value: data.region || '---', highlight: false }
             ];
 
