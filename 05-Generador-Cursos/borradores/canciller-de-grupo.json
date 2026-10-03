@@ -201,7 +201,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🏵️ ¿Una condecoración propia del grupo?</strong> Se puede. El <em>Manual de la Orden al Mérito Scout</em> (2024) guía a grupos y regiones para crear la suya. Ese manual dice que la aprueba la Corte de Honor, y el Reglamento Nacional de 2026 le da a la Cancillería Nacional aprobar la creación de condecoraciones: consulta antes de empezar. Lo que ese manual trae de grados, collares y plazos es el ejemplo de un grupo, no una regla."
+          "text": "<strong>🏵️ ¿Una condecoración propia del grupo?</strong> Se puede, y el Reglamento Nacional de 2026 pide promoverlas. El <em>Manual de la Orden al Mérito Scout</em> (2024) es la guía para crearla. Hoy su creación, y cualquier cambio después, la aprueba la <strong>Cancillería Nacional</strong>, que además acompaña a las cancillerías de grupo en el proceso (RN 2026, Arts. 177 y 179). El manual dice «Corte de Honor» porque se escribió cuando la cancillería funcionaba dentro de ella, y el Reglamento deja sin efecto lo que lo contradiga (Art. 246). Ya aprobada, a quién se otorga se decide dentro del grupo, en el comité de estímulos y de otorgamiento (Reglamento de Grupos, Art. 8.8) y según el reglamento aprobado. Lo que el manual trae de grados, collares y plazos es el ejemplo de un grupo, no una regla."
         },
         {
           "type": "paragraph",
@@ -439,11 +439,11 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Antes de enviar una solicitud, la Canciller propone preguntar a la Región a quién va dirigida. El Jefe de Grupo dice que no hace falta: «el manual de 2020 dice que va a la Corte de Honor». ¿Quién tiene razón?",
+            "text": "La condecoración propia del grupo ya tiene su reglamento aprobado por la Cancillería Nacional, y el comité de estímulos acordó otorgarla a un dirigente. ¿Qué hace ahora la Canciller?",
             "options": [
-              "La Canciller: después de ese manual cambió quién aprueba, así que vale la pena preguntar.",
-              "El Jefe de Grupo: mientras el manual no se actualice, la Corte de Honor sigue aprobando.",
-              "Los dos a medias: la Corte aprueba y la Cancillería Nacional lleva el registro nacional."
+              "Otorgarla según el reglamento del grupo: aprobado este, a quién se da lo decide el comité.",
+              "Enviar el nombre a la Cancillería Nacional, porque hoy cada otorgamiento lo aprueba ella.",
+              "Revisar que el dirigente cumpla los grados y plazos que fija el Manual de la Orden al Mérito."
             ],
             "correctIndex": 0
           },
