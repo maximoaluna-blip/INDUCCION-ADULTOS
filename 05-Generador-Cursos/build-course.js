@@ -548,8 +548,15 @@ function buildRegistrationModule(course) {
             </div>`;
 }
 
+// Numeración de la cabecera «Lección N de M» (ADR-134): la misma que el curso usa en su
+// texto. true = la Bienvenida es la Lección 1 (DI, PJ); false = la primera de contenido (PA, PT, Rover).
+const LA_BIENVENIDA_ES_LECCION_1 = false;
+
 function buildContentModule(mod, course, contentIndex, totalContent, isLast) {
-    const badge = mod.isIntro ? '' : `\n                <div class="badge">Módulo ${contentIndex}/${totalContent}</div>`;
+    const nLeccion = LA_BIENVENIDA_ES_LECCION_1 ? contentIndex + 1 : contentIndex;
+    const totalLecciones = LA_BIENVENIDA_ES_LECCION_1 ? totalContent + 1 : totalContent;
+    const badge = (mod.isIntro && !LA_BIENVENIDA_ES_LECCION_1) ? '' :
+        `\n                <div class="badge">Lección ${nLeccion} de ${totalLecciones}</div>`;
 
     const sectionsHtml = mod.sections.map(s => renderSection(s)).join('\n\n                ');
 
