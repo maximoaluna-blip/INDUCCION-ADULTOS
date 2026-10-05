@@ -2557,6 +2557,7 @@ function checkQuiz(moduleNum) {
         });
 
         showNotification('¡Excelente! Obtuviste ' + score + '% ✅');
+        mostrarResultadoQuiz(moduleNum, '¡Excelente! Obtuviste ' + score + '% ✅');
         sendToGoogleSheets({
             action: 'quiz', name: userProfile.fullName, email: userProfile.email,
             module: moduleNum, score: score, course: COURSE_CONFIG.courseId
@@ -2567,8 +2568,10 @@ function checkQuiz(moduleNum) {
         var cuales = falladas.length === 1
             ? 'Fallaste la pregunta ' + falladas[0]
             : 'Fallaste las preguntas ' + falladas.slice(0, -1).join(', ') + ' y ' + falladas[falladas.length - 1];
-        showNotification(cuales + '. Revisa ' + (falladas.length === 1 ? 'esa parte' : 'esas partes') +
-            ' de la lección y vuelve a intentarlo; puedes hacerlo las veces que quieras.', 'warning');
+        var aviso = cuales + '. Revisa ' + (falladas.length === 1 ? 'esa parte' : 'esas partes') +
+            ' de la lección y vuelve a intentarlo; puedes hacerlo las veces que quieras.';
+        showNotification(aviso, 'warning');
+        mostrarResultadoQuiz(moduleNum, aviso, 'warning');
         // No auto-reset: en cuanto el usuario hace clic en una opcion, selectOption() limpia las marcas
         // de esa pregunta y vuelve a mostrar el boton "Verificar". Esto evita que un reset por tiempo
         // borrara la nueva seleccion del usuario antes de que pulsara verificar.
@@ -2642,11 +2645,46 @@ function showNotification(message, type) {
     n.className = 'notification';
     if (type === 'warning') n.style.background = '#FF9800';
     n.textContent = message;
+    // ADR-135: en el celular, abajo y a lo ancho, encima del selector de lecciones; arriba tapaba
+    // el encabezado y el comienzo del texto.
+    if (window.innerWidth <= 600) {
+        n.style.top = 'auto';
+        n.style.bottom = '90px';
+        n.style.left = '12px';
+        n.style.right = '12px';
+        n.style.maxWidth = 'none';
+    }
     document.body.appendChild(n);
+    // ADR-135: dura según el largo (mínimo 3 s; unos 6 s el aviso de fallo): con 3 s fijos, un
+    // aviso de 23 palabras desaparecía antes de poder leerlo.
+    var dura = Math.max(3000, Math.min(8000, String(message).length * 55));
     setTimeout(function () {
         n.style.animation = 'slideOut 0.3s';
         setTimeout(function () { n.remove(); }, 300);
-    }, 3000);
+    }, dura);
+}
+
+// ADR-135: el resultado del quiz queda escrito DENTRO del quiz, bajo el botón Verificar, hasta el
+// siguiente intento. El aviso flotante se va solo; este no, para que se pueda releer.
+function mostrarResultadoQuiz(moduleNum, texto, tipo) {
+    var cont = document.querySelector('#module-' + moduleNum + ' .quiz-container');
+    if (!cont) return;
+    var r = cont.querySelector('.quiz-resultado');
+    if (!r) {
+        r = document.createElement('div');
+        r.className = 'quiz-resultado';
+        r.setAttribute('role', 'status');
+        r.setAttribute('aria-live', 'polite');
+        r.style.cssText = 'margin-top: 14px; padding: 12px 14px; border-radius: 6px; font-weight: 600; line-height: 1.45;';
+        var boton = document.getElementById('checkBtn-' + moduleNum);
+        if (boton && boton.parentNode === cont) cont.insertBefore(r, boton.nextSibling);
+        else cont.appendChild(r);
+    }
+    var ok = tipo !== 'warning';
+    r.style.background = ok ? '#e8f5e9' : '#fff3e0';
+    r.style.color = ok ? '#1b5e20' : '#5d3200';
+    r.style.borderLeft = '4px solid ' + (ok ? '#2e7d32' : '#e65100');
+    r.textContent = texto;
 }
 
 // --- Reflexiones ---
