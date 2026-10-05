@@ -96,4 +96,21 @@ test.describe('@solo-escritorio feedback del quiz (ADR-061, ADR-127)', () => {
       ).toEqual([]);
     });
   }
+
+  // ADR-138: el aviso de fallo tiene que leerse. Blanco sobre #FF9800 daba 2,2:1 (WCAG AA pide 4,5:1).
+  test('el aviso de fallo tiene contraste AA', async ({ page }) => {
+    await page.goto(LISTA[0].file, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => typeof showNotification === 'function');
+    const ratio = await page.evaluate(() => {
+      showNotification('Fallaste la pregunta 2. Revisa esa parte de la lección.', 'warning');
+      const n = document.querySelector('.notification');
+      const cs = getComputedStyle(n);
+      const rgb = (c) => c.match(/\d+(\.\d+)?/g).slice(0, 3).map(Number);
+      const lum = ([r, g, b]) => [r, g, b].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); })
+        .reduce((acc, v, k) => acc + v * [0.2126, 0.7152, 0.0722][k], 0);
+      const a = lum(rgb(cs.color)), b = lum(rgb(cs.backgroundColor));
+      return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+    });
+    expect(ratio, `contraste del aviso de fallo: ${ratio.toFixed(2)}:1`).toBeGreaterThanOrEqual(4.5);
+  });
 });

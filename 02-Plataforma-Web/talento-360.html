@@ -2643,7 +2643,7 @@ function unlockAchievement(achievementId) {
 function showNotification(message, type) {
     var n = document.createElement('div');
     n.className = 'notification';
-    if (type === 'warning') n.style.background = '#FF9800';
+    if (type === 'warning') n.style.background = '#B34700';   // ADR-138: blanco sobre #FF9800 daba 2,2:1; este da ≈5,5:1 (AA)
     n.textContent = message;
     // ADR-135: en el celular, abajo y a lo ancho, encima del selector de lecciones; arriba tapaba
     // el encabezado y el comienzo del texto.
