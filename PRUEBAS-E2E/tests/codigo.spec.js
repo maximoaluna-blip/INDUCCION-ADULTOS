@@ -127,6 +127,14 @@ test.describe('Calidad de codigo (AUDITORIA.md mecanico)', () => {
     ).toMatch(/unlockOnModule === -1\)\s*unlockAchievement\(ach\.id\)/);
   });
 
+  test('«Recuperar mi avance» escribe sus avisos con contraste AA (adenda del ADR-138)', () => {
+    // Sobre blanco, #FF9800 daba 2,16:1 y #f44336 3,68:1; #B34700 da 5,50:1 y #C62828 5,62:1.
+    const linea = leer(path.join(TEMPLATES, 'engine.linea.js'));
+    expect(linea).toContain('color: #B34700; font-weight: 600;">⚠️ ');
+    expect(linea).toContain('color: #C62828; font-weight: 600;">❌ Error al conectar');
+    expect(linea).not.toMatch(/color: #(FF9800|f44336)/i);
+  });
+
   // --- C. Performance -------------------------------------------------------
   test('ningun curso compilado supera los 500 KB', () => {
     if (!fs.existsSync(WEB)) test.skip();
