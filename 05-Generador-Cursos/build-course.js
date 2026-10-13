@@ -199,15 +199,23 @@ function checkExtremoLongitud(course) {
     return { total, culpables };
 }
 
-// 2. Paralelismo de apertura: si exactamente dos opciones comparten primera palabra y
-//    la tercera -la distinta- es la correcta, se acierta sin leer. Vale igual para la
-//    polaridad en preguntas de si/no: dos opciones deben compartir la de la correcta.
+// 2. Paralelismo de apertura: si los distractores comparten su apertura y la correcta
+//    -la distinta- se separa antes, se acierta sin leer. Vale igual para la polaridad en
+//    preguntas de si/no: dos opciones deben compartir la de la correcta.
+//    La apertura se mide hasta 4 palabras (ADR-102): en el Curso 13 los distractores
+//    compartian «Proponer al Consejo...» y la correcta no, y la primera palabra sola no
+//    lo veia. Si la correcta se separa en la primera palabra, se avisa como siempre (si/no
+//    incluido). Si se separa despues, solo cuando los distractores comparten MAS palabras
+//    con contenido que la correcta: «nombrar el...» frente a «nombrar la...» no es pista.
+const VACIAS_OVEJA = new Set(['el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'lo', 'al', 'del',
+    'de', 'a', 'en', 'por', 'para', 'con', 'que', 'y', 'o', 'ni', 'se', 'le', 'les', 'su', 'sus', 'mi',
+    'tu', 'es', 'como', 'pero', 'ya', 'más', 'este', 'esta', 'ese', 'esa']);
 function checkOvejaNegra(course) {
+    const MAX_PALABRAS = 4;
     const stripHtml = (s) => String(s).replace(/<[^>]*>/g, '');
-    const primeraPalabra = (s) => {
-        const t = stripHtml(s).trim().toLowerCase().replace(/^[^\wáéíóúñ]+/, '');
-        return (t.split(/[\s,:.;]+/)[0] || '');
-    };
+    const palabras = (s) => stripHtml(s).trim().toLowerCase().replace(/^[^\wáéíóúñ]+/, '')
+        .split(/[\s,:.;]+/).filter(Boolean).slice(0, MAX_PALABRAS);
+    const comun = (a, b) => { let n = 0; while (n < a.length && n < b.length && a[n] === b[n]) n++; return n; };
     const culpables = [];
     let total = 0;
     (course.modules || []).forEach(mod => {
@@ -215,12 +223,17 @@ function checkOvejaNegra(course) {
         mod.quiz.questions.forEach((q, qi) => {
             if (!q.options || q.options.length < 3 || q.correctIndex === undefined) return;
             total++;
-            const ini = q.options.map(primeraPalabra);
-            const otras = ini.filter((_, i) => i !== q.correctIndex);
-            const todasOtrasIguales = otras.every(x => x === otras[0]);
-            if (todasOtrasIguales && ini[q.correctIndex] !== otras[0]) {
-                culpables.push({ mod: mod.id, qi, correcta: ini[q.correctIndex], otras: otras[0] });
-            }
+            const ps = q.options.map(palabras);
+            const otras = ps.filter((_, i) => i !== q.correctIndex);
+            const correcta = ps[q.correctIndex];
+            // Palabras que comparten TODOS los distractores, y hasta donde los acompana la correcta.
+            const d = otras.slice(1).reduce((m, o) => Math.min(m, comun(otras[0], o)), otras[0].length);
+            const c = Math.min(...otras.map(o => comun(correcta, o)));
+            if (d === 0 || c >= d) return;
+            const prefijo = otras[0].slice(0, d);
+            const conContenido = (ws) => ws.filter(w => !VACIAS_OVEJA.has(w)).length;
+            if (c > 0 && conContenido(prefijo) <= conContenido(correcta.slice(0, c))) return;
+            culpables.push({ mod: mod.id, qi, correcta: correcta.slice(0, c + 1).join(' '), otras: prefijo.join(' '), palabras: d });
         });
     });
     return { total, culpables };
@@ -265,11 +278,11 @@ if (extremo.culpables.length > 0) {
 
 const oveja = checkOvejaNegra(course);
 if (oveja.culpables.length > 0) {
-    console.warn(`⚠️  Oveja negra: en ${oveja.culpables.length}/${oveja.total} preguntas la correcta es la UNICA que empieza distinto.`);
+    console.warn(`⚠️  Oveja negra: en ${oveja.culpables.length}/${oveja.total} preguntas la correcta es la UNICA que empieza distinto (primera palabra o prefijo de hasta 4).`);
     console.warn('   Se acierta sin leer: basta elegir la que no se parece a las otras dos.');
     console.warn('   Que dos opciones compartan la apertura -y la polaridad- de la correcta.');
     oveja.culpables.slice(0, 5).forEach(c =>
-        console.warn(`   - Modulo ${c.mod}, pregunta ${c.qi + 1}: correcta empieza por "${c.correcta}", las otras dos por "${c.otras}"`));
+        console.warn(`   - Modulo ${c.mod}, pregunta ${c.qi + 1}: las otras dos empiezan por "${c.otras}" (${c.palabras} palabra${c.palabras > 1 ? 's' : ''}) y la correcta por "${c.correcta}"`));
     if (oveja.culpables.length > 5) console.warn(`   ... y ${oveja.culpables.length - 5} mas`);
 }
 
