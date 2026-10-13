@@ -34,7 +34,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
 ### 🏠 Bienvenida  (`Inicio`, módulo 1)
 
 - **Subtemas:** 🎯 Al terminar este curso vas a… · 📚 Las 6 lecciones
-- `info-box` — Una pregunta antes de empezar. ¿Cuándo termina tu nombramiento actual? ¿Quién te acompaña? ¿Qué pasa el día que decidas parar? Si no supiste responder alguna, no es culpa tuya: en muchos grupos los adultos entran sin cl…
+- `info-box` — Una pregunta antes de empezar. ¿Cuándo termina tu nombramiento actual? ¿Quién te acompaña? ¿Qué pasa el día que decidas parar? Si todavía no te han nombrado, cámbialas por estas: ¿cómo se entra?, ¿quién me va a acompañar?, ¿cuánto dura? Este curso responde las dos versiones. Si no supiste responder alguna, no es culpa tuya: en muchos grupos los adultos entran sin cl…
 - `info-box` — Bienvenido/a al Curso 3. Si vienes del Curso 2 ya tienes el marco. Antes de entrar al detalle de competencias (Curso 4) y plan personal (Curso 5), aquí vas a ver el panorama completo: cómo se vive un nombramiento de pri…
 - `paragraph` — El concepto clave es 'ciclo de vida del adulto'. La política lo dice así porque tu rol en un cargo no es estático: tiene un inicio, un desarrollo y un cierre — y cada fase tiene procesos formales que conviene conocer.
 - `paragraph` — Este curso es conceptual y panorámico. Cuando llegues al Curso 4 (Competencias) vas a saber que las competencias se desarrollan durante la fase de Desempeño del ciclo. Cuando llegues al Curso 5 (Plan Personal) vas a sab…
@@ -58,7 +58,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
      - En Decisiones para el Futuro: todavía nadie la ha evaluado.
   2. Don Álvaro lleva 22 años en el grupo y este año lo nombraron intendente. Además es dirigente de la tropa. ¿Cómo está su situación frente al ciclo?
      - Tiene un solo ciclo: el de sus 22 años en el movimiento.
-     - Tiene dos ciclos abiertos en paralelo, uno por cada nombramiento, y ambos arrancan de cero. ✅
+     - Tiene dos ciclos abiertos en paralelo, uno por cada nombramiento: el de intendente empieza ahora. ✅
      - No aplica el ciclo: con esa trayectoria ya no necesita acuerdo mutuo ni plan personal.
 
 ### 🚪 Lección 2 — Atracción y Vinculación  (`L2`, módulo 3)
@@ -70,7 +70,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
 - `info-box` — 📋 Los 4 trámites de la Integración (los mismos para todos, sea cual sea tu cargo): 1. Tu hoja de vida en Talento 360° 2. Tu registro en SiScout 3. El curso de inducción general 4. Los 4 módulos de A Salvo del Peligro —…
 - `info-box` — 💡 ¿Qué cambia para ti como adulto en un cargo actual? Si tu vinculación NO siguió este proceso, no es tarde. Puedes pedirle a tu jefe inmediato una conversación clara sobre lo que se espera de ti y firmar el Acuerdo Mut…
 - `policy-quote` — «El proceso de atracción y vinculación de los adultos comprende: Determinación de necesidades — Identificación de las competencias requeridas — Búsqueda y Selección — Integración — Establecimiento de compromiso, acuerdo mutuo y nombramiento.» — *Política Nacional de Adultos en el Movimiento, Cap. 5.1, p. 11*
-- **Reflexión:** «Pensando en cómo TÚ entraste a tu cargo actual: ¿cuáles de las 5 sub-fases se cumplieron y cuáles no? ¿Eso explica algún reto que has vivido?»
+- **Reflexión:** «Pensando en cómo TÚ entraste a tu cargo actual, o en cómo estás entrando ahora si aún no te han nombrado: ¿cuáles de las 5 sub-fases se cumplieron y cuáles no? ¿Eso explica algún reto que has vivido?»
 - **Quiz** (2 preguntas):
   1. Llega Patricia al consejo como nueva secretaria. En su segunda reunión el jefe de grupo le pide que presente el informe anual completo. Según el proceso de vinculación, ¿qué está fallando?
      - Nada: si aceptó el cargo, debe responder por sus funciones desde el primer día.
@@ -84,7 +84,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
 ### 🎓 Lección 3 — Desempeño: formación básica + continua  (`L3`, módulo 4)
 
 - **Subtemas:** 🪜 Los dos momentos de la formación · 🪵 La Insignia de Madera · 📋 ¿Cómo se compone la formación básica?
-- `info-box` — ⏱️ 6 minutos · 1 idea central: La formación de un adulto NO termina cuando le entregan la Insignia de Madera. Hay dos momentos formativos distintos: formación básica para desempeñar el cargo, y perfeccionamiento continu…
+- `info-box` — ⏱️ 6 minutos · 1 idea central: La formación de un adulto NO termina cuando le entregan la Insignia de Madera (el reconocimiento oficial de la formación básica, que verás en esta lección). Hay dos momentos formativos distintos: formación básica para desempeñar el cargo, y perfeccionamiento continu…
 - `method-grid` (2) — 🎯 Formación Básica · 🔄 Perfeccionamiento Continuo
 - `paragraph` — La Insignia de Madera es el símbolo oficial mundial que se entrega al adulto que ha completado su formación básica. NO es por asistir a cursos — es por demostrar las competencias en la práctica a través de evaluación 36…
 - `blockquote` — La Insignia de Madera no se gana con horas de aula. Se gana con conductas observables sostenidas en el tiempo.
@@ -142,7 +142,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
 - `paragraph` — La política pide que, sea cual sea la decisión, siempre se considere el reconocimiento y el agradecimiento formal a tu servicio. No es un trámite opcional que se olvida: es parte del cierre.
 - `blockquote` — Un grupo que sabe agradecer es un grupo al que la gente vuelve. Aunque sea en otro rol, en otro tiempo.
 - `policy-quote` — «El ciclo de vida del adulto en un cargo o función culmina con una evaluación final, al término de su nombramiento, que permitirá tomar la decisión más acertada para el futuro, y que puede ser: La renovación del nombramiento del adulto en el mismo cargo o func…» — *Política Nacional de Adultos en el Movimiento, Cap. 5.3 'Decisiones para el Futuro', p. 18*
-- **Reflexión:** «¿Qué día termina tu nombramiento actual? Escribe la fecha. Si no la sabes —le pasa a la mayoría—, escribe a quién se la vas a preguntar y cuándo. Y después: de las 3 opciones, ¿cuál querrías que pasara ese día, y qué tendrías que empezar a hacer desde hoy para que pase?»
+- **Reflexión:** «¿Qué día termina tu nombramiento actual? Escribe la fecha. Si no la sabes —le pasa a la mayoría—, escribe a quién se la vas a preguntar y cuándo. Si todavía no tienes nombramiento, escribe cuánto tiempo te gustaría comprometerte y a quién se lo vas a preguntar antes de firmar. Y después: de las 3 opciones, ¿cuál querrías que pasara ese día, y qué tendrías que empezar a hacer desde hoy para que pase?»
 - **Quiz** (3 preguntas):
   1. A Juliana no le está funcionando ser secretaria del consejo: no tiene el tiempo que el cargo pide, pero quiere seguir en el grupo. Según la política, ¿cuál es el camino?
      - Retiro: si no puede con el cargo, sale del grupo.
@@ -164,7 +164,7 @@ El panorama del sistema completo. Cómo se vive un nombramiento de principio a f
 - `timeline` (5) — 🦸 Curso 1 — Bienvenida al Movimiento de Adultos · 📜 Curso 2 — La Política — Marco y Principios · 🔄 Curso 3 — El Ciclo del Adulto (estás aquí) · 🧠 Curso 4 — Las 7 Competencias Esenciales · 🗺️ Curso 5 — Tu Plan Personal de Desarrollo
 - `list` (3) — Cuando llegues al Curso 4 (Competencias), vas a saber que las compete… · Cuando llegues al Curso 5 (Plan Personal), vas a saber que tu plan es… · Si en el futuro asumes otro cargo, sabrás que arranca un nuevo ciclo…
 - `blockquote` — Sin el panorama, las piezas son objetos sueltos. Con el panorama, son partes de un sistema que tiene sentido.
-- `info-box` — 🚀 Recomendación: aprovecha el momentum y continúa al Curso 4. Te tomará ~35 minutos y, al terminar, tendrás tu propio perfil de competencias con fortalezas y áreas de oportunidad — listo para conectarse con tu Plan Pers…
+- `info-box` — 🚀 Recomendación: aprovecha el momentum y continúa al Curso 4. Te tomará ~40 minutos y, al terminar, tendrás tu propio perfil de competencias con fortalezas y áreas de oportunidad — listo para conectarse con tu Plan Pers…
 - `mission-box` — 🎯 Tu misión de esta semana — elige UNA y ponle día: • Averigua en qué fecha vence tu nombramiento actual. Pregúntale a tu jefe de grupo. • Si nunca firmaste tu Acuerdo Mutuo, pide la conversación. Nunca es tarde: firmar…
 - `blockquote` — Ahora sabes cómo entras, quién te acompaña y qué pasa al final. Nadie debería entrar sin claridad, servir sin acompañamiento ni irse sin reconocimiento — y menos tú.
 - **Reflexión:** «Después de ver el ciclo completo: ¿en qué fase del ciclo estás tú HOY (atracción y vinculación / desempeño / decisiones para el futuro)? ¿Eso te ayuda a entender mejor lo que estás viviendo?»

@@ -18,7 +18,7 @@
 
 ## Propósito
 
-Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~35 min, 6 lecciones cortas.
+Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~40 min, 6 lecciones cortas.
 
 ## Logros
 
@@ -34,7 +34,7 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
 
 - **Subtemas:** 🎯 Al terminar este curso vas a… · 📚 Las 6 lecciones
 - `info-box` — Bienvenido/a al Curso 4. Aquí vas a conocer en detalle las 7 competencias esenciales que la política espera de todo adulto del movimiento. Al final vas a hacer tu propio autodiagnóstico y salir con 2-3 prioridades concr…
-- `paragraph` — Te nombraron y nadie te entregó la lista. Pero la lista existe: son 7 competencias, cada una con 4 peldaños, y algún día alguien te va a evaluar con ellas — tu asesor, el consejo, la región. La mayoría de los adultos de…
+- `paragraph` — Te nombraron y nadie te entregó la lista. Y si todavía no te nombran, mejor: la vas a conocer antes. La lista existe: son 7 competencias, cada una con 4 peldaños, y algún día alguien te va a evaluar con ellas — tu asesor, el consejo, la región. La mayoría de los adultos de…
 - `paragraph` — Si vienes del Curso 2 ya tienes el marco. Aquí lo aterrizamos: qué se espera de ti, en qué grados, y dónde estás tú hoy.
 - `list` (5) — Distinguir los 4 grados y explicar en qué se diferencia uno del sigui… · Clasificar una competencia como esencial o específica y decir a quién… · Ubicar una conducta concreta en el grado que le corresponde · Autoevaluarte en las 7 con criterios observables · Priorizar 2-3 áreas y llevarlas al Curso 5
 - `timeline` (6) — Lección 1 — Cómo se mide una competencia · Lección 2 — Hacia TI mismo (3 competencias) · Lección 3 — Hacia el MOVIMIENTO (2 competencias) · Lección 4 — Hacia el EQUIPO (2 competencias) · Lección 5 — Tu autodiagnóstico · Lección 6 — Tus prioridades + cierre
@@ -95,10 +95,10 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
      - Tiene muchos años en el movimiento y ya pasó por varias ramas y cargos distintos
      - Busca nuevos conocimientos y formula su plan personal de desarrollo ✅
      - Participa en todos los campamentos y actividades que programa el grupo
-  3. Marcela es tesorera del grupo. Cuando el consejo cambió el sistema de cuotas ella no estuvo de acuerdo, pero se sentó a entender por qué se hacía y terminó apoyándolo. Todavía no propone ajustes ni ayuda a los demás a acomodarse. ¿En qué grado de Adaptabilidad al cambio la ubicarías hoy?
+  3. Marcela es tesorera del grupo. Cuando el consejo cambió el sistema de cuotas ella no estuvo de acuerdo, pero se sentó a entender por qué se hacía y hoy lo aplica sin quejarse. Todavía no lo defiende ante otros, no asume tareas nuevas por el cambio ni propone ajustes. ¿En qué grado de Adaptabilidad al cambio la ubicarías hoy?
      - Grado 1 — acepta otras formas de hacer las cosas e investiga el cambio ✅
      - Grado 3 — se anticipa a los cambios y ajusta por su cuenta las actividades del grupo
-     - Grado 4 — crea nuevos modelos y métodos de trabajo para todo el grupo
+     - Grado 2 — se suma: apoya activamente el cambio y asume tareas nuevas
 
 ### 🧭 Lección 3 — Hacia el MOVIMIENTO (2 competencias)  (`L3`, módulo 4)
 
@@ -110,8 +110,9 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
 - `paragraph` — Diciembre. Alguien pregunta en el consejo qué se logró este año y la respuesta es una lista de actividades sueltas: dos salidas, una kermesse, un campamento. Nadie sabe decir para qué servían juntas. Planeamiento estrat…
 - `paragraph` — Por qué importa: sin planeamiento, el grupo vive de campamento en campamento sin hilo conductor. Esta competencia es la que separa un grupo que reacciona del que avanza. Y aplica a todo: planear el año, planear una kerm…
 - `list` (4) — Grado 1: Resuelves lo tuyo. Conoces tus responsabilidades. Resuelves… · Grado 2: Lees el plan. Interpretas el plan estratégico de tu nivel, d… · Grado 3: Aterrizas el plan. Conviertes las políticas en planes concre… · Grado 4: Supervisas y mejoras el plan. Haces seguimiento estratégico,…
+- `info-box` — 📖 Plan estratégico y plan operativo: El estratégico es la hoja de ruta de varios años: qué se quiere lograr y para qué. El operativo lo baja al corto plazo: cómo, cuándo y quién. En el grupo, este último suele llamarse «el plan del año».
 - `policy-quote` — «Conciencia organizacional: capacidad para comprender el funcionamiento, estructura y cultura de la organización, e interpretar y prever la forma en que el entorno, los individuos y los acontecimientos, la pueden afectar. — Planeamiento estratégico: capacidad…» — *Política Nacional de Adultos en el Movimiento, Cap. 4.1 — Diccionario de Competencias 1.4 y 1.5*
-- **Reflexión:** «Para tu grupo: ¿cómo se vería un consejo con grado 1 vs. grado 4 de Planeamiento estratégico? ¿En cuál estás tú hoy y qué te falta para subir un grado?»
+- **Reflexión:** «Para tu grupo: ¿cómo se vería un consejo con grado 1 vs. grado 4 de Planeamiento estratégico? ¿En cuál estás tú hoy y qué te falta para subir un grado? Si aún no tienes cargo, piensa en el que vas a asumir.»
 - **Quiz** (3 preguntas):
   1. La 'Conciencia organizacional' implica principalmente…
      - Conocer personalmente a todos los miembros del consejo de grupo y también a los del equipo de la regional
@@ -151,8 +152,8 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
 ### 🔍 Lección 5 — Tu autodiagnóstico  (`L5`, módulo 6)
 
 - **Subtemas:** 📝 Cómo hacerlo
-- `info-box` — ⏱️ 10 minutos · 1 idea central: Es tu turno. Vas a calificarte honestamente en cada una de las 7 competencias, leyendo las conductas de cada grado y eligiendo la que más se parece a ti hoy. Esta es la lista que nadie te…
-- `list` (6) — Para cada competencia, lee las 4 opciones de grado · Elige la que mejor describa cómo eres tú hoy en tu rol actual del gru… · No hay 'respuesta correcta'. La honestidad da resultados útiles; ment… · Si dudas entre dos grados, marca el menor. Un grado de menos te deja… · Cuando termines las 7, dale al botón '📊 Calcular mi perfil' · Si te toca parar a la mitad, para tranquilo: tus respuestas quedan gu…
+- `info-box` — ⏱️ 10 a 15 minutos · 1 idea central: Es tu turno. Vas a calificarte honestamente en cada una de las 7 competencias, leyendo las conductas de cada grado y eligiendo la que más se parece a ti hoy. Esta es la lista que nadie te…
+- `list` (7) — Para cada competencia, lee las 4 opciones de grado · Elige la que mejor describa cómo eres tú hoy en tu rol actual del gru… · No hay 'respuesta correcta'. La honestidad da resultados útiles; ment… · Si dudas entre dos grados, marca el menor. Un grado de menos te deja… · Cuando termines las 7, dale al botón '📊 Calcular mi perfil' · Si te toca parar a la mitad, para tranquilo: tus respuestas quedan gu… · Si te calificaste sin cargo, repite el autodiagnóstico cuando asumas uno… (la 2 añade la indicación para quien aún no tiene cargo)
 - `info-box` — 🔒 Tu autodiagnóstico es privado. Se guarda en tu navegador. Nadie más lo ve, ni tu jefe de grupo ni tu asesor — a menos que tú decidas compartirlo. Es solo para tu desarrollo personal.
 - `self-assessment`
 - **Reflexión:** «Después de calificarte: ¿qué resultado te sorprendió? ¿Hay alguna competencia donde te calificaste más alto o más bajo de lo que esperabas?»
@@ -180,9 +181,9 @@ Las 7 competencias que la política espera de todo adulto del movimiento, una po
 - `paragraph` — En el Curso 5 — Tu Plan Personal de Desarrollo — el último de la ruta — vas a:
 - `list` (4) — Ver tu perfil pre-cargado (no tendrás que volver a calificarte) · Conocer los 6 elementos del Acuerdo Mutuo y de dónde bajar el formato… · Conocer cómo encontrar y trabajar con tu Asesor Personal · Subir tu plan a Talento 360, la plataforma oficial
 - `blockquote` — Llegaste sin la lista. Te vas con la lista, con tu lugar en ella y con tus tres prioridades. Eso es enorme. Continuar es lo natural.
-- `paragraph` — Has terminado los 4 cursos conceptuales de la ruta (Bienvenida, Política, Ciclo y Competencias). Lo que sigue es aterrizaje práctico puro: el Curso 5 te lleva a construir tu Plan Personal real, listo para firmar con tu…
+- `paragraph` — Has terminado los 4 cursos conceptuales de la ruta (Bienvenida, Política, Ciclo y Competencias). Lo que sigue es aterrizaje práctico puro: el Curso 5 te lleva a construir tu Plan Personal real, listo para llevar a tu…
 - `mission-box` — 🎯 Tu compromiso de 5 minutos, antes de cerrar Escríbelo así, con nombre y fecha: «Antes del ___ de ___ le voy a contar a ______ (alguien real de mi grupo) cuál es mi área de oportunidad #1, y le voy a pedir que me diga…
-- **Reflexión:** «Mirando tus 3 áreas de oportunidad: ¿cuál atacarías primero y por qué? Pista: no siempre es la más débil — a veces conviene la que más impacto tiene en tu cargo actual.»
+- **Reflexión:** «Mirando tus 3 áreas de oportunidad: ¿cuál atacarías primero y por qué? Pista: no siempre es la más débil — a veces conviene la que más impacto tiene en tu cargo actual. Si aún no tienes cargo, piensa en el que vas a asumir.»
 - **Quiz** (3 preguntas):
   1. Terminas tu perfil y te sale grado 2 en Planeamiento estratégico — una de tus tres áreas de oportunidad. ¿Qué significa eso para tu Plan Personal?
      - Que ahí tienes el mayor espacio para crecer, y por eso entra a tus prioridades ✅

@@ -35,7 +35,7 @@ El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hac
 
 - **Subtemas:** 🎯 Al terminar este curso vas a… · 📚 Las 7 lecciones · 🗺️ La ruta de 5 cursos
 - `info-box` — Hola. Bienvenido/a. Estás dando el primer paso de una ruta que te va a ayudar a entender qué significa ser adulto del movimiento scout en Colombia. No te asustes con el nombre — vamos a desarmarlo en piezas pequeñas y p…
-- `paragraph` — Probablemente entraste al grupo scout porque tu hijo o hija está ahí. O porque alguien te invitó a ayudar. Y un día te encontraste asumiendo un cargo, una función, una responsabilidad. Ahora estás aquí, frente a este cu…
+- `paragraph` — Probablemente entraste al grupo scout porque tu hijo o hija está ahí. O porque alguien te invitó a ayudar. Tal vez ya asumiste un cargo, una función, una responsabilidad. Tal vez todavía ayudas sin un papel definido y te preguntas si dar el paso. En los dos casos la pregunta es la misma: ¿en qué me metí… o en qué me estaría metiendo?
 - `paragraph` — Buena noticia: no estás solo, y existen herramientas para acompañarte. Este curso es la primera de ellas.
 - `list` (5) — Entender por qué tu rol importa, sin importar qué cargo tengas · Reconocer los mitos comunes que te frenan ('soy solo un papá', 'no te… · Identificar qué cualidades hacen un buen adulto en el movimiento · Escribir tu primer compromiso personal con el grupo · Saber qué cursos siguen en la ruta y para qué te sirven
 - `timeline` (7) — Lección 1 — ¿Por qué llegaste aquí? · Lección 2 — Eres un superhéroe (en serio) · Lección 3 — Tres mitos que te frenan · Lección 4 — Dibuja a tu consejero ideal · Lección 5 — Voces de la comunidad · Lección 6 — Tu primer compromiso · Lección 7 — La ruta completa
@@ -53,7 +53,8 @@ El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hac
 - `list` (3) — ¿Quieres saber qué se espera de ti realmente? · ¿Quieres acompañamiento y herramientas para hacerlo bien? · ¿Quieres que esto te aporte a ti — no solo dar y dar?
 - `paragraph` — Si la respuesta a esas tres es sí, este curso (y los que siguen) son para ti. La idea no es cargarte de obligaciones — es darte claridad y respaldo.
 - `blockquote` — El movimiento scout no necesita personas perfectas. Necesita personas presentes que sepan dónde están parados.
-- **Reflexión:** «Recuerda el momento exacto en que aceptaste tu rol actual en el grupo. ¿Qué te llevó a decir 'sí'? ¿Sigue siendo válida esa razón hoy?»
+- `info-box` — 📖 Dos palabras que vas a oír mucho El Consejo de Grupo administra el grupo scout entre una asamblea y otra. Se reúne al menos una vez al mes y, entre otras cosas, vela por que los adultos del grupo estén apoyados y acompañados. Lo integran los consejeros y consejeras. A los adultos los nombra la Asamblea de Grupo. Algunos tienen una dignidad (presidente, vicepresidente, secretario, intendente); los demás son vocales. Ojo: no es el consejo de patrulla de los jóvenes ni un orientador escolar.
+- **Reflexión:** «Recuerda el momento en que dijiste 'sí' a ayudar en el grupo. Si aún no tienes un papel definido, piensa qué te haría decir que sí. ¿Qué te llevó (o te llevaría) a ese 'sí'? ¿Sigue siendo válida esa razón hoy?»
 - **Quiz** (2 preguntas):
   1. Después de esta lección, ¿qué es lo que de verdad define si vas a aportar en el grupo?
      - Solo deben ser adultos del movimiento quienes hayan sido scouts cuando jóvenes
@@ -114,6 +115,7 @@ El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hac
 - `list` (3) — Puede ser un dibujo, un símbolo, una figura sencilla — lo que quieras · Al lado del dibujo, escribe 3 cualidades que esa persona tiene · Date 3 minutos exactos. No más
 - `blockquote` — 🎨 Toma 3 minutos. Vuelve cuando termines. No avances todavía.
 - `video` — bienvenida-adultos/videos/02_reflexion_dibujo.mp4
+- `info-box` — 💡 Lo que suele salir del dibujo: Cuando la gente dibuja a su consejero ideal, anota primero cualidades de trato (escucha, paciencia, compromiso) y casi nunca un oficio o un título. Mira tus 3 cualidades: ¿cuántas son de cómo se relaciona con el grupo? En la Lección 5 vas a oír a consejeras de varias regiones que hicieron este mismo ejercicio.
 - `photo-upload`
 - **Reflexión:** «Mira tu dibujo y las 3 cualidades que escribiste. ¿Cuál de esas cualidades reconoces en ti hoy? ¿Cuál te gustaría desarrollar?»
 - **Quiz** (2 preguntas):
@@ -130,7 +132,7 @@ El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hac
 
 - **Subtemas:** 🎙️ Voces de la comunidad
 - `info-box` — ⏱️ 12 minutos · la lección más larga del curso · 1 idea central: Consejeras de varias regiones hicieron tu mismo ejercicio. Vas a ver si coincidieron contigo — y en qué.
-- `paragraph` — En un taller real con consejeros y consejeras de varias regiones, hicieron este mismo ejercicio. Mira lo que respondieron:
+- `paragraph` — En un taller real con consejeros y consejeras de varias regiones, hicieron este mismo ejercicio. Mira lo que respondieron. Si estás en el celular con pocos datos, puedes dejar los videos para después: lo esencial queda escrito al final de la lección.
 - `video` — bienvenida-adultos/videos/03_voces_consejero_ideal_1.mp4
 - `video` — bienvenida-adultos/videos/04_voces_consejero_ideal_2.mp4
 - `info-box` — 💡 Lo que probablemente notaste: Casi todas las cualidades que mencionaron — y que tú probablemente también — tienen que ver con cómo se relaciona con el grupo, no con conocimientos técnicos. Escuchar, acompañar, comprom…
@@ -148,13 +150,13 @@ El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hac
 ### 💚 Lección 6 — Tu primer compromiso  (`L6`, módulo 7)
 
 - **Subtemas:** 📝 Tu compromiso, en una frase · ✍️ Tu turno · 🔮 ¿Y después qué pasa?
-- `info-box` — ⏱️ 4 minutos · 1 idea central: No es el plan formal — eso lo armarás más adelante. Es solo tu punto de partida: una frase concreta que te recuerde por qué estás aquí.
+- `info-box` — ⏱️ 4 minutos · 1 idea central: No es el plan formal — eso lo armarás más adelante. Es solo tu punto de partida: una frase concreta que te recuerde por qué estás aquí. Al final del curso la vas a escribir en el recuadro «Compromiso Personal» de tu certificado.
 - `paragraph` — Vas a escribir una sola frase. La regla: tiene que ser concreta y tuya. No 'voy a ser mejor consejero' (vago). Mejor algo como:
 - `list` (4) — 'Voy a llegar a las reuniones del consejo con la lectura previa hecha… · 'Voy a aprender a usar Talento 360 antes de fin de año.' · 'Voy a presentarle al jefe de grupo dos ideas para mejorar la comunic… · 'Voy a terminar los 5 cursos de esta ruta antes de marzo.'
 - `info-box` — 💡 Tres cosas que toda buena frase de compromiso debe tener: 1. Una acción concreta (algo que se hace o se logra) 2. Un plazo (cuándo) 3. Algo que tú puedas controlar (no depende de otros)
 - `paragraph` — Escribe tu frase de compromiso en el cuadro de reflexión más abajo. Solo una. Si te salen varias, escoge la más importante.
 - `blockquote` — Esto no es un examen. Es para ti. Pero escribirlo te lo hace real.
-- `paragraph` — Tu compromiso de hoy es el primer paso. En el Curso 5 — Tu Plan Personal, vas a convertir esta semilla en algo más estructurado: un plan personal de desarrollo con tu asesor, registrado en la plataforma Talento 360. Per…
+- `paragraph` — Tu compromiso de hoy es el primer paso. En el Curso 5 — Tu Plan Personal, vas a convertir esta semilla en algo más estructurado: un plan personal de desarrollo con tu asesor, registrado en Talento 360, la plataforma oficial donde la asociación guarda tu hoja de vida, tu plan y tus evaluaciones…
 - **Reflexión:** «Escribe AQUÍ tu frase de compromiso (una sola, concreta, con plazo, sobre algo que tú puedas controlar).»
 - **Quiz** (2 preguntas):
   1. Un compañero escribe su compromiso: 'Voy a lograr que el consejo se reúna más seguido'. ¿Qué le falta, según los criterios de esta lección?
@@ -171,9 +173,9 @@ El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hac
 - **Subtemas:** 🏁 Lo que ya tienes · 🗺️ Lo que sigue en la ruta · 🎉 Cierre
 - `info-box` — ⏱️ 3 minutos · 1 idea central: Acabas de terminar el primero de 5 cursos. Aquí va el mapa de lo que sigue, para que decidas a tu ritmo.
 - `list` (5) — Sabes por qué tu rol importa, sin importar cómo llegaste · Identificaste tu superpoder y entendiste que se complementa con los d… · Desarmamos juntos los 3 mitos más comunes · Articulaste con tus propias palabras al consejero ideal · Escribiste tu primer compromiso personal
-- `timeline` (4) — 📜 Curso 2 — La Política — Marco y Principios (30 min) · 🔄 Curso 3 — El Ciclo del Adulto en el Movimiento (30 min) · 🧠 Curso 4 — Las 7 Competencias Esenciales (35 min) · 🗺️ Curso 5 — Tu Plan Personal de Desarrollo (30 min)
+- `timeline` (4) — 📜 Curso 2 — La Política — Marco y Principios (30 min) · 🔄 Curso 3 — El Ciclo del Adulto en el Movimiento (30 min) · 🧠 Curso 4 — Las 7 Competencias Esenciales (40 min) · 🗺️ Curso 5 — Tu Plan Personal de Desarrollo (30 min)
 - `info-box` — 💡 Sugerencia: haz los cursos en orden si puedes. Cada uno construye sobre el anterior. Pero si solo tienes tiempo para uno más, ve directo al Curso 2 — es el que te da el marco completo.
-- `paragraph` — Ya diste el primer paso. Eso ya te diferencia del 90% de los adultos que pasan por un grupo scout sin saber muy bien qué hacen. Te van a entregar tu certificado del Curso 1, y desde ahora tienes claridad.
+- `paragraph` — Ya diste el primer paso. Muchos adultos pasan por un grupo scout sin saber muy bien qué hacen; tú ya tienes un mapa. Te van a entregar tu certificado del Curso 1, y desde ahora tienes claridad.
 - `blockquote` — El movimiento te necesitaba como llegaste. Pero te va a aprovechar mejor con cada curso que termines. Sigue.
 - **Reflexión:** «¿Cuándo planeas hacer el Curso 2? Pon una fecha concreta — esta semana, este mes, el sábado en la mañana. Lo que te funcione.»
 - **Quiz** (2 preguntas):

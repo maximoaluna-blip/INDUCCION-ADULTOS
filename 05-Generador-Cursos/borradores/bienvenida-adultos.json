@@ -3,7 +3,7 @@
   "title": "Bienvenida al Movimiento de Adultos",
   "subtitle": "Curso 1 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 45 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
-  "contentVersion": "2026-10-02",
+  "contentVersion": "2026-10-12",
   "icon": "🦸",
   "duration": "45 minutos",
   "level": 1,
@@ -24,7 +24,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Probablemente entraste al grupo scout porque <strong>tu hijo o hija está ahí</strong>. O porque alguien te invitó a ayudar. Y un día te encontraste asumiendo un cargo, una función, una responsabilidad. Ahora estás aquí, frente a este curso, preguntándote: <em>¿en qué me metí?</em>"
+          "text": "Probablemente entraste al grupo scout porque <strong>tu hijo o hija está ahí</strong>. O porque alguien te invitó a ayudar. Tal vez ya asumiste un cargo, una función, una responsabilidad. Tal vez todavía ayudas sin un papel definido y te preguntas si dar el paso. En los dos casos la pregunta es la misma: <em>¿en qué me metí… o en qué me estaría metiendo?</em>"
         },
         {
           "type": "paragraph",
@@ -104,7 +104,7 @@
             },
             {
               "title": "📜 Curso 2 — La Política — Marco y Principios",
-              "description": "El marco que respalda tu rol. Los 13 principios y las 12 herramientas.",
+              "description": "El marco que respalda tu rol: los 13 principios y las 12 herramientas de la política, explicados uno por uno.",
               "color": "#f3e5f5",
               "borderColor": "#9c27b0"
             },
@@ -122,7 +122,7 @@
             },
             {
               "title": "🗺️ Curso 5 — Tu Plan Personal",
-              "description": "Tu plan real, listo para firmar con tu asesor. Cierre de la ruta.",
+              "description": "Tu plan real, listo para llevar a tu asesor. Cierre de la ruta.",
               "color": "#e8f5e9",
               "borderColor": "#4caf50"
             }
@@ -189,10 +189,14 @@
         {
           "type": "blockquote",
           "text": "El movimiento scout no necesita personas perfectas. Necesita personas presentes que sepan dónde están parados."
+        },
+        {
+          "type": "info-box",
+          "text": "<strong>📖 Dos palabras que vas a oír mucho</strong><br>El <strong>Consejo de Grupo</strong> administra el grupo scout entre una asamblea y otra. Se reúne al menos una vez al mes y, entre otras cosas, vela por que los adultos del grupo estén apoyados y acompañados. Lo integran los <strong>consejeros y consejeras</strong>. A los adultos los nombra la Asamblea de Grupo. Algunos tienen una dignidad (presidente, vicepresidente, secretario, intendente); los demás son <strong>vocales</strong>. Ojo: no es el consejo de patrulla de los jóvenes ni un orientador escolar."
         }
       ],
       "reflection": {
-        "prompt": "Recuerda el momento exacto en que aceptaste tu rol actual en el grupo. ¿Qué te llevó a decir 'sí'? ¿Sigue siendo válida esa razón hoy?"
+        "prompt": "Recuerda el momento en que dijiste 'sí' a ayudar en el grupo. Si aún no tienes un papel definido, piensa qué te haría decir que sí. ¿Qué te llevó (o te llevaría) a ese 'sí'? ¿Sigue siendo válida esa razón hoy?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 1",
@@ -325,7 +329,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Falso. La política de adultos del movimiento te define como <strong>'adulto en el movimiento'</strong> en el momento que aceptas un cargo o función. No importa si nunca fuiste cachorro, lobato, scout o nómada scout de joven. <strong>El compromiso no se mide en años, se mide en presencia.</strong>"
+          "text": "Falso. La política de adultos del movimiento te define como <strong>'adulto en el movimiento'</strong> en el momento que aceptas un cargo o función. No importa si nunca fuiste cachorro, lobato, scout o nómada scout de joven. <strong>El compromiso no se mide en años, se mide en presencia.</strong> Tampoco necesitas haber hecho la promesa scout para contar: la política te define por el cargo o la función que asumes. Y si todavía ayudas sin un cargo ni una función definidos, estás en la puerta de entrada: en el Curso 3 (Lección 2) verás los trámites con los que se entra."
         },
         {
           "type": "blockquote",
@@ -438,6 +442,10 @@
           "caption": "Reflexión y actividad guiada · 5:02"
         },
         {
+          "type": "info-box",
+          "text": "<strong>💡 Lo que suele salir del dibujo</strong><br>Cuando la gente dibuja a su consejero ideal, anota primero cualidades de trato (escucha, paciencia, compromiso) y casi nunca un oficio o un título. Mira tus 3 cualidades: ¿cuántas son de cómo se relaciona con el grupo? En la Lección 5 vas a oír a consejeras de varias regiones que hicieron este mismo ejercicio."
+        },
+        {
           "type": "heading",
           "level": 3,
           "text": "📷 Comparte tu dibujo (opcional)"
@@ -495,7 +503,7 @@
         },
         {
           "type": "paragraph",
-          "text": "En un taller real con consejeros y consejeras de varias regiones, hicieron este mismo ejercicio. Mira lo que respondieron:"
+          "text": "En un taller real con consejeros y consejeras de varias regiones, hicieron este mismo ejercicio. Mira lo que respondieron. Si estás en el celular con pocos datos, puedes dejar los videos para después: lo esencial queda escrito al final de la lección."
         },
         {
           "type": "video",
@@ -548,7 +556,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 4 minutos · 1 idea central:</strong><br>No es el plan formal — eso lo armarás más adelante. Es solo tu punto de partida: una frase concreta que te recuerde por qué estás aquí."
+          "text": "<strong>⏱️ 4 minutos · 1 idea central:</strong><br>No es el plan formal — eso lo armarás más adelante. Es solo tu punto de partida: una frase concreta que te recuerde por qué estás aquí. Al final del curso la vas a escribir en el recuadro «Compromiso Personal» de tu certificado."
         },
         {
           "type": "heading",
@@ -593,14 +601,14 @@
         },
         {
           "type": "paragraph",
-          "text": "Tu compromiso de hoy es el primer paso. En el <strong>Curso 5 — Tu Plan Personal</strong>, vas a convertir esta semilla en algo más estructurado: un plan personal de desarrollo con tu asesor, registrado en la plataforma Talento 360. Pero no te apures. Hoy con esta frase basta."
+          "text": "Tu compromiso de hoy es el primer paso. En el <strong>Curso 5 — Tu Plan Personal</strong>, vas a convertir esta semilla en algo más estructurado: un plan personal de desarrollo con tu asesor, registrado en Talento 360, la plataforma oficial donde la asociación guarda tu hoja de vida, tu plan y tus evaluaciones. Pero no te apures. Hoy con esta frase basta."
         }
       ],
       "reflection": {
         "prompt": "Antes de escribir tu frase en el certificado: de las tres condiciones —una acción, un plazo, algo que dependa de ti—, ¿cuál te cuesta más cumplir, y por qué?"
       },
       "quiz": {
-        "title": "Mini-quiz Lección 5",
+        "title": "Mini-quiz Lección 6",
         "questions": [
           {
             "text": "Un compañero escribe su compromiso: 'Voy a lograr que el consejo se reúna más seguido'. ¿Qué le falta, según los criterios de esta lección?",
@@ -667,12 +675,12 @@
               "description": "Cómo se vive un nombramiento de principio a fin: atracción y vinculación, desempeño, decisiones para el futuro. Te da el panorama antes del detalle."
             },
             {
-              "title": "🧠 Curso 4 — Las 7 Competencias Esenciales (35 min)",
+              "title": "🧠 Curso 4 — Las 7 Competencias Esenciales (40 min)",
               "description": "Una por una: qué se espera de ti como adulto del movimiento. Con autodiagnóstico interactivo para ver dónde estás."
             },
             {
               "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo (30 min)",
-              "description": "Acuerdo Mutuo, Asesor Personal, plataforma Talento 360. Aquí pasas del compromiso al plan formal. Cierra la ruta."
+              "description": "El Compromiso de Acuerdo Mutuo (el documento que firmas con tu Grupo y que fija, entre otras cosas, cuánto dura tu compromiso: máximo 2 años), el Asesor Personal y la plataforma Talento 360. Aquí pasas del compromiso al plan formal. Cierra la ruta."
             }
           ]
         },
@@ -687,7 +695,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ya diste el primer paso. <strong>Eso ya te diferencia</strong> del 90% de los adultos que pasan por un grupo scout sin saber muy bien qué hacen. Te van a entregar tu certificado del Curso 1, y desde ahora tienes claridad."
+          "text": "Ya diste el primer paso. Muchos adultos pasan por un grupo scout sin saber muy bien qué hacen; <strong>tú ya tienes un mapa</strong>. Te van a entregar tu certificado del Curso 1, y desde ahora tienes claridad."
         },
         {
           "type": "blockquote",
@@ -698,7 +706,7 @@
         "prompt": "¿Cuándo planeas hacer el Curso 2? Pon una fecha concreta — esta semana, este mes, el sábado en la mañana. Lo que te funcione."
       },
       "quiz": {
-        "title": "Mini-quiz Lección 6 — Cierre del curso",
+        "title": "Mini-quiz Lección 7 — Cierre del curso",
         "questions": [
           {
             "text": "Un mes después de este curso, una mamá nueva te dice: 'me pidieron ser vocal y no entiendo qué es eso ni qué tengo que hacer'. ¿Qué le recomiendas primero de esta ruta, y por qué?",

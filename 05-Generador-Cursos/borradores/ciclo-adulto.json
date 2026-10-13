@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-10-12",
   "icon": "🔄",
   "duration": "30 minutos",
   "level": 1,
@@ -20,7 +20,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>Una pregunta antes de empezar.</strong><br>¿Cuándo termina tu nombramiento actual? ¿Quién te acompaña? ¿Qué pasa el día que decidas parar?<br>Si no supiste responder alguna, no es culpa tuya: en muchos grupos <strong>los adultos entran sin claridad, sirven sin acompañamiento y se van sin reconocimiento</strong>. Este curso es el mapa que arregla eso — cómo se vive un nombramiento de principio a fin."
+          "text": "<strong>Una pregunta antes de empezar.</strong><br>¿Cuándo termina tu nombramiento actual? ¿Quién te acompaña? ¿Qué pasa el día que decidas parar?<br>Si todavía no te han nombrado, cámbialas por estas: ¿cómo se entra?, ¿quién me va a acompañar?, ¿cuánto dura? Este curso responde las dos versiones.<br>Si no supiste responder alguna, no es culpa tuya: en muchos grupos <strong>los adultos entran sin claridad, sirven sin acompañamiento y se van sin reconocimiento</strong>. Este curso es el mapa que arregla eso — cómo se vive un nombramiento de principio a fin."
         },
         {
           "type": "info-box",
@@ -136,7 +136,7 @@
           "items": [
             "<strong>NO es lineal una sola vez.</strong> Un adulto puede tener varios ciclos paralelos (ej. ser tesorero del grupo + dirigente de la manada = dos ciclos, uno por cada nombramiento)",
             "<strong>NO se trata de tiempo en el movimiento.</strong> Alguien con 20 años en escultismo puede estar arrancando un nuevo ciclo si asume un cargo nuevo",
-            "<strong>SÍ tiene un cierre definido.</strong> Tu nombramiento tiene fecha de vencimiento: la que diga tu Acuerdo Mutuo (nunca más de 2 años, y en el Grupo casi siempre 1). No 'eres tesorero para siempre'",
+            "<strong>SÍ tiene un cierre definido.</strong> Tu nombramiento tiene fecha de vencimiento: la que diga tu Compromiso de Acuerdo Mutuo, el documento que firmas con tu Grupo antes del nombramiento (nunca más de 2 años, y en el Grupo casi siempre 1). No 'eres tesorero para siempre'",
             "<strong>SÍ es flexible.</strong> Si un cargo no te está funcionando, la política contempla moverte a otro que se ajuste mejor — no todo termina en salida. Eso sí: si el desempeño no mejora después de un plan de mejora, la política también contempla cerrar el nombramiento. Lo importante es que sea una conversación, no un silencio."
           ]
         },
@@ -179,7 +179,7 @@
             "text": "Don Álvaro lleva 22 años en el grupo y este año lo nombraron intendente. Además es dirigente de la tropa. ¿Cómo está su situación frente al ciclo?",
             "options": [
               "Tiene un solo ciclo: el de sus 22 años en el movimiento.",
-              "Tiene dos ciclos abiertos en paralelo, uno por cada nombramiento, y ambos arrancan de cero.",
+              "Tiene dos ciclos abiertos en paralelo, uno por cada nombramiento: el de intendente empieza ahora.",
               "No aplica el ciclo: con esa trayectoria ya no necesita acuerdo mutuo ni plan personal."
             ],
             "correctIndex": 1
@@ -224,7 +224,7 @@
             },
             {
               "title": "5. Compromiso, Acuerdo Mutuo y Nombramiento",
-              "description": "Se firma el Acuerdo Mutuo (los 6 elementos del Curso 5) + se hace el nombramiento oficial. Aquí formalmente entra al ciclo."
+              "description": "Se firma el Compromiso de Acuerdo Mutuo. Allí quedan por escrito seis cosas: cuánto dura el nombramiento, cómo será tu inducción, qué te comprometes a hacer, qué apoyo recibes, qué competencias vas a desarrollar y cómo te van a evaluar. El Curso 5 lo explica a fondo. Después viene el nombramiento oficial, que lo refrenda. Aquí entras formalmente al ciclo."
             }
           ]
         },
@@ -266,7 +266,7 @@
         }
       ],
       "reflection": {
-        "prompt": "Pensando en cómo TÚ entraste a tu cargo actual: ¿cuáles de las 5 sub-fases se cumplieron y cuáles no? ¿Eso explica algún reto que has vivido?"
+        "prompt": "Pensando en cómo TÚ entraste a tu cargo actual, o en cómo estás entrando ahora si aún no te han nombrado: ¿cuáles de las 5 sub-fases se cumplieron y cuáles no? ¿Eso explica algún reto que has vivido?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 2",
@@ -301,7 +301,7 @@
       "sections": [
         {
           "type": "info-box",
-          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La formación de un adulto NO termina cuando le entregan la Insignia de Madera. Hay dos momentos formativos distintos: <em>formación básica</em> para desempeñar el cargo, y <em>perfeccionamiento continuo</em> para mantenerse vigente."
+          "text": "<strong>⏱️ 6 minutos · 1 idea central:</strong><br>La formación de un adulto NO termina cuando le entregan la Insignia de Madera (el reconocimiento oficial de la formación básica, que verás en esta lección). Hay dos momentos formativos distintos: <em>formación básica</em> para desempeñar el cargo, y <em>perfeccionamiento continuo</em> para mantenerse vigente."
         },
         {
           "type": "heading",
@@ -457,7 +457,7 @@
             },
             {
               "title": "4. Evaluación",
-              "description": "Quien tiene la responsabilidad formal de certificar tus competencias (típicamente tu asesor + tu jefe inmediato) emite la evaluación final.",
+              "description": "Quien tiene la responsabilidad formal de certificar tus competencias (típicamente tu asesor + tu jefe inmediato) emite la evaluación final. Ojo: se llama igual que el conjunto («evaluación 360°»), pero es solo esta cuarta mirada, la de quien certifica.",
               "color": "#e8f5e9",
               "borderColor": "#4caf50"
             }
@@ -478,7 +478,7 @@
           "items": [
             "<strong>Bitácora de Acompañamiento al Adulto</strong> — para documentar reuniones con el asesor",
             "<strong>Encuesta de Percepción de Padres o Acudientes al Dirigente</strong>",
-            "<strong>Encuesta de Percepción del Scout, Caminante y Rover al Dirigente</strong> <em>(el formato conserva «Caminante», el nombre anterior de la rama; hoy se llama Nómadas Scout)</em>",
+            "<strong>Encuesta de Percepción del Scout, Caminante y Rover al Dirigente</strong> <em>(el formato conserva «Caminante», el nombre anterior de la rama; hoy la rama se llama Nómadas Scout y su unidad, Comunidad)</em>",
             "<strong>Encuesta de Percepción del Lobato al Dirigente</strong>",
             "<strong>Recomendaciones para la Aplicación de Encuestas de Percepción y Evaluación</strong>"
           ]
@@ -616,7 +616,7 @@
         }
       ],
       "reflection": {
-        "prompt": "¿Qué día termina tu nombramiento actual? Escribe la fecha. Si no la sabes —le pasa a la mayoría—, escribe a quién se la vas a preguntar y cuándo. Y después: de las 3 opciones, ¿cuál querrías que pasara ese día, y qué tendrías que empezar a hacer desde hoy para que pase?"
+        "prompt": "¿Qué día termina tu nombramiento actual? Escribe la fecha. Si no la sabes —le pasa a la mayoría—, escribe a quién se la vas a preguntar y cuándo. Si todavía no tienes nombramiento, escribe cuánto tiempo te gustaría comprometerte y a quién se lo vas a preguntar antes de firmar. Y después: de las 3 opciones, ¿cuál querrías que pasara ese día, y qué tendrías que empezar a hacer desde hoy para que pase?"
       },
       "quiz": {
         "title": "Mini-quiz Lección 5",
@@ -688,7 +688,7 @@
             },
             {
               "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo",
-              "description": "🔮 El cierre de la ruta. Vas a construir tu plan real, listo para firmar con tu asesor."
+              "description": "🔮 El cierre de la ruta. Vas a construir tu plan real, listo para llevar a tu asesor."
             }
           ]
         },
@@ -712,7 +712,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🚀 Recomendación:</strong> aprovecha el momentum y continúa al Curso 4. Te tomará ~35 minutos y, al terminar, tendrás tu propio perfil de competencias con fortalezas y áreas de oportunidad — listo para conectarse con tu Plan Personal en el Curso 5."
+          "text": "<strong>🚀 Recomendación:</strong> aprovecha el momentum y continúa al Curso 4. Te tomará ~40 minutos y, al terminar, tendrás tu propio perfil de competencias con fortalezas y áreas de oportunidad — listo para conectarse con tu Plan Personal en el Curso 5."
         },
         {
           "type": "mission-box",

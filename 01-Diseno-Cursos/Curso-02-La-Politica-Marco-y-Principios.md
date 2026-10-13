@@ -34,7 +34,7 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
 
 - **Subtemas:** 🎯 Al terminar este curso vas a poder… · 📚 Las 6 lecciones
 - `info-box` — Bienvenido/a. Llegaste al curso 2 de la ruta de formación de adultos. Si llegaste directo, no hay problema — este curso se entiende solo. Toma 30 minutos en total, repartidos en 6 lecciones cortas. Puedes hacer una hoy,…
-- `paragraph` — Existe un documento de la asociación que habla de ti: de tu cargo, de tu formación, de quién debería acompañarte y de qué pasa cuando se acabe tu nombramiento. Se llama Política Nacional de Adultos en el Movimiento. Y l…
+- `paragraph` — Existe un documento de la asociación que habla de ti: de tu cargo, o del que vas a asumir, de tu formación, de quién debería acompañarte y de qué pasa cuando se acabe tu nombramiento. Se llama Política Nacional de Adultos en el Movimiento. Y l…
 - `paragraph` — Buenas noticias: esa política existe precisamente para que no estés solo en esto. En este curso vamos a desarmarla en piezas pequeñas y entendibles.
 - `list` (4) — Explicarle a otro adulto del grupo qué es la política, en una frase · Reconocer los principios que ya están vivos en tu grupo y los que fal… · Distinguir una competencia de un simple conocimiento, con un ejemplo… · Identificar las herramientas oficiales disponibles para apoyarte
 - `timeline` (6) — Lección 1 — ¿Qué es esta política y de dónde vino? · Lección 2 — ¿A quién le aplica? · Lección 3 — Los 5 principios que más impactan tu día a día · Lección 4 — Los otros 8 principios · Lección 5 — Gestión por competencias — qué significa para ti · Lección 6 — Tu mochila de herramientas
@@ -68,6 +68,7 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
 - `list` (7) — El vocal que asiste a las reuniones del consejo y opina pero no tiene… · La mamá que se encarga de las inscripciones de la kermesse · El tesorero, su asistente, el contador externo · El asesor espiritual, si lo hay · El rover de 19 años que está apoyando manada como ayudante · Los jefes de cada rama y el jefe de grupo · El presidente y el vicepresidente del consejo
 - `paragraph` — A todos ellos les aplica la política. No solo a los dirigentes operativos. Esto cambia muchas cosas: significa que el rover ayudante de manada tiene derecho a un plan de desarrollo. Significa que la mamá de la kermesse…
 - `policy-quote` — «La presente política cubre a todos los adultos y jóvenes adultos, voluntarios o profesionales, que desempeñan cargos o funciones en la Asociación Scouts de Colombia, en cualquiera de sus niveles.» — *Política Nacional de Adultos en el Movimiento, Cap. 2 'Los Sujetos de la Política', p. 3*
+- `info-box` — 🚪 ¿Y si ayudo pero todavía no tengo cargo ni función? Si ya cumples una función, aunque sea pequeña (como las inscripciones de la kermesse), la política te cubre. Si apenas estás llegando, estás en la fase de inducción de adultos voluntarios nuevos. La Dirección Nacional de Adultos en el Movimiento (DNAM la organiza en nueve pasos que acompaña quien te va a tener en su equipo: van desde registrar tu hoja de vida en Talento 360° y firmar el Compromiso de Acuerdo Mutuo hasta escoger asesor personal y tener seguimiento los tres primeros meses. El Curso 3 te muestra los primeros.
 - `info-box` — 💡 Implicación práctica: Si hay alguien en tu grupo que cumple un rol pero 'no lo ven como adulto del movimiento' (por ejemplo, una mamá de comité o un asesor externo), tienes ahora un argumento oficial para integrarlo:…
 - **Reflexión:** «En tu grupo, ¿hay alguna persona que cumple una función importante pero a la que NO se trata como 'adulto del movimiento' (no recibe inducción, no tiene asesor, nadie se preocupa por su desarrollo)? ¿Quién?»
 - **Quiz** (2 preguntas):
@@ -76,7 +77,7 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
      - Todos los que ejercen un cargo o una función: también el vocal, el tesorero, el contador externo y el rover ayudante ✅
      - Los dirigentes y el consejo de grupo; los apoyos ocasionales y los contratistas externos quedan por fuera porque no tienen un nombramiento formal
   2. Un rover de 19 años que apoya como ayudante en manada, ¿es 'adulto del movimiento' para efectos de esta política?
-     - No, los rovers son sujetos del programa de jóvenes
+     - No: como es rover, solo le aplica el programa de jóvenes
      - Sí, porque desempeña una función dentro de la asociación ✅
      - Solo si pasa los 21 años
 
@@ -88,12 +89,12 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
 - `blockquote` — Ejemplo real: dos personas asumen el cargo de tesorero. Una es contadora pública, la otra es una mamá que nunca ha llevado libros pero quiere aprender. La política dice que sus planes de formación deben verse distintos.
 - `paragraph` — Lo que aprendes tiene que servirte para resolver problemas reales del grupo. No teoría por teoría. Si un curso no te ayuda a hacer mejor lo que haces el sábado en la sede, sobra.
 - `blockquote` — Ejemplo: un taller de 4 horas sobre historia del escultismo mundial te deja igual el sábado en la sede. Uno de 40 minutos sobre cómo llevar el acta del consejo te cambia el lunes.
-- `paragraph` — Aquí nadie es jefe del otro como en la oficina. Somos pares. El jefe de grupo no le 'manda' al consejero — articulan. El asesor personal no es tu superior — es tu acompañante. La autoridad existe pero el clima es de diá…
+- `paragraph` — Aquí nadie es jefe del otro como en la oficina. Somos pares. El jefe de grupo no le 'manda' al consejero — articulan. El asesor personal, como asesor, no te da órdenes: te acompaña. Puede ser también tu jefe inmediato (la política lo recomienda), y aun así en la asesoría acuerda contigo, no manda…
 - `blockquote` — Ejemplo: tu asesor personal no llega con el curso ya escogido. Se sientan, miran juntos qué te falta, y lo acuerdan. Si te lo asigna, eso no es asesoría — es jefatura.
-- `paragraph` — Los jóvenes adultos pueden y deben ocupar cargos. Si tienes 19 años y quieres ser presidente del consejo, no hay nada en la política que te lo impida. Al contrario: dice expresamente que se debe preferir a los jóvenes q…
+- `paragraph` — Los jóvenes adultos, como los de la Rama Rover, pueden y deben ocupar cargos. Si tienes 19 años y quieres ser presidente del consejo, no hay nada en la política que te lo impida. Al contrario: dice expresamente que se debe preferir a los jóvenes q…
 - `blockquote` — Ejemplo: dos candidatos a secretario, los dos cumplen el perfil, uno tiene 21 años. La política no dice 'puede'. Dice: prefiéranlo.
 - `paragraph` — Hombres y mujeres con las mismas oportunidades en cualquier cargo, en cualquier nivel. Suena obvio, pero está escrito porque históricamente no se cumplía.
-- `blockquote` — Ejemplo: 'para intendente mejor un hombre, que toca cargar bultos'. Dicho en broma o en serio, eso incumple la política.
+- `blockquote` — Ejemplo: 'para intendente (el consejero que cuida el inventario y el equipo del grupo) mejor un hombre, que toca cargar bultos'. Dicho en broma o en serio, eso incumple la política.
 - `policy-quote` — «Personalización: Al asumir un cargo, cada adulto puede evaluar qué competencias ya tiene desarrolladas y cuáles le hacen falta desarrollar. Esto lo hace con la asesoría personal de uno o varios adultos. En conjunto, formulan el plan personal de desarrollo. —…» — *Política Nacional de Adultos en el Movimiento, Cap. 3 'Principios', p. 4-5*
 - `info-box` — 💡 En simple: estos 5 principios son 5 promesas que la política te hace a ti. Personalización: tu plan se ajusta a ti, no tú al plan. Aprendizaje significativo: lo que aprendas te tiene que servir el sábado en la sede. H…
 - **Reflexión:** «De estos 5 principios, ¿cuál crees que tu grupo vive bien hoy y cuál es el que más le falta? Da un ejemplo concreto.»
@@ -105,7 +106,7 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
   2. En la reunión de seguimiento, tu asesor personal te dice: 'te ordeno que hagas este curso este mes'. ¿Qué desentona ahí con el principio de horizontalidad?
      - Nada: el asesor es tu superior y por eso te asigna la formación
      - Que la horizontalidad significa que en el grupo no hay ninguna autoridad, así que nadie puede pedirte nada
-     - Que el asesor acompaña y acuerda contigo tu plan — no te da órdenes, no es tu jefe ✅
+     - Que el asesor acompaña y acuerda contigo tu plan: en la asesoría no da órdenes ✅
 
 ### 📋 Lección 4 — Los otros 8 principios  (`L4`, módulo 5)
 
@@ -113,14 +114,14 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
 - `method-grid` (8) — Enfoque por competencias · Coherencia · Organización que aprende · Subsidiariedad y descentralización · Accesibilidad y flexibilidad · Transparencia · Participación · Calidad
 - `policy-quote` — «Enfoque por competencias: Busca el desarrollo de todos los aspectos de un adulto en términos de conocimientos, habilidades, actitudes y valores requeridos para desempeñar adecuadamente sus funciones en un cargo. — Coherencia: Vincula los conceptos, prácticas…» — *Política Nacional de Adultos en el Movimiento, Cap. 3 'Principios', p. 4-5*
 - `info-box` — 💡 En simple: si los 5 anteriores son promesas sobre ti, estos 8 son promesas sobre cómo funciona el sistema: que te evalúen por lo que sabes hacer y no por antigüedad, que los líos se resuelvan en tu grupo y no en Bogot…
-- **Reflexión:** «Escoge UNO de los 8 y cuenta una situación real de tu grupo en los últimos 6 meses en que ese principio no se cumplió. ¿Qué pasó y a quién le tocó pagarlo?»
+- **Reflexión:** «Escoge UNO de los 8 y cuenta una situación real de tu grupo en los últimos 6 meses en que ese principio no se cumplió. ¿Qué pasó y qué efecto tuvo? Cuéntalo por los cargos, sin nombres. Si llevas poco tiempo en el grupo, cuenta una que hayas visto o que te hayan contado.»
 - **Quiz** (2 preguntas):
   1. Si un consejero tiene un conflicto en su grupo, ¿qué dice el principio de subsidiariedad?
      - Que se debe resolver en el grupo, y solo escalar si el grupo no puede ✅
      - Que debe escalarse inmediatamente a la dirección nacional
      - Que lo resuelva el asesor personal por su cuenta, sin pasar por el consejo
-  2. Tu grupo llevaba tres años haciendo un campamento de padres que salía buenísimo. La dirigente que lo organizaba se fue y nadie escribió nunca cómo se hacía. ¿Qué principio se está incumpliendo?
-     - Organización que aprende: lo aprendido en la práctica debe quedar sistematizado y no irse con la persona ✅
+  2. Rocío lleva dos años en la tesorería del grupo y aprendió en la práctica a hacer presupuestos y rendir cuentas. Alguien le dice: 'eso no cuenta, porque no hiciste un curso'. ¿Qué principio contradice ese comentario?
+     - Organización que aprende: lo que se aprende sirviendo se puede valorar y certificar como competencia ✅
      - Coherencia: ese campamento debía suspenderse porque no estaba contemplado dentro de la política mundial del movimiento
      - Transparencia: el error estuvo en no informarle a la regional que ese campamento se hacía cada año
 
@@ -132,6 +133,7 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
 - `paragraph` — Lo mismo pasa con un cargo en el grupo. Saber sumar números no te hace tesorero. Hacer una contabilidad real con 80 chicos, presentar al consejo cuentas claras, y mantenerte transparente cuando hay tentación, eso es ser…
 - `method-grid` (3) — Saber · Hacer · Ser
 - `policy-quote` — «La competencia es definida como una característica subyacente en el adulto, que está causalmente relacionada con un estándar de efectividad y/o un desempeño superior en su cargo o función. — Característica subyacente: parte profunda de la personalidad, que pr…» — *Política Nacional de Adultos en el Movimiento, Cap. 4 'Gestión por Competencias', p. 7 (cita a Spencer y Spencer)*
+- `paragraph` — En palabras simples: una competencia no es lo que sabes de memoria. Es algo tuyo, tu manera de actuar, que permite anticipar si vas a hacer bien tu cargo.
 - `paragraph` — Cada competencia se mide en 4 grados, desde el más básico hasta el de excelencia. Esto te permite saber dónde estás y qué te falta para subir. Los grados están definidos en el Diccionario de Competencias oficial.
 - `info-box` — 🔮 Adelanto: En el Curso 3 verás el Ciclo del Adulto — cómo todas estas piezas (competencias, plan, asesor, evaluación) se viven en el tiempo. En el Curso 4 profundizarás las 7 competencias esenciales con su autodiagnóst…
 - `video` — politica-marco/videos/02_competencias.mp4
@@ -150,7 +152,7 @@ El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecci
 
 - **Subtemas:** 🧰 Las 12 herramientas: los 12 elementos del modelo de gestión · 🎬 La caja de herramientas, en voz del taller · 🏁 Cierre del Curso 2
 - `info-box` — ⏱️ 5 minutos · 1 idea central: La política trae un modelo de gestión con 12 elementos — piénsalos como tu caja de herramientas. Hoy vas a saber cuáles son y para qué sirven. No tienes que dominarlos hoy — solo saber que…
-- `list` (12) — Cartilla Metodológica — el cómo se hace operativo todo el sistema · Diccionario de Competencias — las 7 esenciales y 29 específicas, con… · Manual de Cargos, Funciones y Perfiles — qué se espera de cada cargo · Atracción y Vinculación — cómo buscar y vincular nuevos adultos · Módulo de Inducción — para integrar a quien acaba de llegar · Plataforma Talento 360° — donde vive tu hoja de vida y plan personal · Módulo de Diversidad e Inclusión — para que el grupo sea para todos · Módulo Safe from Harm (A Salvo del Peligro) — protección de niños y a… · Acompañamiento, Seguimiento y Evaluación — cómo te acompañan y evalúan · Formación Básica + Perfeccionamiento Continuo — los dos momentos form… · Gestión para la Motivación — cómo no quemarte y mantener el ánimo · Decisiones para el Futuro — qué pasa al final del nombramiento (renov…
+- `list` (12) — Cartilla Metodológica — el cómo se hace operativo todo el sistema · Diccionario de Competencias — las 7 esenciales y 29 específicas, con… · Manual de Cargos, Funciones y Perfiles — qué se espera de cada cargo: habla del cargo · Atracción y Vinculación — cómo buscar y vincular nuevos adultos · Módulo de Inducción — para integrar a quien acaba de llegar · Plataforma Talento 360° — donde vive tu hoja de vida y plan personal · Módulo de Diversidad e Inclusión — para que el grupo sea para todos · Módulo Safe from Harm (A Salvo del Peligro) — protección de niños y a… · Acompañamiento, Seguimiento y Evaluación — cómo te acompañan y evalúan · Formación Básica + Perfeccionamiento Continuo — los dos momentos form… · Gestión para la Motivación — cómo no quemarte y mantener el ánimo · Decisiones para el Futuro — qué pasa al final del nombramiento (renov…
 - `info-box` — 🔮 Lo que viene en la ruta: 🔄 Curso 3 — vas a recorrer el Ciclo del Adulto completo (atracción, desempeño, decisiones) 🧠 Curso 4 — vas a profundizar en el Diccionario de Competencias con autodiagnóstico personal 🗺️ Curso…
 - `video` — politica-marco/videos/03_herramientas.mp4
 - `policy-quote` — «El modelo de gestión de adultos reúne 12 elementos (según el diagrama del modelo, p. 17): Cartilla Metodológica, Manual de Cargos Funciones y Perfiles por Competencias, Atracción y Vinculación, Módulo de Inducción, Diccionario de Competencias, Módulo Safe fro…» — *Política Nacional de Adultos en el Movimiento, Cap. 5.2.3 (diagrama del modelo), p. 17*

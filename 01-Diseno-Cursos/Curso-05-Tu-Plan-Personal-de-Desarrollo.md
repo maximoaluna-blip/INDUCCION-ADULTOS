@@ -34,9 +34,9 @@ El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan 
 
 - **Subtemas:** 🎯 Al terminar este curso vas a… · 📚 Las 6 lecciones
 - `info-box` — Bienvenido/a al Curso 5 — el último de la ruta. Este es el curso más práctico. Si vienes del Curso 4, ya tienes tu autodiagnóstico. Aquí lo conviertes en un Plan Personal de Desarrollo real, con asesor, plazo y herramie…
-- `paragraph` — Los grupos donde nadie hace su plan personal se reconocen rápido: adultos quemados, que no saben qué se espera de ellos y a los que nadie acompaña. No es falta de ganas — es falta de plan. En los próximos 30 minutos vas…
+- `paragraph` — Cuando nadie en el grupo tiene plan personal, es fácil que pase esto: adultos quemados, que no saben qué se espera de ellos y a los que nadie acompaña. No es falta de ganas — es falta de plan. En los próximos 30 minutos vas…
 - `paragraph` — Si NO has hecho el Curso 4 (autodiagnóstico de competencias), te recomendamos hacerlo primero — pero tampoco bloquea: en este curso puedes elegir tus prioridades manualmente.
-- `paragraph` — Si hiciste el Curso 4 antes de agosto de 2026, te vamos a pedir repetir el autodiagnóstico: corregimos los peldaños de varias competencias. Son 10 minutos y tu plan queda bien calibrado.
+- `paragraph` — Solo si hiciste el Curso 4 antes de agosto de 2026 (con la escala anterior) te vamos a pedir repetir el autodiagnóstico: corregimos los peldaños de varias competencias. Son 10 minutos y tu plan queda bien calibrado. Si lo hiciste después, no repites nada: tu perfil ya está listo.
 - `list` (6) — Distinguir un plan de capacitación de un Plan Personal · Elegir a tu Asesor Personal con criterios y nombrar 1-2 candidatos re… · Reconocer los 6 elementos del Acuerdo Mutuo en un caso · Registrar tu información en Talento 360° y decir cuándo actualizarla · Redactar metas concretas y observables · Producir tu Plan Personal en PDF
 - `timeline` (6) — Lección 1 — ¿Qué es un Plan Personal de Desarrollo? · Lección 2 — Tu Asesor Personal · Lección 3 — El Acuerdo Mutuo · Lección 4 — Talento 360° · Lección 5 — Construye tu Plan · Lección 6 — Tu hoja de ruta + cierre
 
@@ -46,7 +46,7 @@ El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan 
 - `info-box` — ⏱️ 5 minutos · 1 idea central: Un Plan Personal de Desarrollo (PPD) NO es un plan de capacitación. Es un acuerdo entre TÚ y la asociación sobre qué vas a desarrollar, cómo, en cuánto tiempo, y con qué apoyo.
 - `method-grid` (2) — ❌ Plan de capacitación tradicional · ✅ Plan Personal de Desarrollo
 - `list` (4) — Te da claridad sobre qué se espera de ti en tu cargo concreto · Te orienta sobre qué desarrollar primero (no todo a la vez) · Te conecta con un asesor que te acompaña durante todo el ciclo — y qu… · Te certifica al final del ciclo, no por participar sino por demostrar
-- `paragraph` — Acuerdo Mutuo: el compromiso que firmaste con tu Grupo al aceptar el cargo — es el marco donde vive tu plan.
+- `paragraph` — Compromiso de Acuerdo Mutuo: el documento que firmas con tu Grupo al cerrar tu vinculación, antes del nombramiento (o que ya firmaste, si te nombraron). Es el marco donde vive tu plan.
 - `paragraph` — La política no da un formato rígido; en la práctica un buen plan tiene cuatro cosas:
 - `list` (4) — Diagnóstico: dónde estás hoy. La política lo llama valoración inicial… · Metas: qué quieres lograr en cada competencia priorizada · Plazos: cuándo lo vas a lograr (dentro del ciclo de tu nombramiento a… · Recursos: qué cursos, módulos, lecturas, prácticas vas a usar
 - `policy-quote` — «La formación básica se inicia con la formulación de un plan personal de desarrollo, acordado entre el adulto y su Asesor Personal, estableciendo: las competencias que se consideran ya desarrolladas en el adulto, y los módulos, cursos, prácticas supervisadas y…» — *Política Nacional de Adultos en el Movimiento, Cap. 5.2.1, p. 14*
@@ -73,7 +73,7 @@ El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan 
 - **Reflexión:** «Pensando en tu grupo: ¿quién podría ser tu asesor personal? Escribe 1-2 nombres concretos y por qué los elegirías. Si no se te ocurre nadie, ¿qué necesitas para conseguir uno?»
 - **Quiz** (2 preguntas):
   1. Sandra le pide a Camilo, su jefe de rama, que sea su asesor personal. Camilo duda: 'pero si yo soy tu jefe, ¿no es raro que además sea quien te certifique?' ¿Qué le responde Sandra con lo que vio en esta lección?
-     - Que la política recomienda que muchas veces sea el jefe inmediato, porque es quien la ve en acción ✅
+     - Que la política lo recomienda porque la ve en acción, y que no certifica solo: la evaluación 360° suma otras miradas ✅
      - Que tiene razón: mejor buscar a alguien de otro grupo, sin relación de jefatura, para que la asesoría sea imparcial
      - Que no importa quién sea, porque el asesor solo acompaña y no interviene en la evaluación
   2. El criterio más importante para elegir asesor según el documento oficial es:
@@ -87,7 +87,7 @@ El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan 
 - `info-box` — ⏱️ 5 minutos · 1 idea central: El Acuerdo Mutuo es el documento que firman dos partes: tú y el estamento donde sirves (tu Grupo, tu Región o la Nación, a través de su representante legal). Define las reglas del juego: q…
 - `paragraph` — La política define 6 elementos obligatorios que todo Acuerdo Mutuo debe tener:
 - `timeline` (6) — 1. Vigencia del nombramiento · 2. Inducción y período de prueba · 3. Compromisos del adulto · 4. Apoyos y beneficios al adulto · 5. Voluntad de desarrollar competencias · 6. Procedimiento de evaluación
-- `info-box` — 📎 Formato oficial descargable: La asociación tiene el formato oficial 'Compromiso de Acuerdo Mutuo' de la Dirección Nacional de Adultos (documento 7 del set oficial). Descarga siempre la versión más reciente del portal:…
+- `info-box` — 📎 Formato oficial descargable: La asociación tiene el formato oficial 'Compromiso de Acuerdo Mutuo' de la Dirección Nacional de Adultos en el Movimiento (DNAM). La versión vigente es la 4.0, del 21 de septiembre de 2026. Descarga siempre la más reciente del portal:…
 - `paragraph` — Firmar es simbólico y práctico. Simbólico: marcas un antes y un después. Práctico: si en 6 meses tu asesor te dice 'no estás cumpliendo lo que firmaste', hay un papel concreto al que volver.
 - `blockquote` — Lo que no se firma, se olvida. Lo que se firma, se cumple.
 - `policy-quote` — «El proceso de selección para cualquier cargo o función culmina con el establecimiento de un compromiso y acuerdo mutuo entre la ASC y el adulto seleccionado. Este será refrendado mediante un nombramiento oficial, emitido solamente por personas autorizadas par…» — *Política Nacional de Adultos en el Movimiento, Cap. 5.1.5, p. 13*
@@ -110,7 +110,7 @@ El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan 
 - `method-grid` (2) — 1. Registro y validación · 2. Postulación a cargos
 - `info-box` — 📚 Tutoriales oficiales: La asociación publica 2 PDFs paso a paso para usar Talento 360°: • Registro y Validación de Datos en Talento 360° • Postulación a Cargos dentro de Talento 360° Búscalos en la biblioteca oficial (…
 - `info-box` — 🔗 Los enlaces que vas a necesitar: • Hoja de vida, plan personal y evaluación 360°: scouts.talento360.com.co/hrm/inicio.aspx • Postulación a cargos vacantes: scouts.talento360.com.co/TrabajeConNosotros/inicio • Bibliote…
-- `list` (4) — Apenas te nombren en cualquier cargo dentro del grupo (vocal del cons… · Cuando firmes tu Acuerdo Mutuo (subes el PDF firmado) · Cuando construyas tu Plan Personal (Lección 5 — la próxima) · Cada vez que termines una formación que mejore tus competencias
+- `list` (4) — Apenas llegues: tu hoja de vida va primero, antes del nombramiento… · Cuando firmes tu Acuerdo Mutuo (subes el PDF firmado) · Cuando construyas tu Plan Personal (Lección 5 — la próxima) · Cada vez que termines una formación que mejore tus competencias
 - `blockquote` — Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.) Y guarda además tu propio archivo personal —certificados, actas de reunión, evidencias—:…
 - **Reflexión:** «¿Conocías Talento 360°? Si ya estás registrado/a, ¿qué tan actualizada está tu información? Si no, ¿qué te falta para registrarte esta semana?»
 - **Quiz** (2 preguntas):
@@ -145,12 +145,12 @@ El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan 
 
 - **Subtemas:** ✅ Tu hoja de ruta — los 4 próximos pasos · 🎉 Has terminado la Ruta de Formación · 📚 La ruta completa que terminaste · 🎯 Lo que tienes ahora que no tenías antes
 - `info-box` — ⏱️ 3 minutos · 1 idea central: Tienes tu plan. Ahora hay 4 pasos prácticos para que no quede en el papel. Te los listo concretos.
-- `timeline` (4) — 1. Imprime tu Plan o guárdalo en PDF · 2. Identifica a tu asesor y agenda una reunión · 3. Firma tu Acuerdo Mutuo con tu Grupo · 4. Registra todo en Talento 360°
+- `timeline` (4) — 1. Imprime tu Plan o guárdalo en PDF · 2. Revisa tu Compromiso de Acuerdo Mutuo (se firma con el Grupo antes del nombramiento; no lo firma el asesor) · 3. Identifica a tu asesor y agenda una reunión (él firma el Aval de Asesor Personal) · 4. Registra todo en Talento 360°
 - `info-box` — ⏰ Tiempo estimado para los 4 pasos: ~3 horas distribuidas en 2-3 semanas. Es una estimación de esta plataforma para ayudarte a planear, no un plazo oficial de la DNAM. No es mucho. Pero los grupos donde nadie hace estos…
 - `paragraph` — Hoy pasaste de la teoría a la acción. Tienes un plan real, propio, con prioridades reales y un compromiso real. Eso es ya hacer la política de adultos — no solo conocerla. Y al obtener el certificado de este curso, comp…
 - `timeline` (5) — 🦸 Curso 1 — Bienvenida al Movimiento de Adultos · 📜 Curso 2 — La Política — Marco y Principios · 🔄 Curso 3 — El Ciclo del Adulto · 🧠 Curso 4 — Las 7 Competencias Esenciales · 🗺️ Curso 5 — Tu Plan Personal de Desarrollo (estás aquí)
 - `list` (5) — Marco doctrinal: sabes qué dice la política, sus principios y herrami… · Visión sistémica: entiendes cómo encaja tu rol en el ciclo completo d… · Autoconocimiento: tienes tu perfil de competencias con fortalezas y á… · Plan personal aterrizado: sabes qué priorizar, en cuánto tiempo, con… · Lenguaje común: puedes conversar de igual a igual con tu asesor, jefe…
-- `info-box` — 📈 Un ascenso que te llevas hoy: ¿te acuerdas del grado 2 de Aprendizaje y desarrollo personal? Dice 'tengo formulado mi Plan Personal de Desarrollo'. Acabas de formularlo. Si en el Curso 4 te calificaste grado 1 ahí, ya…
+- `info-box` — 📈 Un paso hacia el grado 2: ¿te acuerdas del grado 2 de Aprendizaje y desarrollo personal? Dice 'tengo formulado mi Plan Personal de Desarrollo'. Acabas de dar el primer paso. Para que cuente, acuérdalo con tu asesor y sostenlo en el tiempo…
 - `blockquote` — Hace 5 cursos llegaste con preguntas. Hoy te vas con un mapa, un plan y un sistema de soporte. El movimiento te necesitaba como llegaste. Ahora te aprovechará mejor con cada paso que des.
 - `info-box` — 🌟 Servicio adicional al movimiento Con estos 5 cursos ya conoces la política, la caja de herramientas y Talento 360° — que es buena parte de lo que la ASC pide para asesorar a otro. Te faltan dos cosas concretas: tener…
 - `info-box` — 🔮 Próximas etapas de la plataforma Una vez la ruta de fundamentación esté validada con usuarios reales, vendrán cursos de profundización: Cómo vincular nuevos adultos, Asesoría personal en profundidad, Cierre digno de n…

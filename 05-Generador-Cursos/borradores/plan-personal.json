@@ -2,8 +2,8 @@
   "courseId": "plan-personal",
   "title": "Tu Plan Personal de Desarrollo",
   "subtitle": "Curso 5 de la Ruta de Formación de Adultos en el Movimiento",
-  "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y firmar con tu asesor.",
-  "contentVersion": "2026-09-28",
+  "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y llevar a tu asesor, con quien escribirás la versión definitiva.",
+  "contentVersion": "2026-10-12",
   "icon": "🗺️",
   "duration": "30 minutos",
   "level": 1,
@@ -24,7 +24,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Los grupos donde nadie hace su plan personal se reconocen rápido: adultos quemados, que no saben qué se espera de ellos y a los que nadie acompaña. No es falta de ganas — es falta de plan. En los próximos 30 minutos vas a construir el tuyo: dos o tres prioridades, con plazo, con recursos y con el nombre propio de quien te va a acompañar. En PDF, listo para llevar."
+          "text": "Cuando nadie en el grupo tiene plan personal, es fácil que pase esto: adultos quemados, que no saben qué se espera de ellos y a los que nadie acompaña. No es falta de ganas — es falta de plan. En los próximos 30 minutos vas a construir el tuyo: dos o tres prioridades, con plazo, con recursos y con el nombre propio de quien te va a acompañar. En PDF, listo para llevar."
         },
         {
           "type": "paragraph",
@@ -32,7 +32,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Si hiciste el Curso 4 antes de agosto de 2026, te vamos a pedir repetir el autodiagnóstico: corregimos los peldaños de varias competencias. Son 10 minutos y tu plan queda bien calibrado."
+          "text": "Solo si hiciste el Curso 4 antes de agosto de 2026 (con la escala anterior) te vamos a pedir repetir el autodiagnóstico: corregimos los peldaños de varias competencias. Son 10 minutos y tu plan queda bien calibrado. Si lo hiciste después, no repites nada: tu perfil ya está listo."
         },
         {
           "type": "heading",
@@ -77,7 +77,7 @@
             },
             {
               "title": "Lección 5 — Construye tu Plan",
-              "description": "8 min. Herramienta interactiva. Genera PDF para firmar."
+              "description": "8 min. Herramienta interactiva. Genera un PDF para llevar a tu asesor."
             },
             {
               "title": "Lección 6 — Tu hoja de ruta + cierre",
@@ -141,7 +141,7 @@
         },
         {
           "type": "paragraph",
-          "text": "<strong>Acuerdo Mutuo:</strong> el compromiso que firmaste con tu Grupo al aceptar el cargo — es el marco donde vive tu plan."
+          "text": "<strong>Compromiso de Acuerdo Mutuo:</strong> el documento que firmas con tu Grupo al cerrar tu vinculación, antes del nombramiento (o que ya firmaste, si te nombraron). Es el marco donde vive tu plan."
         },
         {
           "type": "paragraph",
@@ -275,7 +275,7 @@
           {
             "text": "Sandra le pide a Camilo, su jefe de rama, que sea su asesor personal. Camilo duda: 'pero si yo soy tu jefe, ¿no es raro que además sea quien te certifique?' ¿Qué le responde Sandra con lo que vio en esta lección?",
             "options": [
-              "Que la política recomienda que muchas veces sea el jefe inmediato, porque es quien la ve en acción",
+              "Que la política lo recomienda porque la ve en acción, y que no certifica solo: la evaluación 360° suma otras miradas",
               "Que tiene razón: mejor buscar a alguien de otro grupo, sin relación de jefatura, para que la asesoría sea imparcial",
               "Que no importa quién sea, porque el asesor solo acompaña y no interviene en la evaluación"
             ],
@@ -344,7 +344,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>📎 Formato oficial descargable:</strong><br>La asociación tiene el formato oficial <em>'Compromiso de Acuerdo Mutuo'</em> de la Dirección Nacional de Adultos (documento 7 del set oficial). Descarga siempre la versión más reciente del portal: <a href=\"https://scout.org.co/biblioteca\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca</a>. Lo llenas, lo firman las dos partes —tú y el representante legal del estamento donde sirves— y queda en tu carpeta personal y en Talento 360°."
+          "text": "<strong>📎 Formato oficial descargable:</strong><br>La asociación tiene el formato oficial <em>'Compromiso de Acuerdo Mutuo'</em> de la Dirección Nacional de Adultos en el Movimiento (DNAM). La versión vigente es la 4.0, del 21 de septiembre de 2026. Descarga siempre la más reciente del portal: <a href=\"https://scout.org.co/biblioteca\" target=\"_blank\" rel=\"noopener\">scout.org.co/biblioteca</a>. Lo llenas, lo firman las dos partes —tú y el representante legal del estamento donde sirves— y queda en tu carpeta personal y en Talento 360°."
         },
         {
           "type": "heading",
@@ -430,7 +430,7 @@
           "items": [
             {
               "title": "1. Registro y validación",
-              "description": "La primera vez creas tu cuenta, llenas tus datos básicos, subes tu hoja de vida, y la asociación valida que estás efectivamente nombrado en un cargo. Una vez al inicio.",
+              "description": "La primera vez creas tu cuenta y llenas tus datos y tu hoja de vida. Cuando tengas cargo, lo registras con tu asesor. «Validar» es revisar tú mismo que tus datos estén bien y que tengas un solo cargo activo por nivel: de eso depende que tu evaluación funcione. Hazlo apenas llegues, porque la hoja de vida es el primer paso de la inducción, antes del nombramiento.",
               "color": "#fff3e0",
               "borderColor": "#ff9800"
             },
@@ -459,7 +459,7 @@
           "type": "list",
           "ordered": true,
           "items": [
-            "<strong>Apenas te nombren</strong> en cualquier cargo dentro del grupo (vocal del consejo, tesorero, secretario, dirigente de rama, etc.)",
+            "<strong>Apenas llegues:</strong> tu hoja de vida va primero, antes del nombramiento. Cuando te nombren, registras el cargo (vocal del consejo, tesorero, secretario, dirigente de rama, etc.).",
             "<strong>Cuando firmes</strong> tu Acuerdo Mutuo (subes el PDF firmado)",
             "<strong>Cuando construyas</strong> tu Plan Personal (Lección 5 — la próxima)",
             "<strong>Cada vez que termines una formación</strong> que mejore tus competencias"
@@ -630,12 +630,12 @@
               "description": "Sin papel, es solo una idea bonita. Imprime y/o guárdalo en tu correo."
             },
             {
-              "title": "2. Identifica a tu asesor y agenda una reunión",
-              "description": "Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa."
+              "title": "2. Revisa tu Compromiso de Acuerdo Mutuo",
+              "description": "Si ya te nombraron, ya lo firmaste: búscalo y revisa su vigencia. Si todavía no, se firma con tu Grupo <strong>antes</strong> del nombramiento: pregúntale a tu jefe inmediato cuándo. Es el formato oficial de la DNAM (está en la biblioteca), y no lo firma tu asesor."
             },
             {
-              "title": "3. Firma tu Acuerdo Mutuo con tu Grupo",
-              "description": "Diligencia el formato oficial 'Compromiso de Acuerdo Mutuo' de la DNAM (lo descargas del portal oficial) y pídele a tu asesor que firme su 'Aval de Asesor Personal' — son dos papeles distintos, ambos cortos, y ambos están en la biblioteca."
+              "title": "3. Identifica a tu asesor y agenda una reunión",
+              "description": "Si todavía no lo tienes, esta semana. Lleva el plan impreso. La conversación cambia con un papel en la mesa. Tu asesor firma <strong>su propio papel</strong>, el <em>Aval de Asesor Personal</em>, que también está en la biblioteca."
             },
             {
               "title": "4. Registra todo en Talento 360°",
@@ -645,7 +645,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>⏰ Tiempo estimado para los 4 pasos:</strong><br>~3 horas distribuidas en 2-3 semanas. <em>Es una estimación de esta plataforma para ayudarte a planear, no un plazo oficial de la DNAM.</em> No es mucho. Pero los grupos donde nadie hace estos pasos viven con adultos quemados, sin claridad y sin acompañamiento. Tu plan vale solo si lo aterrizas."
+          "text": "<strong>⏰ Tiempo estimado para los 4 pasos:</strong><br>~3 horas distribuidas en 2-3 semanas. <em>Es una estimación de esta plataforma para ayudarte a planear, no un plazo oficial de la DNAM.</em> No es mucho. Pero cuando nadie da estos pasos, es fácil que el grupo termine con adultos quemados, sin claridad y sin acompañamiento. Tu plan vale solo si lo aterrizas."
         },
         {
           "type": "heading",
@@ -682,7 +682,7 @@
             },
             {
               "title": "🗺️ Curso 5 — Tu Plan Personal de Desarrollo (estás aquí)",
-              "description": "Tu plan real, listo para firmar con tu asesor."
+              "description": "Tu plan real, listo para llevar a tu asesor."
             }
           ]
         },
@@ -704,7 +704,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>📈 Un ascenso que te llevas hoy:</strong> ¿te acuerdas del grado 2 de <em>Aprendizaje y desarrollo personal</em>? Dice 'tengo formulado mi Plan Personal de Desarrollo'. Acabas de formularlo. Si en el Curso 4 te calificaste grado 1 ahí, ya no estás en grado 1. Así se sube: una conducta a la vez."
+          "text": "<strong>📈 Un paso hacia el grado 2:</strong> ¿te acuerdas del grado 2 de <em>Aprendizaje y desarrollo personal</em>? Dice 'tengo formulado mi Plan Personal de Desarrollo'. Acabas de dar el primer paso. Para que cuente, acuérdalo con tu asesor y sostenlo en el tiempo: como viste en el Curso 4, los grados se demuestran con conductas sostenidas. Así se sube: una conducta a la vez."
         },
         {
           "type": "blockquote",
@@ -712,7 +712,7 @@
         },
         {
           "type": "info-box",
-          "text": "<strong>🌟 Servicio adicional al movimiento</strong><br>Con estos 5 cursos ya conoces la política, la caja de herramientas y Talento 360° — que es buena parte de lo que la ASC pide para asesorar a otro. Te faltan dos cosas concretas: tener el <strong>certificado del Módulo de Inducción General de la ASC</strong> y estar llevando <strong>tu propio Plan Personal</strong>. Cuando las tengas, habla con tu jefe de grupo."
+          "text": "<strong>🌟 Servicio adicional al movimiento</strong><br>Con estos 5 cursos ya conoces la política, la caja de herramientas y Talento 360° — que es buena parte de lo que la ASC pide para asesorar a otro. Te faltan dos cosas concretas: tener el <strong>certificado del Módulo de Inducción General de la ASC</strong> (es un curso de la Universidad Scout: colombia.universidadscout.org) y estar llevando <strong>tu propio Plan Personal</strong>. Cuando las tengas, habla con tu jefe de grupo."
         },
         {
           "type": "info-box",
