@@ -2363,3 +2363,127 @@ function listarBackups() {
 
   return lista;
 }
+
+// ============================================================================
+// SUPRESION DE DATOS DE UNA PERSONA (ADR-139, punto 3 — Ley 1581 de 2012)
+// ============================================================================
+//
+// Se ejecuta SOLO desde el editor de Apps Script: ninguna accion de doGet ni de
+// doPost llega aqui, para no abrir una operacion destructiva en un backend cuyo
+// token es publico.
+//
+// COMO SE USA (el correo nunca se escribe en el codigo):
+//   1. Configuracion del proyecto > Propiedades del script > agregar
+//      PURGA_CORREO = el correo de quien pidio la supresion.
+//   2. Ejecutar purgarPersonaSimulacro: cuenta, por hoja, las filas que se
+//      borrarian. No borra nada.
+//   3. Si el conteo es el esperado, ejecutar purgarPersonaEjecutar: borra esas
+//      filas, deja una fila en 'Supresiones' (fecha + hash SHA-256 del correo,
+//      nunca el correo) y elimina la propiedad PURGA_CORREO.
+// El registro de ejecucion solo muestra conteos: ningun contenido de las filas.
+//
+// Recorre TODA hoja que tenga una columna 'Email' en la fila 1, sin lista a
+// mano: una hoja nueva queda cubierta sola. 'Items' no tiene Email (es anonima,
+// ADR-030) y 'Supresiones' tampoco.
+//
+// Las copias de Drive NO se tocan: vencen solas. Para dar el plazo al titular,
+// correr informarRutinaDeCopias, que dice que trigger de copia esta instalado.
+
+var SUPRESIONES_SHEET = {
+  name: 'Supresiones',
+  headers: ['Timestamp', 'HashCorreo', 'FilasBorradas', 'Detalle']
+};
+
+function purgarPersonaSimulacro() { return purgarPersona_(false); }
+function purgarPersonaEjecutar() { return purgarPersona_(true); }
+
+function hashCorreo_(email) {
+  var bytes = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, email, Utilities.Charset.UTF_8);
+  return bytes.map(function (b) { return ('0' + (b & 0xff).toString(16)).slice(-2); }).join('');
+}
+
+function purgarPersona_(ejecutar) {
+  var props = PropertiesService.getScriptProperties();
+  var email = String(props.getProperty('PURGA_CORREO') || '').toLowerCase().trim();
+  if (!validateEmail(email)) {
+    Logger.log('Falta PURGA_CORREO en las propiedades del script, o no es un correo valido. No se hizo nada.');
+    return null;
+  }
+
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(30000)) {
+    Logger.log('Otra ejecucion tiene el candado del script. Intentar de nuevo en un minuto. No se hizo nada.');
+    return null;
+  }
+
+  try {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var porHoja = {};
+    var total = 0;
+
+    ss.getSheets().forEach(function (sheet) {
+      var lastRow = sheet.getLastRow();
+      var lastCol = sheet.getLastColumn();
+      if (lastRow < 2 || lastCol < 1) return;
+      var headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+      var col = -1;
+      for (var h = 0; h < headers.length; h++) {
+        if (String(headers[h]).toLowerCase().trim() === 'email') { col = h; break; }
+      }
+      if (col < 0) return;
+
+      var correos = sheet.getRange(2, col + 1, lastRow - 1, 1).getValues();
+      var filas = [];
+      for (var i = 0; i < correos.length; i++) {
+        if (String(correos[i][0]).toLowerCase().trim() === email) filas.push(i + 2);
+      }
+      if (filas.length === 0) return;
+
+      porHoja[sheet.getName()] = filas.length;
+      total += filas.length;
+
+      if (ejecutar) {
+        // De abajo hacia arriba, agrupando filas contiguas, para que borrar
+        // una no corra el indice de las que faltan.
+        var k = filas.length - 1;
+        while (k >= 0) {
+          var fin = filas[k];
+          var inicio = fin;
+          while (k > 0 && filas[k - 1] === inicio - 1) { k--; inicio--; }
+          sheet.deleteRows(inicio, fin - inicio + 1);
+          k--;
+        }
+      }
+    });
+
+    var detalle = Object.keys(porHoja).map(function (n) { return n + ': ' + porHoja[n]; }).join(', ');
+    Logger.log((ejecutar ? 'BORRADAS ' : 'SIMULACRO, se borrarian ') + total + ' filas. ' + (detalle || 'Ninguna hoja tiene ese correo.'));
+
+    if (ejecutar) {
+      var sup = getOrCreateSheet(SUPRESIONES_SHEET.name, SUPRESIONES_SHEET.headers);
+      sup.appendRow([new Date().toISOString(), hashCorreo_(email), total, detalle]);
+      props.deleteProperty('PURGA_CORREO');
+      Logger.log('Supresion registrada en la hoja ' + SUPRESIONES_SHEET.name + ' y PURGA_CORREO eliminada. Las copias de Drive vencen solas: ver informarRutinaDeCopias.');
+    }
+    return { total: total, porHoja: porHoja, ejecutado: ejecutar };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
+ * Dice que triggers de copia estan instalados, para dar al titular un plazo
+ * cierto de cuando sale de las copias de Drive (ADR-139). Solo lee.
+ * backupSheets: semanal, 12 copias. backupAutomatico: diario, 30 dias.
+ */
+function informarRutinaDeCopias() {
+  var copias = { backupSheets: 'semanal, guarda 12 copias (unas 12 semanas)', backupAutomatico: 'diaria, guarda 30 dias' };
+  var instaladas = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); })
+    .filter(function (f) { return copias[f]; });
+  if (instaladas.length === 0) {
+    Logger.log('No hay ningun trigger de copia instalado: las copias de Drive no se estan renovando.');
+  } else {
+    instaladas.forEach(function (f) { Logger.log('Instalado: ' + f + ' — copia ' + copias[f] + '.'); });
+  }
+  return instaladas;
+}
