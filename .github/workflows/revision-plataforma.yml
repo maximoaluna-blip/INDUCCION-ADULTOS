@@ -2,9 +2,10 @@ name: Revision plataforma (Playwright · todas las lineas)
 
 # Revisa la plataforma EN PRODUCCION (GitHub Pages) de punta a punta:
 # corre la suite generica (smoke, enlaces, accesibilidad axe, responsive,
-# persistencia) contra las 3 lineas activas y un smoke del portal central.
-# La suite es agnostica de linea: lee el cursos.json de cada ASC_BASE_URL.
-# No escribe en ningun backend de Apps Script.
+# persistencia) contra PA, PJ y DI y un smoke del portal central. Esa suite es
+# agnostica de linea: lee el cursos.json de cada ASC_BASE_URL. PT, Rover,
+# EVALUACIONES-ASC y PROGRAMA SCOUT corren su propia suite (job `otras`, desde
+# el 25-oct-2026). No escribe en ningun backend de Apps Script.
 #
 # Disparo: semanal automatico + a mano desde la pestaña Actions.
 #
@@ -62,6 +63,71 @@ jobs:
         with:
           name: reporte-${{ matrix.linea }}
           path: PRUEBAS-E2E/playwright-report
+          retention-days: 14
+
+  # PT, Rover y las dos apps complementarias corren SU PROPIA suite (repos publicos:
+  # el checkout no necesita token). Rover tiene motor propio y las apps no son cursos,
+  # asi que la suite generica de PA no les sirve. Cada config lee su URL de una
+  # variable (ASC_BASE_URL; PS_BASE_URL en Programa Scout, que sin ella levanta un
+  # servidor local): se pasan las dos y cada suite toma la suya. Solo specs que leen;
+  # los flujos con backend ya los cubre el pruebas-e2e.yml de cada repo, en local.
+  otras:
+    name: ${{ matrix.app }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: politicas-transversales
+            repo: maximoaluna-blip/INDUCCION-POLITICAS-TRANSVERSALES
+            base: https://maximoaluna-blip.github.io/INDUCCION-POLITICAS-TRANSVERSALES/02-Plataforma-Web/
+            specs: smoke links a11y responsive persistence
+          - app: rover
+            repo: maximoaluna-blip/INDUCCION-ROVER
+            base: https://maximoaluna-blip.github.io/INDUCCION-ROVER/02-Plataforma-Web/
+            specs: smoke links a11y responsive persistence
+          - app: evaluaciones
+            repo: maximoaluna-blip/EVALUACIONES-ASC
+            base: https://maximoaluna-blip.github.io/EVALUACIONES-ASC/
+            specs: smoke a11y responsive
+          - app: programa-scout
+            repo: maximoaluna-blip/PROGRAMA-SCOUT
+            base: https://maximoaluna-blip.github.io/PROGRAMA-SCOUT/
+            specs: smoke a11y responsive search pwa
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repo }}
+          path: app
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app/PRUEBAS-E2E/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: app/PRUEBAS-E2E
+        run: npm ci
+
+      - name: Instalar navegador Playwright
+        working-directory: app/PRUEBAS-E2E
+        run: npx playwright install --with-deps chromium
+
+      - name: Suite de ${{ matrix.app }} (produccion)
+        working-directory: app/PRUEBAS-E2E
+        env:
+          ASC_BASE_URL: ${{ matrix.base }}
+          PS_BASE_URL: ${{ matrix.base }}
+        run: npx playwright test ${{ matrix.specs }} --reporter=list
+
+      - name: Subir reporte (si falla)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-${{ matrix.app }}
+          path: app/PRUEBAS-E2E/playwright-report
           retention-days: 14
 
   portal:
