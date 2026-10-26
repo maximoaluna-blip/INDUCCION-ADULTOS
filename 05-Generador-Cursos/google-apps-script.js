@@ -17,6 +17,19 @@ var RATE_LIMIT_WINDOW = 60;      // ventana en segundos
 var BRAND_COLOR = '#622599';     // morado institucional scout
 var PLATFORM_NAME = 'Plataforma de Formacion de Adultos ASC';
 
+// --- Datos personales (ADR-139) ---
+// Los dos interruptores de la transicion. Se despliega primero con los dos en
+// modo permisivo, luego se publican los cursos que mandan `consent` y piden
+// codigo, y solo entonces se despliega con los dos cerrados. Al reves, un curso
+// viejo en la cache de Pages no podria inscribir ni recuperar a nadie.
+var CONSENT_OBLIGATORIO = false;  // true: `register` sin `consent` se rechaza
+var RECOVER_SIN_CODIGO = true;    // false: `recover` sin v=2 se rechaza
+var RECOVER_CODIGOS_DIA = 20;     // tope diario GLOBAL de codigos (la cuota de correo es compartida con Rover)
+var RECOVER_RESERVA_CUOTA = 15;   // con menos envios que esto, el codigo es lo primero que deja de salir
+var RECOVER_CODIGO_SEG = 600;     // vida del codigo
+var RECOVER_INTENTOS = 3;         // intentos fallidos que lo invalidan
+var CONTACTO_DATOS = 'adultos.valle@scout.org.co';
+
 // ============================================================================
 // FUNCIONES AUXILIARES (HELPERS)
 // ============================================================================
@@ -269,7 +282,10 @@ function getReminderEmailHtml(name, course, daysInactive) {
 var SHEET_CONFIG = {
   registros: {
     name: 'Registros',
-    headers: ['Timestamp', 'Nombre Completo', 'Edad', 'Grupo', 'Region', 'Email', 'Motivacion', 'Curso', 'UserAgent', 'URL']
+    // Autorizacion y VersionTexto (ADR-139) van AL FINAL: recover, stats y el panel
+    // leen por indice, y agregar al final no mueve nada. En la hoja que ya existe
+    // los encabezados los pone asegurarColumnasAutorizacion_.
+    headers: ['Timestamp', 'Nombre Completo', 'Edad', 'Grupo', 'Region', 'Email', 'Motivacion', 'Curso', 'UserAgent', 'URL', 'Autorizacion', 'VersionTexto']
   },
   progreso: {
     name: 'Progreso',
@@ -400,6 +416,38 @@ function handleRecover(params) {
   }
   email = email.toLowerCase();
 
+  // El curso que se pregunta. Vacio = no se pregunta por ninguno, y entonces
+  // `registeredInCourse` se queda en null: "no se pregunto" no es "no esta inscrito".
+  var cursoPedido = sanitize(params.course, 200);
+
+  // ADR-139 - QUIEN PIDE TIENE QUE DEMOSTRAR QUE EL CORREO ES SUYO.
+  // Hasta aqui bastaba escribir un correo ajeno para ver nombre, edad, grupo,
+  // region, puntajes y certificados. Ahora son dos pasos (v=2): sin `code` se
+  // manda un codigo a ese correo; con `code` valido se devuelve lo de siempre.
+  // Sin v=2 es un curso anterior a este cambio: se le atiende como antes SOLO
+  // mientras dure la transicion (RECOVER_SIN_CODIGO).
+  if (String(params.v || '') !== '2') {
+    if (!RECOVER_SIN_CODIGO) {
+      return jsonResponse(false, { needsReload: true },
+        'Esta pagina esta desactualizada. Recargala para recuperar tu avance con un codigo enviado a tu correo.');
+    }
+    return recoverData_(email, cursoPedido, '');
+  }
+  var codigo = sanitize(params.code, 10);
+  if (!codigo) return enviarCodigoRecuperacion_(email);
+  var verif = verificarCodigoRecuperacion_(email, codigo);
+  if (!verif.ok) return jsonResponse(false, { codeError: verif.motivo }, verif.mensaje);
+  return recoverData_(email, cursoPedido, sanitize(params.consentVersion, 20));
+}
+
+/**
+ * Lo que `recover` devuelve una vez que se sabe quien pide (ver handleRecover).
+ * `consentVersion`, si llega, es la autorizacion que la persona acaba de marcar en
+ * la caja de recuperar: se escribe en sus filas de Registros que no la tengan. Es
+ * la UNICA escritura de este GET, y solo ocurre con el codigo ya verificado: quien
+ * llega aqui demostro que el correo es suyo, y solo se tocan sus propias celdas.
+ */
+function recoverData_(email, cursoPedido, consentVersion) {
   var result = {
     registration: null,
     // null cuando no se pregunto por un curso; true/false cuando si (ADR-080).
@@ -418,10 +466,6 @@ function handleRecover(params) {
       assessments: []    // [assessmentId, ...]
     }
   };
-
-  // El curso que se pregunta. Vacio = no se pregunta por ninguno, y entonces
-  // `registeredInCourse` se queda en null: "no se pregunto" no es "no esta inscrito".
-  var cursoPedido = sanitize(params.course, 200);
 
   // Buscar en Registros - sin el campo Motivacion, que es texto libre.
   try {
@@ -452,6 +496,18 @@ function handleRecover(params) {
     // acompanaban al perfil podian ser los de otro.
     result.registration = deEsteCurso || primera;
     if (cursoPedido) result.registeredInCourse = !!deEsteCurso;
+
+    // Registros anteriores al ADR-139: no se inventa su autorizacion; se escribe
+    // cuando la persona vuelve y la da (ver cabecera de recoverData_).
+    if (consentVersion) {
+      asegurarColumnasAutorizacion_(regSheet);
+      var ahora = new Date();
+      for (var a = 1; a < regData.length; a++) {
+        if (String(regData[a][5]).toLowerCase().trim() === email && !regData[a][10]) {
+          regSheet.getRange(a + 1, 11, 1, 2).setValues([[ahora, consentVersion]]);
+        }
+      }
+    }
   } catch (err) { /* Hoja puede no existir aun */ }
 
   // Buscar en Progreso
@@ -578,6 +634,143 @@ function handleRecover(params) {
   }
 
   return jsonResponse(true, result);
+}
+
+/**
+ * La hoja Registros ya existia antes del ADR-139, y getOrCreateSheet solo pone
+ * encabezados al CREAR una hoja: sin esto las dos columnas nuevas quedarian sin
+ * nombre y nadie sabria que dicen.
+ */
+function asegurarColumnasAutorizacion_(sheet) {
+  var enc = sheet.getRange(1, 11, 1, 2).getValues()[0];
+  if (enc[0] !== 'Autorizacion' || enc[1] !== 'VersionTexto') {
+    sheet.getRange(1, 11, 1, 2).setValues([['Autorizacion', 'VersionTexto']]);
+  }
+}
+
+/** Si el correo tiene algo en la plataforma. Solo para decidir si se manda el codigo. */
+function correoTieneDatos_(email) {
+  var hojas = [[SHEET_CONFIG.registros, 5], [SHEET_CONFIG.progreso, 1], [SHEET_CONFIG.certificados, 1]];
+  for (var h = 0; h < hojas.length; h++) {
+    try {
+      var data = getOrCreateSheet(hojas[h][0].name, hojas[h][0].headers).getDataRange().getValues();
+      for (var i = 1; i < data.length; i++) {
+        if (String(data[i][hojas[h][1]]).toLowerCase().trim() === email) return true;
+      }
+    } catch (err) { /* Hoja puede no existir aun */ }
+  }
+  return false;
+}
+
+function esCorreoDePrueba_(email) { return /@example\.com$/.test(email); }
+
+/**
+ * Paso 1 de recover (ADR-139): manda un codigo de 6 digitos al correo.
+ *
+ * LA RESPUESTA ES LA MISMA exista o no el correo: si dijera "ese correo no esta",
+ * cualquiera podria preguntar correo por correo quien hace los cursos. El codigo
+ * solo SALE si el correo tiene datos, para no mandar correos a extranos.
+ *
+ * LA CUOTA DE CORREO ES COMPARTIDA con Rover (la misma cuenta, ~100 al dia) y la
+ * usan tambien la bienvenida, el certificado y los recordatorios. Por eso hay un
+ * tope DIARIO GLOBAL de codigos, ademas del de por correo, y el codigo deja de
+ * salir antes que nada cuando queda poca cuota: nunca a costa de un certificado.
+ *
+ * Los correos @example.com son de las pruebas E2E: su codigo es 000000, no se
+ * envia nada y no gastan el tope. Ese dominio esta reservado (RFC 2606): no hay
+ * nadie real detras.
+ */
+function enviarCodigoRecuperacion_(email) {
+  var generica = 'Si ese correo tiene avance en la plataforma, te enviamos un codigo de 6 digitos. Vence en 10 minutos.';
+  if (rateLimitCheck(email)) {
+    return jsonResponse(false, null, 'Demasiadas solicitudes. Intenta de nuevo en un minuto.');
+  }
+  var cache = CacheService.getScriptCache();
+  var clave = 'recover_code_' + email;
+  var vence = Date.now() + RECOVER_CODIGO_SEG * 1000;
+
+  if (esCorreoDePrueba_(email)) {
+    cache.put(clave, JSON.stringify({ c: '000000', n: 0, e: vence }), RECOVER_CODIGO_SEG);
+    return jsonResponse(true, { codeSent: true, message: generica });
+  }
+  if (!correoTieneDatos_(email)) {
+    return jsonResponse(true, { codeSent: true, message: generica });
+  }
+
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(10000)) {
+    return jsonResponse(false, null, 'El servidor esta ocupado. Intenta de nuevo en un momento.');
+  }
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var hoy = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyy-MM-dd');
+    var claveDia = 'recover_codigos_' + hoy;
+    var usados = parseInt(props.getProperty(claveDia) || '0', 10);
+    var limite = 'Hoy ya no podemos enviar mas codigos de recuperacion. Intenta manana o escribe a ' + CONTACTO_DATOS + '.';
+    if (usados >= RECOVER_CODIGOS_DIA || MailApp.getRemainingDailyQuota() < RECOVER_RESERVA_CUOTA) {
+      return jsonResponse(false, { codeError: 'limite' }, limite);
+    }
+
+    var codigo = ('00000' + Math.floor(Math.random() * 1000000)).slice(-6);
+    cache.put(clave, JSON.stringify({ c: codigo, n: 0, e: vence }), RECOVER_CODIGO_SEG);
+    try {
+      GmailApp.sendEmail(email, 'Tu codigo para recuperar tu avance - ' + PLATFORM_NAME, '', {
+        htmlBody: getRecoveryCodeEmailHtml(codigo),
+        name: PLATFORM_NAME
+      });
+    } catch (emailError) {
+      cache.remove(clave);
+      return jsonResponse(false, null, 'No pudimos enviar el codigo. Intenta mas tarde o escribe a ' + CONTACTO_DATOS + '.');
+    }
+
+    // Se cuenta despues de enviar: un envio fallido no gasta el tope.
+    props.setProperty(claveDia, String(usados + 1));
+    props.getKeys().forEach(function (k) {
+      if (k.indexOf('recover_codigos_') === 0 && k !== claveDia) props.deleteProperty(k);
+    });
+    return jsonResponse(true, { codeSent: true, message: generica });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/** Paso 2 de recover: el codigo vale una vez, por 10 minutos y con 3 intentos. */
+function verificarCodigoRecuperacion_(email, codigo) {
+  var cache = CacheService.getScriptCache();
+  var clave = 'recover_code_' + email;
+  var guardado = cache.get(clave);
+  if (!guardado) {
+    return { ok: false, motivo: 'vencido', mensaje: 'El codigo vencio o no existe. Pide uno nuevo.' };
+  }
+  var g = JSON.parse(guardado);
+  if (String(codigo).trim() === g.c) {
+    cache.remove(clave);
+    return { ok: true };
+  }
+  g.n++;
+  var restan = RECOVER_INTENTOS - g.n;
+  var seg = Math.floor((g.e - Date.now()) / 1000);
+  if (restan <= 0 || seg <= 1) {
+    cache.remove(clave);
+    return { ok: false, motivo: 'agotado', mensaje: 'Codigo incorrecto. Ese codigo ya no vale: pide uno nuevo.' };
+  }
+  // Se conserva el vencimiento original: fallar no alarga la vida del codigo.
+  cache.put(clave, JSON.stringify(g), seg);
+  return { ok: false, motivo: 'incorrecto', mensaje: 'Codigo incorrecto. Te quedan ' + restan + ' intento(s).' };
+}
+
+function getRecoveryCodeEmailHtml(codigo) {
+  return '<html><body style="font-family: Arial, sans-serif; color: #333;">' +
+    '<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 520px; margin: 0 auto;">' +
+    '<tr><td style="background: ' + BRAND_COLOR + '; color: #fff; padding: 20px; text-align: center;">' +
+    '<h2 style="margin: 0;">' + PLATFORM_NAME + '</h2></td></tr>' +
+    '<tr><td style="padding: 24px;">' +
+    '<p>Pediste recuperar tu avance. Tu codigo es:</p>' +
+    '<p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; text-align: center; color: ' + BRAND_COLOR + ';">' + codigo + '</p>' +
+    '<p>Vence en 10 minutos y sirve una sola vez.</p>' +
+    '<p style="font-size: 13px; color: #636363;">Si no lo pediste tu, ignora este correo: sin el codigo nadie ve tu avance. ' +
+    'Dudas sobre tus datos: ' + CONTACTO_DATOS + '.</p>' +
+    '</td></tr></table></body></html>';
 }
 
 /**
@@ -1112,12 +1305,24 @@ function handleRegister(body, timestamp) {
   var userAgent = sanitize(body.userAgent, 500);
   var url = sanitize(body.url, 500);
 
+  // ADR-139: la autorizacion deja prueba. Hasta aqui la casilla vivia solo en el
+  // navegador, y una llamada directa con el token publico inscribia a cualquiera.
+  // Se guarda la hora DEL SERVIDOR (la del navegador la escribe quien envia) y la
+  // version del texto que se autorizo.
+  var consentVersion = (body.consent && typeof body.consent === 'object')
+    ? sanitize(body.consent.version, 20) : '';
+  if (!consentVersion && CONSENT_OBLIGATORIO) {
+    return jsonResponse(false, null, 'Falta la autorizacion de tratamiento de datos (Ley 1581 de 2012).');
+  }
+
   try {
     // Guardar en la hoja
     var sheet = getOrCreateSheet(SHEET_CONFIG.registros.name, SHEET_CONFIG.registros.headers);
+    asegurarColumnasAutorizacion_(sheet);
     sheet.appendRow([
       timestamp, fullName, age, group, region,
-      email.toLowerCase(), motivation, course, userAgent, url
+      email.toLowerCase(), motivation, course, userAgent, url,
+      consentVersion ? timestamp : '', consentVersion
     ]);
 
     // Enviar correo de bienvenida

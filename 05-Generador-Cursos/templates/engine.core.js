@@ -12,6 +12,11 @@
 // vive en templates/engine.linea.js, que se concatena ANTES que este archivo.
 // ============================================
 
+// Version del texto de autorizacion de datos que muestran las cajas del registro y
+// de recuperar (ADR-139). Es la fecha de ese texto: si el texto cambia en
+// build-course.js, cambia esta fecha, y el backend guarda cual se autorizo.
+var CONSENT_VERSION = '2026-10-25';
+
 function guardarLocal(clave, valor) {
     try {
         localStorage.setItem(clave, valor);
@@ -52,7 +57,10 @@ function handleRegistration(event) {
     // hacian, por eso los certificados salian bien y los registros no. Detectado el
     // 03-ago-2026: 18 de 20 registros estaban sin curso y el panel de Programa de
     // Jovenes mostraba 0 adultos registrados pese a tener alumnos con cursos completos.
-    sendToGoogleSheets({ action: 'register', ...userProfile, course: COURSE_CONFIG.courseId });
+    // `consent` (ADR-139): la casilla `required` ya impidio llegar aqui sin marcarla;
+    // esto es la prueba de que se marco, que el backend guarda con su hora.
+    sendToGoogleSheets({ action: 'register', ...userProfile, course: COURSE_CONFIG.courseId,
+        consent: { version: CONSENT_VERSION } });
     showModule(1);
     // Si el curso consume un dato de otro de su linea (el perfil del Curso 4 en el plan
     // personal), debe cargarse solo, sin boton (CHECKLIST seccion I). Hasta el 14-sep-2026

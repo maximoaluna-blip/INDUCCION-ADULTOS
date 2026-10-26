@@ -90,4 +90,73 @@ test.describe('@solo-escritorio consentimiento de datos (Ley 1581)', () => {
     await boton.click();
     expect(await page.evaluate(() => window.__peticiones)).toBe(1);
   });
+
+  // ADR-139. Hasta aqui la suite comprobaba que la casilla fuera obligatoria, no que
+  // la autorizacion LLEGARA: el backend no la recibia y ninguna hoja la guardaba.
+  // Lo que se mira ahora es lo que sale hacia el backend, campo por campo.
+  test('la caja dice a quien se pide la eliminacion y enlaza la politica', async ({ page }) => {
+    const curso = CURSOS[0];
+    await page.goto(curso.file, { waitUntil: 'domcontentloaded' });
+    for (const caja of [page.locator('#registrationForm .consent-box'), page.locator('#recoverySection .consent-box')]) {
+      await expect(caja).toContainText('adultos.valle@scout.org.co');
+      await expect(caja.locator('a[href="https://scout.org.co/politica-privacidad/"]')).toHaveCount(1);
+    }
+  });
+
+  test('el registro enviado lleva la version del texto autorizado', async ({ page }) => {
+    const curso = CURSOS[0];
+    await page.goto(curso.file, { waitUntil: 'domcontentloaded' });
+    await page.evaluate(() => {
+      window.__enviados = [];
+      window.sendToGoogleSheets = (d) => { window.__enviados.push(d); };
+    });
+    await page.fill('#fullName', 'Ana Prueba');
+    await page.fill('#email', 'ana@example.com');
+    await page.check('#consent');
+    await page.click('#registrationForm button[type="submit"]');
+    const reg = (await page.evaluate(() => window.__enviados)).find((d) => d && d.action === 'register');
+    expect(reg, 'no salio ningun register').toBeTruthy();
+    expect(reg.consent && reg.consent.version).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+
+  test('recuperar no muestra nada sin el codigo, y el codigo lleva la autorizacion', async ({ page }) => {
+    const curso = CURSOS[0];
+    await page.goto(curso.file, { waitUntil: 'domcontentloaded' });
+    // Backend simulado: el primer paso solo dice "te enviamos un codigo"; el
+    // segundo devuelve el avance. Si la pagina pintara datos en el primero, o no
+    // mandara el codigo en el segundo, esta prueba lo ve.
+    await page.evaluate(() => {
+      window.__urls = [];
+      window.sendToGoogleSheets = () => {};
+      window.fetch = async (url) => {
+        window.__urls.push(String(url));
+        const conCodigo = /[?&]code=/.test(String(url));
+        const cuerpo = conCodigo
+          ? { success: true, data: { registration: { fullName: 'Ana Prueba', email: 'ana@example.com' },
+              registeredInCourse: true, modules: [], quizzes: [], certificates: [], saved: {} } }
+          : { success: true, data: { codeSent: true, message: 'Si ese correo tiene avance, te enviamos un codigo.' } };
+        return { ok: true, json: async () => cuerpo };
+      };
+    });
+    await page.click('#toggleRecover');
+    await page.fill('#recoveryEmail', 'ana@example.com');
+    await page.check('#consentRecover');
+    await page.click('button[onclick="recoverProgress()"]');
+
+    await expect(page.locator('#recoveryCodeGroup')).toBeVisible();
+    let urls = await page.evaluate(() => window.__urls);
+    expect(urls).toHaveLength(1);
+    expect(urls[0]).toContain('v=2');
+    expect(urls[0]).not.toContain('code=');
+    // Sin codigo, nadie entro: la bienvenida no tiene nombre.
+    await expect(page.locator('#welcomeName')).not.toHaveText('Ana');
+
+    await page.fill('#recoveryCode', '000000');
+    await page.click('button[onclick="confirmarCodigoRecuperacion()"]');
+    await expect.poll(() => page.evaluate(() => window.__urls.length)).toBe(2);
+    urls = await page.evaluate(() => window.__urls);
+    expect(urls[1]).toContain('code=000000');
+    expect(urls[1]).toMatch(/consentVersion=\d{4}-\d{2}-\d{2}/);
+    await expect(page.locator('#welcomeName')).toHaveText('Ana');
+  });
 });
