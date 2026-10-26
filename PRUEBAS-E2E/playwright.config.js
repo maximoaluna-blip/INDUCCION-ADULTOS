@@ -17,7 +17,8 @@ module.exports = defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  // 2 también en local: con la mitad de los núcleos (4) la PC compartida se satura (25-oct-2026).
+  workers: 2,
   reporter: [['list'], ['html', { open: 'never' }]],
   timeout: 60_000,
   expect: { timeout: 10_000 },
