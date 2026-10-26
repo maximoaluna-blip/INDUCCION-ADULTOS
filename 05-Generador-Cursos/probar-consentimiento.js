@@ -85,7 +85,11 @@ check('register con consent guarda la hora del servidor y la versión del texto'
 check('...y pone los encabezados nuevos en la hoja que ya existía',
   w.SHEETS.Registros[0][10] === 'Autorizacion' && w.SHEETS.Registros[0][11] === 'VersionTexto', JSON.stringify(w.SHEETS.Registros[0]));
 
-w = mundo();
+// Desde la etapa 3 (25-oct-2026) el script sale cerrado: la transición se fija a mano.
+check('El script sale con las dos puertas cerradas (CONSENT_OBLIGATORIO y sin RECOVER_SIN_CODIGO)',
+  mundo().ctx.CONSENT_OBLIGATORIO === true && mundo().ctx.RECOVER_SIN_CODIGO === false);
+
+w = mundo(); w.ctx.CONSENT_OBLIGATORIO = false;
 r = w.post(nuevo);
 fila = w.SHEETS.Registros[w.SHEETS.Registros.length - 1];
 check('En transición, register sin consent entra con la autorización VACÍA (no inventada)',
@@ -156,7 +160,7 @@ r = w.get({ v: '2', email: 'ana@scouts.test', code: '000000' });
 check('...y ese código fijo NO sirve para un correo real', !(r.success && r.data && r.data.registration), JSON.stringify(r).slice(0, 160));
 
 // --- 5. transición ---------------------------------------------------------------
-w = mundo();
+w = mundo(); w.ctx.RECOVER_SIN_CODIGO = true;
 r = w.get({ email: 'ana@scouts.test', course: 'ciclo-adulto' });
 check('En transición, un curso viejo (sin v=2) recupera como antes', r.success && r.data.registration.fullName === 'Ana Real');
 w.ctx.RECOVER_SIN_CODIGO = false;

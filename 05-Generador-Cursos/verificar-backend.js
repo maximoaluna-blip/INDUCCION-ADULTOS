@@ -124,6 +124,28 @@ function fetchUrl(url, timeoutMs = 45000) {
   });
 }
 
+// POST como lo manda el navegador (text/plain, sin preflight). Apps Script contesta
+// con un 302 a googleusercontent, que se sigue con GET.
+function postJson(url, obj, timeoutMs = 45000) {
+  return new Promise((resolve, reject) => {
+    const data = JSON.stringify(obj);
+    const req = https.request(url, { method: 'POST', timeout: timeoutMs,
+      headers: { 'Content-Type': 'text/plain;charset=utf-8', 'Content-Length': Buffer.byteLength(data) } }, res => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        res.resume();
+        fetchUrl(res.headers.location, timeoutMs).then(resolve, reject);
+        return;
+      }
+      let body = '';
+      res.on('data', c => (body += c));
+      res.on('end', () => resolve({ status: res.statusCode, body }));
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(new Error('Timeout')); });
+    req.end(data);
+  });
+}
+
 // --- Main ---
 (async function main() {
   console.log(colors.bold('\nverificar-backend.js — validación pre-deploy\n'));
@@ -337,6 +359,39 @@ function fetchUrl(url, timeoutMs = 45000) {
         warn(resumen.certificadosSinInscripcion + ' certificado(s) sin inscripción que los respalde.');
         console.log('    ' + colors.yellow('Alguien certifica sin pasar por el registro: no inflan la tasa, pero conviene mirarlo.'));
       }
+    }
+  }
+
+  // -------- Datos personales: las dos puertas del ADR-139, cerradas --------
+  step('Paso 7 — sin código no se recupera y sin autorización no se inscribe (ADR-139)');
+  if (!prodUrl) {
+    warn('Sin PROD_DEPLOYMENT_URL, no puedo comprobarlo.');
+  } else {
+    // Correo de prueba: si algo saliera mal, purgarPersona lo borra por su correo.
+    const zz = 'zz-verificar@example.com';
+    try {
+      const sep = prodUrl.includes('?') ? '&' : '?';
+      const r1 = JSON.parse((await fetchUrl(prodUrl + sep + 'action=recover&email=' + encodeURIComponent(zz) + '&t=' + Date.now())).body);
+      if (!(r1.success === false && r1.data && r1.data.needsReload === true)) {
+        // Va primero y decide si se sigue: contra un despliegue en transición, el
+        // POST de abajo SÍ escribiría una fila en producción.
+        fail('`recover` sin código sigue respondiendo como antes del ADR-139.',
+          'El despliegue está en transición (RECOVER_SIN_CODIGO = true) o es anterior.\n' +
+          '    No pruebo el registro sin autorización: contra este despliegue escribiría una fila.');
+      } else {
+        pass('`recover` sin código pide recargar y no entrega nada.');
+        const r2 = JSON.parse((await postJson(prodUrl, { token: authToken, action: 'register',
+          fullName: 'zz-verificar-consentimiento', age: 30, email: zz, course: 'zz-prueba-consentimiento' })).body);
+        if (r2.success === false) {
+          pass('Un `register` sin autorización se rechaza: ' + (r2.error || '(sin mensaje)'));
+        } else {
+          fail('Un `register` sin autorización ENTRÓ.',
+            'CONSENT_OBLIGATORIO está apagado en lo desplegado. Quedó una fila de ' + zz +
+            ':\n    bórrala con purgarPersonaEjecutar (PURGA_CORREO = ' + zz + ').');
+        }
+      }
+    } catch (e) {
+      fail('No pude comprobarlo.', e.message);
     }
   }
 

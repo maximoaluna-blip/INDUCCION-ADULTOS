@@ -22,8 +22,8 @@ var PLATFORM_NAME = 'Plataforma de Formacion de Adultos ASC';
 // modo permisivo, luego se publican los cursos que mandan `consent` y piden
 // codigo, y solo entonces se despliega con los dos cerrados. Al reves, un curso
 // viejo en la cache de Pages no podria inscribir ni recuperar a nadie.
-var CONSENT_OBLIGATORIO = false;  // true: `register` sin `consent` se rechaza
-var RECOVER_SIN_CODIGO = true;    // false: `recover` sin v=2 se rechaza
+var CONSENT_OBLIGATORIO = true;   // true: `register` sin `consent` se rechaza
+var RECOVER_SIN_CODIGO = false;   // false: `recover` sin v=2 se rechaza
 var RECOVER_CODIGOS_DIA = 20;     // tope diario GLOBAL de codigos (la cuota de correo es compartida con Rover)
 var RECOVER_RESERVA_CUOTA = 15;   // con menos envios que esto, el codigo es lo primero que deja de salir
 var RECOVER_CODIGO_SEG = 600;     // vida del codigo

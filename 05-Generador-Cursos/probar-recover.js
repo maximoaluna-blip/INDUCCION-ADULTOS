@@ -93,7 +93,7 @@ function makeSandbox() {
       }),
     },
     PropertiesService: { getScriptProperties: () => ({ getProperty: () => null }) },
-    CacheService: { getScriptCache: () => ({ get: () => null, put: noop }) },
+    CacheService: { getScriptCache: () => ({ get: (k) => (k in CACHE ? CACHE[k] : null), put: (k, v) => { CACHE[k] = v; }, remove: (k) => { delete CACHE[k]; } }) },
     ContentService: {
       MimeType: { JSON: 'application/json' },
       createTextOutput: (txt) => ({ _t: txt, setMimeType() { return this; }, getContent() { return this._t; } }),
@@ -108,11 +108,16 @@ function makeSandbox() {
   };
 }
 
+const CACHE = {};
 const ctx = vm.createContext(makeSandbox());
 vm.runInContext(fs.readFileSync(SCRIPT_PATH, 'utf8'), ctx, { filename: SCRIPT_PATH });
 
+// Desde la etapa 3 del ADR-139 `recover` va en dos pasos; los correos @example.com
+// reciben el código fijo 000000 sin enviar nada, así que aquí se piden los dos.
 function recover(params) {
-  return JSON.parse(ctx.doGet({ parameter: Object.assign({ action: 'recover' }, params) }).getContent());
+  const pedir = (extra) => JSON.parse(ctx.doGet({ parameter: Object.assign({ action: 'recover', v: '2' }, params, extra) }).getContent());
+  pedir({});
+  return pedir({ code: '000000' });
 }
 function filasRegistros() {
   return SHEETS['Registros'].length - 1;
