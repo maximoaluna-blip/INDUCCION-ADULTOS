@@ -2145,6 +2145,8 @@ function confirmarCodigoRecuperacion() {
 }
 
 function aplicarAvanceRecuperado_(data, email, msgDiv) {
+    // Solo las filas de ESTE curso, la llave de sesion y el certificado ya emitido (engine.core.js).
+    if (typeof prepararRecuperado_ === 'function') data = prepararRecuperado_(data, email);
     // El Apps Script devuelve: { success: true, data: { registration, modules, quizzes, certificates } }
     var isFound = (data && data.found) || (data && data.success && data.data);
 
@@ -3511,6 +3513,213 @@ setInterval(function () {
     }
     saveProgress();
 }, 60000);
+
+
+// ============================================================================
+// SESION RECORDADA Y AVANCE ENTRE CURSOS (22-nov-2026)
+// ============================================================================
+// Hasta hoy el avance recuperado quedaba solo en el curso donde se pedia: al abrir
+// otro curso habia que pedir otro codigo (el dueno recupero curso por curso).
+// Ahora, tras un codigo valido, el backend entrega una llave de sesion que se guarda
+// en este navegador. Todos los cursos viven en el mismo dominio, asi que cualquier
+// curso que se abra sin avance local la usa para traer el suyo sin pedir codigo.
+// La llave la valida el backend (hoja Sesiones, solo el hash); "Cerrar sesion" en el
+// portal la revoca.
+var CLAVE_SESION_ASC = 'ascSesion';
+
+function leerSesionAsc_() {
+    try {
+        var s = JSON.parse(localStorage.getItem(CLAVE_SESION_ASC) || 'null');
+        if (s && s.email && /^[0-9a-f]{64}$/.test(s.llave || '')) return s;
+    } catch (e) {}
+    return null;
+}
+
+function guardarSesionAsc_(email, llave) {
+    if (!email || !/^[0-9a-f]{64}$/.test(llave || '')) return;
+    guardarLocal(CLAVE_SESION_ASC, JSON.stringify({ email: String(email).toLowerCase(), llave: llave, desde: new Date().toISOString() }));
+}
+
+function borrarSesionAsc_() {
+    try { localStorage.removeItem(CLAVE_SESION_ASC); } catch (e) {}
+}
+
+// Se llama al principio de aplicarAvanceRecuperado_ en cada linea. Hace tres cosas
+// que antes faltaban en las cuatro lineas (Rover ya filtraba):
+//  1. guarda la llave de sesion si el backend la mando;
+//  2. deja SOLO las filas de este curso: el backend devuelve las de todos, y los
+//     modulos de otro curso marcaban como hechos modulos de este;
+//  3. si este curso ya tiene certificado emitido, lo reabre con su mismo codigo.
+function prepararRecuperado_(data, email) {
+    if (!data || !data.success || !data.data) return data;
+    var d = data.data;
+    if (d.session) guardarSesionAsc_(email || (d.registration && d.registration.email), d.session);
+    var deEsteCurso = function (x) { return x && x.course === COURSE_CONFIG.courseId; };
+    d.modules = (d.modules || []).filter(deEsteCurso);
+    d.quizzes = (d.quizzes || []).filter(deEsteCurso);
+    var cert = (d.certificates || []).filter(deEsteCurso)[0];
+    if (cert && cert.certificateCode) {
+        try {
+            var clave = 'certificate_issued_' + COURSE_CONFIG.courseId;
+            if (!localStorage.getItem(clave)) {
+                guardarLocal(clave, JSON.stringify({
+                    name: (d.registration && d.registration.fullName) || '',
+                    code: cert.certificateCode, date: cert.completionDate || '',
+                    score: cert.score, course: COURSE_CONFIG.courseId }));
+            }
+        } catch (e) {}
+    }
+    // Perfil reutilizable para los demas cursos (autollenado del registro).
+    if (d.registration && d.registration.fullName && typeof saveGlobalUserProfile === 'function') {
+        saveGlobalUserProfile({ fullName: d.registration.fullName, age: d.registration.age,
+            group: d.registration.group, region: d.registration.region,
+            email: d.registration.email || email, motivation: '' });
+    }
+    return data;
+}
+
+// Al abrir un curso sin avance local y con sesion: se trae el avance sin codigo.
+// Si la persona ya esta inscrita en ESTE curso (o tiene modulos en el), se aplica;
+// si no, solo se autollena el registro: abrir un curso no es inscribirse en el.
+function autoRecuperarConSesion_() {
+    if (typeof userProfile !== 'undefined' && userProfile && userProfile.fullName) return;
+    if (!COURSE_CONFIG.googleScriptUrl) return;
+    var ses = leerSesionAsc_();
+    if (!ses) return;
+    var url = COURSE_CONFIG.googleScriptUrl +
+        '?action=recover&v=2&email=' + encodeURIComponent(ses.email) +
+        '&course=' + encodeURIComponent(COURSE_CONFIG.courseId) +
+        '&session=' + encodeURIComponent(ses.llave);
+    fetch(url, { redirect: 'follow' })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            if (!data || !data.success || !data.data) {
+                if (data && data.data && data.data.sessionError) borrarSesionAsc_();
+                return;
+            }
+            // Mientras tanto la persona pudo registrarse a mano: no se pisa.
+            if (typeof userProfile !== 'undefined' && userProfile && userProfile.fullName) return;
+            var d = data.data;
+            var tieneAqui = d.registeredInCourse === true ||
+                (d.modules || []).some(function (m) { return m && m.course === COURSE_CONFIG.courseId; });
+            if (tieneAqui && typeof aplicarAvanceRecuperado_ === 'function') {
+                var msg = document.getElementById('recoveryMessage') || document.createElement('div');
+                aplicarAvanceRecuperado_(data, ses.email, msg);
+            } else {
+                prepararRecuperado_(data, ses.email);
+                if (typeof prefillFromGlobalProfile === 'function') prefillFromGlobalProfile();
+            }
+        })
+        .catch(function () { /* sin red: se sigue como siempre */ });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+    // Despues de loadProgress() de la linea, que corre en su propio DOMContentLoaded.
+    setTimeout(autoRecuperarConSesion_, 0);
+    setTimeout(montarBotonRetro_, 0);
+});
+
+// ============================================================================
+// OBSERVACIONES, RECOMENDACIONES Y FELICITACIONES (22-nov-2026)
+// ============================================================================
+// Boton en la barra superior de cada curso, junto a "Volver a Cursos" (no flotante:
+// uno fijo taparia botones del curso). ANONIMO por defecto: el correo solo viaja si
+// la persona marca que quiere respuesta. Va con text/plain para que el navegador no
+// haga preflight (Apps Script no lo contesta) y la respuesta se pueda leer.
+function montarBotonRetro_() {
+    if (document.getElementById('retroBtn') || !COURSE_CONFIG.googleScriptUrl) return;
+    var barra = document.querySelector('.top-bar-inner');
+    if (!barra) return;
+    var volver = barra.querySelector('.back-link');
+    var btn = document.createElement('button');
+    btn.id = 'retroBtn';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Enviar una observación, recomendación o felicitación');
+    btn.textContent = '💬 Tu opinión';
+    // Mismo aspecto que a.back-link (styles.css de cada linea), sin su clase: las
+    // pruebas buscan .back-link como enlace unico.
+    btn.style.cssText = 'border:0;background:transparent;cursor:pointer;padding:0;' +
+        'color:' + (volver ? getComputedStyle(volver).color : '#ffe675') + ';font-size:0.85em;font-weight:600;font-family:inherit;';
+    btn.onclick = abrirRetro_;
+    // Los dos enlaces juntos a la derecha, como estaba "Volver a Cursos" solo.
+    var grupo = document.createElement('span');
+    grupo.style.cssText = 'display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end;';
+    if (volver) { barra.insertBefore(grupo, volver); grupo.appendChild(btn); grupo.appendChild(volver); }
+    else { grupo.appendChild(btn); barra.appendChild(grupo); }
+}
+
+function abrirRetro_() {
+    if (document.getElementById('retroModal')) return;
+    var m = document.createElement('div');
+    m.id = 'retroModal';
+    m.setAttribute('role', 'dialog');
+    m.setAttribute('aria-modal', 'true');
+    m.setAttribute('aria-labelledby', 'retroTitulo');
+    m.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:16px;';
+    m.innerHTML =
+        '<div style="background:#fff;color:#222;max-width:480px;width:100%;border-radius:12px;padding:20px;max-height:90vh;overflow:auto;">' +
+        '<h2 id="retroTitulo" style="margin:0 0 8px;font-size:1.2rem;">Tu opinión nos ayuda a mejorar</h2>' +
+        '<p style="margin:0 0 12px;font-size:.9rem;color:#555;">Es anónima: no enviamos tu nombre ni tu correo, salvo que pidas respuesta. No escribas nombres de otras personas.</p>' +
+        '<fieldset style="border:0;padding:0;margin:0 0 12px;"><legend style="font-weight:600;margin-bottom:6px;">¿Qué quieres dejarnos?</legend>' +
+        '<label style="display:block;margin:4px 0;"><input type="radio" name="retroTipo" value="observacion" checked> Una observación</label>' +
+        '<label style="display:block;margin:4px 0;"><input type="radio" name="retroTipo" value="recomendacion"> Una recomendación</label>' +
+        '<label style="display:block;margin:4px 0;"><input type="radio" name="retroTipo" value="felicitacion"> Una felicitación</label></fieldset>' +
+        '<label for="retroTexto" style="font-weight:600;">Tu mensaje</label>' +
+        '<textarea id="retroTexto" maxlength="2000" rows="5" style="width:100%;box-sizing:border-box;margin:6px 0 12px;padding:8px;font:inherit;"></textarea>' +
+        '<label style="display:block;margin-bottom:6px;"><input type="checkbox" id="retroQuiere"> Quiero que me respondan</label>' +
+        '<div id="retroContactoBox" style="display:none;"><label for="retroContacto">Correo para responderte</label>' +
+        '<input type="email" id="retroContacto" style="width:100%;box-sizing:border-box;margin:6px 0 4px;padding:8px;font:inherit;">' +
+        '<p style="font-size:.8rem;color:#555;margin:0 0 8px;">Solo lo usamos para responder este mensaje (Ley 1581 de 2012).</p></div>' +
+        '<p id="retroEstado" role="status" style="min-height:1.2em;font-size:.9rem;margin:8px 0;"></p>' +
+        '<div style="display:flex;gap:8px;justify-content:flex-end;">' +
+        '<button type="button" id="retroCancelar" class="btn btn-secondary">Cerrar</button>' +
+        '<button type="button" id="retroEnviar" class="btn">Enviar</button></div></div>';
+    document.body.appendChild(m);
+    var cerrar = function () { m.remove(); var b = document.getElementById('retroBtn'); if (b) b.focus(); };
+    document.getElementById('retroCancelar').onclick = cerrar;
+    m.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrar(); });
+    m.addEventListener('click', function (e) { if (e.target === m) cerrar(); });
+    var quiere = document.getElementById('retroQuiere');
+    quiere.onchange = function () {
+        document.getElementById('retroContactoBox').style.display = quiere.checked ? 'block' : 'none';
+        if (quiere.checked) {
+            var c = document.getElementById('retroContacto');
+            var ses = leerSesionAsc_();
+            if (!c.value) c.value = (typeof userProfile !== 'undefined' && userProfile && userProfile.email) || (ses && ses.email) || '';
+        }
+    };
+    document.getElementById('retroEnviar').onclick = enviarRetro_;
+    document.getElementById('retroTexto').focus();
+}
+
+function enviarRetro_() {
+    var estado = document.getElementById('retroEstado');
+    var tipoEl = document.querySelector('input[name="retroTipo"]:checked');
+    var texto = (document.getElementById('retroTexto').value || '').trim();
+    var quiere = document.getElementById('retroQuiere').checked;
+    var contacto = (document.getElementById('retroContacto').value || '').trim();
+    if (texto.length < 5) { estado.textContent = '⚠️ Escribe tu mensaje.'; return; }
+    if (quiere && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contacto)) { estado.textContent = '⚠️ Escribe un correo válido para responderte.'; return; }
+    var boton = document.getElementById('retroEnviar');
+    boton.disabled = true;
+    estado.textContent = 'Enviando…';
+    var cuerpo = { action: 'feedback', token: 'ADULTOS_ASC_2026', tipo: tipoEl ? tipoEl.value : 'observacion',
+        texto: texto, quiereRespuesta: quiere, contacto: quiere ? contacto : '',
+        linea: COURSE_CONFIG.lineName || '', curso: COURSE_CONFIG.courseId };
+    fetch(COURSE_CONFIG.googleScriptUrl, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(cuerpo) })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+            if (res && res.success) {
+                estado.textContent = '✅ ¡Gracias! Recibimos tu mensaje.';
+                document.getElementById('retroTexto').value = '';
+                setTimeout(function () { var m = document.getElementById('retroModal'); if (m) m.remove(); }, 1800);
+            } else {
+                estado.textContent = '⚠️ ' + ((res && res.error) || 'No pudimos enviarlo. Intenta de nuevo.');
+                boton.disabled = false;
+            }
+        })
+        .catch(function () { estado.textContent = '⚠️ Sin conexión. Intenta de nuevo.'; boton.disabled = false; });
+}
 
     </script>
     <script src="../assets/theme-toggle.js"></script>

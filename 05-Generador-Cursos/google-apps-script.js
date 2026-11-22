@@ -30,6 +30,15 @@ var RECOVER_CODIGO_SEG = 600;     // vida del codigo
 var RECOVER_INTENTOS = 3;         // intentos fallidos que lo invalidan
 var CONTACTO_DATOS = 'adultos.valle@scout.org.co';
 
+// --- Sesion recordada y retroalimentacion (22-nov-2026) ---
+// Tras un codigo valido, el backend entrega una LLAVE de sesion. El navegador la
+// guarda y todos los cursos (mismo dominio) recuperan el avance solos con ella,
+// sin pedir otro codigo: antes habia que recuperar curso por curso. En la hoja se
+// guarda solo el hash de la llave, nunca la llave.
+var SESION_DIAS = 180;            // vida de una llave de sesion
+var FEEDBACK_POR_MINUTO = 20;     // tope GLOBAL de mensajes de retroalimentacion por minuto
+var FEEDBACK_MAX_TEXTO = 2000;
+
 // ============================================================================
 // FUNCIONES AUXILIARES (HELPERS)
 // ============================================================================
@@ -330,6 +339,18 @@ var SHEET_CONFIG = {
   items: {
     name: 'Items',
     headers: ['Timestamp', 'Curso', 'Modulo', 'Pregunta', 'OpcionElegida', 'Correcta', 'Intento']
+  },
+  // Llaves de sesion: SOLO el hash sha256 de la llave. Quien lea la hoja no puede
+  // entrar como nadie.
+  sesiones: {
+    name: 'Sesiones',
+    headers: ['Creada', 'HashLlave', 'Email', 'Vence', 'UltimoUso']
+  },
+  // Observaciones, recomendaciones y felicitaciones. ANONIMA por defecto: el
+  // correo solo se guarda si la persona pide respuesta (QuiereRespuesta = 1).
+  retroalimentacion: {
+    name: 'Retroalimentacion',
+    headers: ['Timestamp', 'Tipo', 'Linea', 'Curso', 'Texto', 'QuiereRespuesta', 'Contacto', 'Estado', 'Respuesta']
   }
 };
 
@@ -433,11 +454,77 @@ function handleRecover(params) {
     }
     return recoverData_(email, cursoPedido, '');
   }
+  // Sesion recordada: con una llave vigente de ESTE correo no se pide codigo.
+  var llave = sanitize(params.session, 80);
+  if (llave) {
+    if (!validarSesion_(email, llave)) {
+      return jsonResponse(false, { sessionError: true }, 'Tu sesion vencio. Pide un codigo nuevo para recuperar tu avance.');
+    }
+    return recoverData_(email, cursoPedido, '', '');
+  }
   var codigo = sanitize(params.code, 10);
   if (!codigo) return enviarCodigoRecuperacion_(email);
   var verif = verificarCodigoRecuperacion_(email, codigo);
   if (!verif.ok) return jsonResponse(false, { codeError: verif.motivo }, verif.mensaje);
-  return recoverData_(email, cursoPedido, sanitize(params.consentVersion, 20));
+  // El codigo demostro que el correo es suyo: se le entrega una llave para no
+  // volver a pedirlo en este dispositivo.
+  return recoverData_(email, cursoPedido, sanitize(params.consentVersion, 20), true);
+}
+
+/** Crea una llave de sesion para el correo y guarda SOLO su hash. Devuelve la llave. */
+function crearSesion_(email) {
+  try {
+    var llave = (Utilities.getUuid() + Utilities.getUuid()).replace(/-/g, '');
+    var ahora = new Date();
+    var vence = new Date(ahora.getTime() + SESION_DIAS * 86400000);
+    var sh = getOrCreateSheet(SHEET_CONFIG.sesiones.name, SHEET_CONFIG.sesiones.headers);
+    sh.appendRow([ahora, hashCorreo_(llave), email, vence, ahora]);
+    return llave;
+  } catch (err) {
+    return ''; // sin llave se sigue como antes: con codigo
+  }
+}
+
+/** La llave vale si su hash esta en la hoja, es de ESTE correo y no vencio. */
+function validarSesion_(email, llave) {
+  if (!/^[0-9a-f]{64}$/.test(llave)) return false;
+  var hash = hashCorreo_(llave);
+  var cache = CacheService.getScriptCache();
+  var enCache = cache.get('ses_' + hash);
+  if (enCache) return enCache === email;
+  try {
+    var sh = getOrCreateSheet(SHEET_CONFIG.sesiones.name, SHEET_CONFIG.sesiones.headers);
+    var data = sh.getDataRange().getValues();
+    var ahora = new Date();
+    for (var i = data.length - 1; i >= 1; i--) {
+      if (String(data[i][1]) === hash) {
+        if (String(data[i][2]).toLowerCase() !== email) return false;
+        if (new Date(data[i][3]) < ahora) return false;
+        sh.getRange(i + 1, 5).setValue(ahora);
+        cache.put('ses_' + hash, email, 3600);
+        return true;
+      }
+    }
+  } catch (err) { /* sin hoja no hay sesiones */ }
+  return false;
+}
+
+/** Cerrar sesion: la llave deja de valer (se le pone vencida). */
+function revocarSesion_(email, llave) {
+  if (!/^[0-9a-f]{64}$/.test(llave || '')) return false;
+  var hash = hashCorreo_(llave);
+  CacheService.getScriptCache().remove('ses_' + hash);
+  try {
+    var sh = getOrCreateSheet(SHEET_CONFIG.sesiones.name, SHEET_CONFIG.sesiones.headers);
+    var data = sh.getDataRange().getValues();
+    for (var i = 1; i < data.length; i++) {
+      if (String(data[i][1]) === hash && String(data[i][2]).toLowerCase() === email) {
+        sh.getRange(i + 1, 4).setValue(new Date(0));
+        return true;
+      }
+    }
+  } catch (err) { }
+  return false;
 }
 
 /**
@@ -447,8 +534,11 @@ function handleRecover(params) {
  * la UNICA escritura de este GET, y solo ocurre con el codigo ya verificado: quien
  * llega aqui demostro que el correo es suyo, y solo se tocan sus propias celdas.
  */
-function recoverData_(email, cursoPedido, consentVersion) {
+function recoverData_(email, cursoPedido, consentVersion, sesionNueva) {
   var result = {
+    // Llave de sesion recien creada (solo tras un codigo valido). Ver handleRecover.
+    // Se llena al final, y SOLO si el correo tiene datos: sin avance no hay llave.
+    session: null,
     registration: null,
     // null cuando no se pregunto por un curso; true/false cuando si (ADR-080).
     // Es un booleano sobre el correo que ya se esta preguntando: no anade ninguna
@@ -633,6 +723,7 @@ function recoverData_(email, cursoPedido, consentVersion) {
     return jsonResponse(false, null, 'No se encontraron datos para el email: ' + email);
   }
 
+  if (sesionNueva === true) result.session = crearSesion_(email) || null;
   return jsonResponse(true, result);
 }
 
@@ -851,6 +942,12 @@ function handleStats(includeDetail) {
       // Vacio no significa "no hay datos": mirar `detalleIncluido`.
       registros: [],
       certificados: [],
+      // Personas (22-nov-2026): una por correo, con los cursos que inscribio y los
+      // que aprobo. Solo con clave; el correo no viaja ni aqui.
+      personasDetalle: [],
+      retroalimentacion: [],
+      personas: null,          // agregado publico: conteos, sin identidad
+      retroConteo: null,       // agregado publico: cuantos mensajes por tipo
       detalleIncluido: !!includeDetail,
       generatedAt: new Date().toISOString()
     };
@@ -920,6 +1017,7 @@ function handleStats(includeDetail) {
         // Detalle para la tabla
         var cEmail = String(certData[j][1] || '').toLowerCase();
         certDetail.push({
+          _email: cEmail,
           fecha: certData[j][0],
           nombre: certData[j][2] || '',
           curso: cCourse,
@@ -942,6 +1040,34 @@ function handleStats(includeDetail) {
       if (emailsConCertificado[key]) {
         regDetail[ri].estado = 'Completado';
       }
+    }
+
+    // --- Personas unicas (22-nov-2026) ---
+    // El panel contaba INSCRIPCIONES (filas) y las llamaba usuarios: quien hace
+    // cinco cursos eran cinco. Aqui se agrupa por correo. Un certificado sin
+    // inscripcion cuenta igual como curso aprobado de esa persona.
+    var personaMap = {};
+    function personaDe_(em, nombre, grupo, region) {
+      if (!personaMap[em]) personaMap[em] = { nombre: '', grupo: '', region: '', inscritos: {}, aprobados: {}, ultima: null };
+      var pp = personaMap[em];
+      if (nombre && !pp.nombre) pp.nombre = nombre;
+      if (grupo && !pp.grupo) pp.grupo = grupo;
+      if (region && !pp.region) pp.region = region;
+      return pp;
+    }
+    for (var pr = 0; pr < regDetail.length; pr++) {
+      if (!regDetail[pr]._email) continue;
+      var pReg = personaDe_(regDetail[pr]._email, regDetail[pr].nombre, regDetail[pr].grupo, regDetail[pr].region);
+      pReg.inscritos[regDetail[pr].curso] = true;
+      var fReg = new Date(regDetail[pr].fecha);
+      if (!isNaN(fReg) && (!pReg.ultima || fReg > pReg.ultima)) pReg.ultima = fReg;
+    }
+    for (var pc = 0; pc < certDetail.length; pc++) {
+      if (!certDetail[pc]._email) continue;
+      var pCert = personaDe_(certDetail[pc]._email, certDetail[pc].nombre, certDetail[pc].grupo, certDetail[pc].region);
+      pCert.aprobados[certDetail[pc].curso] = true;
+      var fCert = new Date(certDetail[pc].fecha);
+      if (!isNaN(fCert) && (!pCert.ultima || fCert > pCert.ultima)) pCert.ultima = fCert;
     }
 
     // --- Tasa de completacion: se cuentan INSCRIPCIONES (ADR-079) ---
@@ -1018,6 +1144,12 @@ function handleStats(includeDetail) {
         var mNum = vacio(progData[k][4]) ? '?' : String(progData[k][4]);
         var mNom = String(progData[k][5] || ('Modulo ' + mNum));
         var modKey = mCurso + '_modulo_' + mNum;
+        // Ultima actividad de la persona (para "inactivos" en el panel)
+        var mEmail = String(progData[k][1] || '').toLowerCase();
+        if (mEmail && personaMap[mEmail]) {
+          var fMod = new Date(progData[k][0]);
+          if (!isNaN(fMod) && (!personaMap[mEmail].ultima || fMod > personaMap[mEmail].ultima)) personaMap[mEmail].ultima = fMod;
+        }
         stats.completionsByModule[modKey] = (stats.completionsByModule[modKey] || 0) + 1;
         if (!moduloAgg[modKey]) {
           moduloAgg[modKey] = { curso: mCurso, modulo: mNum, nombre: mNom, completados: 0 };
@@ -1094,6 +1226,41 @@ function handleStats(includeDetail) {
     // La hoja 'Compromisos' y handleCommitment() se conservan: si algun dia se
     // decide conectarlo, el camino de escritura ya existe.
 
+    // Agregado publico de personas: solo conteos.
+    var distrib = {};
+    var nPersonas = 0, nConCert = 0, sumaAprob = 0;
+    for (var pe in personaMap) {
+      nPersonas++;
+      var nAp = Object.keys(personaMap[pe].aprobados).length;
+      if (nAp > 0) nConCert++;
+      sumaAprob += nAp;
+      distrib[nAp] = (distrib[nAp] || 0) + 1;
+    }
+    stats.personas = {
+      personasUnicas: nPersonas,
+      personasConCertificado: nConCert,
+      promedioCursosAprobados: nPersonas > 0 ? Math.round((sumaAprob / nPersonas) * 10) / 10 : 0,
+      distribucionAprobados: distrib   // cursos aprobados -> cuantas personas
+    };
+
+    // Retroalimentacion: conteo por tipo (publico) y mensajes (solo con clave).
+    var retroFilas = [];
+    stats.retroConteo = { observacion: 0, recomendacion: 0, felicitacion: 0, nuevos: 0 };
+    try {
+      var rfSheet = getOrCreateSheet(SHEET_CONFIG.retroalimentacion.name, SHEET_CONFIG.retroalimentacion.headers);
+      var rfData = rfSheet.getDataRange().getValues();
+      for (var rf = 1; rf < rfData.length; rf++) {
+        var rTipo = String(rfData[rf][1] || '');
+        if (stats.retroConteo[rTipo] !== undefined) stats.retroConteo[rTipo]++;
+        if (String(rfData[rf][7] || '') === 'nuevo') stats.retroConteo.nuevos++;
+        retroFilas.push({
+          fila: rf + 1, fecha: rfData[rf][0], tipo: rTipo, linea: rfData[rf][2], curso: rfData[rf][3],
+          texto: rfData[rf][4], quiereRespuesta: Number(rfData[rf][5]) === 1,
+          contacto: Number(rfData[rf][5]) === 1 ? rfData[rf][6] : '', estado: rfData[rf][7], respuesta: rfData[rf][8]
+        });
+      }
+    } catch (err) { /* Sin datos aun */ }
+
     // --- UNICO sitio por el que sale el detalle identificado (ADR-078) ---
     // Se copia campo a campo a proposito: si manana la hoja gana una columna,
     // no se publica sola. Y el correo no esta en ninguna de las dos listas.
@@ -1119,6 +1286,16 @@ function handleStats(includeDetail) {
           puntuacion: certDetail[cd].puntuacion
         });
       }
+      for (var pd in personaMap) {
+        var px = personaMap[pd];
+        stats.personasDetalle.push({
+          nombre: px.nombre, grupo: px.grupo, region: px.region,
+          cursosInscritos: Object.keys(px.inscritos),
+          cursosAprobados: Object.keys(px.aprobados),
+          ultimaActividad: px.ultima ? px.ultima.toISOString() : ''
+        });
+      }
+      stats.retroalimentacion = retroFilas.reverse(); // lo mas nuevo primero
     }
 
     // Resumen agregado que el dashboard usa para los KPI principales
@@ -1224,6 +1401,16 @@ function doPost(e) {
       case 'items':
         return handleItems(body, timestamp);
 
+      case 'feedback':
+        return handleFeedback(body, timestamp);
+
+      // El panel marca un mensaje como leido/atendido y anota la respuesta. Con clave.
+      case 'retroEstado':
+        return handleRetroEstado(body);
+
+      case 'logout':
+        return jsonResponse(true, { revoked: revocarSesion_(email || '', sanitize(body.session, 80)) });
+
       // --- Detalle identificado del padron para el panel (ADR-078) ---
       // Va por POST y no por GET a proposito: asi la clave no viaja en una URL,
       // donde acabaria en registros de servidor y en el historial del navegador.
@@ -1242,6 +1429,52 @@ function doPost(e) {
 // ============================================================================
 // MANEJADORES DE ACCIONES POST
 // ============================================================================
+
+/**
+ * Observaciones, recomendaciones y felicitaciones (22-nov-2026).
+ * ANONIMA POR DEFECTO: el correo de contacto solo se guarda si la persona marca
+ * que quiere respuesta. El texto es libre: se recorta y se guarda tal cual; la
+ * interfaz pide no escribir nombres de terceros (ADR-087).
+ * Sin correo no hay rate limit por persona: hay un tope GLOBAL por minuto.
+ */
+function handleFeedback(body, timestamp) {
+  var tipos = { observacion: 1, recomendacion: 1, felicitacion: 1 };
+  var tipo = String(body.tipo || '').toLowerCase();
+  if (!tipos[tipo]) return jsonResponse(false, null, 'Tipo invalido: observacion, recomendacion o felicitacion.');
+  var texto = sanitize(body.texto, FEEDBACK_MAX_TEXTO);
+  if (!texto || texto.length < 5) return jsonResponse(false, null, 'Escribe tu mensaje (minimo 5 caracteres).');
+  var quiere = body.quiereRespuesta === true;
+  var contacto = '';
+  if (quiere) {
+    contacto = String(sanitize(body.contacto, 200) || '').toLowerCase();
+    if (!validateEmail(contacto)) return jsonResponse(false, null, 'Para responderte necesitamos un correo valido.');
+  }
+  var cache = CacheService.getScriptCache();
+  var minuto = 'fb_' + Math.floor(Date.now() / 60000);
+  var n = parseInt(cache.get(minuto) || '0', 10);
+  if (n >= FEEDBACK_POR_MINUTO) return jsonResponse(false, null, 'Hay muchos mensajes en este momento. Intenta en un minuto.');
+  cache.put(minuto, String(n + 1), 120);
+  var sh = getOrCreateSheet(SHEET_CONFIG.retroalimentacion.name, SHEET_CONFIG.retroalimentacion.headers);
+  sh.appendRow([timestamp, tipo, sanitize(body.linea, 60), sanitize(body.curso, 120), texto,
+    quiere ? 1 : 0, contacto, 'nuevo', '']);
+  return jsonResponse(true, { saved: true });
+}
+
+function handleRetroEstado(body) {
+  var configured = PropertiesService.getScriptProperties().getProperty('ADMIN_KEY');
+  if (!configured || String((body && body.adminKey) || '') !== configured) {
+    return jsonResponse(false, null, 'Clave de administracion invalida o faltante.');
+  }
+  var estados = { nuevo: 1, leido: 1, atendido: 1 };
+  var estado = String(body.estado || '');
+  var fila = parseInt(body.fila, 10);
+  if (!estados[estado] || !(fila >= 2)) return jsonResponse(false, null, 'Estado o fila invalidos.');
+  var sh = getOrCreateSheet(SHEET_CONFIG.retroalimentacion.name, SHEET_CONFIG.retroalimentacion.headers);
+  if (fila > sh.getLastRow()) return jsonResponse(false, null, 'Esa fila no existe.');
+  sh.getRange(fila, 8).setValue(estado);
+  if (body.respuesta !== undefined) sh.getRange(fila, 9).setValue(sanitize(body.respuesta, FEEDBACK_MAX_TEXTO));
+  return jsonResponse(true, { fila: fila, estado: estado });
+}
 
 /**
  * Sirve el detalle identificado del padron al panel de administracion.

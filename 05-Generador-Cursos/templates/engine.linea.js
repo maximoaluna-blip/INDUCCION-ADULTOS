@@ -420,6 +420,8 @@ function confirmarCodigoRecuperacion() {
 }
 
 function aplicarAvanceRecuperado_(data, email, msgDiv) {
+    // Solo las filas de ESTE curso, la llave de sesion y el certificado ya emitido (engine.core.js).
+    if (typeof prepararRecuperado_ === 'function') data = prepararRecuperado_(data, email);
     // El Apps Script devuelve: { success: true, data: { registration, modules, quizzes, certificates } }
     var isFound = (data && data.found) || (data && data.success && data.data);
 
