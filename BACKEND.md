@@ -15,7 +15,7 @@
 | **Editor del script** | https://script.google.com/u/0/home/projects/1TTJ2VjNta0Vz4p6gAjwvsXggN8g8YfV-FrZuQtWvnUy0ZFRrYA-gCrqe/edit |
 | **Sheet asociado** | El contenedor del script `1TTJ2VjN…`, renombrado el 20-jun-2026 a **`Datos Plataforma Adultos ASC - PROD`** (antes tenía el nombre confuso `adultos-backup-2026-05-17`). Es el Sheet VIVO de prod. **Sheet ID:** `1pbp63sqHayUM1MbpvH4smATeeSsaRIX6MOX0f2rMfIo`. |
 | **Cuenta Google que es owner** | `maximoaluna@gmail.com` |
-| **Despliegue activo** | **`@13`** — "ADR-139 etapa 3: consentimiento obligatorio y recover solo con codigo" (25-oct-2026). ⚠️ **Este número envejece solo**: esta fila dijo `Versión 6` durante tres meses con producción en `@8`, `@9` y `@10`. **La fuente de verdad es `clasp list-deployments`**, y el Paso 6 de `verificar-backend.js` lo comprueba contra el endpoint vivo. |
+| **Despliegue activo** | **`@15`** — sesión recordada, retroalimentación y personas únicas (ADR-160, 22-nov-2026). ⚠️ **Este número envejece solo**: esta fila dijo `Versión 6` durante tres meses con producción en `@8`, `@9` y `@10`. **La fuente de verdad es `clasp list-deployments`**, y el Paso 6 de `verificar-backend.js` lo comprueba contra el endpoint vivo. |
 
 ---
 
@@ -66,14 +66,14 @@ Salida real (verificada el 23-ago-2026) — hay **3 deployments**:
 |---|---|---|
 | `AKfycbxDK0Ty_IzrZ4QoJ3LAS70hcCtPhac_cnPxTh6_M2rO` | `@HEAD` | Sirve el código actual del editor. **Exige autenticación del dueño**, así que no sirve para los cursos |
 | `AKfycbz8QNiUMo7CzBb2iM3D-Hy7ER6kNMdKOpJpub4mZ4lNm4WhzP9f-DmJF-P8KByu-rGQow` | `@1` | Pruebas |
-| `AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw` | **`@13`** | **PRODUCCIÓN** — es el ID que va en `PROD_DEPLOYMENT_URL` |
+| `AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw` | **`@15`** | **PRODUCCIÓN** — es el ID que va en `PROD_DEPLOYMENT_URL` |
 
 ```bash
 npx clasp push                       # sube el código, pero NO cambia lo que sirve producción
 npx clasp create-deployment -i AKfycbxxZBp6XpmdRzZS0BXO02WMq31K5FUU8-Mqzc2Sj0PcwB3cMcrhIqbHQA0naUQb5mgBWw -d "descripción del cambio"
 ```
 
-> 🚨 **Producción está fijada a una versión concreta (hoy `@13`, promovida el 25-oct-2026), no a `@HEAD`.** Un `clasp push` (o editar en el navegador y guardar) **no llega a los estudiantes**: hay que crear una versión nueva y reapuntar ese deployment. Es la causa más probable de "arreglé el backend y sigue fallando igual".
+> 🚨 **Producción está fijada a una versión concreta (hoy `@15`, promovida el 22-nov-2026), no a `@HEAD`.** Un `clasp push` (o editar en el navegador y guardar) **no llega a los estudiantes**: hay que crear una versión nueva y reapuntar ese deployment. Es la causa más probable de "arreglé el backend y sigue fallando igual".
 >
 > **No te fíes del número que dice esta tabla** — se desactualiza sola. La fuente de verdad es `clasp list-deployments`, y `verificar-backend.js` (Paso 5) comprueba contra el endpoint vivo si el código desplegado conoce ADR-030.
 
@@ -133,6 +133,7 @@ Debe reportar **6/6 pasos OK**. Si el Paso 4 falla diciendo "el deployment es VI
 | 2026-10-25 | **ADR-139, punto 3.** El texto de la casilla ofrecía «pedir su eliminación» y no había cómo: borrar a una persona era hacerlo a mano en 10 hojas. Se agregan `purgarPersonaSimulacro` / `purgarPersonaEjecutar` (leen el correo de la propiedad `PURGA_CORREO`, recorren toda hoja con columna `Email`, registran fecha + hash en `Supresiones`) e `informarRutinaDeCopias`. **Solo desde el editor**: ninguna acción web llega ahí. | Compuerta local: `node 05-Generador-Cursos/probar-purga.js` (13 comprobaciones; se vio fallar con un borrado de arriba hacia abajo). Basta `clasp push`: el editor corre HEAD, no hace falta versión nueva ni tocar `@11`. |
 | 2026-10-25 | **ADR-139, puntos 1 y 2 — `@12`.** La casilla de autorización vivía solo en el navegador, y `recover` mostraba nombre, edad, grupo, puntajes y certificados con solo un correo. Ahora `register` guarda `Autorizacion` (hora del servidor) y `VersionTexto` en dos columnas **al final** de `Registros`, y `recover` con `v=2` va en dos pasos: sin `code` manda un código de 6 dígitos al correo (respuesta idéntica exista o no; tope 20/día y reserva de 15 envíos de cuota; `@example.com` usa `000000` sin enviar), y con `code` devuelve lo de siempre y anota la autorización que falte. **Transición:** `CONSENT_OBLIGATORIO = false` y `RECOVER_SIN_CODIGO = true` para que los cursos viejos en caché sigan funcionando. | Compuerta: `node 05-Generador-Cursos/probar-consentimiento.js` (23; se vio fallar con un código que aceptaba cualquiera). **Etapa 3 pendiente del dueño:** pasar los dos interruptores y desplegar `@13`; hasta entonces el hueco sigue abierto para quien llame sin `v=2`. |
 | 2026-10-25 | **ADR-139, etapa 3 — `@13`.** Se cierran los dos interruptores: `CONSENT_OBLIGATORIO = true` (un `register` sin `consent.version` se rechaza y no escribe) y `RECOVER_SIN_CODIGO = false` (`recover` sin `v=2` responde `needsReload` y no entrega nada). | `probar-consentimiento.js` (24: la nueva exige que el script salga cerrado) y `probar-recover.js` (8, ahora por el flujo de dos pasos). **Paso 7 nuevo en `verificar-backend.js`**: comprueba las dos puertas en vivo, y solo prueba el `register` si la primera ya está cerrada, porque contra un despliegue en transición escribiría una fila. Se vio en rojo contra `@12` y en verde contra `@13`. |
+| 2026-11-22 | **ADR-160 — `@14` y `@15`.** Hoja `Sesiones` (llave de 64 hex guardada como hash, 180 días; `recover` con `session` no pide código), acciones POST `feedback` (anónima; correo solo si pide respuesta; tope 20 por minuto), `logout` y `retroEstado` (con `ADMIN_KEY`), y en `stats` `personas`, más `personasDetalle` y `retroalimentacion` con la clave. `@15` corrige que `@14` creaba la llave aunque el correo no tuviera datos. | Medido en vivo: 37 personas únicas, 13 con certificado. ⚠️ El camino feliz de la sesión no se probó en vivo (ningún correo de prueba tiene datos); sí en local con `fetch` simulado. Rover recibió lo mismo en su `@11`. |
 
 ---
 
@@ -145,4 +146,4 @@ Debe reportar **6/6 pasos OK**. Si el Paso 4 falla diciendo "el deployment es VI
 
 ---
 
-_Última actualización: 2026-10-25 (ADR-139 cerrado, producción en `@13`)._
+_Última actualización: 2026-11-22 (ADR-160, producción en `@15`)._
