@@ -3,7 +3,7 @@
   "title": "El Canciller y los reconocimientos",
   "subtitle": "Curso 13 · Nivel 3 de la Línea Política de Adultos",
   "description": "La ficha del Canciller de Grupo y lo que la rodea: un cargo para agradecer, custodiar y registrar lo que el grupo entrega, tramitar hacia arriba lo que decide el comité de estímulos, elegir el estímulo nacional que corresponde, saber quién aprueba hoy y reconocer a tiempo y con reserva. Sirve también al Jefe de Grupo y al Presidente del Consejo.",
-  "contentVersion": "2026-10-02",
+  "contentVersion": "2026-11-23",
   "icon": "🎖️",
   "duration": "40 minutos",
   "level": 3,
@@ -147,22 +147,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "En un grupo sin Canciller, la jefa de Tropa quiere pedir la Medalla de Servicios para un compañero. El Jefe de Grupo le dice: «Esa solicitud la mando yo mientras no haya Canciller». ¿Tiene razón?",
+            "text": "En un grupo sin Canciller, el comité acordó pedir la Medalla de Servicios para un dirigente. En el Consejo surgen dos dudas: quién envía hoy la solicitud y si el grupo está obligado a tener Canciller. ¿Qué dice la lección?",
             "options": [
-              "Sí: si el grupo no ha nombrado Canciller, enviar la solicitud pasa a ser tarea suya.",
-              "Sí, con tal de que la Asamblea lo designe antes como Canciller para ese caso.",
-              "No: esa solicitud le toca al Presidente del Consejo, que también forma parte del comité."
+              "La envía el Secretario del Consejo; tener Canciller es algo que el grupo puede decidir.",
+              "La envía el Jefe de Grupo; tener Canciller es algo que el grupo puede decidir.",
+              "La envía el Secretario del Consejo; tener Canciller es algo que el grupo debe cumplir."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "El Reglamento de Grupos dice que el Grupo «podrá designar» un Canciller, y el Manual de Estímulos prevé que, si no hay Canciller nombrado, la responsabilidad de enviar las solicitudes la asume el Jefe de Grupo."
           },
           {
-            "text": "Al terminar su periodo, el Canciller pregunta en el Consejo a quién le presenta el informe de su labor. El Jefe de Grupo le dice: «A la Asamblea, que fue la que te nombró». ¿Tiene razón?",
+            "text": "Un adulto acepta ser Canciller de su grupo y pregunta cómo queda su cargo: quién lo nombra y ante quién responde de su gestión. ¿Qué dice su ficha?",
             "options": [
-              "Sí: el Canciller le responde a la Asamblea de Grupo, y a ella le presenta su informe.",
-              "No: se lo presenta al Jefe de Grupo, que conduce el grupo y está en el comité.",
-              "Sí, pero después de pasarlo por el comité de estímulos, que debe aprobarlo antes."
+              "Lo nombra el Jefe de Grupo, y responde de su gestión ante la Asamblea Scout de Grupo.",
+              "Lo nombra el Jefe de Grupo, y responde de su gestión ante el Consejo Scout de Grupo.",
+              "Lo nombra la Asamblea Scout de Grupo, y responde de su gestión ante la Asamblea Scout de Grupo."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "El Canciller custodia y tramita los reconocimientos del grupo. Lo nombra la Asamblea y ante ella responde."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -221,22 +223,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Llegan al grupo el diploma y la joya de un estímulo nacional para una dirigente. ¿Qué le toca al Canciller según su ficha?",
+            "text": "Cambia el Canciller del grupo. En la entrega del cargo, el saliente le pasa al nuevo lo que el Reglamento de Grupos pone bajo su custodia. ¿Qué recibe, según la lección?",
             "options": [
-              "Guardarlos hasta fin de año, cuando el Consejo decida si se entregan.",
-              "Enviarlos a la Región, que es la que impone los estímulos nacionales.",
-              "Custodiarlos, tenerlos listos para la entrega y dejarla en el registro."
+              "El Libro de Oro del Grupo y la Condecoración de Grupo, con sus medallas y diplomas.",
+              "El Libro de Actas del Grupo y la Condecoración de Grupo, con sus medallas y diplomas.",
+              "El Libro de Actas del Grupo y el archivo de hojas de vida scout, con sus anexos."
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "El Reglamento de Grupos hace al Canciller depositario del Libro de Oro del Grupo y, si el grupo la tiene, de su Condecoración de Grupo, con sus medallas y diplomas."
           },
           {
-            "text": "Entra un Canciller nuevo. El anterior le entrega una caja con medallas y le dice: «A quién se le dio cada una lo tengo en la cabeza; pregúntame cuando quieras». ¿Qué le falta a esa entrega?",
+            "text": "El grupo quiere crear su propia condecoración y otorgarla cada año. En el Consejo preguntan quién aprueba su creación y quién decide, ya aprobada, a quién se otorga. ¿Qué dice la lección?",
             "options": [
-              "Algo escrito que diga qué hay en la caja y quién recibió qué, para no depender de él.",
-              "El acta de la Asamblea que lo nombró, como constancia de la custodia del registro.",
-              "Un inventario hecho por el Consejo, porque custodiar los bienes del grupo es su tarea."
+              "La creación la aprueba la Cancillería Nacional; a quién se otorga, lo decide la Asamblea de Grupo.",
+              "La creación la aprueba el Consejo Regional; a quién se otorga, lo decide la Asamblea de Grupo.",
+              "La creación la aprueba la Cancillería Nacional; a quién se otorga, lo decide el comité de estímulos."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Ya aprobada, a quién se otorga se decide dentro del grupo, en el comité de estímulos y de otorgamiento (Reglamento de Grupos, Art. 8.8) y según el reglamento aprobado."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -301,22 +305,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "El Jefe de Grupo le dice al Canciller que la jefa de Tropa merece una distinción nacional y le pide enviar la solicitud mañana. ¿Puede enviarla?",
+            "text": "El Jefe de Grupo le pide al Canciller enviar mañana la solicitud de una distinción nacional para la jefa de Tropa. El Canciller responde que antes debe decidirlo el comité de estímulos. ¿Quiénes lo integran, según la lección?",
             "options": [
-              "Sí: el Jefe de Grupo propone y el Canciller tramita lo que él le envíe.",
-              "Todavía no: antes tiene que decidirlo el comité del que hacen parte los dos.",
-              "Todavía no: primero la Asamblea tiene que aprobar la postulación del candidato."
+              "El Canciller, el Subjefe de Grupo y el Jefe de Grupo; ahí se decide qué se pide y para quién.",
+              "El Canciller, el Presidente del Consejo y el Jefe de Grupo; ahí se decide qué se pide y para quién.",
+              "El Canciller, el Subjefe de Grupo y el jefe de la rama del candidato; ahí se decide qué se pide y para quién."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "El Reglamento de Grupos lo integra con el Canciller, el Presidente del Consejo y el Jefe de Grupo. Ahí se decide qué se pide y para quién."
           },
           {
-            "text": "El comité quiere postular a un dirigente de trabajo ejemplar, pero su afiliación venció hace dos meses y aún no la renueva. ¿Qué conviene hacer?",
+            "text": "El comité quiere postular a un Caminante ejemplar del grupo. Antes de escribir la solicitud, el Canciller revisa lo que la lección le pide a todo candidato que pertenece a un grupo. ¿Qué revisa?",
             "options": [
-              "Enviar la solicitud ya: sus méritos pesan más que un trámite administrativo pendiente.",
-              "Pedirle primero que renueve y enviarla cuando esté afiliado: es requisito del candidato.",
-              "Enviarla destacando por escrito sus méritos, y adjuntar la explicación de la afiliación."
+              "Que tenga afiliación vigente y una hoja de vida ejemplar, libre de sanciones.",
+              "Que tenga un año en el grupo y una hoja de vida ejemplar, libre de sanciones.",
+              "Que tenga un año en el grupo y una carta de aval firmada por su jefe de rama."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Si pertenece a un grupo, con afiliación vigente, y con una hoja de vida ejemplar, libre de sanciones."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -382,22 +388,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "El grupo cumple 25 años. En el Consejo preguntan si hay algún estímulo nacional para el grupo mismo, no para una persona. ¿Qué responde el Canciller?",
+            "text": "La Medalla La Ceiba es para el grupo mismo. Un grupo cumple este año 35 años de fundado, pero tres de esos años no se inscribió en la Asociación. ¿Cuándo puede pedirla y dónde se impone, según la lección?",
             "options": [
-              "Que sí: la Medalla La Ceiba, que se pide en aniversarios múltiplos de cinco.",
-              "Que sí: la Distinción Daniel Isaza, que se da al mejor grupo de la región.",
-              "Que no: los estímulos nacionales son para personas, y el grupo da los suyos."
+              "Puede pedirla este año, al cumplir 35 años de fundado; se impone en su bandera.",
+              "Puede pedirla este año, al cumplir 35 años de fundado; se entrega al Jefe de Grupo.",
+              "Puede pedirla en tres años, al cumplir 35 de inscripción; se impone en su bandera."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Medalla La Ceiba: para el Grupo, en sus aniversarios múltiplos de cinco años de inscripción en la Asociación. Se impone en su bandera."
           },
           {
-            "text": "Un señor del barrio, que no es scout, lleva años prestando su finca para los campamentos del grupo. El comité quiere agradecerle con un estímulo nacional. ¿Cuál encaja?",
+            "text": "Dos dirigentes del grupo cumplen quince años sirviendo como dirigentes. Uno es Insignia de Madera desde que empezó; el otro todavía no la tiene. ¿Para quién y en qué categoría puede pedir el comité la Medalla de Servicios, según la lección?",
             "options": [
-              "La Medalla de Servicios, porque son años de servicio constante y generoso al grupo.",
-              "La Medalla de Gratitud, por un aporte que fue más allá de lo que se esperaba de él.",
-              "La Distinción Daniel Isaza, porque es el mejor aliado que ha tenido el grupo scout."
+              "Puede pedirla solo para el que es Insignia de Madera, en la categoría de quince años.",
+              "Puede pedirla para los dos dirigentes por igual, en la categoría de quince años.",
+              "Puede pedirla para los dos dirigentes por igual, en la categoría de diez años."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Medalla de Servicios: para dirigentes con Insignia de Madera que cumplen diez, quince o veinte años sirviendo como tales."
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -439,22 +447,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "La condecoración propia del grupo ya tiene su reglamento aprobado por la Cancillería Nacional, y el comité de estímulos acordó otorgarla a un dirigente. ¿Qué hace ahora la Canciller?",
+            "text": "El comité acordó pedir la Medalla de Gratitud para un aliado del grupo, y el Canciller ya tiene lista la solicitud escrita. ¿A dónde la envía hoy y cada cuánto se evalúan las postulaciones, según la lección?",
             "options": [
-              "Otorgarla según el reglamento del grupo: aprobado este, a quién se da lo decide el comité.",
-              "Enviar el nombre a la Cancillería Nacional, porque hoy cada otorgamiento lo aprueba ella.",
-              "Revisar que el dirigente cumpla los grados y plazos que fija el Manual de la Orden al Mérito."
+              "A la Cancillería Nacional, por su formulario de postulación; se reúne cada quince días a evaluarlas.",
+              "A la Cancillería Nacional, por su formulario de postulación; se reúne cada mes a evaluarlas.",
+              "A la Corte de Honor Nacional, por su formulario de postulación; se reúne cada mes a evaluarlas."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "las postulaciones a estímulos nacionales van por los canales oficiales que ella dispone —un formulario de postulación— y que se reúne cada quince días a evaluarlas"
           },
           {
-            "text": "En el Consejo proponen que el Canciller presida el proceso por la falta de un dirigente, «porque es el garante del debido proceso». ¿Qué dice su ficha?",
+            "text": "En el Consejo proponen que el Canciller presida el proceso por la falta de un dirigente, «porque en su ficha es el garante del debido proceso». ¿Qué responde el Canciller, según la lección?",
             "options": [
-              "Que puede presidirlo si la Asamblea se lo encarga para ese caso concreto.",
-              "Que le toca cuando la falta tiene que ver con un estímulo mal otorgado.",
-              "Que su ficha no le da ese papel: el debido proceso es de otro cargo."
+              "Que no le corresponde: «garante del debido proceso» es competencia de otros cargos, como el Presidente del Consejo.",
+              "Que no le corresponde: «garante del debido proceso» es competencia de otros cargos, como el Tesorero de Grupo.",
+              "Que no le corresponde: «garante del debido proceso» es competencia de otros cargos, como el Jefe de Grupo."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "«Garante del debido proceso» es una competencia de otros cargos, como el Jefe de Grupo, no del Canciller"
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -515,22 +525,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 13",
         "questions": [
           {
-            "text": "Una familia le cuenta al Canciller, en confianza, detalles de la vida personal de un dirigente al que quieren postular. ¿Qué hace con eso?",
+            "text": "El comité descubre que una dirigente cumplió veinte años sirviendo como Insignia de Madera y nadie pidió su Medalla de Servicios. ¿Cómo se arma la solicitud y quién verifica su tiempo, según la lección?",
             "options": [
-              "Lo guarda en reserva y lleva al comité los méritos del dirigente.",
-              "Lo comparte con el Consejo, para que todos conozcan al candidato.",
-              "Lo comenta solo con el Presidente y el Jefe de Grupo, que son el resto del comité."
+              "Por escrito, con sus méritos y una constancia del Jefe de Grupo; el tiempo lo verifica el nivel nacional con Adultos en el Movimiento.",
+              "Por escrito, con sus méritos y su hoja de vida scout; el tiempo lo verifica el nivel nacional con Adultos en el Movimiento.",
+              "Por escrito, con sus méritos y una constancia del Jefe de Grupo; el tiempo lo verifica la Región con sus propios registros."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "el Canciller —o, sin él, el Jefe de Grupo— enviara la solicitud escrita con sus méritos y su hoja de vida scout; el nivel nacional verifica el tiempo con Adultos en el Movimiento."
           },
           {
-            "text": "Llegan la resolución y la joya de la Medalla de Servicios de un dirigente. La ceremonia de fin de año es dentro de ocho meses. ¿Qué hace el Canciller?",
+            "text": "Llegan la resolución y la joya de la Medalla de Servicios que pidió el grupo. La ceremonia de fin de año es dentro de ocho meses. ¿Qué pide el manual, según la lección?",
             "options": [
-              "Guardarla hasta fin de año y, mientras tanto, anotar la entrega pendiente en el registro del grupo.",
-              "Acordar que el grupo, que fue el que la pidió, la imponga pronto en un acto dedicado a ella.",
-              "Pedirle a la Región que la imponga en su próximo evento, para que tenga ceremonia pronto."
+              "Que el grupo, como solicitante, la imponga prontamente en una ceremonia especial y deje la entrega en el registro.",
+              "Que la Región, como nivel superior, la imponga prontamente en una ceremonia especial y deje la entrega en el registro.",
+              "Que la Región, como nivel superior, la imponga en su próximo evento regional y deje la entrega en el registro."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Cuando llega un estímulo, el manual pide al solicitante imponerlo prontamente y en ceremonia especial."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

@@ -304,6 +304,10 @@
                       "type": "integer",
                       "minimum": 0,
                       "description": "Indice (base 0) de la opcion correcta."
+                    },
+                    "evidencia": {
+                      "type": "string",
+                      "description": "Frase literal de la leccion que contesta la pregunta (ADR-162). No se publica; el build comprueba que este en la leccion."
                     }
                   }
                 }

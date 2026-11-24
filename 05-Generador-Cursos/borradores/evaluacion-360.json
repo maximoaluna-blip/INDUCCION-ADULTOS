@@ -3,7 +3,7 @@
   "title": "Acompañamiento y Evaluación 360° en la práctica",
   "subtitle": "Curso 8 · Nivel 2 de la Línea Política de Adultos",
   "description": "El proceso completo de acompañamiento y evaluación del adulto: qué es acompañar y evaluar, los tres momentos del año, quién evalúa a quién, cómo se aplican con cuidado las encuestas a niños, jóvenes y padres, cómo se responde una evaluación con honestidad y qué se hace con el informe.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-11-23",
   "icon": "📋",
   "duration": "40 minutos",
   "level": 2,
@@ -173,22 +173,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Un par de Carolina está molesto con ella por un desacuerdo de la semana pasada y piensa usar su evaluación para «bajarle los humos». ¿Qué se le está olvidando?",
+            "text": "Un par de Carolina está molesto con ella por un desacuerdo de la semana pasada y piensa usar su evaluación para «bajarle los humos». Según la lección, ¿qué debería tener presente al responderla?",
             "options": [
-              "Nada: si el desacuerdo fue real, la 360° es justo el canal para hacérselo saber.",
-              "Que la 360° no es para ajustar cuentas, sino para mostrarle a Carolina qué fortalecer.",
-              "Que su calificación pesa poco, porque la que de verdad cuenta es la del jefe de grupo."
+              "Que la 360° mide el aprecio que ella se ha ganado en el equipo, y sirve para saber qué competencia fortalecer.",
+              "Que la 360° mide las conductas observables frente a lo que pide su cargo, y sirve para saber qué competencia fortalecer.",
+              "Que la 360° mide la opinión que el equipo tiene de su liderazgo, y sirve para saber qué competencia fortalecer."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "La 360° no mide simpatía ni opiniones sueltas."
           },
           {
-            "text": "En tu grupo dicen: «La 360° es una encuesta que se les pasa a los papás». Según la Guía, ¿qué le falta a esa idea?",
+            "text": "El jefe de Tropa de tu grupo va a tener su primera 360° y pregunta quién responde cada uno de los dos instrumentos. Según la lección, ¿qué le dices?",
             "options": [
-              "Nada: la 360° se hace con encuestas a padres, niños y jóvenes, y no lleva ninguna otra parte.",
-              "Que eso es solo una parte: también está la evaluación por competencias del adulto y quienes trabajan con él.",
-              "Que las encuestas a los padres no hacen parte de la 360°, sino del informe anual del consejo de grupo."
+              "En Talento 360° responden él, su jefe inmediato y su asesor; sus pares, los scouts y los padres, en las encuestas de percepción.",
+              "En Talento 360° responden él, su jefe inmediato, su asesor y sus scouts; los padres, en las encuestas de percepción.",
+              "En Talento 360° responden él, su jefe inmediato, su asesor y sus pares; los scouts y los padres, en las encuestas de percepción."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "La responden el propio adulto, su jefe inmediato, su asesor personal y sus pares."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -247,22 +249,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Un grupo hace una sola evaluación al año, en diciembre, «para no cansar a la gente». ¿Qué le falta según la Guía?",
+            "text": "Carolina hizo su valoración inicial y armó su plan en marzo. En mayo, el jefe de grupo quiere aplicarle ya su primera 360° completa, con pares, scouts y padres, «para adelantar». Según la lección, ¿qué le recomiendas?",
             "options": [
-              "Nada: basta con una evaluación anual, siempre que se haga en la fecha de cierre del año.",
-              "Al menos un seguimiento a mitad de periodo, además del inicio y de la revisión final.",
-              "Una evaluación cada mes, porque el plan personal se revisa formalmente mes a mes."
+              "Esperar: como mínimo seis meses después de la primera evaluación y con acciones del plan ya hechas, en su Momento 2.",
+              "Esperar: como mínimo seis meses después de la primera evaluación y con acciones del plan ya hechas, en su Momento 3.",
+              "Esperar: como mínimo doce meses después de la primera evaluación y con acciones del plan ya hechas, en su Momento 3."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Se recomienda como mínimo a los seis meses de la primera evaluación, después de haber ejecutado acciones del plan."
           },
           {
-            "text": "Martín renueva su nombramiento como jefe de Clan. ¿Con qué arranca su Momento 1 del nuevo periodo?",
+            "text": "En el mismo grupo, Martín renueva su nombramiento como jefe de Clan y Julián llega nuevo como subjefe de Clan. Según la lección, ¿con qué arranca cada uno su Momento 1?",
             "options": [
-              "Con una valoración inicial desde cero, como si acabara de llegar al grupo.",
-              "Con lo que ya trae: cómo le fue con su plan y cómo cerró su última evaluación.",
-              "Con nada: al renovar el mismo cargo, ese momento se salta y se va directo al 2."
+              "Martín, con lo que cumplió de su plan y el seguimiento de mitad del periodo anterior; Julián, con su valoración inicial por competencias.",
+              "Martín, con lo que cumplió de su plan y el seguimiento de mitad del periodo anterior; Julián, con las encuestas de percepción de su rama.",
+              "Martín, con lo que cumplió de su plan y la evaluación final del periodo anterior; Julián, con su valoración inicial por competencias."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Si renueva: el plan con lo que cumplió y la evaluación final del periodo anterior."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -332,22 +336,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Un consejero de grupo, elegido por la asamblea, tiene una 360° baja. El jefe de grupo propone «reubicarlo en otro cargo» como resultado. ¿Qué dicen los documentos?",
+            "text": "Un consejero de grupo, elegido por la asamblea, tiene una 360° baja, y el jefe de grupo propone «reubicarlo en otro cargo». Según la lección, ¿qué le corresponde a ese consejero?",
             "options": [
-              "Que es lo indicado: toda evaluación baja termina en una reubicación o en un retiro.",
-              "Que el consejero sí se evalúa y hace plan, pero su continuidad la decide la asamblea.",
-              "Que el consejero se evalúa con la 360°, y por eso la asamblea puede reubicarlo con ese resultado."
+              "Seguir con su evaluación y su plan, apoyado por el jefe inmediato que le asigne el consejo; su continuidad la decide la elección en la asamblea.",
+              "Seguir con su evaluación y su plan, apoyado por el presidente del consejo o los jefes de nivel; su continuidad la decide la elección en la asamblea.",
+              "Seguir con su evaluación y su plan, apoyado por el jefe inmediato que le asigne el consejo; su continuidad la decide su 360° final del Momento 3."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "No tienen un jefe inmediato como individuo. El presidente del consejo y los jefes de los distintos niveles son las figuras que pueden apoyar su proceso"
           },
           {
-            "text": "En una región, varios grupos llevan dos años sin evaluar a sus adultos y nadie lo ha notado. ¿A quién le toca empujar que esas evaluaciones se hagan en los grupos?",
+            "text": "En una región, varios grupos llevan dos años sin evaluar a sus adultos. El Comisionado Regional de Adultos quiere ponerse al frente. Según la lección, ¿qué le toca hacer?",
             "options": [
-              "Al jefe de cada grupo, que es el jefe inmediato de los dirigentes de su grupo.",
-              "Al Comisionado Regional de Adultos, que asesora a los jefes y revisa los avances.",
-              "A la Dirección Nacional de Adultos, que revisa los avances de cada evaluación en los grupos."
+              "Dinamizar que el proceso se haga: asesorar a los jefes de esos grupos y revisar luego los avances y las evidencias.",
+              "Dinamizar que el proceso se haga: hacerse él asesor personal de cada dirigente y revisar luego los avances y las evidencias.",
+              "Dinamizar que el proceso se haga: convocar él a scouts y padres a las encuestas y revisar luego los avances y las evidencias."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "dinamiza que el proceso se haga, asesora a los jefes y revisa avances y evidencias"
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -439,22 +445,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Para ahorrar tiempo, un jefe de Manada reúne a los lobatos en círculo, les lee la encuesta en voz alta y cada uno responde levantando la mano. Ya tiene las autorizaciones de los padres. ¿Qué opinas?",
+            "text": "Para ahorrar tiempo, la Jefa de Grupo reúne a los lobatos en círculo, les lee en voz alta la encuesta sobre su jefe de Manada y cada uno responde levantando la mano. Ya tiene las autorizaciones de los padres. Según la lección, ¿qué debe cambiar?",
             "options": [
-              "Que está bien: con las autorizaciones firmadas, la forma de aplicarla queda a su criterio.",
-              "Que no sirve así: la encuesta es individual, y a mano alzada nadie responde con libertad.",
-              "Que no sirve así: a los lobatos no se les aplica; por su edad, la responden solo los padres."
+              "Puede seguir leyéndola en voz alta, pero que respondan por seisenas, cada una en un espacio tranquilo, para no sesgarlos.",
+              "Puede seguir leyéndola en voz alta, pero que respondan en parejas, cada una en un espacio tranquilo, para no sesgarlos.",
+              "Puede seguir leyéndola en voz alta, pero que cada lobato responda por separado, en un espacio tranquilo, para no sesgarlo."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Son individuales, no grupales, en un espacio tranquilo y sin prisa"
           },
           {
-            "text": "Una jefa de grupo quiere aplicar este sábado la encuesta a los scouts de la Tropa, que son menores de edad. Los chicos están de acuerdo y con ganas. ¿Puede empezar?",
+            "text": "Al jefe de Tropa le van a aplicar las encuestas de percepción de sus scouts, que son menores de edad. Él las quiere virtuales y la Jefa de Grupo, en papel. Según la lección, ¿cómo se procede?",
             "options": [
-              "Sí: si los scouts aceptan de buena gana, su propio sí basta como autorización.",
-              "Todavía no: como son menores, antes sus padres tienen que autorizar esos datos.",
-              "Todavía no: antes el dirigente evaluado tiene que aprobar las preguntas de la encuesta."
+              "Primero, la autorización de los padres; y entre papel o virtual decide su asesor personal, que acompaña su plan.",
+              "Primero, la autorización de los padres; y entre papel o virtual decide la Jefa de Grupo, que provee el formulario.",
+              "Primero, la autorización de los padres; y entre papel o virtual decide el jefe de Tropa, que es el adulto evaluado."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "El Jefe de Grupo provee el formulario que corresponde y decide si se aplica en papel o virtual"
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -523,22 +531,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Al autoevaluarse, un jefe de Manada llega a la conducta «diseña sus actividades teniendo en cuenta su diagnóstico de la rama y de los intereses expresados en los juegos democráticos y organismos de gobierno». Nunca lo ha hecho, pero cree que le saldría bien. ¿Cómo lo responde con honestidad?",
+            "text": "Al autoevaluarse, un jefe de Manada llega a la conducta «diseña sus actividades teniendo en cuenta su diagnóstico de la rama y de los intereses expresados en los juegos democráticos y organismos de gobierno». Nunca le ha tocado hacerlo, pero cree que le saldría bien. Según la lección, ¿cómo lo responde con honestidad?",
             "options": [
-              "Con la nota alta, porque cree que si lo intentara lo haría bien sin mucho esfuerzo.",
-              "Como no demostrado todavía, y lo contempla como algo para trabajar en su plan.",
-              "Lo deja en blanco, porque solo se califican los ítems que el jefe inmediato ha visto."
+              "No lo da por hecho: como hasta la fecha no le ha tocado hacerlo, lo señala para contemplarlo en su plan.",
+              "No lo da por hecho: como hasta la fecha no le ha tocado hacerlo, lo deja para que lo califiquen su jefe y su asesor.",
+              "No lo da por hecho: como hasta la fecha no le ha tocado hacerlo, lo responde en la próxima evaluación, ya hecho."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Puede que hasta la fecha no le haya tocado hacer esa actividad: entonces no se da por hecha, y se contempla para el plan."
           },
           {
-            "text": "Una subjefa se pone la nota más alta en todas las competencias «para que no la pongan a hacer un plan». ¿Qué consigue?",
+            "text": "A una subjefa le llega el aviso de que se abrió su 360° en la plataforma. Quiere responderla esa misma noche con la nota más alta en todo, «para salir de eso». Según la lección, ¿qué le recomiendas?",
             "options": [
-              "Un informe que la protege, porque sin brechas nadie le revisa el cargo después.",
-              "Un informe sin brechas reales, del que no sale un plan que la ayude a crecer.",
-              "Un reconocimiento más rápido, porque sin brechas ya demuestra que domina el cargo."
+              "Que no la apure: queda abierta cerca de dos semanas, y conviene hacerla pausada y honesta, porque sin brechas no sale un plan que sirva.",
+              "Que no la apure: queda abierta cerca de una semana, y conviene hacerla pausada y honesta, porque sin brechas no sale un plan que sirva.",
+              "Que no la apure: queda abierta cerca de un mes, y conviene hacerla pausada y honesta, porque sin brechas no sale un plan que sirva."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Recomendamos llevar a cabo la evaluación de manera oportuna porque tiene una programación en tiempo de un mes aproximadamente, pero pausada, coherente y honesta"
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -601,22 +611,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 8",
         "questions": [
           {
-            "text": "Un adulto quiere descargar su informe 360°, pero dos de sus pares todavía no han respondido y la evaluación sigue abierta. ¿Qué pasa?",
+            "text": "Un adulto ve en Talento 360° que su evaluación sigue abierta y quiere descargar ya el informe para leerlo con su asesor. Según la lección, ¿cuándo podrá hacerlo?",
             "options": [
-              "Puede descargar un informe parcial de la evaluación abierta, con los pares que ya respondieron.",
-              "No puede descargarlo todavía: el informe sale cuando la evaluación está cerrada.",
-              "Le basta con pedirle al asesor que responda por los pares que faltan y cerrarla."
+              "Cuando su asesor haya revisado las respuestas y la evaluación se cierre; antes, el informe no se puede descargar.",
+              "Cuando todos los que debían evaluar lo hayan hecho y la evaluación se cierre; antes, el informe no se puede descargar.",
+              "Cuando su jefe inmediato haya aprobado los resultados y la evaluación se cierre; antes, el informe no se puede descargar."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Cuando todos los que debían evaluar lo hicieron y la evaluación se cierra, el informe se puede descargar. Antes de cerrarla, no."
           },
           {
-            "text": "Al leer su informe con su asesor, Martín ve que se calificó alto en trabajo en equipo, pero sus pares le pusieron ahí las notas más bajas del informe. ¿Qué hace con esa diferencia?",
+            "text": "Al leer su informe con su asesor, Martín, jefe de Clan, ve brechas de distinto tamaño en cinco competencias. Según la lección, ¿cómo deciden qué ajustar en su plan?",
             "options": [
-              "La toma como una pista clave del informe y la vuelve una meta concreta del plan.",
-              "La descarta como meta: el plan se arma con las competencias del informe de su jefe inmediato.",
-              "La compensa subiendo su nota en la próxima autoevaluación, para que el promedio suba."
+              "Escogen pocas, empezando por las que más impacto tienen en su cargo, y les ponen nuevas metas o formas de apoyo.",
+              "Escogen pocas, empezando por las de mayor brecha en el informe, y les ponen nuevas metas o formas de apoyo.",
+              "Escogen pocas, empezando por las que sus pares calificaron más bajo, y les ponen nuevas metas o formas de apoyo."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "Se ajusta el plan en las competencias que más impacto tienen en el cargo."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

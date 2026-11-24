@@ -3,7 +3,7 @@
   "title": "Comisionado Regional de Adultos en el Movimiento",
   "subtitle": "Curso 14 · Nivel 3 de la Línea Política de Adultos",
   "description": "El cargo al que te remitieron los cursos de asesoría, evaluación y Talento 360°: quién nombra al comisionado regional y a quién responde, sus siete funciones, la Comisión y su equipo, cómo dinamiza el modelo de adultos en grupos que no dirige, el trámite vigente de formación y certificación, y su perfil de competencias.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-11-23",
   "icon": "🧭",
   "duration": "40 minutos",
   "level": 3,
@@ -139,22 +139,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Un jefe de grupo le entrega su informe de gestión a la comisionada y le pregunta: «¿Entonces usted es ahora mi jefa?». ¿Qué le responde?",
+            "text": "La comisionada regional de adultos prepara su primer informe de gestión del semestre. Según su ficha, ¿ante quiénes responde de esa gestión?",
             "options": [
-              "Que sí: si él le rinde cuentas de su gestión, ella es su jefa en la Región.",
-              "Que no: rendirle cuentas no la hace su jefa; ella lo apoya con el modelo.",
-              "Que no: a ella le rinden cuentas los jefes de rama, pero no los jefes de grupo."
+              "Ante el Jefe Scout Regional, el Presidente del Consejo Regional y el Director Nacional de Adultos.",
+              "Ante el Jefe Scout Regional, el Presidente del Consejo Regional y el Jefe Scout Nacional.",
+              "Ante el Jefe Scout Regional, el Consejo Scout Regional y el Director Nacional de Adultos."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "El Consejo Scout Regional, el Jefe Scout Regional y el Director Nacional de Adultos en el Movimiento: una dependencia en la Región y otra técnica, en la Nación."
           },
           {
-            "text": "Una comisionada quiere postularse al Consejo Scout Regional sin dejar la Comisión, «para que los adultos tengan voz allí». ¿Qué le conviene saber?",
+            "text": "Una comisionada regional de adultos quiere postularse al Consejo Scout Regional en la próxima Asamblea, «para que los adultos tengan voz allí», y todavía no ha dejado la Comisión. ¿Qué le conviene saber?",
             "options": [
-              "Que tendría que dejar el cargo al menos medio año antes de que se haga la elección.",
-              "Que puede, porque su cargo ya la hace responder ante ese mismo Consejo Regional.",
-              "Que tendría que dejar el cargo, pero alcanza con renunciar antes de la votación."
+              "Que para ser elegida tendría que haber dejado el cargo al menos seis meses antes de la elección.",
+              "Que para ser elegida tendría que haber dejado el cargo al menos un año antes de la elección.",
+              "Que para ser elegida tendría que haber dejado el cargo al menos dos años antes de la elección."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "Y si quiere postularse al Consejo Regional, tiene que haber dejado el cargo al menos seis meses antes de la elección."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -213,22 +215,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "El Jefe Regional le pide a la comisionada un balance de cómo aplican los grupos la política de adultos. No hay indicadores oficiales. ¿Qué hace ella?",
+            "text": "El Jefe Regional le pide a la comisionada un balance de cómo aplican los grupos la política de adultos, y no hay indicadores oficiales para medirlo. ¿Qué hace ella?",
             "options": [
-              "Esperar a que la Dirección Nacional publique indicadores, para no medir a ojo.",
-              "Devolverle la tarea: medir la política en su grupo le toca a cada jefe.",
-              "Armarlo con lo que ya está registrado y acordar con la Nación qué mirar."
+              "Armarlo con valoraciones, planes y evidencias de Talento 360°, y acordar con los jefes de grupo qué mirar.",
+              "Armarlo con valoraciones, planes y evidencias de Talento 360°, y acordar con la Comisión Nacional de Evaluación qué mirar.",
+              "Armarlo con valoraciones, planes y evidencias de Talento 360°, y acordar con la Dirección Nacional qué mirar."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "Mientras tanto, apóyate en lo que sí se registra —valoraciones, planes y evidencias en Talento 360°— y acuerda con la Dirección Nacional qué mirar."
           },
           {
-            "text": "Un comisionado regional de desarrollo institucional le dice a la comisionada de adultos: «Conseguir más adultos para los grupos es tarea mía». ¿Qué le responde?",
+            "text": "Un comisionado regional de desarrollo institucional le dice a la comisionada de adultos: «El crecimiento es tarea mía; a ti te toca formar». Según la lección, ¿qué le responde ella?",
             "options": [
-              "Que tiene razón: la membresía es de desarrollo institucional; a ella le toca formar.",
-              "Que ese frente también está en su cargo, así que les conviene trabajarlo juntos.",
-              "Que el crecimiento es de ella, porque se trata de adultos y no de jóvenes."
+              "Que su ficha también le pide crecer: proponer objetivos para la membresía de los grupos y llevar la estadística de inscritos.",
+              "Que su ficha también le pide crecer: proponer objetivos para la membresía de los grupos y buscar alianzas y convenios.",
+              "Que su ficha también le pide crecer: proponer objetivos para la membresía de los grupos y aprobar la apertura de grupos."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Proponer objetivos y actividades para el crecimiento de la membresía de los grupos, y buscar actividades, alianzas y convenios."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -293,22 +297,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "La comisionada encontró a una psicóloga ideal para el Equipo Regional de Adultos y quiere que empiece ya. ¿Qué le toca hacer a ella?",
+            "text": "La comisionada encontró a una psicóloga ideal para que sea miembro del Equipo Regional de Adultos y quiere que empiece ya. ¿Qué le toca hacer a ella?",
             "options": [
-              "Llevarle el caso al Jefe Regional, que es quien la puede nombrar allí.",
-              "Nombrarla ella, porque armar y acompañar su equipo es función de su cargo.",
-              "Pedirle al Consejo Regional que la elija, para que el nombramiento sea firme."
+              "Proponérsela al Jefe Scout Regional, porque a los miembros del equipo los nombra él.",
+              "Nombrarla ella misma, porque a los miembros del equipo los nombra la comisionada.",
+              "Proponérsela al Director Nacional de Adultos, porque a los miembros del equipo los nombra él."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "el Jefe Scout Regional, previo aval de la Dirección Nacional. No lo nombra el comisionado, aunque le responde a él y al Jefe Regional."
           },
           {
-            "text": "Un miembro del Equipo Regional quiere diseñar por su cuenta el plan para atraer y vincular nuevos integrantes a la Comisión. ¿Qué le conviene saber?",
+            "text": "Un miembro del Equipo Regional de Adultos quiere liderar por su cuenta una de las tareas de la comisionada con los adultos de su equipo. Según la lección, ¿cuál le toca orientar a ella y no a él?",
             "options": [
-              "Que puede: tiene las mismas funciones que la comisionada, por ser de su equipo.",
-              "Que eso es del Jefe Regional, porque es quien nombra a los miembros del equipo.",
-              "Que esa la orienta la comisionada; él puede aportar, pero no le toca liderarla."
+              "Acompañar el desarrollo de las competencias de los adultos que forman su equipo.",
+              "Orientar la atracción y vinculación de los adultos que entran a formar su equipo.",
+              "Impulsar la participación en la formación regional de los adultos de su equipo."
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "La función que es solo del comisionado es orientar y acompañar la atracción y vinculación de los adultos de su Comisión"
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -369,22 +375,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Una dirigente escribe a la Comisión: su grupo lleva un año sin programarle la valoración inicial y ella quiere tenerla. ¿Qué le responde la comisionada?",
+            "text": "Una jefa de manada lleva un año sin valoración inicial porque su grupo no la programa, y quiere tenerla. Según la lección, ¿a quién puede pedírsela?",
             "options": [
-              "Que espere a su jefe de grupo: la Comisión no reemplaza al jefe inmediato.",
-              "Que la Comisión puede atenderla: si su grupo no la programa, puede pedirla aquí.",
-              "Que la pida a la Dirección Nacional, que es la que programa las de los grupos."
+              "A la Comisión Nacional de Evaluación, que puede programarla cuando su grupo no lo hace.",
+              "A la Comisión Regional de Adultos, que puede programarla cuando su grupo no lo hace.",
+              "Al Consejo Scout Regional, que puede programarla cuando su grupo no lo hace."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Y si el nivel al que pertenece un adulto no la programa, él puede pedírsela al nivel siguiente: por eso a la Comisión pueden llegarle pedidos de adultos cuyos grupos no se movieron."
           },
           {
-            "text": "Un jefe de rama le pide a la comisionada que evalúe ella a su subjefe, «porque usted sabe más del modelo». ¿Qué le responde?",
+            "text": "Una dirigente consiguió asesor personal y él ya firmó la carta aval de la asesoría. Ella llama a la Comisión a preguntar a quién se la entrega. ¿Qué le responden?",
             "options": [
-              "Que la haga quien le toca en su grupo, y le ofrece orientación para hacerla bien.",
-              "Que sí: como conoce mejor el modelo, su evaluación va a ser la más justa.",
-              "Que la haga el asesor personal del subjefe, que es quien mejor lo conoce."
+              "Que se la entregue a la Comisión Regional de Adultos, que la recibe al empezar la asesoría.",
+              "Que se la entregue a la Dirección Nacional de Adultos, que la recibe al empezar la asesoría.",
+              "Que se la entregue a su jefe inmediato, que es quien la recibe al empezar la asesoría."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "No es a quien se le entrega la carta aval cuando empieza la asesoría: esa va al jefe inmediato"
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -444,22 +452,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Al revisar una solicitud de Insignia de Madera, la comisionada ve que el plan del adulto no tiene evidencias cargadas. ¿Qué hace?",
+            "text": "Una dirigente de manada ya cumple los requisitos de su Insignia de Madera y quiere pedirla cuanto antes. Le pregunta a la comisionada quién debe presentar la solicitud. ¿Qué le responde?",
             "options": [
-              "Enviarla igual a la Comisión Nacional, que es la que hace la validación final.",
-              "Pedirle al adulto que la complete y la envíe él mismo a la Comisión Nacional.",
-              "Pedirle al asesor las evidencias que faltan y enviarla cuando esté completa."
+              "Que la solicitud la presenta su asesor personal; la Comisión puede orientarlo sobre los requisitos.",
+              "Que la solicitud la presenta su jefe inmediato; la Comisión puede orientarlo sobre los requisitos.",
+              "Que la solicitud la presenta ella misma; la Comisión puede orientarla sobre los requisitos."
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "La solicitud de Insignia de Madera o Gestor Regional es exclusiva del asesor personal"
           },
           {
-            "text": "Un asesor de la Región va a solicitar el reconocimiento de Gestor Nacional para su asesorado. ¿Por dónde va la solicitud?",
+            "text": "La Región prepara un Flor de Lis 2 y los formadores ya mandaron sus fichas de sesión. Según la lección, ¿quién las retroalimenta y quién revisa el contenido?",
             "options": [
-              "Por la comisionada regional, que la revisa igual que una Insignia de Madera.",
-              "Por el Jefe Regional, que es quien avala las certificaciones de nivel nacional.",
-              "Por fuera de la Región: directo a la Comisión Nacional, con copia a la DNAM."
+              "Las retroalimenta el jefe de grupo anfitrión, y la Dirección Nacional revisa el contenido.",
+              "Las retroalimenta el jefe de grupo anfitrión, y la Comisión Nacional de Evaluación revisa el contenido.",
+              "Las retroalimenta la comisionada de adultos, y la Dirección Nacional revisa el contenido."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "las fichas de sesión las retroalimenta el comisionado (en Flor de Lis 1 también puede hacerlo el Jefe de Grupo) y la Dirección Nacional revisa el contenido."
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -518,22 +528,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 14",
         "questions": [
           {
-            "text": "En su primer mes, una comisionada nueva quiere que los grupos dejen de pedirle cosas que no le tocan. ¿Qué le funcionaría mejor?",
+            "text": "La comisionada arma su plan personal y quiere empezar por dos competencias esenciales que su ficha le pide en el grado más alto, el 4. ¿Qué par elige?",
             "options": [
-              "Responderles «eso no me corresponde» a cada pedido ajeno, para que aprendan.",
-              "Atender lo que le pidan este primer mes, para ganarse la confianza de los grupos.",
-              "Reunirse pronto con los jefes de grupo y aclararles qué pueden esperar de ella."
+              "Conciencia organizacional y Aprendizaje y desarrollo personal, para trabajarlas este semestre.",
+              "Conciencia organizacional y Adaptabilidad al cambio, para trabajarlas este semestre.",
+              "Planeamiento estratégico y Aprendizaje y desarrollo personal, para trabajarlas este semestre."
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "Grado 4 en Adaptabilidad al cambio, Compromiso, Conciencia organizacional, Relaciones interpersonales y Trabajo en equipo; grado 3 en Aprendizaje y desarrollo personal y en Planeamiento estratégico."
           },
           {
-            "text": "Esta semana le llegan a la comisionada tres pedidos. ¿Cuál debe atender ella misma?",
+            "text": "En su primer mes, a la comisionada un jefe de grupo le pide que le asigne asesor personal a una dirigente nueva de su grupo. ¿Qué le responde ella?",
             "options": [
-              "Un jefe de grupo le pide que reciba la carta aval de la asesoría de una dirigente.",
-              "Un asesor le notifica una solicitud de Gestor Regional para que la revise.",
-              "Una jefa de rama le pide que dé ella la inducción a tres adultos nuevos."
+              "Que a la dirigente el asesor lo escoge ella misma; la comisionada puede orientar al jefe sobre cómo buscarlo.",
+              "Que a la dirigente el asesor lo escoge su jefe de grupo; la comisionada puede orientarlo sobre cómo buscarlo.",
+              "Que a la dirigente el asesor lo escoge la Comisión Regional; la comisionada orienta al jefe sobre cómo buscarlo."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "El asesor de la dirigente nueva lo escoge ella; Andrea puede orientar al jefe de grupo sobre cómo buscarlo."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

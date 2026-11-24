@@ -3,7 +3,7 @@
   "title": "Los cargos del Grupo: leer una ficha",
   "subtitle": "Curso 11 · Nivel 3 de la Línea Política de Adultos",
   "description": "El mapa de los veinte cargos del Grupo y la herramienta para leer el tuyo: la ficha del Manual de cargos. Quién nombra a quién, a quién respondes, qué partes tiene una ficha, qué grado espera tu cargo en cada competencia esencial, cuáles son sus competencias específicas y cómo llevar todo eso a tu plan personal. Abre el Nivel 3.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-11-23",
   "icon": "🗂️",
   "duration": "40 minutos",
   "level": 3,
@@ -153,22 +153,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "En un grupo quedaron dos vacantes: un subjefe de Comunidad y un tesorero. Según las fichas del Manual, ¿quién nombra a cada uno?",
+            "text": "En un grupo quedaron dos vacantes: la de Canciller de Grupo y la de Auxiliar administrativo. Según las fichas que agrupa la lección, ¿quién nombra a cada uno?",
             "options": [
-              "Al subjefe, el Jefe de Grupo; al tesorero, el Consejo de Grupo.",
-              "Al subjefe, el Consejo de Grupo; al tesorero, la Asamblea de Grupo.",
-              "Al subjefe, el Jefe de Grupo; al tesorero, la Asamblea de Grupo."
+              "Al Canciller lo nombra la Asamblea de Grupo, y al Auxiliar administrativo, el Consejo de Grupo.",
+              "Al Canciller lo nombra el Consejo de Grupo, y al Auxiliar administrativo, el Consejo de Grupo.",
+              "Al Canciller lo nombra el Consejo de Grupo, y al Auxiliar administrativo, el Jefe de Grupo."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "…a los consejeros —el Consejero Scout de Grupo y el Presidente, el Vicepresidente, el Secretario y el Intendente del Consejo— y al Canciller de Grupo."
           },
           {
-            "text": "En la Asamblea, alguien lee el Reglamento de Grupos: el Consejo debe elegir de entre sus miembros al Presidente. ¿Qué conviene responderle?",
+            "text": "En la Asamblea de Grupo, un padre lee del Reglamento de Grupos que el Consejo elige de entre sus miembros al Presidente. Según la lección, ¿qué le responde una consejera?",
             "options": [
-              "Que manda el Reglamento: el Manual trae perfiles, no quién nombra a quién.",
-              "Que para los cargos de adultos manda el Manual: esa regla está suspendida.",
-              "Que se aplican los dos: el Consejo lo propone y la Asamblea lo nombra."
+              "Que la Asamblea Scout Nacional suspendió esa regla para los adultos, y que al Presidente lo nombra la Asamblea de Grupo.",
+              "Que la Asamblea Scout Nacional suspendió esa regla para los adultos, y que al Presidente lo nombra el Jefe Regional.",
+              "Que el Consejo Scout Nacional suspendió esa regla para los adultos, y que al Presidente lo nombra la Asamblea de Grupo."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Para los cargos de adultos, esas disposiciones están suspendidas por el Acuerdo 558 de 2023 del Consejo Scout Nacional, y manda el Manual."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -239,22 +241,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Una subjefa de Manada recién nombrada lee su ficha para saber a quién le rinde cuentas de su gestión. ¿Qué va a encontrar?",
+            "text": "Una subjefa de Comunidad recién nombrada lee en su ficha la casilla «Responde de su Gestión a». ¿Qué instancias encuentra ahí, según la lección?",
             "options": [
-              "A la jefa de Manada, al Jefe de Grupo que la nombró y a la Asamblea.",
-              "Al Consejo de Grupo, al Jefe de Grupo y también a la jefa de Manada.",
-              "Al Consejo, a la jefa de Manada y a la Asamblea que eligió al Consejo."
+              "Al Consejo de Grupo, al Jefe Regional y al jefe de Comunidad; con ellos conversa lo que no le cuadre.",
+              "Al Consejo de Grupo, al Jefe de Grupo y al jefe de Comunidad; con ellos conversa lo que no le cuadre.",
+              "Al Consejo de Grupo, al Jefe Regional y a la Asamblea de Grupo; con ellos conversa lo que no le cuadre."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "En la conducción del programa, todos responden al Consejo y a su jefe; los subjefes de rama, a sus dos jefes."
           },
           {
-            "text": "Un contador nuevo lee en su ficha que le «responden» el Jefe de Grupo y los jefes de rama, y quiere revisarles la planeación de las ramas. ¿Qué le dirías?",
+            "text": "Un contador recién nombrado encuentra en su ficha una casilla que no cuadra con sus funciones de libros y estados financieros. Según el ejemplo de la lección, ¿cuál es y qué hace con ella?",
             "options": [
-              "Que sus funciones son contables: la planeación de las ramas no es suya.",
-              "Que le toca revisarla, porque la ficha lo pone a cargo de los jefes del Grupo.",
-              "Que la revise con permiso del Consejo, que es quien lo nombró en el cargo."
+              "La casilla «Responde de su Gestión a», que pone al Jefe de Grupo y a los jefes de rama; la lee con sus funciones y pregunta.",
+              "La casilla «Responde de su Gestión a», que pone al Consejo de Grupo y al Jefe Regional; la lee con sus funciones y pregunta.",
+              "La casilla «Le responden de su gestión», que pone al Jefe de Grupo y a los jefes de rama; la lee con sus funciones y pregunta."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "La del Contador, por ejemplo, pone al Jefe de Grupo y a los jefes de rama entre quienes «le responden»; esa casilla se lee con sus funciones, que son de libros y estados financieros."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -330,22 +334,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Una consejera recién elegida busca en la ficha de su cargo tres datos: sus funciones, su periodo y la edad mínima. ¿Qué va a encontrar ahí?",
+            "text": "Una consejera recién elegida abre su ficha buscando tres datos: si su cargo es incompatible con otros, cuánto dura su periodo y qué cursos debe tomar. Según la lección, ¿cuál de los tres encuentra ahí?",
             "options": [
-              "Las funciones y el periodo; la edad mínima la dice su nombramiento.",
-              "La edad mínima y el periodo; las funciones las dice el Reglamento.",
-              "Las funciones y la edad mínima; el periodo lo dice su nombramiento."
+              "Las incompatibilidades con otros cargos; el periodo y los cursos no vienen en la ficha.",
+              "La duración de su periodo; las incompatibilidades y los cursos no vienen en la ficha.",
+              "Los cursos que debe tomar; el periodo y las incompatibilidades no vienen en la ficha."
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "Ni el periodo del cargo (eso lo dice tu nombramiento), ni el paso a paso para nombrar a alguien (es la vinculación del Curso 6), ni una lista de cursos obligatorios."
           },
           {
-            "text": "Un aspirante a jefe de Clan lee los requisitos de su ficha y no se siente listo en dos competencias esenciales. ¿Qué le dice ese requisito?",
+            "text": "Proponen a un padre como Consejero Scout de Grupo. Lee los requisitos de la ficha y no se siente fuerte en dos competencias esenciales. Según esos requisitos, ¿qué le dirías?",
             "options": [
-              "Que puede aspirar si demuestra interés en desarrollarlas en el cargo.",
-              "Que debe contar con ellas antes: son requisito para desempeñar el cargo.",
-              "Que puede aspirar si otro jefe de la rama cubre esas dos competencias."
+              "Que puede aspirar: el requisito pide contar con ellas o tener un asesor personal que lo acompañe en ellas.",
+              "Que puede aspirar: el requisito pide contar con ellas o demostrar interés para desarrollarlas en el cargo.",
+              "Que puede aspirar: el requisito pide contar con ellas o desarrollarlas en sus tres primeros meses de cargo."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Contar con las competencias esenciales para desempeñar el cargo o demostrar interés para desarrollarlas."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -416,22 +422,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Una subjefa de Manada pasa a ser jefa de Manada. Si compara las dos fichas, ¿qué grado de competencia esencial le cambia?",
+            "text": "Una subjefa de Manada pasa a ser jefa de Manada. Si compara las dos fichas, ¿en qué competencia esencial le cambia el grado que pide su cargo?",
             "options": [
-              "Trabajo en equipo, que pasa de grado 2 a grado 3 al asumir la jefatura.",
-              "Relaciones interpersonales, que pasa de grado 2 a grado 3 en la jefatura.",
-              "Conciencia organizacional, que pasa de grado 2 a grado 3 en la jefatura."
+              "En Trabajo en equipo, que pasa de grado 2 a grado 3 al asumir la jefatura.",
+              "En Relaciones interpersonales, que pasa de grado 2 a grado 3 al asumir la jefatura.",
+              "En Conciencia organizacional, que pasa de grado 2 a grado 3 al asumir la jefatura."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "Grado 3 para el jefe de una rama y grado 2 para su subjefe. Es la única diferencia de grados entre jefe y subjefe, en las cuatro ramas."
           },
           {
-            "text": "Un consejero lee que su cargo pide grado 3 en Planeamiento estratégico, y él se ubicó en el 1. Piensa renunciar: «No doy la talla». ¿Qué le dirías con la ficha en la mano?",
+            "text": "Un consejero y la Jefa de Grupo se ubicaron los dos en grado 2 en Planeamiento estratégico. Con sus fichas al lado, ¿quién tiene ahí una brecha para su plan?",
             "options": [
-              "Que el grado es el nivel hacia el que avanza, y la brecha va a su plan.",
-              "Que el grado es el mínimo del cargo, y le conviene uno que le pida menos.",
-              "Que el grado es el que debe alcanzar antes de su valoración inicial."
+              "Tiene la brecha el consejero: su ficha pide grado 3 y la de la Jefa de Grupo pide grado 2; esa brecha va a su plan.",
+              "Tiene la brecha la Jefa de Grupo: su ficha pide grado 3 y la del consejero pide grado 2; esa brecha va a su plan.",
+              "Tiene la brecha la Jefa de Grupo: su ficha pide grado 4 y la del consejero pide grado 2; esa brecha va a su plan."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "Grado 3 en las cinco fichas de consejeros (Consejero, Presidente, Vicepresidente, Secretario e Intendente). Grado 2 para el Jefe de Grupo."
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -506,22 +514,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Preparando su valoración inicial, un jefe de Tropa pregunta en qué grado de 1 a 4 está en «Administración de actividades». ¿Qué le responde su asesor?",
+            "text": "Preparando su valoración inicial, un jefe de Tropa quiere saber cómo está en «Administración de actividades», que figura en su ficha. ¿Qué le responde su asesor, según la lección?",
             "options": [
-              "Que arranca en grado 1, como todas las competencias de un cargo nuevo.",
-              "Que su ficha le pide grado 3, igual que en las esenciales de la rama.",
-              "Que esa es específica: no tiene grados, se mira por sus conductas."
+              "Que, como específica, tiene cuatro grados: revisa las conductas del grado 3 que pide su ficha.",
+              "Que, como específica, no tiene grados: revisa cuáles de sus conductas ya hace y cuáles le faltan.",
+              "Que, como esencial, tiene cuatro grados: revisa las conductas del grado 3 que pide su ficha."
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "En el Diccionario, cada esencial tiene cuatro grados; cada específica tiene un solo criterio y una lista de conductas observables."
           },
           {
             "text": "Un jefe de Tropa pasa a ser Jefe de Grupo. Al comparar las dos fichas, ¿qué competencias específicas conserva?",
             "options": [
-              "Asesoría personal y Habilidades y conocimientos scouts, que son de base.",
-              "Desarrollo comunitario y Asesoría personal; las otras tres cambian.",
-              "Habilidades y conocimientos scouts y Administración del proyecto educativo."
+              "Conserva Desarrollo comunitario y Asesoría personal; las otras tres de su ficha de rama cambian.",
+              "Conserva Asesoría personal y Habilidades y conocimientos scouts; las otras tres de su ficha de rama cambian.",
+              "Conserva Asesoría personal y Administración de actividades; las otras tres de su ficha de rama cambian."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Desarrollo comunitario, Asesoría personal, Supervisión del proyecto educativo, Gestión de grupo y Garante del debido proceso."
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -588,22 +598,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 11",
         "questions": [
           {
-            "text": "Un jefe de Grupo recibe a una subjefa de Comunidad recién nombrada. Su valoración inicial es en tres semanas. ¿Qué le conviene hacer con la ficha de su cargo?",
+            "text": "Una subjefa de Comunidad puso su ficha al lado de su autodiagnóstico y encontró cinco brechas. Según los pasos de la lección, ¿cuáles lleva a su Plan Personal de Desarrollo?",
             "options": [
-              "Esperar a la valoración inicial y leerla allá, al lado de su autodiagnóstico.",
-              "Dársela antes, para que llegue a la valoración sabiendo qué se espera.",
-              "Dársela después, para que su autodiagnóstico no quede condicionado."
+              "Unas pocas, las de grado más bajo en su autodiagnóstico, escogidas junto con su asesor.",
+              "Unas pocas, las que su ficha pide en el grado más alto, escogidas junto con su asesor.",
+              "Unas pocas, las de más impacto en el cargo que ejerce, escogidas junto con su asesor."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "anota dónde estás por debajo del grado que pide tu cargo y lleva esa lista a tu próximo encuentro con tu asesor, para escoger juntos las de más impacto."
           },
           {
-            "text": "El contador de un grupo hace su autodiagnóstico y queda en grado 1 en Trabajo en equipo. Preocupado, quiere ponerla de primera en su plan. ¿Qué le muestra su ficha?",
+            "text": "Tomás, subjefe de Tropa, se ubicó en grado 3 en Conciencia organizacional y en grado 3 en Trabajo en equipo. Con la ficha 2.1.15 al lado, ¿dónde está su brecha?",
             "options": [
-              "Que ahí está su brecha mayor: el grado 1 es el piso, y el plan debe subirlo.",
-              "Que ahí no aplica: esa esencial es para cargos que conducen adultos.",
-              "Que ahí no tiene brecha: su cargo pide grado 1, y ya está en ese grado."
+              "La brecha está en Conciencia organizacional, que su ficha pide en grado 4; en la otra ya cumple el grado 2 que pide.",
+              "La brecha está en Trabajo en equipo, que su ficha pide en grado 4; en la otra ya cumple el grado 2 que pide.",
+              "La brecha está en Conciencia organizacional, que su ficha pide en grado 4; en la otra ya cumple el grado 3 que pide."
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "las 7 esenciales con el grado que pide su cargo —Conciencia organizacional en 2, Trabajo en equipo en 4— y cinco específicas, entre ellas Administración de actividades."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

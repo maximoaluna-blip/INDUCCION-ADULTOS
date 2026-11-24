@@ -3,7 +3,7 @@
   "title": "Talento 360° en la práctica",
   "subtitle": "Curso 9 · Nivel 2 de la Línea Política de Adultos",
   "description": "El recorrido práctico por la plataforma oficial de la Asociación: las dos puertas de entrada, una hoja de vida que permita ser evaluado, cómo postularse a una vacante, cómo responder y descargar una evaluación, cómo construir el plan con estrategias, actividades y soportes, y cómo reconocer y hacer visible el propio desarrollo.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-11-23",
   "icon": "💻",
   "duration": "40 minutos",
   "level": 2,
@@ -145,22 +145,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Un adulto olvidó su contraseña y quiere entrar a responder una evaluación. ¿Dónde la recupera?",
+            "text": "Óscar olvidó su contraseña de Talento 360° y, cuando la recupere, quiere reconocer a su asesora en el Muro Kudo. Según la lección, ¿por qué puerta hace cada cosa?",
             "options": [
-              "En la página de registro y vacantes; con esa clave entra después a la otra parte.",
-              "En la parte de las evaluaciones, que maneja una clave distinta de la de las vacantes.",
-              "En SiScout, porque Talento 360° usa la misma clave de su registro como miembro."
+              "La clave la recupera en la plataforma HRM, y el Muro Kudo lo encuentra en «Trabaje con nosotros».",
+              "La clave la recupera en «Trabaje con nosotros», y el Muro Kudo lo encuentra en la plataforma HRM.",
+              "La clave la recupera en la plataforma HRM, y el Muro Kudo lo encuentra en esa misma plataforma."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Se llega desde la página de la Asociación, en la opción «T360 – Hoja de Vida y Vacantes». Si olvidas la contraseña, aquí mismo la recuperas."
           },
           {
-            "text": "Un adulto quiere responder la evaluación de su jefe de Manada, pero solo conoce la página donde se registró y ve vacantes. ¿Qué le falta?",
+            "text": "Un adulto quiere comprobar que su estado, sus cargos y su asesor estén bien registrados en Talento 360°. Según la lección, ¿dónde se los muestra el tutorial?",
             "options": [
-              "Entrar a sus postulaciones en esa misma página, porque ahí aparece lo que le toca evaluar.",
-              "Entrar con esa misma cuenta por la otra dirección de la plataforma, la de su desarrollo.",
-              "Pedirle a la Dirección Nacional una cuenta aparte, que sirva solo para las evaluaciones."
+              "En la Hoja de vida de «Trabaje con nosotros», entrando con la misma cuenta con la que se registró.",
+              "En la Hoja de vida de «Trabaje con nosotros», entrando con una cuenta aparte para su desarrollo.",
+              "En «Mi Perfil» de la plataforma HRM, entrando con la misma cuenta con la que se registró."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Ojo: la Puerta 1 también te deja ver y actualizar tu hoja de vida, pero el estado, los cargos y el asesor —lo que decide si te pueden evaluar— el tutorial los muestra aquí."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -236,22 +238,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Paula fue subjefa de Manada y este año es jefa de Manada en el mismo grupo. En Talento 360° tiene los dos cargos activos, y su evaluación no aparece. ¿Qué revisa primero?",
+            "text": "Paula fue subjefa de Manada y este año es jefa de Manada en el mismo grupo, pero en Talento 360° dejó los dos cargos activos. Según la lección, ¿qué pone en riesgo si no cierra el de subjefa con su fecha de finalización?",
             "options": [
-              "Su foto de perfil, porque las evaluaciones solo se habilitan con una foto reciente.",
-              "Que solo quede un cargo activo en el nivel de grupo, y el otro con su fecha de fin.",
-              "El área asignada, porque en Programa de Jóvenes las evaluaciones son solo anuales."
+              "Que su evaluación de desempeño se pueda realizar con éxito, porque depende de un solo cargo activo por nivel.",
+              "Que su postulación a una vacante se pueda realizar con éxito, porque depende de un solo cargo activo por nivel.",
+              "Que el registro de su asesor en el cargo se haga con éxito, porque depende de un solo cargo activo por nivel."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "El tutorial es explícito: de tener un solo cargo activo por nivel depende que la evaluación de desempeño se pueda realizar con éxito."
           },
           {
-            "text": "Un dirigente deja de ser jefe de Tropa porque lo nombraron jefe de grupo. Ya cerró el cargo viejo y abrió el nuevo. ¿Qué más revisa en su perfil?",
+            "text": "Un dirigente que era jefe de Tropa fue nombrado jefe de grupo. Ya cerró el cargo viejo y abrió el nuevo en Talento 360°. Según la lección, ¿qué hace con el área de su perfil?",
             "options": [
-              "El área: pasa de Programa de Jóvenes a Desarrollo Institucional, que es la de su nuevo cargo.",
-              "Nada más: el área se escoge una sola vez, al registrarse, y queda igual en todos los cargos.",
-              "La fecha de finalización en el cargo activo, porque de eso depende que la evaluación se pueda realizar."
+              "La deja en Programa de Jóvenes, que el tutorial indica también para el jefe de grupo.",
+              "La cambia a Adultos en el Movimiento, que el tutorial indica para el jefe de grupo.",
+              "La cambia a Desarrollo Institucional, que el tutorial indica para el jefe de grupo."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "En «Asignar Área», el tutorial indica Programa de Jóvenes para los dirigentes y Desarrollo Institucional para los consejeros o el jefe de grupo."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -315,22 +319,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Andrea encuentra una vacante abierta que le encanta y ya leyó sus detalles, pero al pulsar «+Postularme» la plataforma no la deja. ¿Qué revisa?",
+            "text": "Andrea encuentra una vacante que le encanta, lee sus detalles y ve que corresponde con sus competencias, pero la plataforma no la deja postularse. Según la lección, ¿qué revisa en su perfil?",
             "options": [
-              "Si en su perfil aparece que puede viajar, porque sin ese dato la plataforma no la deja seguir.",
-              "Si la vacante corresponde con sus competencias, porque la plataforma bloquea a quien no las tiene.",
-              "Si ya pasó un día desde que se publicó, porque antes de eso el botón no se activa."
+              "Que tenga marcado el estado «Vinculado», porque sin ese dato la plataforma no deja postularse.",
+              "Que tenga activada la disponibilidad para viajar, porque sin ese dato la plataforma no deja postularse.",
+              "Que tenga un solo cargo activo por nivel, porque sin ese dato la plataforma no deja postularse."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Tiene que estar activada en tu perfil: si no, la plataforma no te deja postularte."
           },
           {
-            "text": "Mateo se postuló sin leer los detalles y ahora ve que el cargo exige viajar cada mes, algo que no puede. ¿Qué hace?",
+            "text": "Mateo se postuló a una vacante sin leer los detalles y ahora ve que el cargo exige viajar cada mes, algo que no puede. Según la lección, ¿cómo procede?",
             "options": [
-              "Eliminar la postulación desde su perfil, en la sección Postulaciones, y volver a empezar.",
-              "Contactar al estamento que convoca o a la Dirección Nacional, porque él no puede retirarla.",
-              "Nada: la plataforma cancela sola las postulaciones de quien no cumple los requisitos."
+              "La reporta al estamento que convoca o a la Dirección Nacional de Adultos, porque desde su perfil no puede eliminarla.",
+              "La elimina en Postulaciones y lo reporta al estamento que convoca o a la Dirección Nacional de Adultos en el Movimiento.",
+              "La elimina en Postulaciones y lo reporta al estamento que convoca o a su Comisionado Regional de Adultos en el Movimiento."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Si te postulaste por error, ponte en contacto con el estamento que convoca o con la Dirección Nacional de Adultos en el Movimiento."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -393,22 +399,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Llevas un año en tu cargo y en tu grupo nadie ha programado tu valoración por competencias. ¿Qué puedes hacer según el comunicado?",
+            "text": "Un adulto con un cargo en el equipo regional lleva un año en él, y el Comisionado de Adultos de su región, que debía programarle la valoración por competencias, no lo ha hecho. Según la lección, ¿a quién puede pedírsela?",
             "options": [
-              "Esperar: la valoración solo la puede programar el jefe del grupo al que perteneces.",
-              "Pedirle al nivel siguiente, por ejemplo a la región, que te programe la evaluación.",
-              "Pedirle a tu asesor que la programe, porque tenerla es un derecho y un deber de tu acuerdo mutuo."
+              "Pedírsela al Jefe de Grupo de su grupo de origen, porque tener su proceso de desarrollo es un derecho y un deber.",
+              "Pedírsela al Consejo Regional de su propia región, porque tener su proceso de desarrollo es un derecho y un deber.",
+              "Pedírsela a la Dirección Nacional de Adultos, porque tener su proceso de desarrollo es un derecho y un deber."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Si el nivel del adulto no la programa, él puede pedírsela al nivel siguiente: tener su proceso de desarrollo es un derecho y un deber del acuerdo mutuo."
           },
           {
-            "text": "Un comisionado de la región, que gestiona la región en la plataforma, entra a hacer su autoevaluación y el menú no se la muestra. ¿Qué revisa primero?",
+            "text": "Óscar respondió su valoración inicial hace dos semanas, pero dos miembros de su equipo aún no la contestan. Su asesora quiere el informe ya para empezar el plan. Según la lección, ¿qué les toca?",
             "options": [
-              "Si entró como administrador: con ese perfil el menú no le enseña lo que le toca a él.",
-              "Si la programó el Jefe de Grupo: un cargo de la región solo ve lo que programa su grupo.",
-              "Si activó la disponibilidad para viajar: sin ella la plataforma no le muestra evaluaciones."
+              "Esperar: la evaluación queda abierta cerca de dos meses, y el informe solo se descarga cuando se cierra.",
+              "Esperar: la evaluación queda abierta cerca de un mes, y el informe solo se descarga cuando se cierra.",
+              "Descargarlo ya: la evaluación queda abierta cerca de dos meses, y el informe se descarga mientras avanza."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Cuando todos los que debían evaluar lo hicieron y la evaluación está cerrada, se puede descargar el informe. Si no está cerrada, no."
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -475,22 +483,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Laura escribió una sola estrategia en su plan: «Mejorar como dirigente». No tiene actividades y su porcentaje sigue en cero. ¿Qué le falta?",
+            "text": "Laura escribió en su plan una estrategia clara, ligada a una competencia, pero su porcentaje de ejecución sigue en cero. Según la lección, ¿de qué sale ese porcentaje?",
             "options": [
-              "Nada: el porcentaje sube solo cuando su asesor revisa el plan al final del periodo.",
-              "Una estrategia más clara, ligada a una competencia, y partida en actividades que pueda marcar.",
-              "Más estrategias: el porcentaje se calcula por el número de estrategias, no por lo hecho."
+              "De las actividades en que partió la estrategia y que va marcando como ya hechas.",
+              "De los soportes que va cargando en la pestaña de anexos para cada estrategia.",
+              "De las estrategias que va moviendo de «planeado» a la columna de «terminado»."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Cada estrategia se desglosa en actividades específicas. Al marcar las que ya hiciste, la plataforma calcula el porcentaje de ejecución."
           },
           {
-            "text": "Óscar hizo todas las actividades de una estrategia, pero no ha cargado nada. Quiere moverla a «terminado». ¿Qué le recuerda el comunicado?",
+            "text": "Laura quiere empezar su plan cargando de una vez todos sus certificados, y después ver qué le sale de ahí. Según la lección, ¿cómo se arma el plan y cuándo pasa una estrategia a «terminado»?",
             "options": [
-              "Que puede moverla ya: con las actividades marcadas la estrategia queda terminada.",
-              "Que primero cargue las evidencias, y después mueva la estrategia a «terminado».",
-              "Que no puede moverla él: solo el asesor pasa las estrategias entre los estados."
+              "Primero las actividades, luego las estrategias que las agrupan y al final los soportes; pasa a «terminado» con sus evidencias cargadas.",
+              "Primero las estrategias, luego las actividades en que se parten y al final los soportes; pasa a «terminado» con sus evidencias cargadas.",
+              "Primero las actividades, luego las estrategias que las agrupan y al final los soportes; pasa a «terminado» con sus actividades marcadas."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Luego de que cada estrategia planeada posea evidencias (productos) y se carguen en la plataforma se pueden ir movilizando las estrategias de planeado a en desarrollo o terminado"
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -567,22 +577,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 9",
         "questions": [
           {
-            "text": "Un adulto tiene un desempeño excelente y una evaluación final muy alta, pero su plan no tiene ningún soporte cargado. Su asesor va a solicitar su Insignia de Madera. ¿Qué pasa?",
+            "text": "Antes de solicitar la Insignia de Madera de un adulto, su asesor repasa la lista que verifica el Comunicado DNAM-2026-124. Según la lección, ¿dónde se mira que el adulto esté activo?",
             "options": [
-              "Nada grave: la evaluación final alta ya demuestra todo y los soportes son opcionales.",
-              "Le falta uno de los puntos que se verifican: el plan con sus evidencias cargadas.",
-              "Se aprueba igual: la hoja de vida y las valoraciones se miran en la plataforma, y el plan va aparte."
+              "En Talento 360°, por su estado «Vinculado»; la carta aval y la declaración del jefe inmediato son documentos firmados.",
+              "En la plataforma HRM, por su cargo activo; la carta aval y la declaración del jefe inmediato son documentos firmados.",
+              "En SiScout, su registro como miembro; la carta aval y la declaración del jefe inmediato son documentos firmados."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "la carta aval y la declaración del jefe inmediato son documentos firmados, y que estés activo se mira en SiScout."
           },
           {
-            "text": "Vas a cargar un soporte en tu plan y el menú ya no se parece al de este curso: el botón cambió de nombre. ¿Qué haces?",
+            "text": "Vas a cargar un soporte y la pantalla ya no coincide con este curso: el botón cambió de nombre. Según la lección, ¿cómo procedes?",
             "options": [
-              "Buscas la parte del plan aunque ahora se llame distinto, y si no la hallas, pides ayuda.",
-              "Buscas el botón exacto del curso: si ya no está, ese paso dejó de hacerse en la plataforma.",
-              "Buscas otra vía: le mandas los soportes por correo a tu asesor, que cuentan igual."
+              "Buscas la función y no el botón; si te trabas, primero el tutorial vigente y después la mesa de ayuda o el administrador.",
+              "Buscas la función y no el botón; si te trabas, primero la mesa de ayuda y después el administrador de la plataforma.",
+              "Buscas la función y no el botón; si te trabas, primero la mesa de ayuda y después tu asesor personal en la plataforma."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "Si la pantalla no coincide con este curso, busca la función y no el botón. Si aun así te trabas: el tutorial vigente y, después, la mesa de ayuda («Tickets») o el administrador de la plataforma en la Dirección Nacional."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

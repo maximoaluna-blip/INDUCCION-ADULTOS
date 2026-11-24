@@ -3,7 +3,7 @@
   "title": "La Política — Marco y Principios",
   "subtitle": "Curso 2 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El marco que respalda tu rol como adulto voluntario en el movimiento. En 6 lecciones cortas vas a entender qué dice la Política Nacional de Adultos, a quién aplica, cuáles son sus principios y qué herramientas trae para acompañarte. Sin tecnicismos: con ejemplos del día a día de un grupo scout.",
-  "contentVersion": "2026-10-12",
+  "contentVersion": "2026-11-23",
   "icon": "📜",
   "duration": "30 minutos",
   "level": 1,
@@ -141,22 +141,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Camilo entró hace 8 meses como tesorero. Nadie le explicó qué se esperaba de él, nadie lo acompañó, y ya está pensando en irse. ¿Qué problema, exactamente, vino a resolver esta política?",
+            "text": "Camilo entró hace ocho meses como tesorero. Nadie le explicó qué se esperaba de él ni lo acompañó, y ya piensa en irse. Según la historia que cuenta la lección, ¿qué tres cosas faltaban antes de la política?",
             "options": [
-              "Que a los grupos les faltan cargos por llenar: el problema de fondo sería conseguir más voluntarios dispuestos a asumir una responsabilidad",
-              "El de la formación: se dictaba presencial y había que volverla virtual para llegar a los grupos alejados",
-              "Exactamente ese: la gente entra con ganas y se quema porque no hay inducción ni acompañamiento"
+              "No había proceso de inducción, ni acompañamiento estructurado, ni un reconocimiento claro por el servicio prestado.",
+              "No había proceso de inducción, ni acompañamiento estructurado, ni un espacio claro en el consejo para opinar.",
+              "No había proceso de inducción, ni acompañamiento estructurado, ni una forma clara de evaluar cómo se sentía."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "No había proceso de inducción, no había acompañamiento estructurado, no había una forma clara de evaluar si el adulto se estaba sintiendo bien o si necesitaba ayuda."
           },
           {
-            "text": "Alguien en tu grupo dice: 'esa política es un invento nuevo, ni siquiera está en firme todavía'. ¿Qué le respondes?",
+            "text": "Alguien en tu grupo dice: «esa política es un invento de hace nada». Según la lección, ¿qué le respondes con fechas?",
             "options": [
-              "Que lleva años vigente y viene de la política interamericana; lo nuevo es que los grupos apenas la estemos aplicando",
-              "Que sí, que apenas está en fase de prueba y por ahora ninguna instancia de la asociación está obligada a aplicarla",
-              "Que solo aplica en los grupos que decidan adoptarla, porque cada grupo tiene autonomía para definir cómo forma a sus adultos"
+              "Que la Asociación la adoptó en abril de 2019 y que viene de la política interamericana aprobada en 2013.",
+              "Que la Asociación la adoptó en abril de 2017 y que viene de la política interamericana aprobada en 2013.",
+              "Que la Asociación la adoptó en abril de 2019 y que viene de la política interamericana aprobada en 2015."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "del 22 de abril de 2017, ratificada por la Resolución CSN N° 021-17 del 5 de junio de 2017. Origen: Política Interamericana 'Los adultos que necesitamos', aprobada en la 25ª Conferencia Scout Interamericana en septiembre de 2013."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -220,22 +222,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Tu grupo va a hacer la inducción anual y alguien propone: 'convoquen solo a los dirigentes de rama, los demás no la necesitan'. Según el capítulo de sujetos de la política, ¿quiénes deberían estar en esa sala?",
+            "text": "Tu grupo arma la lista de convocados a la inducción anual siguiendo el capítulo de sujetos de la política. Según la lección, ¿cuál lista lo cumple?",
             "options": [
-              "Solo los dirigentes de rama y el jefe de grupo, que son quienes trabajan directamente con los chicos y aplican el método",
-              "Todos los que ejercen un cargo o una función: también el vocal, el tesorero, el contador externo y el rover ayudante",
-              "Los dirigentes y el consejo de grupo; los apoyos ocasionales y los contratistas externos quedan por fuera porque no tienen un nombramiento formal"
+              "El vocal del consejo, el contador externo pago, el rover ayudante de manada y la mamá de las inscripciones.",
+              "El vocal del consejo, el rover ayudante de manada, la mamá de las inscripciones y todos los padres de familia.",
+              "El vocal del consejo, el contador externo pago, la mamá de las inscripciones y todos los padres de familia."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "La presente política cubre a todos los adultos y jóvenes adultos, voluntarios o profesionales, que desempeñan cargos o funciones en la Asociación Scouts de Colombia, en cualquiera de sus niveles."
           },
           {
-            "text": "Un rover de 19 años que apoya como ayudante en manada, ¿es 'adulto del movimiento' para efectos de esta política?",
+            "text": "Una mamá empezó a venir los sábados y quiere ayudar, pero todavía no tiene cargo ni función. Según la lección, ¿en qué fase está y cómo se organiza?",
             "options": [
-              "No: como es rover, solo le aplica el programa de jóvenes",
-              "Sí, porque desempeña una función dentro de la asociación",
-              "Solo si pasa los 21 años"
+              "En la inducción de adultos voluntarios nuevos, que la DNAM organiza en siete pasos que acompaña quien la tendrá en su equipo.",
+              "En la inducción de adultos voluntarios nuevos, que la DNAM organiza en cinco pasos que acompaña quien la tendrá en su equipo.",
+              "En la inducción de adultos voluntarios nuevos, que la DNAM organiza en nueve pasos que acompaña quien la tendrá en su equipo."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "La Dirección Nacional de Adultos en el Movimiento (DNAM) la organiza en nueve pasos que acompaña quien te va a tener en su equipo"
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -334,22 +338,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Si una persona de 20 años quiere ser presidente del consejo de grupo, ¿qué dice la política?",
+            "text": "Para secretario del consejo hay dos candidatos y los dos cumplen el perfil; uno de ellos tiene 21 años. Según la lección, ¿qué dice la política?",
             "options": [
-              "Que no puede hasta los 25 años",
-              "Que se le debe preferir cuando cumple el perfil, por el principio de inserción juvenil",
-              "Que solo puede serlo si lleva más de 5 años en el grupo y ya fue dirigente antes"
+              "Que, a perfil igual, se puede preferir al candidato de 21 años.",
+              "Que, a perfil igual, se puede preferir al candidato más antiguo.",
+              "Que, a perfil igual, se debe preferir al candidato de 21 años."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Ejemplo: dos candidatos a secretario, los dos cumplen el perfil, uno tiene 21 años. La política no dice 'puede'. Dice: prefiéranlo."
           },
           {
-            "text": "En la reunión de seguimiento, tu asesor personal te dice: 'te ordeno que hagas este curso este mes'. ¿Qué desentona ahí con el principio de horizontalidad?",
+            "text": "Tu asesor personal es también tu jefe inmediato. En la reunión de seguimiento llega con el curso ya escogido y te lo asigna. Según la lección, ¿qué pasa ahí?",
             "options": [
-              "Nada: el asesor es tu superior y por eso te asigna la formación",
-              "Que la horizontalidad significa que en el grupo no hay ninguna autoridad, así que nadie puede pedirte nada",
-              "Que el asesor acompaña y acuerda contigo tu plan: en la asesoría no da órdenes"
+              "Que puede ser a la vez tu jefe inmediato, como la política recomienda, pero en la asesoría acuerda contigo, no asigna.",
+              "Que no debería ser a la vez tu jefe inmediato, como la política advierte, y en la asesoría acuerda contigo, no asigna.",
+              "Que no debería ser a la vez tu jefe inmediato, como la política advierte, y como jefe sí puede asignarte el curso."
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "Puede ser también tu jefe inmediato (la política lo recomienda), y aun así en la asesoría acuerda contigo, no manda."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -436,22 +442,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Si un consejero tiene un conflicto en su grupo, ¿qué dice el principio de subsidiariedad?",
+            "text": "Dos dirigentes de tu grupo tienen un roce, y uno de ellos quiere escribir directo a la oficina nacional. Según la lección, ¿qué principio le pide resolverlo primero en el consejo?",
             "options": [
-              "Que se debe resolver en el grupo, y solo escalar si el grupo no puede",
-              "Que debe escalarse inmediatamente a la dirección nacional",
-              "Que lo resuelva el asesor personal por su cuenta, sin pasar por el consejo"
+              "El de horizontalidad, que pide resolver cada asunto en el nivel más cercano y escalar solo si el grupo no puede.",
+              "El de subsidiariedad, que pide resolver cada asunto en el nivel más cercano y escalar solo si el grupo no puede.",
+              "El de participación, que pide resolver cada asunto en el nivel más cercano y escalar solo si el grupo no puede."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Los temas se resuelven en el nivel más cercano al adulto. Solo escalas a la regional o a Bogotá si el grupo no puede."
           },
           {
-            "text": "Rocío lleva dos años en la tesorería del grupo y aprendió en la práctica a hacer presupuestos y rendir cuentas. Alguien le dice: 'eso no cuenta, porque no hiciste un curso'. ¿Qué principio contradice ese comentario?",
+            "text": "Rocío lleva dos años en la tesorería y aprendió sirviendo a hacer presupuestos y rendir cuentas. Le dicen: «eso no cuenta, porque no hiciste un curso». Según la lección, ¿qué principio respalda a Rocío?",
             "options": [
-              "Organización que aprende: lo que se aprende sirviendo se puede valorar y certificar como competencia",
-              "Coherencia: solo cuenta lo que pide la política mundial, y allí no aparece la tesorería de un grupo",
-              "Transparencia: lo aprendido cuenta solo si se informó antes a la regional que ella lo estaba aprendiendo"
+              "El de accesibilidad y flexibilidad, porque lo que se aprende en el día a día del grupo se puede valorar y certificar.",
+              "El de aprendizaje significativo, porque lo que se aprende en el día a día del grupo se puede valorar y certificar.",
+              "El de organización que aprende, porque lo que se aprende en el día a día del grupo se puede valorar y certificar."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Lo que aprendes sirviendo cuenta: las competencias que desarrollas en el día a día del grupo se pueden valorar y certificar."
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -549,22 +557,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "El secretario del consejo redacta actas impecables y siempre a tiempo. Pero comenta en el chat de padres lo que se habló en sesión reservada. ¿Qué le falta para ser competente en su cargo?",
+            "text": "El secretario del consejo redacta actas impecables y a tiempo, pero comenta en el chat de padres lo que se habló en sesión reservada. Según la lección, ¿qué parte de la competencia le falta?",
             "options": [
-              "Le falta el 'ser': una competencia no es solo saber y saber hacer, sino también cómo actúas",
-              "Nada: cumple bien con la parte técnica del cargo, que al final es lo que se le pide a un secretario del consejo",
-              "Le falta un curso certificado de redacción de actas y de manejo de la información del consejo"
+              "El hacer, que la lección define como la habilidad práctica de aplicar lo que sabes en una situación.",
+              "El ser, que la lección define como los principios y valores: cómo actúas, con honestidad y compromiso.",
+              "El saber, que la lección define como los conocimientos: lo que has leído, estudiado o te han enseñado."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Principios y valores. Cómo actúas: con honestidad, empatía, compromiso."
           },
           {
-            "text": "Tener un curso de contabilidad en tu hoja de vida, ¿te hace automáticamente competente como tesorero del grupo?",
+            "text": "Para elegir tesorero, un consejero dice: «el que tenga el curso de contabilidad ya es competente». Otro recuerda la definición de competencia de Spencer y Spencer que cita la lección. ¿Qué dice esa definición del desempeño?",
             "options": [
-              "Sí: si tienes el conocimiento técnico, lo demás se aprende sobre la marcha ejerciendo el cargo",
-              "No, hay que demostrar que sabes aplicarlo en el contexto real del grupo",
-              "Solo si el curso está certificado por la ASC; uno externo no cuenta para el cargo"
+              "Que la competencia resulta del desempeño acumulado, y por eso sirve para predecir quién hará bien el cargo.",
+              "Que la competencia origina o anticipa el desempeño, y por eso sirve para predecir quién hará bien el cargo.",
+              "Que la competencia resulta del desempeño acumulado, y por eso sirve para reconocer quién ya hizo bien el cargo."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Causalmente relacionada: la competencia origina o anticipa el desempeño. — Estándar de efectividad: predice quién hace algo bien o pobremente."
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -648,31 +658,34 @@
         "title": "Mini-quiz Lección 6 — Cierre del curso",
         "questions": [
           {
-            "text": "El Diccionario de Competencias y el Manual de Cargos son…",
+            "text": "Un dirigente dice que el modelo de gestión de adultos se reduce a cursos y evaluaciones. Según la lección, ¿qué le muestras?",
             "options": [
-              "Documentos opcionales que cada grupo decide si usar",
-              "Herramientas pensadas solo para los directores nacionales",
-              "Dos de las herramientas oficiales del modelo de gestión"
+              "Que son doce elementos, y que entre ellos están el Diccionario de Competencias y el Sistema de Reconocimientos.",
+              "Que son doce elementos, y que entre ellos están el Diccionario de Competencias y el Registro de Membresía.",
+              "Que son doce elementos, y que entre ellos están el Diccionario de Competencias y Decisiones para el Futuro."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "Decisiones para el Futuro — qué pasa al final del nombramiento (renovación, reubicación, retiro)"
           },
           {
-            "text": "Acabas de acordar tu plan personal de desarrollo con tu asesor y quieres que quede registrado donde la asociación lo pueda ver. ¿Dónde va?",
+            "text": "Acabas de acordar tu plan personal de desarrollo con tu asesor y quieres que quede registrado donde la Asociación lo vea. Según la lección, ¿dónde va?",
             "options": [
-              "En la plataforma Talento 360°, donde vive tu hoja de vida, tu plan personal y tus evaluaciones",
-              "En el acta del consejo de grupo, que es donde queda constancia de todo lo que se acuerda",
-              "En SiScout, que es donde está tu registro de membresía"
+              "En SiScout, la plataforma en la que viven tu hoja de vida y tu plan personal.",
+              "En Talento 360°, la plataforma en la que viven tu hoja de vida y tu plan personal.",
+              "En el Módulo de Inducción, la plataforma en la que viven tu hoja de vida y tu plan personal."
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Plataforma Talento 360° — donde vive tu hoja de vida y plan personal"
           },
           {
-            "text": "Si quieres conocer en detalle qué se espera de un Tesorero o de un Secretario, ¿qué herramienta consultas?",
+            "text": "Vas a acompañar a la nueva secretaria del consejo y primero quieres saber qué se espera de su cargo. Según la lección, ¿qué herramienta consultas?",
             "options": [
-              "La Cartilla Metodológica",
-              "El Manual de Cargos, Funciones y Perfiles",
-              "El Diccionario de Competencias, que trae las 7 esenciales y las 29 específicas"
+              "El Manual de Cargos, que según la lección dice qué se espera de cada cargo.",
+              "El Diccionario de Competencias, que según la lección dice qué se espera de cada cargo.",
+              "La Cartilla Metodológica, que según la lección dice qué se espera de cada cargo."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Manual de Cargos, Funciones y Perfiles — qué se espera de cada cargo: habla del cargo"
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

@@ -3,7 +3,7 @@
   "title": "Las 7 Competencias Esenciales",
   "subtitle": "Curso 4 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "Las 7 competencias que la política espera de todo adulto del movimiento, una por una, con autodiagnóstico interactivo. Al final vas a saber dónde estás fuerte y qué priorizar en tu Plan Personal de Desarrollo. ~40 min, 6 lecciones cortas.",
-  "contentVersion": "2026-10-12",
+  "contentVersion": "2026-11-23",
   "icon": "🧠",
   "duration": "40 minutos",
   "level": 1,
@@ -242,29 +242,32 @@
           {
             "text": "En una reunión de consejo alguien dice: 'Yo la competencia de Trabajo en equipo no la tengo, punto.' Con lo que acabas de ver, ¿qué le respondes?",
             "options": [
-              "Que tiene razón: una competencia se tiene o no se tiene, no hay puntos medios",
-              "Que no funciona así: todos estamos en algún grado del 1 al 4",
-              "Que eso solo aplica a los adultos con un cargo formal en el consejo"
+              "Que sí la tiene en algún grado, y que cada grado se describe con los cursos de formación que aprobó",
+              "Que sí la tiene en algún grado, y que cada grado se describe con los años de servicio que lleva",
+              "Que sí la tiene en algún grado, y que cada grado se describe con lo que hace en reuniones y campamentos"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Cada grado se describe con conductas observables — comportamientos concretos que se pueden ver. No es teoría: es lo que haces o no haces en una reunión de consejo, en una jornada con los chicos, en un campamento."
           },
           {
-            "text": "¿Cuál de estas afirmaciones es correcta sobre los dos tipos de competencias?",
+            "text": "Rocío acaba de asumir como jefa de la Familia de Cachorros y quiere saber qué competencias le pide la política. Con lo que dice la lección, ¿cuáles le aplican?",
             "options": [
-              "Las esenciales aplican solo a los jefes de grupo; las específicas, a los demás cargos del grupo",
-              "Las esenciales aplican a todos los adultos del movimiento; las específicas se asocian a un cargo concreto",
-              "Las específicas son más importantes que las esenciales"
+              "Las 7 esenciales, como a todo adulto, y las específicas del perfil de Jefe de Grupo, el más parecido en el Manual",
+              "Las 7 esenciales, como a todo adulto, y las específicas del perfil de Jefe de Manada, el más parecido en el Manual",
+              "Las 7 esenciales, como a todo adulto, y las específicas del perfil de Jefe de Tropa, el más parecido en el Manual"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "El Manual de Cargos es de 2020 y todavía no perfila al Jefe de Familia de Cachorros: si sirves ahí, el perfil que más se te parece es el de Jefe de Manada."
           },
           {
-            "text": "Una persona ejerce DOS cargos (por ejemplo, jefa de Manada en su grupo y miembro del equipo regional de Adultos en el Movimiento):",
+            "text": "Una persona ejerce dos cargos: jefa de Manada en su grupo y miembro del equipo regional de Adultos en el Movimiento. Según la lección, ¿cómo quedan sus competencias específicas?",
             "options": [
-              "Aplica únicamente las específicas del cargo que considera principal",
-              "Tiene las específicas de cada cargo: cada uno tiene su ficha y su ciclo",
-              "Solo necesita aplicar las 7 esenciales, que valen para cualquier cargo"
+              "Tiene las de los dos cargos, cada cargo con su ficha en el Manual y con su propio ciclo",
+              "Tiene las de los dos cargos, cada cargo con su ficha en el Manual y con un ciclo compartido",
+              "Tiene las de los dos cargos, reunidas en una ficha combinada y con un ciclo compartido"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Quien ejerce dos cargos tiene las específicas de cada uno: cada cargo tiene su ficha en el Manual y su propio ciclo."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -363,31 +366,34 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "El compromiso, según la política, NO se mide por…",
+            "text": "Hernán entiende cómo su cargo impacta la misión, cumple lo suyo, le pide cumplimiento a los demás dirigentes y le dedica tiempo al grupo aunque nadie se lo pida. ¿En qué grado de Compromiso lo ubica la lección?",
             "options": [
-              "Haber interiorizado los valores y la misión",
-              "Asumir voluntariamente responsabilidades",
-              "Un número fijo de horas semanales, igual para todos"
+              "En el grado 2 de Compromiso",
+              "En el grado 3 de Compromiso",
+              "En el grado 4 de Compromiso"
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "Grado 2: Te exiges y exiges. Entiendes cómo tu cargo impacta la misión, cumples y le exiges cumplimiento a otros, y pones tiempo aun cuando nadie te lo pide."
           },
           {
-            "text": "La competencia 'Aprendizaje y desarrollo personal' se evidencia mejor en alguien que…",
+            "text": "Paula escribió una guía corta para el consejo con lo que aprendió en un curso, dio un taller a los dirigentes nuevos y ya aplica lo aprendido en su trabajo con la Tropa. ¿Qué grado de Aprendizaje y desarrollo personal describe la lección con esas conductas?",
             "options": [
-              "Tiene muchos años en el movimiento y ya pasó por varias ramas y cargos distintos",
-              "Busca nuevos conocimientos y formula su plan personal de desarrollo",
-              "Participa en todos los campamentos y actividades que programa el grupo"
+              "El grado 1 de Aprendizaje y desarrollo personal",
+              "El grado 2 de Aprendizaje y desarrollo personal",
+              "El grado 3 de Aprendizaje y desarrollo personal"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Grado 3: Enseñas. Compartes tus aprendizajes (escribes, das talleres, orientas a otros). Aplicas lo nuevo al trabajo."
           },
           {
-            "text": "Marcela es tesorera del grupo. Cuando el consejo cambió el sistema de cuotas ella no estuvo de acuerdo, pero se sentó a entender por qué se hacía y hoy lo aplica sin quejarse. Todavía no lo defiende ante otros, no asume tareas nuevas por el cambio ni propone ajustes. ¿En qué grado de Adaptabilidad al cambio la ubicarías hoy?",
+            "text": "Cuando el consejo cambió el sistema de cuotas, Marcela, la tesorera, no estaba de acuerdo. Leyó el acta, averiguó de dónde salía el cambio para entenderlo y hoy acepta la nueva forma de hacer las cosas. ¿En qué grado de Adaptabilidad al cambio la ubica la lección?",
             "options": [
-              "Grado 1 — acepta otras formas de hacer las cosas e investiga el cambio",
-              "Grado 2 — se suma: apoya activamente el cambio y asume tareas nuevas",
-              "Grado 3 — se anticipa a los cambios y ajusta por su cuenta las actividades del grupo"
+              "En el grado 1 de Adaptabilidad al cambio",
+              "En el grado 2 de Adaptabilidad al cambio",
+              "En el grado 3 de Adaptabilidad al cambio"
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "Grado 1: Entiendes el cambio. Aceptas otras formas de hacer las cosas. Investigas el cambio para entenderlo."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -467,31 +473,34 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "La 'Conciencia organizacional' implica principalmente…",
+            "text": "Antes de mover la fecha del campamento, Óscar revisa qué estándares de su cargo aplican, piensa cómo esa decisión afecta a la organización y la lleva por el canal que corresponde. ¿A qué grado de Conciencia organizacional corresponde esa conducta?",
             "options": [
-              "Conocer personalmente a todos los miembros del consejo de grupo y también a los del equipo de la regional",
-              "Comprender la estructura, cultura y políticas de la asociación, y actuar en consecuencia",
-              "Tener muchos años en el movimiento y haber conocido varias juntas directivas"
+              "Al grado 1 de Conciencia organizacional",
+              "Al grado 2 de Conciencia organizacional",
+              "Al grado 3 de Conciencia organizacional"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Entiendes cómo el entorno te afecta y cómo lo que haces afecta a la organización. Aplicas los estándares de tu cargo y usas los canales correctos."
           },
           {
-            "text": "Un consejero que dice 'no entiendo por qué hay políticas nacionales si cada grupo es diferente'…",
+            "text": "Un consejero dice: 'no entiendo por qué hay políticas nacionales si cada grupo es diferente'. Para empezar por el grado 1 de Conciencia organizacional, ¿qué le toca conocer según la lección?",
             "options": [
-              "Está mostrando alta conciencia organizacional, porque reconoce lo particular de cada grupo",
-              "Está mostrando un nivel bajo de conciencia organizacional",
-              "Tiene razón: las políticas nacionales no obligan a cada grupo"
+              "La historia y la estructura de la asociación en todos sus niveles, y las políticas que tocan su cargo",
+              "La historia y la estructura de su grupo y de su región, y las políticas y reglamentos que tocan su cargo",
+              "La historia y la estructura de su grupo y de su región, y las políticas y reglamentos propios del grupo"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Grado 1: Te ubicas. Conoces la historia de la asociación, su estructura en todos los niveles, y las políticas y reglamentos que tocan tu cargo."
           },
           {
-            "text": "El jefe de grupo llega al consejo con el plan estratégico de la región, explica qué parte les toca a ellos y arma con el equipo la malla de actividades del año con fechas de revisión en junio y noviembre. ¿Qué grado de Planeamiento estratégico está mostrando?",
+            "text": "Con el equipo, el jefe de grupo convierte las políticas en la malla de actividades del año: arma el plan operativo y fija puntos de revisión en junio y noviembre. ¿A qué grado de Planeamiento estratégico corresponde esa conducta?",
             "options": [
-              "Grado 1 — conoce sus responsabilidades y resuelve lo cotidiano de su cargo",
-              "Grado 3 — convierte las políticas en planes concretos y fija puntos de control",
-              "Grado 4 — propone mejoras al plan estratégico de la región"
+              "Al grado 1 de Planeamiento estratégico",
+              "Al grado 2 de Planeamiento estratégico",
+              "Al grado 3 de Planeamiento estratégico"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Grado 3: Aterrizas el plan. Conviertes las políticas en planes concretos: formulas planes operativos, fijas puntos de control y generas datos para el seguimiento."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -567,22 +576,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "La diferencia entre 'Relaciones interpersonales' y 'Trabajo en equipo' es que…",
+            "text": "Antes del campamento, Liliana identifica dónde puede haber roces entre los dirigentes y actúa para prevenirlos antes de que aparezcan. ¿En qué competencia y en qué grado pone la lección esa conducta?",
             "options": [
-              "La primera se enfoca en cómo te relacionas con cada persona; la segunda en cómo se articula el grupo",
-              "Son sinónimos en la política: ambas describen la misma capacidad de relacionarse con otros",
-              "La primera aplica solo a los consejeros de grupo y la segunda solo a los dirigentes que trabajan directamente con las ramas"
+              "En Relaciones interpersonales, grado 4",
+              "En Trabajo en equipo, en su grado 4",
+              "En Relaciones interpersonales, grado 3"
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Grado 4: Evalúas y anticipas. Evalúas resultados del equipo y los mejoras. Anticipas conflictos para prevenirlos."
           },
           {
-            "text": "Andrés reparte las tareas del consejo, integra a los dos dirigentes nuevos y asume el liderazgo cuando nadie más lo hace. Nunca se sienta a revisar si al equipo le está funcionando lo que hace, ni mide su propio aporte. ¿En qué grado de Trabajo en equipo está?",
+            "text": "Andrés integra a los dos dirigentes nuevos del consejo dándoles la orientación que necesitan, y asume el liderazgo cuando el equipo lo requiere. ¿En qué grado de Trabajo en equipo lo ubica la lección?",
             "options": [
-              "Grado 1 — cumple sus tareas y comparte información",
-              "Grado 2 — promueve el desarrollo del equipo, asume liderazgo e integra a los nuevos",
-              "Grado 4 — evalúa los resultados del equipo, se anticipa a los conflictos y mide su propia contribución"
+              "En el grado 2 de Trabajo en equipo",
+              "En el grado 3 de Trabajo en equipo",
+              "En el grado 4 de Trabajo en equipo"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Grado 2: Empujas al equipo. Promueves el desarrollo del equipo, asumes el liderazgo cuando se requiere e integras a los miembros nuevos."
           }
         ],
         "nextLabel": "Continuar al autodiagnóstico →"
@@ -796,31 +807,34 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "El autodiagnóstico tiene valor real solo si…",
+            "text": "Te estás calificando en Relaciones interpersonales y, después de leer las conductas, dudas entre el grado 2 y el grado 3. ¿Qué te indica la lección?",
             "options": [
-              "Eres generoso contigo y te calificas alto en todas las competencias",
-              "Eres honesto/a contigo mismo/a, sin tratar de quedar bien ni mal",
-              "Te calificas bajo para verte humilde"
+              "Marcar el grado 3, porque un grado de más te deja una meta clara para tu plan",
+              "Marcar el grado 2, porque un grado de menos te deja algo concreto que trabajar",
+              "Marcar los dos y promediar, porque así tu plan refleja mejor dónde estás hoy"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Si dudas entre dos grados, marca el menor. Un grado de menos te deja algo concreto que trabajar; un grado de más te deja sin plan"
           },
           {
-            "text": "Tu autodiagnóstico…",
+            "text": "Terminas tu autodiagnóstico y te preguntas quién más va a ver tus resultados. Según la lección, ¿qué pasa con él?",
             "options": [
-              "Se le publica automáticamente a tu jefe de grupo para que lo revise antes del consejo",
-              "Se guarda solo en tu navegador y se conecta con tu Plan Personal en el Curso 5",
-              "Es público en la plataforma para todos los adultos del movimiento"
+              "Se guarda en tu cuenta de la plataforma, y nadie más lo ve a menos que decidas compartirlo",
+              "Se guarda en tu cuenta de la plataforma, y lo ve también tu asesor salvo que no lo compartas",
+              "Se guarda en tu navegador, y nadie más lo ve a menos que tú mismo decidas compartirlo"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Se guarda en tu navegador. Nadie más lo ve, ni tu jefe de grupo ni tu asesor — a menos que tú decidas compartirlo."
           },
           {
-            "text": "Te estás calificando en Relaciones interpersonales. Te reconoces en 'medio en malentendidos' del grado 3, pero no en 'modifico mi perspectiva si lo amerita' ni en 'construyo relaciones de trabajo cooperativo'. ¿Qué grado marcas?",
+            "text": "Felipe llegó hace un mes, todavía no tiene cargo y va a hacer el autodiagnóstico. Según la lección, ¿en qué debe pensar para calificarse?",
             "options": [
-              "Grado 3 — con reconocerte en una sola de las conductas descritas ya te puedes ubicar en ese grado",
-              "Grado 2 — si no te reconoces en la mayoría de las conductas, sigues en el anterior",
-              "Grado 4 — porque mediar en malentendidos es la conducta más difícil de toda la lista"
+              "En cómo actúa hoy en su trabajo, su casa, su comunidad o las tareas en que ayuda al grupo",
+              "En cómo actuaría en el cargo que va a asumir, con las tareas que ese cargo le traerá al grupo",
+              "En cómo lo describirían hoy los dirigentes con cargo que ya lo conocen en las tareas del grupo"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Si todavía no tienes cargo, piensa en cómo actúas hoy en lo que ya haces: tu trabajo, tu casa, tu comunidad o las tareas en que ayudas al grupo."
           }
         ],
         "nextLabel": "Continuar a tus prioridades →"
@@ -916,31 +930,34 @@
         "title": "Mini-quiz Lección 6 — Cierre del curso",
         "questions": [
           {
-            "text": "Terminas tu perfil y te sale grado 2 en Planeamiento estratégico — una de tus tres áreas de oportunidad. ¿Qué significa eso para tu Plan Personal?",
+            "text": "Tu perfil te dio tres áreas de oportunidad y quieres escoger por cuál empezar. Según la pista de la lección, ¿cuál puede convenir atacar primero, aunque no sea la más débil?",
             "options": [
-              "Que ahí tienes el mayor espacio para crecer, y por eso entra a tus prioridades",
-              "Que fallaste en esa competencia y conviene no mencionarla en tu plan para no quedar mal ante tu asesor",
-              "Que es tu competencia más débil y la única que debes trabajar este ciclo"
+              "Por la de mayor impacto en tu grupo, aunque no sea la de grado más bajo",
+              "Por la de mayor impacto en tu equipo, aunque no sea la de grado más bajo",
+              "Por la de mayor impacto en tu cargo, aunque no sea la de grado más bajo"
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Pista: no siempre es la más débil — a veces conviene la que más impacto tiene en tu cargo actual."
           },
           {
-            "text": "En el Curso 5 (Plan Personal), ¿qué pasa con tu autodiagnóstico de hoy?",
+            "text": "Carolina terminó su autodiagnóstico, vio sus tres áreas de oportunidad y no sabe qué hacer después. Una compañera que ya hizo la ruta le explica cómo sigue en el Curso 5. Según la lección, ¿qué le dice?",
             "options": [
-              "Tienes que rehacerlo desde cero, porque cada curso arranca con su propio diagnóstico",
-              "Queda pre-cargado, así arrancas con tus prioridades ya identificadas",
-              "Solo lo verá tu jefe de grupo"
+              "Que no tendrá que volver a calificarse: arma su plan con el perfil ya cargado y lo sube a SISCOUT",
+              "Que no tendrá que volver a calificarse: arma su plan con el perfil ya cargado y lo sube a Talento 360",
+              "Que no tendrá que volver a calificarse: arma su plan con el perfil ya cargado y lo sube a Universidad Scout"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Subir tu plan a Talento 360, la plataforma oficial"
           },
           {
-            "text": "¿Cuántas áreas de oportunidad conviene trabajar durante el ciclo de tu nombramiento?",
+            "text": "Tu perfil ya está calculado y vas a escoger qué áreas de oportunidad trabajar en el ciclo de tu nombramiento actual. Según la lección, ¿cuántas a la vez?",
             "options": [
-              "Las 7 a la vez, para avanzar rápido y cerrar todas las brechas en un solo ciclo",
-              "Idealmente 2-3 — concentras esfuerzo y los resultados son sostenibles",
-              "Solo 1 por ciclo, sin importar cuántas áreas de oportunidad tengas"
+              "Idealmente 2 o 3 en el ciclo de tu nombramiento actual",
+              "Idealmente 3 o 4 en el ciclo de tu nombramiento actual",
+              "Idealmente 4 o 5 en el ciclo de tu nombramiento actual"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Las áreas de oportunidad — pero no todas a la vez. Idealmente trabaja 2-3 durante el ciclo de tu nombramiento actual"
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

@@ -3,7 +3,7 @@
   "title": "Bienvenida al Movimiento de Adultos",
   "subtitle": "Curso 1 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El primer paso. Si llegaste al grupo scout sin saber muy bien qué te tocaba hacer, este curso es tu punto de entrada. En 45 minutos vas a entender por qué estás aquí, qué se espera de ti, y cómo lo que haces de verdad importa. Sin tecnicismos. Sin compromisos pesados. Solo claridad.",
-  "contentVersion": "2026-10-12",
+  "contentVersion": "2026-11-23",
   "icon": "🦸",
   "duration": "45 minutos",
   "level": 1,
@@ -202,22 +202,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Después de esta lección, ¿qué es lo que de verdad define si vas a aportar en el grupo?",
+            "text": "Ana fue guía scout hace 20 años; Jorge nunca fue scout y llegó porque su hija entró al grupo. Los dos entran al consejo y te preguntan qué necesita de ellos el movimiento. ¿Qué les respondes, según la lección?",
             "options": [
-              "Solo deben ser adultos del movimiento quienes hayan sido scouts cuando jóvenes",
-              "Cómo llegaste al rol importa menos que qué decides hacer ahora que estás aquí",
-              "Si llegaste sin pedirlo, no estás realmente comprometido"
+              "Que no necesita personas perfectas: necesita personas formadas que sepan qué cargo ocupan",
+              "Que no necesita personas perfectas: necesita personas disponibles que sepan cuánto tiempo dan",
+              "Que no necesita personas perfectas: necesita personas presentes que sepan dónde están parados"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "El movimiento scout no necesita personas perfectas. Necesita personas presentes que sepan dónde están parados."
           },
           {
-            "text": "Dos personas entran al consejo el mismo mes. Ana fue guía scout hace 20 años, pero casi nunca alcanza a llegar a las reuniones. Jorge nunca fue scout, llega puntual y pregunta lo que no entiende. Según esta lección, ¿quién se acerca más a lo que el movimiento anda buscando?",
+            "text": "Jorge, papá de un lobato, acaba de entrar al Consejo de Grupo como vocal y te pregunta quién lo nombró a él y cada cuánto se reúne el Consejo. ¿Qué le respondes, según la lección?",
             "options": [
-              "Ana, porque haber sido scout de joven pesa más que la asistencia",
-              "Jorge: lo primero que se pide es estar y saber dónde está uno parado",
-              "Ninguno: primero tendrían que hacer la promesa scout para contar como adultos del movimiento"
+              "Que a él lo nombró la Asamblea de Grupo, y que el Consejo se reúne al menos una vez al mes",
+              "Que a él lo nombró el Jefe de Grupo, y que el Consejo se reúne al menos una vez al trimestre",
+              "Que a él lo nombró el Jefe Regional, y que el Consejo se reúne al menos cada quince días"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Se reúne al menos una vez al mes y, entre otras cosas, vela por que los adultos del grupo estén apoyados y acompañados. Lo integran los consejeros y consejeras. A los adultos los nombra la Asamblea de Grupo."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -291,22 +293,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Según la idea central de esta lección, ¿de dónde viene la fuerza de los adultos en un grupo scout?",
+            "text": "En una reunión del consejo arman las tres tarjetas de la lección: «Tu superpoder», «Tu equipo» y «Su misión». ¿Qué escriben en la tarjeta «Tu equipo»?",
             "options": [
-              "De que cada uno tenga todas las habilidades",
-              "De la complementariedad de sus superpoderes trabajando juntos",
-              "De la antigüedad de cada uno de ellos en el movimiento"
+              "Otros adultos con tu mismo superpoder, que lo multiplican dentro del grupo",
+              "Otros adultos con superpoderes diferentes, que se complementan con el tuyo",
+              "Otros adultos con más experiencia, que complementan lo que a ti te falta"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Otros adultos con superpoderes diferentes que se complementan con el tuyo."
           },
           {
-            "text": "Camila lleva 15 años de enfermera y es la que calma a todo el mundo cuando hay una crisis. Le proponen entrar al consejo y responde: 'yo no tengo nada especial que aportar al grupo'. ¿Qué está pasando ahí, según esta lección?",
+            "text": "Camila lleva 15 años de enfermera y es la que calma a todos cuando hay una crisis. Le proponen entrar al consejo y dice que no tiene nada especial que aportar. Según la lección, ¿qué le está pasando?",
             "options": [
-              "Tiene razón: la enfermería poco tiene que ver con un grupo scout",
-              "Su superpoder le resulta tan natural que ni lo ve como aporte",
-              "Le falta rodaje: conviene que lleve un par de años en el grupo antes de opinar sobre lo que aporta"
+              "Le resulta tan natural que lo da por sentado; la política la invita a desarrollarlo y ponerlo al servicio del grupo",
+              "Le resulta tan natural que lo da por sentado; la política la invita a fortalecerlo y ponerlo al servicio del grupo",
+              "Le resulta tan natural que lo da por sentado; la política la invita a identificarlo y ponerlo al servicio del grupo"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Lo que pasa es que tu superpoder es tan natural para ti que lo das por sentado. La política de adultos te invita a identificarlo y ponerlo al servicio del grupo."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -378,22 +382,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Una mamá del consejo dice: 'yo no soy scout de verdad, solo soy mamá'. ¿Qué le dirías según esta lección?",
+            "text": "Luz aceptó ser vocal del consejo; Nora ayuda en los campamentos sin cargo ni función definidos. Ninguna de las dos ha hecho la promesa scout. ¿Cómo las ve la política, según la lección?",
             "options": [
-              "Que tiene razón: mientras su hijo esté en el grupo sigue siendo una mamá colaboradora, no una scout",
-              "Que al aceptar el cargo en el consejo se volvió 'adulta del movimiento'",
-              "Que primero tendría que hacer la promesa scout para contar como adulta"
+              "Luz ya es adulta del movimiento por su cargo; Nora lo será cuando asuma un cargo o una función",
+              "Luz lo será cuando haga la promesa scout; Nora lo será cuando asuma un cargo o una función",
+              "Luz lo será cuando haga la promesa scout; Nora lo será cuando haga también la promesa scout"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Tampoco necesitas haber hecho la promesa scout para contar: la política te define por el cargo o la función que asumes. Y si todavía ayudas sin un cargo ni una función definidos, estás en la puerta de entrada"
           },
           {
-            "text": "En una reunión, alguien te dice: 'no gastes tiempo en ese curso, eso es para los dirigentes de rama; tú eres del consejo'. ¿Qué le responderías con la política en la mano?",
+            "text": "En una reunión te dicen: «no gastes tiempo en ese curso, eso es para los jefes; tú eres del consejo». ¿Qué le respondes con la política en la mano?",
             "options": [
-              "Que tiene razón, y que vas a pedir que armen un curso aparte para los del consejo",
-              "Que hoy dirigentes, consejeros, asesores y vocales somos todos 'adultos del movimiento'",
-              "Que eso lo define cada jefe de grupo según cómo reparta el presupuesto de formación"
+              "Que antes se separaba a dirigentes y padres, pero desde la política de 2017 todos somos adultos del movimiento",
+              "Que antes se separaba a jefes y consejeros, pero desde la política de 2017 todos somos adultos del movimiento",
+              "Que antes se separaba a dirigentes y padres, pero desde la política de 2021 todos somos adultos del movimiento"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Falso, y esto fue un cambio importante en la política de 2017. Antes se hablaba de \"jefes\" y \"consejeros\" como roles separados con jerarquías."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -465,22 +471,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Terminado el ejercicio, alguien en tu grupo dice: 'para ser buen consejero lo que hace falta es un contador o un abogado'. Con lo que salió del dibujo, ¿qué le dirías?",
+            "text": "Terminado el dibujo, alguien del consejo dice: «para ser buen consejero lo que hace falta es un contador o un abogado». Según lo que suele salir de este ejercicio, ¿qué le respondes?",
             "options": [
-              "Que tiene razón: los perfiles técnicos son los que sacan adelante un grupo",
-              "Que sirven, pero casi todos nombraron primero cómo se relaciona con el grupo",
-              "Que da igual el perfil: lo único que pesa de verdad es la antigüedad en el movimiento"
+              "Que la gente anota primero cualidades de trato, como alegría, creatividad y entusiasmo, y casi nunca un oficio",
+              "Que la gente anota primero cualidades de trato, como empatía, cercanía y buen humor, y casi nunca un oficio",
+              "Que la gente anota primero cualidades de trato, como escucha, paciencia y compromiso, y casi nunca un oficio"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Cuando la gente dibuja a su consejero ideal, anota primero cualidades de trato (escucha, paciencia, compromiso) y casi nunca un oficio o un título."
           },
           {
-            "text": "Un compañero te dice: 'me salté el dibujo y me fui directo a los videos, total es lo mismo'. ¿Qué se perdió?",
+            "text": "Un compañero va a empezar la actividad de papel y lápiz y te pregunta qué tiene que escribir junto al dibujo, antes de ver el video. ¿Qué le dices?",
             "options": [
-              "Nada: los videos explican lo mismo que uno dibuja",
-              "Comparar su propia idea con la de los demás",
-              "Los 3 minutos de la actividad, pero llega igual al resultado"
+              "Que dibuje a su consejero ideal y escriba al lado 3 cualidades que esa persona tiene",
+              "Que dibuje a su consejero ideal y escriba al lado 5 cualidades que esa persona tiene",
+              "Que dibuje a su consejero ideal y escriba al lado 5 cualidades que él mismo tiene"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Al lado del dibujo, escribe 3 cualidades que esa persona tiene"
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -527,22 +535,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Tu grupo debe escoger entre dos candidatos al consejo: Diego, contador, que solo puede por WhatsApp; y Rocío, sin formación técnica, que se queda después de cada reunión hablando con los papás y con los chicos. Con el criterio que salió del ejercicio, ¿a quién propondrías?",
+            "text": "El consejo duda entre dos candidatos: Diego, contador, y Rocío, sin formación técnica. Para decidir, ¿qué cualidades propones mirar, según lo que nombraron las consejeras en las voces de la comunidad?",
             "options": [
-              "A Diego, porque un consejo necesita antes que nada competencia técnica",
-              "A Rocío: pesa más cómo se relaciona — lo técnico se aprende o se contrata",
-              "A cualquiera: el ejercicio del dibujo es una opinión, no un criterio para decidir"
+              "Escuchar, acompañar, organizarse, trabajar en equipo y tener carácter",
+              "Escuchar, acompañar, comprometerse, trabajar en equipo y tener corazón",
+              "Escuchar, motivar, comprometerse, trabajar en equipo y tener carácter"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Escuchar, acompañar, comprometerse, trabajar en equipo, tener corazón. Ese es el adulto del movimiento."
           },
           {
-            "text": "En tu grupo proponen armar el perfil del próximo consejero y alguien sugiere: 'pongamos como requisito tener título profesional'. Con lo que escuchaste en las voces, ¿qué propondrías?",
+            "text": "Al armar el perfil del próximo consejero, alguien pregunta de dónde sale el criterio de mirar cómo se relaciona la persona con el grupo. ¿Qué le cuentas de las voces de la lección?",
             "options": [
-              "Que el título es buen filtro: garantiza que la persona sabe organizarse y cumplir",
-              "Que se pregunte por escucha, compromiso y trabajo en equipo",
-              "Que se deje sin perfil: quien se ofrezca sirve para el consejo"
+              "Que salió de un taller real con dirigentes de rama de todo el país que hicieron el mismo ejercicio",
+              "Que salió de una encuesta con consejeros y consejeras de todo el país que hicieron el mismo ejercicio",
+              "Que salió de un taller real con consejeros y consejeras de varias regiones que hicieron el mismo ejercicio"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "En un taller real con consejeros y consejeras de varias regiones, hicieron este mismo ejercicio."
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -611,22 +621,24 @@
         "title": "Mini-quiz Lección 6",
         "questions": [
           {
-            "text": "Un compañero escribe su compromiso: 'Voy a lograr que el consejo se reúna más seguido'. ¿Qué le falta, según los criterios de esta lección?",
+            "text": "Un compañero escribe su compromiso: «Voy a lograr que el consejo se reúna cada quince días». Según las tres cosas que pide la lección, ¿qué le falta?",
             "options": [
-              "Nada: es concreto y se entiende perfectamente",
-              "Le falta el plazo, y además no depende solo de él",
-              "Le falta ambición — un compromiso debería apuntar a algo más grande"
+              "Le falta un plazo, y que sea algo que él mismo pueda controlar",
+              "Le falta un indicador, y que sea algo que él mismo pueda medir",
+              "Le falta un responsable, y que sea algo que él mismo pueda revisar"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Tres cosas que toda buena frase de compromiso debe tener: 1. Una acción concreta (algo que se hace o se logra) 2. Un plazo (cuándo) 3. Algo que tú puedas controlar (no depende de otros)"
           },
           {
-            "text": "¿Cuál de estas frases funciona como compromiso según los tres criterios (acción, plazo, algo que tú controlas)?",
+            "text": "Vas a escribir la frase del recuadro «Compromiso Personal» de tu certificado. ¿Cuál de estas cumple lo que pide la lección?",
             "options": [
-              "Voy a comprometerme más con el grupo este año",
-              "Voy a llamar a los tres papás nuevos de manada antes del 30 de este mes",
-              "Voy a lograr que el grupo consiga sede propia antes de diciembre"
+              "Voy a lograr que los tres papás nuevos de la Manada vengan antes del 30 de este mes",
+              "Voy a llamar a los tres papás nuevos de la Manada antes del 30 de este mes",
+              "Voy a llamar a los tres papás nuevos de la Manada para que se sientan acompañados"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Una acción concreta (algo que se hace o se logra) 2. Un plazo (cuándo) 3. Algo que tú puedas controlar (no depende de otros)"
           }
         ],
         "nextLabel": "Continuar a Lección 7 →"
@@ -709,22 +721,24 @@
         "title": "Mini-quiz Lección 7 — Cierre del curso",
         "questions": [
           {
-            "text": "Un mes después de este curso, una mamá nueva te dice: 'me pidieron ser vocal y no entiendo qué es eso ni qué tengo que hacer'. ¿Qué le recomiendas primero de esta ruta, y por qué?",
+            "text": "Una mamá nueva te dice: «me pidieron ser vocal, no entiendo qué tengo que hacer y solo me da el tiempo para un curso más». Según la lección, ¿cuál le recomiendas?",
             "options": [
-              "El Curso 5, para que arme ya su plan personal con un asesor",
-              "El Curso 2: le da el marco completo — qué es la política y a quién cubre",
-              "Que espere a llevar un año en el grupo antes de empezar cualquier curso"
+              "El Curso 4, porque si solo le da el tiempo para uno, es el que le da el marco completo",
+              "El Curso 4, porque si solo le da el tiempo para uno, es el que le dice qué se espera de ella",
+              "El Curso 2, porque si solo le da el tiempo para uno, es el que le da el marco completo"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Pero si solo tienes tiempo para uno más, ve directo al Curso 2 — es el que te da el marco completo."
           },
           {
-            "text": "El Curso 5 (Tu Plan Personal de Desarrollo) construye sobre…",
+            "text": "Una consejera quiere saber qué va a encontrar en el Curso 5, el que cierra la ruta. Según el mapa de esta lección, ¿qué le cuentas?",
             "options": [
-              "El compromiso de una frase que escribiste en el Curso 1 y el autodiagnóstico del Curso 4",
-              "Un plan que ya te llega armado desde la regional, de acuerdo con su calendario anual de formación",
-              "El diagnóstico que tu jefe de grupo llena por ti antes de empezar el curso"
+              "Que ahí verá el Compromiso de Acuerdo Mutuo, el Asesor Personal y la plataforma Talento 360",
+              "Que ahí verá el Acta de Nombramiento, el Asesor Personal y la plataforma Talento 360",
+              "Que ahí verá el Acta de Nombramiento, el Jefe de Grupo y la plataforma Talento 360"
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "El Compromiso de Acuerdo Mutuo (el documento que firmas con tu Grupo y que fija, entre otras cosas, cuánto dura tu compromiso: máximo 2 años), el Asesor Personal y la plataforma Talento 360."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

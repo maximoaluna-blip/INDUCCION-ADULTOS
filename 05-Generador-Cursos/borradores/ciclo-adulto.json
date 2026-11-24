@@ -3,7 +3,7 @@
   "title": "El Ciclo del Adulto en el Movimiento",
   "subtitle": "Curso 3 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El panorama del sistema completo. Cómo se vive un nombramiento de principio a fin: cómo entras (atracción y vinculación), cómo te desempeñas (formación + acompañamiento + evaluación 360°), y qué pasa al final (renovación, reubicación o retiro). Después de este curso podrás ubicar tus competencias y tu plan personal en el panorama correcto.",
-  "contentVersion": "2026-10-12",
+  "contentVersion": "2026-11-23",
   "icon": "🔄",
   "duration": "30 minutos",
   "level": 1,
@@ -167,22 +167,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Marcela lleva tres meses de tesorera. Ya firmó su Acuerdo Mutuo, está armando su plan con su asesora, y todavía no le han hecho ninguna evaluación. ¿En qué fase del ciclo está?",
+            "text": "Marcela, tesorera, ya tiene su Insignia de Madera y su nombramiento vence dentro de seis meses; nadie le ha hablado todavía de qué sigue. Según la lección, ¿en qué fase del ciclo está hoy?",
             "options": [
-              "En Atracción y Vinculación: apenas lleva tres meses ejerciendo el cargo.",
-              "En Desempeño: ya está nombrada, y ahí van formación, acompañamiento y evaluación.",
-              "En Decisiones para el Futuro: todavía nadie la ha evaluado."
+              "En Desempeño: esa fase abarca todo el nombramiento, y la decisión sobre lo que sigue llega al cerrarlo.",
+              "En Decisiones para el Futuro: esa fase abarca el último semestre del nombramiento, antes de cerrarlo.",
+              "En Decisiones para el Futuro: esa fase empieza cuando recibe la Insignia de Madera, antes de cerrarlo."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Lo que pasa durante todo tu nombramiento: formación básica, perfeccionamiento continuo, acompañamiento, evaluación."
           },
           {
-            "text": "Don Álvaro lleva 22 años en el grupo y este año lo nombraron intendente. Además es dirigente de la tropa. ¿Cómo está su situación frente al ciclo?",
+            "text": "Don Álvaro lleva 22 años en el grupo; este año lo nombraron intendente y sigue siendo dirigente de la Tropa. Según la lección, ¿cómo está frente al ciclo?",
             "options": [
-              "Tiene un solo ciclo: el de sus 22 años en el movimiento.",
-              "Tiene dos ciclos abiertos en paralelo, uno por cada nombramiento: el de intendente empieza ahora.",
-              "No aplica el ciclo: con esa trayectoria ya no necesita acuerdo mutuo ni plan personal."
+              "Tiene un solo ciclo, el de su vida en el grupo, que abarca los dos cargos y cierra en la fecha de su Acuerdo Mutuo.",
+              "Tiene dos ciclos paralelos, uno por cada nombramiento, y cada uno cierra en la fecha de su propio Acuerdo Mutuo.",
+              "Tiene un solo ciclo, el de su vida en el grupo, que abarca los dos cargos y cierra cuando reciba su Insignia de Madera."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Un adulto puede tener varios ciclos paralelos (ej. ser tesorero del grupo + dirigente de la manada = dos ciclos, uno por cada nombramiento)"
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -272,22 +274,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Llega Patricia al consejo como nueva secretaria. En su segunda reunión el jefe de grupo le pide que presente el informe anual completo. Según el proceso de vinculación, ¿qué está fallando?",
+            "text": "Patricia llega como secretaria del consejo y en su segunda reunión el jefe de grupo ya le pide el informe anual completo. Según la lección, ¿qué corresponde en esta etapa?",
             "options": [
-              "Nada: si aceptó el cargo, debe responder por sus funciones desde el primer día.",
-              "Se está saltando la Integración: primero el contexto y el equipo, después el desempeño.",
-              "Falta la Identificación de Competencias: nadie definió antes el perfil que debía cumplir la secretaria."
+              "Darle tiempo antes de exigirle resultados y, mientras tanto, poner al día su hoja de vida en SiScout, su registro en Talento 360°, la inducción general y los 4 módulos de A Salvo del Peligro.",
+              "Darle tiempo antes de exigirle resultados y, mientras tanto, poner al día su hoja de vida en SiScout, su registro en Talento 360°, la inducción general y los 2 primeros módulos de A Salvo del Peligro.",
+              "Darle tiempo antes de exigirle resultados y, mientras tanto, poner al día su hoja de vida en Talento 360°, su registro en SiScout, la inducción general y los 4 módulos de A Salvo del Peligro."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "1. Tu hoja de vida en Talento 360° 2. Tu registro en SiScout 3. El curso de inducción general 4. Los 4 módulos de A Salvo del Peligro"
           },
           {
-            "text": "El proceso de vinculación culmina formalmente con:",
+            "text": "Patricia va a firmar su Compromiso de Acuerdo Mutuo como secretaria. Según la lección, ¿cuál de estas listas trae solo cosas que quedan escritas en él?",
             "options": [
-              "Una felicitación verbal del jefe de grupo",
-              "El Acuerdo Mutuo firmado y el nombramiento oficial",
-              "Su registro en SiScout y la hoja de vida en Talento 360°"
+              "Cuánto dura su nombramiento, qué apoyo recibe del grupo y cómo la van a evaluar.",
+              "Cuánto dura su nombramiento, qué horario debe cumplir y qué presupuesto maneja.",
+              "Cuánto dura su nombramiento, qué horario debe cumplir y cómo la van a evaluar."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Allí quedan por escrito seis cosas: cuánto dura el nombramiento, cómo será tu inducción, qué te comprometes a hacer, qué apoyo recibes, qué competencias vas a desarrollar y cómo te van a evaluar."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -378,22 +382,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "La diferencia entre Formación Básica y Perfeccionamiento Continuo es:",
+            "text": "Rosa recibió su Insignia de Madera como dirigente de Manada hace tres años y sigue en el cargo. Según la lección, ¿qué le corresponde ahora en su formación?",
             "options": [
-              "La básica es obligatoria para todos y la continua es opcional, según lo que cada adulto quiera profundizar por su cuenta",
-              "La básica te prepara para el cargo y cierra con la Insignia de Madera; la continua te mantiene vigente",
-              "Son lo mismo: solo cambia el nombre según el momento en que se dicte el curso"
+              "El Perfeccionamiento Continuo: actualizaciones que la mantienen vigente y que se renuevan cada dos años.",
+              "El Perfeccionamiento Continuo: actualizaciones que la mantienen vigente y que se renuevan año a año.",
+              "El Perfeccionamiento Continuo: actualizaciones que la mantienen vigente y que se renuevan cada tres años."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Una vez certificado, el aprendizaje no para. Cursos de actualización, módulos, experiencias formativas que te mantienen vigente. Se renueva año a año."
           },
           {
-            "text": "La Insignia de Madera se gana por:",
+            "text": "Mauricio llegó como tesorero del grupo con un máster en finanzas y pregunta qué le falta para su Insignia de Madera. Según la lección, ¿cómo la obtiene?",
             "options": [
-              "Asistir al número mínimo de horas de cursos que exige la ruta de formación básica",
-              "Demostrar las competencias en la práctica, con evidencia y evaluación",
-              "Llevar más de 5 años en el movimiento ejerciendo cargos de manera continua"
+              "Demostrando sus competencias en la práctica, con base en su plan personal y en un taller de cierre.",
+              "Demostrando sus competencias en la práctica, con base en su plan personal y en un examen final.",
+              "Demostrando sus competencias en la práctica, con base en su plan personal y en la evaluación 360°."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "NO es por asistir a cursos — es por demostrar las competencias en la práctica a través de evaluación 360° y certificación de tu asesor."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -501,31 +507,34 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "En el grupo de Andrés evaluaron a los dirigentes así: cada uno llenó su propia ficha, los dirigentes se evaluaron entre ellos, y el jefe de grupo firmó el resultado. ¿Qué le falta para ser una evaluación de 360°?",
+            "text": "En el grupo de Andrés, los lobatos y sus padres respondieron encuestas sobre su dirigente. Según la lección, ¿qué modalidad del 360° aplicaron?",
             "options": [
-              "Nada le falta: con las tres modalidades que ya aplicaron la evaluación se considera de 360°.",
-              "Falta la heteroevaluación: nadie les preguntó a los chicos ni a los padres.",
-              "Falta la autoevaluación: nadie se calificó a sí mismo."
+              "La heteroevaluación, una de las cuatro miradas: para el 360° completo faltan todavía las otras tres.",
+              "La coevaluación, una de las cuatro miradas: para el 360° completo faltan todavía las otras tres.",
+              "La evaluación, una de las cuatro miradas: para el 360° completo faltan todavía las otras tres."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Quienes reciben tu trabajo te evalúan: chicos, padres, cachorros, lobatos, scouts, nómadas scout, rovers — según corresponda al cargo."
           },
           {
-            "text": "La 'Heteroevaluación' implica que…",
+            "text": "Rocío es dirigente de la Comunidad de su grupo y va a preparar su heteroevaluación con los jóvenes. Según la lección, ¿qué encuesta oficial les aplica?",
             "options": [
-              "Te evalúas a ti mismo/a con la ficha que entrega la asociación",
-              "Te evalúan tus pares, es decir los otros adultos que ejercen cargos del mismo nivel que el tuyo",
-              "Te evalúan los destinatarios de tu trabajo: chicos, padres, lobatos, etc."
+              "La Encuesta de Percepción del Lobato al Dirigente, en el formato oficial de la biblioteca.",
+              "La Encuesta de Percepción del Scout, Caminante y Rover al Dirigente, en el formato oficial de la biblioteca.",
+              "La Encuesta de Percepción de Padres o Acudientes al Dirigente, en el formato oficial de la biblioteca."
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "el formato conserva «Caminante», el nombre anterior de la rama; hoy la rama se llama Nómadas Scout y su unidad, Comunidad"
           },
           {
-            "text": "¿El acompañamiento al adulto lo provee solamente su asesor personal?",
+            "text": "El asesor personal de Laura se fue tres meses de viaje y ella siente que se quedó sin acompañamiento. Según la lección, ¿es así?",
             "options": [
-              "Sí: el asesor personal es el único responsable de acompañar al adulto durante su nombramiento",
-              "No: lo proveen el asesor, tu jefe, tu equipo y tus formadores",
-              "Solo el jefe de grupo, que responde por los adultos ante la asociación"
+              "No: también la acompañan la persona a quien reporta, su equipo y sus formadores, con apoyo técnico, académico y personal.",
+              "No: también la acompañan la persona a quien reporta, su equipo y sus formadores, con apoyo técnico, académico y económico.",
+              "No: también la acompañan la persona a quien reporta, su equipo y sus formadores, con apoyo técnico, moral y personal."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "el acompañamiento NO es vigilancia. Es soporte técnico, moral y personal."
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -622,31 +631,34 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "A Juliana no le está funcionando ser secretaria del consejo: no tiene el tiempo que el cargo pide, pero quiere seguir en el grupo. Según la política, ¿cuál es el camino?",
+            "text": "A Juliana no le funciona ser secretaria del consejo: no tiene el tiempo que el cargo pide, pero quiere seguir en el grupo y le ofrecen otro cargo con menos carga. Según la lección, ¿qué decisión es y qué pasa con su ciclo?",
             "options": [
-              "Retiro: si no puede con el cargo, sale del grupo.",
-              "Reubicación: se le busca otro cargo que se ajuste mejor, y arranca un ciclo nuevo.",
-              "Renovación: se le firma otro año en el mismo cargo y se espera que mejore."
+              "Es una reubicación: reconoce lo aprendido y arranca un ciclo nuevo en el otro cargo.",
+              "Es una reubicación: reconoce lo aprendido y continúa su mismo ciclo en el otro cargo.",
+              "Es una reubicación: reconoce lo aprendido y continúa su mismo ciclo hasta que venza el actual."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Cambias de cargo dentro del grupo o subes/te mueves a otro nivel (regional, nacional). Reconoces lo aprendido y arrancas un ciclo nuevo en otro rol."
           },
           {
-            "text": "En el grupo de Nicolás se decidió no renovarle el nombramiento a un dirigente por bajo desempeño. Alguien propone agradecerle en la ceremonia de cierre y otro responde: 'no, ese reconocimiento es para los que se van bien'. Según la política, ¿quién tiene razón?",
+            "text": "En el grupo de Nicolás, un dirigente no mejora su bajo desempeño y el consejo quiere cerrarle el nombramiento seis meses antes de que venza. Según la lección, ¿cómo procede?",
             "options": [
-              "El segundo: el reconocimiento se reserva para quien renueva o asciende.",
-              "El primero: la política pide considerar el reconocimiento sea cual sea la decisión.",
-              "Ninguno: el reconocimiento formal es opcional y cada grupo decide si lo hace."
+              "El consejo debe esperar al vencimiento, tras evaluación y plan de mejora, y con reconocimiento formal de lo aportado.",
+              "El consejo puede cerrarlo antes del vencimiento, tras evaluación y plan de mejora, y con reconocimiento formal de lo aportado.",
+              "El consejo debe esperar al vencimiento, tras evaluación y plan de mejora, y sin el reconocimiento que recibe quien renueva."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "la política permite hacerlo incluso antes de que venza el término — siempre después de una evaluación y con proceso transparente."
           },
           {
-            "text": "El retiro de un adulto puede deberse a:",
+            "text": "Carlos termina su nombramiento como tesorero; su evaluación final sale bien y él seguirá en el mismo cargo. Según la lección, ¿qué pasa con su ciclo?",
             "options": [
-              "Solo a una falta de competencia comprobada en la evaluación de desempeño del adulto",
-              "Decisión voluntaria, fin del cargo o decisión de la organización",
-              "Decisión exclusiva de la asociación; el adulto no puede retirarse solo"
+              "Es una renovación: con las mismas metas y su mismo plan personal, empieza un ciclo nuevo en su cargo.",
+              "Es una renovación: con nuevas metas, pero con su mismo plan personal, empieza un ciclo nuevo en su cargo.",
+              "Es una renovación: con nuevas metas y con un nuevo plan personal, empieza un ciclo nuevo en su cargo."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "con nuevas metas y un nuevo plan personal. Pasas a un nuevo ciclo en el mismo rol."
           }
         ],
         "nextLabel": "Continuar al cierre →"
@@ -730,22 +742,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 3",
         "questions": [
           {
-            "text": "Un dirigente de tu grupo dice: 'Yo ya hice mi Insignia de Madera hace seis años, así que mi ciclo ya lo cerré.' ¿Qué le responderías con lo que viste en este curso?",
+            "text": "Un dirigente comenta: «La Insignia de Madera se entrega en la fase de Decisiones para el Futuro, al cierre del ciclo». Con lo que viste en esta lección, ¿qué le respondes?",
             "options": [
-              "Tiene razón: con la Insignia de Madera un adulto ya completó su ciclo y no se le vuelve a evaluar.",
-              "No: la insignia cierra la formación básica, no el ciclo — después sigue el perfeccionamiento continuo.",
-              "Depende: el ciclo solo vuelve a abrirse si más adelante lo nombran en un cargo distinto, con funciones diferentes a las de hoy."
+              "Que se trabaja en la fase de Desempeño, con el Acuerdo Mutuo como herramienta principal de la Formación Básica.",
+              "Que se trabaja en la fase de Desempeño, con el plan personal como herramienta principal de la Formación Básica.",
+              "Que se trabaja en Atracción y Vinculación, con el Acuerdo Mutuo como herramienta principal de la Formación Básica."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "vas a saber que tu plan es la herramienta principal de la Formación Básica — y que lleva a la Insignia de Madera"
           },
           {
-            "text": "Si en el futuro asumes un cargo nuevo (ej. pasas de tesorero a presidente del consejo), ¿qué es lo primero que cambia?",
+            "text": "Óscar es tesorero del grupo y este año asume también la secretaría del consejo. Según la lección, ¿qué pasa con su ciclo?",
             "options": [
-              "Nada formal: como ya estás vinculado, sigues con el acuerdo y el plan que ya tienes.",
-              "Se abre un ciclo nuevo: hay que acordar y firmar un Acuerdo Mutuo para ese cargo.",
-              "Solo se actualiza tu registro en SiScout con el nuevo cargo y sigues con el mismo plan de siempre."
+              "Arranca un ciclo nuevo, paralelo al de tesorero, con su propio Acuerdo Mutuo, plan y evaluación.",
+              "Arranca un ciclo nuevo, que reemplaza al de tesorero, con su propio Acuerdo Mutuo, plan y evaluación.",
+              "Amplía su ciclo de tesorero al nuevo cargo, con su propio Acuerdo Mutuo, plan y evaluación."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Si en el futuro asumes otro cargo, sabrás que arranca un nuevo ciclo paralelo con su propio Acuerdo Mutuo, plan y evaluación"
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

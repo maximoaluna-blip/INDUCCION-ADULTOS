@@ -3,7 +3,7 @@
   "title": "Ser asesor personal",
   "subtitle": "Curso 7 · Nivel 2 de la Línea Política de Adultos",
   "description": "El Curso 5 te enseñó a buscar un asesor. Este te enseña a serlo: qué es la asesoría personal, quién puede asumirla, cómo arrancar con los pasos formales, cómo pasar de la valoración inicial a un plan de pocas competencias, cómo acompañar sin ahogar y cómo cerrar pidiendo el reconocimiento cuando el desempeño lo demuestra.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-11-23",
   "icon": "🤝",
   "duration": "40 minutos",
   "level": 2,
@@ -166,22 +166,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "En la reunión de consejo, el Jefe de Grupo propone: «Nombremos a Hernán asesor personal de todos los dirigentes nuevos, y que quede en el acta como un cargo más». ¿Qué le responderías?",
+            "text": "En la reunión de consejo, el Jefe de Grupo propone: «Nombremos a Hernán asesor personal de todos los dirigentes nuevos, y que quede en el acta como un cargo más». Según la lección, ¿qué le responderías?",
             "options": [
-              "Que está bien: así cada dirigente nuevo tiene su asesor desde el primer día, sin buscarlo.",
-              "Que no se nombra: cada adulto escoge a su asesor, idealmente su jefe, y este firma una carta.",
-              "Que no se nombra en el acta: lo designa la Comisión Regional de Adultos para cada grupo."
+              "Que no va al acta, porque es un rol: cada adulto escoge a su asesor, y su jefe inmediato lo aprueba firmando una carta.",
+              "Que no va al acta, porque es un rol: el Consejo de Grupo propone al asesor, y su jefe inmediato lo aprueba firmando una carta.",
+              "Que no va al acta, porque es un rol: cada adulto escoge a su asesor, y el asesor acepta el encargo firmando una carta."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Los tips oficiales y la guía de inducción lo dicen claro: el adulto escoge a su asesor, y el asesor acepta firmando una carta."
           },
           {
-            "text": "Hernán duda: «No sé nada de campismo avanzado, que es justo lo que Daniela necesita. ¿Debo decirle que busque otro asesor?». ¿Qué le responderías?",
+            "text": "Hernán duda: «No sé nada de campismo avanzado, que es justo lo que Daniela necesita. ¿Debo decirle que busque otro asesor?». Según la lección, ¿qué le responderías?",
             "options": [
-              "Que sí: el asesor tiene que dominar todas las competencias que su asesorado va a trabajar.",
-              "Que no hace falta: puede seguir siendo su guía y apoyarse en un mentor o experto para eso.",
-              "Que no hace falta: esa competencia se deja para otro periodo, cuando él ya la domine."
+              "Que no hace falta: sigue siendo su guía y, para el campismo, se apoya en un mentor o en un experto.",
+              "Que no hace falta: sigue siendo su guía y, para el campismo, se forma él primero hasta dominarlo.",
+              "Que no hace falta: sigue siendo su guía y, para el campismo, lo dejan para un plan posterior."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "No tiene que saberlo todo: si una competencia específica lo supera, se apoya en otros asesores, mentores o expertos."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -262,22 +264,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Un dirigente con veinte años en el Movimiento acepta asesorar a tres adultos nuevos, pero hace años que no tiene ningún plan propio. ¿Qué le sugerirías antes de empezar?",
+            "text": "Un dirigente con veinte años en el Movimiento acepta asesorar a tres adultos nuevos, pero no actualiza su propio plan desde hace años. ¿Qué le recuerda la lección antes de empezar?",
             "options": [
-              "Que arranque tranquilo: con veinte años en el Movimiento, su ejemplo ya vale por un plan.",
-              "Que abra también su propio plan, con alguna acción para su competencia de asesoría.",
-              "Que se apoye en otros asesores o expertos para las competencias, y así no le hace falta un plan propio."
+              "Que reactive su propio plan: la regla que rige desde enero de 2027 pide que el asesor lo tenga vigente al menos del último año.",
+              "Que reactive su propio plan: la regla que rige desde enero de 2027 pide que el asesor lo tenga vigente al menos de los dos últimos años.",
+              "Que reactive su propio plan: la regla que rige desde octubre de 2026 pide que el asesor lo tenga vigente al menos del último año."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "desde el 1 de octubre de 2026 se verifica que el asesor lo tenga al menos del último año"
           },
           {
-            "text": "A Gloria le piden su cuarta asesoría del año y apenas le alcanza el tiempo para las otras tres. ¿Qué le recuerdan los criterios para asesorar?",
+            "text": "A Gloria le piden su cuarta asesoría del año y apenas le alcanza el tiempo para las otras tres. De las tres preguntas que propone la lección antes de decir que sí, ¿cuál le recuerda que puede pensarlo y no aceptar?",
             "options": [
-              "Que debe aceptarla, porque negarse a asesorar va contra la disposición de servicio.",
-              "Que puede decidir si la acepta o no, porque asesorar exige tiempo para hacerlo bien.",
-              "Que debe aceptarla y reducir los encuentros de las otras tres asesorías a la mitad."
+              "«¿Me organizo y me apoyo?», que incluye el tiempo para aportar con calidad y la libertad de decidir si acepta.",
+              "«¿Sé y sigo aprendiendo?», que incluye el tiempo para aportar con calidad y la libertad de decidir si acepta.",
+              "«¿Quiero y puedo?», que incluye el tiempo para aportar con calidad y la libertad de decidir si acepta."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Disposición de servicio, tiempo para aportar con calidad y la libertad de decidir si aceptas o no una asesoría."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -375,22 +379,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Iván, nuevo en la Tropa, le dice a su asesora: «La inducción es pura teoría; empecemos ya con el plan». ¿Por qué conviene verificar primero que la haya terminado?",
+            "text": "Iván, nuevo subjefe de Tropa, le dice a Gloria, su asesora de otro grupo: «La inducción es pura teoría; empecemos ya con el plan». Según la lección, ¿cómo procede Gloria?",
             "options": [
-              "Porque sin conocer las funciones de su cargo, no hay con qué valorar ni priorizar su plan.",
-              "Porque la inducción se registra en Talento 360° como la primera estrategia de su plan.",
-              "Porque es un trámite: al final nadie revisa si la hizo, lo que cuenta es el plan."
+              "Verifica con el jefe inmediato de Iván que terminó su inducción y, si no es así, le pide que la haga.",
+              "Verifica con el Comisionado Regional de Adultos que terminó su inducción y, si no es así, le pide que la haga.",
+              "Verifica con la Dirección Nacional de Adultos que terminó su inducción y, si no es así, le pide que la haga."
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "Con el jefe inmediato de tu asesorado: que conozca las funciones y competencias de su cargo, esté alineado con el plan del grupo, región o nación"
           },
           {
-            "text": "Gloria es la asesora de Iván, subjefe de Tropa; el jefe de Tropa es otra persona. Iván ya firmó con ella la carta de aceptación y pregunta: «¿Se la dejo a usted?». ¿Qué le responde Gloria?",
+            "text": "Gloria, de otro grupo, es la asesora de Iván, subjefe de Tropa, y ya firmaron la carta de aceptación. Según la lección, ¿qué pasa con la carta y quién registra a Gloria en Talento 360°?",
             "options": [
-              "Que sí: la carta es un acuerdo entre asesor y asesorado, y la guarda quien asesora.",
-              "Que no: la carta va a su jefe de Tropa, con quien ella verifica también su inducción.",
-              "Que no: la carta va al Comisionado Regional de Adultos, que registra las asesorías."
+              "La carta la conserva Gloria, como asesora; en Talento 360°, Iván la incluye como asesora personal en su cargo.",
+              "La carta la entrega Iván a su jefe inmediato; en Talento 360°, Iván la incluye como asesora personal en su cargo.",
+              "La carta la conserva Gloria, como asesora; en Talento 360°, Gloria se incluye como asesora personal en el cargo de él."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "La carta de aceptación de la asesoría personal inicia tu compromiso. El asesorado la entrega a su jefe inmediato."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -468,22 +474,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "La valoración inicial de un adulto muestra brechas en seis competencias. El asesor propone trabajar las seis a la vez este semestre «para avanzar rápido». ¿Qué le diría la Guía?",
+            "text": "La valoración inicial de un adulto que acaba de asumir como jefe de Manada muestra brechas en seis competencias, y él ya piensa en postularse a otro cargo el año entrante. Según la lección, ¿cómo eligen él y su asesor las que trabajará?",
             "options": [
-              "Que está bien: entre más competencias abarque el plan, antes llegará la certificación.",
-              "Que escoja unas pocas, las que más pesan en su cargo, y las trabaje a fondo.",
-              "Que escoja las seis, pero trabaje primero las que ya domina, para validar lo que trae."
+              "Priorizan juntos unas pocas, las de más impacto en el cargo al que aspira, y las trabajan con calidad.",
+              "Priorizan juntos unas pocas, las de mayor brecha en la valoración inicial, y las trabajan con calidad.",
+              "Priorizan juntos unas pocas, las de más impacto en su cargo actual, y las trabajan con calidad."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Con ella, asesor y asesorado priorizan las competencias que van a desarrollar respecto al cargo actual."
           },
           {
-            "text": "Un adulto nuevo es contador de profesión y va a ser tesorero del grupo. ¿Qué hace un buen asesor con esa experiencia previa?",
+            "text": "Un adulto contador de profesión asume como Tesorero de Grupo. En su valoración inicial, de ocho contenidos sugeridos para una de sus competencias ya domina tres. Según la lección, ¿cómo se le reconoce esa experiencia?",
             "options": [
-              "Ignorarla: en el Movimiento todo adulto parte de cero al asumir su primer cargo.",
-              "Tenerla en cuenta: validar lo que ya domina y enfocar el plan en lo que le falta.",
-              "Homologarla: pedir a la Dirección Nacional que le certifique esas competencias ya."
+              "Con la constancia laboral que él sube a Talento 360°, y el plan trabaja solo los otros cinco contenidos.",
+              "Con lo que muestra su valoración inicial, y el plan trabaja solo los otros cinco contenidos.",
+              "Con la declaración firmada de su jefe inmediato, y el plan trabaja solo los otros cinco contenidos."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "el modelo no contempla homologar certificaciones: lo que el adulto trae se reconoce a través de la evaluación, no de un trámite."
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -567,22 +575,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Llega el encuentro mensual y el asesorado no hizo ninguna de las tareas acordadas. ¿Qué respuesta es coherente con el principio de Horizontalidad?",
+            "text": "En el tercer encuentro, Iván no avanzó en nada. Gloria, su asesora de otro grupo, le pregunta qué se atravesó y ajustan juntos la fecha. Según la lección, ¿con quién se mantiene ella en contacto para mostrar avances y verificar que se programen las evaluaciones?",
             "options": [
-              "Recordarle con firmeza que el asesor es quien decide y exigirle cumplir para la próxima.",
-              "Preguntarle qué le impidió avanzar, reajustar juntos y dejarlo anotado en la bitácora.",
-              "Suspender la asesoría hasta que el adulto demuestre que retoma su plan por su cuenta."
+              "Con el jefe inmediato de Iván y con el Comisionado Regional de Adultos.",
+              "Con el jefe inmediato de Iván y con la Comisión Nacional de Evaluación.",
+              "Con el jefe inmediato de Iván y con el Jefe Scout de su Región."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Con el jefe inmediato del asesorado y con el Comisionado Regional de Adultos: para mostrar avances, retroalimentar y verificar que se estén programando las evaluaciones."
           },
           {
-            "text": "Un asesor lleva seis meses de encuentros, pero nunca ha dejado nada por escrito. ¿Qué le va a faltar cuando haya que mostrar el proceso?",
+            "text": "Un asesor lleva seis meses de encuentros con su asesorado, pero nunca ha dejado nada por escrito. Según la lección, ¿qué le falta y dónde puede llevarlo?",
             "options": [
-              "Nada: la bitácora es un apoyo opcional, y al certificar solo se revisa la evaluación final.",
-              "La evidencia del acompañamiento: la bitácora, física o en la retroalimentación de la plataforma.",
-              "El visto bueno de la región, que es lo único que se revisa de cada asesoría antes de certificar."
+              "La Bitácora de Acompañamiento, en formato físico o en la sección de evaluación de Talento 360°.",
+              "La Bitácora de Acompañamiento, en formato físico o en la sección de retroalimentación de Talento 360°.",
+              "La Bitácora de Acompañamiento, en formato físico o en la sección de su plan personal de Talento 360°."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Se puede llevar en el formato físico o en la sección de retroalimentación de Talento 360°."
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -676,22 +686,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 7",
         "questions": [
           {
-            "text": "Daniela cumplió su plan y su valoración final supera el 80 %. Hernán, su asesor, está de viaje un mes y ella propone: «Mejor la mando yo misma a la Comisión Nacional, para no esperar». ¿Qué le conviene hacer?",
+            "text": "Daniela ya reúne todos los requisitos. Hernán, su asesor, está de viaje un mes, y ella propone enviar ella misma la solicitud de su Insignia de Madera. Según la lección, ¿qué corresponde?",
             "options": [
-              "Que la mande ella: la solicitud la puede presentar cada adulto sobre su propio proceso.",
-              "Que espere a Hernán: la solicitud es de su asesor, que la envía al Comisionado Regional.",
-              "Que la presente el Jefe de Grupo en nombre de Hernán, para no frenar el trámite."
+              "Esperar a Hernán: la solicitud es exclusiva del asesor, que la notifica por correo al Comisionado Regional de Adultos de su región.",
+              "Esperar a Hernán: la solicitud es exclusiva del asesor, que la notifica por correo a la Comisión Nacional de Evaluación y Acompañamiento.",
+              "Esperar a Hernán: la solicitud es exclusiva del asesor, que la notifica por correo a la Dirección Nacional de Adultos en el Movimiento."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "La notifica por correo al Comisionado Regional de Adultos en el Movimiento de la región del adulto, que revisa cada requisito antes de enviarla"
           },
           {
-            "text": "Un adulto hizo doce cursos este año, pero su plan va en un 40 % y no tiene segunda evaluación. Te pide, como su asesor, que solicites ya su Insignia de Madera «por todo lo que estudió». ¿Qué haces?",
+            "text": "Un adulto hizo doce cursos este año, pero su plan va en un 40 % y no tiene segunda evaluación. Te pide, como su asesor, que solicites ya su Insignia de Madera. Según la lección, ¿qué le respondes?",
             "options": [
-              "Decirle que sí: doce cursos en un año demuestran más compromiso que cualquier plan.",
-              "Decirle que aún no: avanzar en el plan y pedir la segunda evaluación al pasar del 80 %.",
-              "Decirle que aún no: que primero termine los cursos que le falten del catálogo nacional."
+              "Que aún no: cuando el plan pase del 60 %, se pide la segunda evaluación para medir su avance.",
+              "Que aún no: cuando el plan pase del 80 %, se pide la segunda evaluación para medir su avance.",
+              "Que aún no: cuando el plan pase del 60 %, se pide la declaración de su jefe inmediato."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Cuando el plan va por encima del 80 % de ejecución, se pide una segunda evaluación para medir el avance."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

@@ -3,7 +3,7 @@
   "title": "Ser consejero de grupo",
   "subtitle": "Curso 12 · Nivel 3 de la Línea Política de Adultos",
   "description": "La ficha del Consejero Scout de Grupo leída desde los adultos: tu silla en el Consejo y con quién no puedes compartirla, lo común a los cinco consejeros y lo propio de cada dignidad, cómo fomentar, apoyar y vigilar la gestión de los adultos sin conducir el programa, cómo acompañar su desarrollo, cómo es tu propio ciclo y cómo comunicar por el conducto regular.",
-  "contentVersion": "2026-09-28",
+  "contentVersion": "2026-11-23",
   "icon": "🏛️",
   "duration": "40 minutos",
   "level": 3,
@@ -157,22 +157,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "Un consejero cuenta que su hija, Rover de 19 años, quiere postularse ante sus pares como representante de los Rovers en el Consejo. Él propone: «Si la eligen, yo dejo el Consejo: no podemos estar los dos». ¿Qué dice la regla?",
+            "text": "Un consejero principal cuenta que su hija, Rover de 19 años, quiere postularse ante sus pares como representante de los Rovers en el Consejo. Para no chocar con la regla, él propone pasar a ser suplente. ¿Qué dice la regla que hoy rige?",
             "options": [
-              "Que no hace falta: la regla del núcleo familiar alcanza al cónyuge, no a los hijos.",
-              "Que tiene razón: padre e hija son un mismo núcleo familiar, y en el Consejo cabe uno.",
-              "Que no hace falta: la regla es para los principales, así que basta con que él pase a suplente."
+              "Que le sirve: padre e hija son un mismo núcleo familiar, pero la regla vale solo para los miembros principales.",
+              "Que no le sirve: padre e hija son un mismo núcleo familiar, y la regla vale para principales y para suplentes.",
+              "Que le sirve: el núcleo familiar se refiere al cónyuge y no a los hijos, y la regla vale solo para los principales."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Con tu núcleo familiar. Un solo integrante por núcleo familiar, ni como principal ni como suplente; el núcleo incluye a padres e hijos y al cónyuge o compañero permanente."
           },
           {
-            "text": "Un jefe de Tropa muy querido quiere postularse al Consejo en la próxima Asamblea «para ayudar desde adentro», sin dejar la Tropa. ¿Qué le dirías?",
+            "text": "Un jefe de Tropa muy querido quiere entrar al Consejo en la próxima Asamblea «para ayudar desde adentro». ¿Qué le dirías, según la lección?",
             "options": [
-              "Que eso lo decide la Asamblea: si lo elige, el Consejo gana a alguien que conoce las ramas.",
-              "Que no puede integrar el Consejo mientras tenga un cargo operativo en una rama del Grupo.",
-              "Que lo acuerde antes con el Jefe de Grupo, que fue quien lo nombró jefe de la Tropa."
+              "Que lo elegiría la Asamblea y ante ella respondería, pero que antes tendría que dejar su cargo de jefe en la Tropa.",
+              "Que lo elegiría la Asamblea y ante ella respondería, y que podría seguir en la Tropa: el Consejo no conduce las ramas.",
+              "Que lo elegiría la Asamblea y ante el Jefe Regional respondería, y que podría seguir en la Tropa: el Consejo no conduce."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Los adultos que ejerzan cargos operativos en las ramas de los grupos, en las regiones o en la nación no podrán integrar los Consejos de su respectivo nivel."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -237,22 +239,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "El Tesorero del Grupo pide que lo citen a votar en el Consejo «porque maneja la plata». El Presidente le responde que él no forma parte del Consejo. ¿Quién tiene razón según las fichas?",
+            "text": "Llega la cotización para reparar las carpas antes del campamento, y el Presidente del Consejo quiere autorizar ese gasto sin esperar a la próxima reunión. ¿Puede hacerlo, según su ficha?",
             "options": [
-              "El Presidente: al Tesorero lo nombra el Consejo, y su ficha le pide no formar parte de él.",
-              "El Tesorero: como lo nombró el Consejo, forma parte de él con voz y con voto.",
-              "Los dos a medias: forma parte del Consejo con voz, pero sin voto, cuando se tratan cuentas."
+              "Puede, si el gasto cabe en las cuantías que haya fijado la Asamblea de Grupo para los gastos del Presidente.",
+              "Puede, si el gasto cabe en las cuantías que haya fijado el Tesorero de Grupo para los gastos del Presidente.",
+              "Puede, si el gasto cabe en las cuantías que haya fijado el Consejo de Grupo para los gastos del Presidente."
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Representa al Grupo ante entidades, coordina su administración, suscribe a nombre del Grupo y autoriza los gastos según las cuantías que fije el Consejo."
           },
           {
-            "text": "Antes del campamento, el Intendente propone revisar el inventario de ollas y toldos y presentarle al Consejo la compra de lo que está dañado. Un consejero le dice: «Eso es de la jefatura: son las ramas las que usan ese material». ¿Quién tiene razón según las fichas?",
+            "text": "El Grupo se quedó sin Tesorero. Un consejero propone elegir al reemplazo en la próxima Asamblea, «como se hace con los consejeros». ¿Qué dice la lección?",
             "options": [
-              "El consejero: ese material lo usan las ramas, y lo que toca a sus actividades lo conduce la jefatura.",
-              "Ninguno: esa compra la aprueba el Tesorero, porque es quien recauda y custodia los fondos.",
-              "El Intendente: llevar el inventario y presentarle al Consejo la reposición es su cuarta función."
+              "Que no hace falta esperar a la Asamblea: al Tesorero lo nombra el Consejo de Grupo.",
+              "Que sí hay que esperar a la Asamblea: al Tesorero lo nombra la Asamblea de Grupo.",
+              "Que no hace falta esperar a la Asamblea: al Tesorero lo nombra el Presidente del Consejo."
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "No es un consejero: lo nombra el Consejo y su ficha le pide no formar parte del Consejo ni de la jefatura."
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -333,22 +337,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "El Jefe de Grupo renuncia. En el Consejo alguien propone: «Nombremos ya a la subjefa de Grupo como jefa». ¿Qué le toca al Consejo?",
+            "text": "El Jefe de Grupo renuncia. En el Consejo alguien propone: «Nombremos ya a la subjefa de Grupo como jefa». Según la lección, ¿qué le toca al Consejo?",
             "options": [
-              "Esperar a que el Jefe Regional nombre, y acompañar al nuevo jefe: vigilar no es conducir.",
-              "Postular candidatos ante la Asamblea, que es ante quien responde el Consejo de su gestión.",
-              "Consultar al Equipo de Jefatura y postularle candidatos al Jefe Regional para que nombre."
+              "Seleccionar candidatos, consultando antes a los padres de familia, y presentárselos al Jefe Regional, que es quien nombra.",
+              "Seleccionar candidatos, consultando antes al Equipo de Jefatura, y presentárselos al Jefe Regional, que es quien nombra.",
+              "Seleccionar candidatos, consultando antes a los padres de familia, y presentárselos a la Asamblea, que es quien nombra."
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "El Consejo postula; el Jefe Regional nombra. El Reglamento de Grupos le da al Consejo la facultad de seleccionar candidatos, consultando antes al Equipo de Jefatura, y someterlos al Jefe Regional."
           },
           {
-            "text": "Varias familias se quejan de cómo el jefe de Manada lleva las reuniones. Un consejero propone que el Consejo lo retire del cargo. ¿Qué le pide su ficha?",
+            "text": "Varias familias se quejan ante el Consejo de cómo el propio Jefe de Grupo conduce el programa, y un consejero propone que el Consejo lo retire del cargo. ¿Qué le toca al Consejo, según la lección?",
             "options": [
-              "Retirarlo si la queja es de varias familias y el Consejo lo deja en acta.",
-              "Vigilar y acompañar: conversarlo con el Jefe de Grupo, que es quien lo nombró.",
-              "Mantenerse al margen: la gestión de los dirigentes es asunto del Jefe de Grupo."
+              "Vigilar y acompañar: conversarlo con el Equipo de Jefatura, que trabaja con él, y acompañar la decisión.",
+              "Vigilar y acompañar: conversarlo con el Subjefe de Grupo, que lo representa, y acompañar la decisión.",
+              "Vigilar y acompañar: conversarlo con el Jefe Regional, que lo nombró, y acompañar la decisión."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Y si la preocupación es sobre el propio Jefe de Grupo, el acompañamiento es con el Jefe Regional, que lo nombró."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -409,22 +415,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "En el Consejo, una consejera propone pedirle al Jefe de Grupo que cuente en la próxima reunión cómo van las valoraciones y los planes de los dirigentes, y en qué necesitan apoyo. ¿Le corresponde al Consejo pedirlo?",
+            "text": "Una consejera quiere saber cómo van las valoraciones y los planes personales de los dirigentes del Grupo, para ver en qué puede apoyar el Consejo. ¿Cómo lo hace, según la lección?",
             "options": [
-              "Sí, pero solo si antes lo aprueba la Asamblea, que es ante quien responde el Consejo.",
-              "Sí: verificar y acompañar los planes de los adultos está entre las conductas de su ficha.",
-              "No: pedirle ese informe al Jefe de Grupo es meterse en la conducción del programa."
+              "Le pide al Jefe de Grupo que cuente cómo van y en qué necesitan apoyo; ella no evalúa por su cuenta a cada dirigente.",
+              "Les pide a sus asesores personales que cuenten cómo van y en qué necesitan apoyo; ella no evalúa por su cuenta a cada dirigente.",
+              "Le pide al Secretario del Consejo que cuente cómo van y en qué necesitan apoyo; ella no evalúa por su cuenta a cada dirigente."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Pregunta al Jefe de Grupo cómo van las valoraciones y los planes personales de los dirigentes, y en qué necesitan apoyo. No evalúa por su cuenta a cada uno."
           },
           {
-            "text": "En una salida del Grupo, un consejero que acompaña ve que la Tropa entra a bañarse en un río crecido, sin chalecos. El jefe de Tropa dice que lo tiene controlado. ¿Qué le toca al consejero?",
+            "text": "Una familia le cuenta a un consejero que un dirigente tuvo con un Scout una conducta que pudo dañar su integridad. ¿Qué hace el consejero dentro de la Asociación, según la lección?",
             "options": [
-              "Lo anota y lo conversa después con el Jefe de Grupo: la actividad la conduce la jefatura, no el Consejo.",
-              "Interviene ya para que salgan del río: su ficha le pide velar por la seguridad de las actividades.",
-              "Interviene llamando a los padres para que vengan por sus hijos, y después lo reporta."
+              "Lo reporta por el canal oficial «Me pongo a salvo del peligro», después de oír él al dirigente y a la familia para dar contexto.",
+              "Lo reporta por el canal oficial «Me pongo a salvo del peligro», sin investigar él por su cuenta; quien lo recibe activa las rutas.",
+              "Lo reporta en la próxima reunión del Consejo, sin investigar él por su cuenta; el Consejo, que vela por la seguridad, activa las rutas."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "dentro de la Asociación, la ruta es reportar por el canal oficial «Me pongo a salvo del peligro», sin investigar por tu cuenta: quien recibe el reporte activa las rutas"
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -493,20 +501,22 @@
           {
             "text": "Un consejero va a postularse otra vez en la próxima Asamblea. Un amigo le dice: «Tu evaluación no pesa: a los consejeros los elige la Asamblea». ¿Qué dicen los documentos?",
             "options": [
-              "Que tiene razón: si no hay retiro ni reubicación por esa vía, la evaluación no pesa en la elección.",
-              "Que la Asamblea revisa esa evaluación antes de votar, y con ella decide si lo vuelve a elegir.",
-              "Que no decide si sigue, pero haber hecho bien su proceso le da fuerza a su postulación."
+              "Que la continuidad la decide la Asamblea, y que por eso su evaluación no pesa en su postulación.",
+              "Que la continuidad la decide su evaluación, que puede terminar en un retiro o en una reubicación.",
+              "Que la continuidad la decide la Asamblea, y que un buen proceso de evaluación fortalece su postulación."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "su proceso no termina en un retiro o una reubicación decididos por la evaluación; la continuidad la deciden las asambleas. Pero un buen proceso fortalece la postulación y la elección."
           },
           {
-            "text": "Un consejero recién elegido le pide al Presidente del Consejo que sea su asesor para el plan. El Presidente duda de que eso sea lo que prevé la guía. ¿Qué le responderías?",
+            "text": "Un consejero recién elegido busca asesor para su plan y dice: «Como el Presidente del Consejo es mi jefe inmediato, a él no se lo puedo pedir». ¿Qué le responderías, según la guía?",
             "options": [
-              "Que no: el asesor de un consejero debe venir de otro Consejo, para que mire con distancia.",
-              "Que sí: para los consejeros, la guía propone al presidente del consejo o a los jefes de nivel.",
-              "Que no: como un consejero no tiene jefe inmediato, el asesor se lo asigna el Jefe de Grupo."
+              "Que el Presidente sí es su jefe inmediato, y que la guía aconseja buscar su asesor fuera del Consejo.",
+              "Que un consejero no tiene jefe inmediato, y que la guía aconseja al presidente o a un jefe de nivel como asesor.",
+              "Que el Presidente sí es su jefe inmediato, y que la guía aconseja al presidente o a un jefe de nivel como asesor."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "No hay una persona que sea su jefe inmediato. El presidente del consejo y los jefes de los distintos niveles pueden apoyar su proceso, y la guía aconseja que sean sus asesores."
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -559,22 +569,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 12",
         "questions": [
           {
-            "text": "A la salida de una reunión, una madre le pide a un consejero que se revise el valor de la cuota mensual, porque no la alcanza a pagar. ¿Qué hace el consejero?",
+            "text": "A la salida de una reunión, una madre le pide a un consejero dos cosas: que se revise el valor de la cuota mensual, que no alcanza a pagar, y que la Tropa cambie la hora de sus salidas. ¿Adónde lleva cada petición?",
             "options": [
-              "Recibe la petición y la remite al Jefe de Grupo por el conducto regular, para que la presente.",
-              "Recibe la petición y la lleva al Consejo, que es el que fija el valor de la cuota del Grupo.",
-              "Le sugiere plantearla en la próxima Asamblea, que es donde votan las familias del Grupo."
+              "La de la cuota, al Consejo de Grupo; la de la hora de las salidas, al Jefe de Grupo.",
+              "La de la cuota, al Jefe de Grupo; la de la hora de las salidas, también al Jefe de Grupo.",
+              "La de la cuota, al Jefe de Grupo; la de la hora de las salidas, al jefe de la Tropa."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Si la petición es de un asunto del Consejo —cuotas, bienes, gastos—, la llevas al Consejo; si es del programa o de un dirigente, va por el Jefe de Grupo."
           },
           {
-            "text": "El Consejo va a escoger quién prepara la comida del aniversario del Grupo. Una consejera es muy amiga del dueño de uno de los restaurantes que cotizaron, aunque no tiene negocio con él. Ella dice: «Yo no gano nada, así que no hay conflicto». ¿Qué corresponde?",
+            "text": "El Consejo va a escoger quién prepara la comida del aniversario. Una consejera es muy amiga del dueño de uno de los restaurantes que cotizaron, aunque no tiene negocio con él. ¿Qué corresponde, según la lección?",
             "options": [
-              "Tiene razón: si ella no obtiene un beneficio con la decisión, no hay conflicto que declarar.",
-              "Lo declara y participa, porque lo que pide la regla es que el Consejo esté enterado.",
-              "Lo declara y no participa: basta con que su interés pueda parecer que influye en la decisión."
+              "Lo declara al momento de votar, cuando llega la decisión, y no participa en esa votación.",
+              "Lo declara de inmediato, en cuanto lo sabe, y participa en la discusión pero no en la votación.",
+              "Lo declara de inmediato, en cuanto lo sabe, y no participa en la discusión ni en la decisión."
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "Y quien está en conflicto no participa en la discusión ni en la decisión sobre ese tema"
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

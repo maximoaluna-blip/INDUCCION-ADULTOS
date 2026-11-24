@@ -3,7 +3,7 @@
   "title": "Tu Plan Personal de Desarrollo",
   "subtitle": "Curso 5 de la Ruta de Formación de Adultos en el Movimiento",
   "description": "El curso donde dejas de leer y empiezas a hacer. Vas a entender qué es un Plan Personal, cómo encontrar a tu Asesor Personal, qué es el Acuerdo Mutuo, qué es Talento 360°, y vas a construir TU plan en una herramienta interactiva — listo para imprimir y llevar a tu asesor, con quien escribirás la versión definitiva.",
-  "contentVersion": "2026-10-12",
+  "contentVersion": "2026-11-23",
   "icon": "🗺️",
   "duration": "30 minutos",
   "level": 1,
@@ -171,22 +171,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "En el consejo, el jefe de grupo anuncia: 'Este año el plan personal de todos es el mismo — el curso básico y el de primeros auxilios.' ¿Qué le respondes?",
+            "text": "En el consejo de grupo acuerdan que cada adulto tendrá su Plan Personal de Desarrollo. Un consejero pregunta cómo se va a medir el avance de cada uno y hasta cuándo dura el plan. ¿Qué le respondes, según la lección?",
             "options": [
-              "Que así se ahorra tiempo: si todos hacen los mismos cursos, el grupo avanza parejo",
-              "Que el plan personal no lo define el grupo sino la región, de acuerdo con su calendario anual de cursos",
-              "Que eso es un plan de capacitación: el plan personal sale de lo que a cada uno le falta"
+              "Por los cursos y módulos que cada uno aprueba, y el plan sigue a lo largo de todo su nombramiento",
+              "Por las conductas observables que cada uno demuestra, y el plan sigue a lo largo de todo su nombramiento",
+              "Por los cursos y módulos que cada uno aprueba, y el plan termina cuando completa la ruta de cursos"
             ],
-            "correctIndex": 2
+            "correctIndex": 1,
+            "evidencia": "Mides tu progreso por las conductas observables que demuestras. Es continuo a lo largo de todo tu nombramiento."
           },
           {
-            "text": "¿De dónde salen las competencias que priorizas en tu PPD?",
+            "text": "Pedro empieza su plan por el diagnóstico: dónde está hoy en cada competencia. ¿Cómo se hace ese diagnóstico, según la lección?",
             "options": [
-              "De una lista fija de competencias, igual para todos los adultos",
-              "De tu valoración inicial por competencias, analizada con tu asesor",
-              "De los cursos que estén disponibles ese mes"
+              "Primero lo evalúa su asesor y luego lo revisa con Pedro; la política lo llama valoración inicial por competencias",
+              "Primero lo evalúa su asesor y luego lo revisa con Pedro; la política lo llama perfil de ingreso del adulto",
+              "Primero se evalúa él mismo y luego lo revisa con su asesor; la política lo llama valoración inicial por competencias"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "La política lo llama valoración inicial por competencias: te evalúas tú (el autodiagnóstico del Curso 4 es exactamente eso) y después lo revisas con tu asesor."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -273,22 +275,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Sandra le pide a Camilo, su jefe de rama, que sea su asesor personal. Camilo duda: 'pero si yo soy tu jefe, ¿no es raro que además sea quien te certifique?' ¿Qué le responde Sandra con lo que vio en esta lección?",
+            "text": "Rosa, dirigente de la Tropa, aceptó ser la asesora personal de Iván, que llegó hace poco a la misma rama. ¿Cómo formalizan la asesoría, según la lección?",
             "options": [
-              "Que la política lo recomienda porque la ve en acción, y que no certifica solo: la evaluación 360° suma otras miradas",
-              "Que tiene razón: mejor buscar a alguien de otro grupo, sin relación de jefatura, para que la asesoría sea imparcial",
-              "Que no importa quién sea, porque el asesor solo acompaña y no interviene en la evaluación"
+              "Rosa firma el Aval de Asesor Personal, Iván se lo entrega a su jefe inmediato y la registra en Talento 360°",
+              "Rosa firma el Aval de Asesor Personal, Iván se lo entrega al Consejo de Grupo y la registra en Talento 360°",
+              "Rosa firma el Aval de Asesor Personal, Iván se lo entrega al Consejo de Grupo y la registra en SiScout"
             ],
-            "correctIndex": 0
+            "correctIndex": 0,
+            "evidencia": "y tú se la entregas a tu jefe inmediato. Luego lo registras como tu asesor en tu hoja de vida de Talento 360°"
           },
           {
-            "text": "El criterio más importante para elegir asesor según el documento oficial es:",
+            "text": "Iván duda entre dos adultos de su grupo para pedirle a uno que sea su asesor. Los dos le dan confianza y tienen tiempo para él. ¿Qué más debe mirar, según la lección?",
             "options": [
-              "Que sea la persona con más años de experiencia y trayectoria dentro del movimiento",
-              "Que puedas hablar con él/ella sin miedo: la confianza es el primer criterio",
-              "Que esté obligatoriamente en tu mismo grupo y en tu misma rama"
+              "Que ya haya hecho bien un cargo de mayor nivel que Iván y que esté llevando su propio Plan Personal",
+              "Que ya haya hecho bien el mismo tipo de cargo de Iván y que esté llevando su propio Plan Personal",
+              "Que ya haya hecho bien un cargo de mayor nivel que Iván y que ya haya cerrado su propio Plan Personal"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Sirve alguien que: te dé confianza, ya haya hecho bien tu mismo tipo de cargo, esté llevando su propio Plan Personal, y tenga tiempo para ti"
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -373,22 +377,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "A Luisa la nombraron secretaria del grupo. Firmó un papel que dice qué se compromete a hacer, qué le va a dar el grupo, hasta cuándo dura el nombramiento y cómo la van a evaluar. Falta parte de los 6 elementos oficiales. ¿Qué falta?",
+            "text": "A Luisa la van a nombrar secretaria del grupo. Su borrador de Acuerdo Mutuo ya trae sus compromisos, los apoyos que recibirá, la vigencia y cómo la evaluarán. Según los 6 elementos de la lección, ¿qué le falta?",
             "options": [
-              "Nada: con esos cuatro elementos el acuerdo mutuo ya queda completo y se puede firmar en el consejo",
-              "El monto de la cuota anual que debe pagarle al grupo por su afiliación",
+              "Cómo será su inducción y su período de prueba, y quién será su asesor personal en el cargo",
+              "Cómo fue su proceso de selección para el cargo, y quién será su asesor personal en el cargo",
               "Cómo será su inducción y su período de prueba, y su voluntad de desarrollar las competencias"
             ],
-            "correctIndex": 2
+            "correctIndex": 2,
+            "evidencia": "la forma de efectuar la inducción y el período de prueba del adulto, los compromisos que asume el adulto con la ASC, los apoyos y beneficios que le serán brindados al adulto, la voluntad del adulto para desarrollar"
           },
           {
-            "text": "El elemento 'Apoyos y beneficios al adulto' del Acuerdo Mutuo significa:",
+            "text": "Luisa pregunta con quién firma su Acuerdo Mutuo y por cuánto tiempo queda su compromiso. ¿Qué le respondes, según la lección?",
             "options": [
-              "Lo que tú te comprometes a aportarle al grupo durante todo el tiempo que dure tu nombramiento en el cargo",
-              "Lo que la asociación se compromete a darte (formación, asesor, materiales, reconocimiento)",
-              "El sueldo o los viáticos que vas a recibir por ejercer el cargo"
+              "Lo firma con el representante legal del estamento donde sirve, por hasta 2 años prorrogables de común acuerdo",
+              "Lo firma con su asesor personal y su jefe inmediato, por hasta 2 años prorrogables de común acuerdo",
+              "Lo firma con su asesor personal y su jefe inmediato, por hasta 1 año prorrogable de común acuerdo"
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Lo llenas, lo firman las dos partes —tú y el representante legal del estamento donde sirves— y queda en tu carpeta personal y en Talento 360°."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -477,22 +483,24 @@
         "title": "Mini-quiz Lección 4",
         "questions": [
           {
-            "text": "Tu jefe de grupo te pide dos cosas: 'renueva tu afiliación de este año y sube el certificado del curso que acabas de terminar'. ¿Dónde haces cada una?",
+            "text": "Tu jefe de grupo te pide dos cosas: renovar tu registro como miembro (la afiliación) de este año y subir el certificado del curso que acabas de terminar. ¿Dónde haces cada una, según la lección?",
             "options": [
-              "La afiliación en SiScout y el certificado en Talento 360°, como parte de tu hoja de vida",
-              "Todo en Talento 360°, que es donde vive lo relacionado con el adulto y su hoja de vida",
-              "Las dos en SiScout, que es la plataforma principal de la asociación"
+              "La afiliación en Talento 360° y el certificado también allí, como parte de tu hoja de vida",
+              "La afiliación en Talento 360° y el certificado en SiScout, como parte de tu hoja de vida",
+              "La afiliación en SiScout y el certificado en Talento 360°, como parte de tu hoja de vida"
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Si tu desarrollo no está en Talento 360°, no hay cómo certificarlo. (Tu registro como miembro es otra cosa: eso vive en SiScout.)"
           },
           {
-            "text": "Te acaban de nombrar vocal del consejo de grupo — un cargo pequeño, de un año. Un compañero te dice: 'no vale la pena que subas eso a Talento 360°'. ¿Quién tiene razón?",
+            "text": "Ana llegó hace dos semanas al grupo como voluntaria y todavía no la han nombrado. Pregunta cuándo crear su hoja de vida en Talento 360° y qué significa «validar». ¿Qué le respondes, según la lección?",
             "options": [
-              "Tu compañero: Talento 360° es solo si vas a postularte a un cargo nacional",
-              "Tiene razón tu compañero, pero por otra razón: eso se sube al cerrar el nombramiento, junto con la evaluación",
-              "Tú: se sube apenas te nombren en cualquier cargo, incluso de comité o vocal — ahí empieza tu hoja de vida"
+              "Crearla desde ya, antes del nombramiento; validar es revisar ella misma sus datos y tener un solo cargo activo por nivel",
+              "Crearla cuando la nombren, no antes; validar es revisar ella misma sus datos y tener un solo cargo activo por nivel",
+              "Crearla cuando la nombren, no antes; validar es revisar ella misma sus datos y tener todos sus cargos activos al día"
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "Hazlo apenas llegues, porque la hoja de vida es el primer paso de la inducción, antes del nombramiento."
           }
         ],
         "nextLabel": "Continuar a construir tu Plan →"
@@ -586,22 +594,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Llenaste tu plan con 3 competencias, pero en una dejaste el plazo en blanco 'porque todavía no sé'. Le das a Generar. ¿Qué pasa?",
+            "text": "Marcos llenó tres competencias en la herramienta; en una dejó el plazo en blanco «porque todavía no sé». Le da a Generar mi Plan Personal. Según los avisos de la herramienta que muestra la lección, ¿qué pasa?",
             "options": [
-              "El plan se genera igual y el plazo lo escribes a mano cuando lo tengas claro",
-              "No se genera hasta que meta, plazo y recursos estén completos en las tres",
-              "Se genera solo con las dos competencias completas y descarta del documento la que quedó incompleta"
+              "No se genera: aparece un aviso que pide completar al menos meta y plazo en cada una de las competencias",
+              "No se genera: aparece un aviso que pide completar meta, plazo y recursos en todas las competencias",
+              "Se genera igual: aparece un aviso que pide completar al menos meta y plazo en cada una de las competencias"
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Hay campos vacíos. Completa meta, plazo y recursos en todas las competencias seleccionadas."
           },
           {
-            "text": "Estas tres metas las escribieron adultos reales en su plan. ¿Cuál le sirve a tu asesor para decir en 6 meses si se cumplió o no?",
+            "text": "Diana eligió la competencia Trabajo en equipo y escribe su meta. ¿Cuál sigue el tip de la lección para que su asesor pueda ver si la cumplió?",
             "options": [
-              "«Pasar de grado 2 a 3 en Relaciones interpersonales: mediar 2 desacuerdos del consejo antes de diciembre.»",
-              "«Comprometerme mucho más con mi rama y con el grupo, poniéndole todas las ganas y el tiempo que este año necesite.»",
-              "«Mejorar de forma notable mi trabajo en equipo durante este año, para que la relación con los demás dirigentes fluya mucho mejor.»"
+              "Pasar de grado 2 a 3 en Trabajo en equipo, evidenciado en asistir al menos a 2 talleres de la regional",
+              "Pasar de grado 2 a 3 en Trabajo en equipo, evidenciado en leer al menos 2 cartillas de la biblioteca",
+              "Pasar de grado 2 a 3 en Trabajo en equipo, evidenciado en mediar al menos 2 conflictos del consejo"
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "sé concreto. No 'mejorar trabajo en equipo' sino 'pasar de grado 2 a 3, evidenciado en mediar al menos 2 conflictos del consejo'"
           }
         ],
         "nextLabel": "Continuar al cierre →"
@@ -726,31 +736,34 @@
         "title": "Mini-quiz Lección 6 — Cierre de la ruta",
         "questions": [
           {
-            "text": "El primer paso después de construir tu plan es:",
+            "text": "Pedro ya imprimió su plan (paso 1 de la hoja de ruta). Todavía no lo han nombrado, así que en el paso 2 no tiene un Acuerdo Mutuo que revisar. ¿Qué hace, según la lección?",
             "options": [
-              "Esperar a que el grupo te diga qué hacer",
-              "Subirlo a Talento 360° inmediatamente sin firmar",
-              "Imprimirlo o guardarlo en PDF — sin papel, solo es una idea"
+              "Pregunta a su jefe inmediato cuándo se firma con el Grupo, que es antes del nombramiento",
+              "Pregunta a su jefe inmediato cuándo se firma con el Grupo, que es después del nombramiento",
+              "Pregunta a su asesor personal cuándo se firma con el Grupo, que es después del nombramiento"
             ],
-            "correctIndex": 2
+            "correctIndex": 0,
+            "evidencia": "Si todavía no, se firma con tu Grupo antes del nombramiento: pregúntale a tu jefe inmediato cuándo."
           },
           {
-            "text": "Pasaron 6 meses. Vas a tu segundo encuentro con tu asesor y una de tus tres metas no la cumpliste. ¿Qué haces?",
+            "text": "Ana imprimió el PDF que generó la herramienta y le dice a un compañero del consejo: «ya quedó mi plan oficial». ¿Qué le aclara él, según la lección?",
             "options": [
-              "Lo dices de frente y revisan juntos si la meta estaba mal calibrada o te faltaron recursos",
-              "No la mencionas: mejor aprovechar el tiempo hablando de las dos que sí avanzaron",
-              "Cambias esa meta por otra que ya tengas cumplida, para llegar a la reunión con los tres logros"
+              "Que ese PDF es el borrador para conversar; el plan definitivo se escribe en Talento 360° con el Consejo de Grupo",
+              "Que ese PDF es el borrador para conversar; el plan definitivo se escribe en Talento 360° con su asesor",
+              "Que ese PDF es el borrador para conversar; el plan definitivo se escribe en su archivo personal con el Consejo de Grupo"
             ],
-            "correctIndex": 0
+            "correctIndex": 1,
+            "evidencia": "Ojo: tu plan definitivo se escribe dentro de Talento 360° con ayuda de tu asesor; este PDF es tu borrador para la conversación."
           },
           {
-            "text": "El Acuerdo Mutuo se firma:",
+            "text": "Al cerrar la ruta, Marta quiere asesorar a un dirigente que acaba de llegar a su grupo. Según la lección, ¿qué dos cosas le faltan antes de hablar con su jefe de grupo?",
             "options": [
-              "Entre tú y el estamento (Grupo, Región o Nación) que te nombra",
-              "Entre tú, tu asesor personal y el jefe de tu grupo scout",
-              "Solo con tu asesor"
+              "Tener dos años de servicio como dirigente en el grupo y estar llevando su propio Plan Personal",
+              "Tener dos años de servicio como dirigente en el grupo y haber cerrado ya su propio Plan Personal",
+              "Tener el certificado del Módulo de Inducción General y estar llevando su propio Plan Personal"
             ],
-            "correctIndex": 0
+            "correctIndex": 2,
+            "evidencia": "Te faltan dos cosas concretas: tener el certificado del Módulo de Inducción General de la ASC (es un curso de la Universidad Scout: colombia.universidadscout.org) y estar llevando tu propio Plan Personal."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

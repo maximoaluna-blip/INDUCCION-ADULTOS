@@ -3,7 +3,7 @@
   "title": "Vincular nuevos adultos al grupo",
   "subtitle": "Curso 6 · Nivel 2 de la Línea Política de Adultos",
   "description": "Atracción y Vinculación contada a quien la hace: el jefe de grupo, el consejo, el comité de selección, el jefe que recibe a alguien nuevo. Cómo determinar la necesidad antes de buscar a alguien, dónde buscar, cómo seleccionar con reglas claras y revisión de antecedentes, cómo integrar en los tres primeros meses y cómo cerrar con el acuerdo mutuo y el nombramiento.",
-  "contentVersion": "2026-10-02",
+  "contentVersion": "2026-11-23",
   "icon": "🚪",
   "duration": "40 minutos",
   "level": 2,
@@ -194,22 +194,24 @@
         "title": "Mini-quiz Lección 1",
         "questions": [
           {
-            "text": "El consejo de un grupo dice: «Tenemos a alguien en cada cargo, así que no hay necesidades de adultos este año». ¿Qué le falta a ese diagnóstico?",
+            "text": "Al revisar los cargos, el consejo ve que la jefa de Manada está nombrada, pero hoy no tiene las competencias que su cargo pide. Según el camino del documento, ¿qué pregunta decide lo que sigue?",
             "options": [
-              "Nada: si cada cargo tiene a una persona nombrada, la necesidad del grupo está cubierta.",
-              "Revisar la calidad: que quienes ocupan los cargos tengan las competencias que piden.",
-              "Revisar la antigüedad: que cada adulto lleve al menos un año en el cargo que ocupa."
+              "Si tiene la disposición para alcanzarlas: si la tiene, se le dan formación y apoyos mientras sigue en el cargo.",
+              "Si tiene el tiempo para alcanzarlas: si lo tiene, se le dan formación y apoyos mientras sigue en el cargo.",
+              "Si tiene el potencial para alcanzarlas: si lo tiene, se le dan formación y apoyos mientras sigue en el cargo."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "el cargo está ocupado, pero la persona no tiene hoy las competencias que pide. La pregunta no es «¿lo cambiamos?», sino «¿tiene el potencial para alcanzarlas?»"
           },
           {
-            "text": "La tesorera lleva seis meses: es cumplida y ya aprendió sola a llevar el libro de caja, pero todavía no maneja los informes que el cargo exige. ¿Qué sigue según el camino del documento?",
+            "text": "En otro grupo, el consejo concluye que el tesorero no está en condiciones de llegar a las competencias que su cargo pide. Según el camino del documento, ¿qué sigue?",
             "options": [
-              "Abrir la búsqueda de otra persona, porque hoy no cumple todo el perfil del cargo.",
-              "Acordar con ella formación y apoyo en los informes, mientras sigue en el cargo.",
-              "Reubicarla en otro cargo del grupo en el que no tenga que presentar informes."
+              "Decidir su futuro —reubicarlo donde pueda ser competente o su retiro— y solo después abrir la búsqueda del cargo.",
+              "Decidir su futuro —reubicarlo donde pueda ser competente o su retiro— mientras se abre ya la búsqueda del cargo.",
+              "Decidir su futuro —reubicarlo donde pueda ser competente o su retiro— tras un semestre de formación y apoyos."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Se toma una decisión para el futuro: reubicarlo en otro cargo donde sea o pueda ser competente, o su retiro. Solo entonces se abre la búsqueda para el cargo que queda vacante."
           }
         ],
         "nextLabel": "Continuar a Lección 2 →"
@@ -301,22 +303,24 @@
         "title": "Mini-quiz Lección 2",
         "questions": [
           {
-            "text": "Un grupo siempre llena sus cargos con papás de los scouts actuales. Este año necesita un tesorero y nadie se ofrece. ¿Qué le propone el documento?",
+            "text": "Un grupo que siempre llena sus cargos con papás quiere, para su nuevo tesorero, probar por fin una fuente externa. Según la lección, ¿cuál de estos candidatos viene de una fuente externa?",
             "options": [
-              "Esperar a que se ofrezca algún papá, porque los cargos deben quedarse entre las familias.",
-              "Mirar también fuera del grupo: un antiguo scout que hoy sea contador, o un gremio de la zona.",
-              "Pedir a la región que designe a alguien, porque el grupo ya agotó su fuente habitual."
+              "Un dirigente activo de otra región, contador, que llegaría con su paz y salvo.",
+              "Una antigua scout del grupo, hoy contadora, que fue miembro juvenil de su Tropa.",
+              "Una joven adulta que viene del clan del grupo, con las competencias del cargo."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Adultos retirados con las competencias del cargo · antiguos miembros juveniles · patrocinadores · líderes comunitarios · universitarios, docentes y gremios de profesionales."
           },
           {
-            "text": "Para Jefe de Clan, el consejo solo piensa en adultos de más de 40: «un cargo así necesita a alguien mayor». ¿Qué haría el consejo si toma en serio lo que pide la política?",
+            "text": "Para Jefe de Clan quedan dos finalistas con el mismo puntaje en el perfil: uno de 24 años y otro de 47. El consejo se inclina por el mayor, «porque es un cargo de mucha responsabilidad». ¿Qué le recuerda la política?",
             "options": [
-              "Esperar a ver si algún joven se postula por su cuenta: promover es no ponerle trabas si aparece.",
-              "Invitar a jóvenes adultos, de adentro y de afuera, a postularse, y evaluarlos con el mismo perfil.",
-              "Reservar el cargo para un joven adulto, aunque haya que aflojar el perfil para que alguno lo cumpla."
+              "Que la selección debe promover que los adultos jóvenes lleguen primero a cargos de apoyo, como las subjefaturas.",
+              "Que la selección debe promover que los adultos jóvenes se formen al lado de los mayores antes de asumir un cargo.",
+              "Que la selección debe promover que los adultos jóvenes lleguen a cargos y funciones de alta responsabilidad."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "Este momento debe: promover que adultos jóvenes lleguen a ocupar cargos y funciones de alta responsabilidad, fomentar la equidad de género en su contexto social y cultural"
           }
         ],
         "nextLabel": "Continuar a Lección 3 →"
@@ -427,22 +431,24 @@
         "title": "Mini-quiz Lección 3",
         "questions": [
           {
-            "text": "Para escoger al nuevo Jefe de Manada, un grupo planea usar solo una entrevista, el plan de trabajo, la experiencia como voluntario y la revisión de antecedentes. ¿Cumple la garantía de objetividad?",
+            "text": "Para escoger al nuevo Jefe de Manada, un grupo usará cuatro herramientas con este peso: revisión de antecedentes 30 %, prueba de conocimientos scout 30 %, entrevista por competencias 25 % y plan de trabajo 15 %. ¿Qué concluye con la garantía de objetividad?",
             "options": [
-              "Sí: son cuatro herramientas distintas, que es el mínimo que pide el procedimiento.",
-              "No: de las cuatro, solo una es altamente objetiva, y el procedimiento pide dos.",
-              "No: la revisión de antecedentes es un requisito, no cuenta como herramienta."
+              "Que tiene dos altamente objetivas, pero las medianamente objetivas suman el 40 %, así que no cumple.",
+              "Que tiene tres altamente objetivas, y la única medianamente objetiva vale el 15 %, así que sí cumple.",
+              "Que tiene una sola altamente objetiva, y las medianamente objetivas suman el 70 %, así que no cumple."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Entrevista semiestructurada por competencias (grabada) · experiencia como voluntario en el Movimiento · plan de trabajo · assessment center, si hay personas capacitadas para hacerlo."
           },
           {
-            "text": "La jefa de grupo propone escoger ella sola al nuevo Subjefe de Tropa, «porque conoce a todos y es imparcial». ¿Qué le respondes?",
+            "text": "En un grupo, el comité de tres ya evaluó a los candidatos a Jefe de Tropa y dejó la lista de elegibles. Según la lección, ¿cómo sigue el proceso?",
             "options": [
-              "Que está bien si el consejo lo aprueba después: basta con que otra persona firme.",
-              "Que su buena fe no alcanza: para ese cargo decide un comité de tres, no una persona.",
-              "Que puede hacerlo si antes publica la convocatoria: la publicidad ya da la objetividad."
+              "El Consejo de Grupo hace el nombramiento a partir de esa lista: el comité evalúa, pero no nombra.",
+              "El Jefe de Grupo hace el nombramiento a partir de esa lista: el comité evalúa, pero no nombra.",
+              "El comité hace el nombramiento a partir de esa lista: fue él quien evaluó a los candidatos."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "a los jefes y subjefes de rama, el Jefe de Grupo. Ojo: quien nombra no es lo mismo que quien selecciona. Al subjefe de rama lo nombra el Jefe de Grupo, pero lo escoge el comité."
           }
         ],
         "nextLabel": "Continuar a Lección 4 →"
@@ -543,20 +549,22 @@
           {
             "text": "Julián se ofende: «¿Me van a revisar antecedentes? ¡Si todos me conocen!». ¿Qué le responderías con lo que viste?",
             "options": [
-              "Que no se preocupe: a quienes el grupo ya conoce se les puede omitir la revisión.",
-              "Que no es por él: se revisa a todo adulto que estará con niños, y el Ingreso lo autoriza.",
-              "Que es un trámite de la región para el seguro, y que no tiene que ver con los niños."
+              "Que no es desconfianza: se revisa a todo adulto para dar entornos protectores, y él lo autoriza en su Acuerdo Mutuo.",
+              "Que no es desconfianza: se revisa a todo adulto para dar entornos protectores, y él lo autoriza en su Ingreso del Adulto.",
+              "Que no es desconfianza: se revisa a todo adulto para dar entornos protectores, y él lo autoriza en su hoja de Talento 360°."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "El formato de Ingreso del Adulto incluye la autorización para que la Asociación verifique, antes de la vinculación, la información personal del adulto, incluidos los antecedentes e inhabilidades por delitos sexuales contra menores de 18 años."
           },
           {
-            "text": "Vas a entrevistar a un candidato a Jefe de Manada y quieres saber cómo maneja los conflictos. ¿Cuál pregunta sigue la entrevista por competencias?",
+            "text": "Vas a entrevistar a un candidato a Jefe de Manada y quieres explorar cómo maneja los conflictos. ¿Cuál pregunta sigue la entrevista por competencias que viste?",
             "options": [
-              "«Cuénteme qué haría usted si dos lobatos se pelean en plena reunión de Manada.»",
-              "«Cuénteme una vez en que tuvo que mediar entre dos personas. ¿Qué hizo y cómo terminó?»",
-              "«Cuénteme cómo se describiría usted cuando le toca resolver un conflicto en el grupo.»"
+              "«Cuénteme cómo mediaría usted en un conflicto entre dos lobatos: ¿cuál sería su rol y qué haría?»",
+              "«Cuénteme cómo suele mediar usted en los conflictos de su trabajo: ¿cuál es su rol y qué hace?»",
+              "«Cuénteme una vez en que usted tuvo que mediar en un conflicto: ¿cuál era su rol y qué hizo?»"
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "debemos solicitar información de una situación vivida y evitar preguntas como ¿qué haría usted?, y hacer uso de preguntas como ¿cuénteme una situación donde usted..?"
           }
         ],
         "nextLabel": "Continuar a Lección 5 →"
@@ -652,22 +660,24 @@
         "title": "Mini-quiz Lección 5",
         "questions": [
           {
-            "text": "Julián todavía no firma su acuerdo, pero ya dirige solo las reuniones de Tropa y nadie le ha preguntado cómo va. ¿Qué parte del proceso se está descuidando?",
+            "text": "Julián empieza como Jefe de Tropa, y Mónica quiere seguir la guía de 2025 para que no quede solo con el cargo. ¿Qué le recomienda la guía para el seguimiento?",
             "options": [
-              "La selección: si necesita ayuda tan pronto, el comité escogió mal a la persona.",
-              "La integración: nadie lo acompaña mientras aprende cómo funciona de verdad la Tropa.",
-              "La formación básica: debió terminar su Insignia de Madera antes de asumir el cargo."
+              "Acompañarlo durante los tres primeros meses: su jefe inmediato sigue sus acciones y al final le da una retroalimentación.",
+              "Acompañarlo durante los seis primeros meses: su jefe inmediato sigue sus acciones y al final le da una retroalimentación.",
+              "Acompañarlo durante todo el primer año: su jefe inmediato sigue sus acciones y al final le da una retroalimentación."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "y recomienda que el acompañamiento siga durante los tres primeros meses. Lo que no cambia: nadie asume el cargo solo desde el primer día."
           },
           {
-            "text": "Julián ya tiene asesor personal, y en su primera reunión van a arrancar su Plan Personal de Desarrollo. ¿Con qué conviene empezar?",
+            "text": "Julián ya escogió a quien quiere como asesor personal. Según la lista de chequeo de la inducción, ¿qué hace falta para que la asesoría arranque?",
             "options": [
-              "Con la evaluación 360° del final del primer año, para no juzgarlo antes de tiempo.",
-              "Con la valoración inicial por competencias, para saber desde dónde parte su plan.",
-              "Con la lista de cursos de la Insignia de Madera, para inscribirlo en todos ya mismo."
+              "El aval de aceptación firmado, y una primera reunión para revisar su evaluación 360° y empezar su Plan Personal de Desarrollo.",
+              "El aval de aceptación firmado, y una primera reunión para revisar su valoración inicial y empezar su Plan Personal de Desarrollo.",
+              "Su carta de nombramiento firmada, y una primera reunión para revisar su evaluación 360° y empezar su Plan Personal de Desarrollo."
             ],
-            "correctIndex": 1
+            "correctIndex": 1,
+            "evidencia": "Con el aval de aceptación firmado, y una primera reunión para revisar la valoración inicial y empezar el Plan Personal de Desarrollo"
           }
         ],
         "nextLabel": "Continuar a Lección 6 →"
@@ -757,22 +767,24 @@
         "title": "Mini-quiz Lección 6 — Cierre del Curso 6",
         "questions": [
           {
-            "text": "Julián firma su acuerdo mutuo. Seis meses después, el grupo no le ha entregado el Manual de Cargos ni le responde sus dudas. ¿Qué dice el acuerdo sobre eso?",
+            "text": "Seis meses después de firmar su acuerdo, Julián le dice al consejo que nadie le ha entregado los reglamentos y manuales de su cargo. Según el acuerdo, ¿cómo se reparten esos compromisos?",
             "options": [
-              "Nada: el acuerdo recoge lo que el adulto se compromete a hacer con la Asociación.",
-              "Que el estamento también se comprometió a resolver sus dudas y darle los documentos.",
-              "Que Julián debió pedir por escrito esos documentos antes de firmar el acuerdo."
+              "Entregarle esos documentos le toca al grupo, y a Julián le toca generar y ejecutar su Plan Personal de Desarrollo.",
+              "Conseguir esos documentos le toca a Julián, y al grupo le toca generar y ejecutar con él su Plan Personal de Desarrollo.",
+              "Entregarle esos documentos le toca a su asesor personal, y a Julián le toca generar y ejecutar su Plan Personal de Desarrollo."
             ],
-            "correctIndex": 1
+            "correctIndex": 0,
+            "evidencia": "Entre otros: resolver las inquietudes del adulto, darle las estrategias y los recursos para sus funciones, entregarle los estatutos, reglamentos, políticas y manuales de su cargo, e informarle a tiempo de las actividades."
           },
           {
-            "text": "En otro grupo, el jefe de grupo le escribe por WhatsApp al nuevo Jefe de Manada: «Ya tienes el cargo, bienvenido». ¿Qué le falta para ser un nombramiento como el que viste?",
+            "text": "En otro grupo, el comité ya dejó la lista de elegibles y se escogió a la nueva Jefa de Manada. ¿Cómo debe quedar su nombramiento, según lo que viste?",
             "options": [
-              "Que no le falta nada: si él ya sabe que tiene el cargo, la forma es lo de menos.",
-              "Que sea formal: por escrito, con su periodo, y anunciado ante el grupo en una ceremonia.",
-              "Que lo firme la región: un jefe de grupo no puede nombrar a los adultos de su grupo."
+              "El Jefe de Grupo lo emite por escrito y sin fecha de cierre, y se da a conocer en ceremonia especial ante la comunidad scout.",
+              "El Jefe de Grupo lo emite por escrito y sin fecha de cierre, y se da a conocer en la siguiente Asamblea de Grupo ante las familias.",
+              "El Jefe de Grupo lo emite por escrito y con el periodo que cubre, y se da a conocer en ceremonia especial ante la comunidad scout."
             ],
-            "correctIndex": 1
+            "correctIndex": 2,
+            "evidencia": "El formato oficial fija el periodo que cubre y dispone que se dé a conocer de manera pública a la comunidad scout, en ceremonia especial."
           }
         ],
         "nextLabel": "Obtener Certificado 🏆"

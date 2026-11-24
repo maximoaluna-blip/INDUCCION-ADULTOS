@@ -285,6 +285,41 @@ if (oveja.culpables.length > 0) {
         console.warn(`   - Modulo ${c.mod}, pregunta ${c.qi + 1}: las otras dos empiezan por "${c.otras}" (${c.palabras} palabra${c.palabras > 1 ? 's' : ''}) y la correcta por "${c.correcta}"`));
     if (oveja.culpables.length > 5) console.warn(`   ... y ${oveja.culpables.length - 5} mas`);
 }
+const respaldo = checkRespaldoLeccion(course);
+if (respaldo.noEncontrada.length > 0 || respaldo.sinRespaldo.length > 0) {
+    if (respaldo.noEncontrada.length > 0) {
+        console.warn(`⚠️  Respaldo: en ${respaldo.noEncontrada.length}/${respaldo.total} preguntas la frase de "evidencia" NO esta literal en su leccion.`);
+        console.warn('   La respuesta tiene que estar en la leccion: corrige la frase, la pregunta o la leccion.');
+        respaldo.noEncontrada.slice(0, 5).forEach(c => console.warn(`   - Modulo ${c.mod}, pregunta ${c.qi + 1}: "${c.ev}..."`));
+    }
+    if (respaldo.sinRespaldo.length > 0)
+        console.warn(`⚠️  Respaldo: ${respaldo.sinRespaldo.length}/${respaldo.total} preguntas sin campo "evidencia".`);
+}
+
+// --- Respaldo en la leccion (ADR-162, 22-nov-2026) ---
+// Regla del dueno: «se debe garantizar que la respuesta se encuentra en la leccion».
+// Cada pregunta anota en `evidencia` la frase LITERAL de su leccion que la contesta
+// (el alumno no la ve: el HTML no la incluye). Este chequeo confirma que esa frase
+// esta tal cual en el texto de la leccion, sin contar el propio quiz. Avisa, no bloquea,
+// como las demas compuertas; el lector a ciegas y el lector con leccion van aparte.
+function checkRespaldoLeccion(course) {
+    const norm = (s) => String(s).replace(/<[^>]*>/g, ' ').replace(/[«»“”"]/g, '"').replace(/[‘’]/g, "'")
+        .replace(/\s+/g, ' ').replace(/ ([,.;:!?)])/g, '$1').trim().toLowerCase();
+    const sinRespaldo = [], noEncontrada = [];
+    let total = 0;
+    (course.modules || []).forEach(mod => {
+        if (!mod.quiz || !mod.quiz.questions) return;
+        const { quiz, ...resto } = mod;
+        const texto = norm(JSON.stringify(resto).replace(/\\n/g, ' ').replace(/\\"/g, '"'));
+        mod.quiz.questions.forEach((q, qi) => {
+            total++;
+            if (!q.evidencia || !String(q.evidencia).trim()) { sinRespaldo.push({ mod: mod.id, qi }); return; }
+            if (!texto.includes(norm(q.evidencia))) noEncontrada.push({ mod: mod.id, qi, ev: String(q.evidencia).slice(0, 70) });
+        });
+    });
+    return { total, sinRespaldo, noEncontrada };
+}
+
 
 // --- Departamentos colombianos ---
 const DEPARTAMENTOS = [
